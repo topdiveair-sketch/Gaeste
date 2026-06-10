@@ -1,0 +1,25 @@
+LIVE-TESTBERICHT V6.3
+
+Durchgeführte Online-Recherche:
+- Wachaubahn Tagesfahrplan: gefunden und direkt verlinkt.
+- Wachaubahn Fahrplan 2026: gefunden; Aggsbach Markt wird als Station/Bedarfshalt im Fahrplan genannt.
+- Rollfähre Spitz-Arnsdorf: direkte offizielle Seite gefunden.
+- Rollfähre Weißenkirchen-St. Lorenz: direkte offizielle Seite gefunden; Hinweis: Betrieb wird bei Wasserstand 6,30 m sowie Sturm/starkem Wind eingestellt.
+- Heurigenkalender Aggsbach: direkte Seite gefunden.
+- Welterbesteig 06 Maria Laach-Aggsbach Markt: direkte offizielle Tourseite gefunden; ca. 7 km laut Beschreibung.
+- Welterbesteig 07 Aggsbach Markt-Emmersdorf: direkte offizielle Tourseite gefunden; 14,74 km, 5:00 h, mittel, 547 hm Aufstieg, 544 hm Abstieg.
+- Booking-Unterkunft: direkter Link bleibt eingebaut.
+- Open-Meteo: Live-Wetter bleibt direkt in der App über freie API.
+
+Eingebaut:
+1. Neue Touren-Sektion "Touren direkt ab Zuhause am Bach".
+2. Live-Linkcheck-Sektion in der App.
+3. Veralteter Wachaubahn-PDF-Link auf tagesaktuellen Fahrplan umgestellt.
+4. Weißenkirchen-Fährlink ergänzt.
+5. Welterbesteig-Eckdaten in Wanderassistent ergänzt.
+6. Service-Worker Cache auf V6.3 erhöht.
+
+Weiter offen:
+- Google-Bewertung: echter Direktlink fehlt weiterhin. Bitte im Google Business Profil den Bewertungslink kopieren.
+- Fährstatus live direkt in der App: keine verlässliche frei nutzbare API gefunden.
+- Wachaubahn live direkt in der App: keine verlässliche frei nutzbare API gefunden.

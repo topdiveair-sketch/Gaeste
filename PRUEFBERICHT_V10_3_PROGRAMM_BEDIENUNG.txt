@@ -1,0 +1,29 @@
+PRÜFBERICHT V10.3 – PROGRAMM & BEDIENUNG
+
+Geprüft:
+- HTML-Struktur
+- doppelte IDs
+- lokale Bild-/Dateiverweise
+- JavaScript-Syntax
+- wichtige Bedienfunktionen und Pflichtbereiche
+- Buttons ohne type-Attribut wurden abgesichert
+- Bedienhilfe und interner Funktionstest ergänzt
+
+Ergebnis:
+- JavaScript-Syntaxprüfung: OK
+- Doppelte IDs vor Prüfung: keine
+- Doppelte IDs nach Prüfung: keine
+- Fehlende lokale Dateien vor Prüfung: keine
+- Fehlende lokale Dateien nach Prüfung: keine
+- Fehlende Pflichtbereiche: keine
+- Buttons ohne erkennbare Zuordnung vor Prüfung: 0
+
+Verbessert:
+- Bedienhilfe eingebaut.
+- Funktionstest in der App eingebaut.
+- Cache-löschen-Button eingebaut.
+- Tourbuttons und Morgen-Tourbuttons geben sichtbare Aktiv-Markierung.
+- Button-Standardtyp abgesichert, damit keine unbeabsichtigten Formularaktionen passieren.
+
+Wichtiger Hinweis:
+Live-Wetter und Standort senden können nur online zuverlässig getestet werden, am besten über GitHub Pages/HTTPS.

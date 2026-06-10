@@ -1,0 +1,14 @@
+VERSION 7.2 – MEHRSPRACHIG + FUNKTIONSFIX
+
+Erledigt:
+- Sprachwahl oben eingebaut: Deutsch, Englisch, Tschechisch, Ungarisch, Spanisch, Französisch.
+- Funktionierende Schnellassistenten komplett neu robust eingebaut.
+- Klicks laufen über DOMContentLoaded und Event-Delegation.
+- Ergebnisse erscheinen sofort in den Ergebnisfeldern.
+- Direktbuchung über Booking.com als eigener Bereich eingebaut.
+- Sprache wird im Browser gespeichert (localStorage).
+- Wichtigste Texte und Ergebnisantworten übersetzt.
+
+Hinweis:
+Bitte nach dem Hochladen auf GitHub Pages den Browser-Cache löschen oder App im Inkognito-Fenster testen.
+Wenn der alte Service Worker noch aktiv ist, kann sonst eine alte Version angezeigt werden.

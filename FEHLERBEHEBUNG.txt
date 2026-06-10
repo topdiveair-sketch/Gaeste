@@ -1,0 +1,5 @@
+Behoben:
+- Tourenbuttons reagieren jetzt direkt.
+- Kartenfenster, Routenlink und Text werden aktualisiert.
+- Gepäck anfragen öffnet WhatsApp zuverlässig.
+Ursache: ID-Namen im HTML und JavaScript waren nicht konsistent.

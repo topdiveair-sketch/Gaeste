@@ -1,0 +1,6 @@
+index.html: 38377 Zeichen
+  section-Anzahl: 30
+  href-Anzahl: 80
+  id doppelt grob: 56 ids
+style.css: 7673 Zeichen
+app.js: 12354 Zeichen

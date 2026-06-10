@@ -1,0 +1,22 @@
+PRÜFBERICHT V9.1 – MORGEN-ASSISTENT FERTIGGESTELLT
+
+Gefunden / behoben:
+- Morgen-Assistent war nur Text. Jetzt hat er echte Funktionen.
+- Wetter morgen wird live über Open-Meteo geladen.
+- Frühstück morgen kann per WhatsApp vorbereitet werden.
+- Tour für morgen kann ausgewählt werden.
+- Gepäcktransport für morgen kann per WhatsApp angefragt werden.
+- Wachaubahn und Fähren sind direkt verlinkt.
+- Booking ist direkt verlinkt.
+- Routen & Funktionen wurden als eigene Karten ergänzt.
+- Entwickler-/Testhinweise zur Mehrsprachigkeit entfernt, soweit sichtbar.
+
+Technischer Check:
+- JavaScript-Syntaxprüfung: OK
+- Doppelte IDs: keine
+- Fehlende Pflichtbereiche: keine
+- Fehlende lokale Dateien: keine
+
+Hinweis:
+Live-Wetter funktioniert nur online, am besten über GitHub Pages.
+Nach Upload bitte Cache löschen oder Inkognito-Fenster verwenden.

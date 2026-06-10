@@ -1,0 +1,18 @@
+PRÜFBERICHT V6.1
+
+Geprüft und verbessert:
+1. Wetter: Live-Abfrage direkt in der App über Open-Meteo API eingebaut.
+2. Wachaubahn: direkter Link zum tagesaktuellen Fahrplan eingebaut.
+3. Fähren: direkte Links zu den Fährseiten eingebaut, inkl. Telefonnummer Rollfähre Spitz.
+4. Booking: direkter Link zur Unterkunft eingebaut.
+5. Direktbuchung: WhatsApp-Anfrage ohne Umweg eingebaut.
+6. Frühstück Express: per WhatsApp mit Auswahl.
+7. Wanderassistent: Inhalte konkretisiert.
+8. Radassistent: Inhalte konkretisiert.
+9. Windis-Kinderbereich: Quiz und Mini-Schatzsuche ergänzt.
+10. Google-Bewertung: weiterhin ohne echten Direktlink, da dafür der exakte Google-Business-Review-Link bzw. Place-ID nötig ist.
+
+Nicht vollständig live möglich:
+- Fähren: keine verlässliche frei nutzbare Live-API gefunden.
+- Wachaubahn: keine verlässliche frei nutzbare Live-API gefunden.
+- Google-Bewertung: direkter Review-Link muss aus dem Google-Unternehmensprofil/Maps bezogen werden.

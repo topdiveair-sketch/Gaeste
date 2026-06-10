@@ -1,0 +1,39 @@
+PRÜFBERICHT V6.2 – gewissenhafte lokale Prüfung
+
+Dateien im Paket:
+- PRUEFBERICHT_V6_1.txt
+- README_STARTEN.txt
+- TECHNISCHER_CHECK.txt
+- VERSION_6_0.txt
+- VERSION_6_2.txt
+- app.js
+- hero-windis.png
+- icon.svg
+- index.html
+- manifest.webmanifest
+- service-worker.js
+- style.css
+
+HTML-/Dateiprüfung:
+- HTML-IDs gesamt: 59
+- Doppelte IDs: keine
+- Fehlende lokale Dateien: keine
+- Fehlende Pflichtbereiche: keine
+- Fehlende JS-Funktionen: keine
+
+Link-/Funktionsprüfung:
+- WhatsApp Direktbuchung: vorhanden
+- Wachaubahn Tagesfahrplan: vorhanden
+- Fähre Spitz: vorhanden
+- Heurigenkalender Aggsbach: vorhanden
+- Booking Unterkunft: vorhanden
+- Open-Meteo API: vorhanden
+
+Einschränkungen:
+- Externe Links wurden lokal auf Vorhandensein geprüft, aber nicht live per Internet auf HTTP-Status getestet.
+- Wachaubahn/Fähren haben nach aktuellem Stand keine verlässliche frei nutzbare Live-API in der App; daher sind direkte Links eingebaut.
+- Google-Bewertung ist noch kein echter Direkt-Review-Link. Dafür braucht man den exakten Google-Unternehmensprofil-Link bzw. Place-ID.
+- Live-Wetter funktioniert nur, wenn das Gerät Internetzugang hat und der Browser fetch/API-Zugriff erlaubt.
+
+Ergebnis:
+Die App ist lokal vollständig, ohne fehlende lokale Dateien, ohne doppelte IDs und mit Browser-Selbsttest ausgestattet.

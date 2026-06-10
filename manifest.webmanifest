@@ -1,0 +1,12 @@
+{
+  "name":"Zuhause am Bach – Wachau mit Fidel, Gloria & Pia",
+  "short_name":"Zuhause am Bach",
+  "start_url":"./index.html",
+  "display":"standalone",
+  "background_color":"#fbf4e8",
+  "theme_color":"#6b4f2a",
+  "description":"Persönliche Gäste-App für Zuhause am Bach in Aggsbach Markt.",
+  "icons":[
+    {"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}

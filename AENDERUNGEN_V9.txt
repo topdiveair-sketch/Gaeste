@@ -1,0 +1,5 @@
+Version 9.0
+- Hinweis zur Mehrsprachigkeit entfernt
+- 'Funktionierende Schnellassistenten' ersetzt durch 'Wander- und Freizeitassistent'
+- Neuer Bereich 'Heute unterwegs?'
+- Wandern, Radfahren, Schlechtwetter, Wachaubahn, Frühstück, Kinderwelt ergänzt

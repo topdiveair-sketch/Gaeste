@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#6b4f2a">
+  <title>Zuhause am Bach – Gäste-App Wachau</title>
+  <meta name="description" content="Digitale Gäste-App für Zuhause am Bach in Aggsbach Markt: Wandern, Radfahren, Wetter, Wachaubahn, Fähren, Booking und Wachau-Tipps.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="languagebar">
+    <b>🌐 Sprache</b>
+    <button type="button" class="langbtn active" data-lang="de">DE</button>
+    <button type="button" class="langbtn" data-lang="en">EN</button>
+    <button type="button" class="langbtn" data-lang="cs">CZ</button>
+    <button type="button" class="langbtn" data-lang="hu">HU</button>
+    <button type="button" class="langbtn" data-lang="es">ES</button>
+    <button type="button" class="langbtn" data-lang="fr">FR</button>
+  </div>
+
+  <header class="hero">
+    <img src="hero-windis.png" alt="Zuhause am Bach mit Fidel, Gloria und Pia">
+    <div class="hero-text">
+      <p class="kicker">Zuhause am Bach · Aggsbach Markt</p>
+      <h1 data-i18n="heroTitle">Willkommen Zuhause am Bach</h1>
+      <p data-i18n="heroText">Eure digitale Gäste-App für Wachau, Welterbesteig, Donauradweg und die Wilden Wachauer Windis.</p>
+    </div>
+  </header>
+
+  <main>
+    <section id="heute" class="card dashboard">
+      <h2 data-i18n="todayTitle">🏞️ Heute in der Wachau</h2>
+      <p data-i18n="todayText">Alles Wichtige auf einen Blick: Wetter, Tour, Rad, Fähren, Wachaubahn und schnelle Hilfe.</p>
+      <div class="dashboard-grid">
+        <article>
+          <h3>🌦️ Wetter Aggsbach Markt</h3>
+          <p id="weatherStatus">Wetter wird geladen …</p>
+          <div id="weatherGrid" class="weathergrid"></div>
+          <button id="reloadWeather" class="btn" type="button">Wetter neu laden</button>
+        </article>
+        <article>
+          <h3 data-i18n="dailyTourTitle">🥾 Tour des Tages</h3>
+          <p data-i18n="dailyTourText">Bei trockenem Wetter: kurze Runde oder Welterbesteig. Bei Regen: Schlechtwetterprogramm.</p>
+          <a class="linkbtn primary" href="#touren" data-i18n="openTours">Touren öffnen</a>
+        </article>
+        <article>
+          <h3 data-i18n="bikeTipTitle">🚲 Radtipp</h3>
+          <p data-i18n="bikeTipText">Melk, Spitz, Dürnstein oder Krems – bitte Wind, Fähren und Rückfahrt prüfen.</p>
+          <a class="linkbtn primary" href="#radfahren" data-i18n="openBike">Rad-Assistent öffnen</a>
+        </article>
+        <article>
+          <h3>🚂⛴️ Wachaubahn & Fähren</h3>
+          <p>Vor dem Start direkt prüfen.</p>
+          <a class="linkbtn" target="_blank" href="https://www.wachaubahn.at/tagesaktueller-fahrplan">Wachaubahn</a>
+          <a class="linkbtn" target="_blank" href="https://www.spitz-wachau.at/Rollfaehre_Spitz-Arnsdorf">Fähre Spitz</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="morgen" class="card">
+      <h2 data-i18n="tomorrowTitle">🌅 Morgen-Assistent</h2>
+      <p data-i18n="tomorrowText">Wetter morgen, Frühstück, Tour, Fähren, Gepäck und Buchung vorbereiten.</p>
+      <div class="dashboard-grid">
+        <article>
+          <h3>🌦️ Wetter morgen</h3>
+          <p id="tomorrowWeatherStatus">Wetter für morgen wird geladen …</p>
+          <div id="tomorrowWeatherGrid" class="weathergrid"></div>
+          <button id="reloadTomorrowWeather" class="btn" type="button">Wetter morgen neu laden</button>
+        </article>
+        <article>
+          <h3>☕ Frühstück morgen</h3>
+          <div class="buttonrow">
+            <button type="button" class="choice breakfast active" data-value="Standard-Frühstück">Standard</button>
+            <button type="button" class="choice breakfast" data-value="Vegetarisches Frühstück">Vegetarisch</button>
+            <button type="button" class="choice breakfast" data-value="Veganes Frühstück">Vegan</button>
+          </div>
+          <div class="buttonrow">
+            <button type="button" class="choice breakfast-time active" data-value="08:00 Uhr">08:00</button>
+            <button type="button" class="choice breakfast-time" data-value="08:30 Uhr">08:30</button>
+            <button type="button" class="choice breakfast-time" data-value="09:00 Uhr">09:00</button>
+          </div>
+          <button type="button" id="breakfastWhatsApp" class="btn primary">☕ Frühstück per WhatsApp</button>
+        </article>
+        <article>
+          <h3>🥾 Tour morgen wählen</h3>
+          <div class="buttonrow">
+            <button type="button" class="choice tomorrow-route active" data-route="short">Kurz</button>
+            <button type="button" class="choice tomorrow-route" data-route="maria">Maria Laach → Aggsbach</button>
+            <button type="button" class="choice tomorrow-route" data-route="emmersdorf">Aggsbach → Emmersdorf</button>
+            <button type="button" class="choice tomorrow-route" data-route="rain">Regen</button>
+          </div>
+          <div id="tomorrowRouteResult" class="resultbox"></div>
+          <div class="actions">
+            <a id="tomorrowMapLink" class="linkbtn primary" target="_blank">🗺️ Wanderkarte öffnen</a>
+            <a id="tomorrowOfficialLink" class="linkbtn" target="_blank">🥾 Route anzeigen</a>
+          </div>
+          <div class="mapbox"><iframe id="tomorrowRouteMap" title="Wanderkarte morgen" title="Wanderkarte morgen" loading="lazy"></iframe></div>
+        </article>
+        <article>
+          <h3>🎒 Gepäcktransport</h3>
+          <p>Für Welterbesteig-Gäste bitte Zieladresse und Uhrzeit angeben.</p>
+          <button type="button" id="luggageWhatsApp" class="btn primary">🎒 Gepäcktransport anfragen</button>
+          <h3>🛏️ Booking</h3>
+          <a class="linkbtn primary" target="_blank" href="https://www.booking.com/hotel/at/zu-hause-am-bach.de.html">Booking öffnen</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="touren" class="card">
+      <h2 data-i18n="tourTitle">🥾 Wachau Touren-Assistent</h2>
+      <p data-i18n="tourText">Wählt, was zu euren Beinen, Wetter und Zeit passt. Die passende Wanderkarte und Route erscheinen darunter.</p>
+      <div class="buttonrow bigbuttons">
+        <button type="button" class="bighelp routebtn" data-route="short">🌿 1–2 Stunden</button>
+        <button type="button" class="bighelp routebtn" data-route="medium">🥾 3–4 Stunden</button>
+        <button type="button" class="bighelp routebtn" data-route="emmersdorf">⛰️ Ganztag</button>
+        <button type="button" class="bighelp routebtn" data-route="kids">🎒 Mit Kindern</button>
+        <button type="button" class="bighelp routebtn" data-route="dog">🐕 Mit Hund</button>
+        <button type="button" class="bighelp routebtn" data-route="rain">🌧️ Regen</button>
+      </div>
+      <div id="routeResult" class="resultbox"></div>
+      <div class="actions">
+        <a id="routeMapLink" class="linkbtn primary" target="_blank">🗺️ Wanderkarte öffnen</a>
+        <a id="routeOfficialLink" class="linkbtn" target="_blank">🥾 Route anzeigen</a>
+        <button type="button" id="routeLuggage" class="btn">🎒 Gepäck anfragen</button>
+      </div>
+      <div class="mapbox"><iframe id="routeMap" title="Wanderkarte gewählte Route" title="Wanderkarte heute" loading="lazy"></iframe></div>
+    </section>
+
+    <section id="radfahren" class="card">
+      <h2 data-i18n="bikeTitle">🚲 Donauradweg-Assistent</h2>
+      <div class="routegrid">
+        <article><h3>Melk</h3><p>Stift Melk, Bahnhof, feste Donauquerung.</p><a class="linkbtn" target="_blank" href="https://www.google.com/maps/dir/Aggsbach+Markt+82+3641+Aggsbach+Markt/Melk">Route</a></article>
+        <article><h3>Spitz</h3><p>Weinorte, Fähre Spitz–Arnsdorf, Donaublick.</p><a class="linkbtn" target="_blank" href="https://www.google.com/maps/dir/Aggsbach+Markt+82+3641+Aggsbach+Markt/Spitz+an+der+Donau">Route</a></article>
+        <article><h3>Dürnstein</h3><p>Altstadt, Ruine, Fotos. Früh starten.</p><a class="linkbtn" target="_blank" href="https://www.google.com/maps/dir/Aggsbach+Markt+82+3641+Aggsbach+Markt/Dürnstein">Route</a></article>
+        <article><h3>Krems</h3><p>Längere Tour, Bahnhof, Altstadt.</p><a class="linkbtn" target="_blank" href="https://www.google.com/maps/dir/Aggsbach+Markt+82+3641+Aggsbach+Markt/Krems+an+der+Donau">Route</a></article>
+      </div>
+    </section>
+
+    <section id="schlechtwetter" class="card">
+      <h2 data-i18n="rainTitle">🌧️ Schlechtwetterprogramm</h2>
+      <div class="routegrid">
+        <article><h3>Stift Melk</h3><p>Kulturklassiker bei Regen.</p><a class="linkbtn" target="_blank" href="https://www.google.com/maps/search/Stift+Melk">Karte</a></article>
+        <article><h3>Kartause Aggsbach</h3><p>Geschichte und ruhiger Ausflug.</p><a class="linkbtn" target="_blank" href="https://www.google.com/maps/search/Kartause+Aggsbach">Karte</a></article>
+        <article><h3>Donauschlössel Spitz</h3><p>Einkehr, Donau, Wachauer Küche.</p><a class="linkbtn" target="_blank" href="https://donauschloessel.at/">Webseite</a></article>
+        <article><h3>Heurige</h3><p>Aktuell prüfen, wer ausgesteckt hat.</p><a class="linkbtn" target="_blank" href="https://heurigenkalender.niederoesterreich.at/Gemeinde/31301/Aggsbach">Heurigenkalender</a></article>
+      </div>
+    </section>
+
+    <section id="empfehlung-gritsch" class="card recommendation-card">
+      <h2>🍷 Gastgeber-Empfehlung: Donauschlössel Spitz</h2>
+      <p class="note">Persönliche Empfehlung von Hans, Laura, Fidel, Gloria und Pia.</p>
+      <div class="photo-gallery two">
+        <figure><img src="assets/donauschloessel-aussen.jpg" alt="Donauschlössel Spitz Außenansicht" loading="lazy"><figcaption>Donauschlössel Spitz – direkt an der Donau.</figcaption></figure>
+        <figure><img src="assets/donauschloessel-innen.jpg" alt="Donauschlössel Spitz Innenbereich" loading="lazy"><figcaption>Gemütlicher Innenbereich mit Wachauer Gastlichkeit.</figcaption></figure>
+      </div>
+      <div class="routegrid">
+        <article>
+          <h3>Donauschlössel – Familie Graben-Gritsch</h3>
+          <p>Regional essen, Wachauer Weine genießen und direkt an der Donau sitzen.</p>
+          <p><b>Adresse:</b> Donaulände 3, 3620 Spitz<br><b>Telefon:</b> +43 664 9156901</p>
+          <a class="linkbtn primary" target="_blank" href="https://donauschloessel.at/">Webseite öffnen</a>
+          <a class="linkbtn" target="_blank" href="https://www.google.com/maps/dir/Aggsbach+Markt+82+3641+Aggsbach+Markt/Donauschlössel+Spitz+Donaulände+3+3620+Spitz">Route anzeigen</a>
+          <a class="linkbtn" href="tel:+436649156901">Anrufen</a>
+        </article>
+        <article><h3>Unser Tipp</h3><p>Nach einer Wanderung oder Radtour: Donauterrasse, Wachauer Küche und ein ruhiger Blick auf den Fluss.</p><p class="note">Öffnungszeiten bitte vor Besuch prüfen.</p></article>
+      </div>
+    </section>
+
+    
+<section id="windis" class="card">
+  <h2>🐾 Windis Kinderwelt</h2>
+  <p>Spielerisch die Wachau entdecken – mit Fidel, Gloria und Pia.</p>
+
+  <div class="routegrid">
+    <article>
+      <h3>🐾 Wachau-Windis-Quiz</h3>
+      <p>10 Fragen zu Fidel, Gloria, Pia und der Wachau.</p>
+      <button id="quizStart" class="btn primary" type="button">Quiz starten</button>
+      <button id="quizNext" class="btn" type="button">Nächste Frage</button>
+      <div id="quizBox" class="resultbox">Bereit? Drücke „Quiz starten“.</div>
+      <div id="quizAnswers" class="quizanswers"></div>
+      <div id="quizScore" class="resultbox">Punkte: 0 / 0</div>
+    </article>
+
+    <article>
+      <h3>🔎 Aktive Schatzsuche</h3>
+      <p>Hakt ab, was ihr gefunden habt. Am Ende seid ihr Wachau-Entdecker.</p>
+      <div class="treasure">
+        <label><input type="checkbox" class="treasureItem"> 🌊 Donau gesehen</label>
+        <label><input type="checkbox" class="treasureItem"> 🚂 Zug oder Wachaubahn entdeckt</label>
+        <label><input type="checkbox" class="treasureItem"> 🍑 Marillenbaum gefunden</label>
+        <label><input type="checkbox" class="treasureItem"> 🌸 Blume fotografiert</label>
+        <label><input type="checkbox" class="treasureItem"> 🪨 Stein in Herzform gesucht</label>
+        <label><input type="checkbox" class="treasureItem"> 🐾 Fidel, Gloria oder Pia entdeckt</label>
+      </div>
+      <div id="treasureResult" class="resultbox">0 / 6 Entdeckungen gefunden.</div>
+      <button id="treasureReset" class="btn" type="button">Schatzsuche zurücksetzen</button>
+    </article>
+  </div>
+</section>
+
+
+    <section id="notfall" class="card">
+      <h2>🚨 Notfall & Hilfe</h2>
+      <div class="routegrid">
+        <article><h3>Notruf</h3><p>112 Euro-Notruf · 144 Rettung · 133 Polizei · 122 Feuerwehr</p><a class="linkbtn primary" href="tel:112">112 anrufen</a></article>
+        <article><h3>Hans kontaktieren</h3><p>Bei Fragen, Anreise, Gepäck oder Orientierung.</p><a class="linkbtn primary" href="tel:+436646437526">Hans anrufen</a><button type="button" id="sendLocation" class="btn">📍 Standort senden</button></article>
+      </div>
+    </section>
+
+    <section id="bewertung" class="card">
+      <h2>⭐ Bewertung</h2>
+      <p>Wenn es euch gefallen hat, hilft eine Bewertung einem kleinen Gastgeberbetrieb sehr.</p>
+      <a class="linkbtn primary" target="_blank" href="https://www.google.com/search?q=Zuhause+am+Bach+Wachau">Google Bewertung suchen</a>
+    </section>
+  
+<section id="bedienhilfe" class="card">
+  <h2>ℹ️ Bedienhilfe</h2>
+  <div class="routegrid">
+    <article>
+      <h3>🥾 Tour wählen</h3>
+      <p>Bei den Touren einen Button drücken. Danach ändern sich Beschreibung, Karte und Routenlink direkt darunter.</p>
+    </article>
+    <article>
+      <h3>📱 WhatsApp</h3>
+      <p>Frühstück, Gepäck und Hilfe öffnen WhatsApp mit vorbereitetem Text. Vor dem Senden bitte fehlende Angaben ergänzen.</p>
+    </article>
+    <article>
+      <h3>🌦️ Wetter</h3>
+      <p>Live-Wetter funktioniert online über GitHub Pages. Wenn nichts lädt, bitte externe Wetterseite nutzen.</p>
+    </article>
+    <article>
+      <h3>🧹 Alte Version?</h3>
+      <p>Wenn Buttons nicht reagieren: App-Cache löschen und neu laden.</p>
+      <button id="clearAppCache" class="btn" type="button">Cache löschen & neu laden</button>
+    </article>
+  </div>
+</section>
+
+
+<section id="funktionstest" class="card">
+  <h2>🧪 Funktionstest</h2>
+  <p>Für Gastgeber: Prüft, ob die wichtigsten App-Bereiche geladen sind.</p>
+  <button id="runAppTest" class="btn primary" type="button">App-Funktionstest starten</button>
+  <div id="appTestResult" class="resultbox">Noch nicht geprüft.</div>
+</section>
+
+</main>
+
+  <nav class="bottomnav">
+    <a href="#heute">🏞️<span>Heute</span></a>
+    <a href="#touren">🥾<span>Touren</span></a>
+    <a href="#radfahren">🚲<span>Rad</span></a>
+    <a href="https://api.whatsapp.com/send?phone=436646437526&text=Hallo%20Hans%20und%20Laura" target="_blank">📱<span>WhatsApp</span></a>
+    <a href="https://www.booking.com/hotel/at/zu-hause-am-bach.de.html" target="_blank">🛏️<span>Booking</span></a>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>

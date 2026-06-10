@@ -1,0 +1,15 @@
+PRÜFBERICHT V9.3 – DONAUSCHLÖSSEL BILDER EINGEBAUT
+
+Erledigt:
+- Zwei Bilder in die App kopiert:
+  1. assets/donauschloessel-aussen.jpg
+  2. assets/donauschloessel-innen.jpg
+- Gastgeber-Empfehlung Donauschlössel Spitz als Galerie erweitert.
+- Route von Zuhause am Bach zum Donauschlössel eingebaut.
+- Website-Link und Telefonbutton eingebaut.
+- Hinweis Öffnungszeiten prüfen ergänzt.
+
+Technischer Check:
+- JavaScript-Syntaxprüfung: OK
+- Doppelte IDs: keine
+- Fehlende Dateien/Bereiche: keine

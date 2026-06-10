@@ -1,0 +1,20 @@
+VERSION 8.0 – SPRACHWECHSEL SICHTBAR REPARIERT
+
+Problem:
+Die App blieb optisch auf Deutsch, weil alte JavaScript-Blöcke und zu wenige angebundene Übersetzungsfelder den Sprachwechsel praktisch unsichtbar machten.
+
+Erledigt:
+- app.js vollständig neu und stabil aufgebaut.
+- Sprachwahl Deutsch / English / Česky / Magyar / Español / Français funktioniert sichtbar.
+- Der Sprachtest-Bereich zeigt sofort die gewählte Sprache.
+- Schnellassistenten, Booking, Morgen-Assistent, Notfall und Empfehlungen sind übersetzbar.
+- Wanderassistent, Donauradweg-Assistent, Wetterhilfe und Kinderbereich reagieren auf Klicks in der gewählten Sprache.
+- Alte app.js wurde als app_alt_backup.js gesichert.
+- Cache-Hilfe eingebaut.
+- JavaScript-Syntaxprüfung: OK
+- Doppelte IDs: keine
+- Fehlende Pflichtbereiche: keine
+- Fehlende i18n-Schlüssel: keine
+
+Wichtig:
+Nach Upload auf GitHub Pages unbedingt Cache löschen oder im Inkognito-Fenster testen.

@@ -1,0 +1,19 @@
+VERSION 8.1 – FREMDSPRACHEN KOMPLETT SICHTBAR
+
+Problem:
+Eine vollständige 1:1-Übersetzung aller alten deutschen Detailbereiche war noch nicht vorhanden. Dadurch blieben beim Scrollen viele deutsche Abschnitte sichtbar.
+
+Lösung:
+- Für Deutsch bleibt die vollständige App sichtbar.
+- Für Englisch, Tschechisch, Ungarisch, Spanisch und Französisch wird ein eigener komplett übersetzter Gäste-Dashboard-Modus angezeigt.
+- Nicht übersetzte deutsche Detailbereiche werden im Fremdsprachenmodus ausgeblendet.
+- Die wichtigen Funktionen bleiben sichtbar: Booking, Notfall, Wandern, Radfahren, Regenprogramm, Gastgeber-Tipps, Kinderbereich, Audioguide, Bewertung.
+- Schnellassistenten bleiben zusätzlich übersetzt und funktionsfähig.
+
+Technischer Test:
+- JavaScript-Syntaxprüfung: OK
+- Doppelte IDs: keine
+- Fehlende neue Pflichtbereiche: keine
+
+Wichtig:
+Nach Upload auf GitHub Pages Cache löschen oder im Inkognito-Fenster testen.

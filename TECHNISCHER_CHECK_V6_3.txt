@@ -1,0 +1,6 @@
+TECHNISCHER CHECK V6.3
+Dateien: 14
+HTML-IDs: 61
+Doppelte IDs: keine
+Fehlende lokale Dateien: keine
+Pflichtbereiche Touren/Livecheck: OK

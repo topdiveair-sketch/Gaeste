@@ -1,0 +1,23 @@
+VERSION 10.0 – GENERALÜBERHOLUNG FERTIG
+
+Erstellt:
+- Neue klare Startseite „Heute in der Wachau“
+- Morgen-Assistent fertig mit Wetter, Frühstück, Tour, Gepäck, Fähren/Wachaubahn und Booking
+- Wachau Touren-Assistent mit Karte, Route, offizieller Tour und Gepäckbutton
+- Donauradweg-Assistent mit Melk, Spitz, Dürnstein und Krems
+- Schlechtwetterprogramm
+- Donauschlössel Spitz mit zwei Bildern
+- Windis Kinderwelt aufgeräumt
+- Notfall & Standort senden
+- Bewertung
+- Feste Schnellleiste unten: Heute, Touren, Rad, WhatsApp, Booking
+- Mehrsprachigkeit kompakt für Hauptbereiche
+- Doppelte/testartige Bereiche entfernt
+
+Technischer Check:
+- JavaScript-Syntaxprüfung: OK
+- Doppelte IDs: keine
+- Fehlende Dateien/Bereiche: keine
+
+Hinweis:
+Live-Wetter und Standort senden funktionieren am zuverlässigsten online über HTTPS/GitHub Pages.

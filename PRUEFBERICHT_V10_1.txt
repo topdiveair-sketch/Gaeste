@@ -1,0 +1,19 @@
+VERSION 10.1 – TOURENANZEIGE UND WINDIS-KINDERWELT AKTIVIERT
+
+Erledigt:
+- Wachau Touren-Assistent weist jetzt klar darauf hin, dass Karte und Route darunter erscheinen.
+- Tour-Buttons werden aktiv markiert.
+- Routen werden weiterhin in der Karte angezeigt und Links werden angepasst.
+- Pia-Audioguide aus der Windis-Kinderwelt entfernt.
+- Windis-Kinderwelt aktiv gestaltet:
+  - Quiz mit 10 Fragen
+  - Antwortbuttons
+  - Sofortige Richtig/Falsch-Auswertung
+  - Punkteanzeige
+  - Aktive Schatzsuche mit Checkboxen
+  - Wachau-Entdecker-Hinweis bei vollständiger Schatzsuche
+
+Technischer Check:
+- JavaScript-Syntaxprüfung: OK
+- Doppelte IDs: keine
+- Fehlende Pflichtbereiche: keine

@@ -1,0 +1,10 @@
+Zuhause am Bach Gäste-App Version 6.2
+
+Gewissenhaft geprüft und verbessert:
+- Pflichtbereiche vorhanden
+- keine doppelten HTML-IDs
+- lokale Dateien vollständig
+- Browser-Selbsttest ergänzt
+- Wetter-Liveabfrage bleibt direkt in der App
+- direkte Links zu Wachaubahn, Fähren, Heurigen, Booking und WhatsApp-Direktbuchung
+- Service-Worker Cache auf V6.2 erhöht

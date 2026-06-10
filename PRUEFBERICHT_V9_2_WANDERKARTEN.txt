@@ -1,0 +1,16 @@
+VERSION 9.2 – WANDERKARTEN & ROUTENANZEIGE
+
+Erledigt:
+- Beim Morgen-Assistenten zeigt „Tour morgen wählen“ jetzt eine Wanderkarte.
+- Je nach Tour ändern sich Text, Kartenlink, Routenlink und Kartenansicht.
+- Bei „Welche Wanderung passt heute?“ wurde ebenfalls eine Wanderkarte ergänzt.
+- Buttons öffnen Google Maps bzw. offizielle Tourseiten.
+- OpenStreetMap-Kartenvorschau direkt in der App eingebaut.
+
+Technischer Check:
+- JavaScript-Syntaxprüfung: OK
+- Doppelte IDs: keine
+- Fehlende Pflichtbereiche: keine
+
+Hinweis:
+Exakte Wanderlinien als GPX/Polyline sind noch nicht eingebettet. Die App zeigt Kartenbereich, Start/Ziel und öffnet die Navigation/offizielle Tour.

@@ -1,0 +1,21 @@
+FEHLERBEHEBUNG V7.1
+
+Beanstandung:
+- Wanderassistent zeigte keine brauchbare Funktion.
+- Donauradweg-Assistent zeigte keine brauchbare Funktion.
+- Windis-Kinderbereich / Quiz war unzureichend.
+- Live-Wetter kann beim lokalen Öffnen hängen bleiben.
+
+Erledigt:
+- Neuer robuster Bereich "Funktionierende Schnellassistenten" eingebaut.
+- Wanderassistent mit konkreten Antworten eingebaut.
+- Donauradweg-Assistent mit konkreten Antworten eingebaut.
+- Kinderbereich mit Quiz, Schatzsuche und Vorlese-Moment erweitert.
+- Wetter-Hinweis mit Schlechtwetter-Entscheidung eingebaut.
+- Externer Wetterlink bleibt als Backup.
+- JavaScript unabhängig vom bisherigen Code am Ende der Datei ergänzt.
+
+Hinweis:
+Live-Wetter funktioniert am zuverlässigsten, wenn die App über HTTPS läuft, also über GitHub Pages:
+https://topdiveair-sketch.github.io/gaestapp/
+Beim lokalen Öffnen der index.html können Browser Live-Abfragen blockieren.
