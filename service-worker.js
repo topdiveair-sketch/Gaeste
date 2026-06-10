@@ -1,4 +1,4 @@
-const CACHE_NAME = 'zab-v11-2';
+const CACHE_NAME = 'zab-v12-0-ultra';
 const APP_SHELL = [
   './',
   './index.html',

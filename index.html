@@ -5,8 +5,8 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#6b4f2a" name="theme-color"/>
-<title>Zuhause am Bach – Gäste-App Wachau</title>
-<meta content="Digitale Gäste-App für Zuhause am Bach in Aggsbach Markt: Wandern, Radfahren, Wetter, Wachaubahn, Fähren, Booking und Wachau-Tipps." name="description"/>
+<title>Zuhause am Bach – Gäste-App Wachau · V12 Ultra</title>
+<meta content="Digitale Gäste-App V12 Ultra für Zuhause am Bach in Aggsbach Markt: Wandern, Radfahren, Wetter, Wachaubahn, Fähren, Service, Windis-Kinderwelt und Wachau-Tipps." name="description"/>
 <link href="manifest.webmanifest" rel="manifest"/>
 <link href="style.css" rel="stylesheet"/>
 </head>
@@ -24,7 +24,7 @@
 <header class="hero">
 <img alt="Zuhause am Bach mit Fidel, Gloria und Pia" src="hero-windis.png"/>
 <div class="hero-text">
-<p class="kicker">Zuhause am Bach · Aggsbach Markt</p>
+<p class="kicker">Zuhause am Bach · Aggsbach Markt · V12 Ultra</p>
 <h1 data-i18n="heroTitle">Willkommen Zuhause am Bach</h1>
 <p data-i18n="heroText">Eure digitale Gäste-App für Wachau, Welterbesteig, Donauradweg und die Wilden Wachauer Windis.</p>
 </div>
@@ -141,6 +141,41 @@
 </article>
 </div>
 </section>
+<section class="card recommendation-card" id="ultra-planer">
+<h2>🚀 Ultra-Tagesplaner</h2>
+<p>Ein Assistent für den ganzen Tag: Wandern, Radfahren, Kinderprogramm oder Regenplan – mit Packliste und Gastgeber-Hinweisen.</p>
+<div class="dashboard-grid">
+<article>
+<h3>🎯 Tagesziel</h3>
+<div class="buttonrow">
+<button class="choice plan-type active" data-value="wander" type="button">Wandern</button>
+<button class="choice plan-type" data-value="bike" type="button">Radfahren</button>
+<button class="choice plan-type" data-value="kids" type="button">Kinder</button>
+</div>
+</article>
+<article>
+<h3>👣 Tempo</h3>
+<div class="buttonrow">
+<button class="choice plan-pace active" data-value="easy" type="button">Gemütlich</button>
+<button class="choice plan-pace" data-value="normal" type="button">Normal</button>
+<button class="choice plan-pace" data-value="sporty" type="button">Sportlich</button>
+</div>
+</article>
+<article>
+<h3>🌦️ Lage</h3>
+<div class="buttonrow">
+<button class="choice plan-weather active" data-value="dry" type="button">Trocken</button>
+<button class="choice plan-weather" data-value="hot" type="button">Heiß</button>
+<button class="choice plan-weather" data-value="rain" type="button">Regen</button>
+</div>
+</article>
+<article>
+<h3>🐾 Plan erstellen</h3>
+<button class="btn primary" id="buildDailyPlan" type="button">Tagesplan berechnen</button>
+</article>
+</div>
+<div class="resultbox" id="dailyPlanResult">Tagesplan wird vorbereitet …</div>
+</section>
 <section class="card" id="touren">
 <h2 data-i18n="tourTitle">🥾 Wachau Touren-Assistent</h2>
 <p data-i18n="tourText">Wählt, was zu euren Beinen, Wetter und Zeit passt. Die passende Wanderkarte und Route erscheinen darunter.</p>
@@ -162,6 +197,24 @@
 </section>
 <section class="card" id="radfahren">
 <h2 data-i18n="bikeTitle">🚲 Donauradweg-Assistent</h2>
+<p>Neu in V12 Ultra: Empfehlung nach Radtyp und Wetterlage.</p>
+<div class="dashboard-grid">
+<article>
+<h3>Radtyp wählen</h3>
+<div class="buttonrow">
+<button class="choice bike-type active" data-value="family" type="button">Genussradler</button>
+<button class="choice bike-type" data-value="ebike" type="button">E-Bike</button>
+<button class="choice bike-type" data-value="sporty" type="button">Sportlich</button>
+<button class="choice bike-type" data-value="rain" type="button">Regen</button>
+</div>
+<button class="btn primary" id="bikeAdvisorStart" type="button">Rad-Empfehlung anzeigen</button>
+</article>
+<article>
+<h3>Empfehlung</h3>
+<div class="resultbox" id="bikeAdvisorResult">Rad-Empfehlung wird vorbereitet …</div>
+<a class="linkbtn primary" id="bikeAdvisorLink" href="https://www.google.com/maps/dir/Aggsbach+Markt+82+3641+Aggsbach+Markt/Spitz+an+der+Donau" target="_blank" rel="noopener">Route öffnen</a>
+</article>
+</div>
 <div class="routegrid">
 <article><h3>Melk</h3><p>Stift Melk, Bahnhof, feste Donauquerung.</p><a class="linkbtn" href="https://www.google.com/maps/dir/Aggsbach+Markt+82+3641+Aggsbach+Markt/Melk" target="_blank" rel="noopener">Route</a></article>
 <article><h3>Spitz</h3><p>Weinorte, Fähre Spitz–Arnsdorf, Donaublick.</p><a class="linkbtn" href="https://www.google.com/maps/dir/Aggsbach+Markt+82+3641+Aggsbach+Markt/Spitz+an+der+Donau" target="_blank" rel="noopener">Route</a></article>
@@ -178,6 +231,21 @@
 <article><h3>🧀 Abendjause</h3><p>Wurst-/Käseplatte oder einfache Jause nach Verfügbarkeit.</p><button class="btn primary" id="snackWhatsApp" type="button">Abendjause anfragen</button></article>
 <article><h3>📱 WhatsApp-Hilfe</h3><p>Anreise, Schlüssel, Tourenfrage oder schnelle Hilfe.</p><button class="btn primary" id="helpWhatsApp" type="button">Hans &amp; Laura fragen</button></article>
 </div>
+</section>
+<section class="card" id="packliste">
+<h2>🎒 Startklar-Packliste</h2>
+<p>Für Gäste praktisch, für Gastgeber professionell: abhaken, was vor Tour/Radtour erledigt ist.</p>
+<div class="treasure">
+<label><input class="packItem" type="checkbox"/> Wasser gefüllt</label>
+<label><input class="packItem" type="checkbox"/> Wetter geprüft</label>
+<label><input class="packItem" type="checkbox"/> Rückfahrt / Fähre / Bahn geprüft</label>
+<label><input class="packItem" type="checkbox"/> Handy geladen</label>
+<label><input class="packItem" type="checkbox"/> Regen-/Sonnenschutz eingepackt</label>
+<label><input class="packItem" type="checkbox"/> Gepäcktransport geklärt</label>
+<label><input class="packItem" type="checkbox"/> Hunde-Wasser / Kinder-Snack dabei</label>
+</div>
+<div class="resultbox" id="packResult">0 / 7 Punkte erledigt.</div>
+<button class="btn" id="packReset" type="button">Packliste zurücksetzen</button>
 </section>
 <section class="card" id="schlechtwetter">
 <h2 data-i18n="rainTitle">🌧️ Schlechtwetterprogramm</h2>
@@ -270,6 +338,27 @@
 </article>
 </div>
 </section>
+<section class="card" id="gaeste-feedback">
+<h2>💬 Gäste-Notiz & Feedback</h2>
+<div class="routegrid">
+<article>
+<h3>Private Notiz auf diesem Gerät</h3>
+<textarea id="guestNote" rows="5" placeholder="z. B. Morgen um 08:30 Frühstück, danach Spitz …"></textarea>
+<button class="btn" id="saveNote" type="button">Notiz speichern</button>
+<div class="resultbox" id="noteResult">Noch keine Notiz gespeichert.</div>
+</article>
+<article>
+<h3>Schnelles Feedback an Hans & Laura</h3>
+<div class="buttonrow">
+<button class="choice feedback-rating" data-value="3" type="button">3/5</button>
+<button class="choice feedback-rating" data-value="4" type="button">4/5</button>
+<button class="choice feedback-rating active" data-value="5" type="button">5/5</button>
+</div>
+<textarea id="feedbackText" rows="5" placeholder="Was war gut? Was sollen wir verbessern?"></textarea>
+<button class="btn primary" id="feedbackSend" type="button">Feedback per WhatsApp senden</button>
+</article>
+</div>
+</section>
 <section class="card" id="funktionstest">
 <h2>🧪 Funktionstest</h2>
 <p>Für Gastgeber: Prüft, ob die wichtigsten App-Bereiche geladen sind.</p>
@@ -279,6 +368,7 @@
 </main>
 <nav class="bottomnav">
 <a href="#heute">🏞️<span>Heute</span></a>
+<a href="#ultra-planer">🚀<span>Ultra</span></a>
 <a href="#touren">🥾<span>Touren</span></a>
 <a href="#radfahren">🚲<span>Rad</span></a>
 <a href="https://api.whatsapp.com/send?phone=436646437526&amp;text=Hallo%20Hans%20und%20Laura" target="_blank" rel="noopener">📱<span>WhatsApp</span></a>

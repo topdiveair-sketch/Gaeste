@@ -1,11 +1,11 @@
-/* Zuhause am Bach Gäste-App – Version 11.2
-   Bereinigt: alte V6–V10-Mehrfachblöcke entfernt.
-   V11.2: Versionsanzeige, stabilerer Service Worker, interne Testanzeige, robustere Tourenlogik.
+/* Zuhause am Bach Gäste-App – Version 12.0 ULTRA
+   Bereinigt: alte Mehrfachblöcke entfernt.
+   V12.0: Premium-Gastgeberfunktionen, Tagesplaner, Radtyp-Assistent, Packliste, Feedback und erweiterter Funktionstest.
 */
 (() => {
   'use strict';
 
-  const APP_VERSION = '11.2';
+  const APP_VERSION = '12.0 ULTRA';
   const APP_BUILD = '2026-06-10';
   const PHONE = '436646437526';
   const ADDRESS = 'Aggsbach Markt 82, 3641 Aggsbach Markt';
@@ -54,6 +54,14 @@
     dog: { label:'🐕 Fidel Hunderunde', profile:'leicht · schattige Pausen', text:'Kurze hundefreundliche Runde mit Wasserpausen. Im Sommer heißen Asphalt vermeiden. Fidel sagt: Lieber klug pausieren als stolz überhitzen.', map:`https://www.google.com/maps/search/?api=1&query=Donauufer+Aggsbach+Markt`, official:`https://www.google.com/maps/search/Donauufer+Aggsbach+Markt`, iframe:'https://www.openstreetmap.org/export/embed.html?bbox=15.3898%2C48.2898%2C15.4022%2C48.2975&layer=mapnik&marker=48.29368%2C15.396018' },
     rain: { label:'🌧️ Gloria Schlechtwetterplan', profile:'leicht · trocken bleiben', text:'Bei Regen: Stift Melk, Kartause Aggsbach, Donauschlössel Spitz, Heuriger oder gemütlicher Lesetag mit den Wilden Wachauer Windis.', map:'https://www.google.com/maps/search/Stift+Melk+Kartause+Aggsbach+Donauschlössel+Spitz', official:'#schlechtwetter', iframe:'https://www.openstreetmap.org/export/embed.html?bbox=15.27%2C48.17%2C15.55%2C48.38&layer=mapnik&marker=48.29368%2C15.396018' }
   };
+
+  const BIKE_ROUTES = {
+    family: { title:'🚲 Genussradler: Aggsbach Markt → Spitz', text:'Gemütliche Donau-Etappe mit Fotopausen. Fähren und Rückfahrt vorher prüfen. Ideal für Gäste, die Wachau sehen, aber nicht hetzen wollen.', link:'https://www.google.com/maps/dir/Aggsbach+Markt+82+3641+Aggsbach+Markt/Spitz+an+der+Donau' },
+    ebike: { title:'⚡ E-Bike: Aggsbach Markt → Dürnstein/Krems', text:'Längere Genussrunde mit Reserven. Akku vor dem Start voll laden, Ladegerät mitnehmen, Windrichtung beachten.', link:'https://www.google.com/maps/dir/Aggsbach+Markt+82+3641+Aggsbach+Markt/Dürnstein/Krems+an+der+Donau' },
+    sporty: { title:'🚴 Sportlich: Wachau-Runde mit Rückfahrtoption', text:'Für trainierte Radfahrer. Früh starten, Fähren/Fahrplan prüfen und genug Wasser mitnehmen. Bei starkem Wind lieber kürzer planen.', link:'https://www.google.com/maps/dir/Aggsbach+Markt+82+3641+Aggsbach+Markt/Krems+an+der+Donau/Melk' },
+    rain: { title:'🌧️ Regenradler: kurze Strecke oder Pause', text:'Bei Regen keine Heldentaten. Donauradweg kann rutschig sein. Besser Schlechtwetterprogramm, Wachaubahn oder kurze sichere Etappe.', link:'#schlechtwetter' }
+  };
+
 
   const QUIZ = [
     ['Wer ist der große ruhige Galgo?', ['Fidel','Gloria','Pia'], 0],
@@ -175,12 +183,58 @@
     if(result) result.textContent = `${checked} / ${items.length} Entdeckungen gefunden.` + (items.length && checked === items.length ? '\n🏅 Gratulation! Ihr seid Wachau-Entdecker!' : '');
   }
 
+
+  function buildDailyPlan(){
+    const dayType = document.querySelector('.plan-type.active')?.dataset.value || 'wander';
+    const pace = document.querySelector('.plan-pace.active')?.dataset.value || 'easy';
+    const weather = document.querySelector('.plan-weather.active')?.dataset.value || 'dry';
+    const box = $('dailyPlanResult');
+    let routeKey = 'short';
+    let intro = '🐾 Fidel sagt: Erst gut planen, dann entspannt genießen.';
+    if(weather === 'rain') routeKey = 'rain';
+    else if(dayType === 'bike') routeKey = pace === 'sporty' ? 'emmersdorf' : 'short';
+    else if(dayType === 'kids') routeKey = 'kids';
+    else if(pace === 'sporty') routeKey = 'emmersdorf';
+    else if(pace === 'normal') routeKey = 'medium';
+    const route = ROUTES[routeKey] || ROUTES.short;
+    if(box) box.textContent = `${intro}\n\nEmpfehlung: ${route.label}\n${route.profile}\n\nMorgens: Wetter, Wasser, Schuhe, Rückfahrt prüfen.\nUnterwegs: Pausen einplanen, Fotos machen, nicht hetzen.\nAbends: Jause oder Einkehr überlegen.\n\nHinweis: Live-Fahrpläne/Fähren vor Start extern prüfen.`;
+    showRoute('route', routeKey);
+  }
+
+  function showBikeRecommendation(){
+    const bikeType = document.querySelector('.bike-type.active')?.dataset.value || 'family';
+    const item = BIKE_ROUTES[bikeType] || BIKE_ROUTES.family;
+    const box = $('bikeAdvisorResult'), link = $('bikeAdvisorLink');
+    if(box) box.textContent = `${item.title}\n\n${item.text}`;
+    if(link) link.href = item.link;
+  }
+
+  function updatePacklist(){
+    const items = $$('.packItem');
+    const checked = items.filter(i => i.checked).length;
+    const box = $('packResult');
+    if(box) box.textContent = `${checked} / ${items.length} Punkte erledigt.` + (items.length && checked === items.length ? '\n✅ Startklar. Gloria nickt zufrieden.' : '');
+  }
+
+  function saveNote(){
+    const note = $('guestNote')?.value?.trim() || '';
+    safeStorage.set('zab_guest_note', note);
+    const box = $('noteResult');
+    if(box) box.textContent = note ? '✅ Notiz auf diesem Gerät gespeichert.' : 'Notiz geleert.';
+  }
+
+  function sendFeedback(){
+    const rating = document.querySelector('.feedback-rating.active')?.dataset.value || '5';
+    const text = $('feedbackText')?.value?.trim() || '';
+    whatsApp(`Hallo Hans und Laura,\n\nFeedback zur Gäste-App / zum Aufenthalt:\nBewertung: ${rating}/5\nNachricht: ${text || '—'}\n\nLiebe Grüße`);
+  }
+
   function appTest(){
     const checks = [
       ['Heute-Dashboard', !!$('heute')], ['Morgen-Assistent', !!$('morgen')], ['Touren-Assistent', !!$('touren')], ['Routenkarte', !!$('routeMap')],
       ['Rad-Assistent', !!$('radfahren')], ['Schlechtwetter', !!$('schlechtwetter')], ['Frühstück WhatsApp', !!$('breakfastWhatsApp')],
       ['Gepäck WhatsApp', !!$('luggageWhatsApp')], ['Windis Quiz', !!$('quizStart') && !!$('quizBox')], ['Schatzsuche', $$('.treasureItem').length > 0],
-      ['Notfall Standort', !!$('sendLocation')], ['Sprachbuttons', $$('.langbtn').length >= 2], ['Tourbuttons', $$('.routebtn').length >= 6], ['Wetterbereich', !!$('weatherStatus')]
+      ['Notfall Standort', !!$('sendLocation')], ['Sprachbuttons', $$('.langbtn').length >= 2], ['Tourbuttons', $$('.routebtn').length >= 6], ['Wetterbereich', !!$('weatherStatus')], ['Ultra Tagesplaner', !!$('dailyPlanResult')], ['Radtyp-Assistent', !!$('bikeAdvisorResult')], ['Packliste', $$('.packItem').length >= 6], ['Feedback-Modul', !!$('feedbackSend')]
     ];
     const failed = checks.filter(c => !c[1]);
     const box = $('appTestResult');
@@ -245,6 +299,26 @@
         () => whatsApp('Hallo Hans, bitte um Hilfe. Standort wird manuell gesendet.')
       );
     });
+
+    $$('.plan-type').forEach(btn => btn.addEventListener('click', () => { setActive('.plan-type', btn); buildDailyPlan(); }));
+    $$('.plan-pace').forEach(btn => btn.addEventListener('click', () => { setActive('.plan-pace', btn); buildDailyPlan(); }));
+    $$('.plan-weather').forEach(btn => btn.addEventListener('click', () => { setActive('.plan-weather', btn); buildDailyPlan(); }));
+    $('buildDailyPlan')?.addEventListener('click', buildDailyPlan);
+    buildDailyPlan();
+
+    $$('.bike-type').forEach(btn => btn.addEventListener('click', () => { setActive('.bike-type', btn); showBikeRecommendation(); }));
+    $('bikeAdvisorStart')?.addEventListener('click', showBikeRecommendation);
+    showBikeRecommendation();
+
+    $$('.packItem').forEach(i => i.addEventListener('change', updatePacklist));
+    $('packReset')?.addEventListener('click', () => { $$('.packItem').forEach(i => i.checked = false); updatePacklist(); });
+    updatePacklist();
+
+    if($('guestNote')) $('guestNote').value = safeStorage.get('zab_guest_note', '') || '';
+    $('saveNote')?.addEventListener('click', saveNote);
+    $$('.feedback-rating').forEach(btn => btn.addEventListener('click', () => setActive('.feedback-rating', btn)));
+    $('feedbackSend')?.addEventListener('click', sendFeedback);
+
     $('runAppTest')?.addEventListener('click', appTest);
     $('clearAppCache')?.addEventListener('click', clearCache);
   }
