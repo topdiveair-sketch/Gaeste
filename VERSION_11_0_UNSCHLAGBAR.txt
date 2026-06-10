@@ -1,0 +1,24 @@
+Zuhause am Bach Gäste-App – Version 11.0
+
+Bereinigt:
+- Alte parallele JavaScript-Blöcke V6 bis V10 entfernt.
+- app.js neu aufgebaut als eine zentrale, robuste Bedienlogik.
+- Keine doppelten Event-Handler mehr für Tourenbuttons.
+- Keine doppelten IDs in index.html.
+- Doppelte iframe-title-Attribute korrigiert.
+
+Neu:
+- Fidel-Gloria-Pia Tourenberater mit 3-Klick-Empfehlung.
+- Gäste-Service direkt per WhatsApp: Gepäck, Abendjause, Hilfe.
+- Verbesserter Wetter-Fallback bei schlechtem Empfang.
+- Quiz mit Wachau-Entdecker-Urkunde ab 8/10 Punkten.
+- Schatzsuche mit Abschlussmeldung.
+- Service Worker Version 11 mit App-Shell-Cache für bessere Offline-Nutzung.
+
+Technischer Check:
+- app.js mit node --check geprüft: keine Syntaxfehler.
+- HTML-ID-Prüfung: keine doppelten IDs.
+- Kernbereiche vorhanden: Heute, Morgen, Berater, Touren, Radfahren, Service, Schlechtwetter, Windis, Notfall, Funktionstest.
+
+Hinweis:
+Nach Upload auf GitHub Pages am Handy einmal Cache löschen oder Seite neu laden, damit alte Versionen nicht aus dem Browsercache erscheinen.
