@@ -1,4 +1,4 @@
-const CACHE_NAME = 'zab-v11-0';
+const CACHE_NAME = 'zab-v11-2';
 const APP_SHELL = [
   './',
   './index.html',
@@ -22,6 +22,14 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
   const request = event.request;
   if (request.method !== 'GET') return;
+
+  const url = new URL(request.url);
+  if (url.origin !== self.location.origin) {
+    // Externe Dienste wie Wetter, Google Maps, Booking nicht in den App-Cache zwingen.
+    // Das verhindert alte/falsche Fremdantworten und macht Fehler leichter nachvollziehbar.
+    return;
+  }
+
   event.respondWith(
     fetch(request).then(response => {
       const copy = response.clone();

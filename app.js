@@ -1,10 +1,12 @@
-/* Zuhause am Bach Gäste-App – Version 11.0
+/* Zuhause am Bach Gäste-App – Version 11.2
    Bereinigt: alte V6–V10-Mehrfachblöcke entfernt.
-   Eine zentrale, robuste Bedienlogik für Touren, Wetter, WhatsApp, Quiz, Schatzsuche und Funktionstest.
+   V11.2: Versionsanzeige, stabilerer Service Worker, interne Testanzeige, robustere Tourenlogik.
 */
 (() => {
   'use strict';
 
+  const APP_VERSION = '11.2';
+  const APP_BUILD = '2026-06-10';
   const PHONE = '436646437526';
   const ADDRESS = 'Aggsbach Markt 82, 3641 Aggsbach Markt';
   const WEATHER_URL = days => `https://api.open-meteo.com/v1/forecast?latitude=48.2937&longitude=15.3960&daily=temperature_2m_max,temperature_2m_min,precipitation_sum,wind_speed_10m_max&timezone=Europe%2FVienna&forecast_days=${days}`;
@@ -75,6 +77,11 @@
   };
 
   function whatsApp(text){ window.location.href = `https://api.whatsapp.com/send?phone=${PHONE}&text=${encodeURIComponent(text)}`; }
+
+  function updateVersionBadge(statusText = 'bereit') {
+    const el = $('appVersion');
+    if (el) el.textContent = `Version ${APP_VERSION} · Build ${APP_BUILD} · ${statusText}`;
+  }
   function setActive(selector, target){ $$(selector).forEach(el => el.classList.toggle('active', el === target)); }
 
   function applyLang(lang){
@@ -100,6 +107,7 @@
     const weather = document.querySelector('.advisor-weather.active')?.dataset.value || 'dry';
     let key = 'short';
     if(weather === 'rain') key = 'rain';
+    else if(weather === 'hot') key = (group === 'kids' || group === 'dog') ? group : 'short';
     else if(group === 'kids') key = 'kids';
     else if(group === 'dog') key = 'dog';
     else if(time === 'medium') key = 'medium';
@@ -177,6 +185,7 @@
     const failed = checks.filter(c => !c[1]);
     const box = $('appTestResult');
     if(!box) return;
+    updateVersionBadge(failed.length ? 'Test mit Hinweisen' : 'Test bestanden');
     box.textContent = failed.length ? `⚠️ Prüfen:\n${failed.map(f => '• ' + f[0]).join('\n')}` : `✅ Alle wichtigen Funktionen gefunden.\n${checks.map(c => '✓ ' + c[0]).join('\n')}`;
     box.classList.toggle('test-ok', !failed.length);
     box.classList.toggle('test-fail', failed.length > 0);
@@ -191,6 +200,7 @@
   }
 
   function bind(){
+    updateVersionBadge('geladen');
     $$('.langbtn').forEach(btn => btn.addEventListener('click', () => applyLang(btn.dataset.lang)));
     applyLang(safeStorage.get('zab_lang', 'de') || 'de');
 
