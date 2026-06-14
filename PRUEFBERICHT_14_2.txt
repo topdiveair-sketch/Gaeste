@@ -1,0 +1,16 @@
+Prüfbericht Version 14.2 RAD- UND MORGEN-FIX
+Build 2026-06-14
+
+Geprüft:
+- app.js mit node --check: fehlerfrei.
+- Doppelte HTML-IDs: keine gefunden.
+- Dino-Park/Dinosaurier-Begriffe: nicht enthalten.
+- Tour morgen wählen: Ergebnisfeld, Kartenlink, offizieller Link und iFrame werden über showRoute('tomorrowRoute', ...) aktualisiert.
+- Rückwärtskompatibilität korrigiert: HTML nutzt tomorrowMapLink/tomorrowOfficialLink, JavaScript erkennt diese IDs jetzt.
+- Radfahrer-Routen im Morgen-Assistenten ergänzt: Rad Spitz, Rad Melk, Rad Krems.
+- Radfahrer-Routen im Touren-Assistenten ergänzt: Rad Spitz, Rad Willendorf, Rad Melk, Rad Krems.
+- Google-Maps-Modus: Wanderziele travelmode=walking, Radziele travelmode=bicycling.
+- Nordufer/Südufer-Regel bleibt bestehen: Aggstein nicht als direkte Route ab Aggsbach Markt.
+
+Hinweis:
+Nach Upload auf GitHub Pages Cache löschen & neu laden, weil Service Worker jetzt zab-v14-2-rad-morgen-fix verwendet.

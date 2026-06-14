@@ -1,15 +1,30 @@
-/* Zuhause am Bach Gäste-App – Version 12.0 ULTRA
-   Bereinigt: alte Mehrfachblöcke entfernt.
-   V12.0: Premium-Gastgeberfunktionen, Tagesplaner, Radtyp-Assistent, Packliste, Feedback und erweiterter Funktionstest.
+/* Zuhause am Bach Gäste-App – Version 14.2 RAD- UND MORGEN-FIX
+   Google-Maps-Routen mit passendem Modus: Fußgänger oder Fahrrad.
+   Tourenberater/Morgen-Assistent mit sichtbarer Rückmeldung und Kartenanzeige.
 */
 (() => {
   'use strict';
 
-  const APP_VERSION = '12.0 ULTRA';
-  const APP_BUILD = '2026-06-10';
+  const APP_VERSION = '14.2 RAD- UND MORGEN-FIX';
+  const APP_BUILD = '2026-06-14';
   const PHONE = '436646437526';
   const ADDRESS = 'Aggsbach Markt 82, 3641 Aggsbach Markt';
   const WEATHER_URL = days => `https://api.open-meteo.com/v1/forecast?latitude=48.2937&longitude=15.3960&daily=temperature_2m_max,temperature_2m_min,precipitation_sum,wind_speed_10m_max&timezone=Europe%2FVienna&forecast_days=${days}`;
+
+  function mapsDir(destination, mode = 'walking', waypoints = '') {
+    const base = 'https://www.google.com/maps/dir/?api=1';
+    const params = new URLSearchParams({
+      origin: ADDRESS,
+      destination,
+      travelmode: mode
+    });
+    if (waypoints) params.set('waypoints', waypoints);
+    return `${base}&${params.toString()}`;
+  }
+
+  function mapsSearch(query) {
+    return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+  }
 
   const TEXTS = {
     de: {
@@ -46,20 +61,140 @@
   };
 
   const ROUTES = {
-    short: { label:'🌿 Fidel empfiehlt: Donau-Bach-Runde', profile:'leicht · 30–90 Minuten', text:'Kurze, einfache Runde entlang Donau und Bach. Ideal nach der Anreise, mit Kindern, mit Hund oder bei unsicherem Wetter. Wasser mitnehmen, bei Hitze Schatten suchen.', map:`https://www.google.com/maps/search/?api=1&query=Donauufer+Aggsbach+Markt`, official:`https://www.google.com/maps/search/Donauufer+Aggsbach+Markt`, iframe:'https://www.openstreetmap.org/export/embed.html?bbox=15.3898%2C48.2898%2C15.4022%2C48.2975&layer=mapnik&marker=48.29368%2C15.396018' },
-    medium: { label:'🥾 Gloria empfiehlt: Maria Langegg / Jauerling', profile:'mittel · 3–4 Stunden', text:'Wald, Aussicht und echtes Wachau-Gefühl. Gut für Gäste mit normaler Kondition. Rückweg, Wetter und ausreichend Wasser vor dem Start prüfen.', map:`https://www.google.com/maps/dir/${encodeURIComponent(ADDRESS)}/Maria+Langegg`, official:`https://www.google.com/maps/dir/${encodeURIComponent(ADDRESS)}/Maria+Langegg`, iframe:'https://www.openstreetmap.org/export/embed.html?bbox=15.34%2C48.27%2C15.43%2C48.33&layer=mapnik&marker=48.29368%2C15.396018' },
-    emmersdorf: { label:'⛰️ Pia empfiehlt: Welterbesteig nach Emmersdorf', profile:'mittel bis anspruchsvoll · ca. 5 Stunden', text:'Ganztagesetappe Aggsbach Markt → Emmersdorf. Früh starten, Rückfahrt klären und Gepäcktransport rechtzeitig anfragen.', map:`https://www.google.com/maps/dir/${encodeURIComponent(ADDRESS)}/Emmersdorf+an+der+Donau`, official:'https://www.donau.com/touren/welterbesteig-wachau-07-aggsbach-markt-emmersdorf-naturpark-jauerling-wachau', iframe:'https://www.openstreetmap.org/export/embed.html?bbox=15.30%2C48.22%2C15.43%2C48.31&layer=mapnik&marker=48.29368%2C15.396018' },
-    maria: { label:'🥾 Welterbesteig Maria Laach → Aggsbach Markt', profile:'mittel · Anreisetappe', text:'Schöne Etappe Richtung Zuhause am Bach. Ideal, wenn Aggsbach Markt das Tagesziel ist. Start und Transfer vorab klären.', map:`https://www.google.com/maps/dir/Maria+Laach+am+Jauerling/${encodeURIComponent(ADDRESS)}`, official:'https://www.donau.com/touren/welterbesteig-wachau-06-maria-laach-aggsbach-markt-naturpark-jauerling-wachau', iframe:'https://www.openstreetmap.org/export/embed.html?bbox=15.31%2C48.285%2C15.43%2C48.335&layer=mapnik&marker=48.29368%2C15.396018' },
-    kids: { label:'🎒 Pia Kinder-Entdeckerrunde', profile:'leicht · spielerisch', text:'Findet Donau, Zug, Marillenbaum, Blume, Herzstein und die Windis. Ziel: Freude statt Gewaltmarsch. Danach Windis-Quiz starten.', map:`https://www.google.com/maps/search/?api=1&query=Aggsbach+Markt+Donauufer`, official:'#windis', iframe:'https://www.openstreetmap.org/export/embed.html?bbox=15.3898%2C48.2898%2C15.4022%2C48.2975&layer=mapnik&marker=48.29368%2C15.396018' },
-    dog: { label:'🐕 Fidel Hunderunde', profile:'leicht · schattige Pausen', text:'Kurze hundefreundliche Runde mit Wasserpausen. Im Sommer heißen Asphalt vermeiden. Fidel sagt: Lieber klug pausieren als stolz überhitzen.', map:`https://www.google.com/maps/search/?api=1&query=Donauufer+Aggsbach+Markt`, official:`https://www.google.com/maps/search/Donauufer+Aggsbach+Markt`, iframe:'https://www.openstreetmap.org/export/embed.html?bbox=15.3898%2C48.2898%2C15.4022%2C48.2975&layer=mapnik&marker=48.29368%2C15.396018' },
-    rain: { label:'🌧️ Gloria Schlechtwetterplan', profile:'leicht · trocken bleiben', text:'Bei Regen: Stift Melk, Kartause Aggsbach, Donauschlössel Spitz, Heuriger oder gemütlicher Lesetag mit den Wilden Wachauer Windis.', map:'https://www.google.com/maps/search/Stift+Melk+Kartause+Aggsbach+Donauschlössel+Spitz', official:'#schlechtwetter', iframe:'https://www.openstreetmap.org/export/embed.html?bbox=15.27%2C48.17%2C15.55%2C48.38&layer=mapnik&marker=48.29368%2C15.396018' }
+    short: {
+      label:'🌿 Fidel empfiehlt: Donau-Bach-Runde',
+      profile:'leicht · 30–90 Minuten · Fußweg',
+      text:'Kurze, einfache Runde entlang Donau und Bach. Ideal nach der Anreise, mit Kindern, mit Hund oder bei unsicherem Wetter. Wasser mitnehmen, bei Hitze Schatten suchen.',
+      map: mapsSearch('Donauufer Aggsbach Markt Fußweg'),
+      official: mapsDir('Donauufer Aggsbach Markt', 'walking'),
+      mapLabel:'🗺️ Karte öffnen', officialLabel:'🚶 Fußroute öffnen',
+      iframe:'https://www.openstreetmap.org/export/embed.html?bbox=15.3898%2C48.2898%2C15.4022%2C48.2975&layer=mapnik&marker=48.29368%2C15.396018'
+    },
+    medium: {
+      label:'🥾 Fidel empfiehlt: Maria Langegg / Jauerling',
+      profile:'mittel · 3–4 Stunden · Fußweg',
+      text:'Wald, Aussicht und echtes Wachau-Gefühl. Nordufer/Höhenroute ab Aggsbach Markt. Rückweg, Wetter und ausreichend Wasser vor dem Start prüfen.',
+      map: mapsDir('Maria Langegg', 'walking'),
+      official: mapsDir('Maria Langegg', 'walking'),
+      mapLabel:'🚶 Fußroute öffnen', officialLabel:'🥾 Route prüfen',
+      iframe:'https://www.openstreetmap.org/export/embed.html?bbox=15.34%2C48.27%2C15.43%2C48.33&layer=mapnik&marker=48.29368%2C15.396018'
+    },
+    emmersdorf: {
+      label:'⛰️ Fidel empfiehlt: Welterbesteig Nordufer nach Emmersdorf',
+      profile:'mittel bis anspruchsvoll · ca. 5 Stunden · ca. 14,7 km · Fußweg',
+      text:'Geprüfte Nordufer-Ganztagesetappe Aggsbach Markt → Emmersdorf. Früh starten, Rückfahrt klären und Gepäcktransport rechtzeitig anfragen. Keine direkte Südufer-Verwechslung mit Aggstein.',
+      map: mapsDir('Emmersdorf an der Donau', 'walking'),
+      official:'https://www.donau.com/touren/welterbesteig-wachau-07-aggsbach-markt-emmersdorf-naturpark-jauerling-wachau',
+      mapLabel:'🚶 Fußroute Google Maps', officialLabel:'🥾 Offizielle Tour öffnen',
+      iframe:'https://www.openstreetmap.org/export/embed.html?bbox=15.30%2C48.22%2C15.43%2C48.31&layer=mapnik&marker=48.29368%2C15.396018'
+    },
+    maria: {
+      label:'🥾 Welterbesteig Nordufer Maria Laach → Aggsbach Markt',
+      profile:'mittel · Anreisetappe · ca. 7 km · Fußweg',
+      text:'Geprüfte Nordufer-Etappe Richtung Zuhause am Bach. Ideal, wenn Aggsbach Markt das Tagesziel ist. Start und Transfer vorab klären.',
+      map:'https://www.google.com/maps/dir/?api=1&origin=Maria+Laach+am+Jauerling&destination=Aggsbach+Markt+82%2C+3641+Aggsbach+Markt&travelmode=walking',
+      official:'https://www.donau.com/touren/welterbesteig-wachau-06-maria-laach-aggsbach-markt-naturpark-jauerling-wachau',
+      mapLabel:'🚶 Fußroute Google Maps', officialLabel:'🥾 Offizielle Tour öffnen',
+      iframe:'https://www.openstreetmap.org/export/embed.html?bbox=15.31%2C48.285%2C15.43%2C48.335&layer=mapnik&marker=48.29368%2C15.396018'
+    },
+    spitz: {
+      label:'🍇 Fidel & Gloria empfehlen: Spitz, Rotes Tor & Ruine Hinterhaus',
+      profile:'mittel · Nordufer · Kultur, Aussicht und Genuss · Fußweg/Rad möglich',
+      text:'Geprüftes Nordufer-Paket: Spitz, Rotes Tor, Ruine Hinterhaus und danach Donauschlössel / Familie Graben-Gritsch. Kein Südufer-Fehler, keine direkte Aggstein-Wanderung.',
+      map: mapsDir('Rotes Tor Spitz an der Donau', 'walking', 'Ruine Hinterhaus Spitz'),
+      official: mapsSearch('Rotes Tor Ruine Hinterhaus Spitz Wachau'),
+      mapLabel:'🚶 Fußroute nach Spitz öffnen', officialLabel:'🗺️ Ziele in Spitz suchen',
+      iframe:'https://www.openstreetmap.org/export/embed.html?bbox=15.380%2C48.340%2C15.440%2C48.385&layer=mapnik&marker=48.365%2C15.414'
+    },
+    archery: {
+      label:'🏹 Pia empfiehlt: Bogenschießen & Hohlweg-Runde',
+      profile:'leicht bis mittel · lokales Nordufer-Erlebnis · Fußweg',
+      text:'Kurzer Erlebnisweg ab Zuhause am Bach Richtung Wachauer Bogensport Union / Bogenschießplatz Aggsbach Markt. Ideal als Themenabend: wandern, einkehren/zusammensitzen, Bogenschießen nur nach Verfügbarkeit, Anmeldung und Sicherheitsabsprache. Kein Südufer-Ziel.',
+      map: mapsDir('Wachauer Bogensport Union Aggsbach Markt', 'walking'),
+      official:'https://www.wbu-aggsbach.at/WBU/',
+      mapLabel:'🚶 Fußroute öffnen', officialLabel:'🏹 WBU Webseite öffnen',
+      iframe:'https://www.openstreetmap.org/export/embed.html?bbox=15.386%2C48.286%2C15.410%2C48.304&layer=mapnik&marker=48.29368%2C15.396018'
+    },
+    kids: {
+      label:'🎒 Pia Kinder-Entdeckerrunde',
+      profile:'leicht · spielerisch · Fußweg',
+      text:'Findet Donau, Zug, Marillenbaum, Blume, Herzstein und die Windis. Ziel: Freude statt Gewaltmarsch. Danach Windis-Quiz starten.',
+      map: mapsSearch('Aggsbach Markt Donauufer'),
+      official:'#windis',
+      mapLabel:'🗺️ Karte öffnen', officialLabel:'🎀 Windis Kinderwelt',
+      iframe:'https://www.openstreetmap.org/export/embed.html?bbox=15.3898%2C48.2898%2C15.4022%2C48.2975&layer=mapnik&marker=48.29368%2C15.396018'
+    },
+    dog: {
+      label:'🐕 Fidel Hunderunde',
+      profile:'leicht · schattige Pausen · Fußweg',
+      text:'Kurze hundefreundliche Runde mit Wasserpausen. Im Sommer heißen Asphalt vermeiden. Fidel sagt: Lieber klug pausieren als stolz überhitzen.',
+      map: mapsSearch('Donauufer Aggsbach Markt'),
+      official: mapsDir('Donauufer Aggsbach Markt', 'walking'),
+      mapLabel:'🗺️ Karte öffnen', officialLabel:'🚶 Fußroute öffnen',
+      iframe:'https://www.openstreetmap.org/export/embed.html?bbox=15.3898%2C48.2898%2C15.4022%2C48.2975&layer=mapnik&marker=48.29368%2C15.396018'
+    },
+    willendorf: {
+      label:'🍑 Gloria empfiehlt: Willendorf & Venus-Fundstelle',
+      profile:'leicht bis mittel · Nordufer · Kultur · Fuß/Rad',
+      text:'Kulturstopp am Nordufer zur Venus von Willendorf. Gut mit Radgästen oder als ruhiger Halbtagesausflug kombinierbar.',
+      map: mapsDir('Willendorf in der Wachau', 'walking'),
+      official: mapsSearch('Venus von Willendorf Fundstelle'),
+      mapLabel:'🚶 Fußroute öffnen', officialLabel:'🗺️ Fundstelle suchen',
+      iframe:'https://www.openstreetmap.org/export/embed.html?bbox=15.36%2C48.30%2C15.43%2C48.34&layer=mapnik&marker=48.323%2C15.403'
+    },
+    bike_spitz: {
+      label:'🚲 Rad: Aggsbach Markt → Spitz',
+      profile:'Genussradler · Nordufer · Fahrradroute',
+      text:'Direkter Donauradweg am Nordufer nach Spitz. Gut für gemütliche Radgäste, Weinorte, Rotes Tor, Ruine Hinterhaus und Gritsch. Rückfahrt gleich mitplanen.',
+      map: mapsDir('Spitz an der Donau', 'bicycling'),
+      official: mapsDir('Donauschlössel Spitz Donaulände 3', 'bicycling'),
+      mapLabel:'🚲 Radroute nach Spitz öffnen', officialLabel:'🍷 Radroute zu Gritsch öffnen',
+      iframe:'https://www.openstreetmap.org/export/embed.html?bbox=15.37%2C48.29%2C15.44%2C48.38&layer=mapnik&marker=48.29368%2C15.396018'
+    },
+    bike_willendorf: {
+      label:'🚲 Rad: Aggsbach Markt → Willendorf / Venus',
+      profile:'kurz bis mittel · Nordufer · Fahrradroute',
+      text:'Ruhiger Kulturstopp am Nordufer. Für Radfahrer und Familien gut geeignet. Venus-Fundstelle und Donauufer kombinieren.',
+      map: mapsDir('Willendorf in der Wachau', 'bicycling'),
+      official: mapsSearch('Venus von Willendorf Fundstelle'),
+      mapLabel:'🚲 Radroute nach Willendorf öffnen', officialLabel:'🗺️ Fundstelle suchen',
+      iframe:'https://www.openstreetmap.org/export/embed.html?bbox=15.36%2C48.29%2C15.43%2C48.34&layer=mapnik&marker=48.323%2C15.403'
+    },
+    bike_melk: {
+      label:'🚲 Rad: Aggsbach Markt → Melk',
+      profile:'mittel · Donauradweg · Fahrradroute',
+      text:'Klassische Etappe Richtung Melk mit Stift, Bahnhof und fester Donauquerung. Gut als Ziel oder Rückreiseoption.',
+      map: mapsDir('Melk', 'bicycling'),
+      official: mapsSearch('Stift Melk Fahrradroute Aggsbach Markt'),
+      mapLabel:'🚲 Radroute nach Melk öffnen', officialLabel:'🗺️ Melk suchen',
+      iframe:'https://www.openstreetmap.org/export/embed.html?bbox=15.26%2C48.18%2C15.42%2C48.31&layer=mapnik&marker=48.29368%2C15.396018'
+    },
+    bike_krems: {
+      label:'🚲 Rad: Aggsbach Markt → Dürnstein → Krems',
+      profile:'sportlich · lang · Fahrradroute',
+      text:'Längere Donauradweg-Tour für trainierte Radfahrer oder E-Bike. Früh starten, Windrichtung und Rückfahrt prüfen.',
+      map: mapsDir('Krems an der Donau', 'bicycling', 'Dürnstein'),
+      official: mapsSearch('Donauradweg Wachau Aggsbach Markt Krems'),
+      mapLabel:'🚲 Radroute nach Krems öffnen', officialLabel:'🗺️ Donauradweg suchen',
+      iframe:'https://www.openstreetmap.org/export/embed.html?bbox=15.37%2C48.29%2C15.62%2C48.42&layer=mapnik&marker=48.29368%2C15.396018'
+    },
+    rain: {
+      label:'🌧️ Gloria Schlechtwetterplan',
+      profile:'leicht · trocken bleiben · Auto/Bahn prüfen',
+      text:'Bei Regen: Stift Melk, Kartause Aggsbach, Donauschlössel Spitz / Familie Graben-Gritsch, Heuriger oder gemütlicher Lesetag mit den Wilden Wachauer Windis.',
+      map: mapsSearch('Stift Melk Kartause Aggsbach Donauschlössel Spitz'),
+      official:'#schlechtwetter',
+      mapLabel:'🗺️ Regenziele suchen', officialLabel:'🌧️ Schlechtwetter öffnen',
+      iframe:'https://www.openstreetmap.org/export/embed.html?bbox=15.27%2C48.17%2C15.55%2C48.38&layer=mapnik&marker=48.29368%2C15.396018'
+    }
   };
 
+
   const BIKE_ROUTES = {
-    family: { title:'🚲 Genussradler: Aggsbach Markt → Spitz', text:'Gemütliche Donau-Etappe mit Fotopausen. Fähren und Rückfahrt vorher prüfen. Ideal für Gäste, die Wachau sehen, aber nicht hetzen wollen.', link:'https://www.google.com/maps/dir/Aggsbach+Markt+82+3641+Aggsbach+Markt/Spitz+an+der+Donau' },
-    ebike: { title:'⚡ E-Bike: Aggsbach Markt → Dürnstein/Krems', text:'Längere Genussrunde mit Reserven. Akku vor dem Start voll laden, Ladegerät mitnehmen, Windrichtung beachten.', link:'https://www.google.com/maps/dir/Aggsbach+Markt+82+3641+Aggsbach+Markt/Dürnstein/Krems+an+der+Donau' },
-    sporty: { title:'🚴 Sportlich: Wachau-Runde mit Rückfahrtoption', text:'Für trainierte Radfahrer. Früh starten, Fähren/Fahrplan prüfen und genug Wasser mitnehmen. Bei starkem Wind lieber kürzer planen.', link:'https://www.google.com/maps/dir/Aggsbach+Markt+82+3641+Aggsbach+Markt/Krems+an+der+Donau/Melk' },
-    rain: { title:'🌧️ Regenradler: kurze Strecke oder Pause', text:'Bei Regen keine Heldentaten. Donauradweg kann rutschig sein. Besser Schlechtwetterprogramm, Wachaubahn oder kurze sichere Etappe.', link:'#schlechtwetter' }
+    family: { title:'🚲 Genussradler: Aggsbach Markt → Spitz', text:'Gemütliche Donau-Etappe mit Fotopausen am Nordufer. Ideal für Gäste, die Wachau sehen, aber nicht hetzen wollen.', link:mapsDir('Spitz an der Donau', 'bicycling') },
+    ebike: { title:'⚡ E-Bike: Aggsbach Markt → Dürnstein/Krems', text:'Längere Genussrunde mit Reserven. Akku vor dem Start voll laden, Ladegerät mitnehmen, Windrichtung beachten.', link:mapsDir('Krems an der Donau', 'bicycling', 'Dürnstein') },
+    sporty: { title:'🚴 Sportlich: Wachau-Runde mit Rückfahrtoption', text:'Für trainierte Radfahrer. Früh starten, Fähren/Fahrplan prüfen und genug Wasser mitnehmen. Bei starkem Wind lieber kürzer planen.', link:mapsDir('Melk', 'bicycling', 'Spitz an der Donau|Krems an der Donau') },
+    rain: { title:'🌧️ Regen-Radplan', text:'Bei starkem Regen keine große Tour erzwingen. Besser Wachaubahn, kurzer Ortsweg, Einkehr oder Kulturziel wählen.', link:mapsSearch('Wachaubahn Aggsbach Markt Spitz Melk') }
   };
 
 
@@ -102,10 +237,20 @@
 
   function showRoute(prefix, key){
     const route = ROUTES[key] || ROUTES.short;
-    const result = $(`${prefix}Result`), map = $(`${prefix}MapLink`), official = $(`${prefix}OfficialLink`), frame = $(`${prefix}Map`);
-    if(result) result.textContent = `${route.label}\n${route.profile}\n\n${route.text}`;
-    if(map) map.href = route.map;
-    if(official) official.href = route.official;
+    const result = $(`${prefix}Result`);
+    let map = $(`${prefix}MapLink`), official = $(`${prefix}OfficialLink`), frame = $(`${prefix}Map`);
+    // Rückwärtskompatibilität: ältere HTML-Version hatte beim Morgen-Assistenten andere Link-IDs.
+    if(prefix === 'tomorrowRoute') {
+      map = map || $('tomorrowMapLink');
+      official = official || $('tomorrowOfficialLink');
+      frame = frame || $('tomorrowRouteMap');
+    }
+    if(result) result.textContent = `${route.label}
+${route.profile}
+
+${route.text}`;
+    if(map) { map.href = route.map; map.textContent = route.mapLabel || '🗺️ Karte öffnen'; }
+    if(official) { official.href = route.official; official.textContent = route.officialLabel || 'Route öffnen'; }
     if(frame) frame.src = route.iframe;
   }
 
@@ -120,10 +265,18 @@
     else if(group === 'dog') key = 'dog';
     else if(time === 'medium') key = 'medium';
     else if(time === 'day') key = 'emmersdorf';
+    const route = ROUTES[key] || ROUTES.short;
     showRoute('route', key);
+    const advisorBox = $('advisorResult');
+    const advisorLink = $('advisorMapLink');
+    if(advisorBox) advisorBox.textContent = `${route.label}
+${route.profile}
+
+${route.text}`;
+    if(advisorLink) { advisorLink.href = route.map; advisorLink.textContent = route.mapLabel || '🗺️ Karte öffnen'; }
     const btn = document.querySelector(`.routebtn[data-route="${key}"]`);
     if(btn) setActive('.routebtn', btn);
-    location.hash = 'touren';
+    location.hash = 'berater';
   }
 
   async function loadWeather(statusId, gridId, days, index){
@@ -192,7 +345,7 @@
     let routeKey = 'short';
     let intro = '🐾 Fidel sagt: Erst gut planen, dann entspannt genießen.';
     if(weather === 'rain') routeKey = 'rain';
-    else if(dayType === 'bike') routeKey = pace === 'sporty' ? 'emmersdorf' : 'short';
+    else if(dayType === 'bike') { showBikeRecommendation(); routeKey = 'bike_spitz'; }
     else if(dayType === 'kids') routeKey = 'kids';
     else if(pace === 'sporty') routeKey = 'emmersdorf';
     else if(pace === 'normal') routeKey = 'medium';
@@ -206,7 +359,7 @@
     const item = BIKE_ROUTES[bikeType] || BIKE_ROUTES.family;
     const box = $('bikeAdvisorResult'), link = $('bikeAdvisorLink');
     if(box) box.textContent = `${item.title}\n\n${item.text}`;
-    if(link) link.href = item.link;
+    if(link) { link.href = item.link; link.textContent = '🚲 Radroute öffnen'; }
   }
 
   function updatePacklist(){
@@ -234,7 +387,7 @@
       ['Heute-Dashboard', !!$('heute')], ['Morgen-Assistent', !!$('morgen')], ['Touren-Assistent', !!$('touren')], ['Routenkarte', !!$('routeMap')],
       ['Rad-Assistent', !!$('radfahren')], ['Schlechtwetter', !!$('schlechtwetter')], ['Frühstück WhatsApp', !!$('breakfastWhatsApp')],
       ['Gepäck WhatsApp', !!$('luggageWhatsApp')], ['Windis Quiz', !!$('quizStart') && !!$('quizBox')], ['Schatzsuche', $$('.treasureItem').length > 0],
-      ['Notfall Standort', !!$('sendLocation')], ['Sprachbuttons', $$('.langbtn').length >= 2], ['Tourbuttons', $$('.routebtn').length >= 6], ['Wetterbereich', !!$('weatherStatus')], ['Ultra Tagesplaner', !!$('dailyPlanResult')], ['Radtyp-Assistent', !!$('bikeAdvisorResult')], ['Packliste', $$('.packItem').length >= 6], ['Feedback-Modul', !!$('feedbackSend')]
+      ['Notfall Standort', !!$('sendLocation')], ['Sprachbuttons', $$('.langbtn').length >= 2], ['Tourbuttons', $$('.routebtn').length >= 13], ['Wetterbereich', !!$('weatherStatus')], ['Tourenberater Rückmeldung', !!$('advisorResult')], ['Ultra Tagesplaner', !!$('dailyPlanResult')], ['Radtyp-Assistent', !!$('bikeAdvisorResult')], ['Packliste', $$('.packItem').length >= 6], ['Feedback-Modul', !!$('feedbackSend')]
     ];
     const failed = checks.filter(c => !c[1]);
     const box = $('appTestResult');

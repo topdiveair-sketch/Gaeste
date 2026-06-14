@@ -1,0 +1,14 @@
+Zuhause am Bach Gäste-App
+Version 14.1 WINDIS ROUTEN-FIX
+Build 2026-06-14
+
+Änderungen:
+- Google-Maps-Routenlinks nach Modus getrennt: Fußgänger/Fahrrad.
+- Morgen-Assistent zeigt Spitz/Rotes Tor und Bogenschießen ebenfalls mit Karte.
+- Fidel-Gloria-Pia Tourenberater zeigt nun eigene sichtbare Rückmeldung und Kartenlink.
+- Touren-Assistent um Willendorf/Venus ergänzt.
+- Nordufer/Südufer-Regel beibehalten.
+- Cache auf zab-v14-1-routen-fix aktualisiert.
+
+© 2026 Johann Prem · Zuhause am Bach · Die Wilden Wachauer Windis
+Tel. +43 664 6437526

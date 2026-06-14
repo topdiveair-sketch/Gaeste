@@ -5,8 +5,8 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#6b4f2a" name="theme-color"/>
-<title>Zuhause am Bach – Gäste-App Wachau · V12 Ultra</title>
-<meta content="Digitale Gäste-App V12 Ultra für Zuhause am Bach in Aggsbach Markt: Wandern, Radfahren, Wetter, Wachaubahn, Fähren, Service, Windis-Kinderwelt und Wachau-Tipps." name="description"/>
+<title>Zuhause am Bach – Gäste-App Wachau · V14.1 Windis Routen-Fix</title>
+<meta content="Digitale Gäste-App V14.1 Windis Routen-Fix für Zuhause am Bach in Aggsbach Markt: Fidel, Gloria und Pia führen Gäste zu geprüften Nordufer-Wanderungen, Donauradweg, Genuss, Bogenschießen und Wachau-Tipps." name="description"/>
 <link href="manifest.webmanifest" rel="manifest"/>
 <link href="style.css" rel="stylesheet"/>
 </head>
@@ -24,12 +24,23 @@
 <header class="hero">
 <img alt="Zuhause am Bach mit Fidel, Gloria und Pia" src="hero-windis.png"/>
 <div class="hero-text">
-<p class="kicker">Zuhause am Bach · Aggsbach Markt · V12 Ultra</p>
-<h1 data-i18n="heroTitle">Willkommen Zuhause am Bach</h1>
-<p data-i18n="heroText">Eure digitale Gäste-App für Wachau, Welterbesteig, Donauradweg und die Wilden Wachauer Windis.</p>
+<p class="kicker">Zuhause am Bach · Aggsbach Markt · V14.1 Windis Routen-Fix</p>
+<h1 data-i18n="heroTitle">🐾 Willkommen bei den Wilden Wachauer Windis</h1>
+<p data-i18n="heroText">Fidel kennt die Wege. Gloria kennt den Genuss. Pia findet Abenteuer. Eure App für die echte Wachau am Nordufer.</p>
 </div>
 </header>
 <main>
+<section class="card recommendation-card" id="windis-start">
+<h2>🐾 Die Wilden Wachauer Windis führen euch durch die Wachau</h2>
+<p>Statt einer gewöhnlichen Gästemappe bekommt ihr drei persönliche Wachau-Begleiter: Fidel für Wanderungen, Gloria für Genuss und Pia für Abenteuer.</p>
+<div class="routegrid">
+<article><h3>🐾 Fidels Wanderwelt</h3><p>Geprüfte Nordufer-Routen ab Aggsbach Markt: Donau-Bach-Runde, Maria Langegg/Jauerling, Welterbesteig Richtung Emmersdorf, Spitz mit Rotem Tor und Ruine Hinterhaus.</p><a class="linkbtn primary" href="#touren">Wanderungen öffnen</a></article>
+<article><h3>🍷 Glorias Genusswelt</h3><p>Donauschlössel / Familie Graben-Gritsch in Spitz bleibt als Genuss-Tipp fix dabei. Dazu Heurigenkalender, Wein, Marille und Abendjause.</p><a class="linkbtn primary" href="#empfehlung-gritsch">Genuss öffnen</a></article>
+<article><h3>🎀 Pias Abenteuerwelt</h3><p>Bogenschießen in Aggsbach Markt, Schatzsuche, Windis-Quiz, Venus von Willendorf und kleine Entdeckungen rund ums Nordufer.</p><a class="linkbtn primary" href="#windis">Abenteuer öffnen</a></article>
+<article><h3>⚠️ Ufer-Regel</h3><p>Aggsbach Markt liegt am Nordufer. Südufer-Ziele wie Ruine Aggstein werden nicht als direkte Wanderung empfohlen, sondern nur mit Fähre, Transfer oder Umweg.</p><a class="linkbtn" href="#uferregel">Ufer-Regel ansehen</a></article>
+</div>
+</section>
+
 <section class="card dashboard" id="heute">
 <h2 data-i18n="todayTitle">🏞️ Heute in der Wachau</h2>
 <p data-i18n="todayText">Alles Wichtige auf einen Blick: Wetter, Tour, Rad, Fähren, Wachaubahn und schnelle Hilfe.</p>
@@ -88,12 +99,17 @@
 <button class="choice tomorrow-route active" data-route="short" type="button">Kurz</button>
 <button class="choice tomorrow-route" data-route="maria" type="button">Maria Laach → Aggsbach</button>
 <button class="choice tomorrow-route" data-route="emmersdorf" type="button">Aggsbach → Emmersdorf</button>
+<button class="choice tomorrow-route" data-route="spitz" type="button">Spitz / Rotes Tor</button>
+<button class="choice tomorrow-route" data-route="archery" type="button">Bogenschießen</button>
+<button class="choice tomorrow-route" data-route="bike_spitz" type="button">🚲 Rad Spitz</button>
+<button class="choice tomorrow-route" data-route="bike_melk" type="button">🚲 Rad Melk</button>
+<button class="choice tomorrow-route" data-route="bike_krems" type="button">🚲 Rad Krems</button>
 <button class="choice tomorrow-route" data-route="rain" type="button">Regen</button>
 </div>
 <div class="resultbox" id="tomorrowRouteResult"></div>
 <div class="actions">
-<a class="linkbtn primary" href="https://www.google.com/maps/search/Donauufer+Aggsbach+Markt" id="tomorrowMapLink" target="_blank" rel="noopener">🗺️ Wanderkarte öffnen</a>
-<a class="linkbtn" href="https://www.google.com/maps/search/Welterbesteig+Wachau+Aggsbach+Markt" id="tomorrowOfficialLink" target="_blank" rel="noopener">🥾 Route anzeigen</a>
+<a class="linkbtn primary" href="https://www.google.com/maps/search/Donauufer+Aggsbach+Markt" id="tomorrowMapLink" target="_blank" rel="noopener">🗺️ Karte öffnen</a>
+<a class="linkbtn" href="https://www.google.com/maps/search/Welterbesteig+Wachau+Aggsbach+Markt" id="tomorrowOfficialLink" target="_blank" rel="noopener">🚶 Fußroute öffnen</a>
 </div>
 <div class="mapbox"><iframe id="tomorrowRouteMap" loading="lazy" title="Wanderkarte morgen"></iframe></div>
 </article>
@@ -140,6 +156,8 @@
 <button class="btn primary" id="advisorStart" type="button">🐾 Empfehlung anzeigen</button>
 </article>
 </div>
+<div class="resultbox" id="advisorResult">Noch keine Empfehlung gewählt. Bitte Zeit, Begleitung und Wetter wählen und dann „Empfehlung anzeigen“ drücken.</div>
+<a class="linkbtn primary" id="advisorMapLink" href="https://www.google.com/maps/search/?api=1&query=Aggsbach+Markt+82" target="_blank" rel="noopener">🗺️ Karte zur Empfehlung öffnen</a>
 </section>
 <section class="card recommendation-card" id="ultra-planer">
 <h2>🚀 Ultra-Tagesplaner</h2>
@@ -178,7 +196,7 @@
 </section>
 <section class="card" id="touren">
 <h2 data-i18n="tourTitle">🥾 Wachau Touren-Assistent</h2>
-<p data-i18n="tourText">Wählt, was zu euren Beinen, Wetter und Zeit passt. Die passende Wanderkarte und Route erscheinen darunter.</p>
+<p data-i18n="tourText">Wählt, was zu euren Beinen, Wetter und Zeit passt. Die passende Karte und Google-Maps-Route erscheinen darunter – bei Wanderungen als Fußroute, bei Radzielen als Fahrradroute.</p>
 <div class="buttonrow bigbuttons">
 <button class="bighelp routebtn" data-route="short" type="button">🌿 1–2 Stunden</button>
 <button class="bighelp routebtn" data-route="medium" type="button">🥾 3–4 Stunden</button>
@@ -186,18 +204,25 @@
 <button class="bighelp routebtn" data-route="kids" type="button">🎒 Mit Kindern</button>
 <button class="bighelp routebtn" data-route="dog" type="button">🐕 Mit Hund</button>
 <button class="bighelp routebtn" data-route="rain" type="button">🌧️ Regen</button>
+<button class="bighelp routebtn" data-route="spitz" type="button">🍇 Spitz / Rotes Tor</button>
+<button class="bighelp routebtn" data-route="archery" type="button">🏹 Bogenschießen</button>
+<button class="bighelp routebtn" data-route="willendorf" type="button">🍑 Willendorf / Venus</button>
+<button class="bighelp routebtn" data-route="bike_spitz" type="button">🚲 Rad Spitz</button>
+<button class="bighelp routebtn" data-route="bike_willendorf" type="button">🚲 Rad Willendorf</button>
+<button class="bighelp routebtn" data-route="bike_melk" type="button">🚲 Rad Melk</button>
+<button class="bighelp routebtn" data-route="bike_krems" type="button">🚲 Rad Krems</button>
 </div>
 <div class="resultbox" id="routeResult"></div>
 <div class="actions">
-<a class="linkbtn primary" href="https://www.google.com/maps/search/Donauufer+Aggsbach+Markt" id="routeMapLink" target="_blank" rel="noopener">🗺️ Wanderkarte öffnen</a>
-<a class="linkbtn" href="https://www.google.com/maps/search/Welterbesteig+Wachau+Aggsbach+Markt" id="routeOfficialLink" target="_blank" rel="noopener">🥾 Route anzeigen</a>
+<a class="linkbtn primary" href="https://www.google.com/maps/search/Donauufer+Aggsbach+Markt" id="routeMapLink" target="_blank" rel="noopener">🗺️ Karte öffnen</a>
+<a class="linkbtn" href="https://www.google.com/maps/search/Welterbesteig+Wachau+Aggsbach+Markt" id="routeOfficialLink" target="_blank" rel="noopener">🚶 Fußroute öffnen</a>
 <button class="btn" id="routeLuggage" type="button">🎒 Gepäck anfragen</button>
 </div>
 <div class="mapbox"><iframe id="routeMap" loading="lazy" title="Wanderkarte gewählte Route"></iframe></div>
 </section>
 <section class="card" id="radfahren">
 <h2 data-i18n="bikeTitle">🚲 Donauradweg-Assistent</h2>
-<p>Neu in V12 Ultra: Empfehlung nach Radtyp und Wetterlage.</p>
+<p>Radfahrer sind jetzt fest eingebaut: Genussradler, E-Bike, sportliche Touren und Regenplan – mit Google-Maps-Fahrradrouten.</p>
 <div class="dashboard-grid">
 <article>
 <h3>Radtyp wählen</h3>
@@ -212,14 +237,34 @@
 <article>
 <h3>Empfehlung</h3>
 <div class="resultbox" id="bikeAdvisorResult">Rad-Empfehlung wird vorbereitet …</div>
-<a class="linkbtn primary" id="bikeAdvisorLink" href="https://www.google.com/maps/dir/Aggsbach+Markt+82+3641+Aggsbach+Markt/Spitz+an+der+Donau" target="_blank" rel="noopener">Route öffnen</a>
+<a class="linkbtn primary" id="bikeAdvisorLink" href="https://www.google.com/maps/dir/?api=1&origin=Aggsbach+Markt+82%2C+3641+Aggsbach+Markt&destination=Spitz+an+der+Donau&travelmode=bicycling" target="_blank" rel="noopener">Route öffnen</a>
 </article>
 </div>
 <div class="routegrid">
-<article><h3>Melk</h3><p>Stift Melk, Bahnhof, feste Donauquerung.</p><a class="linkbtn" href="https://www.google.com/maps/dir/Aggsbach+Markt+82+3641+Aggsbach+Markt/Melk" target="_blank" rel="noopener">Route</a></article>
-<article><h3>Spitz</h3><p>Weinorte, Fähre Spitz–Arnsdorf, Donaublick.</p><a class="linkbtn" href="https://www.google.com/maps/dir/Aggsbach+Markt+82+3641+Aggsbach+Markt/Spitz+an+der+Donau" target="_blank" rel="noopener">Route</a></article>
-<article><h3>Dürnstein</h3><p>Altstadt, Ruine, Fotos. Früh starten.</p><a class="linkbtn" href="https://www.google.com/maps/dir/Aggsbach+Markt+82+3641+Aggsbach+Markt/Dürnstein" target="_blank" rel="noopener">Route</a></article>
-<article><h3>Krems</h3><p>Längere Tour, Bahnhof, Altstadt.</p><a class="linkbtn" href="https://www.google.com/maps/dir/Aggsbach+Markt+82+3641+Aggsbach+Markt/Krems+an+der+Donau" target="_blank" rel="noopener">Route</a></article>
+<article><h3>Melk</h3><p>Stift Melk, Bahnhof, feste Donauquerung.</p><a class="linkbtn" href="https://www.google.com/maps/dir/?api=1&origin=Aggsbach+Markt+82%2C+3641+Aggsbach+Markt&destination=Melk&travelmode=bicycling" target="_blank" rel="noopener">Route öffnen</a></article>
+<article><h3>Spitz</h3><p>Weinorte, Fähre Spitz–Arnsdorf, Donaublick.</p><a class="linkbtn" href="https://www.google.com/maps/dir/?api=1&origin=Aggsbach+Markt+82%2C+3641+Aggsbach+Markt&destination=Spitz+an+der+Donau&travelmode=bicycling" target="_blank" rel="noopener">Route öffnen</a></article>
+<article><h3>Dürnstein</h3><p>Altstadt, Ruine, Fotos. Früh starten.</p><a class="linkbtn" href="https://www.google.com/maps/dir/?api=1&origin=Aggsbach+Markt+82%2C+3641+Aggsbach+Markt&destination=Dürnstein&travelmode=bicycling" target="_blank" rel="noopener">Route öffnen</a></article>
+<article><h3>Krems</h3><p>Längere Tour, Bahnhof, Altstadt.</p><a class="linkbtn" href="https://www.google.com/maps/dir/?api=1&origin=Aggsbach+Markt+82%2C+3641+Aggsbach+Markt&destination=Krems+an+der+Donau&travelmode=bicycling" target="_blank" rel="noopener">Route öffnen</a></article>
+</div>
+</section>
+<section class="card" id="ausfluege-nordufer">
+<h2>🏞️ Geprüfte Ausflugsziele am Nordufer</h2>
+<p>Für Gäste von Zuhause am Bach: interessant, sinnvoll erreichbar und passend zur Wachau. Südufer-Ziele werden bewusst getrennt.</p>
+<div class="routegrid">
+<article><h3>🏰 Ruine Hinterhaus</h3><p>Top-Ziel in Spitz mit Donaublick. Ideal in Kombination mit Rotem Tor und Ortskern Spitz.</p><a class="linkbtn" href="https://www.google.com/maps/dir/?api=1&origin=Aggsbach+Markt+82%2C+3641+Aggsbach+Markt&destination=Ruine+Hinterhaus+Spitz&travelmode=walking" target="_blank" rel="noopener">Route öffnen</a></article>
+<article><h3>🚪 Rotes Tor</h3><p>Klassische Spitzer Runde, schön für Wanderer und Gäste mit etwas Zeit. Besonders gut als Fidel-Tipp.</p><a class="linkbtn" href="https://www.google.com/maps/search/Rotes+Tor+Spitz+an+der+Donau" target="_blank" rel="noopener">Karte</a></article>
+<article><h3>🍷 Spitz & Donauschlössel / Gritsch</h3><p>Wein, Donau, Einkehr und Wachauer Atmosphäre. Glorias Genuss-Tipp bleibt fix in der App.</p><a class="linkbtn" href="#empfehlung-gritsch">Gritsch öffnen</a></article>
+<article><h3>🏹 Bogenschießen Aggsbach Markt</h3><p>Pias Erlebnis-Tipp: nur nach Verfügbarkeit, Anmeldung und Sicherheitsabsprache. Kein Südufer-Ziel.</p><button class="btn routebtn" data-route="archery" type="button">Route anzeigen</button></article>
+<article><h3>🍑 Willendorf / Venus</h3><p>Kulturstopp am Nordufer, gut für kurze Ausflüge, Radgäste und Familien.</p><a class="linkbtn" href="https://www.google.com/maps/dir/?api=1&origin=Aggsbach+Markt+82%2C+3641+Aggsbach+Markt&destination=Willendorf+in+der+Wachau&travelmode=walking" target="_blank" rel="noopener">Route öffnen</a></article>
+<article><h3>⛰️ Maria Laach / Jauerling</h3><p>Höhenlage, Natur, Aussicht und echte Wachau abseits der überlaufenen Hotspots.</p><button class="btn routebtn" data-route="medium" type="button">Fidels Tour anzeigen</button></article>
+</div>
+</section>
+<section class="card" id="uferregel">
+<h2>⚠️ Nordufer/Südufer-Regel</h2>
+<p><b>Wichtig:</b> Zuhause am Bach liegt in Aggsbach Markt am Nordufer. Aggsbach Dorf und Ruine Aggstein liegen am Südufer. Die App empfiehlt deshalb keine falschen direkten Wanderungen über die Donau.</p>
+<div class="routegrid">
+<article><h3>✅ Direkt sinnvoll ab Aggsbach Markt</h3><p>Donau-Bach-Runde, Maria Langegg, Jauerling, Willendorf, Spitz, Rotes Tor, Ruine Hinterhaus, Donauradweg Nordufer, Wachaubahn.</p></article>
+<article><h3>⚠️ Nur mit Fähre/Transfer/Umweg</h3><p>Ruine Aggstein, Aggsbach Dorf, Schönbühel und Dunkelsteinerwald. Diese Ziele liegen am Südufer.</p></article>
 </div>
 </section>
 <section class="card" id="service">
@@ -269,7 +314,7 @@
 <p>Regional essen, Wachauer Weine genießen und direkt an der Donau sitzen.</p>
 <p><b>Adresse:</b> Donaulände 3, 3620 Spitz<br/><b>Telefon:</b> +43 664 9156901</p>
 <a class="linkbtn primary" href="https://donauschloessel.at/" target="_blank" rel="noopener">Webseite öffnen</a>
-<a class="linkbtn" href="https://www.google.com/maps/dir/Aggsbach+Markt+82+3641+Aggsbach+Markt/Donauschlössel+Spitz+Donaulände+3+3620+Spitz" target="_blank" rel="noopener">Route anzeigen</a>
+<a class="linkbtn" href="https://www.google.com/maps/dir/?api=1&origin=Aggsbach+Markt+82%2C+3641+Aggsbach+Markt&destination=Donauschl%C3%B6ssel+Spitz+Donaul%C3%A4nde+3+3620+Spitz&travelmode=bicycling" target="_blank" rel="noopener">Route anzeigen</a>
 <a class="linkbtn" href="tel:+436649156901">Anrufen</a>
 </article>
 <article><h3>Unser Tipp</h3><p>Nach einer Wanderung oder Radtour: Donauterrasse, Wachauer Küche und ein ruhiger Blick auf den Fluss.</p><p class="note">Öffnungszeiten bitte vor Besuch prüfen.</p></article>
@@ -367,10 +412,11 @@
 </section>
 </main>
 <nav class="bottomnav">
+<a href="#windis-start">🐾<span>Windis</span></a>
 <a href="#heute">🏞️<span>Heute</span></a>
-<a href="#ultra-planer">🚀<span>Ultra</span></a>
-<a href="#touren">🥾<span>Touren</span></a>
-<a href="#radfahren">🚲<span>Rad</span></a>
+<a href="#touren">🥾<span>Fidel</span></a>
+<a href="#empfehlung-gritsch">🍷<span>Gloria</span></a>
+<a href="#windis">🎀<span>Pia</span></a>
 <a href="https://api.whatsapp.com/send?phone=436646437526&amp;text=Hallo%20Hans%20und%20Laura" target="_blank" rel="noopener">📱<span>WhatsApp</span></a>
 <a href="https://www.booking.com/hotel/at/zu-hause-am-bach.de.html" target="_blank" rel="noopener">🛏️<span>Booking</span></a>
 </nav>

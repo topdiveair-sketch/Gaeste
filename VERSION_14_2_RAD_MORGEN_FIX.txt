@@ -1,0 +1,14 @@
+Zuhause am Bach Gäste-App
+Version 14.2 RAD- UND MORGEN-FIX
+Build 2026-06-14
+
+Korrekturen:
+- Tour morgen wählen zeigt wieder Ergebnis, Linktext und Karte.
+- Radfahrer-Routen im Morgen-Assistenten ergänzt.
+- Radfahrer-Routen im Touren-Assistenten ergänzt.
+- Google Maps: Wanderungen als Fußroute, Radziele als Fahrradroute.
+- Dino-Park bleibt entfernt.
+- Nordufer/Südufer-Regel bleibt bestehen.
+
+© Johann Prem / Zuhause am Bach / Die Wilden Wachauer Windis
+Tel. +43 664 6437526
