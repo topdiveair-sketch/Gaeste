@@ -1,0 +1,17 @@
+Zuhause am Bach Gäste-App
+Version 14.3 KOMOOT ROUTEN EDITION
+Build 2026-06-15
+
+Neu ergänzt:
+- Komoot Wanderroute Genussterrasse
+- Komoot Wanderroute Aggsbach Markt nach Melk über Emmersdorf
+- Komoot Wanderroute Mühldorf über Jauerling nach Aggsbach Markt
+- Komoot Collection Welterbesteig Wachau
+- Komoot Donauradweg-Radtour
+- Tour morgen wählen erweitert
+- Radfahrer-Bereich um Komoot Donauradweg ergänzt
+
+Hinweis: Komoot-iFrames können je nach Handy/Browser blockiert werden. Deshalb gibt es zusätzlich immer direkte Komoot-Links.
+
+© Johann Prem / Zuhause am Bach / Die Wilden Wachauer Windis
+Tel. +43 664 6437526

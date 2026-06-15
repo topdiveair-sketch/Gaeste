@@ -1,4 +1,4 @@
-const CACHE_NAME = 'zab-v14-2-rad-morgen-fix';
+const CACHE_NAME = 'zab-v14-4-i18n-routen';
 const APP_SHELL = [
   './',
   './index.html',

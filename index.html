@@ -5,8 +5,8 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#6b4f2a" name="theme-color"/>
-<title>Zuhause am Bach – Gäste-App Wachau · V14.1 Windis Routen-Fix</title>
-<meta content="Digitale Gäste-App V14.1 Windis Routen-Fix für Zuhause am Bach in Aggsbach Markt: Fidel, Gloria und Pia führen Gäste zu geprüften Nordufer-Wanderungen, Donauradweg, Genuss, Bogenschießen und Wachau-Tipps." name="description"/>
+<title>Zuhause am Bach – Gäste-App Wachau · V14.4 Multilingual Fix</title>
+<meta content="Digitale Gäste-App V14.4 Multilingual Fix für Zuhause am Bach in Aggsbach Markt: Fidel, Gloria und Pia führen Gäste zu geprüften Nordufer-Wanderungen, Donauradweg, Genuss, Bogenschießen und Wachau-Tipps." name="description"/>
 <link href="manifest.webmanifest" rel="manifest"/>
 <link href="style.css" rel="stylesheet"/>
 </head>
@@ -24,7 +24,7 @@
 <header class="hero">
 <img alt="Zuhause am Bach mit Fidel, Gloria und Pia" src="hero-windis.png"/>
 <div class="hero-text">
-<p class="kicker">Zuhause am Bach · Aggsbach Markt · V14.1 Windis Routen-Fix</p>
+<p class="kicker">Zuhause am Bach · Aggsbach Markt · V14.4 Multilingual Fix</p>
 <h1 data-i18n="heroTitle">🐾 Willkommen bei den Wilden Wachauer Windis</h1>
 <p data-i18n="heroText">Fidel kennt die Wege. Gloria kennt den Genuss. Pia findet Abenteuer. Eure App für die echte Wachau am Nordufer.</p>
 </div>
@@ -104,6 +104,10 @@
 <button class="choice tomorrow-route" data-route="bike_spitz" type="button">🚲 Rad Spitz</button>
 <button class="choice tomorrow-route" data-route="bike_melk" type="button">🚲 Rad Melk</button>
 <button class="choice tomorrow-route" data-route="bike_krems" type="button">🚲 Rad Krems</button>
+<button class="choice tomorrow-route" data-route="genussterrasse" type="button">🌄 Genussterrasse</button>
+<button class="choice tomorrow-route" data-route="melk_komoot" type="button">🥾 Nach Melk</button>
+<button class="choice tomorrow-route" data-route="jauerling_komoot" type="button">⛰️ Jauerling</button>
+<button class="choice tomorrow-route" data-route="bike_donau_komoot" type="button">🚲 Donauradweg Komoot</button>
 <button class="choice tomorrow-route" data-route="rain" type="button">Regen</button>
 </div>
 <div class="resultbox" id="tomorrowRouteResult"></div>
@@ -207,6 +211,10 @@
 <button class="bighelp routebtn" data-route="spitz" type="button">🍇 Spitz / Rotes Tor</button>
 <button class="bighelp routebtn" data-route="archery" type="button">🏹 Bogenschießen</button>
 <button class="bighelp routebtn" data-route="willendorf" type="button">🍑 Willendorf / Venus</button>
+<button class="bighelp routebtn" data-route="genussterrasse" type="button">🌄 Genussterrasse</button>
+<button class="bighelp routebtn" data-route="melk_komoot" type="button">🥾 Aggsbach → Melk über Emmersdorf</button>
+<button class="bighelp routebtn" data-route="jauerling_komoot" type="button">⛰️ Mühldorf → Jauerling → Aggsbach</button>
+<button class="bighelp routebtn" data-route="welterbesteig_collection" type="button">🏆 Welterbesteig Komoot</button>
 <button class="bighelp routebtn" data-route="bike_spitz" type="button">🚲 Rad Spitz</button>
 <button class="bighelp routebtn" data-route="bike_willendorf" type="button">🚲 Rad Willendorf</button>
 <button class="bighelp routebtn" data-route="bike_melk" type="button">🚲 Rad Melk</button>
@@ -231,6 +239,7 @@
 <button class="choice bike-type" data-value="ebike" type="button">E-Bike</button>
 <button class="choice bike-type" data-value="sporty" type="button">Sportlich</button>
 <button class="choice bike-type" data-value="rain" type="button">Regen</button>
+<button class="choice bike-type" data-value="donaukomoot" type="button">Komoot Donauradweg</button>
 </div>
 <button class="btn primary" id="bikeAdvisorStart" type="button">Rad-Empfehlung anzeigen</button>
 </article>
@@ -241,6 +250,7 @@
 </article>
 </div>
 <div class="routegrid">
+<article><h3>🚲 Donauradweg Wachau – Komoot</h3><p>Die konkrete Radroute für Gäste am Donauradweg. Öffnet Komoot und zeigt unten die eingebettete Karte.</p><button class="btn routebtn" data-route="bike_donau_komoot" type="button">Komoot-Radtour anzeigen</button><a class="linkbtn" href="https://www.komoot.com/tour/3039269031" target="_blank" rel="noopener">Komoot öffnen</a></article>
 <article><h3>Melk</h3><p>Stift Melk, Bahnhof, feste Donauquerung.</p><a class="linkbtn" href="https://www.google.com/maps/dir/?api=1&origin=Aggsbach+Markt+82%2C+3641+Aggsbach+Markt&destination=Melk&travelmode=bicycling" target="_blank" rel="noopener">Route öffnen</a></article>
 <article><h3>Spitz</h3><p>Weinorte, Fähre Spitz–Arnsdorf, Donaublick.</p><a class="linkbtn" href="https://www.google.com/maps/dir/?api=1&origin=Aggsbach+Markt+82%2C+3641+Aggsbach+Markt&destination=Spitz+an+der+Donau&travelmode=bicycling" target="_blank" rel="noopener">Route öffnen</a></article>
 <article><h3>Dürnstein</h3><p>Altstadt, Ruine, Fotos. Früh starten.</p><a class="linkbtn" href="https://www.google.com/maps/dir/?api=1&origin=Aggsbach+Markt+82%2C+3641+Aggsbach+Markt&destination=Dürnstein&travelmode=bicycling" target="_blank" rel="noopener">Route öffnen</a></article>
@@ -257,6 +267,18 @@
 <article><h3>🏹 Bogenschießen Aggsbach Markt</h3><p>Pias Erlebnis-Tipp: nur nach Verfügbarkeit, Anmeldung und Sicherheitsabsprache. Kein Südufer-Ziel.</p><button class="btn routebtn" data-route="archery" type="button">Route anzeigen</button></article>
 <article><h3>🍑 Willendorf / Venus</h3><p>Kulturstopp am Nordufer, gut für kurze Ausflüge, Radgäste und Familien.</p><a class="linkbtn" href="https://www.google.com/maps/dir/?api=1&origin=Aggsbach+Markt+82%2C+3641+Aggsbach+Markt&destination=Willendorf+in+der+Wachau&travelmode=walking" target="_blank" rel="noopener">Route öffnen</a></article>
 <article><h3>⛰️ Maria Laach / Jauerling</h3><p>Höhenlage, Natur, Aussicht und echte Wachau abseits der überlaufenen Hotspots.</p><button class="btn routebtn" data-route="medium" type="button">Fidels Tour anzeigen</button></article>
+</div>
+</section>
+
+<section class="card recommendation-card" id="komoot-routen">
+<h2>🧭 Komoot-Routen für Gäste</h2>
+<p>Diese geprüften Touren stammen direkt aus euren Komoot-Routen. Falls die Einbettung am Handy nicht lädt, öffnet der Button die Tour direkt in Komoot.</p>
+<div class="routegrid">
+<article><h3>🌄 Genussterrasse</h3><p>Kurze Genuss-Wanderung mit Wachau-Blick. Ideal für Anreise, Nachmittag oder Sonnenuntergang.</p><button class="btn primary routebtn" data-route="genussterrasse" type="button">Route in App anzeigen</button><a class="linkbtn" href="https://www.komoot.com/tour/3039220789" target="_blank" rel="noopener">Komoot öffnen</a></article>
+<article><h3>🥾 Aggsbach Markt → Melk über Emmersdorf</h3><p>Welterbesteig-orientierte Tour am Nordufer Richtung Emmersdorf/Melk. Rückfahrt vorher planen.</p><button class="btn primary routebtn" data-route="melk_komoot" type="button">Route in App anzeigen</button><a class="linkbtn" href="https://www.komoot.com/tour/3039245626" target="_blank" rel="noopener">Komoot öffnen</a></article>
+<article><h3>⛰️ Mühldorf → Aggsbach Markt über den Jauerling</h3><p>Anspruchsvolle Tour über den Jauerling zurück nach Aggsbach Markt. Für fitte Wanderer.</p><button class="btn primary routebtn" data-route="jauerling_komoot" type="button">Route in App anzeigen</button><a class="linkbtn" href="https://www.komoot.com/tour/3039257390" target="_blank" rel="noopener">Komoot öffnen</a></article>
+<article><h3>🏆 Welterbesteig Wachau – Komoot Collection</h3><p>Alle Etappen des Welterbesteigs Wachau in Komoot. Ideal zur Gesamtplanung.</p><button class="btn primary routebtn" data-route="welterbesteig_collection" type="button">Collection anzeigen</button><a class="linkbtn" href="https://www.komoot.com/de-de/collection/1952145/wandern-im-unesco-welterbe-auf-dem-welterbesteig-wachau" target="_blank" rel="noopener">Komoot Collection öffnen</a></article>
+<article><h3>🚲 Donauradweg Wachau</h3><p>Komoot-Radtour für Donauradweg-Gäste. Fahrradroute, nicht Fußweg.</p><button class="btn primary routebtn" data-route="bike_donau_komoot" type="button">Radtour anzeigen</button><a class="linkbtn" href="https://www.komoot.com/tour/3039269031" target="_blank" rel="noopener">Komoot öffnen</a></article>
 </div>
 </section>
 <section class="card" id="uferregel">

@@ -1,0 +1,25 @@
+Prüfbericht Version 14.3 KOMOOT ROUTEN EDITION
+Build 2026-06-15
+
+Geprüft:
+- JavaScript Syntax: bestanden
+- Doppelte HTML-IDs: keine gefunden
+- Dino-Park / Dinosaurier-Begriffe: entfernt / nicht gefunden
+- Route-Buttons mit data-route: alle in der ROUTES-Logik vorhanden
+- Tour morgen wählen: erweitert um Komoot-Wanderungen und Komoot-Donauradweg
+- Radfahrer: Komoot-Donauradweg ergänzt
+- Komoot-iFrames: als Kartenanzeige integriert
+- Fallback-Links: direkte Komoot-Links und Google-Routen vorhanden
+
+Eingebaute Komoot-Routen:
+1. Genussterrasse: https://www.komoot.com/tour/3039220789
+2. Aggsbach Markt nach Melk über Emmersdorf: https://www.komoot.com/tour/3039245626
+3. Mühldorf nach Aggsbach Markt über den Jauerling: https://www.komoot.com/tour/3039257390
+4. Welterbesteig Wachau Collection: https://www.komoot.com/de-de/collection/1952145/wandern-im-unesco-welterbe-auf-dem-welterbesteig-wachau
+5. Donauradweg: https://www.komoot.com/tour/3039269031
+
+Hinweis:
+Komoot-Einbettungen können in manchen Browsern/WebViews blockiert werden. Deshalb bleiben direkte Komoot-Links erhalten.
+
+© Johann Prem / Zuhause am Bach / Die Wilden Wachauer Windis
+Tel. +43 664 6437526

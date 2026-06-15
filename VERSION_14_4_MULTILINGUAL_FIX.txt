@@ -1,0 +1,14 @@
+Zuhause am Bach Gäste-App
+Version 14.4 MULTILINGUAL FIX
+Build 2026-06-15
+
+Änderungen:
+- Mehrsprachigkeit erweitert.
+- Neue Komoot-/Routenbereiche werden beim Sprachwechsel mit umgestellt.
+- Dynamische Routenergebnisse werden beim Sprachwechsel neu ausgegeben.
+- Rad-Empfehlungen werden beim Sprachwechsel neu ausgegeben.
+- Hauptbuttons und Servicebereiche erhalten Übersetzungen.
+- Dino-Park bleibt entfernt.
+
+Hinweis:
+Ortsnamen, Eigennamen und Marken wie Fidel, Gloria, Pia, Komoot, Donauschlössel, Spitz, Jauerling bleiben bewusst unverändert.
