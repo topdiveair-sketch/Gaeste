@@ -1,453 +1,172 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="de">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="#6b4f2a" name="theme-color"/>
-<title>Zuhause am Bach – Gäste-App Wachau · V14.4 Multilingual Fix</title>
-<meta content="Digitale Gäste-App V14.4 Multilingual Fix für Zuhause am Bach in Aggsbach Markt: Fidel, Gloria und Pia führen Gäste zu geprüften Nordufer-Wanderungen, Donauradweg, Genuss, Bogenschießen und Wachau-Tipps." name="description"/>
-<link href="manifest.webmanifest" rel="manifest"/>
-<link href="style.css" rel="stylesheet"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#7a4d22">
+  <title>Zuhause am Bach – Gäste-App V16.1 Wachau-Meister Urkunde</title>
+  <meta name="description" content="Zuhause am Bach – Gästehaus Wachau in Aggsbach Markt. Unterkunft am Welterbesteig Wachau und am Donauradweg mit Wander- und Radtipps der Wilden Wachauer Windis.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="languagebar">
-<b>🌐 Sprache</b>
-<button class="langbtn active" data-lang="de" type="button">DE</button>
-<button class="langbtn" data-lang="en" type="button">EN</button>
-<button class="langbtn" data-lang="cs" type="button">CZ</button>
-<button class="langbtn" data-lang="hu" type="button">HU</button>
-<button class="langbtn" data-lang="es" type="button">ES</button>
-<button class="langbtn" data-lang="fr" type="button">FR</button>
-</div>
-<div class="versionbar" id="appVersion">Version wird geladen …</div>
-<header class="hero">
-<img alt="Zuhause am Bach mit Fidel, Gloria und Pia" src="hero-windis.png"/>
-<div class="hero-text">
-<p class="kicker">Zuhause am Bach · Aggsbach Markt · V14.4 Multilingual Fix</p>
-<h1 data-i18n="heroTitle">🐾 Willkommen bei den Wilden Wachauer Windis</h1>
-<p data-i18n="heroText">Fidel kennt die Wege. Gloria kennt den Genuss. Pia findet Abenteuer. Eure App für die echte Wachau am Nordufer.</p>
-</div>
-</header>
-<main>
-<section class="card recommendation-card" id="windis-start">
-<h2>🐾 Die Wilden Wachauer Windis führen euch durch die Wachau</h2>
-<p>Statt einer gewöhnlichen Gästemappe bekommt ihr drei persönliche Wachau-Begleiter: Fidel für Wanderungen, Gloria für Genuss und Pia für Abenteuer.</p>
-<div class="routegrid">
-<article><h3>🐾 Fidels Wanderwelt</h3><p>Geprüfte Nordufer-Routen ab Aggsbach Markt: Donau-Bach-Runde, Maria Langegg/Jauerling, Welterbesteig Richtung Emmersdorf, Spitz mit Rotem Tor und Ruine Hinterhaus.</p><a class="linkbtn primary" href="#touren">Wanderungen öffnen</a></article>
-<article><h3>🍷 Glorias Genusswelt</h3><p>Donauschlössel / Familie Graben-Gritsch in Spitz bleibt als Genuss-Tipp fix dabei. Dazu Heurigenkalender, Wein, Marille und Abendjause.</p><a class="linkbtn primary" href="#empfehlung-gritsch">Genuss öffnen</a></article>
-<article><h3>🎀 Pias Abenteuerwelt</h3><p>Bogenschießen in Aggsbach Markt, Schatzsuche, Windis-Quiz, Venus von Willendorf und kleine Entdeckungen rund ums Nordufer.</p><a class="linkbtn primary" href="#windis">Abenteuer öffnen</a></article>
-<article><h3>⚠️ Ufer-Regel</h3><p>Aggsbach Markt liegt am Nordufer. Südufer-Ziele wie Ruine Aggstein werden nicht als direkte Wanderung empfohlen, sondern nur mit Fähre, Transfer oder Umweg.</p><a class="linkbtn" href="#uferregel">Ufer-Regel ansehen</a></article>
-</div>
+  <header class="hero">
+    <div class="topbar">
+      <div class="version" id="versionBadge">V16.2 GLORIAS GENUSS-TIPPS</div>
+      <div class="language-bar" aria-label="Sprache wählen">
+        <button data-lang="de">DE</button><button data-lang="en">EN</button><button data-lang="cs">CZ</button><button data-lang="hu">HU</button><button data-lang="es">ES</button><button data-lang="fr">FR</button>
+      </div>
+    </div>
+    <img src="hero-windis.png" alt="Zuhause am Bach mit Fidel, Gloria und Pia in der Wachau" class="hero-img">
+    <div class="hero-text">
+      <h1 data-i18n="heroTitle">Willkommen bei Zuhause am Bach – Gästehaus Wachau</h1>
+      <p data-i18n="heroSub">Ihre Unterkunft am Welterbesteig Wachau und am Donauradweg in Aggsbach Markt. Willkommen bei Zuhause am Bach – Gästehaus Wachau – dort, wo Geschichten entstehen.</p>
+      <div class="quick-grid">
+        <button data-scroll="today" data-i18n="navToday">Heute</button>
+        <button data-scroll="fidel" data-i18n="navHike">Wandern</button>
+        <button data-scroll="gloria" data-i18n="navBike">Radfahren</button>
+        <button data-scroll="pia" data-i18n="navPia">Kinderwelt</button>
+        <button data-scroll="service" data-i18n="navService">Service</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="card warning">
+      <h2 data-i18n="riverRuleTitle">Wichtige Wachau-Regel</h2>
+      <p data-i18n="riverRuleText">Aggsbach Markt liegt am Nordufer. Südufer-Ziele wie Aggstein werden nicht als direkte Wanderroute empfohlen. Fähre, Transfer oder Umweg über Melk/Spitz beachten.</p>
+    </section>
+
+    <section id="today" class="card">
+      <h2 data-i18n="todayTitle">Heute / Morgen in der Wachau</h2>
+      <div class="weather-strip" id="weatherStrip" aria-live="polite">
+        <div class="weather-card"><strong>🌤️ Heute</strong><span id="weatherToday">Wetter wird geladen …</span></div>
+        <div class="weather-card"><strong>🌦️ Morgen</strong><span id="weatherTomorrow">Wetter wird geladen …</span></div>
+        <button id="weatherReloadBtn" class="mini-btn" type="button">Wetter neu laden</button>
+      </div>
+      <div class="form-grid">
+        <label><span data-i18n="selectDay">Tag</span><select id="daySelect"><option value="today" data-i18n="today">Heute</option><option value="tomorrow" data-i18n="tomorrow">Morgen</option></select></label>
+        <label><span data-i18n="guestType">Gasttyp</span><select id="guestType"><option value="hike" data-i18n="hikers">Wanderer</option><option value="bike" data-i18n="cyclists">Radfahrer</option><option value="family" data-i18n="families">Familien</option></select></label>
+        <label><span data-i18n="weather">Wetter</span><select id="weatherSelect"><option value="dry" data-i18n="dry">Trocken</option><option value="hot" data-i18n="hot">Heiß</option><option value="rain" data-i18n="rain">Regen</option></select></label>
+      </div>
+      <button id="morningBtn" class="primary" data-i18n="showRecommendation">Empfehlung anzeigen</button>
+      <div id="morningResult" class="result" aria-live="polite"></div>
+    </section>
+
+    <section id="fidel" class="card">
+      <h2 data-i18n="fidelTitle">🐾 Fidels Wanderwelt</h2>
+      <p data-i18n="fidelSub">Geprüfte Nordufer-Routen und Komoot-Touren für Gäste von Zuhause am Bach.</p>
+      <div class="form-grid">
+        <label><span data-i18n="duration">Dauer</span><select id="hikeDuration"><option value="short" data-i18n="short">1–2 Stunden</option><option value="half" data-i18n="half">3–4 Stunden</option><option value="full" data-i18n="full">Ganztag</option></select></label>
+        <label><span data-i18n="difficulty">Schwierigkeit</span><select id="hikeLevel"><option value="easy" data-i18n="easy">Leicht</option><option value="medium" data-i18n="medium">Mittel</option><option value="hard" data-i18n="hard">Anspruchsvoll</option></select></label>
+        <label><span data-i18n="withDogKids">Begleitung</span><select id="hikeCompanion"><option value="adult" data-i18n="adults">Erwachsene</option><option value="kids" data-i18n="kids">Mit Kindern</option><option value="dog" data-i18n="dog">Mit Hund</option></select></label>
+      </div>
+      <button id="hikeAdvisorBtn" class="primary" data-i18n="fidelRecommend">Fidels Empfehlung anzeigen</button>
+      <div id="hikeAdvisorResult" class="result" aria-live="polite"></div>
+      <h3 data-i18n="allHikes">Alle Wander-Routen</h3>
+      <div id="hikeRoutes" class="route-grid"></div>
+    </section>
+
+    <section id="gloria" class="card">
+      <h2 data-i18n="gloriaTitle">🍷 Glorias Rad- & Genusswelt</h2>
+      <p data-i18n="gloriaSub">Donauradweg, Spitz, Gritsch und genussvolle Etappen.</p>
+      <div class="form-grid">
+        <label><span data-i18n="bikeType">Radtyp</span><select id="bikeType"><option value="tour" data-i18n="tourBike">Tourenrad</option><option value="ebike" data-i18n="ebike">E-Bike</option><option value="sport" data-i18n="sport">Sportlich</option></select></label>
+        <label><span data-i18n="direction">Richtung</span><select id="bikeDirection"><option value="spitz">Spitz</option><option value="melk">Melk</option><option value="krems">Krems</option></select></label>
+      </div>
+      <button id="bikeAdvisorBtn" class="primary" data-i18n="gloriaRecommend">Glorias Rad-Empfehlung anzeigen</button>
+      <div id="bikeAdvisorResult" class="result" aria-live="polite"></div>
+      <h3 data-i18n="allBike">Alle Rad-Routen</h3>
+      <div id="bikeRoutes" class="route-grid"></div>
+      <div class="service-box">
+        <b data-i18n="bikeServiceTitle">Radservice im Haus</b><br>
+        <span data-i18n="bikeServiceText">Fahrradabstellplatz, E-Bike-Lademöglichkeit, Luftpumpe, Werkzeug, Wasser und Etappen-Tipps.</span>
+      </div>
+    </section>
+
+    <section id="pia" class="card">
+      <h2 data-i18n="piaTitle">🎀 Pias Kinderwelt</h2>
+      <p data-i18n="piaSub">Quiz, Schatzsuche, Geschichten und kleine Wachau-Abenteuer mit Pia.</p>
+
+      <div class="kids-tabs">
+        <button class="kid-tab active" data-kid-tab="quiz" data-i18n="quizTitle">🏆 Wachau-Quiz</button>
+        <button class="kid-tab" data-kid-tab="treasure" data-i18n="treasureTitle">🔍 Schatzsuche</button>
+        <button class="kid-tab" data-kid-tab="stories" data-i18n="storiesTitle">📖 Geschichten</button>
+        <button class="kid-tab" data-kid-tab="certificate" data-i18n="certificateTitle">🏅 Urkunde</button>
+      </div>
+
+      <div id="kidsQuiz" class="kid-panel"></div>
+      <div id="kidsTreasure" class="kid-panel hidden"></div>
+      <div id="kidsStories" class="kid-panel hidden"></div>
+      <div id="kidsCertificate" class="kid-panel hidden"></div>
+
+      <h3 data-i18n="piaAdventureTitle">Pias Ausflüge</h3>
+      <div class="route-grid" id="adventureRoutes"></div>
+    </section>
+
+    <section id="service" class="card">
+      <h2 data-i18n="serviceTitle">🏡 Zuhause am Bach Service</h2>
+      <div class="button-grid">
+        <button id="breakfastBtn" data-i18n="breakfast">Frühstück anfragen</button>
+        <button id="snackBtn" data-i18n="snack">Abendjause anfragen</button>
+        <button id="luggageBtn" data-i18n="luggage">Gepäcktransport anfragen</button>
+        <button id="helpBtn" data-i18n="help">WhatsApp-Hilfe</button>
+        <button id="reviewBtn" data-i18n="review">Google-Bewertung</button>
+      </div>
+      <div id="serviceResult" class="result"></div>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="mapPreviewTitle">Karten- und Komoot-Vorschau</h2>
+      <p data-i18n="mapPreviewText">Wenn die eingebettete Karte am Handy nicht lädt, bitte den Komoot- oder Google-Maps-Link nutzen.</p>
+      <div id="mapPreview" class="map-preview"><span data-i18n="mapPlaceholder">Noch keine Route gewählt.</span></div>
+    </section>
+
+    <section class="card test-card">
+      <h2 data-i18n="testTitle">App-Test / Ampelprüfung</h2>
+      <div id="testAmpel" class="ampel-box"><span class="ampel grey">●</span> Noch nicht geprüft.</div>
+      <button id="runTestBtn" data-i18n="runTest">Funktionstest starten</button>
+      <pre id="testOutput"></pre>
+    </section>
+  
+<section class="card">
+<h2>🌅 Windis-Geheimtipps</h2>
+<ul>
+<li>🌄 Sonnenuntergang: Ruine Hinterhaus</li>
+<li>🌊 Donauufer Aggsbach Markt</li>
+<li>🏔️ Aussichtswarte Jauerling</li>
+<li>🏺 Willendorf & Venus von Willendorf</li>
+</ul>
+</section>
+<section class="card">
+<h2>🚂 Mobilität & Hilfe</h2>
+<p>Wachaubahn, Fähren, Taxi, Arzt und Apotheke schnell finden.</p>
 </section>
 
-<section class="card dashboard" id="heute">
-<h2 data-i18n="todayTitle">🏞️ Heute in der Wachau</h2>
-<p data-i18n="todayText">Alles Wichtige auf einen Blick: Wetter, Tour, Rad, Fähren, Wachaubahn und schnelle Hilfe.</p>
-<div class="dashboard-grid">
-<article>
-<h3>🌦️ Wetter Aggsbach Markt</h3>
-<p id="weatherStatus">Wetter wird geladen …</p>
-<div class="weathergrid" id="weatherGrid"></div>
-<button class="btn" id="reloadWeather" type="button">Wetter neu laden</button>
-</article>
-<article>
-<h3 data-i18n="dailyTourTitle">🥾 Tour des Tages</h3>
-<p data-i18n="dailyTourText">Bei trockenem Wetter: kurze Runde oder Welterbesteig. Bei Regen: Schlechtwetterprogramm.</p>
-<a class="linkbtn primary" data-i18n="openTours" href="#touren">Touren öffnen</a>
-</article>
-<article>
-<h3 data-i18n="bikeTipTitle">🚲 Radtipp</h3>
-<p data-i18n="bikeTipText">Melk, Spitz, Dürnstein oder Krems – bitte Wind, Fähren und Rückfahrt prüfen.</p>
-<a class="linkbtn primary" data-i18n="openBike" href="#radfahren">Rad-Assistent öffnen</a>
-</article>
-<article>
-<h3>🚂⛴️ Wachaubahn &amp; Fähren</h3>
-<p>Vor dem Start direkt prüfen.</p>
-<a class="linkbtn" href="https://www.wachaubahn.at/tagesaktueller-fahrplan" target="_blank" rel="noopener">Wachaubahn</a>
-<a class="linkbtn" href="https://www.spitz-wachau.at/Rollfaehre_Spitz-Arnsdorf" target="_blank" rel="noopener">Fähre Spitz</a>
-</article>
-</div>
-</section>
-<section class="card" id="morgen">
-<h2 data-i18n="tomorrowTitle">🌅 Morgen-Assistent</h2>
-<p data-i18n="tomorrowText">Wetter morgen, Frühstück, Tour, Fähren, Gepäck und Buchung vorbereiten.</p>
-<div class="dashboard-grid">
-<article>
-<h3>🌦️ Wetter morgen</h3>
-<p id="tomorrowWeatherStatus">Wetter für morgen wird geladen …</p>
-<div class="weathergrid" id="tomorrowWeatherGrid"></div>
-<button class="btn" id="reloadTomorrowWeather" type="button">Wetter morgen neu laden</button>
-</article>
-<article>
-<h3>☕ Frühstück morgen</h3>
-<div class="buttonrow">
-<button class="choice breakfast active" data-value="Standard-Frühstück" type="button">Standard</button>
-<button class="choice breakfast" data-value="Vegetarisches Frühstück" type="button">Vegetarisch</button>
-<button class="choice breakfast" data-value="Veganes Frühstück" type="button">Vegan</button>
-</div>
-<div class="buttonrow">
-<button class="choice breakfast-time active" data-value="08:00 Uhr" type="button">08:00</button>
-<button class="choice breakfast-time" data-value="08:30 Uhr" type="button">08:30</button>
-<button class="choice breakfast-time" data-value="09:00 Uhr" type="button">09:00</button>
-</div>
-<button class="btn primary" id="breakfastWhatsApp" type="button">☕ Frühstück per WhatsApp</button>
-</article>
-<article>
-<h3>🥾 Tour morgen wählen</h3>
-<div class="buttonrow">
-<button class="choice tomorrow-route active" data-route="short" type="button">Kurz</button>
-<button class="choice tomorrow-route" data-route="maria" type="button">Maria Laach → Aggsbach</button>
-<button class="choice tomorrow-route" data-route="emmersdorf" type="button">Aggsbach → Emmersdorf</button>
-<button class="choice tomorrow-route" data-route="spitz" type="button">Spitz / Rotes Tor</button>
-<button class="choice tomorrow-route" data-route="archery" type="button">Bogenschießen</button>
-<button class="choice tomorrow-route" data-route="bike_spitz" type="button">🚲 Rad Spitz</button>
-<button class="choice tomorrow-route" data-route="bike_melk" type="button">🚲 Rad Melk</button>
-<button class="choice tomorrow-route" data-route="bike_krems" type="button">🚲 Rad Krems</button>
-<button class="choice tomorrow-route" data-route="genussterrasse" type="button">🌄 Genussterrasse</button>
-<button class="choice tomorrow-route" data-route="melk_komoot" type="button">🥾 Nach Melk</button>
-<button class="choice tomorrow-route" data-route="jauerling_komoot" type="button">⛰️ Jauerling</button>
-<button class="choice tomorrow-route" data-route="bike_donau_komoot" type="button">🚲 Donauradweg Komoot</button>
-<button class="choice tomorrow-route" data-route="rain" type="button">Regen</button>
-</div>
-<div class="resultbox" id="tomorrowRouteResult"></div>
-<div class="actions">
-<a class="linkbtn primary" href="https://www.google.com/maps/search/Donauufer+Aggsbach+Markt" id="tomorrowMapLink" target="_blank" rel="noopener">🗺️ Karte öffnen</a>
-<a class="linkbtn" href="https://www.google.com/maps/search/Welterbesteig+Wachau+Aggsbach+Markt" id="tomorrowOfficialLink" target="_blank" rel="noopener">🚶 Fußroute öffnen</a>
-</div>
-<div class="mapbox"><iframe id="tomorrowRouteMap" loading="lazy" title="Wanderkarte morgen"></iframe></div>
-</article>
-<article>
-<h3>🎒 Gepäcktransport</h3>
-<p>Für Welterbesteig-Gäste bitte Zieladresse und Uhrzeit angeben.</p>
-<button class="btn primary" id="luggageWhatsApp" type="button">🎒 Gepäcktransport anfragen</button>
-<h3>🛏️ Booking</h3>
-<a class="linkbtn primary" href="https://www.booking.com/hotel/at/zu-hause-am-bach.de.html" target="_blank" rel="noopener">Booking öffnen</a>
-</article>
-</div>
-</section>
-<section class="card recommendation-card" id="berater">
-<h2>🐾 Fidel-Gloria-Pia Tourenberater</h2>
-<p>Der schnelle 3-Klick-Assistent: Zeit, Begleitung und Wetter wählen – dann empfiehlt die App automatisch die passende Wachau-Tour.</p>
-<div class="dashboard-grid">
-<article>
-<h3>⏱️ Zeit</h3>
-<div class="buttonrow">
-<button class="choice advisor-time active" data-value="short" type="button">1–2 Stunden</button>
-<button class="choice advisor-time" data-value="medium" type="button">3–4 Stunden</button>
-<button class="choice advisor-time" data-value="day" type="button">Ganztag</button>
-</div>
-</article>
-<article>
-<h3>👣 Begleitung</h3>
-<div class="buttonrow">
-<button class="choice advisor-group active" data-value="solo" type="button">Erwachsene</button>
-<button class="choice advisor-group" data-value="kids" type="button">Mit Kindern</button>
-<button class="choice advisor-group" data-value="dog" type="button">Mit Hund</button>
-</div>
-</article>
-<article>
-<h3>🌦️ Wetter</h3>
-<div class="buttonrow">
-<button class="choice advisor-weather active" data-value="dry" type="button">Trocken</button>
-<button class="choice advisor-weather" data-value="hot" type="button">Heiß</button>
-<button class="choice advisor-weather" data-value="rain" type="button">Regen</button>
-</div>
-</article>
-<article>
-<h3>✨ Empfehlung starten</h3>
-<p>Die passende Route wird direkt im Touren-Assistenten geöffnet.</p>
-<button class="btn primary" id="advisorStart" type="button">🐾 Empfehlung anzeigen</button>
-</article>
-</div>
-<div class="resultbox" id="advisorResult">Noch keine Empfehlung gewählt. Bitte Zeit, Begleitung und Wetter wählen und dann „Empfehlung anzeigen“ drücken.</div>
-<a class="linkbtn primary" id="advisorMapLink" href="https://www.google.com/maps/search/?api=1&query=Aggsbach+Markt+82" target="_blank" rel="noopener">🗺️ Karte zur Empfehlung öffnen</a>
-</section>
-<section class="card recommendation-card" id="ultra-planer">
-<h2>🚀 Ultra-Tagesplaner</h2>
-<p>Ein Assistent für den ganzen Tag: Wandern, Radfahren, Kinderprogramm oder Regenplan – mit Packliste und Gastgeber-Hinweisen.</p>
-<div class="dashboard-grid">
-<article>
-<h3>🎯 Tagesziel</h3>
-<div class="buttonrow">
-<button class="choice plan-type active" data-value="wander" type="button">Wandern</button>
-<button class="choice plan-type" data-value="bike" type="button">Radfahren</button>
-<button class="choice plan-type" data-value="kids" type="button">Kinder</button>
-</div>
-</article>
-<article>
-<h3>👣 Tempo</h3>
-<div class="buttonrow">
-<button class="choice plan-pace active" data-value="easy" type="button">Gemütlich</button>
-<button class="choice plan-pace" data-value="normal" type="button">Normal</button>
-<button class="choice plan-pace" data-value="sporty" type="button">Sportlich</button>
-</div>
-</article>
-<article>
-<h3>🌦️ Lage</h3>
-<div class="buttonrow">
-<button class="choice plan-weather active" data-value="dry" type="button">Trocken</button>
-<button class="choice plan-weather" data-value="hot" type="button">Heiß</button>
-<button class="choice plan-weather" data-value="rain" type="button">Regen</button>
-</div>
-</article>
-<article>
-<h3>🐾 Plan erstellen</h3>
-<button class="btn primary" id="buildDailyPlan" type="button">Tagesplan berechnen</button>
-</article>
-</div>
-<div class="resultbox" id="dailyPlanResult">Tagesplan wird vorbereitet …</div>
-</section>
-<section class="card" id="touren">
-<h2 data-i18n="tourTitle">🥾 Wachau Touren-Assistent</h2>
-<p data-i18n="tourText">Wählt, was zu euren Beinen, Wetter und Zeit passt. Die passende Karte und Google-Maps-Route erscheinen darunter – bei Wanderungen als Fußroute, bei Radzielen als Fahrradroute.</p>
-<div class="buttonrow bigbuttons">
-<button class="bighelp routebtn" data-route="short" type="button">🌿 1–2 Stunden</button>
-<button class="bighelp routebtn" data-route="medium" type="button">🥾 3–4 Stunden</button>
-<button class="bighelp routebtn" data-route="emmersdorf" type="button">⛰️ Ganztag</button>
-<button class="bighelp routebtn" data-route="kids" type="button">🎒 Mit Kindern</button>
-<button class="bighelp routebtn" data-route="dog" type="button">🐕 Mit Hund</button>
-<button class="bighelp routebtn" data-route="rain" type="button">🌧️ Regen</button>
-<button class="bighelp routebtn" data-route="spitz" type="button">🍇 Spitz / Rotes Tor</button>
-<button class="bighelp routebtn" data-route="archery" type="button">🏹 Bogenschießen</button>
-<button class="bighelp routebtn" data-route="willendorf" type="button">🍑 Willendorf / Venus</button>
-<button class="bighelp routebtn" data-route="genussterrasse" type="button">🌄 Genussterrasse</button>
-<button class="bighelp routebtn" data-route="melk_komoot" type="button">🥾 Aggsbach → Melk über Emmersdorf</button>
-<button class="bighelp routebtn" data-route="jauerling_komoot" type="button">⛰️ Mühldorf → Jauerling → Aggsbach</button>
-<button class="bighelp routebtn" data-route="welterbesteig_collection" type="button">🏆 Welterbesteig Komoot</button>
-<button class="bighelp routebtn" data-route="bike_spitz" type="button">🚲 Rad Spitz</button>
-<button class="bighelp routebtn" data-route="bike_willendorf" type="button">🚲 Rad Willendorf</button>
-<button class="bighelp routebtn" data-route="bike_melk" type="button">🚲 Rad Melk</button>
-<button class="bighelp routebtn" data-route="bike_krems" type="button">🚲 Rad Krems</button>
-</div>
-<div class="resultbox" id="routeResult"></div>
-<div class="actions">
-<a class="linkbtn primary" href="https://www.google.com/maps/search/Donauufer+Aggsbach+Markt" id="routeMapLink" target="_blank" rel="noopener">🗺️ Karte öffnen</a>
-<a class="linkbtn" href="https://www.google.com/maps/search/Welterbesteig+Wachau+Aggsbach+Markt" id="routeOfficialLink" target="_blank" rel="noopener">🚶 Fußroute öffnen</a>
-<button class="btn" id="routeLuggage" type="button">🎒 Gepäck anfragen</button>
-</div>
-<div class="mapbox"><iframe id="routeMap" loading="lazy" title="Wanderkarte gewählte Route"></iframe></div>
-</section>
-<section class="card" id="radfahren">
-<h2 data-i18n="bikeTitle">🚲 Donauradweg-Assistent</h2>
-<p>Radfahrer sind jetzt fest eingebaut: Genussradler, E-Bike, sportliche Touren und Regenplan – mit Google-Maps-Fahrradrouten.</p>
-<div class="dashboard-grid">
-<article>
-<h3>Radtyp wählen</h3>
-<div class="buttonrow">
-<button class="choice bike-type active" data-value="family" type="button">Genussradler</button>
-<button class="choice bike-type" data-value="ebike" type="button">E-Bike</button>
-<button class="choice bike-type" data-value="sporty" type="button">Sportlich</button>
-<button class="choice bike-type" data-value="rain" type="button">Regen</button>
-<button class="choice bike-type" data-value="donaukomoot" type="button">Komoot Donauradweg</button>
-</div>
-<button class="btn primary" id="bikeAdvisorStart" type="button">Rad-Empfehlung anzeigen</button>
-</article>
-<article>
-<h3>Empfehlung</h3>
-<div class="resultbox" id="bikeAdvisorResult">Rad-Empfehlung wird vorbereitet …</div>
-<a class="linkbtn primary" id="bikeAdvisorLink" href="https://www.google.com/maps/dir/?api=1&origin=Aggsbach+Markt+82%2C+3641+Aggsbach+Markt&destination=Spitz+an+der+Donau&travelmode=bicycling" target="_blank" rel="noopener">Route öffnen</a>
-</article>
-</div>
-<div class="routegrid">
-<article><h3>🚲 Donauradweg Wachau – Komoot</h3><p>Die konkrete Radroute für Gäste am Donauradweg. Öffnet Komoot und zeigt unten die eingebettete Karte.</p><button class="btn routebtn" data-route="bike_donau_komoot" type="button">Komoot-Radtour anzeigen</button><a class="linkbtn" href="https://www.komoot.com/tour/3039269031" target="_blank" rel="noopener">Komoot öffnen</a></article>
-<article><h3>Melk</h3><p>Stift Melk, Bahnhof, feste Donauquerung.</p><a class="linkbtn" href="https://www.google.com/maps/dir/?api=1&origin=Aggsbach+Markt+82%2C+3641+Aggsbach+Markt&destination=Melk&travelmode=bicycling" target="_blank" rel="noopener">Route öffnen</a></article>
-<article><h3>Spitz</h3><p>Weinorte, Fähre Spitz–Arnsdorf, Donaublick.</p><a class="linkbtn" href="https://www.google.com/maps/dir/?api=1&origin=Aggsbach+Markt+82%2C+3641+Aggsbach+Markt&destination=Spitz+an+der+Donau&travelmode=bicycling" target="_blank" rel="noopener">Route öffnen</a></article>
-<article><h3>Dürnstein</h3><p>Altstadt, Ruine, Fotos. Früh starten.</p><a class="linkbtn" href="https://www.google.com/maps/dir/?api=1&origin=Aggsbach+Markt+82%2C+3641+Aggsbach+Markt&destination=Dürnstein&travelmode=bicycling" target="_blank" rel="noopener">Route öffnen</a></article>
-<article><h3>Krems</h3><p>Längere Tour, Bahnhof, Altstadt.</p><a class="linkbtn" href="https://www.google.com/maps/dir/?api=1&origin=Aggsbach+Markt+82%2C+3641+Aggsbach+Markt&destination=Krems+an+der+Donau&travelmode=bicycling" target="_blank" rel="noopener">Route öffnen</a></article>
-</div>
-</section>
-<section class="card" id="ausfluege-nordufer">
-<h2>🏞️ Geprüfte Ausflugsziele am Nordufer</h2>
-<p>Für Gäste von Zuhause am Bach: interessant, sinnvoll erreichbar und passend zur Wachau. Südufer-Ziele werden bewusst getrennt.</p>
-<div class="routegrid">
-<article><h3>🏰 Ruine Hinterhaus</h3><p>Top-Ziel in Spitz mit Donaublick. Ideal in Kombination mit Rotem Tor und Ortskern Spitz.</p><a class="linkbtn" href="https://www.google.com/maps/dir/?api=1&origin=Aggsbach+Markt+82%2C+3641+Aggsbach+Markt&destination=Ruine+Hinterhaus+Spitz&travelmode=walking" target="_blank" rel="noopener">Route öffnen</a></article>
-<article><h3>🚪 Rotes Tor</h3><p>Klassische Spitzer Runde, schön für Wanderer und Gäste mit etwas Zeit. Besonders gut als Fidel-Tipp.</p><a class="linkbtn" href="https://www.google.com/maps/search/Rotes+Tor+Spitz+an+der+Donau" target="_blank" rel="noopener">Karte</a></article>
-<article><h3>🍷 Spitz & Donauschlössel / Gritsch</h3><p>Wein, Donau, Einkehr und Wachauer Atmosphäre. Glorias Genuss-Tipp bleibt fix in der App.</p><a class="linkbtn" href="#empfehlung-gritsch">Gritsch öffnen</a></article>
-<article><h3>🏹 Bogenschießen Aggsbach Markt</h3><p>Pias Erlebnis-Tipp: nur nach Verfügbarkeit, Anmeldung und Sicherheitsabsprache. Kein Südufer-Ziel.</p><button class="btn routebtn" data-route="archery" type="button">Route anzeigen</button></article>
-<article><h3>🍑 Willendorf / Venus</h3><p>Kulturstopp am Nordufer, gut für kurze Ausflüge, Radgäste und Familien.</p><a class="linkbtn" href="https://www.google.com/maps/dir/?api=1&origin=Aggsbach+Markt+82%2C+3641+Aggsbach+Markt&destination=Willendorf+in+der+Wachau&travelmode=walking" target="_blank" rel="noopener">Route öffnen</a></article>
-<article><h3>⛰️ Maria Laach / Jauerling</h3><p>Höhenlage, Natur, Aussicht und echte Wachau abseits der überlaufenen Hotspots.</p><button class="btn routebtn" data-route="medium" type="button">Fidels Tour anzeigen</button></article>
-</div>
+
+<section id="gritsch" class="card">
+<h2>🍷 Glorias Genuss-Tipp in Spitz</h2>
+<p><strong>Donauschlössel / Familie Graben-Gritsch</strong> – einer der schönsten Rastplätze für Wanderer und Radfahrer in Spitz an der Donau.</p>
+<img src="assets/donauschloessel-aussen.jpg" alt="Donauschlössel Spitz" style="width:100%;max-width:700px;border-radius:12px;">
+<ul>
+<li>🍷 Wachauer Wein</li>
+<li>🌊 Donaublick</li>
+<li>🥨 Jause</li>
+<li>🚶 Ideal nach Ruine Hinterhaus oder Rotes Tor</li>
+<li>🚲 Perfekter Zwischenstopp am Donauradweg</li>
+</ul>
+<p><em>Gloria empfiehlt: Nach einer Wanderung oder Radtour in Spitz ist das Donauschlössel einer meiner Lieblingsplätze.</em></p>
 </section>
 
-<section class="card recommendation-card" id="komoot-routen">
-<h2>🧭 Komoot-Routen für Gäste</h2>
-<p>Diese geprüften Touren stammen direkt aus euren Komoot-Routen. Falls die Einbettung am Handy nicht lädt, öffnet der Button die Tour direkt in Komoot.</p>
-<div class="routegrid">
-<article><h3>🌄 Genussterrasse</h3><p>Kurze Genuss-Wanderung mit Wachau-Blick. Ideal für Anreise, Nachmittag oder Sonnenuntergang.</p><button class="btn primary routebtn" data-route="genussterrasse" type="button">Route in App anzeigen</button><a class="linkbtn" href="https://www.komoot.com/tour/3039220789" target="_blank" rel="noopener">Komoot öffnen</a></article>
-<article><h3>🥾 Aggsbach Markt → Melk über Emmersdorf</h3><p>Welterbesteig-orientierte Tour am Nordufer Richtung Emmersdorf/Melk. Rückfahrt vorher planen.</p><button class="btn primary routebtn" data-route="melk_komoot" type="button">Route in App anzeigen</button><a class="linkbtn" href="https://www.komoot.com/tour/3039245626" target="_blank" rel="noopener">Komoot öffnen</a></article>
-<article><h3>⛰️ Mühldorf → Aggsbach Markt über den Jauerling</h3><p>Anspruchsvolle Tour über den Jauerling zurück nach Aggsbach Markt. Für fitte Wanderer.</p><button class="btn primary routebtn" data-route="jauerling_komoot" type="button">Route in App anzeigen</button><a class="linkbtn" href="https://www.komoot.com/tour/3039257390" target="_blank" rel="noopener">Komoot öffnen</a></article>
-<article><h3>🏆 Welterbesteig Wachau – Komoot Collection</h3><p>Alle Etappen des Welterbesteigs Wachau in Komoot. Ideal zur Gesamtplanung.</p><button class="btn primary routebtn" data-route="welterbesteig_collection" type="button">Collection anzeigen</button><a class="linkbtn" href="https://www.komoot.com/de-de/collection/1952145/wandern-im-unesco-welterbe-auf-dem-welterbesteig-wachau" target="_blank" rel="noopener">Komoot Collection öffnen</a></article>
-<article><h3>🚲 Donauradweg Wachau</h3><p>Komoot-Radtour für Donauradweg-Gäste. Fahrradroute, nicht Fußweg.</p><button class="btn primary routebtn" data-route="bike_donau_komoot" type="button">Radtour anzeigen</button><a class="linkbtn" href="https://www.komoot.com/tour/3039269031" target="_blank" rel="noopener">Komoot öffnen</a></article>
-</div>
-</section>
-<section class="card" id="uferregel">
-<h2>⚠️ Nordufer/Südufer-Regel</h2>
-<p><b>Wichtig:</b> Zuhause am Bach liegt in Aggsbach Markt am Nordufer. Aggsbach Dorf und Ruine Aggstein liegen am Südufer. Die App empfiehlt deshalb keine falschen direkten Wanderungen über die Donau.</p>
-<div class="routegrid">
-<article><h3>✅ Direkt sinnvoll ab Aggsbach Markt</h3><p>Donau-Bach-Runde, Maria Langegg, Jauerling, Willendorf, Spitz, Rotes Tor, Ruine Hinterhaus, Donauradweg Nordufer, Wachaubahn.</p></article>
-<article><h3>⚠️ Nur mit Fähre/Transfer/Umweg</h3><p>Ruine Aggstein, Aggsbach Dorf, Schönbühel und Dunkelsteinerwald. Diese Ziele liegen am Südufer.</p></article>
-</div>
-</section>
-<section class="card" id="service">
-<h2>🛎️ Gäste-Service direkt anfragen</h2>
-<p>Für Wanderer, Radfahrer und müde Beine: ein Klick, WhatsApp öffnet mit vorbereitetem Text.</p>
-<div class="routegrid">
-<article><h3>🎒 Gepäcktransport</h3><p>Ideal am Welterbesteig. Ziel, Uhrzeit und Gepäckstücke ergänzen.</p><button class="btn primary" id="serviceLuggageWhatsApp" type="button">Gepäck anfragen</button></article>
-<article><h3>☕ Frühstück</h3><p>Standard, vegetarisch oder vegan – oben im Morgen-Assistenten auswählbar.</p><a class="linkbtn primary" href="#morgen">Frühstück wählen</a></article>
-<article><h3>🧀 Abendjause</h3><p>Wurst-/Käseplatte oder einfache Jause nach Verfügbarkeit.</p><button class="btn primary" id="snackWhatsApp" type="button">Abendjause anfragen</button></article>
-<article><h3>📱 WhatsApp-Hilfe</h3><p>Anreise, Schlüssel, Tourenfrage oder schnelle Hilfe.</p><button class="btn primary" id="helpWhatsApp" type="button">Hans &amp; Laura fragen</button></article>
-</div>
-</section>
-<section class="card" id="packliste">
-<h2>🎒 Startklar-Packliste</h2>
-<p>Für Gäste praktisch, für Gastgeber professionell: abhaken, was vor Tour/Radtour erledigt ist.</p>
-<div class="treasure">
-<label><input class="packItem" type="checkbox"/> Wasser gefüllt</label>
-<label><input class="packItem" type="checkbox"/> Wetter geprüft</label>
-<label><input class="packItem" type="checkbox"/> Rückfahrt / Fähre / Bahn geprüft</label>
-<label><input class="packItem" type="checkbox"/> Handy geladen</label>
-<label><input class="packItem" type="checkbox"/> Regen-/Sonnenschutz eingepackt</label>
-<label><input class="packItem" type="checkbox"/> Gepäcktransport geklärt</label>
-<label><input class="packItem" type="checkbox"/> Hunde-Wasser / Kinder-Snack dabei</label>
-</div>
-<div class="resultbox" id="packResult">0 / 7 Punkte erledigt.</div>
-<button class="btn" id="packReset" type="button">Packliste zurücksetzen</button>
-</section>
-<section class="card" id="schlechtwetter">
-<h2 data-i18n="rainTitle">🌧️ Schlechtwetterprogramm</h2>
-<div class="routegrid">
-<article><h3>Stift Melk</h3><p>Kulturklassiker bei Regen.</p><a class="linkbtn" href="https://www.google.com/maps/search/Stift+Melk" target="_blank" rel="noopener">Karte</a></article>
-<article><h3>Kartause Aggsbach</h3><p>Geschichte und ruhiger Ausflug.</p><a class="linkbtn" href="https://www.google.com/maps/search/Kartause+Aggsbach" target="_blank" rel="noopener">Karte</a></article>
-<article><h3>Donauschlössel Spitz</h3><p>Einkehr, Donau, Wachauer Küche.</p><a class="linkbtn" href="https://donauschloessel.at/" target="_blank" rel="noopener">Webseite</a></article>
-<article><h3>Heurige</h3><p>Aktuell prüfen, wer ausgesteckt hat.</p><a class="linkbtn" href="https://heurigenkalender.niederoesterreich.at/Gemeinde/31301/Aggsbach" target="_blank" rel="noopener">Heurigenkalender</a></article>
-</div>
-</section>
-<section class="card recommendation-card" id="empfehlung-gritsch">
-<h2>🍷 Gastgeber-Empfehlung: Donauschlössel Spitz</h2>
-<p class="note">Persönliche Empfehlung von Hans, Laura, Fidel, Gloria und Pia.</p>
-<div class="photo-gallery two">
-<figure><img alt="Donauschlössel Spitz Außenansicht" loading="lazy" src="assets/donauschloessel-aussen.jpg"/><figcaption>Donauschlössel Spitz – direkt an der Donau.</figcaption></figure>
-<figure><img alt="Donauschlössel Spitz Innenbereich" loading="lazy" src="assets/donauschloessel-innen.jpg"/><figcaption>Gemütlicher Innenbereich mit Wachauer Gastlichkeit.</figcaption></figure>
-</div>
-<div class="routegrid">
-<article>
-<h3>Donauschlössel – Familie Graben-Gritsch</h3>
-<p>Regional essen, Wachauer Weine genießen und direkt an der Donau sitzen.</p>
-<p><b>Adresse:</b> Donaulände 3, 3620 Spitz<br/><b>Telefon:</b> +43 664 9156901</p>
-<a class="linkbtn primary" href="https://donauschloessel.at/" target="_blank" rel="noopener">Webseite öffnen</a>
-<a class="linkbtn" href="https://www.google.com/maps/dir/?api=1&origin=Aggsbach+Markt+82%2C+3641+Aggsbach+Markt&destination=Donauschl%C3%B6ssel+Spitz+Donaul%C3%A4nde+3+3620+Spitz&travelmode=bicycling" target="_blank" rel="noopener">Route anzeigen</a>
-<a class="linkbtn" href="tel:+436649156901">Anrufen</a>
-</article>
-<article><h3>Unser Tipp</h3><p>Nach einer Wanderung oder Radtour: Donauterrasse, Wachauer Küche und ein ruhiger Blick auf den Fluss.</p><p class="note">Öffnungszeiten bitte vor Besuch prüfen.</p></article>
-</div>
-</section>
-<section class="card" id="windis">
-<h2>🐾 Windis Kinderwelt</h2>
-<p>Spielerisch die Wachau entdecken – mit Fidel, Gloria und Pia.</p>
-<div class="routegrid">
-<article>
-<h3>🐾 Wachau-Windis-Quiz</h3>
-<p>10 Fragen zu Fidel, Gloria, Pia und der Wachau.</p>
-<button class="btn primary" id="quizStart" type="button">Quiz starten</button>
-<button class="btn" id="quizNext" type="button">Nächste Frage</button>
-<div class="resultbox" id="quizBox">Bereit? Drücke „Quiz starten“.</div>
-<div class="quizanswers" id="quizAnswers"></div>
-<div class="resultbox" id="quizScore">Punkte: 0 / 0</div>
-</article>
-<article>
-<h3>🔎 Aktive Schatzsuche</h3>
-<p>Hakt ab, was ihr gefunden habt. Am Ende seid ihr Wachau-Entdecker.</p>
-<div class="treasure">
-<label><input class="treasureItem" type="checkbox"/> 🌊 Donau gesehen</label>
-<label><input class="treasureItem" type="checkbox"/> 🚂 Zug oder Wachaubahn entdeckt</label>
-<label><input class="treasureItem" type="checkbox"/> 🍑 Marillenbaum gefunden</label>
-<label><input class="treasureItem" type="checkbox"/> 🌸 Blume fotografiert</label>
-<label><input class="treasureItem" type="checkbox"/> 🪨 Stein in Herzform gesucht</label>
-<label><input class="treasureItem" type="checkbox"/> 🐾 Fidel, Gloria oder Pia entdeckt</label>
-</div>
-<div class="resultbox" id="treasureResult">0 / 6 Entdeckungen gefunden.</div>
-<button class="btn" id="treasureReset" type="button">Schatzsuche zurücksetzen</button>
-</article>
-</div>
-</section>
-<section class="card" id="notfall">
-<h2>🚨 Notfall &amp; Hilfe</h2>
-<div class="routegrid">
-<article><h3>Notruf</h3><p>112 Euro-Notruf · 144 Rettung · 133 Polizei · 122 Feuerwehr</p><a class="linkbtn primary" href="tel:112">112 anrufen</a></article>
-<article><h3>Hans kontaktieren</h3><p>Bei Fragen, Anreise, Gepäck oder Orientierung.</p><a class="linkbtn primary" href="tel:+436646437526">Hans anrufen</a><button class="btn" id="sendLocation" type="button">📍 Standort senden</button></article>
-</div>
-</section>
-<section class="card" id="bewertung">
-<h2>⭐ Bewertung</h2>
-<p>Wenn es euch gefallen hat, hilft eine Bewertung einem kleinen Gastgeberbetrieb sehr.</p>
-<a class="linkbtn primary" href="https://www.google.com/search?q=Zuhause+am+Bach+Wachau" target="_blank" rel="noopener">Google Bewertung suchen</a>
-</section>
-<section class="card" id="bedienhilfe">
-<h2>ℹ️ Bedienhilfe</h2>
-<div class="routegrid">
-<article>
-<h3>🥾 Tour wählen</h3>
-<p>Bei den Touren einen Button drücken. Danach ändern sich Beschreibung, Karte und Routenlink direkt darunter.</p>
-</article>
-<article>
-<h3>📱 WhatsApp</h3>
-<p>Frühstück, Gepäck und Hilfe öffnen WhatsApp mit vorbereitetem Text. Vor dem Senden bitte fehlende Angaben ergänzen.</p>
-</article>
-<article>
-<h3>🌦️ Wetter</h3>
-<p>Live-Wetter funktioniert online über GitHub Pages. Wenn nichts lädt, bitte externe Wetterseite nutzen.</p>
-</article>
-<article>
-<h3>🧹 Alte Version?</h3>
-<p>Wenn Buttons nicht reagieren: App-Cache löschen und neu laden.</p>
-<button class="btn" id="clearAppCache" type="button">Cache löschen &amp; neu laden</button>
-</article>
-</div>
-</section>
-<section class="card" id="gaeste-feedback">
-<h2>💬 Gäste-Notiz & Feedback</h2>
-<div class="routegrid">
-<article>
-<h3>Private Notiz auf diesem Gerät</h3>
-<textarea id="guestNote" rows="5" placeholder="z. B. Morgen um 08:30 Frühstück, danach Spitz …"></textarea>
-<button class="btn" id="saveNote" type="button">Notiz speichern</button>
-<div class="resultbox" id="noteResult">Noch keine Notiz gespeichert.</div>
-</article>
-<article>
-<h3>Schnelles Feedback an Hans & Laura</h3>
-<div class="buttonrow">
-<button class="choice feedback-rating" data-value="3" type="button">3/5</button>
-<button class="choice feedback-rating" data-value="4" type="button">4/5</button>
-<button class="choice feedback-rating active" data-value="5" type="button">5/5</button>
-</div>
-<textarea id="feedbackText" rows="5" placeholder="Was war gut? Was sollen wir verbessern?"></textarea>
-<button class="btn primary" id="feedbackSend" type="button">Feedback per WhatsApp senden</button>
-</article>
-</div>
-</section>
-<section class="card" id="funktionstest">
-<h2>🧪 Funktionstest</h2>
-<p>Für Gastgeber: Prüft, ob die wichtigsten App-Bereiche geladen sind.</p>
-<button class="btn primary" id="runAppTest" type="button">App-Funktionstest starten</button>
-<div class="resultbox" id="appTestResult">Noch nicht geprüft.</div>
-</section>
 </main>
-<nav class="bottomnav">
-<a href="#windis-start">🐾<span>Windis</span></a>
-<a href="#heute">🏞️<span>Heute</span></a>
-<a href="#touren">🥾<span>Fidel</span></a>
-<a href="#empfehlung-gritsch">🍷<span>Gloria</span></a>
-<a href="#windis">🎀<span>Pia</span></a>
-<a href="https://api.whatsapp.com/send?phone=436646437526&amp;text=Hallo%20Hans%20und%20Laura" target="_blank" rel="noopener">📱<span>WhatsApp</span></a>
-<a href="https://www.booking.com/hotel/at/zu-hause-am-bach.de.html" target="_blank" rel="noopener">🛏️<span>Booking</span></a>
-</nav>
-<script src="app.js"></script>
 
-<footer class="copyright-footer">
-© 2026 Copyright by Johann Prem · Zuhause am Bach · Die Wilden Wachauer Windis<br>
-Tel. +43 664 6437526
-</footer>
+  <footer class="copyright-footer">
+    <strong>© 2026 Copyright by Johann Prem</strong><br>
+    Zuhause am Bach · Die Wilden Wachauer Windis<br>
+    Tel. +43 664 6437526<br>
+    <span id="footerVersion">Version 16.1 Wachau-Meister Urkunde · Build 2026-06-20</span>
+  </footer>
 
+  <script src="app.js"></script>
 </body>
 </html>

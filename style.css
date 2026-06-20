@@ -1,37 +1,58 @@
-:root{--bg:#fbf4e8;--paper:#fffaf2;--ink:#2b2118;--muted:#776653;--brand:#6b4f2a;--gold:#d7a84d;--green:#516b44;--shadow:0 14px 35px rgba(43,33,24,.13);--radius:24px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(180deg,#f6ead9,#fbf4e8 25%,#efe0cc);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);line-height:1.55;padding-bottom:84px}
-.languagebar{position:sticky;top:0;z-index:9999;display:flex;gap:8px;justify-content:center;align-items:center;flex-wrap:wrap;background:#fffaf2;border-bottom:1px solid rgba(107,79,42,.22);padding:8px;box-shadow:0 6px 18px rgba(43,33,24,.12)}
-.langbtn{border:1px solid rgba(107,79,42,.25);background:#fff;border-radius:999px;padding:7px 10px;font-weight:900;cursor:pointer}.langbtn.active{background:var(--gold);border-color:var(--brand)}
-.hero{position:relative;background:#2b2118;color:#fff}.hero img{display:block;width:100%;height:auto}.hero-text{padding:24px;width:min(1100px,94%);margin:auto}.kicker{text-transform:uppercase;letter-spacing:.13em;font-size:.78rem;font-weight:800;color:var(--gold)}h1{font-size:clamp(2rem,7vw,4rem);line-height:1;margin:.1em 0}main{width:min(1100px,calc(100% - 28px));margin:18px auto}
-.card{background:var(--paper);border:1px solid rgba(107,79,42,.16);border-radius:var(--radius);padding:22px;margin:14px 0;box-shadow:var(--shadow)}h2{font-size:clamp(1.5rem,4vw,2.4rem);line-height:1.1;margin:.1em 0 .5em}h3{margin:.3em 0;color:#4a341f}
-.dashboard,.recommendation-card{border:2px solid rgba(215,168,77,.5);background:linear-gradient(135deg,#fffaf2,#fff3cf)}
-.dashboard-grid,.routegrid{display:grid;grid-template-columns:1fr;gap:14px}.dashboard-grid article,.routegrid article{background:#fff;border:1px solid rgba(107,79,42,.13);border-radius:18px;padding:16px;box-shadow:0 8px 20px rgba(43,33,24,.08)}
-.weathergrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.weatheritem{background:#f6ead9;border-radius:16px;padding:12px}.weatheritem b{display:block;color:var(--muted);font-size:.85rem}.weatheritem span{font-size:1.1rem;font-weight:900}
-.btn,.linkbtn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 16px;border-radius:999px;background:#fff8ec;color:var(--ink);font-weight:800;text-decoration:none;border:0;box-shadow:0 8px 20px rgba(0,0,0,.12);cursor:pointer;margin:4px}.primary{background:var(--gold)!important;color:#23170f}
-.buttonrow,.actions{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}.choice,.bighelp{border:2px solid rgba(107,79,42,.18);background:#fff;border-radius:18px;padding:12px 14px;font-weight:850;cursor:pointer;color:var(--ink)}.choice.active,.routebtn.active,.tomorrow-route.active,.breakfast.active,.breakfast-time.active{background:var(--gold);border-color:var(--brand)}
-.bigbuttons{display:grid;grid-template-columns:1fr;gap:10px}.bighelp{min-height:76px;text-align:left}.resultbox{background:#fff;border:1px dashed rgba(107,79,42,.35);border-radius:18px;padding:14px;margin-top:12px;white-space:pre-line}.mapbox{margin-top:12px}.mapbox iframe{width:100%;height:290px;border:0;border-radius:18px}
-.note{background:#f3e4ce;border-left:6px solid var(--gold);padding:12px;border-radius:14px}.photo-gallery.two{display:grid;grid-template-columns:1fr;gap:14px;margin:16px 0}.photo-gallery figure{margin:0;background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 10px 24px rgba(43,33,24,.1)}.photo-gallery img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}.photo-gallery figcaption{padding:10px 12px;font-weight:700;color:var(--muted)}
-.quizanswers{display:grid;grid-template-columns:1fr;gap:8px;margin-top:10px}.quizanswers button{border:1px solid rgba(107,79,42,.25);background:#fff;border-radius:14px;padding:10px;text-align:left;font-weight:800;cursor:pointer}.quizanswers button.correct{background:#edf3e8;border-color:#516b44}.quizanswers button.wrong{background:#fdecec;border-color:#9b3a3a}
-.treasure{display:grid;gap:9px;margin-top:10px}.treasure label{background:#fff;border:1px solid rgba(107,79,42,.16);border-radius:14px;padding:10px;font-weight:800}.test-ok{background:#edf3e8;border-color:#516b44}.test-fail{background:#fdecec;border-color:#9b3a3a}#bedienhilfe{border:2px solid rgba(81,107,68,.30)}#funktionstest{border:2px dashed rgba(107,79,42,.35)}
-.bottomnav{position:fixed;bottom:0;left:0;right:0;background:#fffaf2;border-top:1px solid rgba(107,79,42,.2);display:flex;justify-content:space-around;z-index:9999;box-shadow:0 -8px 24px rgba(0,0,0,.12)}.bottomnav a{text-decoration:none;color:var(--ink);font-weight:800;font-size:.82rem;padding:8px 4px;display:flex;flex-direction:column;align-items:center}
-@media(min-width:780px){.dashboard-grid,.routegrid{grid-template-columns:repeat(2,1fr)}.bigbuttons{grid-template-columns:repeat(3,1fr)}.photo-gallery.two{grid-template-columns:1fr 1fr}.weathergrid{grid-template-columns:repeat(4,1fr)}}
+:root{--bg:#fbf7ef;--card:#fff;--ink:#2f241b;--muted:#6f6257;--brand:#7a4d22;--brand2:#b97a33;--soft:#efe2cf;--ok:#17663a;--warn:#fff3cd;--border:#e4d5c2;--shadow:0 12px 30px rgba(73,45,20,.12)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.45}.hero{position:relative;min-height:520px;background:linear-gradient(140deg,#3b2413,#93612a);color:#fff;overflow:hidden}.topbar{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:12px 16px;position:relative;z-index:2}.version{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);padding:8px 12px;border-radius:999px;font-weight:800}.language-bar{display:flex;gap:6px;flex-wrap:wrap}.language-bar button{background:#fff;color:var(--brand);border:0;border-radius:999px;padding:8px 10px;font-weight:800;cursor:pointer}.language-bar button.active{background:#f4c46b;color:#2f241b}.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.32}.hero-text{position:relative;z-index:1;max-width:900px;padding:110px 22px 50px;margin:auto;text-align:center}.hero h1{font-size:clamp(34px,6vw,68px);line-height:1;margin:0 0 16px;text-shadow:0 3px 12px rgba(0,0,0,.35)}.hero p{font-size:clamp(18px,2.4vw,27px);margin:0 auto 28px;max-width:780px}.quick-grid,.button-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}.quick-grid button,.button-grid button,button.primary,#runTestBtn{border:0;border-radius:16px;background:#fff;color:var(--brand);padding:14px 16px;font-weight:800;font-size:16px;box-shadow:var(--shadow);cursor:pointer}.quick-grid button:hover,.button-grid button:hover,button.primary:hover,#runTestBtn:hover{transform:translateY(-1px)}main{max-width:1120px;margin:-60px auto 0;padding:0 16px 35px;position:relative;z-index:3}.card{background:var(--card);border:1px solid var(--border);box-shadow:var(--shadow);border-radius:24px;padding:22px;margin:20px 0}.card h2{margin:0 0 10px;font-size:28px}.card h3{margin-top:24px}.warning{background:var(--warn)}.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:16px 0}.form-grid label{display:grid;gap:6px;font-weight:800}.form-grid select{border:1px solid var(--border);border-radius:14px;padding:12px;background:#fff;font-size:16px;color:var(--ink)}.primary{background:var(--brand)!important;color:#fff!important}.result{margin-top:16px;padding:14px;border-radius:18px;background:#f8f0e5;border:1px solid var(--border)}.result:empty{display:none}.route-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:14px}.route-card{border:1px solid var(--border);border-radius:20px;padding:16px;background:linear-gradient(180deg,#fff,#fff8ef)}.route-card h4{margin:0 0 7px;font-size:20px}.meta{color:var(--muted);font-size:14px;margin:4px 0 10px}.tag{display:inline-block;background:var(--soft);color:var(--brand);border-radius:999px;padding:4px 8px;margin:2px;font-size:12px;font-weight:800}.route-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.route-actions button,.route-actions a{display:inline-flex;text-decoration:none;border:0;border-radius:999px;background:var(--brand);color:#fff;padding:9px 12px;font-weight:800;cursor:pointer;font-size:14px}.route-actions .secondary{background:#fff;color:var(--brand);border:1px solid var(--brand)}.service-box{background:#f3eadf;border:1px solid var(--border);border-radius:18px;padding:14px;margin-top:16px}.map-preview{min-height:160px;border:2px dashed var(--border);border-radius:20px;display:grid;place-items:center;background:#fffaf3;overflow:hidden}.map-preview iframe{width:100%;height:520px;border:0}.test-card pre{white-space:pre-wrap;background:#1e1e1e;color:#e9ffe9;border-radius:16px;padding:14px;overflow:auto}.copyright-footer{text-align:center;padding:25px 12px;background:#2f241b;color:#fff;font-size:13px}.copyright-footer strong{font-size:15px}@media(max-width:640px){.hero{min-height:600px}.hero-text{padding-top:90px}.card{border-radius:18px;padding:16px}.quick-grid,.button-grid{grid-template-columns:1fr}.map-preview iframe{height:420px}}
 
-.versionbar{
-  margin: 0.5rem auto 0;
-  max-width: 1100px;
-  padding: 0.45rem 0.8rem;
-  border-radius: 999px;
-  background: #fff7df;
-  border: 1px solid #ead7a5;
-  color: #5f4820;
-  font-size: 0.9rem;
-  text-align: center;
+/* V15.1 Pia Kinderwelt */
+.kids-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.kids-tabs button{border:1px solid var(--brand);border-radius:999px;background:#fff;color:var(--brand);padding:10px 12px;font-weight:800;cursor:pointer}.kids-tabs button.active{background:var(--brand);color:#fff}.kid-panel{background:#fffaf3;border:1px solid var(--border);border-radius:20px;padding:16px;margin:12px 0}.hidden{display:none!important}.quiz-question{border-bottom:1px solid var(--border);padding:12px 0}.quiz-question:last-child{border-bottom:0}.quiz-question label{display:block;margin:8px 0;padding:8px;border-radius:12px;background:#fff}.treasure-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px}.treasure-grid label{background:#fff;border:1px solid var(--border);border-radius:14px;padding:11px;font-weight:700}.story-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:14px;margin:10px 0}.cert-name{display:grid;gap:6px;margin:10px 0;font-weight:800}.cert-name input{border:1px solid var(--border);border-radius:14px;padding:12px;font-size:16px}.certificate{background:#fff;border:3px double var(--brand);border-radius:22px;text-align:center;padding:22px;margin-top:14px}.certificate h3{font-size:30px;margin:0 0 10px}@media print{body>*:not(main){display:none!important}main{margin:0!important;max-width:none!important}.card:not(#pia){display:none!important}.kids-tabs,#kidsQuiz,#kidsTreasure,#kidsStories,#adventureRoutes,.piaAdventureTitle,.route-grid,.route-actions{display:none!important}.certificate{box-shadow:none}}
+
+
+/* V15.4 SEO WETTER AMPEL – Startbild wie V14, Funktionen aus V15 */
+:root{
+  --bg:#f7f2ea;
+  --card:#fffdf8;
+  --ink:#2b241d;
+  --muted:#6d6258;
+  --brand:#6f431f;
+  --brand2:#a9672d;
+  --soft:#eadbc6;
+  --border:#ddc9ad;
+  --shadow:0 14px 38px rgba(68,42,18,.13);
 }
+body{background:linear-gradient(180deg,#f6f0e7 0%,#fbf8f1 46%,#f1e7d8 100%)}
+.hero{min-height:560px;background:#3a281a;color:#fff;border-bottom:1px solid rgba(255,255,255,.18)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(35,22,12,.50) 0%,rgba(65,39,19,.20) 45%,rgba(35,22,12,.48) 100%);pointer-events:none;z-index:0}
+.hero-img{opacity:1;filter:saturate(1) contrast(1)}
+.hero-text{z-index:2;text-align:left;max-width:1040px;padding-top:125px}
+.hero h1{max-width:760px;font-weight:850;letter-spacing:-.04em;text-shadow:0 5px 20px rgba(0,0,0,.42)}
+.hero p{margin-left:0;max-width:690px;color:#fff7ea;text-shadow:0 2px 10px rgba(0,0,0,.38)}
+.topbar{z-index:3;backdrop-filter:blur(6px);background:linear-gradient(180deg,rgba(38,24,13,.55),rgba(38,24,13,.08))}
+.version{background:rgba(255,248,235,.16);border-color:rgba(255,248,235,.38);letter-spacing:.02em}
+.quick-grid{max-width:850px;grid-template-columns:repeat(auto-fit,minmax(145px,1fr))}
+.quick-grid button{background:rgba(255,252,244,.94);color:#5d3518;border:1px solid rgba(255,255,255,.55);box-shadow:0 12px 32px rgba(28,17,9,.22)}
+.card{border:1px solid var(--border);box-shadow:var(--shadow);border-radius:24px;background:rgba(255,253,248,.96)}
+.card h2{letter-spacing:-.02em;color:#4a2a14}
+.route-card{border-color:#e2ccb0;background:linear-gradient(180deg,#fffdf7,#fbf3e8)}
+.route-card h4{color:#4d2e17}.tag{background:#f0dfc8;color:#56351b;border:1px solid #e3caa8}.primary,button.primary{background:linear-gradient(135deg,#79461d,#b36b30)!important;color:#fff!important}
+.service-box,.result{background:#fff8eb;border-color:#ead1ac}.warning{background:linear-gradient(180deg,#fff4d4,#fff9e9)}
+.copyright-footer{background:#3b2818;color:#fff1df;border-top:4px solid #b98243}.copyright-footer span{color:#e7c99b}
+@media(max-width:760px){.hero{min-height:620px}.hero-text{text-align:left;padding:92px 18px 38px}.hero h1{font-size:39px}.hero p{font-size:18px}.quick-grid{grid-template-columns:1fr 1fr}.topbar{align-items:flex-start}.language-bar button{padding:7px 8px}}
 
 
-.copyright-footer{
-margin-top:30px;padding:15px;text-align:center;
-font-size:12px;color:#666;border-top:1px solid #ddd;background:#f8f8f8;
+/* V15.4 SEO + Wetter + Ampel */
+.weather-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin:14px 0 18px}.weather-card{background:#fff8eb;border:1px solid var(--border);border-radius:18px;padding:14px;display:grid;gap:6px}.weather-card strong{color:#4a2a14}.weather-card span{color:var(--muted);font-weight:700}.mini-btn{border:1px solid var(--brand);border-radius:16px;background:#fff;color:var(--brand);padding:12px 14px;font-weight:800;cursor:pointer}.ampel-box{margin:10px 0 14px;padding:12px 14px;border:1px solid var(--border);border-radius:16px;background:#fff8eb;font-weight:800}.ampel{font-size:28px;vertical-align:middle;margin-right:8px}.ampel.green{color:#17803b}.ampel.yellow{color:#d49a00}.ampel.red{color:#c72222}.ampel.grey{color:#999}
+
+/* V16.1 Wachau-Meister-Urkunde mit Namensfeld, Foto und DIN A4 Querformat */
+.certificate-tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin:12px 0 16px}.cert-note{grid-column:1/-1;margin:0;color:var(--muted);font-size:14px}.cert-name input[type=file]{background:#fff;border:1px solid var(--border);border-radius:14px;padding:11px}.certificate-landscape{max-width:1050px;margin:16px auto;background:linear-gradient(135deg,#fffdf6,#f7ead2);border:0;border-radius:26px;padding:14px;box-shadow:var(--shadow)}.certificate-border{border:5px double var(--brand);border-radius:20px;padding:22px;text-align:center;min-height:620px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}.cert-top,.cert-footer{font-weight:800;color:var(--brand);font-size:14px}.certificate-landscape h3{font-size:clamp(34px,5vw,58px);margin:4px 0;color:#5b3518;letter-spacing:.03em}.cert-small{font-size:20px;margin:4px 0}.cert-person{font-size:clamp(30px,4.6vw,52px);display:block;min-width:min(720px,90%);border-bottom:3px solid #9a6b36;padding:5px 18px 8px;color:#2f241b}.cert-photo-frame{width:190px;height:145px;border:3px solid #b98243;border-radius:20px;background:#fff7e8;display:grid;place-items:center;overflow:hidden;margin:6px auto}.cert-photo-frame img{width:100%;height:100%;object-fit:cover}.cert-text{max-width:760px;font-size:20px;margin:6px auto}.cert-checks,.cert-score{font-weight:800;margin:4px 0;color:#5b3518}.cert-signatures{display:flex;gap:38px;flex-wrap:wrap;justify-content:center;font-size:22px;font-weight:900;margin-top:8px}
+@media print{
+ @page{size:A4 landscape;margin:8mm}
+ html,body{background:#fff!important;margin:0!important;padding:0!important}
+ body>*:not(main){display:none!important}
+ main{margin:0!important;max-width:none!important;padding:0!important}
+ .card:not(#pia){display:none!important}
+ #pia{display:block!important;box-shadow:none!important;border:0!important;margin:0!important;padding:0!important;background:#fff!important}
+ #pia>h2,#pia>p,.kids-tabs,#kidsQuiz,#kidsTreasure,#kidsStories,#adventureRoutes,#pia h3,.certificate-tools,.route-actions{display:none!important}
+ .kid-panel.hidden{display:block!important}
+ #kidsCertificate{display:block!important;border:0!important;background:#fff!important;margin:0!important;padding:0!important}
+ .certificate-landscape{box-shadow:none!important;border:0!important;border-radius:0!important;margin:0!important;padding:0!important;max-width:none!important;width:100%!important;background:#fffdf6!important;page-break-inside:avoid}
+ .certificate-border{min-height:185mm!important;height:185mm!important;border:5px double #6f431f!important;border-radius:8mm!important;padding:8mm!important;justify-content:center!important;gap:3mm!important}
+ .certificate-landscape h3{font-size:34pt!important}.cert-person{font-size:28pt!important}.cert-photo-frame{width:45mm!important;height:34mm!important}.cert-text{font-size:14pt!important;max-width:230mm}.cert-signatures{font-size:16pt!important}.cert-top,.cert-footer{font-size:10pt!important}
 }
-textarea{width:100%;border:1px solid rgba(107,79,42,.25);border-radius:16px;padding:12px;font:inherit;background:#fff;color:var(--ink);resize:vertical}.card:target{outline:4px solid rgba(215,168,77,.55);outline-offset:4px}.bottomnav{overflow-x:auto;gap:2px}.bottomnav a{min-width:64px}.routegrid article .resultbox{margin-top:0}.versionbar::before{content:'✅ ';}
-@media(max-width:420px){.bottomnav a{font-size:.72rem;min-width:58px}.btn,.linkbtn{width:100%;}.buttonrow .choice{flex:1 1 44%;}}
