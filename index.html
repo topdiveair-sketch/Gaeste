@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#7a4d22">
-  <title>Zuhause am Bach – Gäste-App V16.1 Wachau-Meister Urkunde</title>
+  <title>Zuhause am Bach – Gäste-App V17 Pro</title>
   <meta name="description" content="Zuhause am Bach – Gästehaus Wachau in Aggsbach Markt. Unterkunft am Welterbesteig Wachau und am Donauradweg mit Wander- und Radtipps der Wilden Wachauer Windis.">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="style.css">
@@ -12,16 +12,14 @@
 <body>
   <header class="hero">
     <div class="topbar">
-      <div class="version" id="versionBadge">V16.2 GLORIAS GENUSS-TIPPS</div>
+      <div class="version" id="versionBadge">V17 PRO</div>
       <div class="language-bar" aria-label="Sprache wählen">
         <button data-lang="de">DE</button><button data-lang="en">EN</button><button data-lang="cs">CZ</button><button data-lang="hu">HU</button><button data-lang="es">ES</button><button data-lang="fr">FR</button>
       </div>
     </div>
     <img src="hero-windis.png" alt="Zuhause am Bach mit Fidel, Gloria und Pia in der Wachau" class="hero-img">
     <div class="hero-text">
-      <h1 data-i18n="heroTitle">Willkommen bei Zuhause am Bach – Gästehaus Wachau</h1>
-      <p data-i18n="heroSub">Ihre Unterkunft am Welterbesteig Wachau und am Donauradweg in Aggsbach Markt. Willkommen bei Zuhause am Bach – Gästehaus Wachau – dort, wo Geschichten entstehen.</p>
-      <div class="quick-grid">
+<div class="quick-grid">
         <button data-scroll="today" data-i18n="navToday">Heute</button>
         <button data-scroll="fidel" data-i18n="navHike">Wandern</button>
         <button data-scroll="gloria" data-i18n="navBike">Radfahren</button>
@@ -29,10 +27,41 @@
         <button data-scroll="service" data-i18n="navService">Service</button>
       </div>
     </div>
-  </header>
+</header>
 
   <main>
-    <section class="card warning">
+
+    <section id="zimmer" class="card rooms-card">
+            <div class="welcome-under-hero">
+        <h1>Willkommen bei Zuhause am Bach – Gästehaus Wachau</h1>
+        <p>Ihre Unterkunft am Welterbesteig Wachau und am Donauradweg in Aggsbach Markt. Willkommen bei den Wilden Wachauer Windis – dort, wo Geschichten entstehen.</p>
+      </div>
+      <h2>🛏️ Unsere Zimmer</h2>
+      <div class="rooms-grid">
+        <article class="room-tile">
+          <div class="room-icon">🏡</div>
+          <h3>Marillenzimmer</h3>
+          <p>Gemütlich und wachautypisch.</p>
+        </article>
+        <article class="room-tile">
+          <div class="room-icon">🍇</div>
+          <h3>Weinbergzimmer</h3>
+          <p>Für Genussgäste und Ruhesuchende.</p>
+        </article>
+        <article class="room-tile">
+          <div class="room-icon">🌊</div>
+          <h3>Donauzimmer</h3>
+          <p>Ideal für Wanderer und Radfahrer.</p>
+        </article>
+        <article class="room-tile">
+          <div class="room-icon">🌿</div>
+          <h3>Bachblick-Zimmer</h3>
+          <p>Bei Zuhause am Bach bei den Wilden Wachauer Windis.</p>
+        </article>
+      </div>
+    </section>
+
+<section class="card warning">
       <h2 data-i18n="riverRuleTitle">Wichtige Wachau-Regel</h2>
       <p data-i18n="riverRuleText">Aggsbach Markt liegt am Nordufer. Südufer-Ziele wie Aggstein werden nicht als direkte Wanderroute empfohlen. Fähre, Transfer oder Umweg über Melk/Spitz beachten.</p>
     </section>
@@ -157,6 +186,37 @@
 </ul>
 <p><em>Gloria empfiehlt: Nach einer Wanderung oder Radtour in Spitz ist das Donauschlössel einer meiner Lieblingsplätze.</em></p>
 </section>
+
+<section id="windis-buecher" class="card windis-books-card">
+  <div class="section-kicker">📚 Die Wilden Wachauer Windis</div>
+  <h2>Die Bücher der Wilden Wachauer Windis</h2>
+  <p>
+    Fidel, Gloria und Pia begleiten Kinder, Familien und Wachau-Freunde durch Geschichten voller Abenteuer,
+    Donau, Burgen, Weinberge und kleiner Geheimnisse.
+  </p>
+
+  <div class="windis-books-grid">
+    <div class="windis-book-box">
+      <strong>🐾 Geschichten aus der Wachau</strong>
+      <span>Ideal für Familien, Kinder und Gäste, die die Region spielerisch entdecken möchten.</span>
+    </div>
+    <div class="windis-book-box">
+      <strong>🏰 Ausflugsideen mit Buchbezug</strong>
+      <span>Wachaubahn, Aggstein, Spitz, Willendorf, Melk und der Welterbesteig werden lebendig.</span>
+    </div>
+    <div class="windis-book-box">
+      <strong>🎁 Gäste-Tipp</strong>
+      <span>Die Bücher eignen sich als Erinnerung an den Aufenthalt bei Zuhause am Bach.</span>
+    </div>
+  </div>
+
+  <div class="windis-books-actions">
+    <a class="primary-link-button" href="https://www.diewildenwachauerwindis.at/buecher-shop/die-wilden-wachauer-windis/" target="_blank" rel="noopener">
+      📚 Zu den Windis-Büchern
+    </a>
+  </div>
+</section>
+
 
 </main>
 
