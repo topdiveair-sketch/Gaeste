@@ -12,7 +12,7 @@
 <body>
   <header class="hero">
     <div class="topbar">
-      <div class="version" id="versionBadge">V25 WACHAU</div>
+      <div class="version" id="versionBadge">V32 FUNKTIONIERT</div>
       <div class="language-bar" aria-label="Sprache wählen">
         <button data-lang="de">DE</button><button data-lang="en">EN</button><button data-lang="cs">CZ</button><button data-lang="hu">HU</button><button data-lang="es">ES</button><button data-lang="fr">FR</button>
       </div>
@@ -120,19 +120,7 @@
 </ul>
 </section>
 
-<section id="gritsch" class="card">
-<h2>🍷 Glorias Genuss-Tipp in Spitz</h2>
-<p><strong>Donauschlössel / Familie Graben-Gritsch</strong> – einer der schönsten Rastplätze für Wanderer und Radfahrer in Spitz an der Donau.</p>
-<img src="assets/donauschloessel-aussen.jpg" alt="Donauschlössel Spitz" style="width:100%;max-width:700px;border-radius:12px;">
-<ul>
-<li>🍷 Wachauer Wein</li>
-<li>🌊 Donaublick</li>
-<li>🥨 Jause</li>
-<li>🚶 Ideal nach Ruine Hinterhaus oder Rotes Tor</li>
-<li>🚲 Perfekter Zwischenstopp am Donauradweg</li>
-</ul>
-<p><em>Gloria empfiehlt: Nach einer Wanderung oder Radtour in Spitz ist das Donauschlössel einer meiner Lieblingsplätze.</em></p>
-</section>
+
 
 
 
@@ -327,16 +315,29 @@
 
 
 
+
+
 <section id="glorias-genuss-tipp-spitz" class="card spitz-tip-card">
   <div class="section-kicker">🍷 Glorias Genuss-Tipp in Spitz</div>
   <h2>Donauschlössel / Familie Graben-Gritsch</h2>
-  <p>
-    Einer der schönsten Rastplätze für Wanderer und Radfahrer in Spitz an der Donau.
-    Ideal als Einkehr nach einer Tour am Welterbesteig Wachau oder einer Radtour am Donauradweg.
-  </p>
+
+  <p><strong>Donauschlössel / Familie Graben-Gritsch</strong> – einer der schönsten Rastplätze für Wanderer und Radfahrer in Spitz an der Donau.</p>
+
+  <ul class="gloria-list">
+    <li>🍷 Wachauer Wein</li>
+    <li>🌊 Donaublick</li>
+    <li>🥨 Jause</li>
+    <li>🚶 Ideal nach Ruine Hinterhaus oder Rotes Tor</li>
+    <li>🚲 Perfekter Zwischenstopp am Donauradweg</li>
+  </ul>
+
+  <blockquote class="gloria-quote">
+    Gloria empfiehlt: Nach einer Wanderung oder Radtour in Spitz ist das Donauschlössel einer meiner Lieblingsplätze.
+  </blockquote>
+
   <div class="spitz-tip-actions">
-    <a href="https://www.google.com/maps/dir/?api=1&origin=Aggsbach+Markt+82,+3641+Aggsbach+Markt&destination=Donauschl%C3%B6ssel+Gritsch+Spitz+an+der+Donau&travelmode=bicycling" target="_blank" rel="noopener">🚴 Route anzeigen</a>
-    <a href="https://www.google.com/search?q=Donauschl%C3%B6ssel+Gritsch+Spitz+%C3%96ffnungszeiten" target="_blank" rel="noopener">🕒 Öffnungszeiten prüfen</a>
+    <a href="https://www.google.com/maps/search/?api=1&query=Donauschlössel+Spitz" target="_blank">🗺️ Route anzeigen</a>
+    <a href="https://www.google.com/search?q=Donauschlössel+Spitz+Öffnungszeiten" target="_blank">🕒 Öffnungszeiten</a>
   </div>
 </section>
 
@@ -518,6 +519,213 @@ document.addEventListener("DOMContentLoaded", () => {
   if(document.getElementById("morningPlanContent")){ showMorningPlan("wander"); }
   if(document.getElementById("trailPlanContent")){ showTrailPlan("easy"); }
 });
+</script>
+
+
+<script>
+/* V32 Reparatur – robuste Funktionen für Fidels Wanderwelt, Karten/Komoot und Pias Kinderwelt */
+(function(){
+  const HOME = "Aggsbach Markt 82, 3641 Aggsbach Markt, Österreich";
+
+  function enc(x){ return encodeURIComponent(x); }
+  function mapsRoute(dest, mode){
+    return "https://www.google.com/maps/dir/?api=1&origin=" + enc(HOME) + "&destination=" + enc(dest) + "&travelmode=" + enc(mode || "walking");
+  }
+  function komootSearch(q){
+    return "https://www.komoot.com/search/" + enc(q);
+  }
+
+  window.showFidelRoute = function(){
+    const dauer = (document.querySelector('[name="dauer"]') || document.getElementById('dauer') || {}).value || "3-4";
+    const schwierigkeit = (document.querySelector('[name="schwierigkeit"]') || document.getElementById('schwierigkeit') || {}).value || "mittel";
+    const begleitung = (document.querySelector('[name="begleitung"]') || document.getElementById('begleitung') || {}).value || "hund";
+    const box = document.getElementById("fidelRouteResult") || document.getElementById("wanderResult") || document.getElementById("routeResult");
+
+    let route = {
+      title:"🥾 Aggsbach Markt – Willendorf – Venus-Fundstelle",
+      text:"Gemütliche Nordufer-Route mit Wachau-Flair, Donau-Nähe und Kulturstopp bei der Venus von Willendorf.",
+      dest:"Willendorf in der Wachau",
+      mode:"walking",
+      km:"ca. 6–8 km",
+      time:"ca. 2–3 Stunden"
+    };
+
+    if(String(dauer).includes("3") || String(schwierigkeit).toLowerCase().includes("mittel")){
+      route = {
+        title:"🥾 Aggsbach Markt – Schwallenbach – Spitz",
+        text:"Fidels Empfehlung für Gäste mit normaler Kondition: schöne Nordufer-Tour Richtung Spitz mit Einkehrmöglichkeit.",
+        dest:"Spitz an der Donau",
+        mode:"walking",
+        km:"ca. 10–12 km",
+        time:"ca. 3–4 Stunden"
+      };
+    }
+    if(String(schwierigkeit).toLowerCase().includes("sport") || String(dauer).toLowerCase().includes("ganz")){
+      route = {
+        title:"⛰ Aggsbach Markt – Spitz – Rotes Tor",
+        text:"Sportlichere Tour für trittsichere Gäste. Bei Hitze oder Regen nicht ideal.",
+        dest:"Rotes Tor Spitz an der Donau",
+        mode:"walking",
+        km:"ca. 13–16 km",
+        time:"ca. 4–5 Stunden"
+      };
+    }
+    if(String(begleitung).toLowerCase().includes("hund")){
+      route.text += " Mit Hund gut planbar: Wasser mitnehmen und Asphalt/Hitze beachten.";
+    }
+
+    const target = box || createAfterByText("Fidels Empfehlung anzeigen", "fidelRouteResult");
+    target.innerHTML = `<div class="v32-result-card">
+      <h3>${route.title}</h3>
+      <p>${route.text}</p>
+      <div class="v32-facts"><span>⏱ ${route.time}</span><span>📏 ${route.km}</span><span>🐕 hundefreundlich planbar</span></div>
+      <div class="v32-actions">
+        <a href="${mapsRoute(route.dest, route.mode)}" target="_blank" rel="noopener">🗺 Google Maps öffnen</a>
+        <a href="${komootSearch(route.dest)}" target="_blank" rel="noopener">🟢 Komoot öffnen</a>
+      </div>
+    </div>`;
+  };
+
+  function createAfterByText(buttonText, id){
+    const box = document.createElement("div");
+    box.id = id;
+    box.className = "assistant-content";
+    const buttons = Array.from(document.querySelectorAll("button,a"));
+    const b = buttons.find(x => (x.textContent||"").includes(buttonText));
+    if(b && b.parentElement){ b.parentElement.insertAdjacentElement("afterend", box); }
+    else { document.body.appendChild(box); }
+    return box;
+  }
+
+  // Klick-Handler für defekte Fidels-Buttons nachrüsten
+  document.addEventListener("click", function(e){
+    const t = e.target.closest("button,a");
+    if(!t) return;
+    const txt = (t.textContent || "").trim();
+    if(txt.includes("Fidels Empfehlung anzeigen") || txt.includes("Alle Wander-Routen")){
+      e.preventDefault();
+      window.showFidelRoute();
+    }
+  });
+
+  // Karten-/Komoot-Vorschau verlässlich anzeigen, auch wenn iframe nicht lädt
+  window.renderV32MapFallback = function(){
+    let section = document.getElementById("karten-vorschau");
+    if(!section){
+      section = document.createElement("section");
+      section.id = "karten-vorschau";
+      section.className = "card map-preview-card";
+      const main = document.querySelector("main") || document.body;
+      main.appendChild(section);
+    }
+    section.innerHTML = `<div class="section-kicker">🗺️ Karten- & Komoot-Vorschau</div>
+      <h2>Karten- und Komoot-Vorschau</h2>
+      <p>Wenn die eingebettete Karte am Handy nicht lädt, bitte den Komoot- oder Google-Maps-Link nutzen.</p>
+      <div class="v32-map-grid">
+        <article>
+          <h3>🥾 Welterbesteig Richtung Willendorf</h3>
+          <div class="v32-map-placeholder">📍 Aggsbach Markt → Willendorf<br><small>Nordufer · Venus-Fundstelle · gemütlich</small></div>
+          <div class="v32-actions">
+            <a href="${mapsRoute('Willendorf in der Wachau','walking')}" target="_blank" rel="noopener">Google Maps</a>
+            <a href="${komootSearch('Willendorf in der Wachau')}" target="_blank" rel="noopener">Komoot öffnen</a>
+          </div>
+        </article>
+        <article>
+          <h3>🚴 Donauradweg Richtung Spitz</h3>
+          <div class="v32-map-placeholder">📍 Aggsbach Markt → Spitz<br><small>Donauradweg · Schwallenbach · Einkehr</small></div>
+          <div class="v32-actions">
+            <a href="${mapsRoute('Spitz an der Donau','bicycling')}" target="_blank" rel="noopener">Google Maps</a>
+            <a href="${komootSearch('Spitz an der Donau')}" target="_blank" rel="noopener">Komoot öffnen</a>
+          </div>
+        </article>
+      </div>`;
+  };
+
+  const PIA_QUESTIONS = [
+    {q:"An welchem großen Wanderweg liegt Zuhause am Bach?", a:["Welterbesteig Wachau","Jakobsweg Spanien","Großglocknerweg"], ok:0},
+    {q:"Welcher Radweg führt durch die Wachau?", a:["Donauradweg","Tauernradweg","Innradweg"], ok:0},
+    {q:"Wofür ist die Wachau bekannt?", a:["Marillen und Wein","Kokosnüsse","Eisbären"], ok:0},
+    {q:"Wo steht Zuhause am Bach?", a:["Aggsbach Markt","Aggsbach Dorf","Wien"], ok:0},
+    {q:"Wie heißt das kleine Whippet-Mädchen?", a:["Pia","Luna","Sissi"], ok:0},
+    {q:"Was findet man in Willendorf?", a:["Venus von Willendorf","Eiffelturm","Meereshafen"], ok:0},
+    {q:"Welche Burg ist ein bekanntes Ziel?", a:["Burgruine Aggstein","Burg London","Schloss Versailles"], ok:0},
+    {q:"Wie heißt die Bahn in der Wachau?", a:["Wachaubahn","U-Bahn","Bergmetro"], ok:0},
+    {q:"Was brauchen Radfahrer oft?", a:["Fahrradgarage und E-Bike-Laden","Skilift","Flughafen"], ok:0},
+    {q:"Was macht Pia gerne?", a:["Entdecken und Abenteuer erleben","Winterschlaf halten","Rechnungen sortieren"], ok:0}
+  ];
+
+  window.showPiaWorld = function(mode){
+    const box = document.getElementById("piaWorldContent") || document.getElementById("piaKinderContent") || createAfterByText("Wachau-Quiz", "piaWorldContent");
+    if(mode === "quiz"){
+      let html = `<h3>🏆 Wachau-Quiz</h3><p>Tippe die richtige Antwort an. Pia zählt mit!</p><div id="piaQuizScore" class="pia-score">0 von ${PIA_QUESTIONS.length} richtig</div>`;
+      PIA_QUESTIONS.forEach((item, idx) => {
+        html += `<div class="pia-question"><strong>${idx+1}. ${item.q}</strong><div>`;
+        item.a.forEach((answer, aidx) => html += `<button type="button" onclick="answerPiaQuiz(this,${idx},${aidx})">${answer}</button>`);
+        html += `</div></div>`;
+      });
+      html += `<div class="certificate-actions"><button type="button" onclick="showWachauCertificate()">🏆 Urkunde anzeigen</button></div>`;
+      box.innerHTML = html;
+      window.piaScore = 0; window.piaAnswered = {};
+    } else if(mode === "suche"){
+      box.innerHTML = `<h3>🔍 Schatzsuche</h3><p>Findet diese Wachau-Schätze:</p>
+        <div class="treasure-list">
+          <label><input type="checkbox"> Donau gesehen</label>
+          <label><input type="checkbox"> Marillenbaum entdeckt</label>
+          <label><input type="checkbox"> Weinberg gefunden</label>
+          <label><input type="checkbox"> Stein in Herzform gesucht</label>
+          <label><input type="checkbox"> Pia auf dem Bild entdeckt</label>
+          <label><input type="checkbox"> Wachaubahn oder Gleise gesehen</label>
+        </div>
+        <div class="certificate-actions"><button type="button" onclick="showWachauCertificate()">🏆 Urkunde erstellen</button></div>`;
+    } else if(mode === "story"){
+      box.innerHTML = `<h3>📖 Geschichten</h3>
+        <div class="story-card"><strong>Pia und der kleine Bach</strong><p>Pia hörte das Wasser leise plätschern. „Hier beginnt ein Abenteuer“, dachte sie. Fidel nickte würdevoll und Gloria zeigte den Weg.</p></div>
+        <div class="story-card"><strong>Die Marille im Morgenlicht</strong><p>Als die Sonne über Aggsbach Markt aufging, glänzte eine Marille wie ein kleiner Schatz. Pia schnupperte und wusste: Heute wird die Wachau entdeckt.</p></div>
+        <div class="certificate-actions"><button type="button" onclick="showWachauCertificate()">🏆 Wachau-Meister-Urkunde</button></div>`;
+    }
+  };
+
+  window.answerPiaQuiz = function(btn, idx, aidx){
+    window.piaAnswered = window.piaAnswered || {};
+    if(window.piaAnswered[idx]) return;
+    window.piaAnswered[idx] = true;
+    if(aidx === PIA_QUESTIONS[idx].ok){ btn.classList.add("correct"); window.piaScore = (window.piaScore || 0) + 1; }
+    else { btn.classList.add("wrong"); }
+    const score = document.getElementById("piaQuizScore");
+    if(score) score.textContent = `${window.piaScore || 0} von ${PIA_QUESTIONS.length} richtig`;
+  };
+
+  window.showWachauCertificate = function(){
+    const box = document.getElementById("piaWorldContent") || createAfterByText("Urkunde", "piaWorldContent");
+    const d = new Date();
+    const date = String(d.getDate()).padStart(2,"0")+"."+String(d.getMonth()+1).padStart(2,"0")+"."+d.getFullYear();
+    box.innerHTML = `<div class="certificate-card" id="certificatePrint">
+      <h3>🏆 Wachau-Meister-Urkunde</h3>
+      <p>Diese Urkunde erhält</p>
+      <input id="certName" placeholder="Name eintragen">
+      <h2 id="certNamePreview">Wachau-Meisterin / Wachau-Meister</h2>
+      <p>für Quiz, Schatzsuche und kleine Wachau-Abenteuer mit Pia.</p>
+      <p><strong>Aggsbach Markt, ${date}</strong></p>
+      <p>🐾 Fidel · Gloria · Pia</p>
+    </div>
+    <div class="certificate-actions">
+      <button type="button" onclick="updateCertName()">Name übernehmen</button>
+      <button type="button" onclick="window.print()">🖨️ Urkunde drucken</button>
+      <button type="button" onclick="showPiaWorld('quiz')">Zurück zum Quiz</button>
+    </div>`;
+  };
+
+  window.updateCertName = function(){
+    const n = (document.getElementById("certName") || {}).value || "Wachau-Meisterin / Wachau-Meister";
+    const p = document.getElementById("certNamePreview");
+    if(p) p.textContent = n;
+  };
+
+  document.addEventListener("DOMContentLoaded", function(){
+    if(document.getElementById("karten-vorschau")) window.renderV32MapFallback();
+    if(document.getElementById("piaWorldContent")) window.showPiaWorld("quiz");
+  });
+})();
 </script>
 
 </body>

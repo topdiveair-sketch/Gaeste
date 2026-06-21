@@ -726,3 +726,201 @@ main{
     grid-template-columns:1fr;
   }
 }
+
+
+/* V26 – komplettes Titelbild sichtbar, Schnellbuttons darunter */
+.hero{
+  height:auto !important;
+  min-height:0 !important;
+  display:block !important;
+  overflow:visible !important;
+  background:#2b1d12 !important;
+  padding-bottom:0 !important;
+}
+
+.hero-img{
+  position:relative !important;
+  inset:auto !important;
+  top:auto !important;
+  left:auto !important;
+  right:auto !important;
+  bottom:auto !important;
+  width:100% !important;
+  height:auto !important;
+  max-height:none !important;
+  object-fit:contain !important;
+  object-position:center center !important;
+  display:block !important;
+  margin:0 auto !important;
+  background:#2b1d12 !important;
+}
+
+.hero::before,
+.hero::after{
+  display:none !important;
+}
+
+.hero-text{
+  position:relative !important;
+  left:auto !important;
+  right:auto !important;
+  bottom:auto !important;
+  transform:none !important;
+  width:100% !important;
+  max-width:1100px !important;
+  margin:0 auto !important;
+  padding:0 18px 18px !important;
+  z-index:5 !important;
+}
+
+.quick-grid{
+  position:relative !important;
+  left:auto !important;
+  right:auto !important;
+  bottom:auto !important;
+  transform:none !important;
+  margin:12px auto 22px !important;
+  max-width:1060px !important;
+  width:calc(100% - 32px) !important;
+  z-index:10 !important;
+}
+
+main{
+  margin:0 auto !important;
+}
+
+/* Version und Sprachen schwebend am Rand, nicht als Leiste */
+.topbar{
+  position:absolute !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  pointer-events:none !important;
+}
+.version,
+.language-bar{
+  pointer-events:auto !important;
+}
+
+@media(max-width:760px){
+  .quick-grid{
+    grid-template-columns:1fr 1fr !important;
+    margin:10px auto 18px !important;
+  }
+  .hero-text{
+    padding-bottom:8px !important;
+  }
+}
+
+/* V27 – Glorias Genuss-Tipp in Spitz als vorletzter Block vor App-Test */
+.spitz-tip-card{
+  background:linear-gradient(180deg,#fffaf0,#fff1db);
+  border:1px solid rgba(120,75,30,.24);
+}
+.spitz-tip-card h2{
+  margin-top:0;
+  color:#4a2a14;
+}
+.spitz-lead{
+  color:var(--muted);
+  font-size:19px;
+  line-height:1.5;
+}
+.spitz-feature-box{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:16px;
+  margin:16px 0;
+  box-shadow:0 6px 18px rgba(35,30,20,.06);
+}
+.spitz-feature-box h3{
+  margin:0 0 12px;
+  color:#4a2a14;
+}
+.spitz-features{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+}
+.spitz-features span{
+  background:#fff8e8;
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:12px;
+  color:#4a2a14;
+  font-weight:800;
+}
+.gloria-quote{
+  margin:16px 0;
+  padding:16px 18px;
+  border-left:6px solid #8a5a23;
+  background:#fff8e8;
+  border-radius:14px;
+  color:#4a2a14;
+  font-size:18px;
+  line-height:1.5;
+}
+.spitz-tip-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:14px;
+}
+.spitz-tip-actions a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  background:#356120;
+  color:#fff!important;
+  border-radius:999px;
+  padding:12px 18px;
+  font-weight:900;
+}
+.spitz-tip-actions a:nth-child(2){
+  background:#6a3f1e;
+}
+@media(max-width:760px){
+  .spitz-features{
+    grid-template-columns:1fr;
+  }
+  .spitz-tip-actions{
+    display:grid;
+    grid-template-columns:1fr;
+  }
+}
+
+.spitz-tip-card{background:#fffaf0;border:1px solid #e0c8a0}
+.gloria-list li{margin:8px 0}
+.gloria-quote{background:#fff3dc;padding:14px;border-left:5px solid #8a5a23;border-radius:10px}
+.spitz-tip-actions{display:flex;gap:10px;flex-wrap:wrap}
+.spitz-tip-actions a{background:#6a3f1e;color:white!important;padding:10px 16px;border-radius:999px;text-decoration:none;font-weight:bold}
+
+/* V32 – Funktionsreparatur */
+.v32-result-card,.v32-map-grid article{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:16px;
+  box-shadow:0 6px 18px rgba(35,30,20,.06);
+}
+.v32-facts{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.v32-facts span{background:#fff8e8;border:1px solid var(--border);border-radius:999px;padding:7px 10px;font-weight:800;color:#4a2a14}
+.v32-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.v32-actions a{display:inline-flex;text-decoration:none;background:#356120;color:#fff!important;border-radius:999px;padding:11px 16px;font-weight:900}
+.v32-actions a:nth-child(2){background:#6a3f1e}
+.v32-map-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.v32-map-placeholder{min-height:170px;border-radius:16px;background:linear-gradient(135deg,#e9f3df,#f7ead2);display:flex;align-items:center;justify-content:center;text-align:center;color:#4a2a14;font-size:20px;font-weight:900;padding:16px}
+.pia-score{display:inline-flex;padding:8px 12px;background:#eef8df;color:#2f5b1f;border-radius:999px;font-weight:900;margin-bottom:12px}
+.pia-question{border-top:1px solid var(--border);padding:14px 0}
+.pia-question button{margin:8px 8px 0 0;padding:10px 12px;border-radius:999px;border:1px solid var(--border);background:#fffaf1;color:#4a2a14;font-weight:800}
+.pia-question button.correct{background:#dff2cf;border-color:#70a94a}
+.pia-question button.wrong{background:#f8d6ce;border-color:#c7654d}
+.treasure-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.treasure-list label,.story-card{background:#fff8e8;border:1px solid var(--border);border-radius:14px;padding:12px;font-weight:800;color:#4a2a14}
+.certificate-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:16px}
+.certificate-actions button{border:0;border-radius:999px;padding:12px 18px;background:#6a3f1e;color:#fff;font-weight:900}
+.certificate-card{max-width:900px;margin:0 auto;background:#fff8df;border:3px solid #8a5a23;border-radius:24px;padding:28px;text-align:center;color:#4a2a14}
+.certificate-card input{border:1px solid #d5bd8e;border-radius:999px;padding:12px 16px;text-align:center;font-size:20px;max-width:420px;width:90%}
+@media(max-width:760px){.v32-map-grid,.treasure-list{grid-template-columns:1fr}}
+@media print{body *{visibility:hidden!important}#certificatePrint,#certificatePrint *{visibility:visible!important}#certificatePrint{position:absolute;left:0;top:0;width:100%}}
