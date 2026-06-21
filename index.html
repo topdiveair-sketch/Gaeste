@@ -12,7 +12,7 @@
 <body>
   <header class="hero">
     <div class="topbar">
-      <div class="version" id="versionBadge">V17 PRO</div>
+      <div class="version" id="versionBadge">V25 WACHAU</div>
       <div class="language-bar" aria-label="Sprache wählen">
         <button data-lang="de">DE</button><button data-lang="en">EN</button><button data-lang="cs">CZ</button><button data-lang="hu">HU</button><button data-lang="es">ES</button><button data-lang="fr">FR</button>
       </div>
@@ -31,7 +31,16 @@
 
   <main>
 
-    <section id="zimmer" class="card rooms-card">
+    <section id="wetter" class="card weather-card-v24">
+  <div class="section-kicker">🌤️ Heute / Morgen in der Wachau</div>
+  <h2>Wetter für Aggsbach Markt</h2>
+  <div id="weatherBox" class="weather-grid-v24">
+    <div class="weather-day"><h3>🌤️ Heute</h3><p>Wetter wird geladen …</p></div>
+    <div class="weather-day"><h3>🌦️ Morgen</h3><p>Wetter wird geladen …</p></div>
+  </div>
+  <p class="weather-source">Quelle: Open-Meteo.</p>
+</section>
+<section id="zimmer" class="card rooms-card">
             <div class="welcome-under-hero">
         <h1>Willkommen bei Zuhause am Bach – Gästehaus Wachau</h1>
         <p>Ihre Unterkunft am Welterbesteig Wachau und am Donauradweg in Aggsbach Markt. Willkommen bei den Wilden Wachauer Windis – dort, wo Geschichten entstehen.</p>
@@ -66,23 +75,8 @@
       <p data-i18n="riverRuleText">Aggsbach Markt liegt am Nordufer. Südufer-Ziele wie Aggstein werden nicht als direkte Wanderroute empfohlen. Fähre, Transfer oder Umweg über Melk/Spitz beachten.</p>
     </section>
 
-    <section id="today" class="card">
-      <h2 data-i18n="todayTitle">Heute / Morgen in der Wachau</h2>
-      <div class="weather-strip" id="weatherStrip" aria-live="polite">
-        <div class="weather-card"><strong>🌤️ Heute</strong><span id="weatherToday">Wetter wird geladen …</span></div>
-        <div class="weather-card"><strong>🌦️ Morgen</strong><span id="weatherTomorrow">Wetter wird geladen …</span></div>
-        <button id="weatherReloadBtn" class="mini-btn" type="button">Wetter neu laden</button>
-      </div>
-      <div class="form-grid">
-        <label><span data-i18n="selectDay">Tag</span><select id="daySelect"><option value="today" data-i18n="today">Heute</option><option value="tomorrow" data-i18n="tomorrow">Morgen</option></select></label>
-        <label><span data-i18n="guestType">Gasttyp</span><select id="guestType"><option value="hike" data-i18n="hikers">Wanderer</option><option value="bike" data-i18n="cyclists">Radfahrer</option><option value="family" data-i18n="families">Familien</option></select></label>
-        <label><span data-i18n="weather">Wetter</span><select id="weatherSelect"><option value="dry" data-i18n="dry">Trocken</option><option value="hot" data-i18n="hot">Heiß</option><option value="rain" data-i18n="rain">Regen</option></select></label>
-      </div>
-      <button id="morningBtn" class="primary" data-i18n="showRecommendation">Empfehlung anzeigen</button>
-      <div id="morningResult" class="result" aria-live="polite"></div>
-    </section>
-
-    <section id="fidel" class="card">
+    
+<section id="fidel" class="card">
       <h2 data-i18n="fidelTitle">🐾 Fidels Wanderwelt</h2>
       <p data-i18n="fidelSub">Geprüfte Nordufer-Routen und Komoot-Touren für Gäste von Zuhause am Bach.</p>
       <div class="form-grid">
@@ -96,44 +90,8 @@
       <div id="hikeRoutes" class="route-grid"></div>
     </section>
 
-    <section id="gloria" class="card">
-      <h2 data-i18n="gloriaTitle">🍷 Glorias Rad- & Genusswelt</h2>
-      <p data-i18n="gloriaSub">Donauradweg, Spitz, Gritsch und genussvolle Etappen.</p>
-      <div class="form-grid">
-        <label><span data-i18n="bikeType">Radtyp</span><select id="bikeType"><option value="tour" data-i18n="tourBike">Tourenrad</option><option value="ebike" data-i18n="ebike">E-Bike</option><option value="sport" data-i18n="sport">Sportlich</option></select></label>
-        <label><span data-i18n="direction">Richtung</span><select id="bikeDirection"><option value="spitz">Spitz</option><option value="melk">Melk</option><option value="krems">Krems</option></select></label>
-      </div>
-      <button id="bikeAdvisorBtn" class="primary" data-i18n="gloriaRecommend">Glorias Rad-Empfehlung anzeigen</button>
-      <div id="bikeAdvisorResult" class="result" aria-live="polite"></div>
-      <h3 data-i18n="allBike">Alle Rad-Routen</h3>
-      <div id="bikeRoutes" class="route-grid"></div>
-      <div class="service-box">
-        <b data-i18n="bikeServiceTitle">Radservice im Haus</b><br>
-        <span data-i18n="bikeServiceText">Fahrradabstellplatz, E-Bike-Lademöglichkeit, Luftpumpe, Werkzeug, Wasser und Etappen-Tipps.</span>
-      </div>
-    </section>
-
-    <section id="pia" class="card">
-      <h2 data-i18n="piaTitle">🎀 Pias Kinderwelt</h2>
-      <p data-i18n="piaSub">Quiz, Schatzsuche, Geschichten und kleine Wachau-Abenteuer mit Pia.</p>
-
-      <div class="kids-tabs">
-        <button class="kid-tab active" data-kid-tab="quiz" data-i18n="quizTitle">🏆 Wachau-Quiz</button>
-        <button class="kid-tab" data-kid-tab="treasure" data-i18n="treasureTitle">🔍 Schatzsuche</button>
-        <button class="kid-tab" data-kid-tab="stories" data-i18n="storiesTitle">📖 Geschichten</button>
-        <button class="kid-tab" data-kid-tab="certificate" data-i18n="certificateTitle">🏅 Urkunde</button>
-      </div>
-
-      <div id="kidsQuiz" class="kid-panel"></div>
-      <div id="kidsTreasure" class="kid-panel hidden"></div>
-      <div id="kidsStories" class="kid-panel hidden"></div>
-      <div id="kidsCertificate" class="kid-panel hidden"></div>
-
-      <h3 data-i18n="piaAdventureTitle">Pias Ausflüge</h3>
-      <div class="route-grid" id="adventureRoutes"></div>
-    </section>
-
-    <section id="service" class="card">
+    
+<section id="service" class="card">
       <h2 data-i18n="serviceTitle">🏡 Zuhause am Bach Service</h2>
       <div class="button-grid">
         <button id="breakfastBtn" data-i18n="breakfast">Frühstück anfragen</button>
@@ -151,13 +109,7 @@
       <div id="mapPreview" class="map-preview"><span data-i18n="mapPlaceholder">Noch keine Route gewählt.</span></div>
     </section>
 
-    <section class="card test-card">
-      <h2 data-i18n="testTitle">App-Test / Ampelprüfung</h2>
-      <div id="testAmpel" class="ampel-box"><span class="ampel grey">●</span> Noch nicht geprüft.</div>
-      <button id="runTestBtn" data-i18n="runTest">Funktionstest starten</button>
-      <pre id="testOutput"></pre>
-    </section>
-  
+    
 <section class="card">
 <h2>🌅 Windis-Geheimtipps</h2>
 <ul>
@@ -167,11 +119,6 @@
 <li>🏺 Willendorf & Venus von Willendorf</li>
 </ul>
 </section>
-<section class="card">
-<h2>🚂 Mobilität & Hilfe</h2>
-<p>Wachaubahn, Fähren, Taxi, Arzt und Apotheke schnell finden.</p>
-</section>
-
 
 <section id="gritsch" class="card">
 <h2>🍷 Glorias Genuss-Tipp in Spitz</h2>
@@ -186,6 +133,167 @@
 </ul>
 <p><em>Gloria empfiehlt: Nach einer Wanderung oder Radtour in Spitz ist das Donauschlössel einer meiner Lieblingsplätze.</em></p>
 </section>
+
+
+
+<section id="kinderwelt" class="card pia-kinderwelt-card">
+  <div class="section-kicker">🐾 Pias Kinderwelt</div>
+  <h2>Pias Kinderwelt</h2>
+  <p class="pia-intro">Quiz, Schatzsuche, Geschichten und kleine Wachau-Abenteuer mit Pia.</p>
+
+  <div class="pia-menu">
+    <button type="button" onclick="showPiaWorld('quiz')">🏆 Wachau-Quiz</button>
+    <button type="button" onclick="showPiaWorld('suche')">🔍 Schatzsuche</button>
+    <button type="button" onclick="showPiaWorld('story')">📖 Geschichten</button>
+    <button type="button" onclick="showWachauCertificate()">🏆 Urkunde</button>
+  </div>
+
+  <div id="piaWorldContent" class="pia-world-content"></div>
+</section>
+
+
+
+
+<section id="morgen-assistent" class="card morning-card">
+  <div class="section-kicker">🌤 Morgen-Assistent</div>
+  <h2>Was passt heute?</h2>
+  <p class="assistant-intro">Schneller Tagesplan für Wanderer, Radfahrer und Wachau-Gäste.</p>
+  <div class="assistant-controls">
+    <button type="button" onclick="showMorningPlan('wander')">🥾 Wandertag</button>
+    <button type="button" onclick="showMorningPlan('bike')">🚴 Radtag</button>
+    <button type="button" onclick="showMorningPlan('rain')">🌧 Regentag</button>
+    <button type="button" onclick="showMorningPlan('family')">🐾 Familie & Hund</button>
+  </div>
+  <div id="morningPlanContent" class="assistant-content"></div>
+</section>
+
+<section id="welterbesteig-assistent" class="card trail-card">
+  <div class="section-kicker">🥾 Welterbesteig-Assistent</div>
+  <h2>Welche Tour passt zu euch?</h2>
+  <p class="assistant-intro">Wählt Zeit, Kondition oder Wetter – Pia schlägt passende Wachau-Routen vor.</p>
+  <div class="assistant-controls">
+    <button type="button" onclick="showTrailPlan('easy')">🌿 gemütlich</button>
+    <button type="button" onclick="showTrailPlan('normal')">🥾 normal</button>
+    <button type="button" onclick="showTrailPlan('sport')">⛰ sportlich</button>
+    <button type="button" onclick="showTrailPlan('rain')">🌧 bei Regen</button>
+  </div>
+  <div id="trailPlanContent" class="assistant-content"></div>
+</section>
+<section id="karten-vorschau" class="card map-preview-card">
+  <div class="section-kicker">🗺️ Karten- & Komoot-Vorschau</div>
+  <h2>Touren-Vorschau</h2>
+  <p class="assistant-intro">Schnelle Kartenübersicht ab Zuhause am Bach. Für genaue Navigation Google Maps oder Komoot öffnen.</p>
+  <div class="map-grid-v24">
+    <article>
+      <h3>🥾 Welterbesteig Richtung Willendorf</h3>
+      <iframe title="Karte Willendorf" src="https://www.openstreetmap.org/export/embed.html?bbox=15.330%2C48.285%2C15.430%2C48.335&layer=mapnik&marker=48.308%2C15.402"></iframe>
+      <div class="map-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&origin=Aggsbach+Markt+82,+3641+Aggsbach+Markt&destination=Willendorf+in+der+Wachau&travelmode=walking" target="_blank" rel="noopener">Google Maps</a>
+        <a href="https://www.komoot.com/search/Willendorf%20in%20der%20Wachau" target="_blank" rel="noopener">Komoot öffnen</a>
+      </div>
+    </article>
+    <article>
+      <h3>🚴 Donauradweg Richtung Spitz</h3>
+      <iframe title="Karte Spitz" src="https://www.openstreetmap.org/export/embed.html?bbox=15.360%2C48.300%2C15.470%2C48.380&layer=mapnik&marker=48.365%2C15.414"></iframe>
+      <div class="map-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&origin=Aggsbach+Markt+82,+3641+Aggsbach+Markt&destination=Spitz+an+der+Donau&travelmode=bicycling" target="_blank" rel="noopener">Google Maps</a>
+        <a href="https://www.komoot.com/search/Spitz%20an%20der%20Donau" target="_blank" rel="noopener">Komoot öffnen</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+
+<section id="donauradweg-profi" class="card bike-card">
+  <div class="section-kicker">🚴 Donauradweg-Profi</div>
+  <h2>Radfahrer-Service</h2>
+  <div class="bike-service-grid">
+    <div>🚲 Fahrrad sicher unterstellen</div><div>🔋 E-Bike laden</div><div>🧰 Werkzeug & Luftpumpe</div>
+    <div>💧 Wasser auffüllen</div><div>🌦 Wetter prüfen</div><div>⛴ Fähren & Rückfahrt prüfen</div>
+  </div>
+</section>
+
+<section id="windis-welt" class="card windis-world-card">
+  <div class="section-kicker">🐾 Die Wilden Wachauer Windis</div>
+  <h2>Fidel, Gloria und Pia</h2>
+  <p class="assistant-intro">Die Windis begleiten Gäste durch Wachau-Abenteuer, Kinderwelt, Bücher und kleine Entdeckungen.</p>
+  <div class="windis-world-grid">
+    <a href="#kinderwelt">🏆 Kinderwelt</a>
+    <a href="https://www.diewildenwachauerwindis.at/buecher-shop/die-wilden-wachauer-windis/" target="_blank" rel="noopener">📚 Bücher</a>
+    <a href="#glorias-genusswelt">🍷 Glorias Genusswelt</a>
+    <a href="#welterbesteig-assistent">🥾 Pia zeigt Wege</a>
+    <a href="#zimmer">🏡 Zuhause am Bach</a>
+    <a href="#heurigenfinder">🍷 Heurigenfinder</a>
+  </div>
+</section>
+
+<section id="offline-info" class="card offline-card">
+  <div class="section-kicker">📶 Offline & Notfall</div>
+  <h2>Wichtiges auch ohne Empfang</h2>
+  <div class="offline-grid">
+    <div><strong>🏡 Adresse</strong><br>Zuhause am Bach, Aggsbach Markt 82, 3641 Aggsbach Markt</div>
+    <div><strong>🚑 Notruf</strong><br>Euro-Notruf 112 · Rettung 144 · Polizei 133 · Feuerwehr 122</div>
+    <div><strong>📱 Gastgeber-Hilfe</strong><br><a href="sms:+436646437526">SMS an Zuhause am Bach</a></div>
+    <div><strong>🧭 Tipp</strong><br>Route und Telefonnummern vor Wanderstart öffnen/speichern.</div>
+  </div>
+</section>
+
+
+<section id="glorias-genusswelt" class="card gloria-card">
+  <div class="section-kicker">🚴‍♀️🍷 Glorias Rad- & Genusswelt</div>
+  <h2>Glorias Rad- & Genusswelt</h2>
+  <p class="gloria-intro">Radfahren, Einkehren, regionale Tipps und kleine Genussrouten – direkt in der App anzeigen.</p>
+
+  <div class="gloria-tabs">
+    <button type="button" onclick="showGloriaWorld('rad')">🚴 Radfahren</button>
+    <button type="button" onclick="showGloriaWorld('genuss')">🍷 Genuss</button>
+    <button type="button" onclick="showGloriaWorld('terrasse')">🌿 Genuss-Terrasse</button>
+    <button type="button" onclick="showGloriaWorld('service')">🧰 Rad-Service</button>
+  </div>
+
+  <div id="gloriaWorldContent" class="gloria-content"></div>
+</section>
+
+<section id="heurigenfinder" class="card heurigen-card">
+  <div class="section-kicker">🍷 Glorias Heurigenfinder</div>
+  <h2>Heurigen heute, morgen oder am Wunschtag</h2>
+  <p class="heurigen-intro">
+    Nordufer-Auswahl im Umkreis von ca. 15 km ab Zuhause am Bach, Aggsbach Markt.
+    Mit Google-KI-Modus, Google-Heurigenkalender und Route ab der Unterkunft.
+  </p>
+
+  <div class="heurigen-controls">
+    <button type="button" onclick="setHeurigenDate('today')">Heute</button>
+    <button type="button" onclick="setHeurigenDate('tomorrow')">Morgen</button>
+    <input id="heurigenDate" type="date" onchange="renderHeurigenFinder()">
+  </div>
+
+  <div class="heurigen-note">
+    <strong>Hinweis:</strong> Öffnungszeiten bitte vor dem Besuch kurz prüfen. Heurigenkalender können sich kurzfristig ändern.
+  </div>
+
+  <div id="heurigenResults" class="heurigen-results"></div>
+</section>
+
+<section id="mobilitaet-hilfe" class="card mobility-card">
+  <div class="section-kicker">🚕 Mobilität & Hilfe</div>
+  <h2>Mobilität & Hilfe</h2>
+  <p>Praktische Hilfe für Wanderer, Radfahrer und Gäste ohne Auto.</p>
+
+  <div class="mobility-grid">
+    <a href="https://www.google.com/maps/dir/?api=1&origin=Aggsbach+Markt+82,+3641+Aggsbach+Markt&destination=Spitz+an+der+Donau&travelmode=transit" target="_blank" rel="noopener">🚌 Route nach Spitz</a>
+    <a href="https://www.google.com/maps/dir/?api=1&origin=Aggsbach+Markt+82,+3641+Aggsbach+Markt&destination=Melk&travelmode=transit" target="_blank" rel="noopener">🚌 Route nach Melk</a>
+    <a href="https://www.google.com/search?q=Taxi+Aggsbach+Markt+Spitz+Melk+Wachau" target="_blank" rel="noopener">🚕 Taxi suchen</a>
+    <a href="https://www.google.com/search?q=F%C3%A4hre+Wachau+Spitz+Arnsdorf+Fahrzeiten" target="_blank" rel="noopener">⛴ Fähren prüfen</a>
+    <a href="https://www.google.com/search?q=Wachaubahn+Fahrplan+Spitz+Aggsbach+Markt+Wachau" target="_blank" rel="noopener">🚂 Wachaubahn Fahrplan</a>
+    <a href="sms:+436646437526?body=Hallo%20Zuhause%20am%20Bach,%20ich%20ben%C3%B6tige%20Hilfe%20bei%20Mobilit%C3%A4t%20oder%20Transfer." target="_blank" rel="noopener">📱 Hilfe per SMS</a>
+  </div>
+
+  <div class="mobility-note">
+    Tipp: Für Gäste von Zuhause am Bach können Gepäcktransport und kurze Transfers nach Verfügbarkeit angefragt werden.
+  </div>
+</section>
+
 
 <section id="windis-buecher" class="card windis-books-card">
   <div class="section-kicker">📚 Die Wilden Wachauer Windis</div>
@@ -218,6 +326,26 @@
 </section>
 
 
+
+<section id="glorias-genuss-tipp-spitz" class="card spitz-tip-card">
+  <div class="section-kicker">🍷 Glorias Genuss-Tipp in Spitz</div>
+  <h2>Donauschlössel / Familie Graben-Gritsch</h2>
+  <p>
+    Einer der schönsten Rastplätze für Wanderer und Radfahrer in Spitz an der Donau.
+    Ideal als Einkehr nach einer Tour am Welterbesteig Wachau oder einer Radtour am Donauradweg.
+  </p>
+  <div class="spitz-tip-actions">
+    <a href="https://www.google.com/maps/dir/?api=1&origin=Aggsbach+Markt+82,+3641+Aggsbach+Markt&destination=Donauschl%C3%B6ssel+Gritsch+Spitz+an+der+Donau&travelmode=bicycling" target="_blank" rel="noopener">🚴 Route anzeigen</a>
+    <a href="https://www.google.com/search?q=Donauschl%C3%B6ssel+Gritsch+Spitz+%C3%96ffnungszeiten" target="_blank" rel="noopener">🕒 Öffnungszeiten prüfen</a>
+  </div>
+</section>
+
+<section class="card test-card">
+      <h2 data-i18n="testTitle">App-Test / Ampelprüfung</h2>
+      <div id="testAmpel" class="ampel-box"><span class="ampel grey">●</span> Noch nicht geprüft.</div>
+      <button id="runTestBtn" data-i18n="runTest">Funktionstest starten</button>
+      <pre id="testOutput"></pre>
+    </section>
 </main>
 
   <footer class="copyright-footer">
@@ -228,5 +356,169 @@
   </footer>
 
   <script src="app.js"></script>
+
+
+
+
+
+<script>
+const HEURIGEN_HOME="Aggsbach Markt 82, 3641 Aggsbach Markt, Österreich";
+const HEURIGEN_CANDIDATES=[
+["Glorias Genuss-Terrasse","Zuhause am Bach, Aggsbach Markt","0 km","Zuhause am Bach Wachau Aggsbach Markt 82"],
+["Donauschlössel / Gritsch","Spitz an der Donau","ca. 8 km","Donauschlössel Gritsch Spitz an der Donau"],
+["Heurige in Spitz","Spitz an der Donau","ca. 8 km","Heuriger Spitz an der Donau"],
+["Heurige in Schwallenbach","Schwallenbach","ca. 5 km","Heuriger Schwallenbach Wachau"],
+["Heurige in Willendorf","Willendorf in der Wachau","ca. 6 km","Heuriger Willendorf in der Wachau"],
+["Heurige in Wösendorf / Joching","Wösendorf / Joching","ca. 12–15 km","Heuriger Wösendorf Joching Wachau"],
+["Heurige in Weißenkirchen","Weißenkirchen in der Wachau","ca. 15 km","Heuriger Weißenkirchen in der Wachau"]
+];
+function pad2(n){return String(n).padStart(2,"0")}
+function localDateInputValue(d){return d.getFullYear()+"-"+pad2(d.getMonth()+1)+"-"+pad2(d.getDate())}
+function selectedHeurigenDateLabel(){const i=document.getElementById("heurigenDate");if(!i||!i.value)return"heute";const d=new Date(i.value+"T12:00:00");return["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"][d.getDay()]+", "+pad2(d.getDate())+"."+pad2(d.getMonth()+1)+"."+d.getFullYear()}
+function setHeurigenDate(mode){const d=new Date();if(mode==="tomorrow")d.setDate(d.getDate()+1);const i=document.getElementById("heurigenDate");if(i)i.value=localDateInputValue(d);renderHeurigenFinder()}
+function routeUrl(dest){return"https://www.google.com/maps/dir/?api=1&origin="+encodeURIComponent(HEURIGEN_HOME)+"&destination="+encodeURIComponent(dest)+"&travelmode=driving"}
+function googleAiModeUrl(){const t=selectedHeurigenDateLabel();const q="Welche Heurigen haben am "+t+" am Nordufer der Wachau im Umkreis von 15 km von Aggsbach Markt geöffnet? Bitte nur tatsächlich geöffnete Betriebe anzeigen, keine geschlossenen. Orte: Aggsbach Markt, Schwallenbach, Willendorf, Spitz, Wösendorf, Joching und Weißenkirchen. Mit Öffnungszeiten und Quelle.";return"https://www.google.com/search?udm=50&q="+encodeURIComponent(q)}
+function googleHeurigenUrl(){return"https://www.google.com/search?q="+encodeURIComponent("Heurigenkalender Wachau Nordufer geöffnet "+selectedHeurigenDateLabel()+" Aggsbach Markt Spitz Weißenkirchen")}
+function showRouteForCandidate(idx){const h=HEURIGEN_CANDIDATES[idx],b=document.getElementById("heurigenRouteBox");if(!b||!h)return;b.innerHTML=`<div class="selected-route"><h4>🗺️ Route zu: ${h[0]}</h4><p>${h[1]} · ${h[2]}</p><a href="${routeUrl(h[3])}" target="_blank" rel="noopener">Route in Google Maps öffnen</a></div>`}
+function renderHeurigenFinder(){const i=document.getElementById("heurigenDate"),b=document.getElementById("heurigenResults");if(!b)return;if(i&&!i.value)i.value=localDateInputValue(new Date());let h=`<h3>🍷 Google-KI-Modus für ${selectedHeurigenDateLabel()}</h3><div class="heurigen-livebox warning"><strong>Zuverlässige Abfrage:</strong><br>1. Google-KI-Modus starten.<br>2. Nur tatsächlich offene Heurige aus der Antwort übernehmen.<br>3. Danach unten den bestätigten Heurigen wählen.<br>4. Erst dann Route anzeigen.</div><div class="ai-check-row two"><a class="ai-check-button" href="${googleAiModeUrl()}" target="_blank" rel="noopener">🤖 Google-KI-Modus starten</a></div><div class="heurigen-manual"><h4>✅ Nach Google-KI-Prüfung: geöffneten Heurigen auswählen</h4><div class="candidate-grid">`;HEURIGEN_CANDIDATES.forEach((x,idx)=>{h+=`<button type="button" onclick="showRouteForCandidate(${idx})"><strong>${x[0]}</strong><span>${x[1]} · ${x[2]}</span></button>`});h+=`</div></div><div id="heurigenRouteBox" class="heurigen-route-box"><div class="heurigen-livebox">Nach Auswahl erscheint hier die Route.</div></div>`;b.innerHTML=h}
+async function loadWachauWeather(){const b=document.getElementById("weatherBox");if(!b)return;try{const r=await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.2949&longitude=15.4032&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Europe%2FVienna&forecast_days=2"),d=await r.json(),c={0:"☀️ Sonnig",1:"🌤️ Klar",2:"⛅ Teilweise bewölkt",3:"☁️ Bewölkt",45:"🌫️ Nebel",61:"🌧️ Leichter Regen",63:"🌧️ Regen",65:"🌧️ Starker Regen",80:"🌦️ Schauer",95:"⛈️ Gewitter"};function card(i,t){const max=Math.round(d.daily.temperature_2m_max[i]),min=Math.round(d.daily.temperature_2m_min[i]),rain=d.daily.precipitation_probability_max[i]??0,txt=c[d.daily.weather_code[i]]||"🌤️ Wetter",amp=rain<35?"🟢 Gute Outdoor-Chance":rain<65?"🟡 Regenjacke einplanen":"🔴 Schlechtwetterprogramm";return`<div class="weather-day"><h3>${t}</h3><p class="weather-main">${txt}</p><p>${min}–${max} °C · Regen ${rain}%</p><p class="weather-ampel">${amp}</p></div>`}b.innerHTML=card(0,"🌤️ Heute")+card(1,"🌦️ Morgen")}catch(e){b.innerHTML=`<div class="weather-day"><h3>🌤️ Heute</h3><p>Wetter konnte nicht geladen werden.</p></div><div class="weather-day"><h3>🌦️ Morgen</h3><p>Internetverbindung prüfen.</p></div>`}}
+document.addEventListener("DOMContentLoaded",()=>{if(document.getElementById("heurigenDate"))setHeurigenDate("today");loadWachauWeather()});
+</script>
+
+
+
+
+
+
+<script>
+function googleRoute(destination, mode){
+  const origin = "Aggsbach Markt 82, 3641 Aggsbach Markt, Österreich";
+  return "https://www.google.com/maps/dir/?api=1&origin=" + encodeURIComponent(origin) + "&destination=" + encodeURIComponent(destination) + "&travelmode=" + encodeURIComponent(mode || "bicycling");
+}
+
+function googleSearch(query){
+  return "https://www.google.com/search?q=" + encodeURIComponent(query);
+}
+
+function showGloriaWorld(mode){
+  const box = document.getElementById("gloriaWorldContent");
+  if(!box){ return; }
+
+  if(mode === "rad"){
+    box.innerHTML = `
+      <h3>🚴 Radfahren am Donauradweg</h3>
+      <div class="gloria-grid">
+        <article>
+          <h4>Kurze Genussrunde nach Spitz</h4>
+          <p>Aggsbach Markt – Schwallenbach – Spitz. Ideal für Gäste, die eine schöne, überschaubare Radstrecke suchen.</p>
+          <a href="${googleRoute('Spitz an der Donau','bicycling')}" target="_blank" rel="noopener">Route nach Spitz</a>
+        </article>
+        <article>
+          <h4>Richtung Weißenkirchen</h4>
+          <p>Für geübtere Radfahrer: weiter über Wösendorf und Joching nach Weißenkirchen am Nordufer.</p>
+          <a href="${googleRoute('Weißenkirchen in der Wachau','bicycling')}" target="_blank" rel="noopener">Route nach Weißenkirchen</a>
+        </article>
+        <article>
+          <h4>Melk & Stiftblick</h4>
+          <p>Tour Richtung Melk mit Kultur, Donau und möglicher Rückfahrt per Bus/Bahn prüfen.</p>
+          <a href="${googleRoute('Stift Melk','bicycling')}" target="_blank" rel="noopener">Route nach Melk</a>
+        </article>
+      </div>`;
+  }
+
+  if(mode === "genuss"){
+    box.innerHTML = `
+      <h3>🍷 Genuss-Tipps am Nordufer</h3>
+      <div class="gloria-grid">
+        <article>
+          <h4>Donauschlössel / Gritsch in Spitz</h4>
+          <p>Gäste-Tipp bei einem Besuch in Spitz. Vorher Öffnungszeiten prüfen.</p>
+          <a href="${googleSearch('Donauschlössel Gritsch Spitz Öffnungszeiten')}" target="_blank" rel="noopener">Öffnungszeiten prüfen</a>
+        </article>
+        <article>
+          <h4>Heurige in Spitz & Schwallenbach</h4>
+          <p>Für den Abend nach einer Wanderung oder Radtour. Der Heurigenfinder prüft tagesaktuell.</p>
+          <a href="#heurigenfinder">Zum Heurigenfinder</a>
+        </article>
+        <article>
+          <h4>Marille & Wachauer Wein</h4>
+          <p>Regionale Klassiker: Marillenprodukte, Grüner Veltliner, Riesling und einfache Wachauer Küche.</p>
+          <a href="${googleSearch('Wachau Marillenprodukte Spitz Aggsbach Markt')}" target="_blank" rel="noopener">Regionale Produkte suchen</a>
+        </article>
+      </div>`;
+  }
+
+  if(mode === "terrasse"){
+    box.innerHTML = `
+      <h3>🌿 Glorias Genuss-Terrasse</h3>
+      <div class="gloria-highlight">
+        <p><strong>Anzeige nur Donnerstag bis Montag.</strong> Ideal für Gäste von Zuhause am Bach nach Wanderung, Radtour oder Anreise.</p>
+        <p>Bitte Verfügbarkeit direkt vor Ort oder per Nachricht anfragen.</p>
+        <a href="sms:+436646437526?body=Hallo%20Zuhause%20am%20Bach,%20wir%20interessieren%20uns%20f%C3%BCr%20Glorias%20Genuss-Terrasse." target="_blank" rel="noopener">Genuss-Terrasse anfragen</a>
+      </div>`;
+  }
+
+  if(mode === "service"){
+    box.innerHTML = `
+      <h3>🧰 Rad-Service für Gäste</h3>
+      <div class="gloria-grid">
+        <article>
+          <h4>Fahrrad sicher unterstellen</h4>
+          <p>Unterstellmöglichkeit für Fahrräder bei Zuhause am Bach.</p>
+        </article>
+        <article>
+          <h4>E-Bike laden</h4>
+          <p>E-Bike-Lademöglichkeit nach Verfügbarkeit. Ladegerät bitte mitbringen.</p>
+        </article>
+        <article>
+          <h4>Werkzeug & Pumpe</h4>
+          <p>Kleine Hilfe bei Luft, Sattel, Schrauben oder Notfall am Rad.</p>
+        </article>
+      </div>`;
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  if(document.getElementById("gloriaWorldContent")){ showGloriaWorld("rad"); }
+});
+</script>
+
+
+<script>
+function mapsRoute(dest, mode){
+  const origin = "Aggsbach Markt 82, 3641 Aggsbach Markt, Österreich";
+  return "https://www.google.com/maps/dir/?api=1&origin=" + encodeURIComponent(origin) + "&destination=" + encodeURIComponent(dest) + "&travelmode=" + encodeURIComponent(mode || "walking");
+}
+function googleNow(q){ return "https://www.google.com/search?q=" + encodeURIComponent(q); }
+function showMorningPlan(type){
+  const box = document.getElementById("morningPlanContent"); if(!box){return;}
+  const d = {
+    wander:["🥾 Heute gemütlich starten","Aggsbach Markt – Willendorf – Venus-Fundstelle. Wasser mitnehmen, Wetter prüfen.","Willendorf in der Wachau","walking"],
+    bike:["🚴 Donauradweg-Tag","Aggsbach Markt – Schwallenbach – Spitz. Rückweg je nach Kondition.","Spitz an der Donau","bicycling"],
+    rain:["🌧 Regentag","Stift Melk, Wachaumuseum, Kaffeehaus oder kurze Spaziergänge zwischen Schauern.","Stift Melk","driving"],
+    family:["🐾 Familie & Hund","Kurze Runde am Wasser, Schatzsuche mit Pia und danach Wachau-Quiz.","Aggsbach Markt","walking"]
+  }[type];
+  box.innerHTML = `<h3>${d[0]}</h3><p>${d[1]}</p><div class="assistant-actions"><a href="${mapsRoute(d[2], d[3])}" target="_blank" rel="noopener">Route anzeigen</a><a href="${googleNow('Wetter Aggsbach Markt heute')}" target="_blank" rel="noopener">Wetter prüfen</a></div>`;
+}
+function showTrailPlan(type){
+  const box = document.getElementById("trailPlanContent"); if(!box){return;}
+  const d = {
+    easy:["🌿 Gemütlich","Aggsbach Markt – Willendorf. Kultur, Donau und kurze Etappe.","Willendorf in der Wachau"],
+    normal:["🥾 Normal","Aggsbach Markt – Spitz. Gute Tagesetappe mit Einkehrmöglichkeit.","Spitz an der Donau"],
+    sport:["⛰ Sportlich","Aggsbach Markt – Weißenkirchen. Nur bei guter Kondition und gutem Wetter.","Weißenkirchen in der Wachau"],
+    rain:["🌧 Regen","Kurze Wege, Stift Melk, Wachaumuseum oder Heurigenfinder statt langer Etappe.","Stift Melk"]
+  }[type];
+  box.innerHTML = `<h3>${d[0]}</h3><p>${d[1]}</p><div class="assistant-actions"><a href="${mapsRoute(d[2], 'walking')}" target="_blank" rel="noopener">Route anzeigen</a><a href="#heurigenfinder">Heurige prüfen</a></div>`;
+}
+function showHostArea(){
+  const box = document.getElementById("hostAreaContent"); if(!box){return;}
+  box.innerHTML = `<div class="host-grid"><div><strong>Heute prüfen</strong><br>Anreise · Abreise · Frühstück</div><div><strong>Gäste-Kommunikation</strong><br>WhatsApp/SMS vorbereiten</div><div><strong>Zimmer</strong><br>Marille · Weinberg · Donau · Bachblick</div><div><strong>Bewertungen</strong><br>Booking & Google beobachten</div></div>`;
+}
+document.addEventListener("DOMContentLoaded", () => {
+  if(document.getElementById("morningPlanContent")){ showMorningPlan("wander"); }
+  if(document.getElementById("trailPlanContent")){ showTrailPlan("easy"); }
+});
+</script>
+
 </body>
 </html>
