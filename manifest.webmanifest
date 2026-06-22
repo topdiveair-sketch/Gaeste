@@ -1,9 +1,0 @@
-{
-  "name": "Zuhause am Bach Gäste-App V15.4",
-  "short_name": "ZAB Gäste",
-  "start_url": "./index.html",
-  "display": "standalone",
-  "background_color": "#fbf7ef",
-  "theme_color": "#7a4d22",
-  "icons": [{"src":"icon.svg","sizes":"192x192","type":"image/svg+xml"}]
-}
