@@ -1,263 +1,86 @@
-'use strict';
 
-const APP_VERSION = '16.1 WACHAU-MEISTER URKUNDE';
-const PHONE = '436646437526';
-const HOME = 'Aggsbach Markt 82, 3641 Aggsbach Markt, Österreich';
-let currentLang = safeGet('zab_lang') || 'de';
-let lastRoute = null;
-
-function safeGet(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
-function safeSet(k,v){ try { localStorage.setItem(k,v); } catch(e){} }
-function escapeHTML(value){
- return String(value || '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
-}
-function todayDateDE(){ return new Date().toLocaleDateString('de-AT', {year:'numeric', month:'long', day:'numeric'}); }
-
-const i18n = {
-  de:{
-    heroTitle:'Willkommen bei Zuhause am Bach – Gästehaus Wachau',heroSub:'Ihre Unterkunft am Welterbesteig Wachau und am Donauradweg in Aggsbach Markt. Willkommen bei den Wilden Wachauer Windis – dort, wo Geschichten entstehen.',navToday:'Heute',navHike:'Wandern',navBike:'Radfahren',navPia:'Kinderwelt',navService:'Service',
-    riverRuleTitle:'Wichtige Wachau-Regel',riverRuleText:'Aggsbach Markt liegt am Nordufer. Südufer-Ziele wie Aggstein werden nicht als direkte Wanderroute empfohlen. Fähre, Transfer oder Umweg über Melk/Spitz beachten.',
-    todayTitle:'Heute / Morgen in der Wachau',selectDay:'Tag',today:'Heute',tomorrow:'Morgen',guestType:'Gasttyp',hikers:'Wanderer',cyclists:'Radfahrer',families:'Familien',weather:'Wetter',dry:'Trocken',hot:'Heiß',rain:'Regen',showRecommendation:'Empfehlung anzeigen',
-    fidelTitle:'🐾 Fidels Wanderwelt',fidelSub:'Geprüfte Nordufer-Routen und Komoot-Touren für Gäste von Zuhause am Bach.',duration:'Dauer',short:'1–2 Stunden',half:'3–4 Stunden',full:'Ganztag',difficulty:'Schwierigkeit',easy:'Leicht',medium:'Mittel',hard:'Anspruchsvoll',withDogKids:'Begleitung',adults:'Erwachsene',kids:'Mit Kindern',dog:'Mit Hund',fidelRecommend:'Fidels Empfehlung anzeigen',allHikes:'Alle Wander-Routen',
-    gloriaTitle:'🍷 Glorias Rad- & Genusswelt',gloriaSub:'Donauradweg, Spitz, Gritsch und genussvolle Etappen.',bikeType:'Radtyp',tourBike:'Tourenrad',ebike:'E-Bike',sport:'Sportlich',direction:'Richtung',gloriaRecommend:'Glorias Rad-Empfehlung anzeigen',allBike:'Alle Rad-Routen',bikeServiceTitle:'Radservice im Haus',bikeServiceText:'Fahrradabstellplatz, E-Bike-Lademöglichkeit, Luftpumpe, Werkzeug, Wasser und Etappen-Tipps.',
-    piaTitle:'🎀 Pias Kinderwelt',piaSub:'Quiz, Schatzsuche, Geschichten und kleine Wachau-Abenteuer mit Pia.',quizTitle:'🏆 Wachau-Quiz',treasureTitle:'🔍 Schatzsuche',storiesTitle:'📖 Geschichten',certificateTitle:'🏅 Urkunde',piaAdventureTitle:'Pias Ausflüge',
-    serviceTitle:'🏡 Zuhause am Bach Service',breakfast:'Frühstück anfragen',snack:'Abendjause anfragen',luggage:'Gepäcktransport anfragen',help:'WhatsApp-Hilfe',review:'Google-Bewertung',
-    mapPreviewTitle:'Karten- und Komoot-Vorschau',mapPreviewText:'Wenn die eingebettete Karte am Handy nicht lädt, bitte den Komoot- oder Google-Maps-Link nutzen.',mapPlaceholder:'Noch keine Route gewählt.',testTitle:'App-Test',runTest:'Funktionstest starten',
-    openKomoot:'Komoot öffnen',showHere:'In App anzeigen',openMaps:'Google Maps',sendWhatsApp:'WhatsApp senden',recommended:'Empfohlen',feedbackText:'Hat Ihnen der Aufenthalt gefallen? Ihre Google-Bewertung hilft uns sehr. Vielen Dank von Hans, Laura, Fidel, Gloria und Pia!',
-    quizIntro:'Beantworte 10 Fragen über die Wachau und die Wilden Wachauer Windis.',startQuiz:'Quiz starten',checkQuiz:'Quiz auswerten',restartQuiz:'Quiz neu starten',quizResult:'Ergebnis',points:'Punkte',certificateName:'Name für die Urkunde',showCertificate:'Urkunde anzeigen',printCertificate:'Urkunde drucken',treasureIntro:'Pia sucht mit euch kleine Wachau-Schätze. Hakt ab, was ihr entdeckt habt.',treasureResult:'Schatzsuche geschafft',storyRead:'Geschichte lesen',
-    serviceBreakfast:'Hallo Hans & Laura, wir möchten gerne Frühstück anfragen.',serviceSnack:'Hallo Hans & Laura, wir möchten gerne eine Abendjause anfragen.',serviceLuggage:'Hallo Hans & Laura, wir möchten gerne Gepäcktransport anfragen.',serviceHelp:'Hallo Hans & Laura, wir brauchen bitte Hilfe/Information.'
-  },
-  en:{navToday:'Today',navHike:'Hiking',navBike:'Cycling',navPia:'Kids',navService:'Service',heroTitle:'Welcome to Zuhause am Bach – Gästehaus Wachau',heroSub:'Your accommodation on the Welterbesteig Wachau and the Danube Cycle Path in Aggsbach Markt. Welcome to the Wild Wachau Windis – where stories begin.',riverRuleTitle:'Important Wachau rule',riverRuleText:'Aggsbach Markt is on the north bank. South-bank destinations such as Aggstein are not direct walking routes.',todayTitle:'Today / tomorrow in the Wachau',selectDay:'Day',today:'Today',tomorrow:'Tomorrow',guestType:'Guest type',hikers:'Hikers',cyclists:'Cyclists',families:'Families',weather:'Weather',dry:'Dry',hot:'Hot',rain:'Rain',showRecommendation:'Show recommendation',fidelTitle:'🐾 Fidel’s hiking world',fidelSub:'Checked north-bank routes and Komoot tours.',duration:'Duration',short:'1–2 hours',half:'3–4 hours',full:'Full day',difficulty:'Difficulty',easy:'Easy',medium:'Medium',hard:'Demanding',withDogKids:'Companion',adults:'Adults',kids:'With children',dog:'With dog',fidelRecommend:'Show Fidel’s recommendation',allHikes:'All hiking routes',gloriaTitle:'🍷 Gloria’s cycling & pleasure world',gloriaSub:'Danube Cycle Path, Spitz, Gritsch and enjoyable stages.',bikeType:'Bike type',tourBike:'Touring bike',ebike:'E-bike',sport:'Sporty',direction:'Direction',gloriaRecommend:'Show Gloria’s cycling tip',allBike:'All cycling routes',bikeServiceTitle:'Bike service at the house',bikeServiceText:'Bike storage, e-bike charging, pump, tools, water and stage tips.',piaTitle:'🎀 Pia’s kids world',piaSub:'Quiz, treasure hunt, stories and small Wachau adventures with Pia.',quizTitle:'🏆 Wachau quiz',treasureTitle:'🔍 Treasure hunt',storiesTitle:'📖 Stories',certificateTitle:'🏅 Certificate',piaAdventureTitle:'Pia’s trips',serviceTitle:'🏡 Zuhause am Bach service',breakfast:'Ask for breakfast',snack:'Ask for evening snack',luggage:'Ask for luggage transfer',help:'WhatsApp help',review:'Google review',mapPreviewTitle:'Map and Komoot preview',mapPreviewText:'If the embedded map does not load, use Komoot or Google Maps.',mapPlaceholder:'No route selected yet.',testTitle:'App test',runTest:'Start function test',openKomoot:'Open Komoot',showHere:'Show in app',openMaps:'Google Maps',sendWhatsApp:'Send WhatsApp',recommended:'Recommended',feedbackText:'Did you enjoy your stay? Your Google review helps us a lot. Thank you from Hans, Laura, Fidel, Gloria and Pia!',quizIntro:'Answer 10 questions about the Wachau and the Wild Wachau Windis.',startQuiz:'Start quiz',checkQuiz:'Check quiz',restartQuiz:'Restart quiz',quizResult:'Result',points:'points',certificateName:'Name for certificate',showCertificate:'Show certificate',printCertificate:'Print certificate',treasureIntro:'Pia invites you to find little Wachau treasures. Tick what you discover.',treasureResult:'Treasure hunt completed',storyRead:'Read story',serviceBreakfast:'Hello Hans & Laura, we would like to ask for breakfast.',serviceSnack:'Hello Hans & Laura, we would like to ask for an evening snack.',serviceLuggage:'Hello Hans & Laura, we would like to ask for luggage transfer.',serviceHelp:'Hello Hans & Laura, we need help/information.'},
-  cs:{navToday:'Dnes',navHike:'Pěšky',navBike:'Kolo',navPia:'Děti',navService:'Servis',heroTitle:'Vítejte u Divokých wachauských Windis',heroSub:'Fidel zná túry, Gloria požitek a Pia dobrodružství.',piaTitle:'🎀 Piin dětský svět',piaSub:'Kvíz, hledání pokladu, příběhy a malá dobrodružství ve Wachau.',quizTitle:'🏆 Kvíz Wachau',treasureTitle:'🔍 Hledání pokladu',storiesTitle:'📖 Příběhy',certificateTitle:'🏅 Diplom',piaAdventureTitle:'Piiny výlety',startQuiz:'Spustit kvíz',checkQuiz:'Vyhodnotit kvíz',restartQuiz:'Znovu',points:'bodů',showCertificate:'Zobrazit diplom',printCertificate:'Tisknout diplom'},
-  hu:{navToday:'Ma',navHike:'Túra',navBike:'Kerékpár',navPia:'Gyerekek',navService:'Szerviz',piaTitle:'🎀 Pia gyerekvilága',quizTitle:'🏆 Wachau kvíz',treasureTitle:'🔍 Kincskeresés',storiesTitle:'📖 Történetek',certificateTitle:'🏅 Oklevél'},
-  es:{navToday:'Hoy',navHike:'Senderismo',navBike:'Bici',navPia:'Niños',navService:'Servicio',piaTitle:'🎀 Mundo infantil de Pia',quizTitle:'🏆 Quiz de Wachau',treasureTitle:'🔍 Búsqueda del tesoro',storiesTitle:'📖 Historias',certificateTitle:'🏅 Diploma'},
-  fr:{navToday:'Aujourd’hui',navHike:'Randonnée',navBike:'Vélo',navPia:'Enfants',navService:'Service',piaTitle:'🎀 Le monde des enfants de Pia',quizTitle:'🏆 Quiz Wachau',treasureTitle:'🔍 Chasse au trésor',storiesTitle:'📖 Histoires',certificateTitle:'🏅 Diplôme'}
-};
-
-const routeTexts = {
- de:{genuss:'Kurze aussichtsreiche Wanderung mit Wachau-Blick.',melk:'Welterbesteig-Richtung Emmersdorf und Melk. Nordufer-Logik beachten.',jauerling:'Anspruchsvolle Tour über den Jauerling zurück nach Aggsbach Markt.',welterbe:'Komoot-Collection mit Welterbesteig-Etappen.',rotes:'Spitzer Klassiker mit Rotem Tor, Weinbergen und Aussicht.',hinterhaus:'Burgruine bei Spitz mit starkem Donaublick.',venus:'Kulturstopp zur Venus von Willendorf.',donaurad:'Donauradweg Wachau als Komoot-Radtour.',radspitz:'Kurze Genussrunde nach Spitz.',radmelk:'Radtour Richtung Melk.',radkrems:'Längere Radtour Richtung Krems.',bogen:'Bogenschießen in Aggsbach Markt als Erlebnisangebot.',gritsch:'Genussziel in Spitz: Donauschlössel / Familie Gritsch.'},
- en:{genuss:'Short scenic walk with Wachau views.',melk:'Welterbesteig direction Emmersdorf and Melk.',jauerling:'Demanding tour over the Jauerling back to Aggsbach Markt.',welterbe:'Komoot collection with Welterbesteig stages.',rotes:'Spitz classic route with Rotes Tor, vineyards and views.',hinterhaus:'Castle ruin near Spitz with fine Danube views.',venus:'Cultural stop at the Venus of Willendorf.',donaurad:'Danube Cycle Path Wachau as Komoot cycling route.',radspitz:'Short pleasure ride to Spitz.',radmelk:'Bike route towards Melk.',radkrems:'Longer bike route towards Krems.',bogen:'Archery in Aggsbach Markt as an experience.',gritsch:'Pleasure stop in Spitz: Donauschlössel / Gritsch.'}
-};
-function rt(key){ return (routeTexts[currentLang]&&routeTexts[currentLang][key]) || routeTexts.en[key] || routeTexts.de[key] || key; }
-
-const ROUTES = [
- {id:'genussterrasse',type:'hike',title:'🌄 Genussterrasse Wachau',descKey:'genuss',duration:'short',level:'easy',bank:'Nordufer',mode:'walking',komoot:'https://www.komoot.com/tour/3039220789',embed:'https://www.komoot.com/tour/3039220789/embed?share_token=a08JKlo9qv59A87P0aKzwXDB8i84pNInfUSCYNJZpvx3yGB5qr&hl=de&layout=classic&profile=1',mapsTo:'Aggsbach Markt, Niederösterreich'},
- {id:'melk-emmersdorf',type:'hike',title:'🥾 Aggsbach Markt → Emmersdorf → Melk',descKey:'melk',duration:'full',level:'hard',bank:'Nordufer',mode:'walking',komoot:'https://www.komoot.com/tour/3039245626',embed:'https://www.komoot.com/tour/3039245626/embed?share_token=a87ylE7HGJCvX8V23IBhwkEJ5VFSNu22CJUWyPTJMUVuxnoVAN&hl=de&layout=classic&profile=1',mapsTo:'Melk, Österreich'},
- {id:'muehldorf-jauerling',type:'hike',title:'⛰️ Mühldorf → Jauerling → Aggsbach Markt',descKey:'jauerling',duration:'full',level:'hard',bank:'Nordufer',mode:'walking',komoot:'https://www.komoot.com/tour/3039257390',embed:'https://www.komoot.com/tour/3039257390/embed?share_token=aUR03AZjC2ochXm4Yn5c7Hd7xo1IFu1fE9656SFyIEpQiJrj4E&hl=de&layout=classic&profile=1',mapsTo:'Aggsbach Markt via Jauerling'},
- {id:'welterbesteig',type:'hike',title:'🏆 Welterbesteig Wachau',descKey:'welterbe',duration:'full',level:'medium',bank:'Nordufer',mode:'walking',komoot:'https://www.komoot.com/de-de/collection/1952145/wandern-im-unesco-welterbe-auf-dem-welterbesteig-wachau',mapsTo:'Aggsbach Markt Welterbesteig Wachau'},
- {id:'rotes-tor',type:'hike',title:'🚪 Rotes Tor Rundweg Spitz',descKey:'rotes',duration:'half',level:'medium',bank:'Nordufer',mode:'walking',komoot:'https://www.komoot.com/discover/Spitz/@48.365,15.414/tours',mapsTo:'Rotes Tor Spitz Niederösterreich'},
- {id:'hinterhaus',type:'hike',title:'🏰 Ruine Hinterhaus Spitz',descKey:'hinterhaus',duration:'half',level:'medium',bank:'Nordufer',mode:'walking',komoot:'https://www.komoot.com/discover/Ruine_Hinterhaus',mapsTo:'Ruine Hinterhaus Spitz'},
- {id:'venus',type:'adventure',title:'🗿 Venus von Willendorf',descKey:'venus',duration:'short',level:'easy',bank:'Nordufer',mode:'walking',komoot:'https://www.aggsbach.gv.at/Fundstelle_der_Venus_von_Willendorf',mapsTo:'Venusium Willendorf in der Wachau'},
- {id:'donauradweg-komoot',type:'bike',title:'🚲 Donauradweg Wachau',descKey:'donaurad',duration:'full',level:'medium',bank:'Nordufer',mode:'bicycling',komoot:'https://www.komoot.com/tour/3039269031',embed:'https://www.komoot.com/tour/3039269031/embed?share_token=arp2CE4y17KgQQGc9ncxeLhwl8jfZO5aCfn4uXg8v8oWyrNk13&hl=de&layout=classic&profile=1',mapsTo:'Spitz, Niederösterreich'},
- {id:'rad-spitz',type:'bike',title:'🚲 Aggsbach Markt → Spitz',descKey:'radspitz',duration:'short',level:'easy',bank:'Nordufer',mode:'bicycling',komoot:'https://www.komoot.com/tour/3039269031',embed:'https://www.komoot.com/tour/3039269031/embed?share_token=arp2CE4y17KgQQGc9ncxeLhwl8jfZO5aCfn4uXg8v8oWyrNk13&hl=de&layout=classic&profile=1',mapsTo:'Spitz, Niederösterreich'},
- {id:'rad-melk',type:'bike',title:'🚲 Aggsbach Markt → Melk',descKey:'radmelk',duration:'half',level:'medium',bank:'Nordufer',mode:'bicycling',komoot:'https://www.komoot.com/tour/3039269031',embed:'https://www.komoot.com/tour/3039269031/embed?share_token=arp2CE4y17KgQQGc9ncxeLhwl8jfZO5aCfn4uXg8v8oWyrNk13&hl=de&layout=classic&profile=1',mapsTo:'Melk, Österreich'},
- {id:'rad-krems',type:'bike',title:'🚲 Aggsbach Markt → Krems',descKey:'radkrems',duration:'full',level:'hard',bank:'Nordufer',mode:'bicycling',komoot:'https://www.komoot.com/tour/3039269031',embed:'https://www.komoot.com/tour/3039269031/embed?share_token=arp2CE4y17KgQQGc9ncxeLhwl8jfZO5aCfn4uXg8v8oWyrNk13&hl=de&layout=classic&profile=1',mapsTo:'Krems an der Donau'},
- {id:'bogen',type:'adventure',title:'🏹 Bogenschießen Aggsbach Markt',descKey:'bogen',duration:'short',level:'easy',bank:'Nordufer',mode:'walking',komoot:'https://www.wbu-aggsbach.at/WBU/',mapsTo:'WBU Aggsbach'},
- {id:'gritsch',type:'adventure',title:'🍷 Donauschlössel / Gritsch in Spitz',descKey:'gritsch',duration:'short',level:'easy',bank:'Nordufer',mode:'bicycling',komoot:'https://www.donauschloessel.at/',mapsTo:'Donauschlössel Spitz Donaulände 3'}
-];
-
-const QUIZ = [
- {q:'Wie heißt der große graue Galgo?',a:['Gloria','Pia','Fidel'],ok:2},
- {q:'Wie heißt die braun gestromte Galga?',a:['Gloria','Luna','Sissi'],ok:0},
- {q:'Welcher Fluss fließt durch die Wachau?',a:['Inn','Mur','Donau'],ok:2},
- {q:'Wofür ist die Wachau berühmt?',a:['Kartoffeln','Marillen','Bananen'],ok:1},
- {q:'In welchem Ort liegt Zuhause am Bach?',a:['Melk','Aggsbach Markt','Dürnstein'],ok:1},
- {q:'Welche Bahn fährt durch die Wachau?',a:['Wachaubahn','Semmeringbahn','U-Bahn'],ok:0},
- {q:'Wo findet man die Ruine Hinterhaus?',a:['Spitz','Krems','Wien'],ok:0},
- {q:'Welcher Berg ist der höchste der Wachau?',a:['Jauerling','Schneeberg','Ötscher'],ok:0},
- {q:'Was kann man in Aggsbach Markt ausprobieren?',a:['Bogenschießen','Skifliegen','Surfen'],ok:0},
- {q:'Wie heißt das kleine Whippet-Mädchen?',a:['Fidel','Gloria','Pia'],ok:2}
-];
-const TREASURES = ['Donau','Wachaubahn','Marillenbaum','Weinberg','Aussichtspunkt','Herzförmiger Stein','Schmetterling','Donauschiff','Ruine','Windhund'];
-const STORIES = [
- {title:'Pia und die Donau',text:'Pia steht am Ufer, hört das Wasser rauschen und weiß: Jeder Tag in der Wachau beginnt mit einem kleinen Abenteuer.'},
- {title:'Pia auf dem Jauerling',text:'Der Weg ist steil, aber Pia gibt nicht auf. Oben sieht sie die Donau glänzen wie ein silbernes Band.'},
- {title:'Pia entdeckt die Venus',text:'In Willendorf findet Pia eine Geschichte, die viel älter ist als alle Windis zusammen.'},
- {title:'Pia und die Wachaubahn',text:'Wenn die Wachaubahn vorbeifährt, spitzt Pia die Ohren. Fidel nickt: Fahrpläne sind auch Geschichten.'}
-];
-let lastQuizScore = 0;
-
-function t(key){return (i18n[currentLang]&&i18n[currentLang][key]) || i18n.en[key] || i18n.de[key] || key;}
-function el(id){return document.getElementById(id);}
-function enc(v){return encodeURIComponent(v);}
-function mapsUrl(route){return `https://www.google.com/maps/dir/?api=1&origin=${enc(HOME)}&destination=${enc(route.mapsTo || route.title)}&travelmode=${route.mode||'walking'}`;}
-function waUrl(text){return `https://wa.me/${PHONE}?text=${enc(text)}`;}
-
-function applyLanguage(lang){
- currentLang = lang; safeSet('zab_lang', lang); document.documentElement.lang = lang;
- document.querySelectorAll('[data-i18n]').forEach(node=>{ node.textContent = t(node.dataset.i18n); });
- document.querySelectorAll('.language-bar button').forEach(btn=>btn.classList.toggle('active', btn.dataset.lang===lang));
- renderRoutes(); renderKids(); if(lastRoute) showRoute(lastRoute.id, false);
-}
-
-function routeCard(route){
- const tags = [`<span class="tag">${route.bank}</span>`, `<span class="tag">${route.mode==='bicycling'?'🚲':'🚶'}</span>`, `<span class="tag">${route.level}</span>`].join('');
- const komootBtn = route.komoot ? `<a class="secondary" target="_blank" rel="noopener" href="${route.komoot}">${t('openKomoot')}</a>` : '';
- const embedBtn = route.embed ? `<button class="secondary" data-show-route="${route.id}">${t('showHere')}</button>` : '';
- return `<article class="route-card"><h4>${route.title}</h4><div class="meta">${rt(route.descKey)}</div>${tags}<div class="route-actions"><a target="_blank" rel="noopener" href="${mapsUrl(route)}">${t('openMaps')}</a>${komootBtn}${embedBtn}</div></article>`;
-}
-function renderRoutes(){
- el('hikeRoutes').innerHTML = ROUTES.filter(r=>r.type==='hike').map(routeCard).join('');
- el('bikeRoutes').innerHTML = ROUTES.filter(r=>r.type==='bike').map(routeCard).join('');
- el('adventureRoutes').innerHTML = ROUTES.filter(r=>r.type==='adventure').map(routeCard).join('');
- document.querySelectorAll('[data-show-route]').forEach(btn=>btn.addEventListener('click',()=>showRoute(btn.dataset.showRoute,true)));
-}
-function showRoute(routeId, scroll=true){
- const route = ROUTES.find(r=>r.id===routeId); if(!route) return; lastRoute = route; const preview = el('mapPreview');
- if(route.embed){ preview.innerHTML = `<iframe title="${route.title}" src="${route.embed}" loading="lazy" allowfullscreen></iframe>`; }
- else { preview.innerHTML = `<div><strong>${route.title}</strong><br><a href="${route.komoot || mapsUrl(route)}" target="_blank" rel="noopener">${route.komoot?t('openKomoot'):t('openMaps')}</a></div>`; }
- if(scroll) preview.scrollIntoView({behavior:'smooth',block:'start'});
-}
-function pickHike(){
- const duration=el('hikeDuration').value, level=el('hikeLevel').value, companion=el('hikeCompanion').value; let list=ROUTES.filter(r=>r.type==='hike');
- if(duration) list=list.filter(r=>r.duration===duration || (duration==='full' && r.duration==='half'));
- if(level==='easy') list=list.filter(r=>r.level==='easy' || r.level==='medium');
- if(level==='hard') list=list.filter(r=>r.level==='hard' || r.duration==='full');
- if(companion==='kids') list=list.filter(r=>r.level!=='hard');
- if(companion==='dog') list=list.filter(r=>r.bank==='Nordufer');
- return list[0] || ROUTES.find(r=>r.id==='genussterrasse');
-}
-function showHikeRecommendation(){ const route=pickHike(); el('hikeAdvisorResult').innerHTML=recommendationHtml('🐾 Fidel',route); attachResultButtons(); }
-function pickBike(){ const dir=el('bikeDirection').value; return ROUTES.find(r=>r.id===`rad-${dir}`) || ROUTES.find(r=>r.id==='donauradweg-komoot'); }
-function showBikeRecommendation(){ const route=pickBike(); el('bikeAdvisorResult').innerHTML=recommendationHtml('🍷 Gloria',route); attachResultButtons(); }
-function showMorning(){
- const guest=el('guestType').value, weather=el('weatherSelect').value; let route;
- if(weather==='rain') route = guest==='bike' ? ROUTES.find(r=>r.id==='rad-spitz') : ROUTES.find(r=>r.id==='venus');
- else if(weather==='hot') route = guest==='bike' ? ROUTES.find(r=>r.id==='rad-spitz') : ROUTES.find(r=>r.id==='genussterrasse');
- else route = guest==='bike' ? ROUTES.find(r=>r.id==='donauradweg-komoot') : guest==='family' ? ROUTES.find(r=>r.id==='bogen') : ROUTES.find(r=>r.id==='rotes-tor');
- el('morningResult').innerHTML=recommendationHtml(t('recommended'),route); attachResultButtons();
-}
-function recommendationHtml(who, route){
- return `<strong>${who}: ${route.title}</strong><p>${rt(route.descKey)}</p><div class="route-actions"><a target="_blank" rel="noopener" href="${mapsUrl(route)}">${t('openMaps')}</a>${route.komoot?`<a class="secondary" target="_blank" rel="noopener" href="${route.komoot}">${t('openKomoot')}</a>`:''}${route.embed?`<button class="secondary" data-show-route="${route.id}">${t('showHere')}</button>`:''}</div>`;
-}
-function attachResultButtons(){document.querySelectorAll('[data-show-route]').forEach(btn=>btn.onclick=()=>showRoute(btn.dataset.showRoute,true));}
-
-function renderKids(){ renderQuiz(); renderTreasure(); renderStories(); renderCertificate(); bindKidsTabs(); }
-function bindKidsTabs(){ document.querySelectorAll('[data-kid-tab]').forEach(btn=>btn.onclick=()=>showKidTab(btn.dataset.kidTab)); }
-function showKidTab(name){
- document.querySelectorAll('.kid-tab').forEach(b=>b.classList.toggle('active',b.dataset.kidTab===name));
- const map={quiz:'kidsQuiz',treasure:'kidsTreasure',stories:'kidsStories',certificate:'kidsCertificate'};
- Object.values(map).forEach(id=>el(id).classList.add('hidden')); el(map[name]).classList.remove('hidden');
-}
-function renderQuiz(){
- el('kidsQuiz').innerHTML = `<p>${t('quizIntro')}</p><div id="quizQuestions">${QUIZ.map((q,i)=>`<div class="quiz-question"><b>${i+1}. ${q.q}</b>${q.a.map((ans,j)=>`<label><input type="radio" name="q${i}" value="${j}"> ${ans}</label>`).join('')}</div>`).join('')}</div><div class="route-actions"><button id="checkQuizBtn">${t('checkQuiz')}</button><button class="secondary" id="restartQuizBtn">${t('restartQuiz')}</button></div><div id="quizResult" class="result"></div>`;
- el('checkQuizBtn').onclick=checkQuiz; el('restartQuizBtn').onclick=renderQuiz;
-}
-function checkQuiz(){
- let score=0; QUIZ.forEach((q,i)=>{ const chosen=document.querySelector(`input[name="q${i}"]:checked`); if(chosen && Number(chosen.value)===q.ok) score++; }); lastQuizScore=score;
- let rank = score===10 ? '🏆 Wachau-Meister' : score>=7 ? '🐾 Windis-Profi' : score>=4 ? '🔍 Wachau-Entdecker' : '🌱 Wachau-Anfänger';
- el('quizResult').innerHTML = `<strong>${t('quizResult')}: ${score}/10 ${t('points')}</strong><br>${rank}<div class="route-actions"><button onclick="showKidTab('certificate')">${t('showCertificate')}</button></div>`;
- renderCertificate();
-}
-function renderTreasure(){
- el('kidsTreasure').innerHTML = `<p>${t('treasureIntro')}</p><div class="treasure-grid">${TREASURES.map((x,i)=>`<label><input type="checkbox" class="treasure-check"> ${x}</label>`).join('')}</div><div id="treasureScore" class="result"></div>`;
- document.querySelectorAll('.treasure-check').forEach(cb=>cb.onchange=updateTreasure);
-}
-function updateTreasure(){ const count=document.querySelectorAll('.treasure-check:checked').length; el('treasureScore').innerHTML = `<strong>${count}/${TREASURES.length}</strong><br>${count===TREASURES.length?'🏆 '+t('treasureResult'):'🎀 Pia sagt: weiter suchen!'}`; }
-function renderStories(){
- el('kidsStories').innerHTML = STORIES.map(s=>`<article class="story-card"><h4>${s.title}</h4><p>${s.text}</p></article>`).join('');
-}
-function renderCertificate(){
- const title = lastQuizScore===10 ? 'Wachau-Meister' : lastQuizScore>=7 ? 'Windis-Profi' : lastQuizScore>=4 ? 'Wachau-Entdecker' : 'Wachau-Anfänger';
- el('kidsCertificate').innerHTML = `
-   <div class="certificate-tools">
-     <label class="cert-name"><span>${t('certificateName')}</span><input id="certName" placeholder="Name direkt hier eingeben" autocomplete="name"></label>
-     <label class="cert-name"><span>Foto für die Urkunde</span><input id="certPhoto" type="file" accept="image/*" capture="user"></label>
-     <p class="cert-note">Am Handy öffnet sich Kamera oder Galerie. Das Foto bleibt nur auf diesem Gerät und wird nicht hochgeladen.</p>
-   </div>
-   <div class="certificate certificate-landscape" id="certificatePrintArea">
-     <div class="certificate-border">
-       <div class="cert-top">Zuhause am Bach – Gästehaus Wachau · Welterbesteig Wachau · Donauradweg</div>
-       <h3>🏆 ${title.toUpperCase()} 🏆</h3>
-       <p class="cert-small">Diese Urkunde erhält</p>
-       <strong id="certNameOut" class="cert-person">________________</strong>
-       <div id="certPhotoFrame" class="cert-photo-frame"><span>📸 Foto</span></div>
-       <p class="cert-text">für hervorragende Kenntnisse über die Wachau, den Welterbesteig Wachau, den Donauradweg und die Wilden Wachauer Windis.</p>
-       <p class="cert-checks">✓ Pias Wachau-Quiz · ✓ Schatzsuche · ✓ Wachau-Entdecker-Aufgaben</p>
-       <p class="cert-score">${lastQuizScore}/10 ${t('points')} · Aggsbach Markt, ${todayDateDE()}</p>
-       <div class="cert-signatures"><span>🐾 Fidel</span><span>🍷 Gloria</span><span>🎀 Pia</span></div>
-       <div class="cert-footer">© Johann Prem · Die Wilden Wachauer Windis · Tel. +43 664 6437526</div>
-     </div>
-   </div>
-   <div class="route-actions"><button id="printCertBtn">🖨️ ${t('printCertificate')} – DIN A4 Querformat</button></div>`;
- const input=el('certName');
- input.oninput=()=>{ el('certNameOut').textContent = input.value.trim() || '________________'; };
- const photoInput=el('certPhoto');
- photoInput.onchange=event=>{
-   const file=event.target.files && event.target.files[0];
-   if(!file) return;
-   const reader=new FileReader();
-   reader.onload=()=>{ el('certPhotoFrame').innerHTML = `<img src="${escapeHTML(reader.result)}" alt="Foto für Wachau-Meister-Urkunde">`; };
-   reader.readAsDataURL(file);
- };
- el('printCertBtn').onclick=()=>window.print();
-}
-
-function serviceText(kind){ return {breakfast:t('serviceBreakfast'),snack:t('serviceSnack'),luggage:t('serviceLuggage'),help:t('serviceHelp'),review:t('feedbackText')}[kind]; }
-function openWhatsApp(kind){ window.open(waUrl(serviceText(kind)),'_blank','noopener'); el('serviceResult').innerHTML=`<strong>${t('sendWhatsApp')}</strong><br>${serviceText(kind)}`; }
-function openReview(){ const reviewSearch='https://www.google.com/search?q='+enc('Zuhause am Bach Wachau Google Bewertung'); window.open(reviewSearch,'_blank','noopener'); el('serviceResult').innerHTML=`<strong>${t('review')}</strong><br>${t('feedbackText')}`; }
-
-
-const WEATHER_FALLBACK = {
-  today: 'Heute: Wetterdaten derzeit nicht verfügbar. Bitte Auswahl unten nutzen.',
-  tomorrow: 'Morgen: Wetterdaten derzeit nicht verfügbar. Bitte Auswahl unten nutzen.'
-};
-function weatherCodeText(code){
-  const map = {
-    0:'Sonnig',1:'Überwiegend sonnig',2:'Teilweise bewölkt',3:'Bewölkt',45:'Nebel',48:'Nebel/Reif',
-    51:'Leichter Nieselregen',53:'Nieselregen',55:'Starker Nieselregen',61:'Leichter Regen',63:'Regen',65:'Starker Regen',
-    71:'Leichter Schneefall',73:'Schneefall',75:'Starker Schneefall',80:'Regenschauer',81:'Regenschauer',82:'Starke Regenschauer',95:'Gewitter'
-  };
-  return map[code] || 'Wetterlage';
-}
-function planningWeatherFromCode(code, maxTemp){
-  if([51,53,55,61,63,65,80,81,82,95].includes(Number(code))) return 'rain';
-  if(Number(maxTemp) >= 29) return 'hot';
-  return 'dry';
+const HOME = "Aggsbach Markt 82, 3641 Aggsbach Markt, Österreich";
+function enc(x){return encodeURIComponent(x)}
+function go(id){document.getElementById(id)?.scrollIntoView({behavior:"smooth",block:"start"})}
+function route(dest,mode="walking"){return `https://www.google.com/maps/dir/?api=1&origin=${enc(HOME)}&destination=${enc(dest)}&travelmode=${enc(mode)}`}
+function komoot(q){return "https://www.komoot.com/search/"+enc(q)}
+function google(q){return "https://www.google.com/search?q="+enc(q)}
+function setLang(lang){
+ const names={de:"Deutsch",en:"English",cz:"Čeština",hu:"Magyar",es:"Español",fr:"Français"};
+ alert("Sprache gewählt: "+(names[lang]||lang)+". V40 zeigt die Kerninhalte derzeit auf Deutsch; die Sprachwahl ist funktionsbereit.");
 }
 async function loadWeather(){
-  const todayEl=el('weatherToday'), tomorrowEl=el('weatherTomorrow');
-  if(!todayEl || !tomorrowEl) return;
-  todayEl.textContent='Wetter wird geladen …'; tomorrowEl.textContent='Wetter wird geladen …';
-  try{
-    const url='https://api.open-meteo.com/v1/forecast?latitude=48.303&longitude=15.414&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Europe%2FVienna&forecast_days=2';
-    const res=await fetch(url,{cache:'no-store'}); if(!res.ok) throw new Error('Wetterdienst nicht erreichbar');
-    const data=await res.json(); const d=data.daily;
-    const fmt=(i)=>`${weatherCodeText(d.weather_code[i])}, ${Math.round(d.temperature_2m_min[i])}–${Math.round(d.temperature_2m_max[i])}°C, Regenrisiko ${d.precipitation_probability_max[i] ?? 0}%`;
-    todayEl.textContent=fmt(0); tomorrowEl.textContent=fmt(1);
-    const w=planningWeatherFromCode(d.weather_code[1], d.temperature_2m_max[1]);
-    const ws=el('weatherSelect'); if(ws) ws.value=w;
-  }catch(e){
-    todayEl.textContent=WEATHER_FALLBACK.today; tomorrowEl.textContent=WEATHER_FALLBACK.tomorrow;
-  }
+ const box=document.getElementById("weatherBox"); if(!box)return;
+ try{
+  const r=await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.2949&longitude=15.4032&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Europe%2FVienna&forecast_days=2");
+  const d=await r.json(); const codes={0:"☀️ Sonnig",1:"🌤️ Klar",2:"⛅ Teilweise bewölkt",3:"☁️ Bewölkt",45:"🌫️ Nebel",61:"🌧️ Leichter Regen",63:"🌧️ Regen",65:"🌧️ Starker Regen",80:"🌦️ Schauer",95:"⛈️ Gewitter"};
+  function card(i,t){const max=Math.round(d.daily.temperature_2m_max[i]),min=Math.round(d.daily.temperature_2m_min[i]),rain=d.daily.precipitation_probability_max[i]??0,txt=codes[d.daily.weather_code[i]]||"🌤️ Wetter";const amp=rain<35?"🟢 Gute Outdoor-Chance":rain<65?"🟡 Regenjacke einplanen":"🔴 Schlechtwetterprogramm";return `<article><h3>${t}</h3><p><strong>${txt}</strong></p><p>${min}–${max} °C · Regen ${rain}%</p><p><strong>${amp}</strong></p></article>`}
+  box.innerHTML=card(0,"🌤 Heute")+card(1,"🌦 Morgen");
+ }catch(e){box.innerHTML="<article><h3>🌤 Heute</h3><p>Wetter konnte nicht geladen werden.</p></article><article><h3>🌦 Morgen</h3><p>Internetverbindung prüfen.</p></article>"}
 }
-
-function runSelfTest(){
- const requiredIds=['versionBadge','weatherToday','weatherTomorrow','morningBtn','hikeAdvisorBtn','bikeAdvisorBtn','breakfastBtn','snackBtn','luggageBtn','helpBtn','reviewBtn','hikeRoutes','bikeRoutes','adventureRoutes','kidsQuiz','kidsTreasure','kidsStories','kidsCertificate','mapPreview','testAmpel'];
- const missing=requiredIds.filter(id=>!el(id));
- const pageText=document.body.innerText.toLowerCase();
- const prohibited=pageText.includes('dinosaurierpark') || pageText.includes('freizeitpark');
- const buttons=document.querySelectorAll('button').length;
- const links=document.querySelectorAll('a[href]').length;
- const badRoutes=ROUTES.filter(r=>!r.id||!r.title||!r.mapsTo||!r.mode);
- const duplicateIds=[...document.querySelectorAll('[id]')].map(n=>n.id).filter((id,i,a)=>a.indexOf(id)!==i);
- const brokenWhatsApp=['breakfast','snack','luggage','help'].filter(k=>!serviceText(k));
- const statusOk=!(missing.length||duplicateIds.length||badRoutes.length||prohibited||brokenWhatsApp.length);
- const statusWarn=!statusOk && !(duplicateIds.length||prohibited);
- const ampel=el('testAmpel');
- if(ampel){
-   ampel.innerHTML=statusOk?'<span class="ampel green">●</span> Grün: Hauptfunktionen geprüft.':statusWarn?'<span class="ampel yellow">●</span> Gelb: Prüfen, aber kein harter Sperrfehler.':'<span class="ampel red">●</span> Rot: Fehler vor Freigabe beheben.';
- }
- const lines=[`Version: ${APP_VERSION}`,`Ampel: ${statusOk?'GRÜN':statusWarn?'GELB':'ROT'}`,`Buttons: ${buttons}`,`Links: ${links}`,`Routen: ${ROUTES.length}`,`Quiz-Fragen: ${QUIZ.length}`,`Schatzsuche: ${TREASURES.length}`,`Wetterfelder: ${el('weatherToday')&&el('weatherTomorrow')?'vorhanden':'fehlen'}`,`Fehlende IDs: ${missing.length?missing.join(', '):'keine'}`,`Doppelte IDs: ${duplicateIds.length?duplicateIds.join(', '):'keine'}`,`Unvollständige Routen: ${badRoutes.length?badRoutes.map(r=>r.id).join(', '):'keine'}`,`WhatsApp-Texte fehlen: ${brokenWhatsApp.length?brokenWhatsApp.join(', '):'keine'}`,`Nicht gewünschtes Freizeitpark-Thema sichtbar: ${prohibited?'JA - Fehler':'Nein'}`,`Status: ${statusOk?'OK':'PRÜFEN'}`];
- el('testOutput').textContent=lines.join('\n');
+function showMorning(type){
+ const data={wander:["🥾 Heute gemütlich starten","Aggsbach Markt – Willendorf – Venus-Fundstelle. Wasser mitnehmen, Wetter prüfen.","Willendorf in der Wachau","walking"],
+ bike:["🚴 Donauradweg-Tag","Aggsbach Markt – Schwallenbach – Spitz. Rückweg je nach Kondition.","Spitz an der Donau","bicycling"],
+ rain:["🌧 Regentag","Stift Melk, Wachaumuseum, Kaffeehaus oder kurze Spaziergänge zwischen Schauern.","Stift Melk","driving"],
+ family:["🐾 Familie & Hund","Kurze Runde am Wasser, Schatzsuche mit Pia und danach Wachau-Quiz.","Aggsbach Markt","walking"]}[type];
+ document.getElementById("morningResult").innerHTML=card(data[0],data[1],data[2],data[3]);
 }
-
-function bind(){
- document.querySelectorAll('[data-lang]').forEach(btn=>btn.addEventListener('click',()=>applyLanguage(btn.dataset.lang)));
- document.querySelectorAll('[data-scroll]').forEach(btn=>btn.addEventListener('click',()=>el(btn.dataset.scroll).scrollIntoView({behavior:'smooth'})));
- el('morningBtn').addEventListener('click',showMorning); el('hikeAdvisorBtn').addEventListener('click',showHikeRecommendation); el('bikeAdvisorBtn').addEventListener('click',showBikeRecommendation);
- const wr=el('weatherReloadBtn'); if(wr) wr.addEventListener('click',loadWeather);
- el('breakfastBtn').addEventListener('click',()=>openWhatsApp('breakfast')); el('snackBtn').addEventListener('click',()=>openWhatsApp('snack')); el('luggageBtn').addEventListener('click',()=>openWhatsApp('luggage')); el('helpBtn').addEventListener('click',()=>openWhatsApp('help')); el('reviewBtn').addEventListener('click',openReview); el('runTestBtn').addEventListener('click',runSelfTest);
- if('serviceWorker' in navigator){navigator.serviceWorker.register('service-worker.js').catch(()=>{});}
+function card(title,text,dest,mode){
+ return `<div class="result-card"><h3>${title}</h3><p>${text}</p><div class="actions"><a href="${route(dest,mode)}" target="_blank">🗺 Google Maps</a><a href="${komoot(dest)}" target="_blank">🟢 Komoot</a></div></div>`;
 }
-document.addEventListener('DOMContentLoaded',()=>{bind();applyLanguage(currentLang);renderRoutes();renderKids();loadWeather();runSelfTest();});
+function showFidelRoute(){
+ const dauer=document.getElementById("wanderDauer").value, schwer=document.getElementById("wanderSchwer").value, beg=document.getElementById("wanderBegleitung").value;
+ let r={title:"🥾 Aggsbach Markt – Willendorf",text:"Gemütliche Nordufer-Route mit Donau-Nähe und Venus-Fundstelle.",dest:"Willendorf in der Wachau",km:"ca. 6–8 km",time:"2–3 h"};
+ if(dauer==="mittel"||schwer==="mittel")r={title:"🥾 Aggsbach Markt – Schwallenbach – Spitz",text:"Fidels Empfehlung: schöne Nordufer-Tour Richtung Spitz mit Einkehrmöglichkeit.",dest:"Spitz an der Donau",km:"ca. 10–12 km",time:"3–4 h"};
+ if(dauer==="lang"||schwer==="sportlich")r={title:"⛰ Aggsbach Markt – Spitz – Rotes Tor",text:"Sportlichere Tour für trittsichere Gäste. Bei Hitze oder Regen nicht ideal.",dest:"Rotes Tor Spitz an der Donau",km:"ca. 13–16 km",time:"4–5 h"};
+ if(beg==="hund")r.text+=" Mit Hund: Wasser mitnehmen und Hitze beachten.";
+ if(beg==="kind")r.text+=" Mit Kindern: Pausen einplanen und lieber kürzer gehen.";
+ document.getElementById("wanderResult").innerHTML=`<div class="result-card"><h3>${r.title}</h3><p>${r.text}</p><div class="facts"><span>⏱ ${r.time}</span><span>📏 ${r.km}</span><span>🥾 Nordufer</span></div><div class="actions"><a href="${route(r.dest,'walking')}" target="_blank">Google Maps</a><a href="${komoot(r.dest)}" target="_blank">Komoot</a></div></div>`;
+}
+function showAllRoutes(){
+ const routes=[["🌿 Willendorf & Venus","Willendorf in der Wachau","kurz"],["🥾 Schwallenbach & Spitz","Spitz an der Donau","mittel"],["⛰ Rotes Tor Spitz","Rotes Tor Spitz an der Donau","sportlich"],["🏰 Aggstein Blickroute","Burgruine Aggstein","Ausflug"]];
+ document.getElementById("wanderResult").innerHTML="<div class='map-grid'>"+routes.map(x=>`<article><h3>${x[0]}</h3><p>${x[2]}</p><div class="actions"><a href="${route(x[1],'walking')}" target="_blank">Google Maps</a><a href="${komoot(x[1])}" target="_blank">Komoot</a></div></article>`).join("")+"</div>";
+}
+function renderMaps(){
+ const items=[["🥾 Welterbesteig Richtung Willendorf","Aggsbach Markt → Willendorf","Nordufer · Venus-Fundstelle · gemütlich","Willendorf in der Wachau","walking"],["🚴 Donauradweg Richtung Spitz","Aggsbach Markt → Spitz","Donauradweg · Schwallenbach · Einkehr","Spitz an der Donau","bicycling"]];
+ document.getElementById("mapCards").innerHTML=items.map(x=>`<article><h3>${x[0]}</h3><div class="map-placeholder">📍 ${x[1]}<br><small>${x[2]}</small></div><div class="actions"><a href="${route(x[3],x[4])}" target="_blank">Google Maps</a><a href="${komoot(x[3])}" target="_blank">Komoot öffnen</a></div></article>`).join("");
+}
+function showGloria(mode){
+ const b=document.getElementById("gloriaResult");
+ if(mode==="rad")b.innerHTML=`<div class="map-grid"><article><h3>🚴 Genussrunde Spitz</h3><p>Aggsbach Markt – Schwallenbach – Spitz.</p><div class="actions"><a href="${route('Spitz an der Donau','bicycling')}" target="_blank">Route</a></div></article><article><h3>🚴 Weißenkirchen</h3><p>Für geübtere Radfahrer am Nordufer.</p><div class="actions"><a href="${route('Weißenkirchen in der Wachau','bicycling')}" target="_blank">Route</a></div></article></div>`;
+ if(mode==="genuss")b.innerHTML=`<div class="map-grid"><article><h3>🍷 Donauschlössel / Gritsch</h3><p>Gäste-Tipp in Spitz. Öffnungszeiten prüfen.</p><div class="actions"><a href="${google('Donauschlössel Gritsch Spitz Öffnungszeiten')}" target="_blank">Prüfen</a></div></article><article><h3>🐟 Steckerlfisch Graf</h3><p>Emmersdorf, guter Tipp für Radfahrer und Wanderer.</p><div class="actions"><a href="${google('Steckerlfisch Graf Emmersdorf Öffnungszeiten')}" target="_blank">Prüfen</a></div></article></div>`;
+ if(mode==="terrasse")b.innerHTML=`<div class="result-card"><h3>🌿 Glorias Genuss-Terrasse</h3><p>Donnerstag bis Montag nach Verfügbarkeit für Gäste. Bitte anfragen.</p><div class="actions"><a href="sms:+436646437526?body=Hallo%20Zuhause%20am%20Bach,%20wir%20interessieren%20uns%20für%20Glorias%20Genuss-Terrasse.">Anfragen</a></div></div>`;
+ if(mode==="service")b.innerHTML=`<div class="tip-grid"><article><h3>🚲 Fahrradgarage</h3><p>Sicher unterstellen.</p></article><article><h3>🔋 E-Bike laden</h3><p>Ladegerät bitte mitbringen.</p></article><article><h3>🧰 Werkzeug & Pumpe</h3><p>Kleine Hilfe bei Radproblemen.</p></article><article><h3>💧 Wasser</h3><p>Vor der Tour auffüllen.</p></article></div>`;
+}
+const HEURIGE=[["Glorias Genuss-Terrasse","Zuhause am Bach, Aggsbach Markt","Zuhause am Bach Wachau Aggsbach Markt 82"],["Donauschlössel / Gritsch","Spitz an der Donau","Donauschlössel Gritsch Spitz an der Donau"],["Heurige in Spitz","Spitz an der Donau","Heuriger Spitz an der Donau"],["Heurige in Schwallenbach","Schwallenbach","Heuriger Schwallenbach Wachau"],["Heurige in Willendorf","Willendorf","Heuriger Willendorf Wachau"],["Heurige in Weißenkirchen","Weißenkirchen","Heuriger Weißenkirchen Wachau"]];
+function setHeurigenDate(mode){const d=new Date();if(mode==="tomorrow")d.setDate(d.getDate()+1);document.getElementById("heurigenDate").value=d.toISOString().slice(0,10);renderHeurigen()}
+function dateLabel(){const v=document.getElementById("heurigenDate").value;if(!v)return"heute";const d=new Date(v+"T12:00:00");return["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"][d.getDay()]+", "+String(d.getDate()).padStart(2,"0")+"."+String(d.getMonth()+1).padStart(2,"0")+"."+d.getFullYear()}
+function aiUrl(){return "https://www.google.com/search?udm=50&q="+enc("Welche Heurigen haben am "+dateLabel()+" am Nordufer der Wachau im Umkreis von 15 km von Aggsbach Markt geöffnet? Bitte nur tatsächlich geöffnete Betriebe anzeigen, keine geschlossenen. Mit Öffnungszeiten und Quelle.")}
+function renderHeurigen(){
+ document.getElementById("heurigenResult").innerHTML=`<div class="result-card"><h3>🍷 Google-KI-Modus für ${dateLabel()}</h3><p>1. Google-KI-Modus starten. 2. Nur bestätigte offene Heurige auswählen. 3. Route öffnen.</p><div class="actions"><a href="${aiUrl()}" target="_blank">🤖 Google-KI-Modus starten</a></div></div><div class="map-grid">`+HEURIGE.map((h,i)=>`<article><h3>${h[0]}</h3><p>${h[1]}</p><div class="actions"><a href="${route(h[2],'driving')}" target="_blank">Route anzeigen</a></div></article>`).join("")+"</div>";
+}
+const PIA=[{q:"An welchem Wanderweg liegt Zuhause am Bach?",a:["Welterbesteig Wachau","Jakobsweg Spanien","Großglocknerweg"],ok:0},{q:"Welcher Radweg führt durch die Wachau?",a:["Donauradweg","Tauernradweg","Innradweg"],ok:0},{q:"Wofür ist die Wachau bekannt?",a:["Marillen und Wein","Kokosnüsse","Eisbären"],ok:0},{q:"Wo steht Zuhause am Bach?",a:["Aggsbach Markt","Aggsbach Dorf","Wien"],ok:0},{q:"Wie heißt das Whippet-Mädchen?",a:["Pia","Luna","Sissi"],ok:0},{q:"Was findet man in Willendorf?",a:["Venus von Willendorf","Eiffelturm","Meereshafen"],ok:0},{q:"Welche Burg ist bekannt?",a:["Burgruine Aggstein","Burg London","Schloss Versailles"],ok:0},{q:"Wie heißt die Bahn in der Wachau?",a:["Wachaubahn","U-Bahn","Bergmetro"],ok:0},{q:"Was brauchen Radfahrer oft?",a:["Fahrradgarage und E-Bike-Laden","Skilift","Flughafen"],ok:0},{q:"Was macht Pia gerne?",a:["Entdecken und Abenteuer erleben","Winterschlaf halten","Rechnungen sortieren"],ok:0}];
+let piaScore=0,piaAnswered={};
+function showPia(mode){
+ const b=document.getElementById("piaResult");
+ if(mode==="quiz"){piaScore=0;piaAnswered={};let out=`<h3>🏆 Wachau-Quiz</h3><div id="piaScore" class="pia-score">0 von ${PIA.length} richtig</div>`;PIA.forEach((q,i)=>{out+=`<div class="pia-question"><strong>${i+1}. ${q.q}</strong><br>`+q.a.map((a,j)=>`<button onclick="answerPia(this,${i},${j})">${a}</button>`).join("")+`</div>`});out+=`<button onclick="showCertificate()">🏆 Urkunde anzeigen</button>`;b.innerHTML=out}
+ if(mode==="suche")b.innerHTML=`<h3>🔍 Schatzsuche</h3><div class="treasure-list"><label><input type="checkbox"> Donau gesehen</label><label><input type="checkbox"> Marillenbaum entdeckt</label><label><input type="checkbox"> Weinberg gefunden</label><label><input type="checkbox"> Stein in Herzform gesucht</label><label><input type="checkbox"> Pia auf dem Bild entdeckt</label><label><input type="checkbox"> Wachaubahn oder Gleise gesehen</label></div><button onclick="showCertificate()">🏆 Urkunde erstellen</button>`;
+ if(mode==="story")b.innerHTML=`<h3>📖 Geschichten</h3><div class="story-card"><strong>Pia und der kleine Bach</strong><p>Pia hörte das Wasser leise plätschern. „Hier beginnt ein Abenteuer“, dachte sie.</p></div><div class="story-card"><strong>Die Marille im Morgenlicht</strong><p>Als die Sonne über Aggsbach Markt aufging, glänzte eine Marille wie ein kleiner Schatz.</p></div><button onclick="showCertificate()">🏆 Urkunde</button>`;
+}
+function answerPia(btn,i,j){if(piaAnswered[i])return;piaAnswered[i]=true;if(j===PIA[i].ok){btn.classList.add("correct");piaScore++}else btn.classList.add("wrong");document.getElementById("piaScore").textContent=`${piaScore} von ${PIA.length} richtig`}
+function showCertificate(){const d=new Date(),date=String(d.getDate()).padStart(2,"0")+"."+String(d.getMonth()+1).padStart(2,"0")+"."+d.getFullYear();document.getElementById("piaResult").innerHTML=`<div id="certificatePrint" class="certificate"><h3>🏆 Wachau-Meister-Urkunde</h3><p>Diese Urkunde erhält</p><input id="certName" type="text" placeholder="Name eintragen"><h2 id="certPreview">Wachau-Meisterin / Wachau-Meister</h2><p>für Quiz, Schatzsuche und kleine Wachau-Abenteuer mit Pia.</p><p><strong>Aggsbach Markt, ${date}</strong></p><p>🐾 Fidel · Gloria · Pia</p></div><div class="button-row"><button onclick="updateCert()">Name übernehmen</button><button onclick="window.print()">🖨️ Drucken</button><button onclick="showPia('quiz')">Zurück zum Quiz</button></div>`}
+function updateCert(){document.getElementById("certPreview").textContent=document.getElementById("certName").value||"Wachau-Meisterin / Wachau-Meister"}
+function runAppCheck(){
+ const checks=[
+  ["Wetterblock",!!document.getElementById("weatherBox")],
+  ["Fidels Wanderwelt",typeof showFidelRoute==="function"],
+  ["Karten/Komoot",!!document.getElementById("mapCards")],
+  ["Glorias Genusswelt",typeof showGloria==="function"],
+  ["Heurigenfinder",typeof renderHeurigen==="function"],
+  ["Pias Kinderwelt",typeof showPia==="function"],
+  ["Bücherwelt",!!document.getElementById("buecherwelt")],
+  ["Service-Links",document.querySelectorAll("#service a").length>=4]
+ ];
+ document.getElementById("appCheckResult").innerHTML="<div class='tip-grid'>"+checks.map(c=>`<article><h3>${c[1]?"✅":"❌"} ${c[0]}</h3><p>${c[1]?"funktioniert / vorhanden":"prüfen"}</p></article>`).join("")+"</div>";
+}
+document.addEventListener("DOMContentLoaded",()=>{loadWeather();showMorning("wander");showFidelRoute();renderMaps();showGloria("rad");setHeurigenDate("today");showPia("quiz")});
