@@ -67,3 +67,57 @@ footer{text-align:center;padding:30px;color:var(--muted)}
  .quick-nav{grid-template-columns:repeat(2,1fr)}
  .book-grid{grid-template-columns:1fr}
 }
+
+
+/* V43 – Fehlerbehebung: Sprachleiste besser sichtbar */
+.language-bar{
+  background:rgba(35,22,12,.78)!important;
+  border:1px solid rgba(255,255,255,.28)!important;
+  border-radius:999px!important;
+  padding:7px!important;
+  box-shadow:0 6px 20px rgba(0,0,0,.28)!important;
+  backdrop-filter:blur(8px);
+}
+.language-bar button{
+  background:#fff!important;
+  color:#3b2414!important;
+  border:2px solid rgba(255,204,121,.75)!important;
+  opacity:1!important;
+  text-shadow:none!important;
+}
+.language-bar button:hover{
+  background:#ffd36c!important;
+}
+.badge{
+  background:rgba(35,22,12,.82)!important;
+  border:1px solid rgba(255,255,255,.35)!important;
+}
+
+/* V43 – Copyright Footer */
+.footer{
+  background:#2b1d12;
+  color:#fff4df;
+  text-align:center;
+  padding:26px 16px;
+  line-height:1.6;
+  margin-top:24px;
+}
+.footer a{color:#ffd36c!important;text-decoration:none;font-weight:800}
+.footer-links{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:8px}
+
+/* V43 – App Check Ausgabe */
+.check-ok{border-left:6px solid #4f8b2f!important}
+.check-warn{border-left:6px solid #d69a25!important}
+.check-bad{border-left:6px solid #b94a38!important}
+.appcheck-summary{
+  background:#eef8df;
+  border:1px solid #b8d99c;
+  border-radius:18px;
+  padding:14px;
+  color:#2f5b1f;
+  font-weight:900;
+  margin-bottom:12px;
+}
+
+/* V43 – Komoot/Outdooractive Fallbacks */
+.actions a.outdoor{background:#214b7a!important}

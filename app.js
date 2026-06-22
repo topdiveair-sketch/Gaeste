@@ -3,11 +3,26 @@ const HOME = "Aggsbach Markt 82, 3641 Aggsbach Markt, Österreich";
 function enc(x){return encodeURIComponent(x)}
 function go(id){document.getElementById(id)?.scrollIntoView({behavior:"smooth",block:"start"})}
 function route(dest,mode="walking"){return `https://www.google.com/maps/dir/?api=1&origin=${enc(HOME)}&destination=${enc(dest)}&travelmode=${enc(mode)}`}
-function komoot(q){return "https://www.google.com/search?q="+encodeURIComponent("Komoot "+q+" Wachau Tour")}
+function komoot(q){return "https://www.google.com/search?q="+enc("site:komoot.com "+q+" Wachau Tour")}
 function google(q){return "https://www.google.com/search?q="+enc(q)}
+function outdooractive(q){return "https://www.google.com/search?q="+enc("site:outdooractive.com "+q+" Wachau Tour")}
 function setLang(lang){
  const names={de:"Deutsch",en:"English",cz:"Čeština",hu:"Magyar",es:"Español",fr:"Français"};
- alert("Sprache gewählt: "+(names[lang]||lang)+". V40 zeigt die Kerninhalte derzeit auf Deutsch; die Sprachwahl ist funktionsbereit.");
+ const msg="Sprache gewählt: "+(names[lang]||lang)+". Die vollständige Übersetzung wird in einer späteren Version ergänzt.";
+ let box=document.getElementById("langNotice");
+ if(!box){
+   box=document.createElement("div");
+   box.id="langNotice";
+   box.className="card";
+   box.style.position="fixed";
+   box.style.right="14px";
+   box.style.top="90px";
+   box.style.zIndex="9999";
+   box.style.maxWidth="360px";
+   document.body.appendChild(box);
+ }
+ box.innerHTML="<strong>🌍 "+(names[lang]||lang)+"</strong><br>"+msg;
+ setTimeout(()=>{ if(box) box.remove(); },3500);
 }
 async function loadWeather(){
  const box=document.getElementById("weatherBox"); if(!box)return;
@@ -26,7 +41,7 @@ function showMorning(type){
  document.getElementById("morningResult").innerHTML=card(data[0],data[1],data[2],data[3]);
 }
 function card(title,text,dest,mode){
- return `<div class="result-card"><h3>${title}</h3><p>${text}</p><div class="actions"><a href="${route(dest,mode)}" target="_blank">🗺 Google Maps</a><a href="${komoot(dest)}" target="_blank">🟢 Komoot</a></div></div>`;
+ return `<div class="result-card"><h3>${title}</h3><p>${text}</p><div class="actions"><a href="${route(dest,mode)}" target="_blank">🗺 Google Maps</a><a href="${komoot(dest)}" target="_blank">🟢 Komoot</a><a class="outdoor" href="${outdooractive(dest)}" target="_blank">🔵 Outdooractive</a></div></div>`;
 }
 function showFidelRoute(){
  const dauer=document.getElementById("wanderDauer").value, schwer=document.getElementById("wanderSchwer").value, beg=document.getElementById("wanderBegleitung").value;
@@ -35,15 +50,15 @@ function showFidelRoute(){
  if(dauer==="lang"||schwer==="sportlich")r={title:"⛰ Aggsbach Markt – Spitz – Rotes Tor",text:"Sportlichere Tour für trittsichere Gäste. Bei Hitze oder Regen nicht ideal.",dest:"Rotes Tor Spitz an der Donau",km:"ca. 13–16 km",time:"4–5 h"};
  if(beg==="hund")r.text+=" Mit Hund: Wasser mitnehmen und Hitze beachten.";
  if(beg==="kind")r.text+=" Mit Kindern: Pausen einplanen und lieber kürzer gehen.";
- document.getElementById("wanderResult").innerHTML=`<div class="result-card"><h3>${r.title}</h3><p>${r.text}</p><div class="facts"><span>⏱ ${r.time}</span><span>📏 ${r.km}</span><span>🥾 Nordufer</span></div><div class="actions"><a href="${route(r.dest,'walking')}" target="_blank">Google Maps</a><a href="${komoot(r.dest)}" target="_blank">Komoot</a></div></div>`;
+ document.getElementById("wanderResult").innerHTML=`<div class="result-card"><h3>${r.title}</h3><p>${r.text}</p><div class="facts"><span>⏱ ${r.time}</span><span>📏 ${r.km}</span><span>🥾 Nordufer</span></div><div class="actions"><a href="${route(r.dest,'walking')}" target="_blank">Google Maps</a><a href="${komoot(r.dest)}" target="_blank">Komoot</a><a class="outdoor" href="${outdooractive(r.dest)}" target="_blank">Outdooractive</a></div></div>`;
 }
 function showAllRoutes(){
  const routes=[["🌿 Willendorf & Venus","Willendorf in der Wachau","kurz"],["🥾 Schwallenbach & Spitz","Spitz an der Donau","mittel"],["⛰ Rotes Tor Spitz","Rotes Tor Spitz an der Donau","sportlich"],["🏰 Aggstein Blickroute","Burgruine Aggstein","Ausflug"]];
- document.getElementById("wanderResult").innerHTML="<div class='map-grid'>"+routes.map(x=>`<article><h3>${x[0]}</h3><p>${x[2]}</p><div class="actions"><a href="${route(x[1],'walking')}" target="_blank">Google Maps</a><a href="${komoot(x[1])}" target="_blank">Komoot</a></div></article>`).join("")+"</div>";
+ document.getElementById("wanderResult").innerHTML="<div class='map-grid'>"+routes.map(x=>`<article><h3>${x[0]}</h3><p>${x[2]}</p><div class="actions"><a href="${route(x[1],'walking')}" target="_blank">Google Maps</a><a href="${komoot(x[1])}" target="_blank">Komoot</a><a class="outdoor" href="${outdooractive(x[1])}" target="_blank">Outdooractive</a></div></article>`).join("")+"</div>";
 }
 function renderMaps(){
  const items=[["🥾 Welterbesteig Richtung Willendorf","Aggsbach Markt → Willendorf","Nordufer · Venus-Fundstelle · gemütlich","Willendorf in der Wachau","walking"],["🚴 Donauradweg Richtung Spitz","Aggsbach Markt → Spitz","Donauradweg · Schwallenbach · Einkehr","Spitz an der Donau","bicycling"]];
- document.getElementById("mapCards").innerHTML=items.map(x=>`<article><h3>${x[0]}</h3><div class="map-placeholder">📍 ${x[1]}<br><small>${x[2]}</small></div><div class="actions"><a href="${route(x[3],x[4])}" target="_blank">Google Maps</a><a href="${komoot(x[3])}" target="_blank">Komoot öffnen</a></div></article>`).join("");
+ document.getElementById("mapCards").innerHTML=items.map(x=>`<article><h3>${x[0]}</h3><div class="map-placeholder">📍 ${x[1]}<br><small>${x[2]}</small></div><div class="actions"><a href="${route(x[3],x[4])}" target="_blank">Google Maps</a><a href="${komoot(x[3])}" target="_blank">Komoot öffnen</a><a class="outdoor" href="${outdooractive(x[3])}" target="_blank">Outdooractive</a></div></article>`).join("");
 }
 function showGloria(mode){
  const b=document.getElementById("gloriaResult");
@@ -72,15 +87,22 @@ function showCertificate(){const d=new Date(),date=String(d.getDate()).padStart(
 function updateCert(){document.getElementById("certPreview").textContent=document.getElementById("certName").value||"Wachau-Meisterin / Wachau-Meister"}
 function runAppCheck(){
  const checks=[
-  ["Wetterblock",!!document.getElementById("weatherBox")],
-  ["Fidels Wanderwelt",typeof showFidelRoute==="function"],
-  ["Karten/Komoot",!!document.getElementById("mapCards")],
-  ["Glorias Genusswelt",typeof showGloria==="function"],
-  ["Heurigenfinder",typeof renderHeurigen==="function"],
-  ["Pias Kinderwelt",typeof showPia==="function"],
-  ["Bücherwelt",!!document.getElementById("buecherwelt")],
-  ["Service-Links",document.querySelectorAll("#service a").length>=4]
+  ["Startbild",!!document.querySelector(".hero-img"),"Titelbild vorhanden"],
+  ["Sprachwahl",document.querySelectorAll(".language-bar button").length===6,"6 Sprachbuttons vorhanden"],
+  ["Wetter",!!document.getElementById("weatherBox") && typeof loadWeather==="function","Open-Meteo-Funktion vorhanden"],
+  ["Fidels Wanderwelt",!!document.getElementById("wanderResult") && typeof showFidelRoute==="function","Empfehlungsfunktion vorhanden"],
+  ["Alle Wander-Routen",typeof showAllRoutes==="function","Routenliste vorhanden"],
+  ["Karten/Komoot",!!document.getElementById("mapCards") && typeof renderMaps==="function","Karten-Fallback vorhanden"],
+  ["Glorias Radwelt",!!document.getElementById("gloriaResult") && typeof showGloria==="function","In-App-Auswahl vorhanden"],
+  ["Heurigenfinder",!!document.getElementById("heurigenResult") && typeof renderHeurigen==="function","Google-KI-Modus vorhanden"],
+  ["Pias Kinderwelt",!!document.getElementById("piaResult") && typeof showPia==="function","Quiz/Schatzsuche/Geschichten vorhanden"],
+  ["Bücherwelt",!!document.getElementById("buecherwelt"),"Bücherwelt vorhanden"],
+  ["Service-Links",document.querySelectorAll("#service a").length>=6,"SMS/WhatsApp/Fähren/Wachaubahn vorhanden"],
+  ["Copyright",!!document.querySelector(".footer"),"Copyright-Footer vorhanden"]
  ];
- document.getElementById("appCheckResult").innerHTML="<div class='tip-grid'>"+checks.map(c=>`<article><h3>${c[1]?"✅":"❌"} ${c[0]}</h3><p>${c[1]?"funktioniert / vorhanden":"prüfen"}</p></article>`).join("")+"</div>";
+ const ok=checks.filter(c=>c[1]).length;
+ document.getElementById("appCheckResult").innerHTML=
+ `<div class="appcheck-summary">✅ ${ok} von ${checks.length} Kernfunktionen vorhanden.</div>`+
+ "<div class='tip-grid'>"+checks.map(c=>`<article class="${c[1]?"check-ok":"check-bad"}"><h3>${c[1]?"✅":"❌"} ${c[0]}</h3><p>${c[2]}</p></article>`).join("")+"</div>";
 }
 document.addEventListener("DOMContentLoaded",()=>{loadWeather();showMorning("wander");showFidelRoute();renderMaps();showGloria("rad");setHeurigenDate("today");showPia("quiz")});
