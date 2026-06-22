@@ -1,3 +1,0 @@
-Doppelte IDs: keine
-Fehlende Bereiche: keine
-Fehlende JS-Bestandteile: keine
