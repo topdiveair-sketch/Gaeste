@@ -1,0 +1,15 @@
+Zuhause am Bach Gäste-App
+Version 16.1 Wachau-Meister Urkunde
+Build 2026-06-20
+
+Neu:
+- Namensfeld direkt in der App für Wachau-Meister-Urkunde
+- Foto aufnehmen oder aus Galerie wählen
+- Foto bleibt lokal im Browser, kein Upload
+- Drucklayout DIN A4 Querformat
+- Urkunde mit Fidel, Gloria, Pia, Welterbesteig Wachau und Donauradweg
+
+Prüfung:
+- JavaScript-Syntax geprüft
+- doppelte IDs geprüft
+- ZIP erzeugt
