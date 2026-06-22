@@ -3,7 +3,7 @@ const HOME = "Aggsbach Markt 82, 3641 Aggsbach Markt, Österreich";
 function enc(x){return encodeURIComponent(x)}
 function go(id){document.getElementById(id)?.scrollIntoView({behavior:"smooth",block:"start"})}
 function route(dest,mode="walking"){return `https://www.google.com/maps/dir/?api=1&origin=${enc(HOME)}&destination=${enc(dest)}&travelmode=${enc(mode)}`}
-function komoot(q){return "https://www.komoot.com/search/"+enc(q)}
+function komoot(q){return "https://www.google.com/search?q="+encodeURIComponent("Komoot "+q+" Wachau Tour")}
 function google(q){return "https://www.google.com/search?q="+enc(q)}
 function setLang(lang){
  const names={de:"Deutsch",en:"English",cz:"Čeština",hu:"Magyar",es:"Español",fr:"Français"};
