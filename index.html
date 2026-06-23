@@ -6,13 +6,13 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>Zuhause am Bach – Gäste-App V43</title>
-<link rel="stylesheet" href="style.css?v=43">
+<title>Zuhause am Bach – Gäste-App V45</title>
+<link rel="stylesheet" href="style.css?v=45">
 </head>
 <body>
 <header class="hero" id="start">
   <div class="topbar">
-    <div class="badge">V43 · Zuhause am Bach</div>
+    <div class="badge">V45 · Willkommen im Rudel</div>
     <div class="language-bar">
       <button onclick="setLang('de')">DE</button>
       <button onclick="setLang('en')">EN</button>
@@ -31,14 +31,20 @@
   <button onclick="go('rad')">🚴 Radfahren</button>
   <button onclick="go('heurigen')">🍷 Heurige</button>
   <button onclick="go('kinder')">🐾 Kinderwelt</button>
+  <button onclick="go('challenge')">🏅 Challenge</button>
   <button onclick="go('service')">☎ Service</button>
   <button onclick="go('buecherwelt')">📚 Bücher</button>
 </nav>
 
 <main>
 <section class="card welcome">
-  <h1>Willkommen bei Zuhause am Bach – Gästehaus Wachau</h1>
-  <p>Ihre Unterkunft am Welterbesteig Wachau und am Donauradweg in Aggsbach Markt. Willkommen bei den Wilden Wachauer Windis – dort, wo Geschichten entstehen.</p>
+  <h1>🐾 Willkommen im Rudel!</h1>
+  <p>Schön, dass Sie da sind. Für die Dauer Ihres Aufenthalts gehören Sie zum Rudel der Wilden Wachauer Windis. Fidel, Gloria und Pia begleiten Sie durch die Wachau – mit Wanderwegen, Radtouren, Genuss-Tipps und der neuen Wachau-Challenge.</p>
+  <div class="button-row">
+    <button onclick="go('challenge')">🏅 Wachau-Challenge starten</button>
+    <button onclick="go('rudelbonus')">🤝 Neue Rudelmitglieder</button>
+    <button onclick="go('morgen')">🌤 Tagesempfehlung</button>
+  </div>
 </section>
 
 <section id="zimmer" class="card">
@@ -195,6 +201,48 @@
   </div>
 </section>
 
+
+<section id="challenge" class="card challenge-card">
+  <div class="kicker">🏅 Wachau-Challenge</div>
+  <h2>Gemeinsame Punkte für Wanderer, Radfahrer und Wachau-Genießer</h2>
+  <p>Sammeln Sie Wachau-Punkte an Orten, die für Welterbesteig-Wanderer, Donauradweg-Radfahrer und Genussgäste gemeinsam erreichbar sind. Die Hauptstationen liegen bewusst am Nordufer beziehungsweise gut erreichbar von Zuhause am Bach. Südufer-Ziele wie Aggstein zählen als Bonus.</p>
+  <div class="challenge-progress-wrap">
+    <div class="challenge-headline"><strong id="challengeStatus">Noch kein Stempel</strong><span id="challengePoints">0 / 100 Punkte</span></div>
+    <div class="progress"><div id="challengeBar" class="progress-bar"></div></div>
+  </div>
+  <div id="challengeGrid" class="challenge-grid"></div>
+  <div class="button-row">
+    <button onclick="resetChallenge()">↺ Challenge zurücksetzen</button>
+    <button onclick="showWachauCertificate()">🏆 Wachau-Meister-Urkunde</button>
+  </div>
+  <p class="small">Hinweis: Die Challenge ist ein freiwilliges Gäste-Erlebnis. Fotos und Namen werden nur mit Zustimmung veröffentlicht.</p>
+</section>
+
+<section id="rudelbonus" class="card bonus-card">
+  <div class="kicker">🤝 Neue Rudelmitglieder willkommen</div>
+  <h2>Freunde empfehlen Zuhause am Bach</h2>
+  <p>Hat Ihnen Ihr Aufenthalt gefallen? Dann empfehlen Sie Zuhause am Bach gerne an Freunde, Wanderer oder Radfahrer weiter. Kommt durch Ihre Empfehlung eine Buchung zustande, bedanken wir uns bei Ihrem nächsten Besuch mit Kaffee und Kuchen für 2 Personen.</p>
+  <div class="bonus-box">
+    <h3>☕ Kaffee & Kuchen Bonus</h3>
+    <p>Einfach bei der Buchung den Namen des Empfehlungsgebers angeben. Die Belohnung gilt für erfolgreiche Empfehlungen – nicht für Bewertungen.</p>
+  </div>
+  <div class="button-row">
+    <a class="btn-link" id="whatsappRecommend" target="_blank" rel="noopener">📲 Per WhatsApp empfehlen</a>
+    <a class="btn-link brown" id="mailRecommend">✉️ Per E-Mail empfehlen</a>
+  </div>
+</section>
+
+<section id="rudelstatus" class="card">
+  <div class="kicker">🐾 Mein Rudelstatus</div>
+  <h2>Vom Wachau-Freund zur Rudel-Legende</h2>
+  <div class="status-grid">
+    <article><h3>🥉 Wachau-Freund</h3><p>30 Punkte</p></article>
+    <article><h3>🥈 Wachau-Kenner</h3><p>60 Punkte</p></article>
+    <article><h3>🥇 Wachau-Meister</h3><p>100 Punkte</p></article>
+    <article><h3>🐾 Rudel-Legende</h3><p>5 erfolgreiche Empfehlungen</p></article>
+  </div>
+</section>
+
 <section id="service" class="card">
   <div class="kicker">☎ Mobilität & Hilfe</div>
   <h2>Service für Gäste</h2>
@@ -252,6 +300,8 @@
   <div>Die Wilden Wachauer Windis © J.F.X. Prem</div>
   <div>Aggsbach Markt 82 · 3641 Aggsbach Markt · Tel. <a href="tel:+436646437526">0664 6437526</a></div>
   <div class="footer-links">
+    <a href="#challenge">Wachau-Challenge</a>
+    <a href="#rudelbonus">Freunde-Bonus</a>
     <a href="#service">Kontakt</a>
     <a href="#appcheck">App Check</a>
     <a href="https://www.diewildenwachauerwindis.at" target="_blank" rel="noopener">Windis-Webseite</a>
@@ -259,6 +309,6 @@
 </footer>
 
 
-<script src="app.js?v=43"></script>
+<script src="app.js?v=45"></script>
 </body>
 </html>

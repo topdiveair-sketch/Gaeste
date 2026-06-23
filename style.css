@@ -121,3 +121,19 @@ footer{text-align:center;padding:30px;color:var(--muted)}
 
 /* V43 – Komoot/Outdooractive Fallbacks */
 .actions a.outdoor{background:#214b7a!important}
+
+/* V44 – Willkommen im Rudel / Wachau-Challenge */
+.challenge-card{background:linear-gradient(180deg,#fffdf8,#eef8df)}
+.challenge-progress-wrap{background:#fff8e8;border:1px solid var(--border);border-radius:18px;padding:14px;margin:16px 0}
+.challenge-headline{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:#4a2a14;font-size:18px}
+.progress{height:18px;background:#eadcc8;border-radius:999px;overflow:hidden;margin-top:10px}
+.progress-bar{height:100%;width:0%;background:linear-gradient(90deg,#356120,#8a5a23);border-radius:999px;transition:width .35s ease}
+.challenge-grid,.status-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:14px}
+.challenge-item,.status-grid article,.bonus-box{background:#fffaf2;border:1px solid var(--border);border-radius:18px;padding:16px;box-shadow:0 5px 16px rgba(35,25,15,.05)}
+.challenge-item.done{border-color:#70a94a;background:#f2fbeb}
+.challenge-item .stamp{font-size:34px;line-height:1}
+.challenge-item h3{margin:.25em 0}
+.challenge-item .actions button{box-shadow:none}
+.bonus-card{background:linear-gradient(180deg,#fffdf8,#fff2df)}
+.wachau-cert h3{font-size:30px}.wachau-cert h2{font-size:42px}
+@media(max-width:760px){.challenge-grid,.status-grid{grid-template-columns:1fr}.challenge-headline{font-size:16px}}

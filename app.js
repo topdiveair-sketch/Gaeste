@@ -53,8 +53,13 @@ function showFidelRoute(){
  document.getElementById("wanderResult").innerHTML=`<div class="result-card"><h3>${r.title}</h3><p>${r.text}</p><div class="facts"><span>⏱ ${r.time}</span><span>📏 ${r.km}</span><span>🥾 Nordufer</span></div><div class="actions"><a href="${route(r.dest,'walking')}" target="_blank">Google Maps</a><a href="${komoot(r.dest)}" target="_blank">Komoot</a><a class="outdoor" href="${outdooractive(r.dest)}" target="_blank">Outdooractive</a></div></div>`;
 }
 function showAllRoutes(){
- const routes=[["🌿 Willendorf & Venus","Willendorf in der Wachau","kurz"],["🥾 Schwallenbach & Spitz","Spitz an der Donau","mittel"],["⛰ Rotes Tor Spitz","Rotes Tor Spitz an der Donau","sportlich"],["🏰 Aggstein Blickroute","Burgruine Aggstein","Ausflug"]];
- document.getElementById("wanderResult").innerHTML="<div class='map-grid'>"+routes.map(x=>`<article><h3>${x[0]}</h3><p>${x[2]}</p><div class="actions"><a href="${route(x[1],'walking')}" target="_blank">Google Maps</a><a href="${komoot(x[1])}" target="_blank">Komoot</a><a class="outdoor" href="${outdooractive(x[1])}" target="_blank">Outdooractive</a></div></article>`).join("")+"</div>";
+ const routes=[
+  ["🌿 Willendorf & Venus","Willendorf in der Wachau","kurz · Nordufer","walking"],
+  ["🥾 Schwallenbach & Spitz","Spitz an der Donau","mittel · Nordufer","walking"],
+  ["⛰ Rotes Tor Spitz","Rotes Tor Spitz an der Donau","sportlich · Nordufer","walking"],
+  ["🏰 Bonus: Aggstein Südufer","Burgruine Aggstein","Ausflug · Südufer · am besten mit Auto/Fähre prüfen","driving"]
+ ];
+ document.getElementById("wanderResult").innerHTML="<div class='map-grid'>"+routes.map(x=>`<article><h3>${x[0]}</h3><p>${x[2]}</p><div class="actions"><a href="${route(x[1],x[3])}" target="_blank">Google Maps</a><a href="${komoot(x[1])}" target="_blank">Komoot</a><a class="outdoor" href="${outdooractive(x[1])}" target="_blank">Outdooractive</a></div></article>`).join("")+"</div>";
 }
 function renderMaps(){
  const items=[["🥾 Welterbesteig Richtung Willendorf","Aggsbach Markt → Willendorf","Nordufer · Venus-Fundstelle · gemütlich","Willendorf in der Wachau","walking"],["🚴 Donauradweg Richtung Spitz","Aggsbach Markt → Spitz","Donauradweg · Schwallenbach · Einkehr","Spitz an der Donau","bicycling"]];
@@ -98,6 +103,8 @@ function runAppCheck(){
   ["Pias Kinderwelt",!!document.getElementById("piaResult") && typeof showPia==="function","Quiz/Schatzsuche/Geschichten vorhanden"],
   ["Bücherwelt",!!document.getElementById("buecherwelt"),"Bücherwelt vorhanden"],
   ["Service-Links",document.querySelectorAll("#service a").length>=6,"SMS/WhatsApp/Fähren/Wachaubahn vorhanden"],
+  ["Interne Sprungziele",[...document.querySelectorAll('a[href^="#"]')].every(a=>document.getElementById(a.getAttribute('href').slice(1))),"Alle internen Links zeigen auf vorhandene Bereiche"],
+  ["Externe Links",[...document.querySelectorAll('a[href^="http"]')].length>=8,"Google Maps, WhatsApp und Webseiten-Links vorhanden"],
   ["Copyright",!!document.querySelector(".footer"),"Copyright-Footer vorhanden"]
  ];
  const ok=checks.filter(c=>c[1]).length;
@@ -106,3 +113,77 @@ function runAppCheck(){
  "<div class='tip-grid'>"+checks.map(c=>`<article class="${c[1]?"check-ok":"check-bad"}"><h3>${c[1]?"✅":"❌"} ${c[0]}</h3><p>${c[2]}</p></article>`).join("")+"</div>";
 }
 document.addEventListener("DOMContentLoaded",()=>{loadWeather();showMorning("wander");showFidelRoute();renderMaps();showGloria("rad");setHeurigenDate("today");showPia("quiz")});
+
+// V44 – Willkommen im Rudel: Wachau-Challenge & Freunde-Bonus
+const CHALLENGE_KEY = "zab_wachau_challenge_v45";
+const CHALLENGE_ITEMS = [
+  {id:"home", emoji:"🏡", title:"Zuhause am Bach", text:"Ankommen, durchatmen und Willkommen im Rudel.", points:10, main:true},
+  {id:"donau", emoji:"🍷", title:"Donauschlössl Spitz", text:"Glorias Genuss-Tipp in Spitz an der Donau.", points:10, main:true, dest:"Donauschlössel Gritsch Spitz an der Donau", mode:"bicycling"},
+  {id:"venus", emoji:"🏺", title:"Venus von Willendorf", text:"Kulturstopp am Nordufer der Wachau.", points:10, main:true, dest:"Willendorf in der Wachau", mode:"walking"},
+  {id:"melk", emoji:"⛪", title:"Stift Melk", text:"Klassiker für Kultur- und Regentage.", points:10, main:true, dest:"Stift Melk", mode:"driving"},
+  {id:"weissenkirchen", emoji:"🍇", title:"Weißenkirchen", text:"Weinort am Nordufer für Radfahrer und Genießer.", points:10, main:true, dest:"Weißenkirchen in der Wachau", mode:"bicycling"},
+  {id:"spitz", emoji:"🌊", title:"Spitz an der Donau", text:"Donauradweg, Heurige und schöne Rastplätze.", points:10, main:true, dest:"Spitz an der Donau", mode:"bicycling"},
+  {id:"heuriger", emoji:"🍷", title:"Heurigenbesuch", text:"Ein echter Wachau-Moment mit Wein oder Traubensaft.", points:10, main:true},
+  {id:"marille", emoji:"🍑", title:"Marillenprodukt probiert", text:"Marillenkuchen, Marmelade, Saft oder Knödel.", points:10, main:true},
+  {id:"sunset", emoji:"🌅", title:"Sonnenuntergang an der Donau", text:"Ein Foto, ein Moment, ein Stück Wachau.", points:10, main:true},
+  {id:"windis", emoji:"🐾", title:"Foto mit Fidel, Gloria oder Pia", text:"Das Erinnerungsfoto aus dem Rudel.", points:10, main:true},
+  {id:"windibook", emoji:"📚", title:"Windis-Bücher entdeckt", text:"QR-Code scannen oder in die Bücherwelt schauen.", points:10, main:false},
+  {id:"aggs", emoji:"🏰", title:"Bonus: Burgruine Aggstein", text:"Südufer-Ziel – stark, aber nicht Pflicht.", points:15, main:false, dest:"Burgruine Aggstein", mode:"driving"},
+  {id:"duernstein", emoji:"🏰", title:"Bonus: Dürnstein", text:"Blauer Turm, Ruine und Wachau-Postkarte pur.", points:15, main:false, dest:"Dürnstein", mode:"driving"},
+  {id:"ship", emoji:"🚢", title:"Bonus: Donauschifffahrt", text:"Die Wachau vom Wasser aus erleben.", points:10, main:false},
+  {id:"trail", emoji:"🥾", title:"Bonus: Welterbesteig-Etappe", text:"Für alle, die ein Stück Welterbesteig gegangen sind.", points:10, main:false},
+  {id:"bike", emoji:"🚴", title:"Bonus: Donauradweg-Etappe", text:"Für alle, die ein Stück Donauradweg gefahren sind.", points:10, main:false}
+];
+function getChallenge(){try{return JSON.parse(localStorage.getItem(CHALLENGE_KEY)||"{}")}catch(e){return {}}}
+function saveChallenge(state){localStorage.setItem(CHALLENGE_KEY,JSON.stringify(state))}
+function challengeScore(state){return CHALLENGE_ITEMS.filter(x=>state[x.id]).reduce((sum,x)=>sum+x.points,0)}
+function challengeRank(points){if(points>=100)return "🥇 Wachau-Meister"; if(points>=60)return "🥈 Wachau-Kenner"; if(points>=30)return "🥉 Wachau-Freund"; return "🐾 Neues Rudelmitglied"}
+function toggleChallenge(id){const state=getChallenge();state[id]=!state[id];saveChallenge(state);renderChallenge()}
+function resetChallenge(){if(confirm("Wachau-Challenge wirklich zurücksetzen?")){localStorage.removeItem(CHALLENGE_KEY);renderChallenge()}}
+function renderChallenge(){
+ const grid=document.getElementById("challengeGrid"); if(!grid)return;
+ const state=getChallenge(), points=challengeScore(state), capped=Math.min(points,100), rank=challengeRank(points);
+ document.getElementById("challengePoints").textContent=points+" / 100 Punkte";
+ document.getElementById("challengeStatus").textContent=rank;
+ document.getElementById("challengeBar").style.width=capped+"%";
+ grid.innerHTML=CHALLENGE_ITEMS.map(item=>{
+   const done=!!state[item.id];
+   const routeLink=item.dest?`<a href="${route(item.dest,item.mode||'walking')}" target="_blank" rel="noopener">🗺 Route</a>`:"";
+   return `<article class="challenge-item ${done?'done':''}">
+     <div class="stamp">${done?'✅':item.emoji}</div>
+     <h3>${item.title}</h3>
+     <p>${item.text}</p>
+     <div class="facts"><span>${item.points} Punkte</span><span>${item.main?'Hauptstation':'Bonus'}</span></div>
+     <div class="actions"><button onclick="toggleChallenge('${item.id}')">${done?'Stempel entfernen':'Stempel sammeln'}</button>${routeLink}</div>
+   </article>`;
+ }).join("");
+}
+function showWachauCertificate(){
+ const d=new Date(),date=String(d.getDate()).padStart(2,"0")+"."+String(d.getMonth()+1).padStart(2,"0")+"."+d.getFullYear();
+ const points=challengeScore(getChallenge()), rank=challengeRank(points);
+ const box=document.getElementById("challengeGrid"); if(!box)return;
+ box.innerHTML=`<div id="certificatePrint" class="certificate wachau-cert"><h3>🏆 Wachau-Challenge</h3><p>Diese Urkunde erhält</p><input id="certName" type="text" placeholder="Name eintragen"><h2 id="certPreview">${rank}</h2><p>für ${points} gesammelte Wachau-Punkte bei Zuhause am Bach.</p><p><strong>Aggsbach Markt, ${date}</strong></p><p>🐾 Fidel · Gloria · Pia</p><p>🏡 Zuhause am Bach – Gästehaus Wachau</p></div><div class="button-row"><button onclick="updateCert()">Name übernehmen</button><button onclick="window.print()">🖨️ Drucken</button><button onclick="renderChallenge()">Zurück zur Challenge</button></div>`;
+}
+function setupRecommendLinks(){
+ const url="https://topdiveair-sketch.github.io/Gaeste/";
+ const text="Ich war bei Zuhause am Bach in Aggsbach Markt – perfekt für Welterbesteig-Wanderer und Donauradweg-Radfahrer. Willkommen im Rudel der Wilden Wachauer Windis: "+url;
+ const wa=document.getElementById("whatsappRecommend"); if(wa)wa.href="https://wa.me/?text="+enc(text);
+ const mail=document.getElementById("mailRecommend"); if(mail)mail.href="mailto:?subject="+enc("Tipp: Zuhause am Bach in der Wachau")+"&body="+enc(text);
+}
+
+// V44 – App-Check erweitern
+const _oldRunAppCheck = runAppCheck;
+runAppCheck = function(){
+ _oldRunAppCheck();
+ const extra=[
+  ["Willkommen im Rudel",!!document.querySelector(".welcome h1") && document.querySelector(".welcome h1").textContent.includes("Rudel"),"Neue Startbotschaft vorhanden"],
+  ["Wachau-Challenge",!!document.getElementById("challenge") && typeof renderChallenge==="function","Punkte, Stempel und Fortschritt vorhanden"],
+  ["Freunde-Bonus",!!document.getElementById("rudelbonus"),"Kaffee & Kuchen Bonus vorhanden"],
+  ["Rudelstatus",!!document.getElementById("rudelstatus"),"Status-Stufen vorhanden"],
+  ["Empfehlungslinks",!!document.getElementById("whatsappRecommend") && !!document.getElementById("mailRecommend"),"WhatsApp und E-Mail vorhanden"]
+ ];
+ const target=document.getElementById("appCheckResult");
+ if(target){target.innerHTML += "<h3>V44-Erweiterungen</h3><div class='tip-grid'>"+extra.map(c=>`<article class="${c[1]?"check-ok":"check-bad"}"><h3>${c[1]?"✅":"❌"} ${c[0]}</h3><p>${c[2]}</p></article>`).join("")+"</div>";}
+};
+
+document.addEventListener("DOMContentLoaded",()=>{renderChallenge();setupRecommendLinks();});
