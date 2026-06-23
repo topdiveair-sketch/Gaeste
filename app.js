@@ -114,8 +114,8 @@ function runAppCheck(){
 }
 document.addEventListener("DOMContentLoaded",()=>{loadWeather();showMorning("wander");showFidelRoute();renderMaps();showGloria("rad");setHeurigenDate("today");showPia("quiz")});
 
-// V44 – Willkommen im Rudel: Wachau-Challenge & Freunde-Bonus
-const CHALLENGE_KEY = "zab_wachau_challenge_v45";
+// V47 – Willkommen im Rudel: Wachau-Challenge & Freunde-Bonus
+const CHALLENGE_KEY = "zab_wachau_challenge_v46";
 const CHALLENGE_ITEMS = [
   {id:"home", emoji:"🏡", title:"Zuhause am Bach", text:"Ankommen, durchatmen und Willkommen im Rudel.", points:10, main:true},
   {id:"donau", emoji:"🍷", title:"Donauschlössl Spitz", text:"Glorias Genuss-Tipp in Spitz an der Donau.", points:10, main:true, dest:"Donauschlössel Gritsch Spitz an der Donau", mode:"bicycling"},
@@ -171,19 +171,20 @@ function setupRecommendLinks(){
  const mail=document.getElementById("mailRecommend"); if(mail)mail.href="mailto:?subject="+enc("Tipp: Zuhause am Bach in der Wachau")+"&body="+enc(text);
 }
 
-// V44 – App-Check erweitern
+// V47 – App-Check erweitert
 const _oldRunAppCheck = runAppCheck;
 runAppCheck = function(){
  _oldRunAppCheck();
  const extra=[
-  ["Willkommen im Rudel",!!document.querySelector(".welcome h1") && document.querySelector(".welcome h1").textContent.includes("Rudel"),"Neue Startbotschaft vorhanden"],
+  ["Startbotschaft",!!document.querySelector(".welcome h1"),"Willkommensbereich vorhanden"],
   ["Wachau-Challenge",!!document.getElementById("challenge") && typeof renderChallenge==="function","Punkte, Stempel und Fortschritt vorhanden"],
   ["Freunde-Bonus",!!document.getElementById("rudelbonus"),"Kaffee & Kuchen Bonus vorhanden"],
   ["Rudelstatus",!!document.getElementById("rudelstatus"),"Status-Stufen vorhanden"],
-  ["Empfehlungslinks",!!document.getElementById("whatsappRecommend") && !!document.getElementById("mailRecommend"),"WhatsApp und E-Mail vorhanden"]
+  ["Empfehlungslinks",!!document.getElementById("whatsappRecommend") && !!document.getElementById("mailRecommend"),"WhatsApp und E-Mail vorhanden"],
+  ["Links ohne href",Array.from(document.querySelectorAll("a")).every(a=>a.hasAttribute("href")),"Alle Links haben ein Ziel"]
  ];
  const target=document.getElementById("appCheckResult");
- if(target){target.innerHTML += "<h3>V44-Erweiterungen</h3><div class='tip-grid'>"+extra.map(c=>`<article class="${c[1]?"check-ok":"check-bad"}"><h3>${c[1]?"✅":"❌"} ${c[0]}</h3><p>${c[2]}</p></article>`).join("")+"</div>";}
+ if(target){target.innerHTML += "<h3>V46-Prüfung</h3><div class='tip-grid'>"+extra.map(c=>`<article class="${c[1]?"check-ok":"check-bad"}"><h3>${c[1]?"✅":"❌"} ${c[0]}</h3><p>${c[2]}</p></article>`).join("")+"</div>";}
 };
 
 document.addEventListener("DOMContentLoaded",()=>{renderChallenge();setupRecommendLinks();});

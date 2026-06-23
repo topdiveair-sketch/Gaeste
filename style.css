@@ -69,7 +69,7 @@ footer{text-align:center;padding:30px;color:var(--muted)}
 }
 
 
-/* V43 – Fehlerbehebung: Sprachleiste besser sichtbar */
+/* V47 – Fehlerbehebung: Sprachleiste besser sichtbar */
 .language-bar{
   background:rgba(35,22,12,.78)!important;
   border:1px solid rgba(255,255,255,.28)!important;
@@ -93,7 +93,7 @@ footer{text-align:center;padding:30px;color:var(--muted)}
   border:1px solid rgba(255,255,255,.35)!important;
 }
 
-/* V43 – Copyright Footer */
+/* V47 – Copyright Footer */
 .footer{
   background:#2b1d12;
   color:#fff4df;
@@ -105,7 +105,7 @@ footer{text-align:center;padding:30px;color:var(--muted)}
 .footer a{color:#ffd36c!important;text-decoration:none;font-weight:800}
 .footer-links{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:8px}
 
-/* V43 – App Check Ausgabe */
+/* V47 – App Check Ausgabe */
 .check-ok{border-left:6px solid #4f8b2f!important}
 .check-warn{border-left:6px solid #d69a25!important}
 .check-bad{border-left:6px solid #b94a38!important}
@@ -119,10 +119,10 @@ footer{text-align:center;padding:30px;color:var(--muted)}
   margin-bottom:12px;
 }
 
-/* V43 – Komoot/Outdooractive Fallbacks */
+/* V47 – Komoot/Outdooractive Fallbacks */
 .actions a.outdoor{background:#214b7a!important}
 
-/* V44 – Willkommen im Rudel / Wachau-Challenge */
+/* V47 – Willkommen im Rudel / Wachau-Challenge */
 .challenge-card{background:linear-gradient(180deg,#fffdf8,#eef8df)}
 .challenge-progress-wrap{background:#fff8e8;border:1px solid var(--border);border-radius:18px;padding:14px;margin:16px 0}
 .challenge-headline{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:#4a2a14;font-size:18px}
@@ -137,3 +137,5 @@ footer{text-align:center;padding:30px;color:var(--muted)}
 .bonus-card{background:linear-gradient(180deg,#fffdf8,#fff2df)}
 .wachau-cert h3{font-size:30px}.wachau-cert h2{font-size:42px}
 @media(max-width:760px){.challenge-grid,.status-grid{grid-template-columns:1fr}.challenge-headline{font-size:16px}}
+
+/* V46 geprüft/korrigiert: Cache-Buster, Tippfehler und App-Check-Label korrigiert */
