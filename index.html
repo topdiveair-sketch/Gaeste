@@ -6,13 +6,14 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>Zuhause am Bach – Gäste-App V47</title>
-<link rel="stylesheet" href="style.css?v=47">
+<title>Zuhause am Bach – Gäste-App V49 Smart-WLAN</title>
+<link rel="stylesheet" href="style.css?v=49">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 <header class="hero" id="start">
   <div class="topbar">
-    <div class="badge">V47 · geprüft</div>
+    <div class="badge">V49 · Smart-WLAN & Wetter</div>
     <div class="language-bar">
       <button onclick="setLang('de')">DE</button>
       <button onclick="setLang('en')">EN</button>
@@ -26,6 +27,7 @@
 </header>
 
 <nav class="quick-nav">
+  <button onclick="go('smartwifi')">📶 WLAN</button>
   <button onclick="go('wetter')">🌤 Heute</button>
   <button onclick="go('wandern')">🥾 Wandern</button>
   <button onclick="go('rad')">🚴 Radfahren</button>
@@ -47,6 +49,35 @@
   </div>
 </section>
 
+<section id="smartwifi" class="card smartwifi-card">
+  <div class="kicker">📶 Smart-WLAN</div>
+  <h2>Willkommen im kostenlosen Gäste-WLAN</h2>
+  <div class="wifi-status-box" id="wifiStatusBox">
+    <div class="wifi-icon">📶</div>
+    <div>
+      <strong id="wifiStatusTitle">Verbindung wird geprüft …</strong>
+      <p id="wifiStatusText">Bitte kurz warten.</p>
+    </div>
+  </div>
+  <div class="wifi-network">
+    <span>Netzwerk</span>
+    <strong>Zuhause am Bach</strong>
+    <small>Offenes Gäste-WLAN · kein Passwort erforderlich</small>
+  </div>
+  <div class="button-row">
+    <button onclick="confirmWifiGuest()">✅ Ich bin im WLAN</button>
+    <button onclick="copyWifiName()">📋 WLAN-Name kopieren</button>
+    <a class="btn-link" href="#service">💬 Gastgeber kontaktieren</a>
+  </div>
+  <div class="tip-grid">
+    <article><h3>🌤 Wetter</h3><p>14-Tage-Prognose für Aggsbach Markt.</p></article>
+    <article><h3>🥾 Wandern</h3><p>Fidels Nordufer-Tipps für den Welterbesteig.</p></article>
+    <article><h3>🚴 Radfahren</h3><p>Glorias Tipps für Donauradweg und E-Bike.</p></article>
+    <article><h3>🍳 Frühstück</h3><p>Frühstück direkt per SMS anfragen.</p></article>
+  </div>
+  <p class="small">Hinweis: Aus Datenschutzgründen kann ein Browser den genauen WLAN-Namen meistens nicht auslesen. Die App zeigt daher den Online-Status und eine freiwillige WLAN-Bestätigung an.</p>
+</section>
+
 <section id="zimmer" class="card">
   <div class="kicker">🛏️ Unsere Zimmer</div>
   <h2>Unsere Zimmer</h2>
@@ -58,14 +89,32 @@
   </div>
 </section>
 
+<section id="direktbuchung" class="card booking-card">
+  <div class="kicker">📅 Direkt buchen</div>
+  <h2>Jetzt Zimmer bei Booking.com buchen</h2>
+  <p>Hier sehen Sie aktuelle Verfügbarkeit und können Ihr Zimmer bei Zuhause am Bach – Wachau direkt reservieren.</p>
+  <div class="booking-benefits">
+    <span>✅ Sofortige Bestätigung</span>
+    <span>🚴 Ideal für Donauradweg & Welterbesteig</span>
+    <span>🍳 Frühstück zubuchbar</span>
+    <span>🚲 Fahrradgarage & E-Bike-Laden</span>
+  </div>
+  <a class="booking-button" href="https://www.booking.com/searchresults.de.html?aid=357028&label=bin859jc-10CAsoDkIQenUtaGF1c2UtYW0tYmFjaEgHWANoDogBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgCt7Xz0QbAAgHSAiQ4YTRmM2VhZS03NzQ0LTQ5NjQtYTM4NC0yMTYyOTEyOTJiZTLYAgHgAgE&highlighted_hotels=10657485&checkin=2026-06-26&redirected=1&city=-1973598&hlrd=user_sh&source=hotel&checkout=2026-06-27&keep_landing=1&sid=28e03ec3a824912c0e48f8eff10c123c" target="_blank" rel="noopener">📅 Jetzt direkt bei Booking.com buchen</a>
+</section>
+
 <section id="wetter" class="card weather-card">
-  <div class="kicker">🌤️ Heute / Morgen in der Wachau</div>
+  <div class="kicker">🌤️ 14-Tage-Wetter in der Wachau</div>
   <h2>Wetter für Aggsbach Markt</h2>
+  <p id="weatherUpdated" class="small">Wetter wird geladen …</p>
   <div id="weatherBox" class="weather-grid">
     <article><h3>🌤 Heute</h3><p>Wetter wird geladen …</p></article>
     <article><h3>🌦 Morgen</h3><p>Wetter wird geladen …</p></article>
   </div>
-  <p class="small">Quelle: Open-Meteo. Bei schlechter Verbindung bitte später erneut öffnen.</p>
+  <div class="chart-wrap">
+    <canvas id="weatherChart" height="230"></canvas>
+  </div>
+  <div id="weatherAdvice" class="result"></div>
+  <p class="small">Quelle: Open-Meteo. Prognosen ab Tag 7 sind als Trend zu verstehen.</p>
 </section>
 
 <section id="morgen" class="card">
@@ -309,6 +358,6 @@
 </footer>
 
 
-<script src="app.js?v=47"></script>
+<script src="app.js?v=49"></script>
 </body>
 </html>

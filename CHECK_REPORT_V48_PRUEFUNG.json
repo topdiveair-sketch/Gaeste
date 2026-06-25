@@ -1,0 +1,135 @@
+{
+  "version": "V48 geprüft",
+  "checks": [
+    {
+      "name": "ZIP entpackbar",
+      "ok": true,
+      "detail": "Dateien wurden erfolgreich gelesen"
+    },
+    {
+      "name": "index.html vorhanden",
+      "ok": true,
+      "detail": "Startdatei vorhanden"
+    },
+    {
+      "name": "style.css vorhanden",
+      "ok": true,
+      "detail": "CSS vorhanden"
+    },
+    {
+      "name": "app.js vorhanden",
+      "ok": true,
+      "detail": "JavaScript vorhanden"
+    },
+    {
+      "name": "Keine doppelten IDs",
+      "ok": true,
+      "detail": "0 doppelte IDs"
+    },
+    {
+      "name": "Navigation Ziele vorhanden",
+      "ok": true,
+      "detail": "Alle go()-Ziele vorhanden"
+    },
+    {
+      "name": "Button Funktionen definiert",
+      "ok": true,
+      "detail": "12 Funktionen gefunden"
+    },
+    {
+      "name": "Alle Links haben href",
+      "ok": true,
+      "detail": "23 Links geprüft"
+    },
+    {
+      "name": "Booking Button vorhanden",
+      "ok": true,
+      "detail": "Button gefunden"
+    },
+    {
+      "name": "Booking Link gesetzt",
+      "ok": true,
+      "detail": "https://www.booking.com/searchresults.de.html?aid=357028&label=bin859jc-10CAsoDkIQenUtaGF1c2UtYW0tYmFjaEgHWANoDogBAZgBM7"
+    },
+    {
+      "name": "Wetterbereich vorhanden",
+      "ok": true,
+      "detail": "Wettersektion und Canvas vorhanden"
+    },
+    {
+      "name": "Open-Meteo API eingebaut",
+      "ok": true,
+      "detail": "14-Tage-Aufruf im JavaScript"
+    },
+    {
+      "name": "Chart.js eingebunden",
+      "ok": true,
+      "detail": "Chart.js Script im Head"
+    },
+    {
+      "name": "Funktion loadWeather",
+      "ok": true,
+      "detail": "vorhanden"
+    },
+    {
+      "name": "Funktion showMorning",
+      "ok": true,
+      "detail": "vorhanden"
+    },
+    {
+      "name": "Funktion showFidelRoute",
+      "ok": true,
+      "detail": "vorhanden"
+    },
+    {
+      "name": "Funktion showAllRoutes",
+      "ok": true,
+      "detail": "vorhanden"
+    },
+    {
+      "name": "Funktion showGloria",
+      "ok": true,
+      "detail": "vorhanden"
+    },
+    {
+      "name": "Funktion setHeurigenDate",
+      "ok": true,
+      "detail": "vorhanden"
+    },
+    {
+      "name": "Funktion renderHeurigen",
+      "ok": true,
+      "detail": "vorhanden"
+    },
+    {
+      "name": "Funktion showPia",
+      "ok": true,
+      "detail": "vorhanden"
+    },
+    {
+      "name": "Funktion showCertificate",
+      "ok": true,
+      "detail": "vorhanden"
+    },
+    {
+      "name": "Funktion runAppCheck",
+      "ok": true,
+      "detail": "vorhanden"
+    },
+    {
+      "name": "Funktion renderChallenge",
+      "ok": true,
+      "detail": "vorhanden"
+    },
+    {
+      "name": "Funktion setupRecommendLinks",
+      "ok": true,
+      "detail": "vorhanden"
+    }
+  ],
+  "summary": {
+    "ok": 25,
+    "total": 25,
+    "failed": []
+  }
+}

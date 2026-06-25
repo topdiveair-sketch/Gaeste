@@ -24,14 +24,100 @@ function setLang(lang){
  box.innerHTML="<strong>🌍 "+(names[lang]||lang)+"</strong><br>"+msg;
  setTimeout(()=>{ if(box) box.remove(); },3500);
 }
+function showToast(msg){
+ let t=document.getElementById("toast");
+ if(!t){t=document.createElement("div");t.id="toast";t.className="toast";document.body.appendChild(t);}
+ t.textContent=msg;
+ clearTimeout(window.zabToastTimer);
+ window.zabToastTimer=setTimeout(()=>t.remove(),2800);
+}
+function updateSmartWifi(){
+ const box=document.getElementById("wifiStatusBox"), title=document.getElementById("wifiStatusTitle"), text=document.getElementById("wifiStatusText");
+ if(!box||!title||!text)return;
+ const confirmed=localStorage.getItem("zabWifiConfirmed")==="yes";
+ box.classList.remove("online","offline","confirmed");
+ if(confirmed){
+   box.classList.add("confirmed");
+   title.textContent="Sie sind im Gäste-WLAN eingebucht";
+   text.textContent="Willkommen bei Zuhause am Bach. Wetter, Wanderwelt, Radwelt und Service stehen bereit.";
+   return;
+ }
+ if(navigator.onLine){
+   box.classList.add("online");
+   title.textContent="Internetverbindung aktiv";
+   text.textContent="Bitte verbinden Sie sich bei Bedarf mit dem offenen WLAN ‚Zuhause am Bach‘ und tippen Sie anschließend auf „Ich bin im WLAN“.";
+ }else{
+   box.classList.add("offline");
+   title.textContent="Noch keine Internetverbindung";
+   text.textContent="Bitte WLAN am Handy öffnen und mit ‚Zuhause am Bach‘ verbinden. Kein Passwort erforderlich.";
+ }
+}
+function confirmWifiGuest(){
+ localStorage.setItem("zabWifiConfirmed","yes");
+ updateSmartWifi();
+ showToast("Willkommen im WLAN Zuhause am Bach 🐾");
+}
+async function copyWifiName(){
+ const name="Zuhause am Bach";
+ try{await navigator.clipboard.writeText(name);showToast("WLAN-Name kopiert: "+name);}
+ catch(e){showToast("WLAN: "+name);}
+}
+
 async function loadWeather(){
- const box=document.getElementById("weatherBox"); if(!box)return;
+ const box=document.getElementById("weatherBox");
+ const updated=document.getElementById("weatherUpdated");
+ const advice=document.getElementById("weatherAdvice");
+ if(!box)return;
  try{
-  const r=await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.2949&longitude=15.4032&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Europe%2FVienna&forecast_days=2");
-  const d=await r.json(); const codes={0:"☀️ Sonnig",1:"🌤️ Klar",2:"⛅ Teilweise bewölkt",3:"☁️ Bewölkt",45:"🌫️ Nebel",61:"🌧️ Leichter Regen",63:"🌧️ Regen",65:"🌧️ Starker Regen",80:"🌦️ Schauer",95:"⛈️ Gewitter"};
-  function card(i,t){const max=Math.round(d.daily.temperature_2m_max[i]),min=Math.round(d.daily.temperature_2m_min[i]),rain=d.daily.precipitation_probability_max[i]??0,txt=codes[d.daily.weather_code[i]]||"🌤️ Wetter";const amp=rain<35?"🟢 Gute Outdoor-Chance":rain<65?"🟡 Regenjacke einplanen":"🔴 Schlechtwetterprogramm";return `<article><h3>${t}</h3><p><strong>${txt}</strong></p><p>${min}–${max} °C · Regen ${rain}%</p><p><strong>${amp}</strong></p></article>`}
+  const r=await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.2949&longitude=15.4032&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Europe%2FVienna&forecast_days=14");
+  const d=await r.json();
+  const codes={0:"☀️ Sonnig",1:"🌤️ Klar",2:"⛅ Teilweise bewölkt",3:"☁️ Bewölkt",45:"🌫️ Nebel",48:"🌫️ Nebel",51:"🌦️ Niesel",53:"🌦️ Niesel",55:"🌧️ Niesel",61:"🌧️ Leichter Regen",63:"🌧️ Regen",65:"🌧️ Starker Regen",71:"❄️ Schnee",80:"🌦️ Schauer",81:"🌧️ Schauer",82:"⛈️ Starke Schauer",95:"⛈️ Gewitter",96:"⛈️ Gewitter",99:"⛈️ Gewitter"};
+  function dayLabel(iso,weekday=false){
+    const date=new Date(iso+"T12:00:00");
+    return date.toLocaleDateString("de-AT", weekday ? {weekday:"short",day:"2-digit",month:"2-digit"} : {day:"2-digit",month:"2-digit"});
+  }
+  function card(i,t){
+    const max=Math.round(d.daily.temperature_2m_max[i]);
+    const min=Math.round(d.daily.temperature_2m_min[i]);
+    const rain=d.daily.precipitation_probability_max[i]??0;
+    const txt=codes[d.daily.weather_code[i]]||"🌤️ Wetter";
+    const amp=rain<35?"🟢 Gute Outdoor-Chance":rain<65?"🟡 Regenjacke einplanen":"🔴 Schlechtwetterprogramm";
+    return `<article><h3>${t}</h3><p><strong>${txt}</strong></p><p>${min}–${max} °C · Schauer ${rain}%</p><p><strong>${amp}</strong></p></article>`;
+  }
   box.innerHTML=card(0,"🌤 Heute")+card(1,"🌦 Morgen");
- }catch(e){box.innerHTML="<article><h3>🌤 Heute</h3><p>Wetter konnte nicht geladen werden.</p></article><article><h3>🌦 Morgen</h3><p>Internetverbindung prüfen.</p></article>"}
+  if(updated){
+    updated.textContent="Aktualisiert am "+new Date().toLocaleDateString("de-AT",{weekday:"long",day:"2-digit",month:"2-digit",year:"numeric"})+" · 14-Tage-Prognose";
+  }
+  const labels=d.daily.time.map(x=>dayLabel(x));
+  const ctx=document.getElementById("weatherChart");
+  if(ctx && window.Chart){
+    if(window.zabWeatherChart){window.zabWeatherChart.destroy();}
+    window.zabWeatherChart=new Chart(ctx,{
+      type:"line",
+      data:{labels,datasets:[
+        {label:"Tageshöchsttemperatur °C",data:d.daily.temperature_2m_max,tension:.35,yAxisID:"y"},
+        {label:"Tiefsttemperatur °C",data:d.daily.temperature_2m_min,tension:.35,yAxisID:"y"},
+        {label:"Schauerwahrscheinlichkeit %",data:d.daily.precipitation_probability_max,type:"bar",yAxisID:"y1"}
+      ]},
+      options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:"bottom"}},scales:{
+        y:{title:{display:true,text:"Temperatur °C"}},
+        y1:{position:"right",min:0,max:100,grid:{drawOnChartArea:false},title:{display:true,text:"Schauer %"}}
+      }}
+    });
+  }
+  if(advice){
+    const max0=Math.round(d.daily.temperature_2m_max[0]);
+    const rain0=d.daily.precipitation_probability_max[0]??0;
+    let text="🥾 Wanderer & 🚴 Radfahrer: ";
+    if(max0>=32) text+="heute möglichst früh starten, viel Wasser mitnehmen und Mittagshitze meiden.";
+    else if(rain0>=60) text+="Regenjacke einpacken und Tour flexibel planen.";
+    else text+="gute Bedingungen – Wetter am Morgen nochmals prüfen.";
+    advice.innerHTML=`<div class="result-card"><h3>🐾 Empfehlung der Wilden Wachauer Windis</h3><p>${text}</p></div>`;
+  }
+ }catch(e){
+   box.innerHTML="<article><h3>🌤 Heute</h3><p>Wetter konnte nicht geladen werden.</p></article><article><h3>🌦 Morgen</h3><p>Internetverbindung prüfen.</p></article>";
+   if(updated) updated.textContent="Wetter konnte nicht geladen werden.";
+ }
 }
 function showMorning(type){
  const data={wander:["🥾 Heute gemütlich starten","Aggsbach Markt – Willendorf – Venus-Fundstelle. Wasser mitnehmen, Wetter prüfen.","Willendorf in der Wachau","walking"],
@@ -94,6 +180,7 @@ function runAppCheck(){
  const checks=[
   ["Startbild",!!document.querySelector(".hero-img"),"Titelbild vorhanden"],
   ["Sprachwahl",document.querySelectorAll(".language-bar button").length===6,"6 Sprachbuttons vorhanden"],
+  ["Smart-WLAN",!!document.getElementById("smartwifi") && typeof updateSmartWifi==="function","WLAN-Willkommensbereich vorhanden"],
   ["Wetter",!!document.getElementById("weatherBox") && typeof loadWeather==="function","Open-Meteo-Funktion vorhanden"],
   ["Fidels Wanderwelt",!!document.getElementById("wanderResult") && typeof showFidelRoute==="function","Empfehlungsfunktion vorhanden"],
   ["Alle Wander-Routen",typeof showAllRoutes==="function","Routenliste vorhanden"],
@@ -112,7 +199,9 @@ function runAppCheck(){
  `<div class="appcheck-summary">✅ ${ok} von ${checks.length} Kernfunktionen vorhanden.</div>`+
  "<div class='tip-grid'>"+checks.map(c=>`<article class="${c[1]?"check-ok":"check-bad"}"><h3>${c[1]?"✅":"❌"} ${c[0]}</h3><p>${c[2]}</p></article>`).join("")+"</div>";
 }
-document.addEventListener("DOMContentLoaded",()=>{loadWeather();showMorning("wander");showFidelRoute();renderMaps();showGloria("rad");setHeurigenDate("today");showPia("quiz")});
+document.addEventListener("DOMContentLoaded",()=>{updateSmartWifi();loadWeather();showMorning("wander");showFidelRoute();renderMaps();showGloria("rad");setHeurigenDate("today");showPia("quiz")});
+window.addEventListener("online",updateSmartWifi);
+window.addEventListener("offline",updateSmartWifi);
 
 // V47 – Willkommen im Rudel: Wachau-Challenge & Freunde-Bonus
 const CHALLENGE_KEY = "zab_wachau_challenge_v46";

@@ -1,0 +1,14 @@
+{
+  "node_syntax_ok": true,
+  "missing_onclick_functions": [],
+  "missing_go_targets": [],
+  "buttons_without_onclick": [],
+  "anchors_without_href_count": 0,
+  "files": [
+    "hero-windis.png",
+    "hero-wachau-premium.png",
+    "index.html",
+    "style.css",
+    "app.js"
+  ]
+}
