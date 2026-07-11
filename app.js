@@ -6,24 +6,6 @@ function route(dest,mode="walking"){return `https://www.google.com/maps/dir/?api
 function komoot(q){return "https://www.google.com/search?q="+enc("site:komoot.com "+q+" Wachau Tour")}
 function google(q){return "https://www.google.com/search?q="+enc(q)}
 function outdooractive(q){return "https://www.google.com/search?q="+enc("site:outdooractive.com "+q+" Wachau Tour")}
-function setLang(lang){
- const names={de:"Deutsch",en:"English",cz:"Čeština",hu:"Magyar",es:"Español",fr:"Français"};
- const msg="Sprache gewählt: "+(names[lang]||lang)+". Die vollständige Übersetzung wird in einer späteren Version ergänzt.";
- let box=document.getElementById("langNotice");
- if(!box){
-   box=document.createElement("div");
-   box.id="langNotice";
-   box.className="card";
-   box.style.position="fixed";
-   box.style.right="14px";
-   box.style.top="90px";
-   box.style.zIndex="9999";
-   box.style.maxWidth="360px";
-   document.body.appendChild(box);
- }
- box.innerHTML="<strong>🌍 "+(names[lang]||lang)+"</strong><br>"+msg;
- setTimeout(()=>{ if(box) box.remove(); },3500);
-}
 function showToast(msg){
  let t=document.getElementById("toast");
  if(!t){t=document.createElement("div");t.id="toast";t.className="toast";document.body.appendChild(t);}
@@ -147,10 +129,6 @@ function showAllRoutes(){
  ];
  document.getElementById("wanderResult").innerHTML="<div class='map-grid'>"+routes.map(x=>`<article><h3>${x[0]}</h3><p>${x[2]}</p><div class="actions"><a href="${route(x[1],x[3])}" target="_blank">Google Maps</a><a href="${komoot(x[1])}" target="_blank">Komoot</a><a class="outdoor" href="${outdooractive(x[1])}" target="_blank">Outdooractive</a></div></article>`).join("")+"</div>";
 }
-function renderMaps(){
- const items=[["🥾 Welterbesteig Richtung Willendorf","Aggsbach Markt → Willendorf","Nordufer · Venus-Fundstelle · gemütlich","Willendorf in der Wachau","walking"],["🚴 Donauradweg Richtung Spitz","Aggsbach Markt → Spitz","Donauradweg · Schwallenbach · Einkehr","Spitz an der Donau","bicycling"]];
- document.getElementById("mapCards").innerHTML=items.map(x=>`<article><h3>${x[0]}</h3><div class="map-placeholder">📍 ${x[1]}<br><small>${x[2]}</small></div><div class="actions"><a href="${route(x[3],x[4])}" target="_blank">Google Maps</a><a href="${komoot(x[3])}" target="_blank">Komoot öffnen</a><a class="outdoor" href="${outdooractive(x[3])}" target="_blank">Outdooractive</a></div></article>`).join("");
-}
 function showGloria(mode){
  const b=document.getElementById("gloriaResult");
  if(mode==="rad")b.innerHTML=`<div class="map-grid"><article><h3>🚴 Genussrunde Spitz</h3><p>Aggsbach Markt – Schwallenbach – Spitz.</p><div class="actions"><a href="${route('Spitz an der Donau','bicycling')}" target="_blank">Route</a></div></article><article><h3>🚴 Weißenkirchen</h3><p>Für geübtere Radfahrer am Nordufer.</p><div class="actions"><a href="${route('Weißenkirchen in der Wachau','bicycling')}" target="_blank">Route</a></div></article></div>`;
@@ -167,39 +145,20 @@ function renderHeurigen(){
 }
 const PIA=[{q:"An welchem Wanderweg liegt Zuhause am Bach?",a:["Welterbesteig Wachau","Jakobsweg Spanien","Großglocknerweg"],ok:0},{q:"Welcher Radweg führt durch die Wachau?",a:["Donauradweg","Tauernradweg","Innradweg"],ok:0},{q:"Wofür ist die Wachau bekannt?",a:["Marillen und Wein","Kokosnüsse","Eisbären"],ok:0},{q:"Wo steht Zuhause am Bach?",a:["Aggsbach Markt","Aggsbach Dorf","Wien"],ok:0},{q:"Wie heißt das Whippet-Mädchen?",a:["Pia","Luna","Sissi"],ok:0},{q:"Was findet man in Willendorf?",a:["Venus von Willendorf","Eiffelturm","Meereshafen"],ok:0},{q:"Welche Burg ist bekannt?",a:["Burgruine Aggstein","Burg London","Schloss Versailles"],ok:0},{q:"Wie heißt die Bahn in der Wachau?",a:["Wachaubahn","U-Bahn","Bergmetro"],ok:0},{q:"Was brauchen Radfahrer oft?",a:["Fahrradgarage und E-Bike-Laden","Skilift","Flughafen"],ok:0},{q:"Was macht Pia gerne?",a:["Entdecken und Abenteuer erleben","Winterschlaf halten","Rechnungen sortieren"],ok:0}];
 let piaScore=0,piaAnswered={};
+function setPiaActive(mode){document.querySelectorAll(".pia-submenu button").forEach(btn=>btn.classList.toggle("active",btn.dataset.piaMode===mode))}
 function showPia(mode){
  const b=document.getElementById("piaResult");
+ if(!b)return;
+ setPiaActive(mode);
  if(mode==="quiz"){piaScore=0;piaAnswered={};let out=`<h3>🏆 Wachau-Quiz</h3><div id="piaScore" class="pia-score">0 von ${PIA.length} richtig</div>`;PIA.forEach((q,i)=>{out+=`<div class="pia-question"><strong>${i+1}. ${q.q}</strong><br>`+q.a.map((a,j)=>`<button onclick="answerPia(this,${i},${j})">${a}</button>`).join("")+`</div>`});out+=`<button onclick="showCertificate()">🏆 Urkunde anzeigen</button>`;b.innerHTML=out}
  if(mode==="suche")b.innerHTML=`<h3>🔍 Schatzsuche</h3><div class="treasure-list"><label><input type="checkbox"> Donau gesehen</label><label><input type="checkbox"> Marillenbaum entdeckt</label><label><input type="checkbox"> Weinberg gefunden</label><label><input type="checkbox"> Stein in Herzform gesucht</label><label><input type="checkbox"> Pia auf dem Bild entdeckt</label><label><input type="checkbox"> Wachaubahn oder Gleise gesehen</label></div><button onclick="showCertificate()">🏆 Urkunde erstellen</button>`;
  if(mode==="story")b.innerHTML=`<h3>📖 Geschichten</h3><div class="story-card"><strong>Pia und der kleine Bach</strong><p>Pia hörte das Wasser leise plätschern. „Hier beginnt ein Abenteuer“, dachte sie.</p></div><div class="story-card"><strong>Die Marille im Morgenlicht</strong><p>Als die Sonne über Aggsbach Markt aufging, glänzte eine Marille wie ein kleiner Schatz.</p></div><button onclick="showCertificate()">🏆 Urkunde</button>`;
+ if(mode==="abenteuer")b.innerHTML=`<h3>🌿 Kleine Wachau-Abenteuer mit Pia</h3><div class="adventure-grid"><article><h4>Bach-Detektiv</h4><p>Hört 30 Sekunden ganz still zu: Was klingt nach Wasser, Wind oder Vogelstimme?</p></article><article><h4>Donau-Farben</h4><p>Sucht drei Farben an der Donau oder im Garten und gebt ihnen Wachau-Namen.</p></article><article><h4>Marillen-Spur</h4><p>Findet etwas, das rund, gelb oder orange ist. Pia nennt es den kleinen Marillenschatz.</p></article><article><h4>Windis-Fotoauftrag</h4><p>Macht ein Erinnerungsfoto mit eurem liebsten Wachau-Moment.</p></article></div><div class="treasure-list"><label><input type="checkbox"> Ein Naturgeräusch entdeckt</label><label><input type="checkbox"> Drei Wachau-Farben gefunden</label><label><input type="checkbox"> Marillenschatz entdeckt</label><label><input type="checkbox"> Erinnerungsfoto gemacht</label></div><button onclick="showCertificate()">🏆 Abenteuer-Urkunde</button>`;
 }
 function answerPia(btn,i,j){if(piaAnswered[i])return;piaAnswered[i]=true;if(j===PIA[i].ok){btn.classList.add("correct");piaScore++}else btn.classList.add("wrong");document.getElementById("piaScore").textContent=`${piaScore} von ${PIA.length} richtig`}
 function showCertificate(){const d=new Date(),date=String(d.getDate()).padStart(2,"0")+"."+String(d.getMonth()+1).padStart(2,"0")+"."+d.getFullYear();document.getElementById("piaResult").innerHTML=`<div id="certificatePrint" class="certificate"><h3>🏆 Wachau-Meister-Urkunde</h3><p>Diese Urkunde erhält</p><input id="certName" type="text" placeholder="Name eintragen"><h2 id="certPreview">Wachau-Meisterin / Wachau-Meister</h2><p>für Quiz, Schatzsuche und kleine Wachau-Abenteuer mit Pia.</p><p><strong>Aggsbach Markt, ${date}</strong></p><p>🐾 Fidel · Gloria · Pia</p></div><div class="button-row"><button onclick="updateCert()">Name übernehmen</button><button onclick="window.print()">🖨️ Drucken</button><button onclick="showPia('quiz')">Zurück zum Quiz</button></div>`}
 function updateCert(){document.getElementById("certPreview").textContent=document.getElementById("certName").value||"Wachau-Meisterin / Wachau-Meister"}
-function runAppCheck(){
- const checks=[
-  ["Startbild",!!document.querySelector(".hero-img"),"Titelbild vorhanden"],
-  ["Sprachwahl",document.querySelectorAll(".language-bar button").length===6,"6 Sprachbuttons vorhanden"],
-  ["Smart-WLAN",!!document.getElementById("smartwifi") && typeof updateSmartWifi==="function","WLAN-Willkommensbereich vorhanden"],
-  ["Wetter",!!document.getElementById("weatherBox") && typeof loadWeather==="function","Open-Meteo-Funktion vorhanden"],
-  ["Fidels Wanderwelt",!!document.getElementById("wanderResult") && typeof showFidelRoute==="function","Empfehlungsfunktion vorhanden"],
-  ["Alle Wander-Routen",typeof showAllRoutes==="function","Routenliste vorhanden"],
-  ["Karten/Komoot",!!document.getElementById("mapCards") && typeof renderMaps==="function","Karten-Fallback vorhanden"],
-  ["Glorias Radwelt",!!document.getElementById("gloriaResult") && typeof showGloria==="function","In-App-Auswahl vorhanden"],
-  ["Heurigenfinder",!!document.getElementById("heurigenResult") && typeof renderHeurigen==="function","Google-KI-Modus vorhanden"],
-  ["Pias Kinderwelt",!!document.getElementById("piaResult") && typeof showPia==="function","Quiz/Schatzsuche/Geschichten vorhanden"],
-  ["Bücherwelt",!!document.getElementById("buecherwelt"),"Bücherwelt vorhanden"],
-  ["Service-Links",document.querySelectorAll("#service a").length>=6,"SMS/WhatsApp/Fähren/Wachaubahn vorhanden"],
-  ["Interne Sprungziele",[...document.querySelectorAll('a[href^="#"]')].every(a=>document.getElementById(a.getAttribute('href').slice(1))),"Alle internen Links zeigen auf vorhandene Bereiche"],
-  ["Externe Links",[...document.querySelectorAll('a[href^="http"]')].length>=8,"Google Maps, WhatsApp und Webseiten-Links vorhanden"],
-  ["Copyright",!!document.querySelector(".footer"),"Copyright-Footer vorhanden"]
- ];
- const ok=checks.filter(c=>c[1]).length;
- document.getElementById("appCheckResult").innerHTML=
- `<div class="appcheck-summary">✅ ${ok} von ${checks.length} Kernfunktionen vorhanden.</div>`+
- "<div class='tip-grid'>"+checks.map(c=>`<article class="${c[1]?"check-ok":"check-bad"}"><h3>${c[1]?"✅":"❌"} ${c[0]}</h3><p>${c[2]}</p></article>`).join("")+"</div>";
-}
-document.addEventListener("DOMContentLoaded",()=>{updateSmartWifi();loadWeather();showMorning("wander");showFidelRoute();renderMaps();showGloria("rad");setHeurigenDate("today");showPia("quiz")});
+document.addEventListener("DOMContentLoaded",()=>{updateSmartWifi();loadWeather();showMorning("wander");showFidelRoute();showGloria("rad");setHeurigenDate("today");showPia("quiz")});
 window.addEventListener("online",updateSmartWifi);
 window.addEventListener("offline",updateSmartWifi);
 
@@ -253,27 +212,4 @@ function showWachauCertificate(){
  const box=document.getElementById("challengeGrid"); if(!box)return;
  box.innerHTML=`<div id="certificatePrint" class="certificate wachau-cert"><h3>🏆 Wachau-Challenge</h3><p>Diese Urkunde erhält</p><input id="certName" type="text" placeholder="Name eintragen"><h2 id="certPreview">${rank}</h2><p>für ${points} gesammelte Wachau-Punkte bei Zuhause am Bach.</p><p><strong>Aggsbach Markt, ${date}</strong></p><p>🐾 Fidel · Gloria · Pia</p><p>🏡 Zuhause am Bach – Gästehaus Wachau</p></div><div class="button-row"><button onclick="updateCert()">Name übernehmen</button><button onclick="window.print()">🖨️ Drucken</button><button onclick="renderChallenge()">Zurück zur Challenge</button></div>`;
 }
-function setupRecommendLinks(){
- const url="https://topdiveair-sketch.github.io/Gaeste/";
- const text="Ich war bei Zuhause am Bach in Aggsbach Markt – perfekt für Welterbesteig-Wanderer und Donauradweg-Radfahrer. Willkommen im Rudel der Wilden Wachauer Windis: "+url;
- const wa=document.getElementById("whatsappRecommend"); if(wa)wa.href="https://wa.me/?text="+enc(text);
- const mail=document.getElementById("mailRecommend"); if(mail)mail.href="mailto:?subject="+enc("Tipp: Zuhause am Bach in der Wachau")+"&body="+enc(text);
-}
-
-// V47 – App-Check erweitert
-const _oldRunAppCheck = runAppCheck;
-runAppCheck = function(){
- _oldRunAppCheck();
- const extra=[
-  ["Startbotschaft",!!document.querySelector(".welcome h1"),"Willkommensbereich vorhanden"],
-  ["Wachau-Challenge",!!document.getElementById("challenge") && typeof renderChallenge==="function","Punkte, Stempel und Fortschritt vorhanden"],
-  ["Freunde-Bonus",!!document.getElementById("rudelbonus"),"Kaffee & Kuchen Bonus vorhanden"],
-  ["Rudelstatus",!!document.getElementById("rudelstatus"),"Status-Stufen vorhanden"],
-  ["Empfehlungslinks",!!document.getElementById("whatsappRecommend") && !!document.getElementById("mailRecommend"),"WhatsApp und E-Mail vorhanden"],
-  ["Links ohne href",Array.from(document.querySelectorAll("a")).every(a=>a.hasAttribute("href")),"Alle Links haben ein Ziel"]
- ];
- const target=document.getElementById("appCheckResult");
- if(target){target.innerHTML += "<h3>V46-Prüfung</h3><div class='tip-grid'>"+extra.map(c=>`<article class="${c[1]?"check-ok":"check-bad"}"><h3>${c[1]?"✅":"❌"} ${c[0]}</h3><p>${c[2]}</p></article>`).join("")+"</div>";}
-};
-
-document.addEventListener("DOMContentLoaded",()=>{renderChallenge();setupRecommendLinks();});
+document.addEventListener("DOMContentLoaded",()=>{renderChallenge();});

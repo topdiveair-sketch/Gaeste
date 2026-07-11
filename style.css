@@ -6,8 +6,6 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-ser
 .hero-img{display:block;width:100%;height:auto;object-fit:contain;background:#2b1d12}
 .topbar{position:absolute;top:10px;left:10px;right:10px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;z-index:10;pointer-events:none}
 .badge{background:rgba(45,28,15,.72);color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:10px 14px;font-weight:900;box-shadow:0 4px 14px rgba(0,0,0,.25);pointer-events:auto}
-.language-bar{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;max-width:330px;pointer-events:auto}
-.language-bar button{width:43px;height:43px;border-radius:50%;border:1px solid rgba(255,255,255,.55);background:rgba(255,255,255,.9);font-weight:900;color:#3d2818}
 .quick-nav{position:sticky;top:0;z-index:20;display:grid;grid-template-columns:repeat(6,1fr);gap:8px;padding:10px;background:rgba(244,234,219,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
 button,.btn-link{cursor:pointer;border:0;border-radius:999px;background:var(--green);color:#fff!important;padding:12px 16px;font-weight:900;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 6px 16px rgba(30,40,20,.14)}
 button:hover,.btn-link:hover{filter:brightness(.96)}
@@ -19,8 +17,8 @@ h1{font-size:clamp(30px,5vw,50px);line-height:1.05;margin:.2em 0}
 h2{font-size:clamp(25px,3.5vw,38px);margin:.2em 0 .4em}
 p{font-size:18px;line-height:1.5;color:var(--muted)}
 .small{font-size:14px}
-.room-grid,.weather-grid,.tip-grid,.map-grid,.link-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.room-grid article,.weather-grid article,.tip-grid article,.map-grid article,.link-grid a,.result-card{background:#fffaf2;border:1px solid var(--border);border-radius:18px;padding:16px;text-decoration:none;color:var(--text);box-shadow:0 5px 16px rgba(35,25,15,.05)}
+.room-grid,.weather-grid,.tip-grid,.map-grid,.link-grid,.info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.room-grid article,.weather-grid article,.tip-grid article,.map-grid article,.link-grid a,.info-grid article,.result-card{background:#fffaf2;border:1px solid var(--border);border-radius:18px;padding:16px;text-decoration:none;color:var(--text);box-shadow:0 5px 16px rgba(35,25,15,.05)}
 .form-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0}
 label{font-weight:900;color:#4a2a14}
 select,input[type=date],input[type=text]{width:100%;margin-top:6px;border:1px solid var(--border);border-radius:14px;padding:12px;background:#fff;color:#302014;font-weight:700}
@@ -33,22 +31,36 @@ select,input[type=date],input[type=text]{width:100%;margin-top:6px;border:1px so
 .actions a,.link-grid a{background:#fff8e8;border:1px solid var(--border);border-radius:16px;padding:14px;color:#4a2a14!important;font-weight:900;text-decoration:none}
 .actions a{background:var(--green);color:#fff!important;border-radius:999px}
 .actions a:nth-child(2),.brown{background:var(--brown)!important}
-.map-placeholder{min-height:170px;border-radius:16px;background:linear-gradient(135deg,#e9f3df,#f7ead2);display:flex;align-items:center;justify-content:center;text-align:center;color:#4a2a14;font-size:20px;font-weight:900;padding:16px}
 .pia-score{display:inline-flex;background:#eef8df;color:#2f5b1f;border-radius:999px;padding:8px 12px;font-weight:900}
+.pia-submenu{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0}
+.pia-submenu button{border-radius:14px;background:#fff8e8;color:#4a2a14!important;border:1px solid var(--border);box-shadow:none;min-height:54px}
+.pia-submenu button.active{background:var(--green);color:#fff!important;border-color:var(--green);box-shadow:0 6px 16px rgba(30,40,20,.14)}
+.pia-certificate-row{justify-content:flex-end}
 .pia-question{border-top:1px solid var(--border);padding:14px 0}
 .pia-question button{background:#fffaf1;color:#4a2a14!important;border:1px solid var(--border);margin:8px 8px 0 0;box-shadow:none}
 .correct{background:#dff2cf!important;border-color:#70a94a!important}
 .wrong{background:#f8d6ce!important;border-color:#c7654d!important}
 .treasure-list{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-.treasure-list label,.story-card{background:#fff8e8;border:1px solid var(--border);border-radius:14px;padding:12px}
+.treasure-list label,.story-card,.adventure-grid article{background:#fff8e8;border:1px solid var(--border);border-radius:14px;padding:12px}
+.adventure-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:12px 0}
+.adventure-grid h4{margin:.2em 0;color:#4a2a14;font-size:18px}
 .certificate{max-width:900px;margin:0 auto;background:#fff8df;border:3px solid #8a5a23;border-radius:24px;padding:28px;text-align:center}
 .nice-list li{margin:8px 0;font-size:18px}
 blockquote{background:#fff3dc;padding:14px;border-left:5px solid #8a5a23;border-radius:10px;color:#4a2a14;font-size:18px}
 footer{text-align:center;padding:30px;color:var(--muted)}
+.info-card,.rain-card,.tips-card{background:linear-gradient(180deg,#fffdf8,#f7fbf1)}
+.house-grid{margin-top:14px}
+.emergency-card{background:linear-gradient(180deg,#fffdf8,#fff1ec);border-color:#f0c5b8}
+.emergency-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0}
+.emergency-grid a{display:grid;gap:4px;background:#fff4ef;border:1px solid #efc0b1;border-radius:18px;padding:16px;text-align:center;text-decoration:none;color:#4a2a14!important;box-shadow:0 5px 16px rgba(35,25,15,.05)}
+.emergency-grid strong{font-size:30px;color:#9f2f1d}
+.emergency-grid span{font-weight:900}
+.legal-card{background:#fffdf8}
+.legal-card a{color:#4a2a14;font-weight:900}
 @media(max-width:760px){
  .quick-nav{grid-template-columns:repeat(3,1fr);font-size:14px}
- .language-bar button{width:38px;height:38px;font-size:13px}
- .room-grid,.weather-grid,.tip-grid,.map-grid,.link-grid,.form-grid,.treasure-list{grid-template-columns:1fr}
+ .room-grid,.weather-grid,.tip-grid,.map-grid,.link-grid,.info-grid,.form-grid,.treasure-list,.adventure-grid,.emergency-grid{grid-template-columns:1fr}
+ .pia-submenu{grid-template-columns:repeat(2,1fr)}
  main{padding:10px}.card{padding:18px;border-radius:20px}
 }
 @media print{
@@ -69,25 +81,6 @@ footer{text-align:center;padding:30px;color:var(--muted)}
 }
 
 
-/* V47 – Fehlerbehebung: Sprachleiste besser sichtbar */
-.language-bar{
-  background:rgba(35,22,12,.78)!important;
-  border:1px solid rgba(255,255,255,.28)!important;
-  border-radius:999px!important;
-  padding:7px!important;
-  box-shadow:0 6px 20px rgba(0,0,0,.28)!important;
-  backdrop-filter:blur(8px);
-}
-.language-bar button{
-  background:#fff!important;
-  color:#3b2414!important;
-  border:2px solid rgba(255,204,121,.75)!important;
-  opacity:1!important;
-  text-shadow:none!important;
-}
-.language-bar button:hover{
-  background:#ffd36c!important;
-}
 .badge{
   background:rgba(35,22,12,.82)!important;
   border:1px solid rgba(255,255,255,.35)!important;
@@ -105,20 +98,6 @@ footer{text-align:center;padding:30px;color:var(--muted)}
 .footer a{color:#ffd36c!important;text-decoration:none;font-weight:800}
 .footer-links{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:8px}
 
-/* V47 – App Check Ausgabe */
-.check-ok{border-left:6px solid #4f8b2f!important}
-.check-warn{border-left:6px solid #d69a25!important}
-.check-bad{border-left:6px solid #b94a38!important}
-.appcheck-summary{
-  background:#eef8df;
-  border:1px solid #b8d99c;
-  border-radius:18px;
-  padding:14px;
-  color:#2f5b1f;
-  font-weight:900;
-  margin-bottom:12px;
-}
-
 /* V47 – Komoot/Outdooractive Fallbacks */
 .actions a.outdoor{background:#214b7a!important}
 
@@ -128,15 +107,14 @@ footer{text-align:center;padding:30px;color:var(--muted)}
 .challenge-headline{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:#4a2a14;font-size:18px}
 .progress{height:18px;background:#eadcc8;border-radius:999px;overflow:hidden;margin-top:10px}
 .progress-bar{height:100%;width:0%;background:linear-gradient(90deg,#356120,#8a5a23);border-radius:999px;transition:width .35s ease}
-.challenge-grid,.status-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:14px}
-.challenge-item,.status-grid article,.bonus-box{background:#fffaf2;border:1px solid var(--border);border-radius:18px;padding:16px;box-shadow:0 5px 16px rgba(35,25,15,.05)}
+.challenge-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:14px}
+.challenge-item{background:#fffaf2;border:1px solid var(--border);border-radius:18px;padding:16px;box-shadow:0 5px 16px rgba(35,25,15,.05)}
 .challenge-item.done{border-color:#70a94a;background:#f2fbeb}
 .challenge-item .stamp{font-size:34px;line-height:1}
 .challenge-item h3{margin:.25em 0}
 .challenge-item .actions button{box-shadow:none}
-.bonus-card{background:linear-gradient(180deg,#fffdf8,#fff2df)}
 .wachau-cert h3{font-size:30px}.wachau-cert h2{font-size:42px}
-@media(max-width:760px){.challenge-grid,.status-grid{grid-template-columns:1fr}.challenge-headline{font-size:16px}}
+@media(max-width:760px){.challenge-grid{grid-template-columns:1fr}.challenge-headline{font-size:16px}}
 
 /* V46 geprüft/korrigiert: Cache-Buster, Tippfehler und App-Check-Label korrigiert */
 
