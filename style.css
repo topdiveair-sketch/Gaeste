@@ -16,12 +16,13 @@ h1,h2,h3{color:#4a2a14}
 h1{font-size:clamp(30px,5vw,50px);line-height:1.05;margin:.2em 0}
 h2{font-size:clamp(25px,3.5vw,38px);margin:.2em 0 .4em}
 p{font-size:18px;line-height:1.5;color:var(--muted)}
+.lead{font-size:22px;font-weight:900;color:#4a2a14}
 .small{font-size:14px}
-.room-grid,.weather-grid,.tip-grid,.map-grid,.link-grid,.info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.room-grid article,.weather-grid article,.tip-grid article,.map-grid article,.link-grid a,.info-grid article,.result-card{background:#fffaf2;border:1px solid var(--border);border-radius:18px;padding:16px;text-decoration:none;color:var(--text);box-shadow:0 5px 16px rgba(35,25,15,.05)}
+.room-grid,.weather-grid,.tip-grid,.map-grid,.link-grid,.info-grid,.today-grid,.food-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.room-grid article,.weather-grid article,.tip-grid article,.map-grid article,.link-grid a,.info-grid article,.today-grid article,.food-grid article,.result-card{background:#fffaf2;border:1px solid var(--border);border-radius:18px;padding:16px;text-decoration:none;color:var(--text);box-shadow:0 5px 16px rgba(35,25,15,.05)}
 .form-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0}
 label{font-weight:900;color:#4a2a14}
-select,input[type=date],input[type=text]{width:100%;margin-top:6px;border:1px solid var(--border);border-radius:14px;padding:12px;background:#fff;color:#302014;font-weight:700}
+select,input[type=date],input[type=text],textarea{width:100%;margin-top:6px;border:1px solid var(--border);border-radius:14px;padding:12px;background:#fff;color:#302014;font-weight:700;font-family:inherit}
 .button-row{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
 .result{margin-top:14px}
 .result-card h3{margin-top:0}
@@ -48,7 +49,12 @@ select,input[type=date],input[type=text]{width:100%;margin-top:6px;border:1px so
 .nice-list li{margin:8px 0;font-size:18px}
 blockquote{background:#fff3dc;padding:14px;border-left:5px solid #8a5a23;border-radius:10px;color:#4a2a14;font-size:18px}
 footer{text-align:center;padding:30px;color:var(--muted)}
+.windis-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}
+.windis-strip article{display:grid;gap:4px;background:#fff8e8;border:1px solid var(--border);border-radius:18px;padding:14px;box-shadow:0 5px 16px rgba(35,25,15,.05)}
+.windis-strip strong{color:#4a2a14;font-size:18px}
+.windis-strip span{color:var(--muted)}
 .info-card,.rain-card,.tips-card{background:linear-gradient(180deg,#fffdf8,#f7fbf1)}
+.food-card,.guestbook-card{background:linear-gradient(180deg,#fffdf8,#fff3e4)}
 .house-grid{margin-top:14px}
 .emergency-card{background:linear-gradient(180deg,#fffdf8,#fff1ec);border-color:#f0c5b8}
 .emergency-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0}
@@ -57,9 +63,13 @@ footer{text-align:center;padding:30px;color:var(--muted)}
 .emergency-grid span{font-weight:900}
 .legal-card{background:#fffdf8}
 .legal-card a{color:#4a2a14;font-weight:900}
+.guestbook-list{display:grid;gap:10px;margin-top:12px}
+.guestbook-list article{background:#fffaf2;border:1px solid var(--border);border-radius:14px;padding:12px}
+.guestbook-list p{margin:.2em 0}
+.guestbook-list small{color:var(--muted);font-weight:800}
 @media(max-width:760px){
  .quick-nav{grid-template-columns:repeat(3,1fr);font-size:14px}
- .room-grid,.weather-grid,.tip-grid,.map-grid,.link-grid,.info-grid,.form-grid,.treasure-list,.adventure-grid,.emergency-grid{grid-template-columns:1fr}
+ .room-grid,.weather-grid,.tip-grid,.map-grid,.link-grid,.info-grid,.today-grid,.food-grid,.form-grid,.treasure-list,.adventure-grid,.emergency-grid,.windis-strip{grid-template-columns:1fr}
  .pia-submenu{grid-template-columns:repeat(2,1fr)}
  main{padding:10px}.card{padding:18px;border-radius:20px}
 }

@@ -49,9 +49,11 @@ async function loadWeather(){
  const box=document.getElementById("weatherBox");
  const updated=document.getElementById("weatherUpdated");
  const advice=document.getElementById("weatherAdvice");
+ const todaySummary=document.getElementById("todayWeatherSummary");
+ const todaySunset=document.getElementById("todaySunset");
  if(!box)return;
  try{
-  const r=await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.2949&longitude=15.4032&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Europe%2FVienna&forecast_days=14");
+  const r=await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.2949&longitude=15.4032&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,sunrise,sunset&timezone=Europe%2FVienna&forecast_days=14");
   const d=await r.json();
   const codes={0:"☀️ Sonnig",1:"🌤️ Klar",2:"⛅ Teilweise bewölkt",3:"☁️ Bewölkt",45:"🌫️ Nebel",48:"🌫️ Nebel",51:"🌦️ Niesel",53:"🌦️ Niesel",55:"🌧️ Niesel",61:"🌧️ Leichter Regen",63:"🌧️ Regen",65:"🌧️ Starker Regen",71:"❄️ Schnee",80:"🌦️ Schauer",81:"🌧️ Schauer",82:"⛈️ Starke Schauer",95:"⛈️ Gewitter",96:"⛈️ Gewitter",99:"⛈️ Gewitter"};
   function dayLabel(iso,weekday=false){
@@ -67,6 +69,17 @@ async function loadWeather(){
     return `<article><h3>${t}</h3><p><strong>${txt}</strong></p><p>${min}–${max} °C · Schauer ${rain}%</p><p><strong>${amp}</strong></p></article>`;
   }
   box.innerHTML=card(0,"🌤 Heute")+card(1,"🌦 Morgen");
+  if(todaySummary){
+    const max0=Math.round(d.daily.temperature_2m_max[0]);
+    const min0=Math.round(d.daily.temperature_2m_min[0]);
+    const rain0=d.daily.precipitation_probability_max[0]??0;
+    const txt0=codes[d.daily.weather_code[0]]||"🌤️ Wetter";
+    todaySummary.innerHTML=`<strong>${txt0}</strong><br>${min0}–${max0} °C · Schauer ${rain0}%`;
+  }
+  if(todaySunset && d.daily.sunset?.[0]){
+    const sunset=new Date(d.daily.sunset[0]).toLocaleTimeString("de-AT",{hour:"2-digit",minute:"2-digit"});
+    todaySunset.innerHTML=`Heute gegen <strong>${sunset}</strong>. Gute Fotozeit kurz davor.`;
+  }
   if(updated){
     updated.textContent="Aktualisiert am "+new Date().toLocaleDateString("de-AT",{weekday:"long",day:"2-digit",month:"2-digit",year:"numeric"})+" · 14-Tage-Prognose";
   }
@@ -99,6 +112,8 @@ async function loadWeather(){
  }catch(e){
    box.innerHTML="<article><h3>🌤 Heute</h3><p>Wetter konnte nicht geladen werden.</p></article><article><h3>🌦 Morgen</h3><p>Internetverbindung prüfen.</p></article>";
    if(updated) updated.textContent="Wetter konnte nicht geladen werden.";
+   if(todaySummary) todaySummary.textContent="Wetter konnte nicht geladen werden. Bitte Internetverbindung prüfen.";
+   if(todaySunset) todaySunset.textContent="Sonnenuntergang konnte nicht geladen werden.";
  }
 }
 function showMorning(type){
@@ -113,12 +128,12 @@ function card(title,text,dest,mode){
 }
 function showFidelRoute(){
  const dauer=document.getElementById("wanderDauer").value, schwer=document.getElementById("wanderSchwer").value, beg=document.getElementById("wanderBegleitung").value;
- let r={title:"🥾 Aggsbach Markt – Willendorf",text:"Gemütliche Nordufer-Route mit Donau-Nähe und Venus-Fundstelle.",dest:"Willendorf in der Wachau",km:"ca. 6–8 km",time:"2–3 h"};
- if(dauer==="mittel"||schwer==="mittel")r={title:"🥾 Aggsbach Markt – Schwallenbach – Spitz",text:"Fidels Empfehlung: schöne Nordufer-Tour Richtung Spitz mit Einkehrmöglichkeit.",dest:"Spitz an der Donau",km:"ca. 10–12 km",time:"3–4 h"};
- if(dauer==="lang"||schwer==="sportlich")r={title:"⛰ Aggsbach Markt – Spitz – Rotes Tor",text:"Sportlichere Tour für trittsichere Gäste. Bei Hitze oder Regen nicht ideal.",dest:"Rotes Tor Spitz an der Donau",km:"ca. 13–16 km",time:"4–5 h"};
+ let r={title:"🥾 Aggsbach Markt – Willendorf",text:"Gemütliche Nordufer-Route mit Donau-Nähe und Venus-Fundstelle.",dest:"Willendorf in der Wachau",km:"ca. 6–8 km",time:"2–3 h",hm:"wenig",eat:"Jause mitnehmen, Einkehr vorher prüfen",water:"Wasserflasche im Haus auffüllen",view:"Donau und Venus-Fundstelle"};
+ if(dauer==="mittel"||schwer==="mittel")r={title:"🥾 Aggsbach Markt – Schwallenbach – Spitz",text:"Fidels Empfehlung: schöne Nordufer-Tour Richtung Spitz mit Einkehrmöglichkeit.",dest:"Spitz an der Donau",km:"ca. 10–12 km",time:"3–4 h",hm:"mittel",eat:"Spitz / Schwallenbach tagesaktuell prüfen",water:"mindestens 1 Liter pro Person",view:"Donauufer, Weinberge, Spitz"};
+ if(dauer==="lang"||schwer==="sportlich")r={title:"⛰ Aggsbach Markt – Spitz – Rotes Tor",text:"Sportlichere Tour für trittsichere Gäste. Bei Hitze oder Regen nicht ideal.",dest:"Rotes Tor Spitz an der Donau",km:"ca. 13–16 km",time:"4–5 h",hm:"spürbar",eat:"Einkehr in Spitz einplanen",water:"viel Wasser, besonders bei Hitze",view:"Rotes Tor und Wachau-Blick"};
  if(beg==="hund")r.text+=" Mit Hund: Wasser mitnehmen und Hitze beachten.";
  if(beg==="kind")r.text+=" Mit Kindern: Pausen einplanen und lieber kürzer gehen.";
- document.getElementById("wanderResult").innerHTML=`<div class="result-card"><h3>${r.title}</h3><p>${r.text}</p><div class="facts"><span>⏱ ${r.time}</span><span>📏 ${r.km}</span><span>🥾 Nordufer</span></div><div class="actions"><a href="${route(r.dest,'walking')}" target="_blank">Google Maps</a><a href="${komoot(r.dest)}" target="_blank">Komoot</a><a class="outdoor" href="${outdooractive(r.dest)}" target="_blank">Outdooractive</a></div></div>`;
+ document.getElementById("wanderResult").innerHTML=`<div class="result-card"><h3>${r.title}</h3><p>${r.text}</p><div class="facts"><span>⏱ ${r.time}</span><span>📏 ${r.km}</span><span>⛰ Höhenmeter: ${r.hm}</span><span>💧 ${r.water}</span></div><ul class="nice-list"><li>🍽 Einkehr: ${r.eat}</li><li>👀 Aussicht: ${r.view}</li><li>🥾 Welterbesteig/Donau-Nähe: bitte Wetter und Tagesform prüfen.</li></ul><div class="actions"><a href="${route(r.dest,'walking')}" target="_blank">Google Maps</a><a href="${komoot(r.dest)}" target="_blank">Komoot</a><a class="outdoor" href="${outdooractive(r.dest)}" target="_blank">Outdooractive</a></div></div>`;
 }
 function showAllRoutes(){
  const routes=[
@@ -158,11 +173,37 @@ function showPia(mode){
 function answerPia(btn,i,j){if(piaAnswered[i])return;piaAnswered[i]=true;if(j===PIA[i].ok){btn.classList.add("correct");piaScore++}else btn.classList.add("wrong");document.getElementById("piaScore").textContent=`${piaScore} von ${PIA.length} richtig`}
 function showCertificate(){const d=new Date(),date=String(d.getDate()).padStart(2,"0")+"."+String(d.getMonth()+1).padStart(2,"0")+"."+d.getFullYear();document.getElementById("piaResult").innerHTML=`<div id="certificatePrint" class="certificate"><h3>🏆 Wachau-Meister-Urkunde</h3><p>Diese Urkunde erhält</p><input id="certName" type="text" placeholder="Name eintragen"><h2 id="certPreview">Wachau-Meisterin / Wachau-Meister</h2><p>für Quiz, Schatzsuche und kleine Wachau-Abenteuer mit Pia.</p><p><strong>Aggsbach Markt, ${date}</strong></p><p>🐾 Fidel · Gloria · Pia</p></div><div class="button-row"><button onclick="updateCert()">Name übernehmen</button><button onclick="window.print()">🖨️ Drucken</button><button onclick="showPia('quiz')">Zurück zum Quiz</button></div>`}
 function updateCert(){document.getElementById("certPreview").textContent=document.getElementById("certName").value||"Wachau-Meisterin / Wachau-Meister"}
-document.addEventListener("DOMContentLoaded",()=>{updateSmartWifi();loadWeather();showMorning("wander");showFidelRoute();showGloria("rad");setHeurigenDate("today");showPia("quiz")});
+const GUESTBOOK_KEY="zab_guest_stories_v1";
+function getGuestStories(){try{return JSON.parse(localStorage.getItem(GUESTBOOK_KEY)||"[]")}catch(e){return []}}
+function saveGuestStories(stories){localStorage.setItem(GUESTBOOK_KEY,JSON.stringify(stories.slice(0,20)))}
+function renderGuestbook(){
+ const list=document.getElementById("guestbookList"); if(!list)return;
+ const stories=getGuestStories();
+ list.innerHTML=stories.length?stories.map(s=>`<article><p>${s.text}</p><small>${s.date}</small></article>`).join(""):"<p class='small'>Noch keine Geschichte gespeichert.</p>";
+}
+function addGuestStory(){
+ const input=document.getElementById("guestStory"); if(!input)return;
+ const text=input.value.trim();
+ if(!text){showToast("Bitte zuerst eine Geschichte eintragen.");return;}
+ const stories=getGuestStories();
+ stories.unshift({text:text.replace(/[<>]/g,""),date:new Date().toLocaleDateString("de-AT",{day:"2-digit",month:"2-digit",year:"numeric"})});
+ saveGuestStories(stories);
+ input.value="";
+ renderGuestbook();
+ showToast("Geschichte gemerkt.");
+}
+function shareGuestStory(){
+ const input=document.getElementById("guestStory");
+ const text=(input?.value.trim() || getGuestStories()[0]?.text || "").trim();
+ if(!text){showToast("Bitte zuerst eine Geschichte eintragen.");return;}
+ const msg="Gästebuch Zuhause am Bach: "+text;
+ window.open("https://wa.me/436646437526?text="+enc(msg),"_blank","noopener");
+}
+document.addEventListener("DOMContentLoaded",()=>{updateSmartWifi();loadWeather();showMorning("wander");showFidelRoute();showGloria("rad");setHeurigenDate("today");showPia("quiz");renderGuestbook()});
 window.addEventListener("online",updateSmartWifi);
 window.addEventListener("offline",updateSmartWifi);
 
-// V47 – Willkommen im Rudel: Wachau-Challenge & Freunde-Bonus
+// Windis-Stempel
 const CHALLENGE_KEY = "zab_wachau_challenge_v46";
 const CHALLENGE_ITEMS = [
   {id:"home", emoji:"🏡", title:"Zuhause am Bach", text:"Ankommen, durchatmen und Willkommen im Rudel.", points:10, main:true},
@@ -187,7 +228,7 @@ function saveChallenge(state){localStorage.setItem(CHALLENGE_KEY,JSON.stringify(
 function challengeScore(state){return CHALLENGE_ITEMS.filter(x=>state[x.id]).reduce((sum,x)=>sum+x.points,0)}
 function challengeRank(points){if(points>=100)return "🥇 Wachau-Meister"; if(points>=60)return "🥈 Wachau-Kenner"; if(points>=30)return "🥉 Wachau-Freund"; return "🐾 Neues Rudelmitglied"}
 function toggleChallenge(id){const state=getChallenge();state[id]=!state[id];saveChallenge(state);renderChallenge()}
-function resetChallenge(){if(confirm("Wachau-Challenge wirklich zurücksetzen?")){localStorage.removeItem(CHALLENGE_KEY);renderChallenge()}}
+function resetChallenge(){if(confirm("Windis-Stempel wirklich zurücksetzen?")){localStorage.removeItem(CHALLENGE_KEY);renderChallenge()}}
 function renderChallenge(){
  const grid=document.getElementById("challengeGrid"); if(!grid)return;
  const state=getChallenge(), points=challengeScore(state), capped=Math.min(points,100), rank=challengeRank(points);
@@ -202,7 +243,7 @@ function renderChallenge(){
      <h3>${item.title}</h3>
      <p>${item.text}</p>
      <div class="facts"><span>${item.points} Punkte</span><span>${item.main?'Hauptstation':'Bonus'}</span></div>
-     <div class="actions"><button onclick="toggleChallenge('${item.id}')">${done?'Stempel entfernen':'Stempel sammeln'}</button>${routeLink}</div>
+     <div class="actions"><button onclick="toggleChallenge('${item.id}')">${done?'Stempel entfernen':'🐾 Stempel sammeln'}</button>${routeLink}</div>
    </article>`;
  }).join("");
 }
@@ -210,6 +251,6 @@ function showWachauCertificate(){
  const d=new Date(),date=String(d.getDate()).padStart(2,"0")+"."+String(d.getMonth()+1).padStart(2,"0")+"."+d.getFullYear();
  const points=challengeScore(getChallenge()), rank=challengeRank(points);
  const box=document.getElementById("challengeGrid"); if(!box)return;
- box.innerHTML=`<div id="certificatePrint" class="certificate wachau-cert"><h3>🏆 Wachau-Challenge</h3><p>Diese Urkunde erhält</p><input id="certName" type="text" placeholder="Name eintragen"><h2 id="certPreview">${rank}</h2><p>für ${points} gesammelte Wachau-Punkte bei Zuhause am Bach.</p><p><strong>Aggsbach Markt, ${date}</strong></p><p>🐾 Fidel · Gloria · Pia</p><p>🏡 Zuhause am Bach – Gästehaus Wachau</p></div><div class="button-row"><button onclick="updateCert()">Name übernehmen</button><button onclick="window.print()">🖨️ Drucken</button><button onclick="renderChallenge()">Zurück zur Challenge</button></div>`;
+ box.innerHTML=`<div id="certificatePrint" class="certificate wachau-cert"><h3>🏆 Windis-Stempel</h3><p>Diese Urkunde erhält</p><input id="certName" type="text" placeholder="Name eintragen"><h2 id="certPreview">${rank}</h2><p>für ${points} gesammelte Wachau-Punkte bei Zuhause am Bach.</p><p><strong>Aggsbach Markt, ${date}</strong></p><p>🐾 Fidel · Gloria · Pia</p><p>🏡 Zuhause am Bach – Gästehaus Wachau</p></div><div class="button-row"><button onclick="updateCert()">Name übernehmen</button><button onclick="window.print()">🖨️ Drucken</button><button onclick="renderChallenge()">Zurück zu den Stempeln</button></div>`;
 }
 document.addEventListener("DOMContentLoaded",()=>{renderChallenge();});

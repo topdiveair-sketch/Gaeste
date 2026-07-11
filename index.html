@@ -27,17 +27,23 @@
   <button onclick="go('regen')">🌧 Regen</button>
   <button onclick="go('wandern')">🥾 Wandern</button>
   <button onclick="go('rad')">🚴 Radfahren</button>
-  <button onclick="go('heurigen')">🍷 Heurige</button>
+  <button onclick="go('essen')">🍽 Essen</button>
   <button onclick="go('kinder')">🐾 Kinderwelt</button>
 </nav>
 
 <main>
 <section class="card welcome">
-  <h1>🐾 Willkommen im Rudel!</h1>
-  <p>Schön, dass Sie da sind. Für die Dauer Ihres Aufenthalts gehören Sie zum Rudel der Wilden Wachauer Windis. Fidel, Gloria und Pia begleiten Sie durch die Wachau – mit Wanderwegen, Radtouren, Genuss-Tipps und der neuen Wachau-Challenge.</p>
+  <h1>Willkommen Zuhause am Bach</h1>
+  <p class="lead">Das Basislager für Welterbesteig und Donauradweg.</p>
+  <p>Schön, dass Sie da sind. Jeder Gast bringt seine Geschichte mit. Bei Zuhause am Bach nimmt jeder eine neue Geschichte mit nach Hause.</p>
+  <div class="windis-strip">
+    <article><strong>🐾 Fidel</strong><span>erklärt Wandern und Wege.</span></article>
+    <article><strong>🐾 Gloria</strong><span>gibt Genuss- und Ordnungstipps.</span></article>
+    <article><strong>🐾 Pia</strong><span>kennt kleine Geheimnisse und Abenteuer.</span></article>
+  </div>
   <div class="button-row">
     <button onclick="go('hausinfo')">🏡 Anreise & Hausinfo</button>
-    <button onclick="go('morgen')">🌤 Tagesempfehlung</button>
+    <button onclick="go('wetter')">🌤 Heute aktuell</button>
     <button onclick="go('regen')">🌧 Regentag</button>
   </div>
 </section>
@@ -45,6 +51,7 @@
 <section id="hausinfo" class="card info-card">
   <div class="kicker">🏡 Anreise, Check-in & Hausinfo</div>
   <h2>Alles Wichtige für Ankommen und Aufenthalt</h2>
+  <blockquote>Gloria sagt: Wer Schlüssel, Fahrrad, Frühstück und Rückweg geklärt hat, kann den Urlaub wirklich beginnen.</blockquote>
   <div class="info-grid">
     <article><h3>📍 Adresse</h3><p>Zuhause am Bach, Aggsbach Markt 82, 3641 Aggsbach Markt.</p></article>
     <article><h3>🕒 Check-in</h3><p>Bitte die genaue Ankunftszeit vor der Anreise per WhatsApp oder SMS abstimmen.</p></article>
@@ -158,8 +165,19 @@
 </section>
 
 <section id="wetter" class="card weather-card">
-  <div class="kicker">🌤️ 14-Tage-Wetter in der Wachau</div>
-  <h2>Wetter für Aggsbach Markt</h2>
+  <div class="kicker">🌤️ Heute in der Wachau</div>
+  <h2>Heute aktuell</h2>
+  <p>Ein schneller Blick auf Wetter, Heurige, Veranstaltungen, Sonnenuntergang, Donau und Badestellen.</p>
+  <blockquote>Pia sagt: Heute ist immer ein kleines Abenteuer. Man muss nur wissen, wo man hinschaut.</blockquote>
+  <div class="today-grid">
+    <article><h3>🌤 Wetter</h3><p id="todayWeatherSummary">Wetter wird geladen …</p></article>
+    <article><h3>🍷 Heute geöffnet?</h3><p>Heurige und Genussplätze bitte tagesaktuell prüfen.</p><div class="actions"><a href="#heurigen">Heurigen prüfen</a></div></article>
+    <article><h3>🎭 Veranstaltungen</h3><p>Was heute in der Wachau los ist.</p><div class="actions"><a href="https://www.google.com/search?q=Veranstaltungen+heute+Wachau" target="_blank" rel="noopener">Heute suchen</a></div></article>
+    <article><h3>🌅 Sonnenuntergang</h3><p id="todaySunset">Sonnenuntergang wird geladen …</p></article>
+    <article><h3>🌊 Donaupegel</h3><p>Vor Touren am Wasser bitte aktuell prüfen.</p><div class="actions"><a href="https://www.google.com/search?q=Donaupegel+Wachau+heute" target="_blank" rel="noopener">Pegel prüfen</a></div></article>
+    <article><h3>🏊 Badestellen</h3><p>Nur bei sicheren Bedingungen und erlaubten Stellen baden.</p><div class="actions"><a href="https://www.google.com/search?q=Badestellen+Wachau+Aggsbach+Markt" target="_blank" rel="noopener">Badestellen suchen</a></div></article>
+  </div>
+  <h3>14-Tage-Wetter für Aggsbach Markt</h3>
   <p id="weatherUpdated" class="small">Wetter wird geladen …</p>
   <div id="weatherBox" class="weather-grid">
     <article><h3>🌤 Heute</h3><p>Wetter wird geladen …</p></article>
@@ -199,7 +217,8 @@
 <section id="wandern" class="card">
   <div class="kicker">🥾 Fidels Wanderwelt</div>
   <h2>Geprüfte Nordufer-Routen</h2>
-  <p>Routen und Komoot-Suche für Gäste von Zuhause am Bach.</p>
+  <p>Fidel empfiehlt Wege nach Tagesform, Wetter und Begleitung: Gehzeit, Höhenmeter, Trinkwasser und Einkehr gleich mitdenken.</p>
+  <blockquote>Fidel sagt: Lieber eine gute Runde mit Aussicht als eine zu lange Tour ohne Pause.</blockquote>
   <div class="form-grid">
     <label>Dauer
       <select id="wanderDauer">
@@ -233,6 +252,7 @@
 <section id="rad" class="card">
   <div class="kicker">🚴 Glorias Rad- & Genusswelt</div>
   <h2>Radfahren, Genuss und Service</h2>
+  <blockquote>Gloria sagt: Erst Akku, Wasser und Rückweg klären, dann schmeckt die Pause doppelt gut.</blockquote>
   <div class="button-row">
     <button onclick="showGloria('rad')">🚴 Radfahren</button>
     <button onclick="showGloria('genuss')">🍷 Genuss</button>
@@ -240,6 +260,38 @@
     <button onclick="showGloria('service')">🧰 Rad-Service</button>
   </div>
   <div id="gloriaResult" class="result"></div>
+</section>
+
+<section id="essen" class="card food-card">
+  <div class="kicker">🍽 Unsere persönlichen Empfehlungen</div>
+  <h2>Essen, Trinken und Einkehren</h2>
+  <p>Keine anonyme Restaurantliste: lieber wenige Tipps, die zur Tour passen. Öffnungszeiten und Reservierung bitte immer aktuell prüfen.</p>
+  <div class="food-grid">
+    <article>
+      <h3>🌿 Glorias Genuss-Terrasse</h3>
+      <p>Direkt bei Zuhause am Bach, nach Verfügbarkeit und Absprache.</p>
+      <div class="facts"><span>Preis: €€</span><span>Gehzeit: 0 min</span><span>Hunde: nach Absprache</span></div>
+      <div class="actions"><a href="sms:+436646437526?body=Hallo%20Zuhause%20am%20Bach,%20wir%20interessieren%20uns%20für%20Glorias%20Genuss-Terrasse.">Anfragen</a></div>
+    </article>
+    <article>
+      <h3>🍷 Donauschlössel / Gritsch</h3>
+      <p>Schöner Rastplatz in Spitz, gut für Radfahrer und Wanderer.</p>
+      <div class="facts"><span>Preis: €€</span><span>Route nach Spitz</span><span>Hunde: bitte fragen</span></div>
+      <div class="actions"><a href="https://www.google.com/search?q=Donauschlössel+Gritsch+Spitz+Reservierung+Öffnungszeiten" target="_blank" rel="noopener">Reservierung prüfen</a><a href="https://www.google.com/maps/dir/?api=1&origin=Aggsbach+Markt+82,+3641+Aggsbach+Markt&destination=Donauschl%C3%B6ssel+Gritsch+Spitz+an+der+Donau&travelmode=bicycling" target="_blank" rel="noopener">Route</a></div>
+    </article>
+    <article>
+      <h3>🐟 Steckerlfisch Graf</h3>
+      <p>Gäste-Tipp Richtung Emmersdorf, besonders als Genuss-Stopp.</p>
+      <div class="facts"><span>Preis: €€</span><span>mit Rad/Auto</span><span>Hunde: bitte fragen</span></div>
+      <div class="actions"><a href="https://www.google.com/search?q=Steckerlfisch+Graf+Emmersdorf+Öffnungszeiten" target="_blank" rel="noopener">Öffnungszeiten</a></div>
+    </article>
+    <article>
+      <h3>🍷 Heurige am Nordufer</h3>
+      <p>Für heute oder morgen am besten tagesaktuell prüfen.</p>
+      <div class="facts"><span>Preis: €–€€</span><span>Spitz / Schwallenbach / Willendorf</span><span>Hunde: je Betrieb</span></div>
+      <div class="actions"><a href="#heurigen">Heurigenfinder öffnen</a></div>
+    </article>
+  </div>
 </section>
 
 <section id="heurigen" class="card">
@@ -282,19 +334,33 @@
 </section>
 
 <section id="challenge" class="card challenge-card">
-  <div class="kicker">🏅 Wachau-Challenge</div>
-  <h2>Gemeinsame Punkte für Wanderer, Radfahrer und Wachau-Genießer</h2>
-  <p>Sammeln Sie Wachau-Punkte an Orten, die für Welterbesteig-Wanderer, Donauradweg-Radfahrer und Genussgäste gemeinsam erreichbar sind. Die Hauptstationen liegen bewusst am Nordufer beziehungsweise gut erreichbar von Zuhause am Bach. Südufer-Ziele wie Aggstein zählen als Bonus.</p>
+  <div class="kicker">🐾 Windis-Stempel</div>
+  <h2>Digitale Stempel für kleine und große Wachau-Erlebnisse</h2>
+  <p>Sammeln Sie Windis-Stempel an Orten, die für Welterbesteig-Wanderer, Donauradweg-Radfahrer, Kinder und Genussgäste erreichbar sind. Kinder lieben das Sammeln, Erwachsene behalten ihre Wachau-Geschichte im Blick.</p>
   <div class="challenge-progress-wrap">
     <div class="challenge-headline"><strong id="challengeStatus">Noch kein Stempel</strong><span id="challengePoints">0 / 100 Punkte</span></div>
     <div class="progress"><div id="challengeBar" class="progress-bar"></div></div>
   </div>
   <div id="challengeGrid" class="challenge-grid"></div>
   <div class="button-row">
-    <button onclick="resetChallenge()">↺ Challenge zurücksetzen</button>
-    <button onclick="showWachauCertificate()">🏆 Wachau-Meister-Urkunde</button>
+    <button onclick="resetChallenge()">↺ Stempel zurücksetzen</button>
+    <button onclick="showWachauCertificate()">🏆 Windis-Urkunde</button>
   </div>
-  <p class="small">Hinweis: Die Challenge ist ein freiwilliges Gäste-Erlebnis. Fotos und Namen werden nur mit Zustimmung veröffentlicht.</p>
+  <p class="small">Hinweis: Die Stempel sind ein freiwilliges Gäste-Erlebnis. Fotos und Namen werden nur mit Zustimmung veröffentlicht.</p>
+</section>
+
+<section id="gaestebuch" class="card guestbook-card">
+  <div class="kicker">✍ Gästebuch</div>
+  <h2>Welche Geschichte nehmen Sie mit nach Hause?</h2>
+  <p>Ein Satz genügt. Die Geschichte bleibt zunächst nur auf diesem Gerät gespeichert und kann freiwillig an die Gastgeber gesendet werden.</p>
+  <label>Ihre Wachau-Geschichte
+    <textarea id="guestStory" rows="4" placeholder="Heute nehme ich diese Geschichte mit nach Hause …"></textarea>
+  </label>
+  <div class="button-row">
+    <button onclick="addGuestStory()">Geschichte merken</button>
+    <button onclick="shareGuestStory()">An Gastgeber senden</button>
+  </div>
+  <div id="guestbookList" class="guestbook-list"></div>
 </section>
 
 <section id="windis" class="card">
@@ -345,7 +411,7 @@
   <h2>Informationen zur Gäste-App</h2>
   <div class="info-grid">
     <article><h3>Impressum</h3><p>Zuhause am Bach – Gästehaus Wachau, Aggsbach Markt 82, 3641 Aggsbach Markt. Tel. <a href="tel:+436646437526">0664 6437526</a>.</p></article>
-    <article><h3>Lokale Speicherung</h3><p>Die App speichert WLAN-Bestätigung und Challenge-Fortschritt nur lokal im Browser des Geräts.</p></article>
+    <article><h3>Lokale Speicherung</h3><p>Die App speichert WLAN-Bestätigung, Windis-Stempel und Gästebuch-Einträge nur lokal im Browser des Geräts.</p></article>
     <article><h3>Externe Dienste</h3><p>Wetterdaten kommen von Open-Meteo. Das Diagramm lädt Chart.js über jsDelivr CDN.</p></article>
     <article><h3>Externe Links</h3><p>Booking.com, Google Maps/Suche, WhatsApp, SMS und Telefonlinks öffnen Dienste außerhalb dieser App.</p></article>
   </div>
@@ -363,7 +429,8 @@
     <a href="#notfall">Notfall</a>
     <a href="#service">Kontakt & Service</a>
     <a href="#direktbuchung">Direkt buchen</a>
-    <a href="#challenge">Wachau-Challenge</a>
+    <a href="#challenge">Windis-Stempel</a>
+    <a href="#gaestebuch">Gästebuch</a>
     <a href="#datenschutz">Impressum & Datenschutz</a>
     <a href="https://www.diewildenwachauerwindis.at" target="_blank" rel="noopener">Windis-Webseite</a>
   </div>

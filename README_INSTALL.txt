@@ -35,4 +35,11 @@ Aktualisiert:
 - Schlechtwetter/Regentag als eigener Bereich in der Schnellnavigation ergaenzt.
 - Freunde-Bonus, Rudelstatus und separate Karten-Vorschau entfernt.
 - Gloria-Spitz und Geheimtipps unter Genuss & Wachau-Tipps gebuendelt.
-- Sektionen logisch sortiert: Willkommen, Hausinfo, WLAN, Notfall, Service, Buchen/Zimmer, Tagesplanung, Ausfluege, Kinder/Challenge, Windis/Buecher, Rechtliches.
+- Sektionen logisch sortiert: Willkommen, Hausinfo, WLAN, Notfall, Service, Buchen/Zimmer, Tagesplanung, Ausfluege, Essen, Kinder/Windis-Stempel/Gaestebuch, Windis/Buecher, Rechtliches.
+- Startseite emotionaler formuliert: Basislager fuer Welterbesteig und Donauradweg.
+- Heute aktuell ergaenzt: Wetter, Heurige, Veranstaltungen, Sonnenuntergang, Donaupegel und Badestellen.
+- Fidel, Gloria und Pia als Begleiter in mehreren Rubriken gestaerkt.
+- Wandern mit Gehzeit, Kilometern, Hoehenmetern, Einkehr, Trinkwasser und Aussichtspunkten erweitert.
+- Essen & Trinken mit persoenlichen Empfehlungen, Preisrahmen, Route/Reservierung und Hunde-Hinweis ergaenzt.
+- Digitales Gaestebuch ergaenzt: lokal speichern und freiwillig per WhatsApp an Gastgeber senden.
+- Wachau-Challenge als Windis-Stempel geschaerft.
