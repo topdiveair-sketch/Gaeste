@@ -206,7 +206,7 @@ window.addEventListener("offline",updateSmartWifi);
 // V47 – Willkommen im Rudel: Wachau-Challenge & Freunde-Bonus
 const CHALLENGE_KEY = "zab_wachau_challenge_v46";
 const CHALLENGE_ITEMS = [
-  {id:"home", emoji:"🏡", title:"Zuhause am Bach", text:"Ankommen, durchatmen und Willkommen im Rudel.", points:10, main:true},
+  {id:"home", emoji:"🏡", title:"Zuhause am Bach", text:"Ankommen, durchatmen und willkommen bei uns.", points:10, main:true},
   {id:"donau", emoji:"🍷", title:"Donauschlössl Spitz", text:"Glorias Genuss-Tipp in Spitz an der Donau.", points:10, main:true, dest:"Donauschlössel Gritsch Spitz an der Donau", mode:"bicycling"},
   {id:"venus", emoji:"🏺", title:"Venus von Willendorf", text:"Kulturstopp am Nordufer der Wachau.", points:10, main:true, dest:"Willendorf in der Wachau", mode:"walking"},
   {id:"melk", emoji:"⛪", title:"Stift Melk", text:"Klassiker für Kultur- und Regentage.", points:10, main:true, dest:"Stift Melk", mode:"driving"},
