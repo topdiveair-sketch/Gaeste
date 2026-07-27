@@ -6,14 +6,14 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>Zuhause am Bach – Gäste-App V51 sprachgeprüft</title>
-<link rel="stylesheet" href="style.css?v=49">
+<title>Zuhause am Bach – Gäste-App V52</title>
+<link rel="stylesheet" href="style.css?v=52">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 <header class="hero" id="start">
   <div class="topbar">
-    <div class="badge">V51 · Sprachgeprüft · Smart-WLAN & Wetter</div>
+    <div class="badge">V52 · Wichtige Gäste-Informationen</div>
     <div class="language-bar">
       <button type="button" data-lang="de" onclick="setLang('de')">DE</button>
       <button type="button" data-lang="en" onclick="setLang('en')">EN</button>
@@ -27,7 +27,16 @@
   <img class="hero-img" src="hero-windis.png" alt="Zuhause am Bach Wachau mit den Wilden Wachauer Windis">
 </header>
 
+<div class="guest-priority-bar" aria-label="Wichtige Gäste-Informationen">
+  <button onclick="go('gaesteinfo')">🕒 Check-in</button>
+  <button onclick="go('gaesteinfo')">🅿️ Parkplatz</button>
+  <button onclick="go('gaesteinfo')">🔒🚲 Fahrradschuppen</button>
+  <button onclick="go('gaesteinfo')">🥐 Frühstückszeit</button>
+  <button onclick="go('gaesteinfo')">🍽️ Di & Mi geschlossen</button>
+</div>
+
 <nav class="quick-nav">
+  <button class="important-nav" onclick="go('gaesteinfo')">ℹ️ Alle Gäste-Infos</button>
   <button onclick="go('smartwifi')">📶 WLAN</button>
   <button onclick="go('wetter')">🌤 Heute</button>
   <button onclick="go('wandern')">🥾 Wandern</button>
@@ -40,6 +49,46 @@
 </nav>
 
 <main>
+<section id="gaesteinfo" class="card guest-info-card">
+  <div class="kicker">ℹ️ Wichtig für Ihren Aufenthalt</div>
+  <h1>Gäste-Informationen auf einen Blick</h1>
+  <p class="guest-info-intro">Alles Wichtige für Ihre Ankunft und Ihren Aufenthalt – schnell gefunden und ohne langes Suchen.</p>
+  <div class="guest-info-grid">
+    <article>
+      <div class="guest-info-icon">🕒</div>
+      <h2>Check-in</h2>
+      <p>Bitte teilen Sie uns Ihre geplante Ankunftszeit mit.</p>
+      <a class="guest-info-action" href="sms:+436646437526?body=Hallo%20Zuhause%20am%20Bach,%20unsere%20geplante%20Ankunftszeit%20ist:%20">Ankunftszeit mitteilen</a>
+    </article>
+    <article>
+      <div class="guest-info-icon">🅿️</div>
+      <h2>Parkplatz</h2>
+      <p>Ein Parkplatz für unsere Gäste ist vorhanden. Bei der Ankunft helfen wir Ihnen gerne weiter.</p>
+      <a class="guest-info-action secondary" href="tel:+436646437526">Gastgeber anrufen</a>
+    </article>
+    <article>
+      <div class="guest-info-icon">🔒🚲</div>
+      <h2>Gesicherter Fahrradschuppen</h2>
+      <p>Ihre Fahrräder können sicher und geschützt im Fahrradschuppen abgestellt werden.</p>
+      <a class="guest-info-action secondary" href="sms:+436646437526?body=Hallo%20Zuhause%20am%20Bach,%20wir%20reisen%20mit%20Fahrrädern%20an.">Fahrradplatz mitteilen</a>
+    </article>
+    <article>
+      <div class="guest-info-icon">🥐</div>
+      <h2>Frühstückszeit anfragen</h2>
+      <p>Fragen Sie Ihre gewünschte Frühstückszeit bequem per SMS an.</p>
+      <a class="guest-info-action" href="sms:+436646437526?body=Hallo%20Zuhause%20am%20Bach,%20wir%20möchten%20Frühstück%20um%20___%20Uhr%20anfragen.">Frühstückszeit anfragen</a>
+    </article>
+  </div>
+  <aside class="terrace-notice">
+    <div class="terrace-notice-icon">🍽️</div>
+    <div>
+      <strong>Abendessen auf der Genussterrasse</strong>
+      <p><b>Dienstag und Mittwoch geschlossen.</b> An den übrigen Tagen bitte Abendessen vorher anfragen.</p>
+    </div>
+    <a href="sms:+436646437526?body=Hallo%20Zuhause%20am%20Bach,%20wir%20möchten%20ein%20Abendessen%20auf%20der%20Genussterrasse%20anfragen.">Abendessen anfragen</a>
+  </aside>
+</section>
+
 <section class="card welcome">
   <h1>🐾 Willkommen bei uns!</h1>
   <p>Schön, dass Sie da sind. Für die Dauer Ihres Aufenthalts gehören Sie zum Rudel der Wilden Wachauer Windis. Fidel, Gloria und Pia begleiten Sie durch die Wachau – mit Wanderwegen, Radtouren, Genuss-Tipps und der neuen Wachau-Challenge.</p>

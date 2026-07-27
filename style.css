@@ -167,3 +167,93 @@ footer{text-align:center;padding:30px;color:var(--muted)}
   color: #6b3f22;
   box-shadow: 0 0 0 2px rgba(255,255,255,.55);
 }
+
+/* V52 – die wichtigsten Gäste-Informationen stehen an erster Stelle */
+.important-nav{
+  background:#fff3cd!important;
+  color:#4a2a14!important;
+  border-color:#d9a72e!important;
+}
+.guest-priority-bar{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:8px;
+  padding:10px max(12px,calc((100% - 1180px)/2));
+  background:#2f5b1f;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+.guest-priority-bar button{
+  min-height:48px;
+  border:1px solid rgba(255,255,255,.35);
+  border-radius:14px;
+  background:#fff;
+  color:#2f3d22;
+  font-weight:900;
+  cursor:pointer;
+}
+.guest-info-card{
+  background:linear-gradient(180deg,#fffdf8 0%,#f2f8e9 100%);
+  border:2px solid #7fa55a;
+  box-shadow:0 14px 34px rgba(45,80,25,.14);
+}
+.guest-info-card>h1{margin-bottom:6px;color:#2f5b1f}
+.guest-info-intro{font-size:1.08rem;margin-top:0}
+.guest-info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:18px 0}
+.guest-info-grid article{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  background:#fff;
+  border:1px solid #cbdcb9;
+  border-radius:18px;
+  padding:18px;
+  box-shadow:0 6px 18px rgba(35,65,20,.07);
+}
+.guest-info-grid h2{font-size:1.22rem;margin:4px 0}
+.guest-info-grid p{margin:4px 0 14px;flex:1}
+.guest-info-icon{font-size:2rem;line-height:1}
+.guest-info-action,.terrace-notice>a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:#356120;
+  color:#fff!important;
+  text-decoration:none;
+  border-radius:999px;
+  padding:11px 15px;
+  font-weight:900;
+}
+.guest-info-action.secondary{background:#6b4a2d}
+.terrace-notice{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:14px;
+  background:#fff0e8;
+  border:2px solid #c95c36;
+  border-radius:18px;
+  padding:16px;
+}
+.terrace-notice-icon{font-size:2.2rem}
+.terrace-notice p{margin:4px 0 0}
+.terrace-notice strong{font-size:1.15rem;color:#7e2f18}
+.terrace-notice>a{background:#a43f22;white-space:nowrap}
+@media(max-width:760px){
+  .hero-img{max-height:260px;object-fit:cover}
+  .guest-priority-bar{
+    position:static;
+    grid-template-columns:repeat(2,1fr);
+    padding:10px;
+  }
+  .guest-priority-bar button:last-child{
+    grid-column:1/-1;
+    background:#fff0e8;
+    color:#8c321b;
+    border-color:#e2a58f;
+  }
+  .guest-info-grid{grid-template-columns:1fr}
+  .terrace-notice{grid-template-columns:auto 1fr}
+  .terrace-notice>a{grid-column:1/-1;width:100%}
+}
