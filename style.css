@@ -227,3 +227,63 @@ footer{text-align:center;padding:30px;color:var(--muted)}
   .terrace-notice{grid-template-columns:auto 1fr}
   .terrace-notice>a{grid-column:1/-1;width:100%}
 }
+
+/* V56 – praktische Anreise-, Verpflegungs- und Notfallbereiche */
+.emergency-nav{background:#8f241d!important;color:#fff!important}
+.arrival-form{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+  margin:18px 0;
+}
+.arrival-form label{display:grid;gap:6px;font-weight:900;color:#4a2a14}
+.arrival-form input,.arrival-form select,.arrival-form textarea{
+  width:100%;
+  box-sizing:border-box;
+  border:1px solid #c9b99f;
+  border-radius:12px;
+  background:#fff;
+  padding:12px;
+  font:inherit;
+}
+.arrival-form .wide{grid-column:1/-1}
+.primary-actions{display:flex;gap:10px;flex-wrap:wrap}
+.whatsapp-primary,.maps-primary,.sms-alternative{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  min-height:48px;
+  border-radius:999px;
+  padding:10px 18px;
+  text-decoration:none;
+  font-weight:950;
+}
+.whatsapp-primary{background:#198754;color:#fff!important}
+.maps-primary{background:#1f5fa8;color:#fff!important}
+.sms-alternative{background:#eee4d5;color:#4a2a14!important}
+.navigation-card{background:linear-gradient(180deg,#fff,#eef5ff);border-color:#b8cde6}
+.food-card{background:linear-gradient(180deg,#fffdf7,#fff4dc);border-color:#e2be73}
+.food-day-notice{border-radius:16px;padding:16px;margin:14px 0}
+.food-day-notice h3{margin-top:0}
+.food-day-notice.warning{background:#fff0e8;border:2px solid #c95c36}
+.food-day-notice.info{background:#eef5ff;border:2px solid #6f9dcc}
+.food-day-notice.open{background:#eef8df;border:2px solid #7fa55a}
+.emergency-card{background:#fff5f3;border:2px solid #c85a50}
+.emergency-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.emergency-grid a{
+  display:grid;
+  gap:4px;
+  background:#fff;
+  color:#6e201b!important;
+  text-decoration:none;
+  border:1px solid #e2aaa5;
+  border-radius:14px;
+  padding:14px;
+  text-align:center;
+}
+.emergency-grid strong{font-size:1.05rem}
+.emergency-grid span{font-size:1.25rem;font-weight:950}
+@media(max-width:760px){
+  .arrival-form,.emergency-grid{grid-template-columns:1fr}
+  .primary-actions>a,.maps-primary,.whatsapp-primary{width:100%;box-sizing:border-box}
+}

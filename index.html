@@ -6,14 +6,14 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>Zuhause am Bach – Gäste-App V55</title>
-<link rel="stylesheet" href="style.css?v=55">
+<title>Zuhause am Bach – Gäste-App V56</title>
+<link rel="stylesheet" href="style.css?v=56">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 <header class="hero" id="start">
   <div class="topbar">
-    <div class="badge">V55 · Klar und übersichtlich</div>
+    <div class="badge">V56 · Praktische Gäste-Informationen</div>
     <div class="language-bar">
       <button type="button" data-lang="de" onclick="setLang('de')">DE</button>
       <button type="button" data-lang="en" onclick="setLang('en')">EN</button>
@@ -28,53 +28,62 @@
 </header>
 
 <nav class="quick-nav">
-  <button class="important-nav" onclick="go('gaesteinfo')">ℹ️ Gäste-Infos</button>
-  <button onclick="go('smartwifi')">📶 WLAN</button>
-  <button onclick="go('wetter')">🌤 Heute</button>
-  <button onclick="go('wandern')">🥾 Wandern</button>
-  <button onclick="go('rad')">🚴 Radfahren</button>
-  <button onclick="go('service')">☎ Service</button>
+  <button class="important-nav" onclick="go('anreise')">📲 Anreise & Infos</button>
+  <button onclick="go('navigation')">📍 Navigation</button>
+  <button onclick="go('essen')">🍽️ Essen & Jausenplatte</button>
+  <button onclick="go('wandern')">🚴 Wandern & Radfahren</button>
+  <button class="emergency-nav" onclick="go('notfall')">🆘 Hilfe & Notfall</button>
 </nav>
 
 <main>
-<section id="gaesteinfo" class="card guest-info-card">
-  <div class="kicker">ℹ️ Wichtig für Ihren Aufenthalt</div>
-  <h1>Gäste-Informationen auf einen Blick</h1>
-  <p class="guest-info-intro">Alles Wichtige für Ihre Ankunft und Ihren Aufenthalt – schnell gefunden und ohne langes Suchen.</p>
-  <div class="guest-info-grid">
-    <article>
-      <div class="guest-info-icon">🕒</div>
-      <h2>Check-in</h2>
-      <p>Bitte teilen Sie uns Ihre geplante Ankunftszeit mit.</p>
-      <a class="guest-info-action" href="sms:+436646437526?body=Hallo%20Zuhause%20am%20Bach,%20unsere%20geplante%20Ankunftszeit%20ist:%20">Ankunftszeit mitteilen</a>
-    </article>
-    <article>
-      <div class="guest-info-icon">🅿️</div>
-      <h2>Parkplatz</h2>
-      <p>Ein Parkplatz für unsere Gäste ist vorhanden. Bei der Ankunft helfen wir Ihnen gerne weiter.</p>
-      <a class="guest-info-action secondary" href="tel:+436646437526">Gastgeber anrufen</a>
-    </article>
-    <article>
-      <div class="guest-info-icon">🔒🚲</div>
-      <h2>Gesicherter Fahrradschuppen</h2>
-      <p>Ihre Fahrräder können sicher und geschützt im Fahrradschuppen abgestellt werden.</p>
-      <a class="guest-info-action secondary" href="sms:+436646437526?body=Hallo%20Zuhause%20am%20Bach,%20wir%20reisen%20mit%20Fahrrädern%20an.">Fahrradplatz mitteilen</a>
-    </article>
-    <article>
-      <div class="guest-info-icon">🥐</div>
-      <h2>Frühstückszeit anfragen</h2>
-      <p>Fragen Sie Ihre gewünschte Frühstückszeit bequem per SMS an.</p>
-      <a class="guest-info-action" href="sms:+436646437526?body=Hallo%20Zuhause%20am%20Bach,%20wir%20möchten%20Frühstück%20um%20___%20Uhr%20anfragen.">Frühstückszeit anfragen</a>
-    </article>
+<section id="anreise" class="card guest-info-card">
+  <div class="kicker">📲 Anreise & Infos per WhatsApp</div>
+  <h1>Alles mit einer Nachricht mitteilen</h1>
+  <p>Ankunft, Frühstück und Wünsche gesammelt senden. WhatsApp hat Vorrang; SMS steht als Alternative bereit.</p>
+  <div class="arrival-form">
+    <label>Ankunftszeit<input id="arrivalTime" type="time"></label>
+    <label>Anreiseart
+      <select id="arrivalMode">
+        <option>🚶 Wanderer</option><option>🚴 Radfahrer</option><option>🚗 Pkw</option><option>🏍 Motorrad</option>
+      </select>
+    </label>
+    <label>Frühstückszeit<input id="breakfastTime" type="time"></label>
+    <label>Gepäcktransport<select id="luggageTransport"><option>Nein</option><option>Ja</option></select></label>
+    <label>Jausenplatte<select id="snackBoard"><option>Nein</option><option>Ja</option></select></label>
+    <label>Personenzahl<input id="guestCount" type="number" min="1" value="2"></label>
+    <label class="wide">Besondere Wünsche<textarea id="specialRequests" rows="3" placeholder="Wünsche oder Unverträglichkeiten"></textarea></label>
   </div>
-  <aside class="terrace-notice">
-    <div class="terrace-notice-icon">🍽️</div>
-    <div>
-      <strong>Abendessen: Genussterrasse im Ort Aggsbach Markt</strong>
-      <p>Die Genussterrasse im Ort Aggsbach Markt hat <b>Dienstag und Mittwoch Ruhetag.</b></p>
-    </div>
-    <a href="https://www.google.com/search?q=Genussterrasse+Aggsbach+Markt" target="_blank" rel="noopener">Genussterrasse suchen</a>
-  </aside>
+  <div class="primary-actions">
+    <a id="arrivalWhatsApp" class="whatsapp-primary" href="https://wa.me/436646437526" target="_blank" rel="noopener">🟢 Angaben per WhatsApp senden</a>
+    <a id="arrivalSms" class="sms-alternative" href="sms:+436646437526">SMS als Alternative</a>
+  </div>
+</section>
+
+<section id="navigation" class="card navigation-card">
+  <div class="kicker">📍 Direkte Navigation</div>
+  <h2>Zu „Zuhause am Bach“ navigieren</h2>
+  <p>Aggsbach Markt 82, 3641 Aggsbach Markt</p>
+  <a class="maps-primary" href="https://www.google.com/maps/dir/?api=1&destination=Zuhause+am+Bach%2C+Aggsbach+Markt+82%2C+3641+Aggsbach+Markt" target="_blank" rel="noopener">📍 Google Maps starten</a>
+</section>
+
+<section id="essen" class="card food-card">
+  <div class="kicker">🍽️ Essen & Verpflegung</div>
+  <h2 id="foodDayTitle">Heutige Verpflegungsinformation</h2>
+  <div id="foodDayNotice" class="food-day-notice"></div>
+  <a id="snackWhatsApp" class="whatsapp-primary" href="https://wa.me/436646437526" target="_blank" rel="noopener">🟢 🥨 Jausenplatte vorbestellen</a>
+</section>
+
+<section id="notfall" class="card emergency-card">
+  <div class="kicker">🆘 Hilfe & Notfall</div>
+  <h2>Wichtige Nummern</h2>
+  <div class="emergency-grid">
+    <a href="tel:+436646437526"><strong>Gastgeber</strong><span>+43 664 643 75 26</span></a>
+    <a href="tel:112"><strong>Euro-Notruf</strong><span>112</span></a>
+    <a href="tel:144"><strong>Rettung</strong><span>144</span></a>
+    <a href="tel:133"><strong>Polizei</strong><span>133</span></a>
+    <a href="tel:122"><strong>Feuerwehr</strong><span>122</span></a>
+    <a href="tel:140"><strong>Bergrettung</strong><span>140</span></a>
+  </div>
 </section>
 
 <section class="card welcome">
@@ -111,7 +120,7 @@
     <article><h3>🌤 Wetter</h3><p>14-Tage-Prognose für Aggsbach Markt.</p></article>
     <article><h3>🥾 Wandern</h3><p>Fidels Nordufer-Tipps für den Welterbesteig.</p></article>
     <article><h3>🚴 Radfahren</h3><p>Glorias Tipps für Donauradweg und E-Bike.</p></article>
-    <article><h3>🍳 Frühstück</h3><p>Frühstück direkt per SMS anfragen.</p></article>
+    <article><h3>🍳 Frühstück</h3><p>Frühstück bequem per WhatsApp anfragen.</p></article>
   </div>
   <p class="small">Hinweis: Aus Datenschutzgründen kann ein Browser den genauen WLAN-Namen meistens nicht auslesen. Die App zeigt daher den Online-Status und eine freiwillige WLAN-Bestätigung an.</p>
 </section>
@@ -334,9 +343,9 @@
   <div class="kicker">☎ Mobilität & Hilfe</div>
   <h2>Service für Gäste</h2>
   <div class="link-grid">
-    <a href="sms:+436646437526?body=Hallo%20Zuhause%20am%20Bach,%20ich%20möchte%20Frühstück%20anfragen.">🥐 Frühstück anfragen</a>
-    <a href="sms:+436646437526?body=Hallo%20Zuhause%20am%20Bach,%20ich%20möchte%20eine%20Abendjause%20anfragen.">🥨 Abendjause anfragen</a>
-    <a href="sms:+436646437526?body=Hallo%20Zuhause%20am%20Bach,%20ich%20möchte%20Gepäcktransport%20anfragen.">🎒 Gepäcktransport anfragen</a>
+    <a href="https://wa.me/436646437526?text=Hallo%20Zuhause%20am%20Bach%2C%20ich%20m%C3%B6chte%20Fr%C3%BChst%C3%BCck%20anfragen." target="_blank" rel="noopener">🥐 Frühstück per WhatsApp</a>
+    <a href="https://wa.me/436646437526?text=Hallo%20Zuhause%20am%20Bach%2C%20ich%20m%C3%B6chte%20eine%20Jausenplatte%20anfragen." target="_blank" rel="noopener">🥨 Jausenplatte per WhatsApp</a>
+    <a href="https://wa.me/436646437526?text=Hallo%20Zuhause%20am%20Bach%2C%20ich%20m%C3%B6chte%20Gep%C3%A4cktransport%20anfragen." target="_blank" rel="noopener">🎒 Gepäcktransport per WhatsApp</a>
     <a href="https://wa.me/436646437526" target="_blank" rel="noopener">💬 WhatsApp-Hilfe</a>
     <a href="https://www.google.com/search?q=F%C3%A4hre+Wachau+Spitz+Arnsdorf+Fahrzeiten" target="_blank" rel="noopener">⛴ Fähren prüfen</a>
     <a href="https://www.google.com/search?q=Wachaubahn+Fahrplan" target="_blank" rel="noopener">🚂 Wachaubahn prüfen</a>

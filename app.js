@@ -276,4 +276,67 @@ runAppCheck = function(){
  if(target){target.innerHTML += "<h3>V46-Prüfung</h3><div class='tip-grid'>"+extra.map(c=>`<article class="${c[1]?"check-ok":"check-bad"}"><h3>${c[1]?"✅":"❌"} ${c[0]}</h3><p>${c[2]}</p></article>`).join("")+"</div>";}
 };
 
-document.addEventListener("DOMContentLoaded",()=>{renderChallenge();setupRecommendLinks();});
+function buildArrivalMessage(){
+ const value=id=>document.getElementById(id)?.value||"_____";
+ return `Hallo! 😊
+Wir möchten unsere Anreiseinformationen mitteilen.
+
+🕒 Ankunft: ${value("arrivalTime")} Uhr
+🧭 Anreiseart: ${value("arrivalMode")}
+🥐 Frühstückszeit: ${value("breakfastTime")} Uhr
+🧳 Gepäcktransport: ${value("luggageTransport")}
+🥨 Jausenplatte: ${value("snackBoard")}
+👥 Personen: ${value("guestCount")}
+📝 Besondere Wünsche: ${value("specialRequests")}
+
+Vielen Dank!`;
+}
+function updateArrivalLinks(){
+ const message=buildArrivalMessage();
+ const wa=document.getElementById("arrivalWhatsApp");
+ const sms=document.getElementById("arrivalSms");
+ if(wa)wa.href="https://wa.me/436646437526?text="+enc(message);
+ if(sms)sms.href="sms:+436646437526?body="+enc(message);
+}
+function setupArrivalForm(){
+ document.querySelectorAll("#anreise input,#anreise select,#anreise textarea").forEach(el=>{
+   el.addEventListener("input",updateArrivalLinks);
+   el.addEventListener("change",updateArrivalLinks);
+ });
+ updateArrivalLinks();
+}
+function setupFoodNotice(){
+ const box=document.getElementById("foodDayNotice");
+ const button=document.getElementById("snackWhatsApp");
+ if(!box||!button)return;
+ const day=new Date().getDay();
+ if(day===2){
+   box.className="food-day-notice warning";
+   box.innerHTML="<h3>⚠️ Dienstag</h3><p>Heute ist die Genussterrasse geschlossen. In Aggsbach Markt gibt es derzeit keine verlässliche Möglichkeit zum Abendessen.</p>";
+   button.hidden=false;
+ }else if(day===3){
+   box.className="food-day-notice info";
+   box.innerHTML="<h3>ℹ️ Mittwoch</h3><p>Die Genussterrasse hat heute geschlossen. Als Alternative hat das Café-Pub Donauwelle geöffnet.</p>";
+   button.hidden=false;
+ }else{
+   box.className="food-day-notice open";
+   box.innerHTML="<h3>🍽️ Heute</h3><p>Die Genussterrasse hat geöffnet. Öffnungszeiten bitte prüfen.</p>";
+   button.hidden=true;
+ }
+ const snackMessage=`Hallo! 😊
+Wir möchten gerne eine Jausenplatte vorbestellen.
+
+🕒 Ankunft: _____ Uhr
+👥 Personen: _____
+🧀 Wünsche/Unverträglichkeiten: _____
+
+Vielen Dank!`;
+ button.href="https://wa.me/436646437526?text="+enc(snackMessage);
+}
+
+document.addEventListener("DOMContentLoaded",()=>{
+ renderChallenge();
+ setupRecommendLinks();
+ setupArrivalForm();
+ setupFoodNotice();
+});
