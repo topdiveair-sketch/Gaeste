@@ -301,3 +301,26 @@ footer{text-align:center;padding:30px;color:var(--muted)}
   .primary-actions>a,.maps-primary,.whatsapp-primary{width:100%;box-sizing:border-box}
   .snack-price{display:grid;text-align:center}
 }
+
+/* V59 – 3-Klick-Prinzip */
+.booking-nav{background:#1f5fa8!important;color:#fff!important}
+.welcome{background:linear-gradient(135deg,#fffdf7,#edf6e5);border:2px solid #8aad69}
+.welcome-eyebrow{font-weight:950;color:#6b4a2d;text-transform:uppercase;letter-spacing:.04em;font-size:.88rem}
+.welcome-lead{font-size:1.2rem;line-height:1.55;max-width:850px}
+.reason-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+.reason-grid article{display:grid;gap:7px;background:#fff;border:1px solid #cbdcb9;border-radius:16px;padding:16px}
+.reason-grid strong{font-size:1.08rem;color:#2f5b1f}
+.reason-grid span{color:#5e5145}
+.quick-booking-card{background:linear-gradient(180deg,#f6fbff,#eaf4ff);border:2px solid #78a6d0}
+.quick-booking-form{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:18px 0}
+.quick-booking-form label{display:grid;gap:6px;font-weight:900;color:#3d4f62}
+.quick-booking-form input,.quick-booking-form select,.quick-booking-form textarea{
+  width:100%;box-sizing:border-box;border:1px solid #a8bfd5;border-radius:12px;background:#fff;padding:12px;font:inherit
+}
+.quick-booking-form .wide{grid-column:1/-1}
+.booking-cta{font-size:1.06rem;padding:14px 20px}
+@media(max-width:760px){
+  .reason-grid,.quick-booking-form{grid-template-columns:1fr}
+  .quick-booking-form .wide{grid-column:auto}
+  .quick-nav button:last-child{grid-column:1/-1}
+}

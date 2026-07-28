@@ -6,14 +6,14 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>Zuhause am Bach – Gäste-App V58</title>
-<link rel="stylesheet" href="style.css?v=58">
+<title>Zuhause am Bach – Gäste-App V59</title>
+<link rel="stylesheet" href="style.css?v=59">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 <header class="hero" id="start">
   <div class="topbar">
-    <div class="badge">V58 · Willkommen & Gäste-Service</div>
+    <div class="badge">V59 · Einfach in drei Klicks</div>
     <div class="language-bar">
       <button type="button" data-lang="de" onclick="setLang('de')">DE</button>
       <button type="button" data-lang="en" onclick="setLang('en')">EN</button>
@@ -28,22 +28,41 @@
 </header>
 
 <nav class="quick-nav">
-  <button class="important-nav" onclick="go('anreise')">📲 Anreise & Infos</button>
-  <button onclick="go('navigation')">📍 Navigation</button>
-  <button onclick="go('essen')">🍽️ Essen & Jausenplatte</button>
-  <button onclick="go('wandern')">🚴 Wandern & Radfahren</button>
-  <button class="emergency-nav" onclick="go('notfall')">🆘 Hilfe & Notfall</button>
+  <button class="booking-nav" onclick="go('schnellanfrage')">🛏️ Zimmer direkt anfragen</button>
+  <button class="important-nav" onclick="go('anreise')">📲 Anreise & Aufenthalt</button>
+  <button onclick="go('essen')">🍽️ Essen & Aktivitäten</button>
 </nav>
 
 <main>
 <section class="card welcome">
-  <h1>🐾 Willkommen bei uns!</h1>
-  <p>Schön, dass Sie da sind. Für die Dauer Ihres Aufenthalts gehören Sie zum Rudel der Wilden Wachauer Windis. Fidel, Gloria und Pia begleiten Sie durch die Wachau – mit Wanderwegen, Radtouren, Genuss-Tipps und der neuen Wachau-Challenge.</p>
-  <div class="button-row">
-    <button onclick="go('challenge')">🏅 Wachau-Challenge starten</button>
-    <button onclick="go('rudelbonus')">🤝 Neue Rudelmitglieder</button>
-    <button onclick="go('morgen')">🌤 Tagesempfehlung</button>
+  <div class="welcome-eyebrow">Persönlich · ruhig · direkt am Welterbesteig und Donauradweg</div>
+  <h1>🐾 Willkommen bei Zuhause am Bach</h1>
+  <p class="welcome-lead">Ihre persönliche Unterkunft in der Wachau – ideal für Wanderer, Radfahrer und alle, die Ruhe, Natur und ehrliche Gastfreundschaft schätzen.</p>
+  <div class="reason-grid">
+    <article><strong>🚴 Perfekte Lage</strong><span>Welterbesteig und Donauradweg direkt erreichbar.</span></article>
+    <article><strong>🔒 Gut versorgt</strong><span>Fahrradschuppen, Frühstück und Jausenplatte.</span></article>
+    <article><strong>💬 Persönlicher Kontakt</strong><span>Direkt mit den Gastgebern per WhatsApp.</span></article>
   </div>
+</section>
+
+<section id="schnellanfrage" class="card quick-booking-card">
+  <div class="kicker">🛏️ Buchungsanfrage in weniger als 30 Sekunden</div>
+  <h2>Zimmer direkt anfragen</h2>
+  <p>Ohne Umweg und ohne Vermittlungsplattform direkt bei Zuhause am Bach anfragen.</p>
+  <div class="quick-booking-form">
+    <label>Anreise<input id="bookingArrival" type="date"></label>
+    <label>Abreise<input id="bookingDeparture" type="date"></label>
+    <label>Personen<input id="bookingGuests" type="number" min="1" value="2"></label>
+    <label>Zimmerwunsch
+      <select id="bookingRoom">
+        <option>Kein bestimmtes Zimmer</option>
+        <option>Marillenzimmer</option><option>Weinbergzimmer</option><option>Donauzimmer</option><option>Bachblick-Zimmer</option>
+      </select>
+    </label>
+    <label>Frühstück<select id="bookingBreakfast"><option>Ja</option><option>Nein</option></select></label>
+    <label class="wide">Nachricht<textarea id="bookingMessage" rows="2" placeholder="Besondere Wünsche"></textarea></label>
+  </div>
+  <a id="bookingWhatsApp" class="whatsapp-primary booking-cta" href="https://wa.me/436646437526" target="_blank" rel="noopener">🟢 Buchungsanfrage per WhatsApp senden</a>
 </section>
 
 <section id="anreise" class="card guest-info-card">
@@ -406,7 +425,7 @@
 </footer>
 
 
-<script src="app.js?v=58"></script>
-<script src="i18n.js?v=58"></script>
+<script src="app.js?v=59"></script>
+<script src="i18n.js?v=59"></script>
 </body>
 </html>
