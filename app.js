@@ -326,6 +326,8 @@ function setupFoodNotice(){
  const snackMessage=`Hallo! 😊
 Wir möchten gerne eine Jausenplatte vorbestellen.
 
+🥨 Jausenplatte für 2 Personen
+💶 Gesamtpreis: 29,80 €
 🕒 Ankunft: _____ Uhr
 👥 Personen: _____
 🧀 Wünsche/Unverträglichkeiten: _____
