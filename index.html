@@ -137,6 +137,21 @@
       box-shadow: 0 24px 80px rgba(0,0,0,.25);
       padding: 22px;
     }
+    .panel .compact-form {
+      display: grid;
+      gap: 14px;
+    }
+    .panel .compact-form .choice {
+      min-height: 54px;
+    }
+    .panel .compact-form .checkbox-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .panel .compact-form textarea {
+      min-height: 82px;
+    }
     .guest-hidden-booking {
       display: none !important;
     }
@@ -684,15 +699,68 @@
 
     <div class="hero-grid">
       <div class="hero-copy">
-        <span class="eyebrow">Willkommen bei Ihrem Aufenthalt</span>
+        <span class="eyebrow">Gästeinfo ohne Buchungsanfrage</span>
         <h1>Zuhause am Bach</h1>
         <p>Basislager für Donauradweg und Welterbesteig.</p>
       </div>
 
-      <section class="panel guest-hidden-booking" aria-labelledby="booking-title">
-        <h2 id="booking-title">Buchungsanfrage</h2>
+      <section class="panel" aria-labelledby="guest-check-title">
+        <h2 id="guest-check-title">Gäste-Abfrage</h2>
+        <p>Für Gäste, die bereits gebucht haben: kurz angeben, was für den Aufenthalt wichtig ist.</p>
 
-        <form id="requestForm">
+        <form id="guestStayForm" class="compact-form">
+          <div class="form-grid">
+            <label>Name
+              <input id="guestName" name="name" required>
+            </label>
+            <label>Zimmer
+              <select id="guestRoom" name="room" required>
+                <option value="Bachblick">Bachblick</option>
+                <option value="Marillenzimmer">Marillenzimmer</option>
+                <option value="Weinbergzimmer">Weinbergzimmer</option>
+                <option value="Donauzimmer">Donauzimmer</option>
+              </select>
+            </label>
+          </div>
+
+          <div>
+            <label>Gasttyp</label>
+            <div class="checkbox-grid">
+              <label class="choice"><input type="checkbox" name="guest_type" value="Wanderer"><span><strong>Wanderer</strong><small>Welterbesteig & Touren</small></span></label>
+              <label class="choice"><input type="checkbox" name="guest_type" value="Radfahrer"><span><strong>Radfahrer</strong><small>Donauradweg & Service</small></span></label>
+              <label class="choice"><input type="checkbox" name="guest_type" value="Familie"><span><strong>Familie</strong><small>Kinderwelt & Tipps</small></span></label>
+              <label class="choice"><input type="checkbox" name="guest_type" value="Genuss"><span><strong>Genuss</strong><small>Wachau & Jause</small></span></label>
+            </div>
+          </div>
+
+          <div>
+            <label>Infos gewünscht für</label>
+            <div class="checkbox-grid">
+              <label class="choice"><input type="checkbox" name="day_info" value="Dienstag"><span><strong>Dienstag</strong><small>Wetter, Touren, Einkehr</small></span></label>
+              <label class="choice"><input type="checkbox" name="day_info" value="Mittwoch"><span><strong>Mittwoch</strong><small>Wetter, Touren, Einkehr</small></span></label>
+            </div>
+          </div>
+
+          <div>
+            <label>Zusatzwünsche</label>
+            <div class="checkbox-grid">
+              <label class="choice"><input type="checkbox" name="service" value="Frühstück"><span><strong>Frühstück</strong><small>12,00 EUR pro Person/Nacht</small></span></label>
+              <label class="choice"><input type="checkbox" name="service" value="Wachauer Jause"><span><strong>Wachauer Jause</strong><small>29,90 EUR einmalig</small></span></label>
+              <label class="choice"><input type="checkbox" name="service" value="Gepäcktransport"><span><strong>Gepäcktransport</strong><small>15,00 EUR einmalig</small></span></label>
+              <label class="choice"><input type="checkbox" name="service" value="Rückruf"><span><strong>Rückruf</strong><small>Bitte kurz melden</small></span></label>
+            </div>
+          </div>
+
+          <label>Nachricht
+            <textarea id="guestMessage" name="message" placeholder="z. B. Ankunftszeit, Frühstückstage, Tourenwunsch"></textarea>
+          </label>
+
+          <button class="btn" type="submit">Gästeinfo senden</button>
+          <a class="btn secondary" href="https://topdiveair-sketch.github.io/Gaeste/index" target="_blank" rel="noopener">Gästeapp öffnen</a>
+          <div id="guestStayStatus" class="status">Die Gästeinfo wird als E-Mail vorbereitet.</div>
+        </form>
+
+        <form id="requestForm" class="guest-hidden-booking" aria-hidden="true">
           <div class="form-grid">
             <label>Anreise
               <input id="arrival" name="arrival" type="date" required>
@@ -846,8 +914,8 @@
     <section id="zimmer">
       <div class="section-head">
         <span class="eyebrow">Zimmer</span>
-        <h2>Ihre Zimmer bei Zuhause am Bach</h2>
-        <p>Ein kurzer Überblick zur Orientierung vor Ort.</p>
+        <h2>Vier Zimmer, ruhig und persönlich</h2>
+        <p>Wählen Sie Ihr Wunschzimmer. Verfügbarkeit und Preis werden vor der Bestätigung geprüft.</p>
       </div>
       <div class="room-grid">
         <article class="room-card">
@@ -855,7 +923,7 @@
           <div>
             <h3>Bachblick</h3>
             <p>Doppelzimmer mit Blick auf den Bach. Gemütlich, ruhig und zum Wohlfühlen.</p>
-            <strong>für Ihren Aufenthalt vorbereitet</strong>
+            <strong>ab 101 EUR pro Nacht</strong>
           </div>
         </article>
         <article class="room-card">
@@ -863,7 +931,7 @@
           <div>
             <h3>Marillenzimmer</h3>
             <p>Wachauer Atmosphäre, warme Details und ein ruhiger Rückzugsort.</p>
-            <strong>weiteres Zimmer im Haus</strong>
+            <strong>derzeit noch nicht buchbar</strong>
           </div>
         </article>
         <article class="room-card">
@@ -871,7 +939,7 @@
           <div>
             <h3>Weinbergzimmer</h3>
             <p>Inspiriert von den Weinbergen der Wachau, ideal für Genießer.</p>
-            <strong>weiteres Zimmer im Haus</strong>
+            <strong>derzeit noch nicht buchbar</strong>
           </div>
         </article>
         <article class="room-card">
@@ -879,7 +947,7 @@
           <div>
             <h3>Donauzimmer</h3>
             <p>Ein freundliches Zimmer mit Bezug zur Donau und zur Wachauer Landschaft.</p>
-            <strong>weiteres Zimmer im Haus</strong>
+            <strong>derzeit noch nicht buchbar</strong>
           </div>
         </article>
       </div>
@@ -924,7 +992,7 @@
         <h2>Alles Wichtige ohne Technik</h2>
       </div>
       <div class="facts">
-        <article class="fact"><strong>Frühstück</strong><small>12,00 EUR pro Person und Nacht, bitte direkt vor Ort oder per Nachricht bekanntgeben.</small></article>
+        <article class="fact"><strong>Frühstück</strong><small>12,00 EUR pro Person und Nacht, direkt in der Gäste-Abfrage auswählbar.</small></article>
         <article class="fact"><strong>Wachauer Jause</strong><small>29,90 EUR einmalig, ideal für Ankunft oder Ausflugstag.</small></article>
         <article class="fact"><strong>Gepäcktransport</strong><small>15,00 EUR einmalig, besonders praktisch für Radfahrer und Wanderer.</small></article>
         <article class="fact"><strong>Kontakt</strong><small>Telefon +43 664 6437526, E-Mail topdiveair@gmail.com.</small></article>
@@ -985,6 +1053,8 @@
     const paypalLink = document.getElementById("paypalLink");
     const statusBox = document.getElementById("status");
     const availabilityStatus = document.getElementById("availabilityStatus");
+    const guestStayForm = document.getElementById("guestStayForm");
+    const guestStayStatus = document.getElementById("guestStayStatus");
     const LANGUAGES = {
       de: { html: "de", locale: "de-AT" },
       en: { html: "en", locale: "en-GB" },
@@ -1517,7 +1587,31 @@
         "Die per E-Mail übermittelten Daten werden zur Bearbeitung Ihrer Nachricht verwendet.": "Data sent by email is used to process your message.",
         "Es werden Name, Kontaktdaten, Reisedaten und Nachricht verarbeitet.": "Name, contact details, travel dates and message are processed.",
         "Für bestehende Buchungen gelten die persönlich bestätigten Vereinbarungen.": "For existing bookings, the personally confirmed agreements apply.",
-        "Änderungen oder Zusatzwünsche werden persönlich abgestimmt.": "Changes or additional wishes are arranged personally."
+        "Änderungen oder Zusatzwünsche werden persönlich abgestimmt.": "Changes or additional wishes are arranged personally.",
+        "Gästeinfo ohne Buchungsanfrage": "Guest info without booking request",
+        "Gäste-Abfrage": "Guest check-in info",
+        "Für Gäste, die bereits gebucht haben: kurz angeben, was für den Aufenthalt wichtig ist.": "For guests who have already booked: briefly tell us what matters for your stay.",
+        "Name": "Name",
+        "Gasttyp": "Guest type",
+        "Wanderer": "Hikers",
+        "Welterbesteig & Touren": "Welterbesteig & tours",
+        "Radfahrer": "Cyclists",
+        "Donauradweg & Service": "Danube Cycle Path & service",
+        "Familie": "Family",
+        "Kinderwelt & Tipps": "Kids' world & tips",
+        "Wachau & Jause": "Wachau & snack platter",
+        "Infos gewünscht für": "Info wanted for",
+        "Dienstag": "Tuesday",
+        "Mittwoch": "Wednesday",
+        "Wetter, Touren, Einkehr": "Weather, tours, places to stop",
+        "Zusatzwünsche": "Additional wishes",
+        "Rückruf": "Call back",
+        "Bitte kurz melden": "Please contact me",
+        "Nachricht": "Message",
+        "z. B. Ankunftszeit, Frühstückstage, Tourenwunsch": "e.g. arrival time, breakfast days, tour wishes",
+        "Gästeinfo senden": "Send guest info",
+        "Die Gästeinfo wird als E-Mail vorbereitet.": "The guest info will be prepared as an email.",
+        "12,00 EUR pro Person und Nacht, direkt in der Gäste-Abfrage auswählbar.": "12.00 EUR per person and night, selectable directly in the guest info form."
       },
       cs: {
         "Willkommen bei Ihrem Aufenthalt": "Vítejte u svého pobytu",
@@ -1530,7 +1624,31 @@
         "Die per E-Mail übermittelten Daten werden zur Bearbeitung Ihrer Nachricht verwendet.": "Údaje zaslané e-mailem slouží ke zpracování vaší zprávy.",
         "Es werden Name, Kontaktdaten, Reisedaten und Nachricht verarbeitet.": "Zpracovává se jméno, kontaktní údaje, termín cesty a zpráva.",
         "Für bestehende Buchungen gelten die persönlich bestätigten Vereinbarungen.": "Pro stávající rezervace platí osobně potvrzené dohody.",
-        "Änderungen oder Zusatzwünsche werden persönlich abgestimmt.": "Změny nebo dodatečná přání se domlouvají osobně."
+        "Änderungen oder Zusatzwünsche werden persönlich abgestimmt.": "Změny nebo dodatečná přání se domlouvají osobně.",
+        "Gästeinfo ohne Buchungsanfrage": "Informace pro hosty bez poptávky rezervace",
+        "Gäste-Abfrage": "Informace od hosta",
+        "Für Gäste, die bereits gebucht haben: kurz angeben, was für den Aufenthalt wichtig ist.": "Pro hosty, kteří již mají rezervaci: stručně nám sdělte, co je pro pobyt důležité.",
+        "Name": "Jméno",
+        "Gasttyp": "Typ hosta",
+        "Wanderer": "Turisté",
+        "Welterbesteig & Touren": "Welterbesteig a túry",
+        "Radfahrer": "Cyklisté",
+        "Donauradweg & Service": "Dunajská cyklostezka a servis",
+        "Familie": "Rodina",
+        "Kinderwelt & Tipps": "Dětský svět a tipy",
+        "Wachau & Jause": "Wachau a svačina",
+        "Infos gewünscht für": "Informace požadované pro",
+        "Dienstag": "Úterý",
+        "Mittwoch": "Středa",
+        "Wetter, Touren, Einkehr": "Počasí, trasy, zastávky",
+        "Zusatzwünsche": "Další přání",
+        "Rückruf": "Zavolat zpět",
+        "Bitte kurz melden": "Prosím ozvěte se",
+        "Nachricht": "Zpráva",
+        "z. B. Ankunftszeit, Frühstückstage, Tourenwunsch": "např. čas příjezdu, dny snídaně, přání trasy",
+        "Gästeinfo senden": "Odeslat informace",
+        "Die Gästeinfo wird als E-Mail vorbereitet.": "Informace pro hosty budou připraveny jako e-mail.",
+        "12,00 EUR pro Person und Nacht, direkt in der Gäste-Abfrage auswählbar.": "12,00 EUR za osobu a noc, lze vybrat přímo v informacích pro hosty."
       },
       hu: {
         "Willkommen bei Ihrem Aufenthalt": "Üdvözöljük a tartózkodása alatt",
@@ -1543,7 +1661,31 @@
         "Die per E-Mail übermittelten Daten werden zur Bearbeitung Ihrer Nachricht verwendet.": "Az e-mailben küldött adatokat az üzenete feldolgozására használjuk.",
         "Es werden Name, Kontaktdaten, Reisedaten und Nachricht verarbeitet.": "Név, elérhetőség, utazási adatok és üzenet kerül feldolgozásra.",
         "Für bestehende Buchungen gelten die persönlich bestätigten Vereinbarungen.": "Meglévő foglalásokra a személyesen visszaigazolt megállapodások érvényesek.",
-        "Änderungen oder Zusatzwünsche werden persönlich abgestimmt.": "A változtatásokat vagy további kívánságokat személyesen egyeztetjük."
+        "Änderungen oder Zusatzwünsche werden persönlich abgestimmt.": "A változtatásokat vagy további kívánságokat személyesen egyeztetjük.",
+        "Gästeinfo ohne Buchungsanfrage": "Vendéginformáció foglalási kérés nélkül",
+        "Gäste-Abfrage": "Vendégadatok",
+        "Für Gäste, die bereits gebucht haben: kurz angeben, was für den Aufenthalt wichtig ist.": "Már foglalt vendégeknek: röviden jelezze, mi fontos a tartózkodáshoz.",
+        "Name": "Név",
+        "Gasttyp": "Vendégtípus",
+        "Wanderer": "Túrázók",
+        "Welterbesteig & Touren": "Welterbesteig és túrák",
+        "Radfahrer": "Kerékpárosok",
+        "Donauradweg & Service": "Duna-kerékpárút és szerviz",
+        "Familie": "Család",
+        "Kinderwelt & Tipps": "Gyerekvilág és tippek",
+        "Wachau & Jause": "Wachau és uzsonna",
+        "Infos gewünscht für": "Információ kért erre",
+        "Dienstag": "Kedd",
+        "Mittwoch": "Szerda",
+        "Wetter, Touren, Einkehr": "Időjárás, túrák, megállók",
+        "Zusatzwünsche": "További kívánságok",
+        "Rückruf": "Visszahívás",
+        "Bitte kurz melden": "Kérem jelentkezzen",
+        "Nachricht": "Üzenet",
+        "z. B. Ankunftszeit, Frühstückstage, Tourenwunsch": "pl. érkezési idő, reggelis napok, túrakívánság",
+        "Gästeinfo senden": "Vendéginfo küldése",
+        "Die Gästeinfo wird als E-Mail vorbereitet.": "A vendéginformáció e-mailként készül el.",
+        "12,00 EUR pro Person und Nacht, direkt in der Gäste-Abfrage auswählbar.": "12,00 EUR személyenként és éjszakánként, közvetlenül kiválasztható a vendégadatoknál."
       },
       es: {
         "Willkommen bei Ihrem Aufenthalt": "Bienvenido a su estancia",
@@ -1556,7 +1698,31 @@
         "Die per E-Mail übermittelten Daten werden zur Bearbeitung Ihrer Nachricht verwendet.": "Los datos enviados por email se utilizan para procesar su mensaje.",
         "Es werden Name, Kontaktdaten, Reisedaten und Nachricht verarbeitet.": "Se procesan nombre, datos de contacto, fechas de viaje y mensaje.",
         "Für bestehende Buchungen gelten die persönlich bestätigten Vereinbarungen.": "Para reservas existentes se aplican los acuerdos confirmados personalmente.",
-        "Änderungen oder Zusatzwünsche werden persönlich abgestimmt.": "Los cambios o deseos adicionales se acuerdan personalmente."
+        "Änderungen oder Zusatzwünsche werden persönlich abgestimmt.": "Los cambios o deseos adicionales se acuerdan personalmente.",
+        "Gästeinfo ohne Buchungsanfrage": "Información para huéspedes sin solicitud de reserva",
+        "Gäste-Abfrage": "Información del huésped",
+        "Für Gäste, die bereits gebucht haben: kurz angeben, was für den Aufenthalt wichtig ist.": "Para huéspedes que ya han reservado: indique brevemente qué es importante para su estancia.",
+        "Name": "Nombre",
+        "Gasttyp": "Tipo de huésped",
+        "Wanderer": "Senderistas",
+        "Welterbesteig & Touren": "Welterbesteig y rutas",
+        "Radfahrer": "Ciclistas",
+        "Donauradweg & Service": "Ruta del Danubio y servicio",
+        "Familie": "Familia",
+        "Kinderwelt & Tipps": "Mundo infantil y consejos",
+        "Wachau & Jause": "Wachau y merienda",
+        "Infos gewünscht für": "Información deseada para",
+        "Dienstag": "Martes",
+        "Mittwoch": "Miércoles",
+        "Wetter, Touren, Einkehr": "Tiempo, rutas, paradas",
+        "Zusatzwünsche": "Deseos adicionales",
+        "Rückruf": "Llamada",
+        "Bitte kurz melden": "Por favor, contacte",
+        "Nachricht": "Mensaje",
+        "z. B. Ankunftszeit, Frühstückstage, Tourenwunsch": "p. ej. hora de llegada, días de desayuno, deseo de ruta",
+        "Gästeinfo senden": "Enviar información",
+        "Die Gästeinfo wird als E-Mail vorbereitet.": "La información del huésped se preparará como email.",
+        "12,00 EUR pro Person und Nacht, direkt in der Gäste-Abfrage auswählbar.": "12,00 EUR por persona y noche, seleccionable directamente en la información del huésped."
       },
       fr: {
         "Willkommen bei Ihrem Aufenthalt": "Bienvenue pour votre séjour",
@@ -1569,7 +1735,31 @@
         "Die per E-Mail übermittelten Daten werden zur Bearbeitung Ihrer Nachricht verwendet.": "Les données transmises par e-mail sont utilisées pour traiter votre message.",
         "Es werden Name, Kontaktdaten, Reisedaten und Nachricht verarbeitet.": "Nom, coordonnées, dates de voyage et message sont traités.",
         "Für bestehende Buchungen gelten die persönlich bestätigten Vereinbarungen.": "Pour les réservations existantes, les accords confirmés personnellement s'appliquent.",
-        "Änderungen oder Zusatzwünsche werden persönlich abgestimmt.": "Les changements ou souhaits supplémentaires sont convenus personnellement."
+        "Änderungen oder Zusatzwünsche werden persönlich abgestimmt.": "Les changements ou souhaits supplémentaires sont convenus personnellement.",
+        "Gästeinfo ohne Buchungsanfrage": "Infos invités sans demande de réservation",
+        "Gäste-Abfrage": "Infos invité",
+        "Für Gäste, die bereits gebucht haben: kurz angeben, was für den Aufenthalt wichtig ist.": "Pour les invités ayant déjà réservé : indiquez brièvement ce qui est important pour votre séjour.",
+        "Name": "Nom",
+        "Gasttyp": "Type d'invité",
+        "Wanderer": "Randonneurs",
+        "Welterbesteig & Touren": "Welterbesteig et tours",
+        "Radfahrer": "Cyclistes",
+        "Donauradweg & Service": "Piste du Danube et service",
+        "Familie": "Famille",
+        "Kinderwelt & Tipps": "Monde enfants et conseils",
+        "Wachau & Jause": "Wachau et collation",
+        "Infos gewünscht für": "Infos souhaitées pour",
+        "Dienstag": "Mardi",
+        "Mittwoch": "Mercredi",
+        "Wetter, Touren, Einkehr": "Météo, tours, pauses",
+        "Zusatzwünsche": "Souhaits supplémentaires",
+        "Rückruf": "Rappel",
+        "Bitte kurz melden": "Merci de me contacter",
+        "Nachricht": "Message",
+        "z. B. Ankunftszeit, Frühstückstage, Tourenwunsch": "p. ex. heure d'arrivée, jours de petit-déjeuner, souhait de tour",
+        "Gästeinfo senden": "Envoyer les infos",
+        "Die Gästeinfo wird als E-Mail vorbereitet.": "Les infos invité seront préparées sous forme d'e-mail.",
+        "12,00 EUR pro Person und Nacht, direkt in der Gäste-Abfrage auswählbar.": "12,00 EUR par personne et par nuit, sélectionnable directement dans les infos invité."
       }
     };
     Object.keys(GUEST_INFO_I18N).forEach((lang) => {
@@ -2147,6 +2337,35 @@
         liveBookingCalendarPending = false;
       }
       calculate();
+    }
+
+    function checkedValues(selector) {
+      return Array.from(document.querySelectorAll(selector + ":checked")).map((item) => item.value);
+    }
+
+    if (guestStayForm) {
+      guestStayForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        const data = new FormData(guestStayForm);
+        const guestTypes = checkedValues("#guestStayForm input[name='guest_type']");
+        const dayInfos = checkedValues("#guestStayForm input[name='day_info']");
+        const services = checkedValues("#guestStayForm input[name='service']");
+        const body = [
+          "Gästeinfo Zuhause am Bach",
+          "",
+          "Name: " + (data.get("name") || ""),
+          "Zimmer: " + (data.get("room") || ""),
+          "Gasttyp: " + (guestTypes.join(", ") || "nicht angegeben"),
+          "Infos gewünscht für: " + (dayInfos.join(", ") || "nicht angegeben"),
+          "Zusatzwünsche: " + (services.join(", ") || "keine"),
+          "",
+          "Nachricht:",
+          data.get("message") || ""
+        ].join("\n");
+        const href = "mailto:topdiveair@gmail.com?subject=" + encodeURIComponent("Gästeinfo Zuhause am Bach") + "&body=" + encodeURIComponent(body);
+        if (guestStayStatus) guestStayStatus.classList.add("show");
+        window.location.href = href;
+      });
     }
 
     form.addEventListener("input", calculate);
