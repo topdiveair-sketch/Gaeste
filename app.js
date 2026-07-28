@@ -335,36 +335,10 @@ Wir möchten gerne eine Jausenplatte vorbestellen.
 Vielen Dank!`;
  button.href="https://wa.me/436646437526?text="+enc(snackMessage);
 }
-function buildBookingMessage(){
- const value=id=>document.getElementById(id)?.value||"_____";
- return `Hallo! 😊
-Wir möchten gerne direkt bei Zuhause am Bach anfragen.
-
-📅 Anreise: ${value("bookingArrival")}
-📅 Abreise: ${value("bookingDeparture")}
-👥 Personen: ${value("bookingGuests")}
-🛏️ Zimmerwunsch: ${value("bookingRoom")}
-🥐 Frühstück: ${value("bookingBreakfast")}
-📝 Nachricht: ${value("bookingMessage")}
-
-Vielen Dank!`;
-}
-function updateBookingLink(){
- const link=document.getElementById("bookingWhatsApp");
- if(link)link.href="https://wa.me/436646437526?text="+enc(buildBookingMessage());
-}
-function setupQuickBooking(){
- document.querySelectorAll("#schnellanfrage input,#schnellanfrage select,#schnellanfrage textarea").forEach(el=>{
-   el.addEventListener("input",updateBookingLink);
-   el.addEventListener("change",updateBookingLink);
- });
- updateBookingLink();
-}
 
 document.addEventListener("DOMContentLoaded",()=>{
  renderChallenge();
  setupRecommendLinks();
- setupQuickBooking();
  setupArrivalForm();
  setupFoodNotice();
 });
