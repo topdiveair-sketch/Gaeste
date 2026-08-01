@@ -362,8 +362,8 @@ function setupQuickBooking(){
 }
 
 document.addEventListener("DOMContentLoaded",()=>{
- const welcome=document.querySelector("main .welcome"),chronicle=document.getElementById("chronik");
- if(welcome&&chronicle)welcome.after(chronicle);
+ const arrival=document.getElementById("anreise"),chronicle=document.getElementById("chronik");
+ if(arrival&&chronicle)arrival.after(chronicle);
  renderChallenge();
  setupRecommendLinks();
  setupArrivalForm();
