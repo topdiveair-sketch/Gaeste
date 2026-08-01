@@ -31,12 +31,15 @@ async function uploadPhotos(files,entryId){
  return urls;
 }
 function storyError(message){const box=$("storyError");if(box){box.textContent=message;box.hidden=!message}if(message)showToast(message)}
-function friendlySendError(err){
+function friendlySendError(err,phase){
  const message=String(err?.message||err||"").toLowerCase();
  if(message.includes("failed to fetch")||message.includes("network")||message.includes("load failed"))return "Keine Internetverbindung. Bitte Verbindung prüfen und erneut senden.";
  if(message.includes("payload too large")||message.includes("maximum allowed size")||message.includes("file size"))return "Ein Foto ist zu groß. Bitte höchstens 8 MB pro Foto verwenden.";
  if(message.includes("mime")||message.includes("content type")||message.includes("unsupported"))return "Ein Fotoformat wird nicht unterstützt. Bitte JPG, PNG oder WebP verwenden.";
- return "Der Beitrag konnte gerade nicht gesendet werden. Bitte später noch einmal versuchen.";
+ if(message.includes("row-level security")||message.includes("permission")||message.includes("not authorized"))return `Supabase hat ${phase} nicht erlaubt. Bitte die Zugriffsregeln prüfen.`;
+ if(message.includes("bucket")&&message.includes("not found"))return "Der Speicher für Chronik-Fotos wurde nicht gefunden.";
+ const detail=String(err?.message||"").trim().slice(0,180),code=err?.code||err?.statusCode||err?.status;
+ return `${phase} fehlgeschlagen.${code?` Fehlercode: ${code}.`:""}${detail?` ${detail}`:" Bitte später erneut versuchen."}`;
 }
 async function submitStory(ev){
  ev.preventDefault(); storyError(""); const files=[...$("storyPhotos").files];
@@ -47,9 +50,9 @@ async function submitStory(ev){
  if(tooLarge){storyError(`Das Foto „${tooLarge.name}“ ist größer als 8 MB. Bitte verkleinern oder ein anderes Foto wählen.`);return}
  const payload={id:crypto.randomUUID(),title:$("storyTitle").value.trim(),body:$("storyText").value.trim(),category:$("storyCategory").value,author_name:$("storyAnonymous").checked?null:($("storyName").value.trim()||null),status:"pending"};
  if(!db){showToast("Demo-Betrieb: Supabase bitte zuerst verbinden.");return}
- const submit=ev.submitter,oldText=submit.textContent;submit.disabled=true;submit.textContent=files.length?"⏳ Fotos werden hochgeladen …":"⏳ Beitrag wird gesendet …";
- try{payload.photo_urls=await uploadPhotos(files,payload.id);const {error}=await db.from("chronicle_entries").insert(payload);if(error)throw error;ev.target.reset();ev.target.hidden=true;$("storyThanks").hidden=false}
- catch(err){storyError(friendlySendError(err))}finally{submit.disabled=false;submit.textContent=oldText}
+ const submit=ev.submitter,oldText=submit.textContent;let phase="Beitrag speichern";submit.disabled=true;submit.textContent=files.length?"⏳ Fotos werden hochgeladen …":"⏳ Beitrag wird gesendet …";
+ try{if(files.length)phase="Foto-Upload";payload.photo_urls=await uploadPhotos(files,payload.id);phase="Beitrag speichern";submit.textContent="⏳ Beitrag wird gespeichert …";const {error}=await db.from("chronicle_entries").insert(payload);if(error)throw error;ev.target.reset();ev.target.hidden=true;$("storyThanks").hidden=false}
+ catch(err){console.error("Windi-Chronik:",phase,err);storyError(friendlySendError(err,phase))}finally{submit.disabled=false;submit.textContent=oldText}
 }
 async function login(ev){ev.preventDefault();if(!db){showToast("Supabase ist noch nicht verbunden.");return}const email=$("adminEmail").value.trim().toLowerCase();if(email!=="topdiveair@gmail.com"){showToast("Diese E-Mail ist nicht für die Administration freigeschaltet.");return}const {error}=await db.auth.signInWithOtp({email,options:{emailRedirectTo:"https://topdiveair-sketch.github.io/Gaeste/",shouldCreateUser:true}});if(error){showToast("Anmeldelink konnte nicht gesendet werden.");return}showToast("Anmeldelink wurde per E-Mail gesendet.")}
 async function showQueue(){const {data:{session}}=await db.auth.getSession();$("adminLogin").hidden=!!session;$("adminQueue").hidden=!session;if(!session)return;const {data,error}=await db.from("chronicle_entries").select("*").eq("status","pending").order("created_at");if(error){showToast("Beiträge konnten nicht geladen werden.");return}$("pendingCount").textContent=`(${data.length})`;$("pendingEntries").innerHTML=data.map(e=>`<article class="pending-entry" data-id="${esc(e.id)}"><strong>${esc(e.author_name||"Anonym")}: ${esc(e.title)}</strong><p>${esc(e.body)}</p><div class="chronicle-actions"><button data-action="publish">✔ Freigeben</button><button data-action="edit">✏ Bearbeiten</button><button data-action="reject">❌ Ablehnen</button></div></article>`).join("")}
