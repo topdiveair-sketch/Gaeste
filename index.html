@@ -6,14 +6,14 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>Zuhause am Bach – Gäste-App V58</title>
-<link rel="stylesheet" href="style.css?v=58">
+<title>Zuhause am Bach – Gäste-App V63</title>
+<link rel="stylesheet" href="style.css?v=63">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 <header class="hero" id="start">
   <div class="topbar">
-    <div class="badge">V58 · Willkommen & Gäste-Service</div>
+    <div class="badge">V63 · Windi-Chronik online</div>
     <div class="language-bar">
       <button type="button" data-lang="de" onclick="setLang('de')">DE</button>
       <button type="button" data-lang="en" onclick="setLang('en')">EN</button>
@@ -28,21 +28,20 @@
 </header>
 
 <nav class="quick-nav">
-  <button class="important-nav" onclick="go('anreise')">📲 Anreise & Infos</button>
-  <button onclick="go('navigation')">📍 Navigation</button>
-  <button onclick="go('essen')">🍽️ Essen & Jausenplatte</button>
-  <button onclick="go('wandern')">🚴 Wandern & Radfahren</button>
-  <button class="emergency-nav" onclick="go('notfall')">🆘 Hilfe & Notfall</button>
+  <button class="important-nav" onclick="go('anreise')">📲 Anreise & Aufenthalt</button>
+  <button class="chronicle-main-nav" onclick="go('chronik')">📖 Windi-Chronik</button>
+  <button onclick="go('essen')">🍽️ Essen & Aktivitäten</button>
 </nav>
 
 <main>
 <section class="card welcome">
-  <h1>🐾 Willkommen bei uns!</h1>
-  <p>Schön, dass Sie da sind. Für die Dauer Ihres Aufenthalts gehören Sie zum Rudel der Wilden Wachauer Windis. Fidel, Gloria und Pia begleiten Sie durch die Wachau – mit Wanderwegen, Radtouren, Genuss-Tipps und der neuen Wachau-Challenge.</p>
-  <div class="button-row">
-    <button onclick="go('challenge')">🏅 Wachau-Challenge starten</button>
-    <button onclick="go('rudelbonus')">🤝 Neue Rudelmitglieder</button>
-    <button onclick="go('morgen')">🌤 Tagesempfehlung</button>
+  <div class="welcome-eyebrow">Persönlich · ruhig · direkt am Welterbesteig und Donauradweg</div>
+  <h1>🐾 Willkommen bei Zuhause am Bach</h1>
+  <p class="welcome-lead">Ihre persönliche Unterkunft in der Wachau – ideal für Wanderer, Radfahrer und alle, die Ruhe, Natur und ehrliche Gastfreundschaft schätzen.</p>
+  <div class="reason-grid">
+    <article><strong>🚴 Perfekte Lage</strong><span>Welterbesteig und Donauradweg direkt erreichbar.</span></article>
+    <article><strong>🔒 Gut versorgt</strong><span>Fahrradschuppen, Frühstück und Jausenplatte.</span></article>
+    <article><strong>💬 Persönlicher Kontakt</strong><span>Direkt mit den Gastgebern per WhatsApp.</span></article>
   </div>
 </section>
 
@@ -82,6 +81,55 @@
   <div id="foodDayNotice" class="food-day-notice"></div>
   <div class="snack-price"><strong>🥨 Jausenplatte für 2 Personen</strong><span>Gesamtpreis: 29,80 €</span></div>
   <a id="snackWhatsApp" class="whatsapp-primary" href="https://wa.me/436646437526" target="_blank" rel="noopener">🟢 🥨 Jausenplatte vorbestellen</a>
+</section>
+
+<section id="chronik" class="card chronicle-card">
+  <div class="kicker">📖 Windi-Chronik – Die Geschichten unserer Gäste</div>
+  <h2>Wachau-Erlebnisse zum Nachlesen</h2>
+  <p>Keine Bewertungen und keine Sterne: Hier zählen Ihre persönlichen Geschichten, Erlebnisse unterwegs und besonderen Momente mit den Wilden Wachauer Windis.</p>
+  <div id="chronicleStatus" class="chronicle-status" role="status"></div>
+  <div class="chronicle-actions">
+    <button id="showStoryForm" class="chronicle-primary" type="button">➕ Mein Erlebnis erzählen</button>
+    <button id="showAdminLogin" class="chronicle-secondary" type="button">🔒 Administration</button>
+  </div>
+  <div id="chronicleEntries" class="chronicle-grid" aria-live="polite"></div>
+
+  <form id="storyForm" class="chronicle-form" hidden>
+    <h3>Mein Erlebnis erzählen</h3>
+    <label>Titel<input id="storyTitle" maxlength="100" required placeholder="Unsere Wanderung über den Welterbesteig"></label>
+    <label>Geschichte<textarea id="storyText" maxlength="4000" rows="7" required placeholder="Heute sind wir von Maria Laach nach Aggsbach Markt gewandert …"></textarea></label>
+    <div class="form-grid">
+      <label>Kategorie<select id="storyCategory" required>
+        <option value="welterbesteig">🚶 Welterbesteig</option><option value="donauradweg">🚴 Donauradweg</option>
+        <option value="heuriger">🍷 Heuriger</option><option value="ausflug">🌄 Ausflug</option>
+        <option value="windis">🐾 Windis</option><option value="marillen">🍑 Marillen</option>
+        <option value="fruehstueck">☕ Frühstück</option><option value="sonstiges">😊 Sonstiges</option>
+      </select></label>
+      <label>Vorname (freiwillig)<input id="storyName" maxlength="60" placeholder="Vorname oder Familie"></label>
+    </div>
+    <label class="checkbox-label"><input id="storyAnonymous" type="checkbox"> Anonym veröffentlichen</label>
+    <label>Fotos – maximal 10<input id="storyPhotos" type="file" accept="image/jpeg,image/png,image/webp" multiple></label>
+    <p class="small">Mit dem Absenden bestätigen Sie, dass Text und Bilder von Ihnen stammen und nach Prüfung veröffentlicht werden dürfen.</p>
+    <div class="chronicle-actions">
+      <button class="chronicle-primary" type="submit">⏳ Beitrag zur Prüfung senden</button>
+      <button id="cancelStoryForm" class="chronicle-secondary" type="button">Abbrechen</button>
+    </div>
+  </form>
+
+  <div id="storyThanks" class="chronicle-thanks" hidden>⏳ Vielen Dank! Dein Beitrag wird geprüft und anschließend veröffentlicht.</div>
+  <div id="adminPanel" class="admin-panel" hidden>
+    <div id="adminLogin">
+      <h3>Geschützter Bereich</h3>
+      <form id="adminLoginForm" class="form-grid">
+        <label>E-Mail<input id="adminEmail" type="email" required autocomplete="username"></label>
+        <button class="chronicle-primary" type="submit">Sicheren Anmeldelink per E-Mail senden</button>
+      </form>
+    </div>
+    <div id="adminQueue" hidden>
+      <div class="admin-heading"><h3>Neue Beiträge <span id="pendingCount"></span></h3><button id="adminLogout" type="button">Abmelden</button></div>
+      <div id="pendingEntries"></div>
+    </div>
+  </div>
 </section>
 
 <section id="notfall" class="card emergency-card">
@@ -406,7 +454,12 @@
 </footer>
 
 
-<script src="app.js?v=58"></script>
-<script src="i18n.js?v=58"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="app.js?v=63"></script>
+<script src="chronicle-config.js?v=63"></script>
+<script src="chronicle.js?v=63"></script>
+<script src="i18n.js?v=63"></script>
+<script src="chronicle-i18n.js?v=63"></script>
+<script src="chronicle-message-i18n.js?v=63"></script>
 </body>
 </html>
