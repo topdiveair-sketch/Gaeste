@@ -37,5 +37,8 @@ on conflict (id) do update set public=true,file_size_limit=8388608,allowed_mime_
 
 create policy "Guests can upload chronicle photos" on storage.objects
 for insert to anon with check (bucket_id='chronicle-photos' and lower(storage.extension(name)) in ('jpg','jpeg','png','webp'));
+-- Storage returns the new object after INSERT, so anonymous uploads also need SELECT.
+create policy "Guests can read uploaded chronicle photos" on storage.objects
+for select to anon using (bucket_id='chronicle-photos' and lower(storage.extension(name)) in ('jpg','jpeg','png','webp'));
 create policy "Chronicle admin can delete photos" on storage.objects
 for delete to authenticated using (bucket_id='chronicle-photos' and lower(coalesce(auth.jwt()->>'email',''))='topdiveair@gmail.com');
