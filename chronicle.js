@@ -7,6 +7,16 @@ const categories={welterbesteig:"🚶 Welterbesteig",donauradweg:"🚴 Donauradw
 const statusTexts={de:["Beiträge werden geladen …","Noch keine veröffentlichten Beiträge.","Die Chronik konnte gerade nicht geladen werden.","📖 Zum Lesen ausklappen"],en:["Loading stories …","No published stories yet.","The chronicle could not be loaded.","📖 Open to read"],cz:["Načítání příspěvků …","Zatím nejsou zveřejněny žádné příspěvky.","Kroniku se nepodařilo načíst.","📖 Rozbalit a číst"],sk:["Načítavajú sa príspevky …","Zatiaľ nie sú zverejnené žiadne príspevky.","Kroniku sa nepodarilo načítať.","📖 Rozbaliť a čítať"],hu:["Bejegyzések betöltése …","Még nincsenek közzétett bejegyzések.","A krónika nem tölthető be.","📖 Megnyitás olvasáshoz"],es:["Cargando historias …","Todavía no hay historias publicadas.","No se pudo cargar la crónica.","📖 Abrir para leer"],fr:["Chargement des histoires …","Aucune histoire publiée pour le moment.","La chronique n’a pas pu être chargée.","📖 Ouvrir pour lire"]};
 function statusText(index){let lang=localStorage.getItem("zabLang")||document.documentElement.lang||"de";if(lang==="cs")lang="cz";return (statusTexts[lang]||statusTexts.de)[index]}
 const $=id=>document.getElementById(id);
+const photoFormats={
+ "image/jpeg":{ext:"jpg",mime:"image/jpeg"},"image/jpg":{ext:"jpg",mime:"image/jpeg"},"image/pjpeg":{ext:"jpg",mime:"image/jpeg"},
+ "image/png":{ext:"png",mime:"image/png"},"image/x-png":{ext:"png",mime:"image/png"},
+ "image/webp":{ext:"webp",mime:"image/webp"},"image/gif":{ext:"gif",mime:"image/gif"},"image/avif":{ext:"avif",mime:"image/avif"},
+ "image/heic":{ext:"heic",mime:"image/heic"},"image/heif":{ext:"heif",mime:"image/heif"},
+ "image/bmp":{ext:"bmp",mime:"image/bmp"},"image/x-ms-bmp":{ext:"bmp",mime:"image/bmp"},
+ "image/tiff":{ext:"tiff",mime:"image/tiff"}
+};
+const photoExtensions={jpg:"image/jpeg",jpeg:"image/jpeg",png:"image/png",webp:"image/webp",gif:"image/gif",avif:"image/avif",heic:"image/heic",heif:"image/heif",bmp:"image/bmp",tif:"image/tiff",tiff:"image/tiff"};
+function photoFormat(file){const byMime=photoFormats[String(file.type||"").toLowerCase()];if(byMime)return byMime;const ext=(file.name.split(".").pop()||"").toLowerCase(),mime=photoExtensions[ext];return mime?{ext:ext==="jpeg"?"jpg":ext==="tif"?"tiff":ext,mime}:null}
 const demo=[{id:"willkommen",title:"Willkommen in der Windi-Chronik",body:"Hier sammeln wir bewusst keine Bewertungen und keine Sterne. Uns sind Ihre persönlichen Geschichten und Erlebnisse viel wichtiger: die Geschichten, die Sie von Ihrem Weg mitbringen, besondere Entdeckungen unterwegs und schöne Momente bei uns mit den Wilden Wachauer Windis. Erzählen Sie uns, was Ihnen besonders gefallen hat – damit Ihre Wachau-Erinnerung lebendig bleibt.",category:"windis",author_name:"Fidel, Gloria und Pia",published_at:new Date().toISOString(),photo_urls:[]}];
 function esc(v){const d=document.createElement("div");d.textContent=v??"";return d.innerHTML}
 function date(v){return new Intl.DateTimeFormat(document.documentElement.lang||"de",{day:"numeric",month:"long",year:"numeric"}).format(new Date(v))}
@@ -27,8 +37,7 @@ async function loadPublished(){
 }
 async function uploadPhotos(files,entryId){
  const urls=[];
- const extensions={"image/jpeg":"jpg","image/png":"png","image/webp":"webp"};
- for(const file of files){const ext=extensions[file.type];if(!ext)throw new Error("unsupported content type");const path=`${entryId}/${crypto.randomUUID()}.${ext}`;const {error}=await db.storage.from(cfg.photoBucket).upload(path,file,{contentType:file.type,upsert:false});if(error)throw error;const {data}=db.storage.from(cfg.photoBucket).getPublicUrl(path);urls.push(data.publicUrl)}
+ for(const file of files){const format=photoFormat(file);if(!format)throw new Error("unsupported content type");const path=`${entryId}/${crypto.randomUUID()}.${format.ext}`;const {error}=await db.storage.from(cfg.photoBucket).upload(path,file,{contentType:format.mime,upsert:false});if(error)throw error;const {data}=db.storage.from(cfg.photoBucket).getPublicUrl(path);urls.push(data.publicUrl)}
  return urls;
 }
 function storyError(message){const box=$("storyError");if(box){box.textContent=message;box.hidden=!message}if(message)showToast(message)}
@@ -36,7 +45,7 @@ function friendlySendError(err,phase){
  const message=String(err?.message||err||"").toLowerCase();
  if(message.includes("failed to fetch")||message.includes("network")||message.includes("load failed"))return "Keine Internetverbindung. Bitte Verbindung prüfen und erneut senden.";
  if(message.includes("payload too large")||message.includes("maximum allowed size")||message.includes("file size"))return "Ein Foto ist zu groß. Bitte höchstens 8 MB pro Foto verwenden.";
- if(message.includes("mime")||message.includes("content type")||message.includes("unsupported"))return "Ein Fotoformat wird nicht unterstützt. Bitte JPG, PNG oder WebP verwenden.";
+ if(message.includes("mime")||message.includes("content type")||message.includes("unsupported"))return "Dieses Bildformat wird nicht unterstützt. Möglich sind JPG, PNG, WebP, GIF, AVIF, HEIC/HEIF, BMP und TIFF.";
  if(message.includes("row-level security")||message.includes("permission")||message.includes("not authorized"))return `Supabase hat ${phase} nicht erlaubt. Bitte die Zugriffsregeln prüfen.`;
  if(message.includes("bucket")&&message.includes("not found"))return "Der Speicher für Chronik-Fotos wurde nicht gefunden.";
  const detail=String(err?.message||"").trim().slice(0,180),code=err?.code||err?.statusCode||err?.status;
@@ -45,8 +54,8 @@ function friendlySendError(err,phase){
 async function submitStory(ev){
  ev.preventDefault(); storyError(""); const files=[...$("storyPhotos").files];
  if(files.length>10){storyError("Bitte höchstens 10 Fotos auswählen.");return}
- const allowedTypes=new Set(["image/jpeg","image/png","image/webp"]),wrongType=files.find(f=>!allowedTypes.has(f.type));
- if(wrongType){storyError(`Das Foto „${wrongType.name}“ hat ein nicht unterstütztes Format. Bitte JPG, PNG oder WebP verwenden.`);return}
+ const wrongType=files.find(f=>!photoFormat(f));
+ if(wrongType){storyError(`Das Foto „${wrongType.name}“ hat ein nicht unterstütztes Format. Möglich sind JPG, PNG, WebP, GIF, AVIF, HEIC/HEIF, BMP und TIFF.`);return}
  const tooLarge=files.find(f=>f.size>8*1024*1024);
  if(tooLarge){storyError(`Das Foto „${tooLarge.name}“ ist größer als 8 MB. Bitte verkleinern oder ein anderes Foto wählen.`);return}
  const payload={id:crypto.randomUUID(),title:$("storyTitle").value.trim(),body:$("storyText").value.trim(),category:$("storyCategory").value,author_name:$("storyAnonymous").checked?null:($("storyName").value.trim()||null),status:"pending"};
