@@ -6,14 +6,14 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>Zuhause am Bach – Gäste-App V72</title>
-<link rel="stylesheet" href="style.css?v=72">
+<title>Zuhause am Bach – Gäste-App V73</title>
+<link rel="stylesheet" href="style.css?v=73">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 <header class="hero" id="start">
   <div class="topbar">
-    <div class="badge">V72 · Foto-Upload stabilisiert</div>
+    <div class="badge">V73 · Fotoformate erweitert</div>
     <div class="language-bar">
       <button type="button" data-lang="de" onclick="setLang('de')">DE</button>
       <button type="button" data-lang="en" onclick="setLang('en')">EN</button>
@@ -108,8 +108,8 @@
       <label>Vorname (freiwillig)<input id="storyName" maxlength="60" placeholder="Vorname oder Familie"></label>
     </div>
     <label class="checkbox-label"><input id="storyAnonymous" type="checkbox"> Anonym veröffentlichen</label>
-    <label>Fotos – maximal 10<input id="storyPhotos" type="file" accept="image/jpeg,image/png,image/webp" multiple></label>
-    <p class="small">Erlaubt sind JPG, PNG und WebP mit höchstens 8 MB pro Foto.</p>
+    <label>Fotos – maximal 10<input id="storyPhotos" type="file" accept="image/*,.heic,.heif,.avif,.tif,.tiff" multiple></label>
+    <p class="small">Erlaubt sind JPG, PNG, WebP, GIF, AVIF, HEIC/HEIF, BMP und TIFF mit höchstens 8 MB pro Foto.</p>
     <p class="small">Mit dem Absenden bestätigen Sie, dass Text und Bilder von Ihnen stammen und nach Prüfung veröffentlicht werden dürfen.</p>
     <div id="storyError" class="chronicle-error" role="alert" hidden></div>
     <div class="chronicle-actions">
@@ -457,11 +457,11 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="app.js?v=72"></script>
-<script src="chronicle-config.js?v=72"></script>
-<script src="chronicle.js?v=72"></script>
-<script src="i18n.js?v=72"></script>
-<script src="chronicle-i18n.js?v=72"></script>
-<script src="chronicle-message-i18n.js?v=72"></script>
+<script src="app.js?v=73"></script>
+<script src="chronicle-config.js?v=73"></script>
+<script src="chronicle.js?v=73"></script>
+<script src="i18n.js?v=73"></script>
+<script src="chronicle-i18n.js?v=73"></script>
+<script src="chronicle-message-i18n.js?v=73"></script>
 </body>
 </html>
