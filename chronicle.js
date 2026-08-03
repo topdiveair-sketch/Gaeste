@@ -27,7 +27,8 @@ async function loadPublished(){
 }
 async function uploadPhotos(files,entryId){
  const urls=[];
- for(const file of files){const ext=(file.name.split(".").pop()||"jpg").toLowerCase();const path=`${entryId}/${crypto.randomUUID()}.${ext}`;const {error}=await db.storage.from(cfg.photoBucket).upload(path,file,{contentType:file.type,upsert:false});if(error)throw error;const {data}=db.storage.from(cfg.photoBucket).getPublicUrl(path);urls.push(data.publicUrl)}
+ const extensions={"image/jpeg":"jpg","image/png":"png","image/webp":"webp"};
+ for(const file of files){const ext=extensions[file.type];if(!ext)throw new Error("unsupported content type");const path=`${entryId}/${crypto.randomUUID()}.${ext}`;const {error}=await db.storage.from(cfg.photoBucket).upload(path,file,{contentType:file.type,upsert:false});if(error)throw error;const {data}=db.storage.from(cfg.photoBucket).getPublicUrl(path);urls.push(data.publicUrl)}
  return urls;
 }
 function storyError(message){const box=$("storyError");if(box){box.textContent=message;box.hidden=!message}if(message)showToast(message)}
