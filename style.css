@@ -349,3 +349,13 @@ footer{text-align:center;padding:30px;color:var(--muted)}
 .chronicle-entry-content{padding:0 20px 20px;border-top:1px solid #e4dccf}
 .chronicle-entry-content>.chronicle-photos{margin-top:18px}
 .share-details summary{cursor:pointer;font-weight:700}
+
+/* V74 – 10 Geheimnisse der Windis */
+.windi-secrets-nav{background:#234c3a!important;color:#fff!important;border-color:#4d7f65!important}
+.windi-secrets-card{background:linear-gradient(180deg,#fffdf8,#eef6ec);border:2px solid #89aa8e}
+.windi-secret-highlights{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.windi-secret-highlights span{background:#e8f1e9;color:#234c3a;border-radius:999px;padding:8px 12px;font-weight:900}
+.windi-secrets-button{display:flex;justify-content:center;align-items:center;text-align:center;width:100%;margin:14px 0 18px;background:#234c3a;color:#fff!important;text-decoration:none;border-radius:999px;padding:15px 18px;font-size:18px;font-weight:950;box-shadow:0 8px 20px rgba(35,76,58,.2)}
+.compact-tips{margin-top:12px}
+@media(min-width:761px){.quick-nav{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:760px){.quick-nav{grid-template-columns:repeat(2,1fr)}.windi-secrets-button{font-size:16px}}

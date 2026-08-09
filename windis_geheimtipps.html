@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="de-AT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#234c3a">
+<title>Die 10 Geheimnisse der Windis | Gäste-App V74</title>
+<meta name="description" content="10 besondere Wachau-Erlebnisse mit Ausgangspunkt Zuhause am Bach in Aggsbach Markt.">
+<style>
+:root{
+  --bg:#f5f1e7; --card:#fffdf8; --ink:#223129; --muted:#66736c;
+  --green:#234c3a; --green2:#376951; --gold:#b58b43; --line:#ddd4c2;
+  --ok:#2f7d4a; --warn:#aa6a18; --bad:#a53e38; --shadow:0 12px 30px rgba(31,53,41,.11);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(180deg,#eef4ed 0,#f5f1e7 240px);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.45}
+a{color:inherit}
+.hero{background:linear-gradient(135deg,#1f4736,#365f49);color:white;padding:28px 18px 26px;border-radius:0 0 28px 28px;box-shadow:var(--shadow)}
+.hero-inner{max-width:980px;margin:auto}
+.kicker{font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+h1{font-size:clamp(1.9rem,7vw,3.2rem);line-height:1.05;margin:.35rem 0 .8rem}
+.subtitle{max-width:720px;opacity:.92;margin:0}
+.paws{font-size:1.4rem;margin-top:12px;letter-spacing:.2rem}
+.wrap{max-width:980px;margin:auto;padding:18px}
+.statusbar{display:grid;grid-template-columns:1fr;gap:10px;margin-top:-6px}
+.status{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 15px;box-shadow:0 6px 18px rgba(31,53,41,.08)}
+.status strong{display:block;margin-bottom:4px}
+.status small{color:var(--muted)}
+.filters{display:flex;gap:8px;overflow:auto;padding:8px 0 4px;scrollbar-width:none}
+.filters::-webkit-scrollbar{display:none}
+.filter{white-space:nowrap;border:1px solid var(--line);background:#fff;border-radius:999px;padding:10px 14px;font-weight:750;cursor:pointer}
+.filter.active{background:var(--green);color:white;border-color:var(--green)}
+.section-title{margin:22px 0 8px}
+.grid{display:grid;grid-template-columns:1fr;gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 8px 22px rgba(31,53,41,.08)}
+.card-top{display:grid;grid-template-columns:58px 1fr auto;gap:12px;align-items:center;padding:16px}
+.num{width:58px;height:58px;border-radius:18px;background:#e7efe8;display:grid;place-items:center;font-size:1.6rem}
+.card h2{font-size:1.12rem;margin:0 0 3px}
+.meta{font-size:.88rem;color:var(--muted)}
+.badge{font-size:.77rem;font-weight:800;border-radius:999px;padding:6px 9px;background:#edf3ef;color:var(--green)}
+.card-actions{display:flex;gap:8px;padding:0 16px 16px;flex-wrap:wrap}
+button,.btn{border:0;border-radius:12px;padding:10px 12px;font:inherit;font-weight:750;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.primary{background:var(--green);color:#fff}
+.secondary{background:#efe9db;color:var(--ink)}
+.detail{display:none;border-top:1px solid var(--line);padding:0 16px 18px;background:#fff}
+.detail.open{display:block}
+.detail h3{margin:18px 0 6px;font-size:1rem;color:var(--green)}
+.detail p{margin:5px 0 10px}
+.routebox{background:#f3f7f3;border-left:4px solid var(--green2);padding:11px 12px;border-radius:10px;margin:10px 0}
+.mission{background:#fff6de;border:1px solid #edd69a;border-radius:14px;padding:12px;margin:12px 0}
+.safety{background:#fff0ed;border:1px solid #e5b8b2;border-radius:14px;padding:12px;margin:12px 0}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:10px 0}
+.fact{background:#f3efe5;border-radius:12px;padding:10px}
+.fact b{display:block;font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.footer{padding:28px 18px 40px;text-align:center;color:var(--muted)}
+.footer strong{color:var(--green)}
+.live{display:inline-flex;align-items:center;gap:7px;font-weight:800}
+.dot{width:9px;height:9px;border-radius:50%;background:#aaa}
+.dot.ok{background:var(--ok)} .dot.warn{background:var(--warn)} .dot.bad{background:var(--bad)}
+.notice{margin-top:14px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px}
+@media(min-width:720px){
+  .statusbar{grid-template-columns:1.2fr .8fr}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .facts{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <a href="index.html" style="display:inline-flex;text-decoration:none;color:white;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);padding:9px 12px;border-radius:999px;font-weight:800;margin-bottom:14px">← Zurück zur Gäste-App</a>
+    <div class="kicker">Zuhause am Bach · Aggsbach Markt</div>
+    <h1>🐾 Die 10 Geheimnisse der Windis</h1>
+    <p class="subtitle">Kleine Abenteuer, besondere Orte und stille Momente in der Wachau – ausgewählt von Fidel, Gloria und Pia. Euer Ausgangspunkt ist immer <b>Zuhause am Bach</b>.</p>
+    <div class="paws">🐕 🐕 🐕</div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="statusbar">
+    <div class="status">
+      <strong>🌦 Heute in Aggsbach Markt</strong>
+      <div id="weather"><span class="live"><span class="dot"></span> Wetter wird geprüft …</span></div>
+      <small id="weatherHint">Für aktuelle Empfehlungen wird eine Internetverbindung benötigt.</small>
+    </div>
+    <div class="status">
+      <strong>📍 Startpunkt</strong>
+      Zuhause am Bach · Aggsbach Markt
+      <div style="margin-top:8px">
+        <a class="btn secondary" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=48.29368,15.3960181">🧭 Standort öffnen</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="notice">
+    <b>So funktioniert’s:</b> Kategorie auswählen, Abenteuer öffnen und bei Bedarf direkt die Navigation starten. Tourzeiten sind Richtwerte – Natur, Kondition und Wetter entscheiden mit.
+  </div>
+
+  <div class="filters" id="filters">
+    <button class="filter active" data-filter="all">Alle 10</button>
+    <button class="filter" data-filter="walk">🥾 Wandern</button>
+    <button class="filter" data-filter="romance">❤️ Romantik</button>
+    <button class="filter" data-filter="discover">🚲 Entdecken</button>
+    <button class="filter" data-filter="adventure">🌙 Abenteuer</button>
+  </div>
+
+  <h2 class="section-title">Wählt euer Geheimnis</h2>
+  <section class="grid" id="tourGrid"></section>
+</main>
+
+<footer class="footer">
+  <p><a href="index.html" style="color:#234c3a;font-weight:800">← Zurück zur Gäste-App</a></p>
+  <strong>Zuhause am Bach</strong><br>
+  Übernachten, wo Geschichten entstehen – mitten in der Wachau.<br>
+  <small>Die aktuellen Bedingungen vor Start immer selbst prüfen. Wanderungen erfolgen eigenverantwortlich.</small>
+</footer>
+
+<script>
+const START = "48.29368,15.3960181";
+const maps = (dest, mode="driving", waypoints="") => {
+  let u = "https://www.google.com/maps/dir/?api=1&origin="+START+"&destination="+encodeURIComponent(dest)+"&travelmode="+mode;
+  if(waypoints) u += "&waypoints="+encodeURIComponent(waypoints);
+  return u;
+};
+
+const tours = [
+{
+id:1, icon:"🗿", title:"Das Geheimnis der Venus", cat:["discover"], tag:"Geschichte",
+meta:"Willendorf · ca. 1½–3 Std. · leicht",
+dest:"Venus von Willendorf, Willendorf, Aggsbach, Österreich",
+mode:"driving",
+facts:[["Zeit","1½–3 Std."],["Niveau","leicht"],["Ideal","Geschichte"],["Anreise","Rad/Auto"]],
+route:"Zuhause am Bach → Willendorf → Venus-Fundstelle → Venusium → zurück.",
+story:"Nur wenige Kilometer entfernt liegt einer der bedeutendsten prähistorischen Fundorte Österreichs. Geht nicht nur ins Museum: Bleibt auch an der Fundstelle stehen und schaut bewusst in die Landschaft.",
+mission:"🐾 Fidel fragt: Was könnten die Menschen hier vor fast 30.000 Jahren gesehen haben, das auch heute noch da ist?",
+gear:"Wasser, feste Schuhe, Sonnenschutz, Kamera.",
+rain:"Bei Regen: Venusium besuchen und den Spaziergang kurz halten.",
+source:"https://www.donau.com/ausflug-freizeit/venus-von-willendorfvenusium"
+},
+{
+id:2, icon:"🌲", title:"Der Weg nach Hause", cat:["walk"], tag:"Welterbesteig",
+meta:"Maria Laach → Aggsbach · 7,17 km · ca. 1:55 Std.",
+dest:"Maria Laach am Jauerling, Österreich",
+mode:"driving",
+facts:[["Strecke","7,17 km"],["Gehzeit","ca. 1:55 h"],["Aufstieg","+80 Hm"],["Abstieg","−462 Hm"]],
+route:"Transfer von Zuhause am Bach nach Maria Laach → Schleinkhof → Aggsbach Markt → Zuhause am Bach.",
+story:"Das Besondere ist das Ziel: Ihr wandert nicht zu einem Parkplatz, sondern zu eurem Zuhause in der Wachau zurück.",
+mission:"🐾 Pia möchte wissen: An welcher Stelle seht ihr die Donau zum ersten Mal wieder? Macht dort euer „Wir kommen nach Hause“-Foto.",
+gear:"Wanderschuhe, mindestens 1 Liter Wasser pro Person, Sonnenschutz, Regenjacke, geladenes Smartphone.",
+rain:"Bei schlechtem Wetter Maria Laach besichtigen und mit Fahrzeug zurück.",
+source:"https://www.donau.com/en/tour/wachau-world-heritage-trail-06-maria-laach-aggsbach-markt-jauerling-wachau-nature-park"
+},
+{
+id:3, icon:"🌄", title:"Der Windi-Sonnenuntergang", cat:["romance","walk"], tag:"Romantik",
+meta:"Bireben-Rundweg · 4,37 km · ca. 1:30 Std.",
+dest:"Aggsbach Markt, Österreich",
+mode:"walking",
+facts:[["Runde","4,37 km"],["Gehzeit","ca. 1:30 h"],["Höhenmeter","±242 Hm"],["Start","vor Sunset"]],
+route:"Zuhause am Bach → Bireben-Rundweg → sicherer Aussichtspunkt → zurück.",
+story:"Kein Punkte-Sammeln, kein Sightseeing-Stress. Hinaufgehen, einen sicheren Platz suchen, hinsetzen und warten, bis das Licht über der Wachau weicher wird.",
+mission:"🐾 Zehn Minuten ohne Handy, Foto und Gespräch. Nur schauen. Danach dürft ihr wieder fotografieren.",
+gear:"Feste Schuhe, Wasser, Sitzunterlage, Taschenlampe.",
+rain:"Bei Nässe, Gewitter oder starkem Wind auslassen.",
+source:"https://www.donau.com/en/tour/bireben-rundweg"
+},
+{
+id:4, icon:"🏚️", title:"Die vergessene Burg", cat:["walk","adventure"], tag:"Große Tour",
+meta:"Richtung Gossam/Emmersdorf · bis 14,74 km · ca. 5 Std.",
+dest:"Gossam, Emmersdorf an der Donau, Österreich",
+mode:"walking",
+way:"Bärenreut, Österreich|Zintring, Österreich",
+facts:[["Max. Strecke","14,74 km"],["Gehzeit","ca. 5 h"],["Aufstieg","ca. 547 Hm"],["Niveau","mittel"]],
+route:"Aggsbach Markt → Edelberg → Bärenreut → Zintring → Felbring → Gossam; große Variante weiter bis Emmersdorf.",
+story:"Eine Tour für Gäste, die bewusst weg von den klassischen Wachau-Hotspots wollen. Wald, Hochflächen und historische Spuren machen den Reiz aus.",
+mission:"🐾 Gloria sucht Mauern, die Geschichten erzählen. Fotografiert in Gossam ein Detail, das euch besonders auffällt.",
+gear:"Gute Wanderschuhe, viel Wasser, Jause, Wetterschutz, Powerbank.",
+rain:"Nicht bei Gewitter, starkem Dauerregen oder großer Hitze starten. Rücktransport vorher organisieren.",
+source:"https://www.donau.com/touren/welterbesteig-wachau-07-aggsbach-markt-emmersdorf-naturpark-jauerling-wachau"
+},
+{
+id:5, icon:"⛰️", title:"Frühstück nach dem Gipfel", cat:["walk","discover"], tag:"Morgentour",
+meta:"Jauerling-Gipfelrunde · 3,36 km · ca. 1 Std.",
+dest:"Naturwerkstatt Jauerling, Oberndorf am Jauerling, Österreich",
+mode:"driving",
+facts:[["Runde","3,36 km"],["Gehzeit","ca. 1 h"],["Höhenmeter","±70 Hm"],["Höhe","ca. 960 m"]],
+route:"Früh von Zuhause am Bach zum Jauerling → Gipfelrunde → zurück → gemütlich frühstücken.",
+story:"Die Idee ist einfach: Erst die stille Morgenrunde am höchsten Punkt der Wachau-Region, danach schmeckt das Frühstück Zuhause am Bach doppelt gut.",
+mission:"🐾 Fidel-Aufgabe: Findet euren schönsten Weitblick und dreht euch einmal langsam um 360 Grad.",
+gear:"Feste Schuhe, morgens zusätzliche Jacke, Wasser.",
+rain:"Bei Nebel oder schlechter Sicht lieber auf einen anderen Tag verschieben.",
+source:"https://www.naturpark-jauerling.at/touren/jauerlinger-gipfelrunde"
+},
+{
+id:6, icon:"⛴️", title:"Die Wachau steht Kopf", cat:["discover"], tag:"Ungewöhnlich",
+meta:"Spitz · Rollfähre · Camera Obscura · ca. 2–3 Std.",
+dest:"Rollfähre Spitz-Arnsdorf, Spitz an der Donau, Österreich",
+mode:"driving",
+facts:[["Ort","Spitz"],["Überfahrt","ca. 5–7 min"],["Niveau","sehr leicht"],["Ideal","fast alle"]],
+route:"Zuhause am Bach → Spitz → Rollfähre Spitz–Arnsdorf → Camera Obscura → Spaziergang Spitz → zurück.",
+story:"Sucht auf der Fähre die kleine dunkle Kabine. Dort projiziert eine Camera Obscura von Ólafur Eliasson die vorbeiziehende Wachau in den Innenraum.",
+mission:"🐾 Pia fragt: Warum steht die Wachau plötzlich Kopf?",
+gear:"Je nach Wetter. Für den Spaziergang bequeme Schuhe.",
+rain:"Bei Regen trotzdem gut möglich – Fährbetrieb und Wasserstand vorher prüfen.",
+source:"https://www.donau.com/ausflug-freizeit/camera-obscura-auf-der-rollfaehre-spitz-arnsdorf"
+},
+{
+id:7, icon:"🏰", title:"Hinter den Mauern von Hinterhaus", cat:["romance","discover"], tag:"Aussicht",
+meta:"Spitz · Ruine Hinterhaus · ca. 2–3 Std.",
+dest:"Ruine Hinterhaus, Spitz an der Donau, Österreich",
+mode:"driving",
+facts:[["Ort","Spitz"],["Zeit","2–3 Std."],["Niveau","leicht–mittel"],["Beste Zeit","später Nachmittag"]],
+route:"Zuhause am Bach → Spitz → zu Fuß zur Ruine Hinterhaus → Aussicht genießen → zurück.",
+story:"Alte Mauern, Donau, Weinberge und spätes Nachmittagslicht. Hier lohnt es sich, oben nicht sofort wieder umzudrehen.",
+mission:"🐾 Gloria möchte einen einzigen Satz: Wenn diese Mauern sprechen könnten – welche Geschichte würden sie erzählen?",
+gear:"Feste Schuhe, Wasser, Kamera, bei später Rückkehr kleine Lampe.",
+rain:"Bei starkem Regen besser nur Spitz erkunden und Indoor-Angebote prüfen.",
+source:"https://www.spitz-wachau.at/Ruine_Hinterhaus"
+},
+{
+id:8, icon:"🥾", title:"Mein erster Welterbesteig", cat:["walk"], tag:"Kurz & gut",
+meta:"Bireben-Rundweg · 4,37 km · ca. 1:30 Std.",
+dest:"Aggsbach Markt, Österreich",
+mode:"walking",
+facts:[["Strecke","4,37 km"],["Zeit","ca. 1:30 h"],["Höhenmeter","±242 Hm"],["Niveau","leicht"]],
+route:"Zuhause am Bach → Bireben-Rundweg → Berührungspunkte mit dem Welterbesteig → zurück.",
+story:"Für alle, die den Welterbesteig ausprobieren wollen, aber keine halbe Tagesetappe gehen möchten.",
+mission:"🐾 Fidel-Challenge: Findet unterwegs ein Welterbesteig-Zeichen und macht ein Foto.",
+gear:"Feste Schuhe, Wasser, Sonnenschutz.",
+rain:"Bei nassem Untergrund vorsichtig; bei Gewitter auslassen.",
+source:"https://www.donau.com/en/tour/bireben-rundweg"
+},
+{
+id:9, icon:"🍇", title:"Die andere Wachau", cat:["walk","discover"], tag:"Weinlandschaft",
+meta:"Spitzer Graben · große Variante 10,95 km · ca. 4 Std.",
+dest:"Mühldorf, Niederösterreich, Österreich",
+mode:"driving",
+way:"Spitz an der Donau, Österreich",
+facts:[["Große Tour","10,95 km"],["Gehzeit","ca. 4 h"],["Aufstieg","ca. 463 Hm"],["Niveau","mittel"]],
+route:"Zuhause am Bach → Spitz → Spitzer Graben → Mühldorf; alternativ nur ausgewählten Abschnitt erkunden.",
+story:"Hier zeigt sich eine andere Wachau: steile Steinterrassen, Weinorte, Waldstücke und Blicke Richtung Jauerling.",
+mission:"🐾 Gloria fragt: Warum haben Menschen hier Wein angebaut, obwohl die Hänge so steil sind?",
+gear:"Wanderschuhe, viel Wasser, Sonnenschutz, kleine Jause.",
+rain:"Bei Hitze oder Nässe besser die kurze Genussvariante wählen.",
+source:"https://www.donau.com/touren/welterbesteig-wachau-04-spitz-muehldorf-spitzer-graben"
+},
+{
+id:10, icon:"🌙", title:"Wenn die Wachau schläft", cat:["adventure","romance"], tag:"Nachtweg",
+meta:"Aggsbach Markt · 30–60 Min. · bewusst kurz",
+dest:"Aggsbach Markt, Österreich",
+mode:"walking",
+facts:[["Dauer","30–60 min"],["Niveau","leicht"],["Licht","Taschenlampe"],["Wetter","trocken"]],
+route:"Nur eine von den Gastgebern empfohlene, bekannte Kurzroute in Aggsbach Markt nutzen und auf demselben sicheren Weg zurück.",
+story:"Heute geht es nicht darum, weit zu gehen. Sondern anders zu hören: Wasser, Blätter, Tiere und Wind.",
+mission:"🐾 Pia-Geheimauftrag: Taschenlampe aus, 60 Sekunden still sein. Wie viele verschiedene Geräusche hört ihr?",
+gear:"Taschenlampe, Smartphone, feste Schuhe.",
+rain:"Nicht bei Gewitter, Regen, starkem Wind oder schlechter Sicht. Keine unbekannten Waldabzweigungen.",
+source:""
+}
+];
+
+function render(filter="all"){
+ const grid=document.getElementById("tourGrid");
+ grid.innerHTML="";
+ tours.filter(t=>filter==="all"||t.cat.includes(filter)).forEach(t=>{
+   const card=document.createElement("article");
+   card.className="card";
+   const nav=maps(t.dest,t.mode,t.way||"");
+   card.innerHTML=`
+     <div class="card-top">
+       <div class="num">${t.icon}</div>
+       <div><h2>${t.id}. ${t.title}</h2><div class="meta">${t.meta}</div></div>
+       <span class="badge">${t.tag}</span>
+     </div>
+     <div class="card-actions">
+       <button class="primary" onclick="toggleDetail(${t.id})">✨ Abenteuer öffnen</button>
+       <a class="btn secondary" href="${nav}" target="_blank" rel="noopener">🧭 Navigation</a>
+     </div>
+     <div class="detail" id="d${t.id}">
+       <div class="facts">${t.facts.map(f=>`<div class="fact"><b>${f[0]}</b>${f[1]}</div>`).join("")}</div>
+       <h3>📍 Route</h3><div class="routebox">${t.route}</div>
+       <h3>✨ Das Erlebnis</h3><p>${t.story}</p>
+       <div class="mission"><b>Geheimauftrag</b><br>${t.mission}</div>
+       <h3>🎒 Mitnehmen</h3><p>${t.gear}</p>
+       <div class="safety"><b>⚠️ Wetter & Sicherheit</b><br>${t.rain}</div>
+       <div style="display:flex;gap:8px;flex-wrap:wrap">
+         <a class="btn primary" href="${nav}" target="_blank" rel="noopener">🧭 Von Zuhause am Bach starten</a>
+         ${t.source?`<a class="btn secondary" href="${t.source}" target="_blank" rel="noopener">ℹ️ Offizielle Tourinfo</a>`:""}
+       </div>
+     </div>`;
+   grid.appendChild(card);
+ });
+}
+function toggleDetail(id){
+ const el=document.getElementById("d"+id);
+ const open=el.classList.toggle("open");
+ if(open) setTimeout(()=>el.scrollIntoView({behavior:"smooth",block:"nearest"}),100);
+}
+
+document.querySelectorAll(".filter").forEach(b=>b.addEventListener("click",()=>{
+ document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));
+ b.classList.add("active"); render(b.dataset.filter);
+}));
+render();
+
+async function loadWeather(){
+ const w=document.getElementById("weather"), hint=document.getElementById("weatherHint");
+ try{
+   const url="https://api.open-meteo.com/v1/forecast?latitude=48.29368&longitude=15.3960181&current=temperature_2m,precipitation,weather_code,wind_speed_10m&daily=sunrise,sunset&timezone=Europe%2FVienna&forecast_days=1";
+   const r=await fetch(url,{cache:"no-store"}); if(!r.ok) throw new Error();
+   const j=await r.json(), c=j.current;
+   const rain=Number(c.precipitation||0), wind=Number(c.wind_speed_10m||0), temp=Math.round(c.temperature_2m);
+   let cls="ok", text="Heute grundsätzlich gut geeignet";
+   if(rain>0.5 || wind>40){cls="bad";text="Heute Outdoor-Touren kritisch prüfen";}
+   else if(rain>0 || wind>25 || temp>30){cls="warn";text="Heute mit Vorsicht auswählen";}
+   w.innerHTML=`<span class="live"><span class="dot ${cls}"></span>${text}</span><br><small>${temp} °C · Niederschlag ${rain} mm · Wind ${Math.round(wind)} km/h</small>`;
+   if(j.daily?.sunset?.[0]){
+     const sunset=new Date(j.daily.sunset[0]);
+     hint.textContent="Sonnenuntergang heute ca. "+sunset.toLocaleTimeString("de-AT",{hour:"2-digit",minute:"2-digit"})+" Uhr. Daten: Open-Meteo.";
+   }
+ }catch(e){
+   w.innerHTML='<span class="live"><span class="dot warn"></span>Wetterdaten derzeit nicht verfügbar</span>';
+   hint.textContent="Bitte Wetter vor Outdoor-Touren separat prüfen.";
+ }
+}
+loadWeather();
+</script>
+</body>
+</html>

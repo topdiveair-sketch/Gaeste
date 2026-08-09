@@ -6,14 +6,14 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>Zuhause am Bach – Gäste-App V73</title>
-<link rel="stylesheet" href="style.css?v=73">
+<title>Zuhause am Bach – Gäste-App V74</title>
+<link rel="stylesheet" href="style.css?v=74">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 <header class="hero" id="start">
   <div class="topbar">
-    <div class="badge">V73 · Fotoformate erweitert</div>
+    <div class="badge">V74 · 10 Windi-Geheimnisse</div>
     <div class="language-bar">
       <button type="button" data-lang="de" onclick="setLang('de')">DE</button>
       <button type="button" data-lang="en" onclick="setLang('en')">EN</button>
@@ -31,6 +31,7 @@
   <button class="important-nav" onclick="go('anreise')">📲 Anreise & Aufenthalt</button>
   <button class="chronicle-main-nav" onclick="go('chronik')">📖 Windi-Chronik</button>
   <button onclick="go('essen')">🍽️ Essen & Aktivitäten</button>
+  <button class="windi-secrets-nav" onclick="location.href='windis_geheimtipps.html'">🐾 10 Geheimnisse</button>
 </nav>
 
 <main>
@@ -403,14 +404,19 @@
   </div>
 </section>
 
-<section id="geheimtipps" class="card">
-  <div class="kicker">🌅 Windis-Geheimtipps</div>
-  <h2>Wachau-Tipps</h2>
-  <div class="tip-grid">
-    <article><h3>🏰 Burgruine Aggstein</h3><p>Starker Wachau-Klassiker mit Ausblick.</p></article>
-    <article><h3>🏺 Venus von Willendorf</h3><p>Kulturstopp nahe am Nordufer.</p></article>
-    <article><h3>⛪ Stift Melk</h3><p>Perfekt bei Regen oder Kulturtag.</p></article>
-    <article><h3>🐟 Steckerlfisch Graf Emmersdorf</h3><p>Gäste-Tipp für Wanderer und Radfahrer.</p></article>
+<section id="geheimtipps" class="card windi-secrets-card">
+  <div class="kicker">🐾 Die Geheimnisse der Windis</div>
+  <h2>10 besondere Wachau-Erlebnisse ab Zuhause am Bach</h2>
+  <p>Nicht einfach Sehenswürdigkeiten abhaken: Fidel, Gloria und Pia schicken euch zu stillen Aussichtspunkten, auf besondere Wanderungen, zur Venus, auf die Rollfähre und sogar auf einen kleinen Nachtweg.</p>
+  <div class="windi-secret-highlights">
+    <span>🥾 Wandern</span><span>❤️ Romantik</span><span>🚲 Entdecken</span><span>🌙 Abenteuer</span>
+  </div>
+  <a class="windi-secrets-button" href="windis_geheimtipps.html">🐾 Alle 10 Geheimnisse öffnen</a>
+  <div class="tip-grid compact-tips">
+    <article><h3>🗿 Venus von Willendorf</h3><p>Fast 30.000 Jahre Geschichte vor der Haustür.</p></article>
+    <article><h3>🌲 Der Weg nach Hause</h3><p>Maria Laach – Schleinkhof – zurück nach Aggsbach.</p></article>
+    <article><h3>⛴️ Die Wachau steht Kopf</h3><p>Camera Obscura auf der Rollfähre Spitz–Arnsdorf.</p></article>
+    <article><h3>🌙 Wenn die Wachau schläft</h3><p>Kurzes, bewusst stilles Nacht-Abenteuer.</p></article>
   </div>
 </section>
 
@@ -457,11 +463,11 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="app.js?v=73"></script>
-<script src="chronicle-config.js?v=73"></script>
-<script src="chronicle.js?v=73"></script>
-<script src="i18n.js?v=73"></script>
-<script src="chronicle-i18n.js?v=73"></script>
-<script src="chronicle-message-i18n.js?v=73"></script>
+<script src="app.js?v=74"></script>
+<script src="chronicle-config.js?v=74"></script>
+<script src="chronicle.js?v=74"></script>
+<script src="i18n.js?v=74"></script>
+<script src="chronicle-i18n.js?v=74"></script>
+<script src="chronicle-message-i18n.js?v=74"></script>
 </body>
 </html>
