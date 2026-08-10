@@ -363,4 +363,11 @@ footer{text-align:center;padding:30px;color:var(--muted)}
 .skip-link{position:absolute;left:12px;top:-80px;z-index:10000;background:#fff;color:#183d2c;padding:10px 14px;border-radius:8px;font-weight:700;box-shadow:0 3px 12px #0003}
 .skip-link:focus{top:12px}
 .privacy-note{margin:.75rem 0 0;color:#4d5c53;line-height:1.45}
+.fact-box{margin-top:1.1rem;padding:1rem;border:1px solid #c7d9ce;border-radius:14px;background:#f6fbf7;text-align:left}
+.fact-box h2{margin-top:0;font-size:1.15rem}
+.fact-box dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.65rem 1rem;margin:0}
+.fact-box dl div{padding:.55rem;background:#fff;border-radius:10px}
+.fact-box dt{font-weight:800;color:#315b45}.fact-box dd{margin:.2rem 0 0}
+.source-card li{margin:.5rem 0}.source-card a{font-weight:700}
+@media(max-width:620px){.fact-box dl{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}

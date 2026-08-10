@@ -3,22 +3,72 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Digitale Gäste-Information von Zuhause am Bach in Aggsbach Markt: Anreise, WLAN, Frühstück, Wetter, Wandern, Radfahren und persönliche Hilfe.">
+<meta name="description" content="Wachau-Gästeguide von Zuhause am Bach in Aggsbach Markt: Donauradweg, Welterbesteig, Wanderrouten, Radservice, Frühstück, Wetter und persönliche Gastgeber-Tipps.">
 <meta name="robots" content="noindex, follow">
 <meta name="theme-color" content="#315b45">
 <link rel="canonical" href="https://topdiveair-sketch.github.io/Gaeste/">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="icon-192.png">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>Zuhause am Bach – Gäste-App V75</title>
-<link rel="stylesheet" href="style.css?v=75">
+<title>Wachau Gästeguide | Donauradweg & Welterbesteig</title>
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_AT">
+<meta property="og:site_name" content="Zuhause am Bach">
+<meta property="og:title" content="Wachau Gästeguide – Donauradweg & Welterbesteig">
+<meta property="og:description" content="Persönliche Wachau-Tipps, Wanderrouten, Radservice, Wetter und Gästeinformationen von Zuhause am Bach in Aggsbach Markt.">
+<meta property="og:url" content="https://topdiveair-sketch.github.io/Gaeste/">
+<meta property="og:image" content="https://topdiveair-sketch.github.io/Gaeste/hero-windis.webp">
+<meta property="og:image:alt" content="Zuhause am Bach mit den Wilden Wachauer Windis in der Wachau">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Wachau Gästeguide – Zuhause am Bach">
+<meta name="twitter:description" content="Tipps für Donauradweg, Welterbesteig und Ihren Aufenthalt in Aggsbach Markt.">
+<meta name="twitter:image" content="https://topdiveair-sketch.github.io/Gaeste/hero-windis.webp">
+<link rel="stylesheet" href="style.css?v=76.1">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebApplication",
+      "@id":"https://topdiveair-sketch.github.io/Gaeste/#app",
+      "name":"Wachau Gästeguide von Zuhause am Bach",
+      "url":"https://topdiveair-sketch.github.io/Gaeste/",
+      "applicationCategory":"TravelApplication",
+      "operatingSystem":"Web",
+      "inLanguage":["de","en","cs","sk","hu","es","fr"],
+      "dateModified":"2026-08-10",
+      "isAccessibleForFree":true,
+      "about":{"@id":"https://topdiveair-sketch.github.io/Gaeste/#lodging"}
+    },
+    {
+      "@type":["LodgingBusiness","BedAndBreakfast"],
+      "@id":"https://topdiveair-sketch.github.io/Gaeste/#lodging",
+      "name":"Zuhause am Bach",
+      "url":"https://topdiveair-sketch.github.io/Direcktbuchungen/",
+      "telephone":"+43 664 6437526",
+      "checkinTime":"14:00",
+      "checkoutTime":"10:00",
+      "address":{"@type":"PostalAddress","streetAddress":"Aggsbach Markt 82","postalCode":"3641","addressLocality":"Aggsbach Markt","addressCountry":"AT"},
+      "amenityFeature":[
+        {"@type":"LocationFeatureSpecification","name":"Fahrradgarage","value":true},
+        {"@type":"LocationFeatureSpecification","name":"E-Bike-Lademöglichkeit","value":true},
+        {"@type":"LocationFeatureSpecification","name":"Frühstück zubuchbar","value":true},
+        {"@type":"LocationFeatureSpecification","name":"Gepäcktransport auf Anfrage","value":true}
+      ]
+    }
+  ]
+}
+</script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
 <header class="hero" id="start">
   <div class="topbar">
-    <div class="badge">V75 · 10 Windi-Geheimnisse</div>
+    <div class="badge">V76 · Wachau-Gästeguide</div>
     <div class="language-bar">
       <button type="button" data-lang="de" onclick="setLang('de')">DE</button>
       <button type="button" data-lang="en" onclick="setLang('en')">EN</button>
@@ -29,7 +79,7 @@
       <button type="button" data-lang="fr" onclick="setLang('fr')">FR</button>
     </div>
   </div>
-  <img class="hero-img" src="hero-windis.png" alt="Zuhause am Bach Wachau mit den Wilden Wachauer Windis">
+  <img class="hero-img" src="hero-windis.webp" width="1200" height="800" fetchpriority="high" alt="Zuhause am Bach in Aggsbach Markt mit den Wilden Wachauer Windis – Ausgangspunkt für Donauradweg und Welterbesteig Wachau">
 </header>
 
 <nav class="quick-nav">
@@ -49,6 +99,17 @@
     <article><strong>🔒 Gut versorgt</strong><span>Fahrradschuppen, Frühstück und Jausenplatte.</span></article>
     <article><strong>💬 Persönlicher Kontakt</strong><span>Direkt mit den Gastgebern per WhatsApp.</span></article>
   </div>
+  <aside class="fact-box" aria-label="Kurzinfos zu Zuhause am Bach">
+    <h2>Zuhause am Bach auf einen Blick</h2>
+    <dl>
+      <div><dt>Adresse</dt><dd>Aggsbach Markt 82, 3641 Aggsbach Markt, Österreich</dd></div>
+      <div><dt>Geeignet für</dt><dd>Welterbesteig-Wanderer, Donauradweg-Radfahrer, Familien und Ruhesuchende</dd></div>
+      <div><dt>Check-in</dt><dd>ab 14:00 Uhr</dd></div>
+      <div><dt>Check-out</dt><dd>bis 10:00 Uhr</dd></div>
+      <div><dt>Radservice</dt><dd>Fahrradgarage, Werkzeug und E-Bike-Lademöglichkeit</dd></div>
+      <div><dt>Verpflegung</dt><dd>Frühstück und Jausenplatte auf Anfrage</dd></div>
+    </dl>
+  </aside>
 </section>
 
 <section id="anreise" class="card guest-info-card">
@@ -451,6 +512,19 @@
   <button onclick="runAppCheck()">Funktionstest starten</button>
   <div id="appCheckResult" class="result"></div>
 </section>
+
+<section id="quellen" class="card source-card">
+  <div class="kicker">🔎 Quellen & Aktualität</div>
+  <h2>Offizielle Informationen für Ihre Tourenplanung</h2>
+  <p>Stand der redaktionellen Gäste-Informationen: <time datetime="2026-08-10">10. August 2026</time>. Wetter, Fahrpläne, Sperren und Öffnungszeiten können sich kurzfristig ändern. Bitte prüfen Sie vor dem Aufbruch die offiziellen Quellen.</p>
+  <ul>
+    <li><a href="https://www.donau.com/welterbesteig-wachau" target="_blank" rel="noopener noreferrer">Welterbesteig Wachau – Donau Niederösterreich</a></li>
+    <li><a href="https://www.donau.com/donauradweg" target="_blank" rel="noopener noreferrer">Donauradweg – Donau Niederösterreich</a></li>
+    <li><a href="https://www.donau.com/aktuelle-hinweise" target="_blank" rel="noopener noreferrer">Aktuelle Umleitungen und Sperren</a></li>
+    <li><a href="https://www.wachaubahn.at/whb-fahrplan" target="_blank" rel="noopener noreferrer">Wachaubahn – aktueller Fahrplan</a></li>
+    <li><a href="https://open-meteo.com/en/docs" target="_blank" rel="noopener noreferrer">Wetterdaten und Methodik – Open-Meteo</a></li>
+  </ul>
+</section>
 </main>
 
 
@@ -463,17 +537,18 @@
     <a href="#rudelbonus">Freunde-Bonus</a>
     <a href="#service">Kontakt</a>
     <a href="#appcheck">App Check</a>
+    <a href="#quellen">Quellen</a>
     <a href="https://www.diewildenwachauerwindis.at" target="_blank" rel="noopener">Windis-Webseite</a>
   </div>
 </footer>
 
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="app.js?v=75"></script>
-<script src="chronicle-config.js?v=75"></script>
-<script src="chronicle.js?v=75"></script>
-<script src="i18n.js?v=75"></script>
-<script src="chronicle-i18n.js?v=75"></script>
-<script src="chronicle-message-i18n.js?v=75"></script>
+<script src="app.js?v=76.1"></script>
+<script src="chronicle-config.js?v=76.1"></script>
+<script src="chronicle.js?v=76.1"></script>
+<script src="i18n.js?v=76.1"></script>
+<script src="chronicle-i18n.js?v=76.1"></script>
+<script src="chronicle-message-i18n.js?v=76.1"></script>
 </body>
 </html>
