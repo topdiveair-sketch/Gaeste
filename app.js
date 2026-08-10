@@ -69,8 +69,15 @@ async function loadWeather(){
  const advice=document.getElementById("weatherAdvice");
  if(!box)return;
  try{
-  const r=await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.2949&longitude=15.4032&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Europe%2FVienna&forecast_days=14");
+  box.setAttribute("aria-busy","true");
+  const controller=new AbortController();
+  const timeout=setTimeout(()=>controller.abort(),12000);
+  const r=await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.2949&longitude=15.4032&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Europe%2FVienna&forecast_days=14",{cache:"no-store",signal:controller.signal});
+  clearTimeout(timeout);
+  if(!r.ok)throw new Error("Wetterdienst HTTP "+r.status);
   const d=await r.json();
+  if(!d.daily||!Array.isArray(d.daily.time)||d.daily.time.length<2)throw new Error("Unvollständige Wetterdaten");
+  try{localStorage.setItem("zabWeatherCache",JSON.stringify({saved:Date.now(),data:d}));}catch(_e){}
   const codes={0:"☀️ Sonnig",1:"🌤️ Klar",2:"⛅ Teilweise bewölkt",3:"☁️ Bewölkt",45:"🌫️ Nebel",48:"🌫️ Nebel",51:"🌦️ Niesel",53:"🌦️ Niesel",55:"🌧️ Niesel",61:"🌧️ Leichter Regen",63:"🌧️ Regen",65:"🌧️ Starker Regen",71:"❄️ Schnee",80:"🌦️ Schauer",81:"🌧️ Schauer",82:"⛈️ Starke Schauer",95:"⛈️ Gewitter",96:"⛈️ Gewitter",99:"⛈️ Gewitter"};
   function dayLabel(iso,weekday=false){
     const date=new Date(iso+"T12:00:00");
@@ -115,8 +122,19 @@ async function loadWeather(){
     advice.innerHTML=`<div class="result-card"><h3>🐾 Empfehlung der Wilden Wachauer Windis</h3><p>${text}</p></div>`;
   }
  }catch(e){
-   box.innerHTML="<article><h3>🌤 Heute</h3><p>Wetter konnte nicht geladen werden.</p></article><article><h3>🌦 Morgen</h3><p>Internetverbindung prüfen.</p></article>";
-   if(updated) updated.textContent="Wetter konnte nicht geladen werden.";
+   let cache=null;
+   try{cache=JSON.parse(localStorage.getItem("zabWeatherCache")||"null");}catch(_e){}
+   if(cache&&cache.data&&Date.now()-cache.saved<21600000){
+     const d=cache.data;
+     const weatherText=i=>`${Math.round(d.daily.temperature_2m_min[i])}–${Math.round(d.daily.temperature_2m_max[i])} °C · Schauer ${d.daily.precipitation_probability_max[i]??0}%`;
+     box.innerHTML=`<article><h3>🌤 Heute</h3><p>${weatherText(0)}</p></article><article><h3>🌦 Morgen</h3><p>${weatherText(1)}</p></article>`;
+     if(updated)updated.textContent="Zuletzt geladene Wetterdaten · erneuter Abruf derzeit nicht möglich.";
+   }else{
+     box.innerHTML="<article><h3>🌤 Wetter vorübergehend nicht verfügbar</h3><p>Bitte später erneut versuchen.</p><button type='button' onclick='loadWeather()'>↻ Wetter erneut laden</button></article>";
+     if(updated) updated.textContent="Der Wetterdienst ist derzeit nicht erreichbar.";
+   }
+ }finally{
+   box.removeAttribute("aria-busy");
  }
 }
 function showMorning(type){
@@ -179,7 +197,7 @@ function updateCert(){document.getElementById("certPreview").textContent=documen
 function runAppCheck(){
  const checks=[
   ["Startbild",!!document.querySelector(".hero-img"),"Titelbild vorhanden"],
-  ["Sprachwahl",document.querySelectorAll(".language-bar button").length===6,"6 Sprachbuttons vorhanden"],
+  ["Sprachwahl",document.querySelectorAll(".language-bar button").length===7,"7 Sprachbuttons vorhanden"],
   ["Smart-WLAN",!!document.getElementById("smartwifi") && typeof updateSmartWifi==="function","WLAN-Willkommensbereich vorhanden"],
   ["Wetter",!!document.getElementById("weatherBox") && typeof loadWeather==="function","Open-Meteo-Funktion vorhanden"],
   ["Fidels Wanderwelt",!!document.getElementById("wanderResult") && typeof showFidelRoute==="function","Empfehlungsfunktion vorhanden"],
@@ -200,6 +218,20 @@ function runAppCheck(){
  "<div class='tip-grid'>"+checks.map(c=>`<article class="${c[1]?"check-ok":"check-bad"}"><h3>${c[1]?"✅":"❌"} ${c[0]}</h3><p>${c[2]}</p></article>`).join("")+"</div>";
 }
 document.addEventListener("DOMContentLoaded",()=>{updateSmartWifi();loadWeather();showMorning("wander");showFidelRoute();renderMaps();showGloria("rad");setHeurigenDate("today");showPia("quiz")});
+
+function secureExternalLinks(root=document){
+ root.querySelectorAll?.('a[target="_blank"]').forEach(link=>{
+   const rel=new Set((link.getAttribute("rel")||"").split(/\s+/).filter(Boolean));
+   rel.add("noopener"); rel.add("noreferrer");
+   link.setAttribute("rel",[...rel].join(" "));
+ });
+}
+document.addEventListener("DOMContentLoaded",()=>{
+ secureExternalLinks();
+ new MutationObserver(entries=>entries.forEach(entry=>entry.addedNodes.forEach(node=>{
+   if(node.nodeType===1)secureExternalLinks(node);
+ }))).observe(document.body,{childList:true,subtree:true});
+});
 window.addEventListener("online",updateSmartWifi);
 window.addEventListener("offline",updateSmartWifi);
 

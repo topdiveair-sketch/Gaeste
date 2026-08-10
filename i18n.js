@@ -345,6 +345,15 @@ fr:{
 };
 Object.keys(V57_TRANSLATIONS).forEach(lang=>Object.assign(LANGS[lang],V57_TRANSLATIONS[lang]));
 Object.keys(V59_TRANSLATIONS).forEach(lang=>Object.assign(LANGS[lang],V59_TRANSLATIONS[lang]));
+const V75_TRANSLATIONS={
+ en:{"📖 Windi-Chronik":"📖 Windi Chronicle","🐾 10 Geheimnisse":"🐾 10 secrets","🐾 Alle 10 Geheimnisse öffnen":"🐾 Open all 10 secrets","Datenschutzhinweis: Beim Öffnen von WhatsApp werden die eingetragenen Angaben an WhatsApp/Meta übergeben. Alternativ können Sie SMS oder einen direkten Anruf verwenden.":"Privacy notice: Opening WhatsApp transfers the entered information to WhatsApp/Meta. Alternatively, use SMS or call us directly.","Wetter vorübergehend nicht verfügbar":"Weather temporarily unavailable","Bitte später erneut versuchen.":"Please try again later.","↻ Wetter erneut laden":"↻ Reload weather"},
+ cz:{"📖 Windi-Chronik":"📖 Kronika Windi","🐾 10 Geheimnisse":"🐾 10 tajemství","🐾 Alle 10 Geheimnisse öffnen":"🐾 Otevřít všech 10 tajemství","Wetter vorübergehend nicht verfügbar":"Počasí je dočasně nedostupné","Bitte später erneut versuchen.":"Zkuste to prosím později.","↻ Wetter erneut laden":"↻ Znovu načíst počasí"},
+ sk:{"📖 Windi-Chronik":"📖 Windi kronika","🐾 10 Geheimnisse":"🐾 10 tajomstiev","🐾 Alle 10 Geheimnisse öffnen":"🐾 Otvoriť všetkých 10 tajomstiev","Wetter vorübergehend nicht verfügbar":"Počasie je dočasne nedostupné","Bitte später erneut versuchen.":"Skúste to neskôr.","↻ Wetter erneut laden":"↻ Znovu načítať počasie"},
+ hu:{"📖 Windi-Chronik":"📖 Windi-krónika","🐾 10 Geheimnisse":"🐾 10 titok","🐾 Alle 10 Geheimnisse öffnen":"🐾 Mind a 10 titok megnyitása","Wetter vorübergehend nicht verfügbar":"Az időjárás átmenetileg nem érhető el","Bitte später erneut versuchen.":"Kérjük, próbálja újra később.","↻ Wetter erneut laden":"↻ Időjárás újratöltése"},
+ es:{"📖 Windi-Chronik":"📖 Crónica Windi","🐾 10 Geheimnisse":"🐾 10 secretos","🐾 Alle 10 Geheimnisse öffnen":"🐾 Abrir los 10 secretos","Wetter vorübergehend nicht verfügbar":"El tiempo no está disponible temporalmente","Bitte später erneut versuchen.":"Inténtelo de nuevo más tarde.","↻ Wetter erneut laden":"↻ Recargar el tiempo"},
+ fr:{"📖 Windi-Chronik":"📖 Chronique Windi","🐾 10 Geheimnisse":"🐾 10 secrets","🐾 Alle 10 Geheimnisse öffnen":"🐾 Ouvrir les 10 secrets","Wetter vorübergehend nicht verfügbar":"La météo est temporairement indisponible","Bitte später erneut versuchen.":"Veuillez réessayer plus tard.","↻ Wetter erneut laden":"↻ Recharger la météo"}
+};
+Object.keys(V75_TRANSLATIONS).forEach(lang=>Object.assign(LANGS[lang],V75_TRANSLATIONS[lang]));
 const NAMES={de:"Deutsch",en:"English",cz:"Čeština",sk:"Slovenčina",hu:"Magyar",es:"Español",fr:"Français"};
 let current="de", observer;
 function clean(s){return String(s||"").replace(/\s+/g," ").trim()}
@@ -396,6 +405,8 @@ window.setLang=function(lang){
   }
   if(current!=="de"){restoreGerman();return}
   current=lang; document.documentElement.lang=lang==="cz"?"cs":lang;
+  const titles={en:"Zuhause am Bach – Guest App",cz:"Zuhause am Bach – aplikace pro hosty",sk:"Zuhause am Bach – aplikácia pre hostí",hu:"Zuhause am Bach – vendégalkalmazás",es:"Zuhause am Bach – aplicación para huéspedes",fr:"Zuhause am Bach – application invités"};
+  document.title=titles[lang]||"Zuhause am Bach – Gäste-App";
   observer&&observer.disconnect(); translateNode(document.body);
   observer=new MutationObserver(list=>list.forEach(m=>m.addedNodes.forEach(n=>{
     if(n.nodeType===Node.TEXT_NODE){const v=translateText(n.nodeValue);if(v!==n.nodeValue)n.nodeValue=v}

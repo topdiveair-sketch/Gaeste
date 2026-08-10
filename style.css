@@ -359,3 +359,8 @@ footer{text-align:center;padding:30px;color:var(--muted)}
 .compact-tips{margin-top:12px}
 @media(min-width:761px){.quick-nav{grid-template-columns:repeat(4,1fr)}}
 @media(max-width:760px){.quick-nav{grid-template-columns:repeat(2,1fr)}.windi-secrets-button{font-size:16px}}
+/* Accessibility and privacy additions */
+.skip-link{position:absolute;left:12px;top:-80px;z-index:10000;background:#fff;color:#183d2c;padding:10px 14px;border-radius:8px;font-weight:700;box-shadow:0 3px 12px #0003}
+.skip-link:focus{top:12px}
+.privacy-note{margin:.75rem 0 0;color:#4d5c53;line-height:1.45}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
