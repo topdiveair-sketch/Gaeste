@@ -352,6 +352,8 @@ footer{text-align:center;padding:30px;color:var(--muted)}
 
 /* V74 – 10 Geheimnisse der Windis */
 .windi-secrets-nav{background:#234c3a!important;color:#fff!important;border-color:#4d7f65!important}
+.storm-nav{background:#155b78!important;color:#fff!important;border-color:#2c7898!important}
+.storm-card{background:linear-gradient(180deg,#f7fcff,#e8f5fa);border-color:#9bc9db}.storm-actions{display:flex;gap:10px;margin:16px 0}.storm-primary{display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;border-radius:12px;color:#fff;background:#155b78;text-decoration:none;font-weight:800;box-shadow:0 6px 18px rgba(21,91,120,.22)}.storm-primary:hover{background:#0f465e}.storm-frame{display:block;width:100%;height:720px;border:1px solid #9bc9db;border-radius:18px;background:#0a1623;box-shadow:0 8px 24px rgba(20,54,72,.14)}
 .windi-secrets-card{background:linear-gradient(180deg,#fffdf8,#eef6ec);border:2px solid #89aa8e}
 .windi-secret-highlights{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
 .windi-secret-highlights span{background:#e8f1e9;color:#234c3a;border-radius:999px;padding:8px 12px;font-weight:900}
@@ -359,6 +361,7 @@ footer{text-align:center;padding:30px;color:var(--muted)}
 .compact-tips{margin-top:12px}
 @media(min-width:761px){.quick-nav{grid-template-columns:repeat(4,1fr)}}
 @media(max-width:760px){.quick-nav{grid-template-columns:repeat(2,1fr)}.windi-secrets-button{font-size:16px}}
+@media(max-width:760px){.storm-frame{height:620px}.storm-primary{width:100%;text-align:center}}
 /* Accessibility and privacy additions */
 .skip-link{position:absolute;left:12px;top:-80px;z-index:10000;background:#fff;color:#183d2c;padding:10px 14px;border-radius:8px;font-weight:700;box-shadow:0 3px 12px #0003}
 .skip-link:focus{top:12px}
