@@ -83,6 +83,7 @@
 </header>
 
 <nav class="quick-nav">
+  <button class="newspaper-nav" onclick="go('tratsch-glatsch')">🗞️ Tratsch & Glatsch</button>
   <button class="important-nav" onclick="go('anreise')">📲 Anreise & Aufenthalt</button>
   <button class="chronicle-main-nav" onclick="go('chronik')">📖 Windi-Chronik</button>
   <button onclick="go('essen')">🍽️ Essen & Aktivitäten</button>
@@ -111,6 +112,27 @@
       <div><dt>Verpflegung</dt><dd>Frühstück und Jausenplatte auf Anfrage</dd></div>
     </dl>
   </aside>
+</section>
+
+<section id="tratsch-glatsch" class="card newspaper-card" aria-labelledby="newspaperTitle">
+  <div class="newspaper-masthead">
+    <div>
+      <div class="newspaper-label">Die tägliche Gästezeitung</div>
+      <h2 id="newspaperTitle">🗞️ Zuhause am Bach – Tratsch und Glatsch mit Pia</h2>
+      <p id="newspaperStand" class="newspaper-date">Ausgabe wird geladen …</p>
+    </div>
+    <div class="pia-seal" aria-label="Präsentiert von Pia">🐾<span>mit Pia</span></div>
+  </div>
+  <p id="newspaperIntro" class="newspaper-lead">Pia sammelt Wetter, Wege, Veranstaltungen und Genuss-Tipps für euren Tag am Wachauer Nordufer.</p>
+  <div id="newspaperStatus" class="newspaper-status" role="status" aria-live="polite">Aktuelle Ausgabe wird geladen …</div>
+  <div id="newspaperWeather" class="newspaper-weather" aria-live="polite"></div>
+  <div id="newspaperContent" class="newspaper-sections"></div>
+  <div class="newspaper-actions">
+    <button type="button" onclick="loadDailyNewspaper(true)">↻ Ausgabe aktualisieren</button>
+    <a href="#wetter">🌦 14-Tage-Wetter</a>
+    <a href="#heurigen">🍷 Heurigenfinder</a>
+  </div>
+  <p class="small">Kurzfristige Änderungen sind möglich. Vor dem Aufbruch bitte die jeweils verlinkte Originalquelle prüfen.</p>
 </section>
 
 <section id="anreise" class="card guest-info-card">
@@ -556,7 +578,7 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="app.js?v=76.1"></script>
+<script src="app.js?v=77.2"></script>
 <script src="chronicle-config.js?v=76.1"></script>
 <script src="chronicle.js?v=76.1"></script>
 <script src="i18n.js?v=76.1"></script>
