@@ -26,7 +26,7 @@
 <meta name="twitter:title" content="Wachau Gästeguide – Zuhause am Bach">
 <meta name="twitter:description" content="Tipps für Donauradweg, Welterbesteig und Ihren Aufenthalt in Aggsbach Markt.">
 <meta name="twitter:image" content="https://topdiveair-sketch.github.io/Gaeste/hero-windis.webp">
-<link rel="stylesheet" href="style.css?v=76.1">
+<link rel="stylesheet" href="style.css?v=77.1">
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -68,7 +68,7 @@
 <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
 <header class="hero" id="start">
   <div class="topbar">
-    <div class="badge">V76 · Wachau-Gästeguide</div>
+    <div class="badge">V77 · Wachau-Gästeguide</div>
     <div class="language-bar">
       <button type="button" data-lang="de" onclick="setLang('de')">DE</button>
       <button type="button" data-lang="en" onclick="setLang('en')">EN</button>
@@ -86,6 +86,7 @@
   <button class="important-nav" onclick="go('anreise')">📲 Anreise & Aufenthalt</button>
   <button class="chronicle-main-nav" onclick="go('chronik')">📖 Windi-Chronik</button>
   <button onclick="go('essen')">🍽️ Essen & Aktivitäten</button>
+  <button class="storm-nav" onclick="go('sturmwache')">🌦 Wetter & Radar</button>
   <button class="windi-secrets-nav" onclick="location.href='windis_geheimtipps.html'">🐾 10 Geheimnisse</button>
 </nav>
 
@@ -281,6 +282,17 @@
   </div>
   <div id="weatherAdvice" class="result"></div>
   <p class="small">Quelle: Open-Meteo. Prognosen ab Tag 7 sind als Trend zu verstehen.</p>
+</section>
+
+<section id="sturmwache" class="card storm-card">
+  <div class="kicker">🌦 Live-Wetter, Radar & Warnungen</div>
+  <h2>SturmWache für Aggsbach Markt</h2>
+  <p>Aktuelle Wettervorhersage, Niederschlagsradar, Gewitterwarnungen, Hochwasser- und Feuerwehrhinweise sowie Routenplanung von oder nach Zuhause am Bach.</p>
+  <div class="storm-actions">
+    <a class="storm-primary" href="https://sturmwache.workspace-vo-3161.chatgpt.site" target="_blank" rel="noopener">🌦 SturmWache groß öffnen</a>
+  </div>
+  <iframe class="storm-frame" src="https://sturmwache.workspace-vo-3161.chatgpt.site" title="SturmWache – Wetter, Niederschlagsradar und Warnungen für Aggsbach Markt" loading="lazy" allow="geolocation; fullscreen" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  <p class="small">Falls die Ansicht im Browser nicht geladen wird, bitte „SturmWache groß öffnen“ verwenden.</p>
 </section>
 
 <section id="morgen" class="card">
