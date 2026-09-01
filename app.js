@@ -6,6 +6,49 @@ function route(dest,mode="walking"){return `https://www.google.com/maps/dir/?api
 function komoot(q){return "https://www.google.com/search?q="+enc("site:komoot.com "+q+" Wachau Tour")}
 function google(q){return "https://www.google.com/search?q="+enc(q)}
 function outdooractive(q){return "https://www.google.com/search?q="+enc("site:outdooractive.com "+q+" Wachau Tour")}
+function escapeHtml(value){return String(value??"").replace(/[&<>'"]/g,char=>({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[char]))}
+function safeUrl(value){try{const url=new URL(value,location.href);return ["http:","https:"].includes(url.protocol)?url.href:"#"}catch(_e){return"#"}}
+function newspaperLink(url,label){return `<a href="${safeUrl(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)}</a>`}
+function newspaperList(items,renderer,emptyText){return items?.length?items.map(renderer).join(""):`<p class="newspaper-empty">${escapeHtml(emptyText)}</p>`}
+
+async function loadDailyNewspaper(force=false){
+ const status=document.getElementById("newspaperStatus"),content=document.getElementById("newspaperContent");
+ if(!status||!content)return;
+ status.textContent="Pia sammelt die aktuelle Ausgabe …";
+ try{
+  const response=await fetch(`tratsch-und-glatsch.json${force?`?t=${Date.now()}`:""}`,{cache:"no-store"});
+  if(!response.ok)throw new Error("Ausgabe nicht erreichbar");
+  const edition=await response.json();
+  document.getElementById("newspaperStand").textContent=`Ausgabe: ${edition.editionLabel||edition.editionDate||"Stand nicht angegeben"}`;
+  document.getElementById("newspaperIntro").textContent=edition.intro||"Pias Tagesüberblick für das Wachauer Nordufer.";
+  status.textContent="Redaktionelle Ausgabe geladen · Wetter wird live aktualisiert";
+  content.innerHTML=`
+   <article class="newspaper-section"><h3>📌 Heute wichtig</h3>${newspaperList(edition.important,item=>`<div class="news-item"><h4>${escapeHtml(item.title)}</h4><p>${escapeHtml(item.text)}</p>${item.source?newspaperLink(item.source,item.sourceLabel||"Quelle"):""}</div>`,"Keine neue wichtige Meldung.")}</article>
+   <article class="newspaper-section"><h3>🚴 Rad & Welterbesteig</h3>${newspaperList(edition.outdoor,item=>`<div class="news-item"><h4>${escapeHtml(item.title)}</h4><p>${escapeHtml(item.text)}</p><div class="news-links">${newspaperList(item.links,link=>newspaperLink(link.url,link.label),"")}</div></div>`,"Derzeit kein zusätzlicher Streckenhinweis.")}</article>
+   <article class="newspaper-section newspaper-wide"><h3>🎉 Was ist los?</h3><div class="newspaper-table-wrap"><table class="newspaper-table"><thead><tr><th>Termin</th><th>Ort</th><th>Veranstaltung</th></tr></thead><tbody>${newspaperList(edition.events,item=>`<tr><td>${escapeHtml(item.date)}</td><td>${escapeHtml(item.place)}</td><td>${newspaperLink(item.url,item.title)}<small>${escapeHtml(item.note||"")}</small></td></tr>`,`<tr><td colspan="3">Keine bevorstehende Veranstaltung gemeldet.</td></tr>`)}</tbody></table></div></article>
+   <article class="newspaper-section newspaper-wide"><h3>🍷 Ausg’steckt is’</h3><div class="heurigen-news-grid">${newspaperList(edition.heurigen,item=>`<div class="heurigen-news"><h4>${newspaperLink(item.url,item.name)}</h4><p><strong>${escapeHtml(item.place)}</strong> · ${escapeHtml(item.period)}</p><p>${escapeHtml(item.hours)}</p>${item.phone?`<a href="tel:${escapeHtml(item.phone.replace(/\s/g,""))}">☎ ${escapeHtml(item.phone)}</a>`:""}</div>`,"Heute ist kein geöffneter Heuriger bestätigt.")}</div><h4 class="opening-soon-title">Öffnet in den nächsten Tagen</h4><ul class="nice-list">${newspaperList(edition.openingSoon,item=>`<li><strong>${escapeHtml(item.date)}:</strong> ${newspaperLink(item.url,item.name)}, ${escapeHtml(item.place)} – ${escapeHtml(item.hours)}</li>`,"<li>Keine weitere bestätigte Öffnung.</li>")}</ul></article>
+   <article class="newspaper-section pia-tip"><h3>🐾 Pias Tipp des Tages</h3><p>${escapeHtml(edition.piaTip||"Schaut vor dem Aufbruch noch einmal auf Wetter und Wegzustand.")}</p></article>
+   <article class="newspaper-section"><h3>💡 Gut zu wissen</h3><ul class="nice-list">${newspaperList(edition.goodToKnow,item=>`<li>${escapeHtml(item)}</li>`,`<li>Keine zusätzliche Information.</li>`)}</ul></article>`;
+  secureExternalLinks(content);
+  await loadNewspaperWeather();
+ }catch(error){
+  status.textContent="Die aktuelle Ausgabe konnte nicht geladen werden.";
+  content.innerHTML=`<div class="newspaper-error">Bitte Internetverbindung prüfen und später erneut aktualisieren.</div>`;
+ }
+}
+
+async function loadNewspaperWeather(){
+ const box=document.getElementById("newspaperWeather");if(!box)return;
+ try{
+  const response=await fetch("https://api.open-meteo.com/v1/forecast?latitude=48.2949&longitude=15.4032&current=temperature_2m,apparent_temperature,precipitation,weather_code,wind_speed_10m,wind_gusts_10m&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weather_code&timezone=Europe%2FVienna&forecast_days=2",{cache:"no-store"});
+  if(!response.ok)throw new Error("Wetter nicht erreichbar");
+  const data=await response.json(),current=data.current,daily=data.daily;
+  const codes={0:"Sonnig",1:"Überwiegend klar",2:"Teilweise bewölkt",3:"Bewölkt",45:"Nebel",48:"Nebel",51:"Nieselregen",53:"Nieselregen",55:"Starker Nieselregen",61:"Leichter Regen",63:"Regen",65:"Starker Regen",71:"Schnee",80:"Regenschauer",81:"Regenschauer",82:"Starke Schauer",95:"Gewitter",96:"Gewitter",99:"Starkes Gewitter"};
+  const rain=daily.precipitation_probability_max?.[0]??0,wind=current.wind_speed_10m??0,gust=current.wind_gusts_10m??0;
+  const advice=rain>=60?"Regenausrüstung mitnehmen und rutschige Wege einplanen.":gust>=45?"Auf exponierten Wegen und beim Radfahren auf starke Böen achten.":"Gute Voraussetzungen für eine Tour – Wasser und Sonnenschutz nicht vergessen.";
+  box.innerHTML=`<div><span>🌦 Wetter am Nordufer</span><strong>${escapeHtml(codes[current.weather_code]||"Aktuelles Wetter")} · ${Math.round(current.temperature_2m)} °C</strong></div><div><span>Heute</span><strong>${Math.round(daily.temperature_2m_min[0])}–${Math.round(daily.temperature_2m_max[0])} °C · Regen ${rain}%</strong></div><div><span>Wind</span><strong>${Math.round(wind)} km/h · Böen ${Math.round(gust)} km/h</strong></div><p>${escapeHtml(advice)}</p>`;
+ }catch(_error){box.innerHTML=`<p>Live-Wetter derzeit nicht verfügbar. <a href="#wetter">Zur ausführlichen Wetteransicht</a></p>`}
+}
 function setLang(lang){
  const names={de:"Deutsch",en:"English",cz:"Čeština",hu:"Magyar",es:"Español",fr:"Français"};
  const msg="Sprache gewählt: "+(names[lang]||lang)+". Die vollständige Übersetzung wird in einer späteren Version ergänzt.";
@@ -204,6 +247,7 @@ function runAppCheck(){
   ["Alle Wander-Routen",typeof showAllRoutes==="function","Routenliste vorhanden"],
   ["Karten/Komoot",!!document.getElementById("mapCards") && typeof renderMaps==="function","Karten-Fallback vorhanden"],
   ["Glorias Radwelt",!!document.getElementById("gloriaResult") && typeof showGloria==="function","In-App-Auswahl vorhanden"],
+  ["Tageszeitung",!!document.getElementById("tratsch-glatsch") && typeof loadDailyNewspaper==="function","Tratsch und Glatsch vorhanden"],
   ["Heurigenfinder",!!document.getElementById("heurigenResult") && typeof renderHeurigen==="function","Google-KI-Modus vorhanden"],
   ["Pias Kinderwelt",!!document.getElementById("piaResult") && typeof showPia==="function","Quiz/Schatzsuche/Geschichten vorhanden"],
   ["Bücherwelt",!!document.getElementById("buecherwelt"),"Bücherwelt vorhanden"],
@@ -217,7 +261,7 @@ function runAppCheck(){
  `<div class="appcheck-summary">✅ ${ok} von ${checks.length} Kernfunktionen vorhanden.</div>`+
  "<div class='tip-grid'>"+checks.map(c=>`<article class="${c[1]?"check-ok":"check-bad"}"><h3>${c[1]?"✅":"❌"} ${c[0]}</h3><p>${c[2]}</p></article>`).join("")+"</div>";
 }
-document.addEventListener("DOMContentLoaded",()=>{updateSmartWifi();loadWeather();showMorning("wander");showFidelRoute();renderMaps();showGloria("rad");setHeurigenDate("today");showPia("quiz")});
+document.addEventListener("DOMContentLoaded",()=>{updateSmartWifi();loadDailyNewspaper();loadWeather();showMorning("wander");showFidelRoute();renderMaps();showGloria("rad");setHeurigenDate("today");showPia("quiz")});
 
 function secureExternalLinks(root=document){
  root.querySelectorAll?.('a[target="_blank"]').forEach(link=>{
