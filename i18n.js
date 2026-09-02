@@ -363,6 +363,40 @@ const V76_CORE={
  fr:{"Zuhause am Bach auf einen Blick":"Zuhause am Bach en bref","Adresse":"Adresse","Geeignet für":"Idéal pour","Check-in":"Arrivée","Check-out":"Départ","Radservice":"Services vélo","Verpflegung":"Restauration","ab 14:00 Uhr":"à partir de 14 h","bis 10:00 Uhr":"avant 10 h","Welterbesteig-Wanderer, Donauradweg-Radfahrer, Familien und Ruhesuchende":"randonneurs du Welterbesteig, cyclistes du Danube, familles et personnes recherchant le calme","Fahrradgarage, Werkzeug und E-Bike-Lademöglichkeit":"garage à vélos, outils et recharge de vélos électriques","Frühstück und Jausenplatte auf Anfrage":"petit-déjeuner et plateau froid sur demande","Quellen":"Sources"}
 };
 Object.keys(V76_CORE).forEach(lang=>Object.assign(LANGS[lang],V76_CORE[lang]));
+const V77_CANONICAL={
+  en:{
+    "Bachblick – unser aktuell buchbares Zimmer":"Bachblick – our currently bookable room",
+    "Gemütliches Doppelzimmer für maximal zwei Personen. Das eigene private Badezimmer liegt direkt gegenüber und ist nicht ensuite.":"Cozy double room for up to two people. Your private bathroom is directly opposite the room and is not ensuite.",
+    "Aktuelle Gästezeitung":"Current guest newsletter"
+  },
+  cz:{
+    "Bachblick – unser aktuell buchbares Zimmer":"Bachblick – náš aktuálně dostupný pokoj",
+    "Gemütliches Doppelzimmer für maximal zwei Personen. Das eigene private Badezimmer liegt direkt gegenüber und ist nicht ensuite.":"Útulný dvoulůžkový pokoj pro maximálně dvě osoby. Soukromá koupelna je přímo naproti pokoji a není ensuite.",
+    "Aktuelle Gästezeitung":"Aktuální hostovské noviny"
+  },
+  sk:{
+    "Bachblick – unser aktuell buchbares Zimmer":"Bachblick – naša aktuálne dostupná izba",
+    "Gemütliches Doppelzimmer für maximal zwei Personen. Das eigene private Badezimmer liegt direkt gegenüber und ist nicht ensuite.":"Útulná dvojlôžková izba pre maximálne dve osoby. Súkromná kúpeľňa je priamo oproti izbe a nie je ensuite.",
+    "Aktuelle Gästezeitung":"Aktuálne noviny pre hostí"
+  },
+  hu:{
+    "Bachblick – unser aktuell buchbares Zimmer":"Bachblick – jelenleg foglalható szobánk",
+    "Gemütliches Doppelzimmer für maximal zwei Personen. Das eigene private Badezimmer liegt direkt gegenüber und ist nicht ensuite.":"Hangulatos kétágyas szoba legfeljebb két fő részére. A saját fürdőszoba közvetlenül a szobával szemben található, nem ensuite.",
+    "Aktuelle Gästezeitung":"Aktuális vendéghírek"
+  },
+  es:{
+    "Bachblick – unser aktuell buchbares Zimmer":"Bachblick – nuestra habitación actualmente reservable",
+    "Gemütliches Doppelzimmer für maximal zwei Personen. Das eigene private Badezimmer liegt direkt gegenüber und ist nicht ensuite.":"Acogedora habitación doble para un máximo de dos personas. El baño privado está justo enfrente de la habitación y no es ensuite.",
+    "Aktuelle Gästezeitung":"Noticias actuales para huéspedes"
+  },
+  fr:{
+    "Bachblick – unser aktuell buchbares Zimmer":"Bachblick – notre chambre actuellement réservable",
+    "Gemütliches Doppelzimmer für maximal zwei Personen. Das eigene private Badezimmer liegt direkt gegenüber und ist nicht ensuite.":"Chambre double confortable pour deux personnes maximum. La salle de bains privée se trouve juste en face de la chambre et n’est pas attenante.",
+    "Aktuelle Gästezeitung":"Actualités pour les hôtes"
+  }
+};
+Object.keys(V77_CANONICAL).forEach(lang=>Object.assign(LANGS[lang],V77_CANONICAL[lang]));
+
 const NAMES={de:"Deutsch",en:"English",cz:"Čeština",sk:"Slovenčina",hu:"Magyar",es:"Español",fr:"Français"};
 let current="de", observer;
 function clean(s){return String(s||"").replace(/\s+/g," ").trim()}
