@@ -21,7 +21,11 @@ async function loadDailyNewspaper(force=false){
   const edition=await response.json();
   document.getElementById("newspaperStand").textContent=`Ausgabe: ${edition.editionLabel||edition.editionDate||"Stand nicht angegeben"}`;
   document.getElementById("newspaperIntro").textContent=edition.intro||"Pias Tagesüberblick für das Wachauer Nordufer.";
-  status.textContent="Redaktionelle Ausgabe geladen · Wetter wird live aktualisiert";
+  const viennaToday = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Vienna", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
+  const editionFresh = edition.editionDate === viennaToday;
+  status.textContent = editionFresh
+    ? "Heutige redaktionelle Ausgabe geladen · Wetter wird live aktualisiert"
+    : `⚠️ Ausgabe nicht aktuell (${edition.editionLabel||edition.editionDate||"ohne Datum"}). Wetter ist live, redaktionelle Inhalte bitte nicht als heutigen Stand verwenden.`;
   content.innerHTML=`
    <article class="newspaper-section"><h3>📌 Heute wichtig</h3>${newspaperList(edition.important,item=>`<div class="news-item"><h4>${escapeHtml(item.title)}</h4><p>${escapeHtml(item.text)}</p>${item.source?newspaperLink(item.source,item.sourceLabel||"Quelle"):""}</div>`,"Keine neue wichtige Meldung.")}</article>
    <article class="newspaper-section"><h3>🚴 Rad & Welterbesteig</h3>${newspaperList(edition.outdoor,item=>`<div class="news-item"><h4>${escapeHtml(item.title)}</h4><p>${escapeHtml(item.text)}</p><div class="news-links">${newspaperList(item.links,link=>newspaperLink(link.url,link.label),"")}</div></div>`,"Derzeit kein zusätzlicher Streckenhinweis.")}</article>
