@@ -1,0 +1,41 @@
+name: Add newspaper freshness check
+
+on:
+  push:
+    paths:
+      - '.github/workflows/add-newspaper-freshness-check.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Add stale edition warning
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('app.js')
+          s = p.read_text(encoding='utf-8')
+          old = '''  document.getElementById("newspaperStand").textContent=`Ausgabe: ${edition.editionLabel||edition.editionDate||"Stand nicht angegeben"}`;\n  document.getElementById("newspaperIntro").textContent=edition.intro||"Pias Tagesüberblick für das Wachauer Nordufer.";\n  status.textContent="Redaktionelle Ausgabe geladen · Wetter wird live aktualisiert";'''
+          new = '''  document.getElementById("newspaperStand").textContent=`Ausgabe: ${edition.editionLabel||edition.editionDate||"Stand nicht angegeben"}`;\n  document.getElementById("newspaperIntro").textContent=edition.intro||"Pias Tagesüberblick für das Wachauer Nordufer.";\n  const viennaToday = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Vienna", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());\n  const editionFresh = edition.editionDate === viennaToday;\n  status.textContent = editionFresh\n    ? "Heutige redaktionelle Ausgabe geladen · Wetter wird live aktualisiert"\n    : `⚠️ Ausgabe nicht aktuell (${edition.editionLabel||edition.editionDate||"ohne Datum"}). Wetter ist live, redaktionelle Inhalte bitte nicht als heutigen Stand verwenden.`;'''
+          if old not in s:
+              raise SystemExit('Freshness insertion anchor not found')
+          s = s.replace(old, new, 1)
+          p.write_text(s, encoding='utf-8')
+          PY
+      - name: Validate JavaScript
+        run: node --check app.js
+      - name: Commit patch
+        run: |
+          if git diff --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add app.js
+          git commit -m "Warn when Tratsch und Glatsch edition is stale"
+          git push
