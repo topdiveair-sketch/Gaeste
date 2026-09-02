@@ -1,0 +1,84 @@
+name: Referral growth
+
+on:
+  push:
+    paths:
+      - '.github/workflows/referral-growth.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  referral-growth:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Upgrade referral links
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from urllib.parse import quote
+
+          path = Path('index.html')
+          text = path.read_text(encoding='utf-8')
+          original = text
+
+          direct = 'https://topdiveair-sketch.github.io/Direcktbuchungen/?utm_source=guest_referral&utm_medium=referral&utm_campaign=gaesteapp'
+          message = ('Tipp für die Wachau: Zuhause am Bach – Wachau in Aggsbach Markt. '
+                     'Ruhige Unterkunft für Donauradweg und Welterbesteig. Direkt anfragen: ' + direct)
+          whatsapp = 'https://wa.me/?text=' + quote(message, safe='')
+          subject = quote('Wachau-Tipp: Zuhause am Bach – Wachau', safe='')
+          body = quote(message, safe='')
+          mail = f'mailto:?subject={subject}&body={body}'
+
+          import re
+          text = re.sub(r'(<a[^>]+id="whatsappRecommend"[^>]+href=")[^"]*(")', r'\1' + whatsapp + r'\2', text, count=1)
+          text = re.sub(r'(<a[^>]+id="mailRecommend"[^>]+href=")[^"]*(")', r'\1' + mail + r'\2', text, count=1)
+
+          marker = '<a class="btn-link brown" id="mailRecommend"'
+          if 'id="directRecommend"' not in text and marker in text:
+              start = text.find(marker)
+              end = text.find('</a>', start)
+              if end != -1:
+                  end += 4
+                  cta = f'\n    <a class="btn-link" id="directRecommend" href="{direct}" target="_blank" rel="noopener">🏡 Direktanfrage öffnen</a>'
+                  text = text[:end] + cta + text[end:]
+
+          text = text.replace('© 2026 Zuhause am Bach – Gästehaus Wachau', '© 2026 Zuhause am Bach – Wachau')
+
+          if text != original:
+              path.write_text(text, encoding='utf-8')
+              print('Referral funnel upgraded')
+          else:
+              print('No changes required')
+          PY
+
+      - name: Validate referral funnel
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          text = Path('index.html').read_text(encoding='utf-8')
+          assert 'utm_source=guest_referral' in text
+          assert 'id="directRecommend"' in text
+          assert '© 2026 Zuhause am Bach – Wachau' in text
+          print('Referral funnel validation passed')
+          PY
+
+      - name: Commit
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo 'No changes required.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          git commit -m 'Add tracked direct booking referral links'
+          git push
