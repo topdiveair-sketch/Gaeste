@@ -1,0 +1,62 @@
+name: Fix guest app logic
+
+on:
+  push:
+    paths:
+      - '.github/workflows/fix-guest-app-logic.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply guest app consistency fixes
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+
+          replacements = {
+            'Die tägliche Gästezeitung': 'Aktuelle Gästezeitung',
+            'Jausenplatte<select id="snackBoard"><option>Nein</option><option>Ja – für 2 Personen, Gesamtpreis 29,80 €</option></select>': 'Jausenplatte<select id="snackBoard"><option>Nein</option><option>Ja – für 2 Personen, Gesamtpreis 29,90 €</option></select>',
+            '<label>Personenzahl<input id="guestCount" type="number" min="1" value="2"></label>': '<label>Personenzahl<input id="guestCount" type="number" min="1" max="2" value="2"></label>',
+            '<div class="snack-price"><strong>🥨 Jausenplatte für 2 Personen</strong><span>Gesamtpreis: 29,80 €</span></div>': '<div class="snack-price"><strong>🥨 Jausenplatte für 2 Personen</strong><span>Gesamtpreis: 29,90 €</span></div>',
+          }
+          for old, new in replacements.items():
+              if old not in s:
+                  raise SystemExit(f'Anchor not found: {old[:60]}')
+              s = s.replace(old, new, 1)
+
+          p.write_text(s, encoding='utf-8')
+
+          # Extend current translation dictionary with the canonical room text.
+          p = Path('i18n.js')
+          s = p.read_text(encoding='utf-8')
+          anchor = 'Object.keys(V76_CORE).forEach(lang=>Object.assign(LANGS[lang],V76_CORE[lang]));'
+          if anchor not in s:
+              raise SystemExit('i18n extension anchor not found')
+          addition = '''\nconst V77_CANONICAL={\n  en:{\n    "Bachblick – unser aktuell buchbares Zimmer":"Bachblick – our currently bookable room",\n    "Gemütliches Doppelzimmer für maximal zwei Personen. Das eigene private Badezimmer liegt direkt gegenüber und ist nicht ensuite.":"Cozy double room for up to two people. Your private bathroom is directly opposite the room and is not ensuite.",\n    "Aktuelle Gästezeitung":"Current guest newsletter"\n  },\n  cz:{\n    "Bachblick – unser aktuell buchbares Zimmer":"Bachblick – náš aktuálně dostupný pokoj",\n    "Gemütliches Doppelzimmer für maximal zwei Personen. Das eigene private Badezimmer liegt direkt gegenüber und ist nicht ensuite.":"Útulný dvoulůžkový pokoj pro maximálně dvě osoby. Soukromá koupelna je přímo naproti pokoji a není ensuite.",\n    "Aktuelle Gästezeitung":"Aktuální hostovské noviny"\n  },\n  sk:{\n    "Bachblick – unser aktuell buchbares Zimmer":"Bachblick – naša aktuálne dostupná izba",\n    "Gemütliches Doppelzimmer für maximal zwei Personen. Das eigene private Badezimmer liegt direkt gegenüber und ist nicht ensuite.":"Útulná dvojlôžková izba pre maximálne dve osoby. Súkromná kúpeľňa je priamo oproti izbe a nie je ensuite.",\n    "Aktuelle Gästezeitung":"Aktuálne noviny pre hostí"\n  },\n  hu:{\n    "Bachblick – unser aktuell buchbares Zimmer":"Bachblick – jelenleg foglalható szobánk",\n    "Gemütliches Doppelzimmer für maximal zwei Personen. Das eigene private Badezimmer liegt direkt gegenüber und ist nicht ensuite.":"Hangulatos kétágyas szoba legfeljebb két fő részére. A saját fürdőszoba közvetlenül a szobával szemben található, nem ensuite.",\n    "Aktuelle Gästezeitung":"Aktuális vendéghírek"\n  },\n  es:{\n    "Bachblick – unser aktuell buchbares Zimmer":"Bachblick – nuestra habitación actualmente reservable",\n    "Gemütliches Doppelzimmer für maximal zwei Personen. Das eigene private Badezimmer liegt direkt gegenüber und ist nicht ensuite.":"Acogedora habitación doble para un máximo de dos personas. El baño privado está justo enfrente de la habitación y no es ensuite.",\n    "Aktuelle Gästezeitung":"Noticias actuales para huéspedes"\n  },\n  fr:{\n    "Bachblick – unser aktuell buchbares Zimmer":"Bachblick – notre chambre actuellement réservable",\n    "Gemütliches Doppelzimmer für maximal zwei Personen. Das eigene private Badezimmer liegt direkt gegenüber und ist nicht ensuite.":"Chambre double confortable pour deux personnes maximum. La salle de bains privée se trouve juste en face de la chambre et n’est pas attenante.",\n    "Aktuelle Gästezeitung":"Actualités pour les hôtes"\n  }\n};\nObject.keys(V77_CANONICAL).forEach(lang=>Object.assign(LANGS[lang],V77_CANONICAL[lang]));\n'''
+          s = s.replace(anchor, anchor + addition, 1)
+          p.write_text(s, encoding='utf-8')
+          PY
+      - name: Validate JavaScript syntax
+        run: |
+          node --check app.js
+          node --check i18n.js
+          node --check review-links.js
+      - name: Commit fixes
+        run: |
+          if git diff --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html i18n.js
+          git commit -m "Align guest app pricing occupancy and room translations"
+          git push
