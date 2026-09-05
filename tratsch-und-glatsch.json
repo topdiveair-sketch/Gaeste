@@ -1,62 +1,61 @@
 {
-  "editionDate": "2026-09-04",
-  "editionLabel": "Freitag, 4. September 2026",
-  "intro": "Grüß euch, ich bin Pia! In der heutigen Ausgabe von Tratsch & Klatsch startet der Spitzer Weinherbst, mehrere aktuell bestätigte Heurige haben geöffnet und fürs Wochenende stehen in Aggsbach Markt das Feuerwehrfest und der Erntedankumzug an. Das Wetter wird in der Gäste-App separat live geladen.",
+  "editionDate": "2026-09-05",
+  "editionLabel": "Samstag, 5. September 2026",
+  "intro": "Grüß euch, ich bin Pia! Heute ist in Aggsbach Markt Feuerwehrtag, in Spitz läuft der Weinherbst mit mehreren bestätigten Programmpunkten und am Nordufer sind zahlreiche Heurige geöffnet. Das Wetter wird in der Gäste-App separat live geladen.",
   "important": [
     {
-      "title": "Morgen und Sonntag: Feuerwehrfest in Aggsbach Markt",
-      "text": "Der aktuelle Veranstaltungskalender der Marktgemeinde Aggsbach führt für Samstag, 5. September, die Feuerlöscher-Überprüfung und den Feuerwehrheuriger mit Tanzmusik beim Feuerwehrhaus. Für Sonntag, 6. September, sind der Erntedankumzug vom Mehrzweckhaus zur Pfarrkirche sowie der Feuerwehrheuriger mit Frühschoppen und Seniorennachmittag eingetragen.",
+      "title": "Heute: Feuerwehrheuriger und Feuerlöscher-Überprüfung in Aggsbach Markt",
+      "text": "Der aktuelle Veranstaltungskalender der Marktgemeinde Aggsbach führt für heute die Feuerlöscher-Überprüfung und den Feuerwehrheuriger mit Tanzmusik beim Feuerwehrhaus Aggsbach Markt.",
       "source": "https://www.aggsbach.gv.at/Tourismus_Freizeit/Veranstaltungen/Veranstaltungskalender",
       "sourceLabel": "Marktgemeinde Aggsbach"
     },
     {
-      "title": "Rollfähre Weißenkirchen derzeit eingeschränkt",
-      "text": "Wegen Niedrigwassers transportiert die Rollfähre Weißenkirchen–St. Lorenz bis auf weiteres Personen und Fahrräder; PKW werden nur bedingt befördert. Für heute gelten laut Gemeinde werktags 09:15–11:30 Uhr und 13:30–18:30 Uhr.",
+      "title": "Rollfähre Weißenkirchen heute mit eingeschränktem Betrieb",
+      "text": "Wegen Niedrigwassers transportiert die Rollfähre Weißenkirchen–St. Lorenz bis auf weiteres Personen und Fahrräder; PKW werden nur bedingt befördert. Heute am Samstag gelten 09:15–11:30 Uhr und 12:30–18:30 Uhr.",
       "source": "https://www.weissenkirchen-wachau.at/ueber-weissenkirchen/mobilitaet/rollfaehre",
       "sourceLabel": "Marktgemeinde Weißenkirchen"
     },
     {
-      "title": "Heute beginnt der Spitzer Weinherbst 2026",
-      "text": "Der Spitzer Weinherbst läuft von 4. September bis 26. Oktober 2026. Für heute sind unter anderem Verkostungsangebote sowie von 16:00 bis 18:00 Uhr „Wachauer Marille – Von der Blüte bis zum Genuss“ angekündigt.",
-      "source": "https://www.donau.com/veranstaltungen/spitzer-weinherbst-2026",
+      "title": "Heute: Spitzer Winzer in den Weinterrassen",
+      "text": "Von 13:00 bis 17:00 Uhr laden die Spitzer Winzer an Stationen beim Roten Tor, bei der Ruine Hinterhaus und am 1000-Eimerberg ein. Für den 5. September ist am Roten Tor das Weingut Özelt angekündigt.",
+      "source": "https://www.donau.com/veranstaltungen/spitzer-winzer-in-den-weinterrassen",
       "sourceLabel": "Donau Niederösterreich"
     },
     {
-      "title": "Vortrag am 15. September in Aggsbach Markt abgesagt",
-      "text": "Der Vortrag „Spurenelemente“ im Venussaal am 15. September ist im aktuellen Gemeindekalender ausdrücklich als krankheitsbedingt abgesagt gekennzeichnet.",
+      "title": "Morgen: Erntedankumzug und Feuerwehrheuriger",
+      "text": "Für Sonntag, 6. September, sind in Aggsbach Markt der Erntedankumzug vom Mehrzweckhaus zur Pfarrkirche sowie der Feuerwehrheuriger mit Frühschoppen und Seniorennachmittag eingetragen.",
       "source": "https://www.aggsbach.gv.at/Tourismus_Freizeit/Veranstaltungen/Veranstaltungskalender",
       "sourceLabel": "Marktgemeinde Aggsbach"
     }
   ],
   "outdoor": [
     {
-      "title": "Donauradweg: aktueller offizieller Hinweis",
-      "text": "Auf der heutigen Hinweisseite von Donau Niederösterreich ist für den linken Wachauabschnitt zwischen Emmersdorf und Dürnstein kein eigener Sperrhinweis aufgeführt. Am Südufer im Stadtgebiet Mautern besteht weiterhin eine baustellenbedingte Sperre mit beschilderter Umleitung bis April 2027.",
+      "title": "Donauradweg: kein eigener Sperrhinweis für den Wachauer Nordufer-Abschnitt",
+      "text": "Die aktuelle offizielle Hinweisseite nennt für den Abschnitt Emmersdorf–Dürnstein am linken Donauufer derzeit keinen eigenen Sperrhinweis. Am Südufer im Stadtgebiet Mautern besteht weiterhin eine baustellenbedingte Sperre mit beschilderter Umleitung bis April 2027.",
       "links": [
         {"label": "Aktuelle Hinweise", "url": "https://www.donau.com/aktuelle-hinweise"},
         {"label": "Donauradweg", "url": "https://www.donau.com/donauradweg"}
       ]
     },
     {
-      "title": "Wachaubahn: täglicher Saisonverkehr",
-      "text": "Die Wachaubahn fährt derzeit täglich. Aggsbach Markt ist Bedarfshalt. Richtung Emmersdorf sind planmäßig 09:54, 11:54, 13:54 und 16:54 Uhr angegeben; Richtung Krems 10:25, 12:25, 15:05 und 18:05 Uhr. Für Fahrräder ist die Mitnahme kostenlos, der Fahrradstellplatz muss vorab reserviert werden.",
+      "title": "Wachaubahn: täglicher Saisonverkehr, Aggsbach Markt ist Bedarfshalt",
+      "text": "Richtung Emmersdorf sind planmäßig 09:54, 11:54, 13:54 und 16:54 Uhr angegeben; Richtung Krems 10:25, 12:25, 15:05 und 18:05 Uhr. Bei Bedarfshalten rechtzeitig die Haltewunschtaste drücken.",
       "links": [
         {"label": "Fahrplan 2026", "url": "https://www.wachaubahn.at/whb-fahrplan"},
-        {"label": "Tagesaktueller Fahrplan", "url": "https://www.wachaubahn.at/tagesaktueller-fahrplan"},
-        {"label": "Preise & Fahrradmitnahme", "url": "https://www.wachaubahn.at/preise-whb"}
+        {"label": "Tagesaktueller Fahrplan", "url": "https://www.wachaubahn.at/tagesaktueller-fahrplan"}
       ]
     },
     {
-      "title": "Wandern direkt ab Aggsbach Markt",
-      "text": "Der Seeber-Rundweg startet am Marktplatz Aggsbach Markt und ist aktuell mit 11,61 km, rund 3 Stunden Gehzeit und 479 Höhenmetern im Aufstieg ausgewiesen. Ebenfalls direkt ab Aggsbach Markt führt die Etappe 7 des Welterbesteigs nach Emmersdorf.",
+      "title": "Welterbesteig ab Aggsbach Markt",
+      "text": "Die Etappe 7 führt von Aggsbach Markt nach Emmersdorf und ist aktuell mit 14,74 km, rund 5 Stunden Gehzeit und mittlerer Schwierigkeit ausgewiesen. Die Etappe 6 von Maria Laach nach Aggsbach Markt ist mit 7,17 km und rund 1:55 Stunden angegeben.",
       "links": [
-        {"label": "Seeber-Rundweg", "url": "https://www.naturpark-jauerling.at/touren/seeber-rundweg"},
-        {"label": "Welterbesteig Etappe 7", "url": "https://www.donau.com/touren/welterbesteig-wachau-07-aggsbach-markt-emmersdorf-naturpark-jauerling-wachau"}
+        {"label": "Etappe 7 Aggsbach Markt–Emmersdorf", "url": "https://www.donau.com/touren/welterbesteig-wachau-07-aggsbach-markt-emmersdorf-naturpark-jauerling-wachau"},
+        {"label": "Etappenübersicht", "url": "https://www.donau.com/wander-etappen"}
       ]
     },
     {
-      "title": "Schifffahrt: Niedrigwasser bleibt relevant",
-      "text": "DDSG weist weiterhin auf niedrigwasserbedingte Anpassungen hin. Für Samstag, 5. September, sind bei der Wachau-Linienschifffahrt ab Krems geänderte Schiffseinsätze angekündigt; vor einer Fahrt bitte den aktuellen Fahrplan prüfen.",
+      "title": "Schifffahrt Wachau: heutige Fahrplanänderung ab Krems",
+      "text": "DDSG meldet für heute bei der Wachau-Linienschifffahrt geänderte Schiffseinsätze: Die MS Austria übernimmt die Linie ab 10:15 Uhr, die MS Dürnstein die Linie ab 11:00 Uhr. Vor Abfahrt bitte den aktuellen Fahrplan prüfen.",
       "links": [
         {"label": "DDSG Fahrplanänderungen", "url": "https://ddsg-blue-danube.at/fahrplanaenderungen/"},
         {"label": "Linienschifffahrt Wachau", "url": "https://ddsg-blue-danube.at/linienschifffahrt-wachau/"}
@@ -65,53 +64,46 @@
   ],
   "events": [
     {
-      "date": "04.09.2026, 10:00–17:00",
-      "place": "Spitz",
-      "title": "Selbst ist der Gaumen in der Vinothek Fohringer",
-      "note": "Verkostungsangebot während der Öffnungszeit; heutiger Termin bestätigt.",
-      "url": "https://www.donau.com/veranstaltungen/selbst-ist-der-gaumen-in-der-vinothek-fohringer"
-    },
-    {
-      "date": "04.09.2026, 11:00–12:00",
-      "place": "Dürnstein",
-      "title": "Führung „Entdeckung des Wertvollen“ im Stift Dürnstein",
-      "note": "Deutschsprachige Führung durch Ausstellung, Stiftskirche und Kreuzgang; heutiger Termin bestätigt.",
-      "url": "https://www.donau.com/veranstaltungen/fuehrung-entdeckung-des-wertvollen-stift-duernstein"
-    },
-    {
-      "date": "04.09.2026, 16:00–18:00",
-      "place": "Spitz",
-      "title": "Wachauer Marille – Von der Blüte bis zum Genuss",
-      "note": "Bei HARTL – Rund um die Marille; heutiger Termin bestätigt.",
-      "url": "https://www.donau.com/veranstaltungen/wachauer-marille-von-der-bluete-bis-zum-genuss"
-    },
-    {
-      "date": "04.09.–26.10.2026",
-      "place": "Spitz",
-      "title": "Spitzer Weinherbst 2026",
-      "note": "Start heute; zahlreiche Einzelveranstaltungen rund um Wein, Genuss und Wandern.",
-      "url": "https://www.donau.com/veranstaltungen/spitzer-weinherbst-2026"
-    },
-    {
       "date": "05.09.2026",
       "place": "Aggsbach Markt",
       "title": "Feuerwehrheuriger mit Tanzmusik & Feuerlöscher-Überprüfung",
-      "note": "Beide Termine sind für Samstag beim Feuerwehrhaus Aggsbach Markt im aktuellen Gemeindekalender eingetragen.",
+      "note": "Beide Termine sind für heute beim Feuerwehrhaus Aggsbach Markt im aktuellen Gemeindekalender eingetragen.",
       "url": "https://www.aggsbach.gv.at/Tourismus_Freizeit/Veranstaltungen/Veranstaltungskalender"
     },
     {
       "date": "05.09.2026, 10:00–12:00",
       "place": "Spitz",
       "title": "Schiff & Wein im Schifffahrtsmuseum",
-      "note": "Führung mit kommentierter Weinverkostung; Anmeldung laut Veranstalter bis zum Vortag um 16:00 Uhr.",
+      "note": "Führung mit kommentierter Weinverkostung. Die reguläre Anmeldung war bis gestern 16:00 Uhr vorgesehen; kurzfristige Teilnahme daher nicht voraussetzen.",
       "url": "https://www.donau.com/veranstaltungen/schiff-wein"
+    },
+    {
+      "date": "05.09.2026, 10:30–13:00",
+      "place": "Schwallenbach",
+      "title": "Schmetterlingsgarten-Erlebnis",
+      "note": "Der Termin ist bestätigt. Die reguläre Anmeldung war bis drei Tage vor der Veranstaltung vorgesehen; kurzfristige Teilnahme daher nicht voraussetzen.",
+      "url": "https://www.donau.com/veranstaltungen/schmetterlingsgarten-erlebnis"
+    },
+    {
+      "date": "05.09.2026, 11:00",
+      "place": "Dürnstein",
+      "title": "Führung im Stift Dürnstein",
+      "note": "Das Stift ist heute von 09:00 bis 17:00 Uhr geöffnet; deutschsprachige Führungen finden Freitag bis Sonntag um 11:00 Uhr statt. Voranmeldung wird empfohlen.",
+      "url": "https://www.donau.com/veranstaltungen/stift-duernstein-entdeckung-des-wertvollen"
     },
     {
       "date": "05.09.2026, 13:00–17:00",
       "place": "Spitz",
       "title": "Spitzer Winzer in den Weinterrassen",
-      "note": "Stationen am Roten Tor, bei der Ruine Hinterhaus und am 1000-Eimerberg. Die Veranstaltung findet laut Veranstalter nur bei Schönwetter statt.",
+      "note": "Heutiger Termin im Rahmen des Spitzer Weinherbstes; Stationen beim Roten Tor, bei der Ruine Hinterhaus und am 1000-Eimerberg.",
       "url": "https://www.donau.com/veranstaltungen/spitzer-winzer-in-den-weinterrassen"
+    },
+    {
+      "date": "05.09.2026, 19:30",
+      "place": "Weißenkirchen",
+      "title": "Edelmann & Edelmann",
+      "note": "Wienerliedabend im Teisenhoferhof; heutiger Termin bestätigt.",
+      "url": "https://www.donau.com/veranstaltungen/edelmann-edelmann"
     },
     {
       "date": "06.09.2026",
@@ -124,21 +116,21 @@
       "date": "06.09.2026, 10:00–16:00",
       "place": "Spitz",
       "title": "Musikalische Weinterrasse an der Zornberghütte",
-      "note": "Ausschank ab 10:00 Uhr, Musik 11:00–15:00 Uhr, Ende 16:00 Uhr; Zufahrten zum Veranstaltungsort sind laut Veranstalter gesperrt.",
+      "note": "Sonntagstermin im Rahmen des Spitzer Weinherbstes bestätigt.",
       "url": "https://www.donau.com/veranstaltungen/musikalische-weinterrasse-an-der-zornberghuette"
     },
     {
       "date": "09.09.2026",
       "place": "Aggsbach Markt",
       "title": "Line Dance für Anfänger und Fortgeschrittene",
-      "note": "Termin im Venussaal bestätigt. Die Gemeindeseite weist darauf hin, dass die konkrete Beginnzeit am Vortag per WhatsApp kommuniziert wird.",
-      "url": "https://www.aggsbach.gv.at/Line_dance_fuer_Anfaenger_und_Fortgeschrittene_1"
+      "note": "Termin im Venussaal im aktuellen Gemeindekalender bestätigt.",
+      "url": "https://www.aggsbach.gv.at/Tourismus_Freizeit/Veranstaltungen/Veranstaltungskalender"
     },
     {
       "date": "13.09.2026",
       "place": "Wachau",
       "title": "26. WACHAUmarathon",
-      "note": "Der Marathon startet um 10:00 Uhr in Emmersdorf und endet in Krems. Für die Wachaubahn ist an diesem Tag ein Sonderfahrplan angekündigt.",
+      "note": "Marathonstart um 10:00 Uhr in Emmersdorf, Halbmarathonstart um 10:00 Uhr in Spitz; Ziel ist Krems. Mit umfangreichem Veranstaltungsverkehr rechnen.",
       "url": "https://www.wachaumarathon.com/"
     }
   ],
@@ -154,7 +146,7 @@
     {
       "name": "Heuriger Mang Hermenegild",
       "place": "Weißenkirchen",
-      "period": "laufender Terminblock",
+      "period": "11.08.–26.10.2026",
       "hours": "Heute ab 12:00 Uhr",
       "phone": "+43 2715 2276",
       "url": "https://www.donau.com/veranstaltungen/heuriger-mang-hermenegild"
@@ -163,7 +155,7 @@
       "name": "Heuriger Ferdl Denk",
       "place": "Weißenkirchen",
       "period": "laufender Terminblock",
-      "hours": "Heute ab 15:00 Uhr",
+      "hours": "Heute ab 11:00 Uhr",
       "phone": "+43 2715 2365",
       "url": "https://www.donau.com/wachau-nibelungengau-kremstal/veranstaltungen/heuriger-ferdl-denk"
     },
@@ -176,10 +168,18 @@
       "url": "https://www.donau.com/veranstaltungen/heuriger-rosenberger-heinz-u-josi"
     },
     {
+      "name": "Heuriger Familie Weixelbaum",
+      "place": "Weißenkirchen",
+      "period": "04.–13.09.2026",
+      "hours": "Heute ab 15:00 Uhr",
+      "phone": "+43 699 18942766",
+      "url": "https://www.donau.com/veranstaltungen/heuriger-familie-weixelbaum"
+    },
+    {
       "name": "Weingut Roman Gritsch",
       "place": "Spitz",
       "period": "31.08.–09.09.2026",
-      "hours": "Heute ab 16:00 Uhr",
+      "hours": "Heute ab 15:00 Uhr",
       "phone": "+43 2713 2208",
       "url": "https://www.spitz-wachau.com/wein-kulinarik/winzer-heurige/heurigen-detail/156615/weingut-roman-gritsch"
     },
@@ -198,14 +198,6 @@
       "hours": "Heute 16:00–23:00 Uhr",
       "phone": "+43 2713 2302",
       "url": "https://www.weingut-oezelt.at/heuriger/offen-is"
-    },
-    {
-      "name": "Bioweingut Schmidl",
-      "place": "Dürnstein",
-      "period": "03.–05.09.2026",
-      "hours": "Heute 16:00–21:00 Uhr; Küche bis 20:30 Uhr",
-      "phone": "+43 664 2245429",
-      "url": "https://www.weingut-schmidl.at/heuriger"
     }
   ],
   "openingSoon": [
@@ -220,17 +212,24 @@
       "date": "11.09.2026",
       "name": "Weingut Christian und Birgit Schneeweiss – Netterlkeller",
       "place": "Spitz",
-      "hours": "Aussteckzeit 11.–20.09.2026 ist bestätigt; konkrete Tageszeiten vor dem Besuch direkt beim Betrieb prüfen.",
+      "hours": "Aussteckzeit 11.–20.09.2026 bestätigt; konkrete Tageszeiten vor dem Besuch direkt beim Betrieb prüfen.",
       "url": "https://www.spitz-wachau.com/wein-marille/winzer-heurige"
+    },
+    {
+      "date": "12.09.2026",
+      "name": "Buschenschank Schauer",
+      "place": "Schwallenbach",
+      "hours": "12.09.–04.10.; Di–So ab 14:00 Uhr",
+      "url": "https://www.spitz-wachau.com/wein-kulinarik/winzer-heurige/heurigen-detail/156624/buschenschank-schauer"
     }
   ],
-  "piaTip": "Heute lohnt sich der Blick nach Spitz und Dürnstein: Der Spitzer Weinherbst beginnt, mehrere Heurige sind ab Mittag beziehungsweise Nachmittag geöffnet, in Dürnstein gibt es um 11:00 Uhr eine bestätigte Stiftsführung und in Spitz um 16:00 Uhr die Marillen-Veranstaltung. Für Aggsbach Markt ist besonders das Wochenende wichtig: Morgen und Sonntag ist beim Feuerwehrhaus zusätzlicher Veranstaltungsbetrieb. Wetter und kurzfristige Wegzustände bitte direkt vor dem Aufbruch in der App beziehungsweise bei den verlinkten Stellen prüfen.",
+  "piaTip": "Heute ist für Gäste in Aggsbach Markt vor allem der Feuerwehrheuriger wichtig. Wer Richtung Spitz unterwegs ist, kann ab 13:00 Uhr die Spitzer Winzer in den Weinterrassen besuchen; am Abend gibt es um 19:30 Uhr im Teisenhoferhof in Weißenkirchen „Edelmann & Edelmann“. Wetter und kurzfristige Wegzustände bitte direkt vor dem Aufbruch in der App beziehungsweise bei den verlinkten Originalquellen prüfen.",
   "goodToKnow": [
     "Die Wetteranzeige in der Gäste-App wird live geladen; statische Wetterangaben werden in Tratsch & Klatsch bewusst nicht eingetragen.",
-    "Der Buschenschank STRAWANZER in Spitz ist aus der heutigen Heurigenliste entfernt: Der veröffentlichte Terminblock endete am 2. September 2026.",
-    "Die Rollfähre Weißenkirchen–St. Lorenz ist wegen Niedrigwassers derzeit für Personen und Fahrräder in Betrieb, PKW werden nur bedingt befördert.",
-    "Der Vortrag „Spurenelemente“ am 15. September im Venussaal ist laut aktuellem Gemeindekalender krankheitsbedingt abgesagt.",
-    "Am 13. September findet der WACHAUmarathon statt; für die Wachaubahn ist an diesem Tag ein Sonderfahrplan angekündigt.",
+    "Die Rollfähre Weißenkirchen–St. Lorenz fährt heute wegen Niedrigwassers eingeschränkt: Personen und Fahrräder werden transportiert, PKW nur bedingt.",
+    "Bei der DDSG-Wachauschifffahrt gibt es heute ab Krems geänderte Schiffseinsätze.",
+    "Morgen, 6. September, sind in Aggsbach Markt Erntedankumzug und Feuerwehrheuriger angekündigt.",
+    "Am 13. September findet der WACHAUmarathon statt; entlang der Wachau ist mit erhöhtem Veranstaltungs- und Verkehrsaufkommen zu rechnen.",
     "Fahrradgarage, Werkzeug und E-Bike-Lademöglichkeit stehen bei Zuhause am Bach bereit.",
     "Frühstück, Jausenplatte und Gepäcktransport können direkt über die Gäste-App angefragt werden.",
     "Bei Notfällen gilt 112; die Bergrettung ist unter 140 erreichbar."
