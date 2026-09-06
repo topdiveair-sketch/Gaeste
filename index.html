@@ -39,7 +39,7 @@
       "applicationCategory":"TravelApplication",
       "operatingSystem":"Web",
       "inLanguage":["de","en","cs","sk","hu","es","fr"],
-      "dateModified":"2026-09-02",
+      "dateModified":"2026-09-06",
       "isAccessibleForFree":true,
       "about":{"@id":"https://topdiveair-sketch.github.io/Gaeste/#lodging"}
     },
@@ -55,7 +55,7 @@
       "amenityFeature":[
         {"@type":"LocationFeatureSpecification","name":"Fahrradgarage","value":true},
         {"@type":"LocationFeatureSpecification","name":"E-Bike-Lademöglichkeit","value":true},
-        {"@type":"LocationFeatureSpecification","name":"Frühstück zubuchbar","value":true},
+        {"@type":"LocationFeatureSpecification","name":"Frühstück auf Wunsch zubuchbar","value":true},
         {"@type":"LocationFeatureSpecification","name":"Gepäcktransport auf Anfrage","value":true}
       ]
     }
@@ -68,7 +68,7 @@
 <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
 <header class="hero" id="start">
   <div class="topbar">
-    <div class="badge">V77 · Wachau-Gästeguide</div>
+    <div class="badge">V78 · Wachau-Gästeguide</div>
     <div class="language-bar">
       <button type="button" data-lang="de" onclick="setLang('de')">DE</button>
       <button type="button" data-lang="en" onclick="setLang('en')">EN</button>
@@ -83,12 +83,15 @@
 </header>
 
 <nav class="quick-nav">
+  <button class="important-nav" onclick="go('direktbuchung')">📅 Direkt buchen</button>
+  <button onclick="go('anreise')">📲 Anreise & Aufenthalt</button>
   <button class="newspaper-nav" onclick="go('tratsch-glatsch')">🗞️ Tratsch & Klatsch</button>
-  <button class="important-nav" onclick="go('anreise')">📲 Anreise & Aufenthalt</button>
-  <button class="chronicle-main-nav" onclick="go('chronik')">📖 Windi-Chronik</button>
-  <button onclick="go('essen')">🍽️ Essen & Aktivitäten</button>
-  <button class="storm-nav" onclick="go('sturmwache')">🌦 Wetter & Radar</button>
-  <button class="windi-secrets-nav" onclick="location.href='windis_geheimtipps.html'">🐾 10 Geheimnisse</button>
+  <button onclick="go('wetter')">🌦 Wetter</button>
+  <button onclick="go('wandern')">🥾 Wandern</button>
+  <button onclick="go('rad')">🚴 Radfahren</button>
+  <button onclick="go('essen')">🍽️ Genuss</button>
+  <button onclick="go('kinder')">🐾 Kinder & Windis</button>
+  <button onclick="go('service')">☎ Service</button>
 </nav>
 
 <main id="main-content">
@@ -98,7 +101,7 @@
   <p class="welcome-lead">Ihre persönliche Unterkunft in der Wachau – ideal für Wanderer, Radfahrer und alle, die Ruhe, Natur und ehrliche Gastfreundschaft schätzen.</p>
   <div class="reason-grid">
     <article><strong>🚴 Perfekte Lage</strong><span>Welterbesteig und Donauradweg direkt erreichbar.</span></article>
-    <article><strong>🔒 Gut versorgt</strong><span>Fahrradschuppen, Frühstück und Jausenplatte.</span></article>
+    <article><strong>🔒 Gut versorgt</strong><span>Fahrradschuppen, Frühstück auf Wunsch und Jausenplatte.</span></article>
     <article><strong>💬 Persönlicher Kontakt</strong><span>Direkt mit den Gastgebern per WhatsApp.</span></article>
   </div>
   <aside class="fact-box" aria-label="Kurzinfos zu Zuhause am Bach">
@@ -108,10 +111,23 @@
       <div><dt>Geeignet für</dt><dd>Welterbesteig-Wanderer, Donauradweg-Radfahrer, Aktivgäste und Ruhesuchende</dd></div>
       <div><dt>Check-in</dt><dd>ab 14:00 Uhr</dd></div>
       <div><dt>Check-out</dt><dd>bis 10:00 Uhr</dd></div>
-      <div><dt>Radservice</dt><dd>Fahrradgarage, Werkzeug und E-Bike-Lademöglichkeit</dd></div>
-      <div><dt>Verpflegung</dt><dd>Frühstück und Jausenplatte auf Anfrage</dd></div>
+      <div><dt>Radservice</dt><dd>Fahrradgarage, Werkzeug und E-Bike-Lademöglichkeit · kein Fahrradverleih</dd></div>
+      <div><dt>Verpflegung</dt><dd>Frühstück auf Wunsch zubuchbar, Jausenplatte auf Anfrage</dd></div>
     </dl>
   </aside>
+</section>
+
+<section id="direktbuchung" class="card booking-card">
+  <div class="kicker">📅 Direkt buchen</div>
+  <h2>Direkt bei Zuhause am Bach – Wachau buchen</h2>
+  <p>Aktuelle Verfügbarkeit prüfen und direkt bei den Gastgebern reservieren – ohne Umweg über eine Buchungsplattform.</p>
+  <div class="booking-benefits">
+    <span>✅ Direkter Kontakt zu den Gastgebern</span>
+    <span>🚴 Ideal für Donauradweg & Welterbesteig</span>
+    <span>🍳 Frühstück auf Wunsch zubuchbar</span>
+    <span>🚲 Fahrradgarage & E-Bike-Lademöglichkeit</span>
+  </div>
+  <a class="booking-button" href="https://topdiveair-sketch.github.io/Direcktbuchungen/" target="_blank" rel="noopener">📅 Verfügbarkeit & Direktbuchung</a>
 </section>
 
 <section id="tratsch-glatsch" class="card newspaper-card" aria-labelledby="newspaperTitle">
@@ -123,20 +139,20 @@
     </div>
     <div class="pia-seal" aria-label="Präsentiert von Pia">🐾<span>mit Pia</span></div>
   </div>
-  <p id="newspaperIntro" class="newspaper-lead">Pia sammelt Wetter, Wege, Veranstaltungen und Genuss-Tipps für euren Tag am Wachauer Nordufer.</p>
+  <p id="newspaperIntro" class="newspaper-lead">Pia sammelt lokale Neuigkeiten, Wege, Veranstaltungen und Genuss-Tipps für euren Tag am Wachauer Nordufer.</p>
   <div id="newspaperStatus" class="newspaper-status" role="status" aria-live="polite">Aktuelle Ausgabe wird geladen …</div>
   <div id="newspaperWeather" class="newspaper-weather" aria-live="polite"></div>
   <div id="newspaperContent" class="newspaper-sections"></div>
   <div class="newspaper-actions">
     <button type="button" onclick="loadDailyNewspaper(true)">↻ Ausgabe aktualisieren</button>
-    <a href="#wetter">🌦 14-Tage-Wetter</a>
+    <a href="#wetter">🌦 Wetter & Warnungen</a>
     <a href="#heurigen">🍷 Heurigenfinder</a>
   </div>
   <p class="small">Kurzfristige Änderungen sind möglich. Vor dem Aufbruch bitte die jeweils verlinkte Originalquelle prüfen.</p>
 </section>
 
 <section id="anreise" class="card guest-info-card">
-  <div class="kicker">📲 Anreise & Infos per WhatsApp</div>
+  <div class="kicker">📲 Anreise & Aufenthalt</div>
   <h2>Alles mit einer Nachricht mitteilen</h2>
   <p>Ankunft, Frühstück und Wünsche gesammelt senden. WhatsApp hat Vorrang; SMS steht als Alternative bereit.</p>
   <div class="arrival-form">
@@ -166,12 +182,153 @@
   <a class="maps-primary" href="https://www.google.com/maps/dir/?api=1&destination=Zuhause+am+Bach%2C+Aggsbach+Markt+82%2C+3641+Aggsbach+Markt" target="_blank" rel="noopener">📍 Google Maps starten</a>
 </section>
 
+<section id="smartwifi" class="card smartwifi-card">
+  <div class="kicker">📶 Gäste-WLAN</div>
+  <h2>Kostenlos online</h2>
+  <div class="wifi-network">
+    <span>Netzwerk</span>
+    <strong>Zuhause am Bach</strong>
+    <small>Offenes Gäste-WLAN · kein Passwort erforderlich</small>
+  </div>
+  <div class="button-row">
+    <button onclick="copyWifiName()">📋 WLAN-Name kopieren</button>
+    <a class="btn-link" href="#service">💬 Gastgeber kontaktieren</a>
+  </div>
+</section>
+
+<section id="zimmer" class="card">
+  <div class="kicker">🛏️ Ihr Zimmer</div>
+  <h2>Bachblick</h2>
+  <div class="room-grid">
+    <article><h3>🌿 Bachblick</h3><p>Gemütliches Doppelzimmer für maximal zwei Personen. Das eigene private Badezimmer liegt direkt gegenüber und ist ausschließlich für die Gäste dieses Zimmers bestimmt.</p></article>
+  </div>
+</section>
+
 <section id="essen" class="card food-card">
-  <div class="kicker">🍽️ Essen & Verpflegung</div>
+  <div class="kicker">🍽️ Essen & Genuss</div>
   <h2 id="foodDayTitle">Heutige Verpflegungsinformation</h2>
   <div id="foodDayNotice" class="food-day-notice"></div>
   <div class="snack-price"><strong>🥨 Jausenplatte für 2 Personen</strong><span>Gesamtpreis: 29,90 €</span></div>
   <a id="snackWhatsApp" class="whatsapp-primary" href="https://wa.me/436646437526" target="_blank" rel="noopener">🟢 🥨 Jausenplatte vorbestellen</a>
+</section>
+
+<section id="wetter" class="card weather-card">
+  <div class="kicker">🌤️ Wetter in der Wachau</div>
+  <h2>Wetter für Aggsbach Markt</h2>
+  <p id="weatherUpdated" class="small">Wetter wird geladen …</p>
+  <div id="weatherBox" class="weather-grid">
+    <article><h3>🌤 Heute</h3><p>Wetter wird geladen …</p></article>
+    <article><h3>🌦 Morgen</h3><p>Wetter wird geladen …</p></article>
+  </div>
+  <div class="chart-wrap">
+    <canvas id="weatherChart" height="230"></canvas>
+  </div>
+  <div id="weatherAdvice" class="result"></div>
+  <div class="storm-actions">
+    <a class="storm-primary" href="https://sturmwache.workspace-vo-3161.chatgpt.site" target="_blank" rel="noopener">🌦 Radar, Warnungen & SturmWache öffnen</a>
+  </div>
+  <p class="small">Quelle: Open-Meteo. Prognosen ab Tag 7 sind als Trend zu verstehen.</p>
+</section>
+
+<section id="morgen" class="card">
+  <div class="kicker">🌤 Tagesplaner</div>
+  <h2>Was passt heute?</h2>
+  <div class="button-row">
+    <button onclick="showMorning('wander')">🥾 Wandertag</button>
+    <button onclick="showMorning('bike')">🚴 Radtag</button>
+    <button onclick="showMorning('rain')">🌧 Regentag</button>
+    <button onclick="showMorning('family')">🐾 Familie & Hund</button>
+  </div>
+  <div id="morningResult" class="result"></div>
+</section>
+
+<section id="wandern" class="card">
+  <div class="kicker">🥾 Fidels Wanderwelt</div>
+  <h2>Geprüfte Nordufer-Routen</h2>
+  <p>Routen und Komoot-Suche für Gäste von Zuhause am Bach.</p>
+  <div class="form-grid">
+    <label>Dauer
+      <select id="wanderDauer">
+        <option value="kurz">1–2 Stunden</option>
+        <option value="mittel" selected>3–4 Stunden</option>
+        <option value="lang">Ganztag</option>
+      </select>
+    </label>
+    <label>Schwierigkeit
+      <select id="wanderSchwer">
+        <option value="leicht">Leicht</option>
+        <option value="mittel" selected>Mittel</option>
+        <option value="sportlich">Sportlich</option>
+      </select>
+    </label>
+    <label>Begleitung
+      <select id="wanderBegleitung">
+        <option value="normal">Normal</option>
+        <option value="hund" selected>Mit Hund</option>
+        <option value="kind">Mit Kindern</option>
+      </select>
+    </label>
+  </div>
+  <div class="button-row">
+    <button onclick="showFidelRoute()">Fidels Empfehlung anzeigen</button>
+    <button onclick="showAllRoutes()">Alle Wander-Routen</button>
+  </div>
+  <div id="wanderResult" class="result"></div>
+</section>
+
+<section id="karten" class="card">
+  <div class="kicker">🗺️ Karten- & Komoot-Vorschau</div>
+  <h2>Karten- und Komoot-Vorschau</h2>
+  <p>Für Navigation bitte Google Maps oder Komoot öffnen.</p>
+  <div class="map-grid" id="mapCards"></div>
+</section>
+
+<section id="rad" class="card">
+  <div class="kicker">🚴 Glorias Rad- & Genusswelt</div>
+  <h2>Radfahren, Genuss und Service</h2>
+  <div class="button-row">
+    <button onclick="showGloria('rad')">🚴 Radfahren</button>
+    <button onclick="showGloria('genuss')">🍷 Genuss</button>
+    <button onclick="showGloria('terrasse')">🍽️ Genussterrasse im Ort</button>
+    <button onclick="showGloria('service')">🧰 Rad-Service</button>
+  </div>
+  <div id="gloriaResult" class="result"></div>
+  <p class="small">Hinweis: Fahrradgarage, Werkzeug und E-Bike-Lademöglichkeit sind vorhanden. Ein Fahrradverleih wird nicht angeboten.</p>
+</section>
+
+<section id="heurigen" class="card">
+  <div class="kicker">🍷 Heurige heute, morgen oder am Wunschtag</div>
+  <h2>Heurigenfinder</h2>
+  <p>Heurige am Wachauer Nordufer auswählen, aktuelle Öffnung prüfen und anschließend die Route öffnen.</p>
+  <div class="button-row">
+    <button onclick="setHeurigenDate('today')">Heute</button>
+    <button onclick="setHeurigenDate('tomorrow')">Morgen</button>
+    <input type="date" id="heurigenDate" onchange="renderHeurigen()">
+  </div>
+  <div id="heurigenResult" class="result"></div>
+</section>
+
+<section id="kinder" class="card">
+  <div class="kicker">🐾 Kinder & Windis</div>
+  <h2>Pias Kinderwelt</h2>
+  <p>Quiz, Schatzsuche, Geschichten und kleine Wachau-Abenteuer mit Pia.</p>
+  <div class="button-row">
+    <button onclick="showPia('quiz')">🏆 Wachau-Quiz</button>
+    <button onclick="showPia('suche')">🔍 Schatzsuche</button>
+    <button onclick="showPia('story')">📖 Geschichten</button>
+    <button onclick="showCertificate()">🏆 Urkunde</button>
+  </div>
+  <div id="piaResult" class="result"></div>
+</section>
+
+<section id="buecherwelt" class="card books-card">
+  <div class="kicker">📚 Die Wilden Wachauer Windis</div>
+  <h2>Windis-Bücher & Wachau-Abenteuer</h2>
+  <p>Fidel, Gloria und Pia begleiten Familien durch Geschichten, Wanderungen, Genuss und kleine Entdeckungen in der Wachau.</p>
+  <div class="button-row">
+    <a class="btn-link" href="https://www.diewildenwachauerwindis.at/buecher-shop/die-wilden-wachauer-windis/" target="_blank" rel="noopener">📚 Zu den Windis-Büchern</a>
+    <a class="btn-link brown" href="windis_geheimtipps.html">🐾 10 Geheimnisse entdecken</a>
+  </div>
 </section>
 
 <section id="chronik" class="card chronicle-card">
@@ -225,6 +382,49 @@
   </div>
 </section>
 
+<section id="challenge" class="card challenge-card">
+  <div class="kicker">🏅 Wachau-Challenge</div>
+  <h2>Gemeinsame Punkte für Wanderer, Radfahrer und Wachau-Genießer</h2>
+  <p>Sammeln Sie Wachau-Punkte an Orten, die für Welterbesteig-Wanderer, Donauradweg-Radfahrer und Genussgäste gemeinsam erreichbar sind.</p>
+  <div class="challenge-progress-wrap">
+    <div class="challenge-headline"><strong id="challengeStatus">Noch kein Stempel</strong><span id="challengePoints">0 / 100 Punkte</span></div>
+    <div class="progress"><div id="challengeBar" class="progress-bar"></div></div>
+  </div>
+  <div id="challengeGrid" class="challenge-grid"></div>
+  <div class="button-row">
+    <button onclick="resetChallenge()">↺ Challenge zurücksetzen</button>
+    <button onclick="showWachauCertificate()">🏆 Wachau-Meister-Urkunde</button>
+  </div>
+</section>
+
+<section id="rudelbonus" class="card bonus-card">
+  <div class="kicker">🤝 Freunde empfehlen</div>
+  <h2>Zuhause am Bach weiterempfehlen</h2>
+  <p>Hat Ihnen Ihr Aufenthalt gefallen? Dann empfehlen Sie Zuhause am Bach gerne an Freunde, Wanderer oder Radfahrer weiter. Kommt durch Ihre Empfehlung eine Buchung zustande, bedanken wir uns bei Ihrem nächsten Besuch mit Kaffee und Kuchen für 2 Personen.</p>
+  <div class="bonus-box">
+    <h3>☕ Kaffee & Kuchen Bonus</h3>
+    <p>Einfach bei der Buchung den Namen des Empfehlungsgebers angeben. Die Belohnung gilt für erfolgreiche Empfehlungen – nicht für Bewertungen.</p>
+  </div>
+  <div class="button-row">
+    <a class="btn-link" id="whatsappRecommend" href="https://wa.me/?text=Tipp%20f%C3%BCr%20die%20Wachau%3A%20Zuhause%20am%20Bach%20%E2%80%93%20Wachau%20in%20Aggsbach%20Markt.%20Ruhige%20Unterkunft%20f%C3%BCr%20Donauradweg%20und%20Welterbesteig.%20Direkt%20anfragen%3A%20https%3A%2F%2Ftopdiveair-sketch.github.io%2FDirecktbuchungen%2F%3Futm_source%3Dguest_referral%26utm_medium%3Dreferral%26utm_campaign%3Dgaesteapp" target="_blank" rel="noopener">📲 Per WhatsApp empfehlen</a>
+    <a class="btn-link brown" id="mailRecommend" href="mailto:?subject=Wachau-Tipp%3A%20Zuhause%20am%20Bach%20%E2%80%93%20Wachau&body=Tipp%20f%C3%BCr%20die%20Wachau%3A%20Zuhause%20am%20Bach%20%E2%80%93%20Wachau%20in%20Aggsbach%20Markt.%20Ruhige%20Unterkunft%20f%C3%BCr%20Donauradweg%20und%20Welterbesteig.%20Direkt%20anfragen%3A%20https%3A%2F%2Ftopdiveair-sketch.github.io%2FDirecktbuchungen%2F%3Futm_source%3Dguest_referral%26utm_medium%3Dreferral%26utm_campaign%3Dgaesteapp">✉️ Per E-Mail empfehlen</a>
+    <a class="btn-link" id="directRecommend" href="https://topdiveair-sketch.github.io/Direcktbuchungen/?utm_source=guest_referral&utm_medium=referral&utm_campaign=gaesteapp" target="_blank" rel="noopener">🏡 Direktanfrage öffnen</a>
+  </div>
+</section>
+
+<section id="service" class="card">
+  <div class="kicker">☎ Service & Hilfe</div>
+  <h2>Service für Gäste</h2>
+  <div class="link-grid">
+    <a href="https://wa.me/436646437526?text=Hallo%20Zuhause%20am%20Bach%2C%20ich%20m%C3%B6chte%20Fr%C3%BChst%C3%BCck%20anfragen." target="_blank" rel="noopener">🥐 Frühstück auf Wunsch anfragen</a>
+    <a href="https://wa.me/436646437526?text=Hallo%20Zuhause%20am%20Bach%2C%20ich%20m%C3%B6chte%20eine%20Jausenplatte%20anfragen." target="_blank" rel="noopener">🥨 Jausenplatte anfragen</a>
+    <a href="https://wa.me/436646437526?text=Hallo%20Zuhause%20am%20Bach%2C%20ich%20m%C3%B6chte%20Gep%C3%A4cktransport%20anfragen." target="_blank" rel="noopener">🎒 Gepäcktransport anfragen</a>
+    <a href="https://wa.me/436646437526" target="_blank" rel="noopener">💬 WhatsApp-Hilfe</a>
+    <a href="https://www.google.com/search?q=F%C3%A4hre+Wachau+Spitz+Arnsdorf+Fahrzeiten" target="_blank" rel="noopener">⛴ Fähren prüfen</a>
+    <a href="https://www.google.com/search?q=Wachaubahn+Fahrplan" target="_blank" rel="noopener">🚂 Wachaubahn prüfen</a>
+  </div>
+</section>
+
 <section id="notfall" class="card emergency-card">
   <div class="kicker">🆘 Hilfe & Notfall</div>
   <h2>Wichtige Nummern</h2>
@@ -238,315 +438,10 @@
   </div>
 </section>
 
-<section id="smartwifi" class="card smartwifi-card">
-  <div class="kicker">📶 Smart-WLAN</div>
-  <h2>Willkommen im kostenlosen Gäste-WLAN</h2>
-  <div class="wifi-status-box" id="wifiStatusBox">
-    <div class="wifi-icon">📶</div>
-    <div>
-      <strong id="wifiStatusTitle">Verbindung wird geprüft …</strong>
-      <p id="wifiStatusText">Bitte kurz warten.</p>
-    </div>
-  </div>
-  <div class="wifi-network">
-    <span>Netzwerk</span>
-    <strong>Zuhause am Bach</strong>
-    <small>Offenes Gäste-WLAN · kein Passwort erforderlich</small>
-  </div>
-  <div class="button-row">
-    <button onclick="confirmWifiGuest()">✅ Ich bin im WLAN</button>
-    <button onclick="copyWifiName()">📋 WLAN-Name kopieren</button>
-    <a class="btn-link" href="#service">💬 Gastgeber kontaktieren</a>
-  </div>
-  <div class="tip-grid">
-    <article><h3>🌤 Wetter</h3><p>14-Tage-Prognose für Aggsbach Markt.</p></article>
-    <article><h3>🥾 Wandern</h3><p>Fidels Nordufer-Tipps für den Welterbesteig.</p></article>
-    <article><h3>🚴 Radfahren</h3><p>Glorias Tipps für Donauradweg und E-Bike.</p></article>
-    <article><h3>🍳 Frühstück</h3><p>Frühstück bequem per WhatsApp anfragen.</p></article>
-  </div>
-  <p class="small">Hinweis: Aus Datenschutzgründen kann ein Browser den genauen WLAN-Namen meistens nicht auslesen. Die App zeigt daher den Online-Status und eine freiwillige WLAN-Bestätigung an.</p>
-</section>
-
-<section id="zimmer" class="card">
-  <div class="kicker">🛏️ Zimmer</div>
-  <h2>Bachblick – unser aktuell buchbares Zimmer</h2>
-  <div class="room-grid">
-    <article><h3>🌿 Bachblick</h3><p>Gemütliches Doppelzimmer für maximal zwei Personen. Das eigene private Badezimmer liegt direkt gegenüber und ist nicht ensuite.</p></article>
-  </div>
-</section>
-
-<section id="direktbuchung" class="card booking-card">
-  <div class="kicker">📅 Direkt buchen</div>
-  <h2>Zimmer direkt bei Zuhause am Bach buchen</h2>
-  <p>Hier sehen Sie aktuelle Verfügbarkeit und können Ihr Zimmer bei Zuhause am Bach – Wachau direkt reservieren.</p>
-  <div class="booking-benefits">
-    <span>✅ Direkt bei den Gastgebern</span>
-    <span>🚴 Ideal für Donauradweg & Welterbesteig</span>
-    <span>🍳 Frühstück zubuchbar</span>
-    <span>🚲 Fahrradgarage & E-Bike-Laden</span>
-  </div>
-  <a class="booking-button" href="https://topdiveair-sketch.github.io/Direcktbuchungen/" target="_blank" rel="noopener">📅 Direkt buchen</a>
-</section>
-
-<section id="wetter" class="card weather-card">
-  <div class="kicker">🌤️ 14-Tage-Wetter in der Wachau</div>
-  <h2>Wetter für Aggsbach Markt</h2>
-  <p id="weatherUpdated" class="small">Wetter wird geladen …</p>
-  <div id="weatherBox" class="weather-grid">
-    <article><h3>🌤 Heute</h3><p>Wetter wird geladen …</p></article>
-    <article><h3>🌦 Morgen</h3><p>Wetter wird geladen …</p></article>
-  </div>
-  <div class="chart-wrap">
-    <canvas id="weatherChart" height="230"></canvas>
-  </div>
-  <div id="weatherAdvice" class="result"></div>
-  <p class="small">Quelle: Open-Meteo. Prognosen ab Tag 7 sind als Trend zu verstehen.</p>
-</section>
-
-<section id="sturmwache" class="card storm-card">
-  <div class="kicker">🌦 Live-Wetter, Radar & Warnungen</div>
-  <h2>SturmWache für Aggsbach Markt</h2>
-  <p>Aktuelle Wettervorhersage, Niederschlagsradar, Gewitterwarnungen, Hochwasser- und Feuerwehrhinweise sowie Routenplanung von oder nach Zuhause am Bach.</p>
-  <div class="storm-actions">
-    <a class="storm-primary" href="https://sturmwache.workspace-vo-3161.chatgpt.site" target="_blank" rel="noopener">🌦 SturmWache groß öffnen</a>
-  </div>
-  <iframe class="storm-frame" src="https://sturmwache.workspace-vo-3161.chatgpt.site" title="SturmWache – Wetter, Niederschlagsradar und Warnungen für Aggsbach Markt" loading="lazy" allow="geolocation; fullscreen" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-  <p class="small">Falls die Ansicht im Browser nicht geladen wird, bitte „SturmWache groß öffnen“ verwenden.</p>
-</section>
-
-<section id="morgen" class="card">
-  <div class="kicker">🌤 Morgen-Assistent</div>
-  <h2>Was passt heute?</h2>
-  <div class="button-row">
-    <button onclick="showMorning('wander')">🥾 Wandertag</button>
-    <button onclick="showMorning('bike')">🚴 Radtag</button>
-    <button onclick="showMorning('rain')">🌧 Regentag</button>
-    <button onclick="showMorning('family')">🐾 Familie & Hund</button>
-  </div>
-  <div id="morningResult" class="result"></div>
-</section>
-
-<section id="wandern" class="card">
-  <div class="kicker">🥾 Fidels Wanderwelt</div>
-  <h2>Geprüfte Nordufer-Routen</h2>
-  <p>Routen und Komoot-Suche für Gäste von Zuhause am Bach.</p>
-  <div class="form-grid">
-    <label>Dauer
-      <select id="wanderDauer">
-        <option value="kurz">1–2 Stunden</option>
-        <option value="mittel" selected>3–4 Stunden</option>
-        <option value="lang">Ganztag</option>
-      </select>
-    </label>
-    <label>Schwierigkeit
-      <select id="wanderSchwer">
-        <option value="leicht">Leicht</option>
-        <option value="mittel" selected>Mittel</option>
-        <option value="sportlich">Sportlich</option>
-      </select>
-    </label>
-    <label>Begleitung
-      <select id="wanderBegleitung">
-        <option value="normal">Normal</option>
-        <option value="hund" selected>Mit Hund</option>
-        <option value="kind">Mit Kindern</option>
-      </select>
-    </label>
-  </div>
-  <div class="button-row">
-    <button onclick="showFidelRoute()">Fidels Empfehlung anzeigen</button>
-    <button onclick="showAllRoutes()">Alle Wander-Routen</button>
-  </div>
-  <div id="wanderResult" class="result"></div>
-</section>
-
-<section id="karten" class="card">
-  <div class="kicker">🗺️ Karten- & Komoot-Vorschau</div>
-  <h2>Karten- und Komoot-Vorschau</h2>
-  <p>Handy-sichere Vorschau ohne störende iframe-Karte. Für Navigation bitte Google Maps oder Komoot öffnen.</p>
-  <div class="map-grid" id="mapCards"></div>
-</section>
-
-<section id="rad" class="card">
-  <div class="kicker">🚴 Glorias Rad- & Genusswelt</div>
-  <h2>Radfahren, Genuss und Service</h2>
-  <div class="button-row">
-    <button onclick="showGloria('rad')">🚴 Radfahren</button>
-    <button onclick="showGloria('genuss')">🍷 Genuss</button>
-    <button onclick="showGloria('terrasse')">🍽️ Genussterrasse im Ort</button>
-    <button onclick="showGloria('service')">🧰 Rad-Service</button>
-  </div>
-  <div id="gloriaResult" class="result"></div>
-</section>
-
-<section id="heurigen" class="card">
-  <div class="kicker">🍷 Heurigen heute, morgen oder am Wunschtag</div>
-  <h2>Google-KI-Modus</h2>
-  <p>Nordufer-Auswahl im Umkreis von ca. 15 km ab Zuhause am Bach. Erst Google-KI prüfen, dann bestätigten offenen Heurigen auswählen und Route öffnen.</p>
-  <div class="button-row">
-    <button onclick="setHeurigenDate('today')">Heute</button>
-    <button onclick="setHeurigenDate('tomorrow')">Morgen</button>
-    <input type="date" id="heurigenDate" onchange="renderHeurigen()">
-  </div>
-  <div id="heurigenResult" class="result"></div>
-</section>
-
-<section id="kinder" class="card">
-  <div class="kicker">🐾 Pias Kinderwelt</div>
-  <h2>Quiz, Schatzsuche, Geschichten und kleine Wachau-Abenteuer mit Pia</h2>
-  <div class="button-row">
-    <button onclick="showPia('quiz')">🏆 Wachau-Quiz</button>
-    <button onclick="showPia('suche')">🔍 Schatzsuche</button>
-    <button onclick="showPia('story')">📖 Geschichten</button>
-    <button onclick="showCertificate()">🏆 Urkunde</button>
-  </div>
-  <div id="piaResult" class="result"></div>
-</section>
-
-<section id="windis" class="card">
-  <div class="kicker">📚 Die Wilden Wachauer Windis</div>
-  <h2>Fidel, Gloria und Pia</h2>
-  <p>Die Windis begleiten Gäste durch Wachau-Abenteuer, Kinderwelt, Bücher und kleine Entdeckungen.</p>
-  <div class="link-grid">
-    <a href="#kinder">🏆 Kinderwelt</a>
-    <a href="#buecherwelt">📚 Bücherwelt</a>
-    <a href="#rad">🍷 Glorias Genusswelt</a>
-    <a href="#wandern">🥾 Fidels Wanderwelt</a>
-  </div>
-</section>
-
-<section id="buecherwelt" class="card books-card">
-  <div class="kicker">📚 Bücherwelt der Wilden Wachauer Windis</div>
-  <h2>Die Bücher der Wilden Wachauer Windis</h2>
-  <p>Fidel, Gloria und Pia erleben Abenteuer in der Wachau – für Kinder, Familien, Wanderer, Radfahrer und alle Gäste, die eine Erinnerung mit nach Hause nehmen möchten.</p>
-
-  <div class="book-grid">
-    <article>
-      <h3>🐾 Fidel</h3>
-      <p>Der große Galgo führt durch Wege, Burgen und Wachauer Geschichten.</p>
-    </article>
-    <article>
-      <h3>🍷 Gloria</h3>
-      <p>Gloria liebt Genuss, Rastplätze, Spitz und die kleinen Geheimnisse der Wachau.</p>
-    </article>
-    <article>
-      <h3>🌿 Pia</h3>
-      <p>Pia entdeckt mit Kindern Quizfragen, Schatzsuchen und kleine Abenteuer.</p>
-    </article>
-  </div>
-
-  <div class="book-highlight">
-    <h3>🎁 Gäste-Tipp</h3>
-    <p>Die Windis-Bücher passen als Erinnerung an den Aufenthalt bei Zuhause am Bach – besonders für Familien und Wachau-Freunde.</p>
-  </div>
-
-  <div class="button-row">
-    <a class="btn-link" href="https://www.diewildenwachauerwindis.at/buecher-shop/die-wilden-wachauer-windis/" target="_blank" rel="noopener">📚 Zu den Windis-Büchern</a>
-    <a class="btn-link brown" href="#kinder">🏆 Zur Kinderwelt</a>
-  </div>
-</section>
-
-<section id="challenge" class="card challenge-card">
-  <div class="kicker">🏅 Wachau-Challenge</div>
-  <h2>Gemeinsame Punkte für Wanderer, Radfahrer und Wachau-Genießer</h2>
-  <p>Sammeln Sie Wachau-Punkte an Orten, die für Welterbesteig-Wanderer, Donauradweg-Radfahrer und Genussgäste gemeinsam erreichbar sind. Die Hauptstationen liegen bewusst am Nordufer beziehungsweise gut erreichbar von Zuhause am Bach. Südufer-Ziele wie Aggstein zählen als Bonus.</p>
-  <div class="challenge-progress-wrap">
-    <div class="challenge-headline"><strong id="challengeStatus">Noch kein Stempel</strong><span id="challengePoints">0 / 100 Punkte</span></div>
-    <div class="progress"><div id="challengeBar" class="progress-bar"></div></div>
-  </div>
-  <div id="challengeGrid" class="challenge-grid"></div>
-  <div class="button-row">
-    <button onclick="resetChallenge()">↺ Challenge zurücksetzen</button>
-    <button onclick="showWachauCertificate()">🏆 Wachau-Meister-Urkunde</button>
-  </div>
-  <p class="small">Hinweis: Die Challenge ist ein freiwilliges Gäste-Erlebnis. Fotos und Namen werden nur mit Zustimmung veröffentlicht.</p>
-</section>
-
-<section id="rudelbonus" class="card bonus-card">
-  <div class="kicker">🤝 Neue Rudelmitglieder willkommen</div>
-  <h2>Freunde empfehlen Zuhause am Bach</h2>
-  <p>Hat Ihnen Ihr Aufenthalt gefallen? Dann empfehlen Sie Zuhause am Bach gerne an Freunde, Wanderer oder Radfahrer weiter. Kommt durch Ihre Empfehlung eine Buchung zustande, bedanken wir uns bei Ihrem nächsten Besuch mit Kaffee und Kuchen für 2 Personen.</p>
-  <div class="bonus-box">
-    <h3>☕ Kaffee & Kuchen Bonus</h3>
-    <p>Einfach bei der Buchung den Namen des Empfehlungsgebers angeben. Die Belohnung gilt für erfolgreiche Empfehlungen – nicht für Bewertungen.</p>
-  </div>
-  <div class="button-row">
-    <a class="btn-link" id="whatsappRecommend" href="https://wa.me/?text=Tipp%20f%C3%BCr%20die%20Wachau%3A%20Zuhause%20am%20Bach%20%E2%80%93%20Wachau%20in%20Aggsbach%20Markt.%20Ruhige%20Unterkunft%20f%C3%BCr%20Donauradweg%20und%20Welterbesteig.%20Direkt%20anfragen%3A%20https%3A%2F%2Ftopdiveair-sketch.github.io%2FDirecktbuchungen%2F%3Futm_source%3Dguest_referral%26utm_medium%3Dreferral%26utm_campaign%3Dgaesteapp" target="_blank" rel="noopener">📲 Per WhatsApp empfehlen</a>
-    <a class="btn-link brown" id="mailRecommend" href="mailto:?subject=Wachau-Tipp%3A%20Zuhause%20am%20Bach%20%E2%80%93%20Wachau&body=Tipp%20f%C3%BCr%20die%20Wachau%3A%20Zuhause%20am%20Bach%20%E2%80%93%20Wachau%20in%20Aggsbach%20Markt.%20Ruhige%20Unterkunft%20f%C3%BCr%20Donauradweg%20und%20Welterbesteig.%20Direkt%20anfragen%3A%20https%3A%2F%2Ftopdiveair-sketch.github.io%2FDirecktbuchungen%2F%3Futm_source%3Dguest_referral%26utm_medium%3Dreferral%26utm_campaign%3Dgaesteapp">✉️ Per E-Mail empfehlen</a>
-    <a class="btn-link" id="directRecommend" href="https://topdiveair-sketch.github.io/Direcktbuchungen/?utm_source=guest_referral&utm_medium=referral&utm_campaign=gaesteapp" target="_blank" rel="noopener">🏡 Direktanfrage öffnen</a>
-  </div>
-</section>
-
-<section id="rudelstatus" class="card">
-  <div class="kicker">🐾 Mein Rudelstatus</div>
-  <h2>Vom Wachau-Freund zur Rudel-Legende</h2>
-  <div class="status-grid">
-    <article><h3>🥉 Wachau-Freund</h3><p>30 Punkte</p></article>
-    <article><h3>🥈 Wachau-Kenner</h3><p>60 Punkte</p></article>
-    <article><h3>🥇 Wachau-Meister</h3><p>100 Punkte</p></article>
-    <article><h3>🐾 Rudel-Legende</h3><p>5 erfolgreiche Empfehlungen</p></article>
-  </div>
-</section>
-
-<section id="service" class="card">
-  <div class="kicker">☎ Mobilität & Hilfe</div>
-  <h2>Service für Gäste</h2>
-  <div class="link-grid">
-    <a href="https://wa.me/436646437526?text=Hallo%20Zuhause%20am%20Bach%2C%20ich%20m%C3%B6chte%20Fr%C3%BChst%C3%BCck%20anfragen." target="_blank" rel="noopener">🥐 Frühstück per WhatsApp</a>
-    <a href="https://wa.me/436646437526?text=Hallo%20Zuhause%20am%20Bach%2C%20ich%20m%C3%B6chte%20eine%20Jausenplatte%20anfragen." target="_blank" rel="noopener">🥨 Jausenplatte per WhatsApp</a>
-    <a href="https://wa.me/436646437526?text=Hallo%20Zuhause%20am%20Bach%2C%20ich%20m%C3%B6chte%20Gep%C3%A4cktransport%20anfragen." target="_blank" rel="noopener">🎒 Gepäcktransport per WhatsApp</a>
-    <a href="https://wa.me/436646437526" target="_blank" rel="noopener">💬 WhatsApp-Hilfe</a>
-    <a href="https://www.google.com/search?q=F%C3%A4hre+Wachau+Spitz+Arnsdorf+Fahrzeiten" target="_blank" rel="noopener">⛴ Fähren prüfen</a>
-    <a href="https://www.google.com/search?q=Wachaubahn+Fahrplan" target="_blank" rel="noopener">🚂 Wachaubahn prüfen</a>
-  </div>
-</section>
-
-<section id="geheimtipps" class="card windi-secrets-card">
-  <div class="kicker">🐾 Die Geheimnisse der Windis</div>
-  <h2>10 besondere Wachau-Erlebnisse ab Zuhause am Bach</h2>
-  <p>Nicht einfach Sehenswürdigkeiten abhaken: Fidel, Gloria und Pia schicken euch zu stillen Aussichtspunkten, auf besondere Wanderungen, zur Venus, auf die Rollfähre und sogar auf einen kleinen Nachtweg.</p>
-  <div class="windi-secret-highlights">
-    <span>🥾 Wandern</span><span>❤️ Romantik</span><span>🚲 Entdecken</span><span>🌙 Abenteuer</span>
-  </div>
-  <a class="windi-secrets-button" href="windis_geheimtipps.html">🐾 Alle 10 Geheimnisse öffnen</a>
-  <div class="tip-grid compact-tips">
-    <article><h3>🗿 Venus von Willendorf</h3><p>Fast 30.000 Jahre Geschichte vor der Haustür.</p></article>
-    <article><h3>🌲 Der Weg nach Hause</h3><p>Maria Laach – Schleinkhof – zurück nach Aggsbach.</p></article>
-    <article><h3>⛴️ Die Wachau steht Kopf</h3><p>Camera Obscura auf der Rollfähre Spitz–Arnsdorf.</p></article>
-    <article><h3>🌙 Wenn die Wachau schläft</h3><p>Kurzes, bewusst stilles Nacht-Abenteuer.</p></article>
-  </div>
-</section>
-
-<section id="gloria-spitz" class="card">
-  <div class="kicker">🍷 Glorias Genuss-Tipp in Spitz</div>
-  <h2>Donauschlössel / Familie Graben-Gritsch</h2>
-  <p><strong>Donauschlössel / Familie Graben-Gritsch</strong> – einer der schönsten Rastplätze für Wanderer und Radfahrer in Spitz an der Donau.</p>
-  <ul class="nice-list">
-    <li>🍷 Wachauer Wein</li>
-    <li>🌊 Donaublick</li>
-    <li>🥨 Jause</li>
-    <li>🚶 Ideal nach Ruine Hinterhaus oder Rotes Tor</li>
-    <li>🚲 Perfekter Zwischenstopp am Donauradweg</li>
-  </ul>
-  <blockquote>Gloria empfiehlt: Nach einer Wanderung oder Radtour in Spitz ist das Donauschlössel einer meiner Lieblingsplätze.</blockquote>
-  <div class="button-row">
-    <a class="btn-link" href="https://www.google.com/maps/dir/?api=1&origin=Aggsbach+Markt+82,+3641+Aggsbach+Markt&destination=Donauschl%C3%B6ssel+Gritsch+Spitz+an+der+Donau&travelmode=bicycling" target="_blank" rel="noopener">🚴 Route anzeigen</a>
-    <a class="btn-link brown" href="https://www.google.com/search?q=Donauschl%C3%B6ssel+Gritsch+Spitz+%C3%96ffnungszeiten" target="_blank" rel="noopener">🕒 Öffnungszeiten</a>
-  </div>
-</section>
-
-<section id="appcheck" class="card">
-  <div class="kicker">🧪 App Check</div>
-  <h2>Funktionstest</h2>
-  <p>Prüft die wichtigsten Funktionen direkt in der App.</p>
-  <button onclick="runAppCheck()">Funktionstest starten</button>
-  <div id="appCheckResult" class="result"></div>
-</section>
-
 <section id="quellen" class="card source-card">
   <div class="kicker">🔎 Quellen & Aktualität</div>
   <h2>Offizielle Informationen für Ihre Tourenplanung</h2>
-  <p>Stand der redaktionellen Gäste-Informationen: <time datetime="2026-08-10">10. August 2026</time>. Wetter, Fahrpläne, Sperren und Öffnungszeiten können sich kurzfristig ändern. Bitte prüfen Sie vor dem Aufbruch die offiziellen Quellen.</p>
+  <p>Stand der redaktionellen Gäste-Informationen: <time datetime="2026-09-06">6. September 2026</time>. Wetter, Fahrpläne, Sperren und Öffnungszeiten können sich kurzfristig ändern. Bitte prüfen Sie vor dem Aufbruch die offiziellen Quellen.</p>
   <ul>
     <li><a href="https://www.donau.com/welterbesteig-wachau" target="_blank" rel="noopener noreferrer">Welterbesteig Wachau – Donau Niederösterreich</a></li>
     <li><a href="https://www.donau.com/donauradweg" target="_blank" rel="noopener noreferrer">Donauradweg – Donau Niederösterreich</a></li>
@@ -562,10 +457,9 @@
   <div>Die Wilden Wachauer Windis © J.F.X. Prem</div>
   <div>Aggsbach Markt 82 · 3641 Aggsbach Markt · Tel. <a href="tel:+436646437526">0664 6437526</a></div>
   <div class="footer-links">
-    <a href="#challenge">Wachau-Challenge</a>
-    <a href="#rudelbonus">Freunde-Bonus</a>
+    <a href="#direktbuchung">Direkt buchen</a>
+    <a href="#tratsch-glatsch">Tratsch & Klatsch</a>
     <a href="#service">Kontakt</a>
-    <a href="#appcheck">App Check</a>
     <a href="#quellen">Quellen</a>
     <a href="https://www.diewildenwachauerwindis.at" target="_blank" rel="noopener">Windis-Webseite</a>
   </div>
