@@ -1,29 +1,47 @@
 {
-  "editionDate": "2026-09-06",
-  "editionLabel": "Sonntag, 6. September 2026",
-  "intro": "Grüß euch, ich bin Pia! Heute stehen am Wachauer Nordufer der Erntedankumzug und Feuerwehrheuriger in Aggsbach Markt sowie die Musikalische Weinterrasse in Spitz im Mittelpunkt. Das Wetter lädt die Gäste-App separat live.",
+  "editionDate": "2026-09-07",
+  "editionLabel": "Montag, 7. September 2026",
+  "intro": "Grüß euch, ich bin Pia! Heute gibt es am Wachauer Nordufer frische Wein- und Genusstermine in Spitz, mehrere aktuell bestätigte Heurige und wichtige Hinweise zu den Rollfähren. Das Wetter lädt die Gäste-App separat live.",
   "important": [
-    {"title":"Heute in Aggsbach Markt: Erntedank und Feuerwehrheuriger","text":"Heute sind der Erntedankumzug vom Mehrzweckhaus zur Pfarrkirche und der Feuerwehrheuriger mit Frühschoppen und Seniorennachmittag bestätigt.","source":"https://www.aggsbach.gv.at/Tourismus_Freizeit/Veranstaltungen/Veranstaltungskalender","sourceLabel":"Marktgemeinde Aggsbach"},
-    {"title":"Heute in Spitz: Musikalische Weinterrasse","text":"An der Zornberghütte ist die Musikalische Weinterrasse von 10:00 bis 16:00 Uhr bestätigt. Ausschank ab 10:00 Uhr, Musik von 11:00 bis 15:00 Uhr. Die Zufahrten zum Veranstaltungsort sind gesperrt.","source":"https://www.spitz-wachau.at/Musikalische_Weinterrasse_an_der_Zornberghuette_6","sourceLabel":"Marktgemeinde Spitz"}
+    {"title":"Rollfähren wegen Niedrigwasser eingeschränkt","text":"Die Marktgemeinde Spitz weist aktuell darauf hin, dass die Rollfähre Spitz–Arnsdorf je nach Wasserstand vollständig ausfallen kann oder keine KFZ mitnimmt. Auch die Rollfähre Weißenkirchen–St. Lorenz fährt wegen Niedrigwassers bis auf weiteres eingeschränkt; Personen und Fahrräder werden befördert, PKW nur bedingt.","source":"https://www.spitz-wachau.at/","sourceLabel":"Marktgemeinde Spitz / Marktgemeinde Weißenkirchen"},
+    {"title":"WACHAUmarathon am Sonntag: Verkehrsmaßnahmen angekündigt","text":"Für den WACHAUmarathon am 13. September ist in Spitz eine aktuelle Verordnung zu Verkehrsmaßnahmen kundgemacht. Der Veranstalter bestätigt den Marathonstart in Emmersdorf um 10:00 Uhr und den Halbmarathonstart in Spitz um 10:00 Uhr. Für den Veranstaltungstag gilt außerdem ein Sonderfahrplan der Wachaubahn.","source":"https://www.spitz-wachau.at/Buergerservice/Amtstafel","sourceLabel":"Marktgemeinde Spitz / WACHAUmarathon / Wachaubahn"}
   ],
   "outdoor": [
-    {"title":"Welterbesteig und Donauradweg","text":"Vor dem Start bitte die aktuellen offiziellen Hinweise prüfen. Wetterdaten werden nicht statisch gespeichert, weil die Gäste-App sie live lädt.","links":[{"label":"Aktuelle Hinweise","url":"https://www.donau.com/aktuelle-hinweise"},{"label":"Welterbesteig","url":"https://www.donau.com/wander-etappen"},{"label":"Donauradweg","url":"https://www.donau.com/donauradweg"}]}
+    {"title":"Donauradweg Nordufer","text":"Die Nordufer-Etappe Emmersdorf–Krems ist aktuell beschrieben. Der frühere Hinweis auf eine Sperre des Donauradwegs in der Ortsmitte Weißenkirchen ist ausdrücklich nicht mehr aktuell. Vor längeren Fahrten trotzdem kurzfristige Hinweise prüfen.","links":[{"label":"Donauradweg Nordufer","url":"https://www.donau.com/touren/donauradweg-etappe-5-nordufer-emmersdorf-krems"},{"label":"Aktuelle Hinweise","url":"https://www.donau.com/aktuelle-hinweise"}]},
+    {"title":"Welterbesteig","text":"Die Etappen Dürnstein–Weißenkirchen und Weißenkirchen–Spitz sind in der aktuellen Tourismusinformation geführt. Vor dem Start kurzfristige Weg- und Sicherheitshinweise prüfen.","links":[{"label":"Welterbesteig Etappen","url":"https://www.donau.com/wander-etappen"}]}
   ],
   "events": [
-    {"date":"06.09.2026","place":"Aggsbach Markt","title":"Erntedankumzug & Feuerwehrheuriger","note":"Heute im aktuellen Veranstaltungskalender bestätigt.","url":"https://www.aggsbach.gv.at/Tourismus_Freizeit/Veranstaltungen/Veranstaltungskalender"},
-    {"date":"06.09.2026, 10:00–16:00","place":"Spitz","title":"Musikalische Weinterrasse an der Zornberghütte","note":"Ausschank ab 10:00 Uhr, Musik 11:00–15:00 Uhr. Zufahrten zum Veranstaltungsort sind gesperrt.","url":"https://www.spitz-wachau.at/Musikalische_Weinterrasse_an_der_Zornberghuette_6"},
-    {"date":"09.09.2026","place":"Aggsbach Markt","title":"Line Dance für Anfänger und Fortgeschrittene","note":"Termin im Venussaal bestätigt.","url":"https://www.aggsbach.gv.at/Tourismus_Freizeit/Veranstaltungen/Veranstaltungskalender"},
-    {"date":"13.09.2026","place":"Wachau","title":"WACHAUmarathon","note":"Termin im aktuellen Veranstaltungskalender bestätigt; vor Anreise aktuelle Verkehrshinweise prüfen.","url":"https://www.aggsbach.gv.at/Tourismus_Freizeit/Veranstaltungen/Veranstaltungskalender"}
+    {"date":"07.09.2026, 11:00","place":"Spitz","title":"Weinsensoriktraining am Weingut Lagler","note":"Heute im aktuellen Spitzer Veranstaltungskalender bestätigt.","url":"https://www.spitz-wachau.com/veranstaltungskalender"},
+    {"date":"07.–08.09.2026","place":"Spitz","title":"W.E.R.O. Wine – Spontane Verkostung","note":"Laufender Termin im aktuellen Veranstaltungskalender bestätigt.","url":"https://www.spitz-wachau.at/SYSTEM/web/veranstaltung.aspx"},
+    {"date":"07.–12.09.2026","place":"Spitz","title":"Selbst ist der Gaumen in der Vinothek Fohringer","note":"Laufender Termin im aktuellen Veranstaltungskalender bestätigt.","url":"https://www.spitz-wachau.at/SYSTEM/web/veranstaltung.aspx"},
+    {"date":"09.09.2026","place":"Aggsbach Markt","title":"Line Dance für Anfänger und Fortgeschrittene","note":"Termin im aktuellen Veranstaltungskalender der Marktgemeinde bestätigt.","url":"https://www.aggsbach.gv.at/Tourismus_Freizeit/Veranstaltungen/Veranstaltungskalender"},
+    {"date":"09.09.2026, 15:00","place":"Spitz","title":"Dem Winzer über die Schultern schauen – Weingut Lagler","note":"Termin im aktuellen Spitzer Veranstaltungskalender bestätigt.","url":"https://www.spitz-wachau.com/veranstaltungskalender"},
+    {"date":"10.09.2026, 16:00","place":"Spitz","title":"Das Archiv der Vinea Wachau – Kompromisslos & einzigartig","note":"Termin im aktuellen Veranstaltungskalender bestätigt.","url":"https://www.spitz-wachau.at/SYSTEM/web/veranstaltung.aspx"},
+    {"date":"11.09.2026, 16:00","place":"Spitz","title":"Wachauer Marille – Von der Blüte bis zum Genuss","note":"Termin im aktuellen Veranstaltungskalender bestätigt.","url":"https://www.spitz-wachau.at/SYSTEM/web/veranstaltung.aspx"},
+    {"date":"12.09.2026","place":"Spitz","title":"Spitzer Winzer in den Weinterrassen","note":"Termin im aktuellen Spitzer Veranstaltungskalender bestätigt.","url":"https://www.spitz-wachau.com/veranstaltungskalender"},
+    {"date":"12.09.2026","place":"Spitz","title":"Schiff & Wein","note":"Termin im aktuellen Spitzer Veranstaltungskalender bestätigt.","url":"https://www.spitz-wachau.com/veranstaltungskalender"},
+    {"date":"13.09.2026, 10:00","place":"Emmersdorf bis Dürnstein/Spitz","title":"26. WACHAUmarathon","note":"Marathonstart in Emmersdorf und Halbmarathonstart in Spitz um 10:00 Uhr bestätigt. Verkehrsmaßnahmen und Wachaubahn-Sonderfahrplan beachten.","url":"https://wachaumarathon.com/"}
   ],
   "heurigen": [
+    {"name":"Enothek Eigl","place":"Wösendorf","period":"07.–18.09.2026","hours":"Heute ab 12:00 Uhr","url":"https://heurigenkalender.niederoesterreich.at/30943/heuriger-enothek-eigl"},
+    {"name":"Heuriger Weinterrasse Kropf","place":"Weißenkirchen","period":"04.–20.09.2026","hours":"Heute ab 14:00 Uhr","url":"https://heurigenkalender.niederoesterreich.at/89995/heuriger-weinterrasse-kropf"},
     {"name":"Heuriger Familie Weixelbaum","place":"Weißenkirchen","period":"04.–13.09.2026","hours":"Heute ab 15:00 Uhr","url":"https://heurigenkalender.niederoesterreich.at/30965/heuriger-familie-weixelbaum"},
-    {"name":"Weingut Roman Gritsch","place":"Spitz","period":"31.08.–09.09.2026","hours":"Heute ab 15:00 Uhr","url":"https://www.spitz-wachau.com/wein-kulinarik/winzer-heurige/heurigen-detail/156615/weingut-roman-gritsch"}
+    {"name":"Heuriger Ferdl Denk","place":"Weißenkirchen","period":"30.03.–01.11.2026","hours":"Heute ab 15:00 Uhr","url":"https://heurigenkalender.niederoesterreich.at/30949/heuriger-ferdl-denk"},
+    {"name":"Weingut Roman Gritsch","place":"Spitz","period":"31.08.–09.09.2026","hours":"Heute ab 16:00 Uhr","url":"https://www.spitz-wachau.com/wein-kulinarik/winzer-heurige/heurigen-detail/156615/weingut-roman-gritsch"},
+    {"name":"Top Heurigen Graf","place":"Unterloiben bei Dürnstein","period":"14.08.–20.09.2026","hours":"Heute ab 15:00 Uhr","url":"https://heurigenkalender.niederoesterreich.at/31396/top-heurigen-graf"}
   ],
   "openingSoon": [
-    {"date":"10.09.2026","name":"Weingut Thomas Gritsch","place":"Spitz","hours":"Aussteckzeit 10.–20.09.2026 bestätigt; Tageszeit vor Besuch prüfen.","url":"https://www.spitz-wachau.com/wein-marille/winzer-heurige"},
+    {"date":"10.09.2026","name":"Weingut Thomas Gritsch","place":"Spitz","hours":"Aussteckzeit 10.–20.09.2026 bestätigt; Mo–Fr ab 15:00 Uhr, Sa/So ab 12:00 Uhr.","url":"https://www.spitz-wachau.com/wein-kulinarik/winzer-heurige/heurigen-detail/156616/weingut-thomas-gritsch"},
     {"date":"11.09.2026","name":"Weingut Christian und Birgit Schneeweiss – Netterlkeller","place":"Spitz","hours":"Aussteckzeit 11.–20.09.2026 bestätigt; Tageszeit vor Besuch prüfen.","url":"https://www.spitz-wachau.com/wein-marille/winzer-heurige"},
-    {"date":"12.09.2026","name":"Buschenschank Schauer","place":"Spitz","hours":"Aussteckzeit 12.09.–04.10.2026 bestätigt; Tageszeit vor Besuch prüfen.","url":"https://www.spitz-wachau.com/wein-marille/winzer-heurige"}
+    {"date":"11.09.2026","name":"Weinbau Familie Pölzer Adam-Mühle","place":"Spitz","hours":"Aussteckzeit 11.–13.09.2026 bestätigt; Tageszeit vor Besuch prüfen.","url":"https://www.spitz-wachau.com/wein-marille/winzer-heurige"},
+    {"date":"12.09.2026","name":"Buschenschank Schauer","place":"Schwallenbach","hours":"Aussteckzeit 12.09.–04.10.2026 bestätigt; Di–So ab 14:00 Uhr.","url":"https://www.spitz-wachau.com/wein-kulinarik/winzer-heurige/heurigen-detail/156624/buschenschank-schauer"}
   ],
-  "piaTip": "Pias Sonntagstipp: Regional bietet sich heute der Erntedank und Feuerwehrheuriger in Aggsbach Markt an. Für einen Ausflug nach Spitz ist die Musikalische Weinterrasse an der Zornberghütte bestätigt; wegen der gesperrten Zufahrt möglichst öffentlich anreisen oder ausgewiesene Parkplätze nutzen.",
-  "goodToKnow": ["Das Wetter wird in der Gäste-App live geladen.","Kurzfristige Änderungen bei Heurigen sind trotz bestätigter Aussteckzeiten möglich.","Für Rad-, Wander-, Bahn-, Fähr- und Schiffsfahrten vor Abfahrt tagesaktuelle Betreiberhinweise prüfen."]
+  "piaTip": "Pias Montagstipp: Heute startet die Enothek Eigl in Wösendorf um 12:00 Uhr in ihre neue Aussteckzeit; für einen Ausflug nach Spitz ist um 11:00 Uhr das Weinsensoriktraining bei Lagler bestätigt. Wer die Donau queren möchte, sollte wegen des aktuellen Niedrigwassers bei den Rollfähren mit Einschränkungen rechnen.",
+  "goodToKnow": [
+    "Das Wetter wird in der Gäste-App live geladen und ist deshalb nicht statisch in Tratsch & Klatsch gespeichert.",
+    "Die Wachaubahn fährt in der Saison 2026 vom 24. April bis 1. November täglich; Aggsbach Markt, Willendorf, Schwallenbach und Wösendorf-Joching sind Bedarfshalte.",
+    "Die VOR-Linie 715 verbindet am Nordufer Melk/Emmersdorf, Aggsbach Markt, Spitz, Wösendorf/Joching, Weißenkirchen und Dürnstein mit Krems; vor Abfahrt Echtzeitverbindung im VOR-Routenplaner prüfen.",
+    "Am 13. September gilt zum WACHAUmarathon ein Sonderfahrplan der Wachaubahn; Verkehrsmaßnahmen auf der B3 sind offiziell angekündigt.",
+    "Kurzfristige Änderungen bei Heurigen und Fähren sind trotz bestätigter Kalender- bzw. Betreiberangaben möglich."
+  ]
 }
