@@ -1,8 +1,14 @@
 {
-  "editionDate": "2026-09-09",
-  "editionLabel": "Mittwoch, 9. September 2026",
-  "intro": "Grüß euch, ich bin Pia! Heute gibt es am Wachauer Nordufer Genuss in Spitz, Bewegung in Aggsbach Markt und schon die ersten Vorzeichen des Marathonwochenendes. Bei den Rollfähren bleibt wegen Niedrigwassers ein kurzer Tagescheck sinnvoll – die Donau hat schließlich ihren eigenen Kopf. Das Wetter lädt die Gäste-App separat live.",
+  "editionDate": "2026-09-10",
+  "editionLabel": "Donnerstag, 10. September 2026",
+  "intro": "Grüß euch, ich bin Pia! Heute locken in Spitz eine spontane Weinverkostung und das Vinea-Archiv, während die Donau wegen Niedrigwassers nochmals ihren Ersatzfahrplan hervorholt. Fürs Wochenende bitte den WACHAUmarathon mitdenken – heute selbst sind Donauradweg und B3 am Nordufer ohne offiziell gemeldete Sperre. Das Wetter lädt die Gäste-App separat live.",
   "important": [
+    {
+      "title": "DDSG: Niedrigwasser-Ersatzfahrplan gilt heute",
+      "text": "Bis einschließlich heute gilt ein Ersatzfahrplan. Ab Krems fahren Rund- bzw. Schleifenfahrten über Dürnstein und Weißenkirchen; die MS Wachau fährt ab Melk nur eine Nibelungengau-Schleife. Eine durchgehende Linienfahrt zwischen Melk/Emmersdorf und dem Wachauer Nordufer ist im heutigen Ersatzfahrplan nicht ausgewiesen.",
+      "source": "https://ddsg-blue-danube.at/linienschifffahrt-wachau/",
+      "sourceLabel": "DDSG Blue Danube"
+    },
     {
       "title": "Rollfähre Weißenkirchen weiterhin eingeschränkt",
       "text": "Wegen Niedrigwassers werden bis auf Weiteres Personen und Fahrräder befördert, PKW nur bedingt. Heute gelten 09:15–11:30 und 13:30–18:30 Uhr; bei Sturm, starkem Wind oder entsprechendem Wasserstand wird der Betrieb eingestellt.",
@@ -10,22 +16,22 @@
       "sourceLabel": "Marktgemeinde Weißenkirchen"
     },
     {
-      "title": "Rollfähre Spitz: Betrieb vom Wasserstand abhängig",
-      "text": "Die Marktgemeinde Spitz weist aktuell darauf hin, dass die Fähre Spitz–Arnsdorf wegen Niedrigwassers vollständig ausfallen oder keine KFZ mitnehmen kann. Auskunft zum Tagesbetrieb: +43 650 2502103.",
+      "title": "Rollfähre Spitz: Tagesbetrieb wasserstandsabhängig",
+      "text": "Die Gemeinde weist weiterhin darauf hin, dass die Fähre Spitz–Arnsdorf wegen Niedrigwassers vollständig ausfallen oder keine KFZ mitnehmen kann. Den Tagesstatus bitte unter +43 650 2502103 erfragen.",
       "source": "https://www.spitz-wachau.at/Rollfaehre_-_Verfuegbarkeit_wegen_Niedrigwasser_eingschraenkt",
       "sourceLabel": "Marktgemeinde Spitz"
     },
     {
-      "title": "WACHAUmarathon am Sonntag",
-      "text": "Für den 13. September sind in Spitz amtliche Verkehrsmaßnahmen kundgemacht. Die Laufstrecke beginnt in Emmersdorf und führt am Nordufer durch die Wachau; mit Einschränkungen auf der B3 und Änderungen im öffentlichen Verkehr ist zu rechnen.",
-      "source": "https://www.spitz-wachau.at/Verordnung_-_Verkehrsmassnahmen_Wachaumarathon",
-      "sourceLabel": "Amtstafel Marktgemeinde Spitz"
+      "title": "WACHAUmarathon: B3 am Sonntag ab 08:00 Uhr gesperrt",
+      "text": "Am 13. September wird die Straße durch die Wachau laut Veranstalter ab 08:00 Uhr gesperrt. Die DDSG nennt die B3 zwischen Krems und dem Kreisverkehr Emmersdorf; außerdem ist das Schifffahrtszentrum Krems von 10:30 bis 13:30 Uhr nicht erreichbar.",
+      "source": "https://www.wachaumarathon.com/en/transportation/",
+      "sourceLabel": "WACHAUmarathon"
     }
   ],
   "outdoor": [
     {
-      "title": "Donauradweg Nordufer und B3",
-      "text": "In der aktuellen offiziellen Übersicht ist für den Abschnitt Emmersdorf–Dürnstein heute keine Sperre des Donauradwegs angeführt. Der frühere Sperrhinweis in der Ortsmitte Weißenkirchen ist nicht mehr aktuell; kurzfristige örtliche Änderungen bleiben möglich.",
+      "title": "Donauradweg Nordufer und B3 heute",
+      "text": "In der aktuellen offiziellen Übersicht ist für den Abschnitt Emmersdorf–Dürnstein heute keine Sperre des Donauradwegs angeführt. Der frühere Sperrhinweis in der Ortsmitte Weißenkirchen ist nicht mehr aktuell; die nächste dort angekündigte Vollsperre beginnt erst am 27. Oktober 2026.",
       "links": [
         {
           "label": "Aktuelle Hinweise",
@@ -39,7 +45,7 @@
     },
     {
       "title": "Welterbesteig Weißenkirchen–Spitz",
-      "text": "Die aktuelle Etappe ist 10,53 km lang und mit rund 3:15 Stunden angegeben. Entlang der Strecke gibt es laut offizieller Beschreibung weder Quelle noch Einkehrmöglichkeit; ausreichend Getränke und Jause mitnehmen.",
+      "text": "Die Etappe ist 10,53 km lang und mit rund 3:15 Stunden angegeben. Entlang der Strecke gibt es laut aktueller Beschreibung weder Quelle noch Einkehrmöglichkeit; ausreichend Getränke, Jause und feste Wanderschuhe mitnehmen.",
       "links": [
         {
           "label": "Aktuelle Etappenbeschreibung",
@@ -59,66 +65,42 @@
     },
     {
       "title": "Bus 715",
-      "text": "Die Linie 715 verbindet Emmersdorf, Aggsbach Markt, Willendorf, Schwallenbach, Spitz, Wösendorf, Joching, Weißenkirchen und Dürnstein. Die konkrete Tagesverbindung vor Abfahrt im VOR-Routenplaner prüfen.",
+      "text": "Die Linie 715 verbindet den gesamten Nordufer-Korridor von Emmersdorf über Aggsbach Markt und Spitz bis Dürnstein. Die konkrete Tagesverbindung vor Abfahrt im VOR-Routenplaner prüfen.",
       "links": [
         {
           "label": "VOR-Routenplaner",
           "url": "https://anachb.vor.at/"
         }
       ]
-    },
-    {
-      "title": "Schifffahrt",
-      "text": "Der zuletzt veröffentlichte DDSG-Niedrigwasser-Ersatzfahrplan galt nur bis einschließlich 7. September. Für heute ist keine belastbar bestätigte Verlängerung ausgewiesen; die konkrete Fahrt deshalb vor Buchung direkt im Tagesangebot prüfen.",
-      "links": [
-        {
-          "label": "DDSG Wachau",
-          "url": "https://ddsg-blue-danube.at/linienschifffahrt-wachau/"
-        }
-      ]
     }
   ],
   "events": [
     {
-      "date": "09.09.2026, 10:00–17:00",
-      "place": "Spitz, Vinothek Fohringer, Donaulände 1a",
-      "title": "Selbst ist der Gaumen",
-      "note": "Individuelle Verkostung aus bis zu 60 offenen Wachauer Weinen; für Einzelgäste ist keine Voranmeldung genannt, Gruppen ab acht Personen bitte anmelden.",
-      "url": "https://www.spitz-wachau.at/Selbst_ist_der_Gaumen_in_der_Vinothek_Fohringer_13"
-    },
-    {
-      "date": "09.09.2026, 15:00–17:00",
-      "place": "Spitz, Weingut Lagler",
-      "title": "Dem Winzer über die Schultern schauen",
-      "note": "Kellerarbeit und kommentierte Verkostung, € 40. Die geforderte Anmeldung bis gestern 18:00 Uhr ist abgelaufen; heute nur für bereits angemeldete Gäste einplanen.",
-      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232242/weingut-lagler-dem-winzer-ueber-die-schultern-schauen"
-    },
-    {
-      "date": "09.09.2026, 18:00 bzw. 19:00",
-      "place": "Aggsbach Markt, Venussaal, Aggsbach Markt 183",
-      "title": "Line Dance für Anfänger und Fortgeschrittene",
-      "note": "Der Termin findet heute statt. Die Gemeindeseite nennt 18:00 Uhr in der Terminzeile; laut Beschreibung wird 18:00 oder 19:00 Uhr am Vortag per WhatsApp bestätigt. Anmeldung bei Heidi Abdel Aziz: +43 664 5400758.",
-      "url": "https://www.aggsbach.gv.at/Line_dance_fuer_Anfaenger_und_Fortgeschrittene"
+      "date": "10.09.2026, 12:00–18:00",
+      "place": "Spitz, W.E.R.O. Wine, Marktstraße 5",
+      "title": "Spontane Weinverkostung",
+      "note": "Regionale Weine im Rahmen des Spitzer Weinherbsts; Einzelgäste können laut Veranstalter ohne Voranmeldung kommen.",
+      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232237/wero-wine-spontane-verkostung"
     },
     {
       "date": "10.09.2026, 16:00–18:00",
       "place": "Spitz, Schifffahrtsmuseum",
       "title": "Das Archiv der Vinea Wachau",
-      "note": "Archivführung, Museum und Weinverkostung, € 30; Anmeldung heute bis 16:00 Uhr.",
+      "note": "Archivführung, Museum und Weinverkostung, € 30. Die Anmeldung musste bis gestern 16:00 Uhr erfolgen; heute nur für bereits angemeldete Gäste einplanen.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232243/das-archiv-der-vinea-wachau-kompromisslos-einzigartig"
     },
     {
       "date": "11.09.2026, 13:00",
       "place": "Dürnstein und Spitz",
       "title": "Hike & Sip",
-      "note": "Geführte Kombination aus Bahn, Wanderung auf den 1000-Eimerberg, Weinverkostung und Zillenfahrt; rund fünf Stunden, € 82, feste Schuhe und Buchung erforderlich.",
+      "note": "Geführte Kombination aus Bahn, Wanderung auf den 1000-Eimerberg, Weinverkostung und Zillenfahrt; rund fünf Stunden, € 82, feste Schuhe und Ticket erforderlich.",
       "url": "https://www.donau.com/veranstaltungen/hike-sip-3"
     },
     {
       "date": "11.09.2026, 16:00–18:00",
       "place": "Spitz, HARTL – Rund um die Marille",
       "title": "Wachauer Marille – von der Blüte bis zum Genuss",
-      "note": "Führung und Produktverkostung, € 25; Anmeldung bis 10. September, 18:00 Uhr.",
+      "note": "Führung und Produktverkostung, € 25; Anmeldung heute bis 18:00 Uhr.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199524/wachauer-marille-von-der-bluete-bis-zum-genuss"
     },
     {
@@ -139,15 +121,29 @@
       "date": "12.09.2026, 13:00–17:00",
       "place": "Spitz, Rotes Tor, Ruine Hinterhaus und 1000-Eimerberg",
       "title": "Spitzer Winzer in den Weinterrassen",
-      "note": "Weinausschank in den Terrassen; findet nur bei Schönwetter statt.",
-      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232240/spitzer-winzer-in-den-weinterrassen"
+      "note": "Weinausschank direkt in den Terrassen; findet nur bei Schönwetter statt.",
+      "url": "https://www.donau.com/veranstaltungen/spitzer-winzer-in-den-weinterrassen"
     },
     {
-      "date": "13.09.2026",
-      "place": "Emmersdorf–Spitz–Dürnstein",
+      "date": "13.09.2026, Start 10:00",
+      "place": "Emmersdorf–Aggsbach Markt–Spitz–Weißenkirchen–Dürnstein",
       "title": "26. Internationaler WACHAUmarathon",
-      "note": "Rund 8.000 Teilnehmende angekündigt. Online-Anmeldung geschlossen; Nachmeldung noch am 12. September in Krems möglich. Verkehrsmaßnahmen beachten.",
-      "url": "https://wachaumarathon.com/"
+      "note": "Großveranstaltung am Nordufer. Die Straße durch die Wachau ist ab 08:00 Uhr gesperrt; Anreise und Tagesausflüge früh planen.",
+      "url": "https://www.wachaumarathon.com/en/transportation/"
+    },
+    {
+      "date": "14.09.2026, 11:00–13:30",
+      "place": "Spitz, Weingut Lagler",
+      "title": "Weinsensoriktraining",
+      "note": "Workshop mit Wein, Wasser, Wachauer Laberl und Unterlagen, € 45; Anmeldung bis 13. September, 18:00 Uhr, maximal 15 Personen.",
+      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232241/weinsensoriktraining-am-weingut-lagler"
+    },
+    {
+      "date": "16.09.2026",
+      "place": "Aggsbach Markt, Venussaal",
+      "title": "Line Dance für Anfänger und Fortgeschrittene",
+      "note": "Im aktuellen Gemeindekalender bestätigt. Die genaue Beginnzeit wird laut Detailinformation am Vortag über die Gruppe bekannt gegeben.",
+      "url": "https://www.aggsbach.gv.at/Tourismus_Freizeit/Veranstaltungen/Veranstaltungskalender"
     }
   ],
   "heurigen": [
@@ -159,11 +155,11 @@
       "url": "https://heurigenkalender.niederoesterreich.at/223845/die-schlosserei-heuriger-bar"
     },
     {
-      "name": "Weingut Roman Gritsch",
+      "name": "Weingut Thomas Gritsch",
       "place": "Spitz",
-      "period": "31.08.–09.09.2026",
-      "hours": "Heute ab 16:00 Uhr",
-      "url": "https://heurigenkalender.niederoesterreich.at/156615/weingut-roman-gritsch"
+      "period": "10.–20.09.2026",
+      "hours": "Heute ab 15:00 Uhr",
+      "url": "https://heurigenkalender.niederoesterreich.at/156616/weingut-thomas-gritsch"
     },
     {
       "name": "Weingut Stalzer",
@@ -198,7 +194,7 @@
       "place": "Joching",
       "period": "07.–20.09.2026",
       "hours": "Heute ab 15:00 Uhr",
-      "url": "https://heurigenkalender.niederoesterreich.at/30938/heuriger-weingut-hllmller"
+      "url": "https://heurigenkalender.niederoesterreich.at/30938/weingut-hllmller"
     },
     {
       "name": "Heuriger Familie Bayer",
@@ -220,6 +216,20 @@
       "period": "17.07.–26.10.2026",
       "hours": "Heute ab 12:00 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/30959/heuriger-mang-hermenegild"
+    },
+    {
+      "name": "Heuriger Ferdl Denk",
+      "place": "Weißenkirchen",
+      "period": "30.03.–01.11.2026",
+      "hours": "Heute ab 15:00 Uhr",
+      "url": "https://heurigenkalender.niederoesterreich.at/30949/heuriger-ferdl-denk"
+    },
+    {
+      "name": "Weinterrasse Kropf",
+      "place": "Weißenkirchen",
+      "period": "04.–20.09.2026",
+      "hours": "Heute ab 14:00 Uhr",
+      "url": "https://heurigenkalender.niederoesterreich.at/89995/heuriger-weinterrasse-kropf"
     },
     {
       "name": "Heuriger Familie Weixelbaum",
@@ -245,34 +255,34 @@
   ],
   "openingSoon": [
     {
-      "date": "10.09.2026",
-      "name": "Weingut Thomas Gritsch",
-      "place": "Spitz",
-      "hours": "Aussteckzeit 10.–20.09.2026; Montag bis Freitag ab 15:00 Uhr, Samstag und Sonntag ab 12:00 Uhr.",
-      "url": "https://heurigenkalender.niederoesterreich.at/156616/weingut-thomas-gritsch"
-    },
-    {
       "date": "11.09.2026",
       "name": "Weingut Christian und Birgit Schneeweiss – Netterlkeller",
       "place": "Spitz",
       "hours": "Aussteckzeit 11.–20.09.2026; Montag bis Samstag ab 15:00 Uhr, Sonntag ab 12:00 Uhr.",
-      "url": "https://heurigenkalender.niederoesterreich.at/156625/heuriger-schneeweiss-netterlkeller"
+      "url": "https://heurigenkalender.niederoesterreich.at/156625/weingut-christian-und-birgit-schneeweiss-netterlkeller"
+    },
+    {
+      "date": "11.09.2026",
+      "name": "Weinbau Familie Pölzer – Adam-Mühle",
+      "place": "Spitz",
+      "hours": "Aussteckzeit 11.–13.09.2026; Freitag ab 15:00 Uhr, Samstag und Sonntag ab 12:00 Uhr.",
+      "url": "https://heurigenkalender.niederoesterreich.at/160941/weinbau-familie-plzer-adam-mhle"
     },
     {
       "date": "12.09.2026",
       "name": "Buschenschank Schauer",
       "place": "Schwallenbach",
       "hours": "Aussteckzeit 12.09.–04.10.2026; Dienstag bis Sonntag ab 14:00 Uhr.",
-      "url": "https://www.spitz-wachau.com/wein-kulinarik/winzer-heurige/heurigen-detail/156624/buschenschank-schauer"
+      "url": "https://heurigenkalender.niederoesterreich.at/156624/buschenschank-schauer"
     }
   ],
-  "piaTip": "Pias Mittwochstipp: Für einen spontanen Genussstopp heute nach Spitz radeln oder mit der Wachaubahn fahren und zwischen 10:00 und 17:00 Uhr bei „Selbst ist der Gaumen“ in der Vinothek Fohringer verkosten. Einzelgäste brauchen laut Veranstaltungsangabe keine Anmeldung; auf dem Rückweg bei der Bahn an den Bedarfshalt denken.",
+  "piaTip": "Pias Donnerstagstipp: Für einen unkomplizierten Ausflug heute mit Rad oder Wachaubahn nach Spitz fahren und zwischen 12:00 und 18:00 Uhr bei W.E.R.O. spontan Wachauer Weine verkosten. Eine Anmeldung ist laut Veranstalter nicht nötig; bei der Rückfahrt mit der Bahn an den Bedarfshalt denken.",
   "goodToKnow": [
     "Das Wetter wird in der Gäste-App live geladen und deshalb nicht statisch in Tratsch & Klatsch gespeichert.",
-    "Für das Vinea-Wachau-Archiv am Donnerstag endet die Anmeldung heute um 16:00 Uhr.",
-    "Für den Marillen-Termin am Freitag endet die Anmeldung am Donnerstag um 18:00 Uhr.",
+    "Der DDSG-Niedrigwasser-Ersatzfahrplan ist ausdrücklich nur bis einschließlich heute bestätigt; Fahrten ab Freitag neu prüfen.",
+    "Für den Marillen-Termin am Freitag endet die Anmeldung heute um 18:00 Uhr.",
+    "Für „Schiff & Wein“ am Samstag endet die Anmeldung am Freitag um 16:00 Uhr.",
     "Die Welterbesteig-Etappe Weißenkirchen–Spitz besitzt unterwegs laut aktueller Beschreibung keine Quelle und keine Einkehrmöglichkeit.",
-    "Bei der Wachaubahn sind Aggsbach Markt, Willendorf, Schwallenbach und Wösendorf-Joching Bedarfshalte.",
-    "Für Sonntag, 13. September, Ausflüge und Anreisen wegen des WACHAUmarathons frühzeitig planen."
+    "Am Sonntag ist die B3 durch die Wachau ab 08:00 Uhr gesperrt; Gäste-Anreisen und Ausflüge entsprechend vorplanen."
   ]
 }
