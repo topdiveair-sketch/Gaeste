@@ -3,6 +3,55 @@
 
   const GOOGLE_URL = "https://www.google.com/maps/search/?api=1&query=Zuhause%20am%20Bach%20Wachau%20Aggsbach%20Markt%2082%2C%203641%20Aggsbach%20Markt";
   const HOLIDAYCHECK_URL = "https://www.holidaycheck.at/wcf/hotelreview/contribution/d66cc36b-7f57-4db0-8211-e5f75fcc669a";
+  const PIRATENSENDER_URL = "https://spotify.link/JqfpxX3Wq6b";
+
+  function addPiratensender() {
+    if (document.getElementById("piratensender")) return;
+
+    const main = document.querySelector("main");
+    const books = document.getElementById("buecherwelt");
+    if (!main) return;
+
+    const section = document.createElement("section");
+    section.id = "piratensender";
+    section.className = "card pirate-radio-card";
+
+    const kicker = document.createElement("div");
+    kicker.className = "kicker";
+    kicker.textContent = "🏴‍☠️ Die Wilden Wachauer Windis";
+
+    const title = document.createElement("h2");
+    title.textContent = "Wachauer Piratensender";
+
+    const text = document.createElement("p");
+    const strong = document.createElement("strong");
+    strong.textContent = "Der Soundtrack für deinen Wachau-Urlaub. ";
+    text.appendChild(strong);
+    text.appendChild(document.createTextNode("Musik, Natur, Freunde und Freiheit."));
+
+    const actions = document.createElement("div");
+    actions.className = "button-row";
+
+    const link = document.createElement("a");
+    link.className = "btn-link pirate-radio-button";
+    link.href = PIRATENSENDER_URL;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.textContent = "🎧 Jetzt auf Spotify anhören";
+
+    actions.appendChild(link);
+    section.append(kicker, title, text, actions);
+
+    const style = document.createElement("style");
+    style.textContent = ".pirate-radio-card{border:1px solid rgba(49,91,69,.16);background:linear-gradient(135deg,#fffaf0,#f7f4e8)}.pirate-radio-card h2{margin-bottom:8px}.pirate-radio-card p{margin-bottom:14px}.pirate-radio-button{background:#1db954!important;color:#fff!important;border-radius:999px!important;font-weight:900!important}@media(max-width:640px){.pirate-radio-button{width:100%;box-sizing:border-box}}";
+    document.head.appendChild(style);
+
+    if (books && books.parentNode === main) {
+      main.insertBefore(section, books);
+    } else {
+      main.appendChild(section);
+    }
+  }
 
   function addReviewFunnel() {
     if (document.getElementById("gast-bewertung")) return;
@@ -49,9 +98,14 @@
     }
   }
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", addReviewFunnel);
-  } else {
+  function initializeExtras() {
+    addPiratensender();
     addReviewFunnel();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initializeExtras);
+  } else {
+    initializeExtras();
   }
 })();
