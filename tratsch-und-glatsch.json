@@ -1,52 +1,46 @@
 {
-  "editionDate": "2026-09-14",
-  "editionLabel": "Montag, 14. September 2026",
-  "intro": "Grüß euch, ich bin Pia! Nach dem großen Laufsonntag wird es am Nordufer heute wieder ruhiger: B3, Donauradweg und Wachaubahn sind ohne Marathon-Sonderregelung einzuplanen. Auf der Donau macht allerdings das Niederwasser weiter den Takt – und acht aktuell bestätigte Heurige sorgen am Abend dafür, dass niemand auf dem Trockenen sitzen muss. Das Wetter lädt die Gäste-App separat live.",
+  "editionDate": "2026-09-15",
+  "editionLabel": "Dienstag, 15. September 2026",
+  "intro": "Grüß euch, ich bin Pia! Am Nordufer startet der Dienstag ruhig, aber mit zwei wichtigen Fußnoten: Die DDSG fährt wegen Niederwassers weiter nach Ersatzfahrplan, und der heute angekündigte Vortrag in Aggsbach Markt ist krankheitsbedingt abgesagt. Dafür sind elf aktuell bestätigte Heurige geöffnet – die Gäste-App lädt das Wetter wie gewohnt separat live.",
   "important": [
     {
-      "title": "Marathon-Sperren beendet",
-      "text": "Die für den 13. September verordnete B3-Sperre ist abgelaufen. In der heute geprüften offiziellen Übersicht der Radweg-Sperren ist für den Abschnitt Emmersdorf–Dürnstein keine neue Sperre eingetragen; normale Verbindungen sind wieder einzuplanen.",
-      "source": "https://www.donau.com/aktuelle-hinweise",
-      "sourceLabel": "Donau Niederösterreich"
-    },
-    {
-      "title": "DDSG fährt vorläufig nach Niederwasser-Ersatzfahrplan",
-      "text": "Die DDSG veröffentlicht aktuell einen Ersatzfahrplan: MS Austria fährt um 10:30 Uhr ab Krems nach Dürnstein, dort um 12:45 Uhr zurück und von 15:45 bis 17:45 Uhr eine Schleifenfahrt Krems–Weißenkirchen–Krems. Weitere Schiffe fahren Schleifen ab Krems beziehungsweise Melk. Vor Buchung die gewünschte Strecke direkt prüfen.",
+      "title": "DDSG weiterhin mit Niederwasser-Ersatzfahrplan",
+      "text": "Die DDSG veröffentlicht aktuell einen vorläufigen Ersatzfahrplan. MS Dürnstein fährt ab Krems um 10:30 Uhr Richtung Weißenkirchen mit Aufenthalt in Dürnstein, Rückfahrt ab Dürnstein um 12:45 Uhr sowie eine Schleifenfahrt Krems–Weißenkirchen–Krems von 15:45 bis 17:45 Uhr. MS Austria fährt um 11:00 Uhr ab Krems auf einer Weißenkirchen-Rundfahrt; MS Wachau fährt um 11:00 Uhr ab Melk im Nibelungengau. Die gewünschte Strecke vor Buchung direkt prüfen.",
       "source": "https://ddsg-blue-danube.at/linienschifffahrt-wachau/",
       "sourceLabel": "DDSG Blue Danube"
     },
     {
-      "title": "Rollfähre Weißenkirchen weiterhin eingeschränkt",
+      "title": "Rollfähre Weißenkirchen eingeschränkt",
       "text": "Wegen Niedrigwassers werden Personen und Fahrräder befördert, PKW nur bedingt. Heute gilt der Werktagsfahrplan 09:15–11:30 und 13:30–18:30 Uhr; bei starkem Wind, Sturm oder ungeeignetem Wasserstand kann der Betrieb ruhen.",
       "source": "https://www.weissenkirchen-wachau.at/ueber-weissenkirchen/mobilitaet/rollfaehre",
       "sourceLabel": "Marktgemeinde Weißenkirchen"
     },
     {
       "title": "Rollfähre Spitz bleibt wasserstandsabhängig",
-      "text": "Die Gemeinde warnt weiterhin davor, dass die Fähre Spitz–Arnsdorf bei Niedrigwasser vollständig ausfallen oder keine KFZ mitnehmen kann. Den Tagesstatus vor der Anfahrt unter +43 650 2502103 prüfen.",
+      "text": "Die Gemeinde weist weiterhin darauf hin, dass die Fähre Spitz–Arnsdorf bei Niedrigwasser vollständig ausfallen oder keine KFZ mitnehmen kann. Den Tagesstatus vor der Anfahrt unter +43 650 2502103 prüfen.",
       "source": "https://www.spitz-wachau.at/Rollfaehre_-_Verfuegbarkeit_wegen_Niedrigwasser_eingschraenkt",
       "sourceLabel": "Marktgemeinde Spitz"
     },
     {
-      "title": "Aggsbach Markt: morgiger Vortrag abgesagt",
-      "text": "Der für Dienstag, 15. September, angekündigte Vortrag „Spurenelemente“ im Venussaal ist im aktuellen Gemeindekalender ausdrücklich als krankheitsbedingt abgesagt gekennzeichnet.",
-      "source": "https://www.aggsbach.gv.at/Tourismus_Freizeit/Veranstaltungen/Veranstaltungskalender",
+      "title": "Aggsbach Markt: heutiger Vortrag abgesagt",
+      "text": "Der aktuelle Gemeindekalender kennzeichnet den Vortrag „Spurenelemente“ am 15. September im Venussaal ausdrücklich als krankheitsbedingt abgesagt. Eine ältere Detailseite nennt noch eine Durchführung; maßgeblich ist hier der aktuellere Kalendereintrag. Der Termin ist daher nicht als Veranstaltung aufgenommen.",
+      "source": "https://www.aggsbach.gv.at/system/web/veranstaltung.aspx",
       "sourceLabel": "Marktgemeinde Aggsbach"
     }
   ],
   "outdoor": [
     {
-      "title": "Donauradweg Nordufer",
-      "text": "In der heute geprüften offiziellen Übersicht ist für Emmersdorf–Aggsbach Markt–Spitz–Weißenkirchen–Dürnstein keine Sperre angeführt. Nach dem Veranstaltungswochenende trotzdem auf temporäre Absperrgitter und Abbauarbeiten achten.",
+      "title": "Donauradweg und B3 am Nordufer",
+      "text": "In der heute geprüften offiziellen Übersicht ist für den Abschnitt Emmersdorf–Aggsbach Markt–Spitz–Weißenkirchen–Dürnstein keine Sperre angeführt. Kurzfristige lokale Maßnahmen können dennoch auftreten; vor einer längeren Tour die aktuelle Übersicht erneut öffnen.",
       "links": [
         {
-          "label": "Aktuelle Radweghinweise",
+          "label": "Aktuelle Hinweise",
           "url": "https://www.donau.com/aktuelle-hinweise"
         }
       ]
     },
     {
-      "title": "Wachaubahn wieder nach Saisonfahrplan",
+      "title": "Wachaubahn nach Saisonfahrplan",
       "text": "Ab Aggsbach Markt Richtung Spitz/Dürnstein fährt die Bahn um 10:25, 12:25, 15:05 und 18:05 Uhr, Richtung Emmersdorf um 09:54, 11:54, 13:54 und 16:54 Uhr. Aggsbach Markt, Willendorf, Schwallenbach und Wösendorf-Joching sind Bedarfshalte.",
       "links": [
         {
@@ -57,7 +51,7 @@
     },
     {
       "title": "Bus 715",
-      "text": "Auf der aktuellen VOR-Verkehrsseite ist keine linienbezogene Störung für den Norduferkorridor ausgewiesen. Die konkrete Verbindung zwischen Emmersdorf, Aggsbach Markt, Spitz, Weißenkirchen und Dürnstein dennoch vor Abfahrt live prüfen; Fahrräder werden in Bussen nicht mitgenommen.",
+      "text": "Auf der aktuellen VOR-Verkehrsseite ist keine linienbezogene Störung für den Norduferkorridor ausgewiesen. Die konkrete Verbindung zwischen Emmersdorf, Aggsbach Markt, Spitz, Weißenkirchen und Dürnstein vor Abfahrt live prüfen; Fahrräder werden in den Bussen nicht mitgenommen.",
       "links": [
         {
           "label": "VOR-Routenplaner",
@@ -82,38 +76,24 @@
   ],
   "events": [
     {
-      "date": "14.09.2026, 11:00–13:30 Uhr",
-      "place": "Spitz, Weingut Lagler",
-      "title": "Weinsensoriktraining",
-      "note": "Interaktiver Workshop mit Verkostung, € 45. Die reguläre Anmeldung endete gestern um 18:00 Uhr; heute daher nur für bereits bestätigte Teilnehmerinnen und Teilnehmer einplanen.",
-      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232241/weinsensoriktraining-am-weingut-lagler"
-    },
-    {
-      "date": "14.09.2026, 12:00–18:00 Uhr",
+      "date": "15.09.2026, 12:00–18:00 Uhr",
       "place": "Spitz, W.E.R.O. Wine, Marktstraße 5",
       "title": "Spontane Weinverkostung",
       "note": "Regionale Weine im Rahmen des Spitzer Weinherbsts; Einzelgäste können ohne vorherige Anmeldung kommen.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232237/wero-wine-spontane-verkostung"
     },
     {
-      "date": "14.09.2026, 18:30–20:00 Uhr",
-      "place": "Emmersdorf, Turnsaal der Neuen Mittelschule",
-      "title": "Yoga „Breathe & Flow“",
-      "note": "Der Montag-Kurs ist im offiziellen Kalender bestätigt, wird jedoch bereits mit Warteliste geführt. Nur mit bestehender Teilnahmebestätigung einplanen.",
-      "url": "https://www.emmersdorf.gv.at/Yoga_Breathe_Flow_Montag-Kurs"
-    },
-    {
       "date": "16.09.2026",
       "place": "Aggsbach Markt, Venussaal",
       "title": "Line Dance für Anfänger und Fortgeschrittene",
-      "note": "Im aktuellen Gemeindekalender bestätigt. Die genaue Beginnzeit wird laut Detailinformation am Vortag über die Gruppe bekannt gegeben.",
-      "url": "https://www.aggsbach.gv.at/Tourismus_Freizeit/Veranstaltungen/Veranstaltungskalender"
+      "note": "Im aktuellen Gemeindekalender bestätigt. Die genaue Beginnzeit wird laut Detailinformation über die Gruppe bekannt gegeben.",
+      "url": "https://www.aggsbach.gv.at/system/web/veranstaltung.aspx"
     },
     {
       "date": "16.09.2026, 15:00–17:00 Uhr",
       "place": "Spitz, Weingut Lagler",
       "title": "Dem Winzer über die Schulter schauen",
-      "note": "Einblick in die Kellerarbeit mit kommentierter Weinverkostung, € 40; Anmeldung bis 15. September, 18:00 Uhr.",
+      "note": "Einblick in die Kellerarbeit mit kommentierter Weinverkostung, € 40; Anmeldung heute bis 18:00 Uhr.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232242/weingut-lagler-dem-winzer-ueber-die-schultern-schauen"
     },
     {
@@ -122,6 +102,13 @@
       "title": "Das Archiv der Vinea Wachau",
       "note": "Archivführung, Museumsbesuch und Weinverkostung, € 30; Anmeldung bis 16. September, 16:00 Uhr.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232243/das-archiv-der-vinea-wachau-kompromisslos-einzigartig"
+    },
+    {
+      "date": "18.09.2026, 16:00–18:00 Uhr",
+      "place": "Spitz, Marillenhof Aufreiter-Hartl",
+      "title": "Wachauer Marille – von der Blüte bis zum Genuss",
+      "note": "Führung und Verkostung rund um die Wachauer Marille, € 25; Anmeldung bis 17. September, 18:00 Uhr, unter +43 680 1224636 oder info@hartl-wachau.at.",
+      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail?cHash=467a9548a5aed058693f102e23019d4a&tx_vadb_detail%5Baction%5D=detail&tx_vadb_detail%5Bcontroller%5D=Vadb&tx_vadb_detail%5Bid%5D=199524"
     },
     {
       "date": "19.09.2026, 10:00–12:00 Uhr",
@@ -134,14 +121,14 @@
       "date": "19.09.2026, 13:00–17:00 Uhr",
       "place": "Spitz, Rotes Tor, Ruine Hinterhaus und 1000-Eimerberg",
       "title": "Spitzer Winzer in den Weinterrassen",
-      "note": "Weinausschank direkt in den Terrassen; findet nur bei Schönwetter statt. Wetter und aktuellen Veranstalterhinweis kurz vorher prüfen.",
+      "note": "Weinausschank direkt in den Terrassen; findet nur bei Schönwetter statt. Wetter und Veranstalterhinweis kurz vorher prüfen.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232240/spitzer-winzer-in-den-weinterrassen"
     },
     {
       "date": "20.09.2026, 09:00–17:00 Uhr",
       "place": "Weißenkirchen, Pfarrkirche und Teisenhoferhof",
       "title": "Erntedank und Pfarrfest",
-      "note": "Im aktuellen offiziellen Veranstaltungskalender bestätigt; für Sonntagsausflüge und die örtliche Parkplatz- und Restaurantplanung relevant.",
+      "note": "Im aktuellen offiziellen Veranstaltungskalender bestätigt; für Sonntagsausflüge sowie die örtliche Parkplatz- und Restaurantplanung relevant.",
       "url": "https://www.weissenkirchen-wachau.at/aktuelles/veranstaltungskalender"
     },
     {
@@ -150,9 +137,23 @@
       "title": "Schmankerl bei der Zornberghütte",
       "note": "Einkehr am Panoramawanderweg Spitzer Graben; findet ausschließlich bei Schönwetter statt.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199537/schmankerl-bei-der-zornberghuette"
+    },
+    {
+      "date": "21.09.2026, 11:00–13:30 Uhr",
+      "place": "Spitz, Weingut Lagler",
+      "title": "Weinsensoriktraining",
+      "note": "Interaktiver Workshop mit Verkostung, € 45; Anmeldung bis 20. September, 18:00 Uhr, maximal 15 Personen.",
+      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232241/weinsensoriktraining-am-weingut-lagler"
     }
   ],
   "heurigen": [
+    {
+      "name": "Die Schlosserei | Heuriger | Bar",
+      "place": "Emmersdorf-Luberegg",
+      "period": "01.09.–31.10.2026",
+      "hours": "Heute 16:00–21:00 Uhr",
+      "url": "https://heurigenkalender.niederoesterreich.at/223845/die-schlosserei-heuriger-bar"
+    },
     {
       "name": "Weingut Thomas Gritsch",
       "place": "Spitz",
@@ -161,11 +162,25 @@
       "url": "https://heurigenkalender.niederoesterreich.at/156616/heuriger-thomas-gritsch"
     },
     {
+      "name": "Weingut Stalzer",
+      "place": "Spitz",
+      "period": "04.–27.09.2026",
+      "hours": "Heute ab 16:00 Uhr",
+      "url": "https://heurigenkalender.niederoesterreich.at/156627/weingut-stalzer"
+    },
+    {
       "name": "Weingut Schneeweiss – Netterlkeller",
       "place": "Spitz",
       "period": "11.–20.09.2026",
       "hours": "Heute ab 15:00 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/156625/weingut-christian-und-birgit-schneeweiss-netterlkeller"
+    },
+    {
+      "name": "Buschenschank Schauer",
+      "place": "Schwallenbach",
+      "period": "12.09.–04.10.2026",
+      "hours": "Heute ab 14:00 Uhr",
+      "url": "https://heurigenkalender.niederoesterreich.at/156624/buschenschank-schauer"
     },
     {
       "name": "Enothek Eigl",
@@ -240,13 +255,12 @@
       "url": "https://heurigenkalender.niederoesterreich.at/184075/weinhauer-brustbauer"
     }
   ],
-  "piaTip": "Pias Montagstipp: Wenn die Live-Wetterkarte trocken zeigt, heute gemütlich am Donauradweg nach Spitz rollen, ab 12:00 Uhr ohne Anmeldung bei W.E.R.O. verkosten und für den Rückweg die reguläre Wachaubahn nutzen – am Bedarfshalt den Haltewunsch nicht vergessen.",
+  "piaTip": "Pias Dienstagstipp: Wenn die Live-Wetterkarte trocken zeigt, heute mit dem Rad von Aggsbach Markt nach Schwallenbach rollen und ab 14:00 Uhr beim Buschenschank Schauer einkehren; für den Rückweg die Wachaubahn am Bedarfshalt Schwallenbach nutzen und die Haltewunschtaste rechtzeitig drücken.",
   "goodToKnow": [
     "Das Wetter wird in der Gäste-App live geladen und deshalb nicht statisch in Tratsch & Klatsch gespeichert.",
-    "Die gestrigen Marathon-Sonderregelungen sind abgelaufen; Wachaubahn und Straßenverbindungen wieder nach dem regulären Montagsschema planen.",
-    "Die Schlosserei in Luberegg ist heute laut aktuellem Heurigenkalender ausdrücklich geschlossen.",
-    "Der Vortrag „Spurenelemente“ am Dienstag im Venussaal Aggsbach Markt ist krankheitsbedingt abgesagt.",
-    "Die Tourismusinformation Spitz ist heute von 09:00–13:00 und 14:00–16:00 Uhr geöffnet.",
-    "Die Tourismusinformation Weißenkirchen ist heute von 10:00–13:00 und 15:00–17:00 Uhr geöffnet."
+    "Der Vortrag „Spurenelemente“ heute im Venussaal Aggsbach Markt ist krankheitsbedingt abgesagt; der aktuellere Gemeindekalender widerspricht einer älteren Detailseite.",
+    "Für „Dem Winzer über die Schulter schauen“ am Mittwoch endet die Anmeldung heute um 18:00 Uhr.",
+    "Die Enothek Eigl in Wösendorf hat in der laufenden Aussteckzeit noch bis Freitag, 18. September, täglich ab 12:00 Uhr geöffnet.",
+    "Am Freitag, 18. September, beginnen vier bestätigte neue Aussteckzeiten in Spitz, Weißenkirchen und Dürnstein."
   ]
 }
