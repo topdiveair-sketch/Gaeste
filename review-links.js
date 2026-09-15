@@ -4,6 +4,65 @@
   const GOOGLE_URL = "https://www.google.com/maps/search/?api=1&query=Zuhause%20am%20Bach%20Wachau%20Aggsbach%20Markt%2082%2C%203641%20Aggsbach%20Markt";
   const HOLIDAYCHECK_URL = "https://www.holidaycheck.at/wcf/hotelreview/contribution/d66cc36b-7f57-4db0-8211-e5f75fcc669a";
   const PIRATENSENDER_URL = "https://spotify.link/JqfpxX3Wq6b";
+  const GEMEINDE_URL = "https://www.aggsbach.gv.at/";
+
+  function addAggsbachHeute() {
+    if (document.getElementById("aggsbach-heute")) return;
+
+    const main = document.querySelector("main");
+    const welcome = document.querySelector(".welcome");
+    if (!main) return;
+
+    const section = document.createElement("section");
+    section.id = "aggsbach-heute";
+    section.className = "card local-hub-card";
+    section.innerHTML = `
+      <div class="kicker">📍 Für Gäste & Bewohner</div>
+      <h2>Heute in Aggsbach Markt</h2>
+      <p class="local-hub-lead">Aktuelles Tagesgeschehen, Gemeinde-Informationen, Veranstaltungen, Wetter, Mobilität, Gastronomie und wichtige Hinweise auf einen Blick.</p>
+      <div class="local-hub-grid">
+        <a href="#tratsch-glatsch"><strong>🗞️ Tagesgeschehen</strong><span>Lokale Neuigkeiten, Veranstaltungen und Tipps des Tages.</span></a>
+        <a href="${GEMEINDE_URL}" target="_blank" rel="noopener noreferrer"><strong>🏛️ Gemeinde aktuell</strong><span>Offizielle Mitteilungen und Bürgerservice von Aggsbach Markt.</span></a>
+        <a href="#wetter"><strong>🌦️ Wetter & Warnungen</strong><span>Wetterlage und Hinweise für den heutigen Tag.</span></a>
+        <a href="#heurigen"><strong>🍷 Heute geöffnet?</strong><span>Heurige, Gastronomie und regionale Genussmöglichkeiten.</span></a>
+        <a href="#service"><strong>🚂 Mobilität & Service</strong><span>Fähren, Wachaubahn, Gepäcktransport und weitere Hilfe.</span></a>
+        <a href="#notfall"><strong>🆘 Wichtig & Notfall</strong><span>Gastgeber, Rettung, Polizei, Feuerwehr und Bergrettung.</span></a>
+      </div>
+      <p class="small local-hub-note">Die App bündelt Informationen für Einheimische und Gäste. Bei kurzfristigen Änderungen gilt immer die verlinkte Originalquelle.</p>
+    `;
+
+    const style = document.createElement("style");
+    style.textContent = `
+      .local-hub-card{background:linear-gradient(160deg,#f7fbf5,#fff8ea);border:2px solid #7fa55a;box-shadow:0 14px 34px rgba(45,80,25,.12)}
+      .local-hub-lead{font-size:1.12rem;max-width:900px}
+      .local-hub-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}
+      .local-hub-grid a{display:flex;flex-direction:column;gap:7px;min-height:116px;padding:16px;border-radius:16px;background:#fff;border:1px solid #d9e4ce;text-decoration:none;box-shadow:0 6px 16px rgba(40,60,30,.06)}
+      .local-hub-grid a:hover{transform:translateY(-1px);box-shadow:0 9px 20px rgba(40,60,30,.10)}
+      .local-hub-grid strong{font-size:1.05rem;color:#2f5b1f}
+      .local-hub-grid span{color:#655647;line-height:1.45}
+      .local-hub-note{margin-bottom:0}
+      .local-nav{background:#234c3a!important;color:#fff!important;font-weight:950!important}
+      @media(max-width:800px){.local-hub-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+      @media(max-width:560px){.local-hub-grid{grid-template-columns:1fr}.local-hub-grid a{min-height:0}}
+    `;
+    document.head.appendChild(style);
+
+    if (welcome && welcome.parentNode === main) {
+      welcome.insertAdjacentElement("afterend", section);
+    } else {
+      main.insertBefore(section, main.firstChild);
+    }
+
+    const nav = document.querySelector(".quick-nav");
+    if (nav && !nav.querySelector(".local-nav")) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "local-nav";
+      button.textContent = "📍 Heute in Aggsbach";
+      button.addEventListener("click", () => section.scrollIntoView({behavior:"smooth", block:"start"}));
+      nav.insertBefore(button, nav.firstChild);
+    }
+  }
 
   function addPiratensender() {
     if (document.getElementById("piratensender")) return;
@@ -99,6 +158,7 @@
   }
 
   function initializeExtras() {
+    addAggsbachHeute();
     addPiratensender();
     addReviewFunnel();
   }
