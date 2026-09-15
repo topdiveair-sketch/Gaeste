@@ -17,9 +17,9 @@
     section.id = "aggsbach-heute";
     section.className = "card local-hub-card";
     section.innerHTML = `
-      <div class="kicker">📍 Für Gäste & Bewohner</div>
-      <h2>Heute in Aggsbach Markt</h2>
-      <p class="local-hub-lead">Aktuelles Tagesgeschehen, Gemeinde-Informationen, Veranstaltungen, Wetter, Mobilität, Gastronomie und wichtige Hinweise auf einen Blick.</p>
+      <div class="kicker">📍 Service von Zuhause am Bach</div>
+      <h2>Aggsbach aktuell</h2>
+      <p class="local-hub-lead">Aktuelle Informationen aus Aggsbach Markt für unsere Gäste – und für alle, die wissen möchten, was heute los ist.</p>
       <div class="local-hub-grid">
         <a href="#tratsch-glatsch"><strong>🗞️ Tagesgeschehen</strong><span>Lokale Neuigkeiten, Veranstaltungen und Tipps des Tages.</span></a>
         <a href="${GEMEINDE_URL}" target="_blank" rel="noopener noreferrer"><strong>🏛️ Gemeinde aktuell</strong><span>Offizielle Mitteilungen und Bürgerservice von Aggsbach Markt.</span></a>
@@ -28,20 +28,21 @@
         <a href="#service"><strong>🚂 Mobilität & Service</strong><span>Fähren, Wachaubahn, Gepäcktransport und weitere Hilfe.</span></a>
         <a href="#notfall"><strong>🆘 Wichtig & Notfall</strong><span>Gastgeber, Rettung, Polizei, Feuerwehr und Bergrettung.</span></a>
       </div>
-      <p class="small local-hub-note">Die App bündelt Informationen für Einheimische und Gäste. Bei kurzfristigen Änderungen gilt immer die verlinkte Originalquelle.</p>
+      <p class="small local-hub-note"><strong>Zuhause am Bach – Wachau</strong> bündelt hier hilfreiche Ortsinformationen als zusätzlichen Service zur Gäste-App. Bei kurzfristigen Änderungen gilt immer die verlinkte Originalquelle.</p>
     `;
 
     const style = document.createElement("style");
     style.textContent = `
-      .local-hub-card{background:linear-gradient(160deg,#f7fbf5,#fff8ea);border:2px solid #7fa55a;box-shadow:0 14px 34px rgba(45,80,25,.12)}
-      .local-hub-lead{font-size:1.12rem;max-width:900px}
+      .local-hub-card{background:linear-gradient(160deg,#fffdf8,#f8f2e7);border:1px solid #d9c8af;box-shadow:0 10px 26px rgba(65,45,28,.08)}
+      .local-hub-card h2{color:#4a2a14}
+      .local-hub-lead{font-size:1.08rem;max-width:900px}
       .local-hub-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}
-      .local-hub-grid a{display:flex;flex-direction:column;gap:7px;min-height:116px;padding:16px;border-radius:16px;background:#fff;border:1px solid #d9e4ce;text-decoration:none;box-shadow:0 6px 16px rgba(40,60,30,.06)}
-      .local-hub-grid a:hover{transform:translateY(-1px);box-shadow:0 9px 20px rgba(40,60,30,.10)}
-      .local-hub-grid strong{font-size:1.05rem;color:#2f5b1f}
+      .local-hub-grid a{display:flex;flex-direction:column;gap:7px;min-height:116px;padding:16px;border-radius:16px;background:#fff;border:1px solid #eadcc8;text-decoration:none;box-shadow:0 5px 14px rgba(40,30,20,.05)}
+      .local-hub-grid a:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(40,30,20,.09)}
+      .local-hub-grid strong{font-size:1.05rem;color:#5b371c}
       .local-hub-grid span{color:#655647;line-height:1.45}
       .local-hub-note{margin-bottom:0}
-      .local-nav{background:#234c3a!important;color:#fff!important;font-weight:950!important}
+      .local-nav{background:#6a3f1e!important;color:#fff!important;font-weight:900!important}
       @media(max-width:800px){.local-hub-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
       @media(max-width:560px){.local-hub-grid{grid-template-columns:1fr}.local-hub-grid a{min-height:0}}
     `;
@@ -58,9 +59,14 @@
       const button = document.createElement("button");
       button.type = "button";
       button.className = "local-nav";
-      button.textContent = "📍 Heute in Aggsbach";
+      button.textContent = "📍 Aggsbach aktuell";
       button.addEventListener("click", () => section.scrollIntoView({behavior:"smooth", block:"start"}));
-      nav.insertBefore(button, nav.firstChild);
+      const bookingButton = nav.querySelector(".important-nav");
+      if (bookingButton && bookingButton.nextSibling) {
+        nav.insertBefore(button, bookingButton.nextSibling);
+      } else {
+        nav.appendChild(button);
+      }
     }
   }
 
