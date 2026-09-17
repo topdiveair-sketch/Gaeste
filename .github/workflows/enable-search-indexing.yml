@@ -35,3 +35,5 @@ jobs:
           git add index.html
           git commit -m 'SEO: allow indexing of Wachau guest guide'
           git push
+
+# This workflow changes exactly one robots meta tag and validates the page before committing.
