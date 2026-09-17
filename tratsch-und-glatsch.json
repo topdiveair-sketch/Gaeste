@@ -1,11 +1,11 @@
 {
-  "editionDate": "2026-09-16",
-  "editionLabel": "Mittwoch, 16. September 2026",
-  "intro": "Grüß euch, ich bin Pia! Heute stehen am Nordufer zwei kleine Genusszugänge auf dem Plan: Özelt in Spitz und die Weinerei Schwaiger in Wösendorf öffnen nach ihrem Mittwochsschema, insgesamt sind zwölf Heurige aktuell bestätigt. Auf der Donau bestimmt weiterhin das Niederwasser den Fahrplan, während die Gäste-App das Wetter wie gewohnt separat live lädt.",
+  "editionDate": "2026-09-17",
+  "editionLabel": "Donnerstag, 17. September 2026",
+  "intro": "Grüß euch, ich bin Pia! Heute fährt die DDSG wieder nach regulärem Linienfahrplan, lässt wegen Niedrigwassers aber Emmersdorf und Weißenkirchen weiterhin aus. An Land warten eine spontane Weinverkostung und das Vinea-Wachau-Archiv in Spitz; für den Abend sind 13 Heurige am Nordufer aktuell bestätigt. Das Wetter lädt die Gäste-App wie gewohnt separat live.",
   "important": [
     {
-      "title": "DDSG weiterhin mit Niederwasser-Ersatzfahrplan",
-      "text": "Die DDSG veröffentlicht weiterhin einen vorläufigen Ersatzfahrplan. MS Dürnstein fährt ab Krems um 10:30 Uhr Richtung Weißenkirchen mit Aufenthalt in Dürnstein, Rückfahrt ab Dürnstein um 12:45 Uhr sowie eine Schleifenfahrt Krems–Weißenkirchen–Krems von 15:45 bis 17:45 Uhr. MS Austria fährt um 11:00 Uhr ab Krems auf einer Weißenkirchen-Rundfahrt; MS Wachau fährt um 11:00 Uhr ab Melk im Nibelungengau. Die gewünschte Strecke vor Buchung direkt prüfen.",
+      "title": "DDSG wieder im Linienfahrplan – zwei Stopps entfallen",
+      "text": "Seit Mittwoch, 16. September, fährt die DDSG wieder regulär laut Linienfahrplan. Wegen Niedrigwassers werden die Anlegestellen Emmersdorf und Weißenkirchen bis auf Weiteres jedoch nicht bedient. Vor der Buchung den gewünschten Ein- und Ausstieg direkt im aktuellen Fahrplan prüfen.",
       "source": "https://ddsg-blue-danube.at/linienschifffahrt-wachau/",
       "sourceLabel": "DDSG Blue Danube"
     },
@@ -22,8 +22,8 @@
       "sourceLabel": "Marktgemeinde Spitz"
     },
     {
-      "title": "Spitz: aktuelle örtliche Verkehrsverordnungen",
-      "text": "Die amtliche Anschlagtafel führt derzeit Verkehrsmaßnahmen für Hauptstraße und Hinterhaus. Die Übersichtsseiten nennen keine konkreten Sperrzeiten; vor einer Anfahrt oder Radtour durch diese Bereiche bitte die verlinkten Originalverordnungen prüfen.",
+      "title": "Spitz: örtliche Verkehrsmaßnahmen aktiv",
+      "text": "Die amtliche Anschlagtafel führt weiterhin Verkehrsmaßnahmen für Hauptstraße und Hinterhaus. Die Übersichtsseiten nennen keine konkreten Sperrzeiten; vor Anfahrt oder Radtour bitte die verlinkten Originalverordnungen und die Beschilderung vor Ort beachten.",
       "source": "https://www.spitz-wachau.at/Verordnung_-_Verkehrsmassnahmen_Hauptstrasse_2",
       "sourceLabel": "Marktgemeinde Spitz – Amtstafel"
     }
@@ -31,7 +31,7 @@
   "outdoor": [
     {
       "title": "Donauradweg und B3 am Nordufer",
-      "text": "In der heute geprüften regionalen Übersicht ist für Emmersdorf–Aggsbach Markt–Spitz–Weißenkirchen–Dürnstein keine allgemeine Sperre angeführt. In Spitz bestehen jedoch aktuelle örtliche Verkehrsverordnungen; Beschilderungen und Anweisungen vor Ort beachten.",
+      "text": "In der heute geprüften regionalen Übersicht ist für Emmersdorf–Aggsbach Markt–Spitz–Weißenkirchen–Dürnstein keine allgemeine Sperre angeführt. In Spitz bestehen örtliche Verkehrsmaßnahmen; Beschilderungen und Anweisungen vor Ort beachten.",
       "links": [
         {
           "label": "Regionale aktuelle Hinweise",
@@ -84,52 +84,45 @@
   ],
   "events": [
     {
-      "date": "16.09.2026",
-      "place": "Aggsbach Markt, Venussaal",
-      "title": "Line Dance für Anfänger und Fortgeschrittene",
-      "note": "Im aktuellen Gemeindekalender für heute bestätigt. Eine öffentliche Beginnzeit ist dort nicht angegeben; Teilnahme und Uhrzeit daher über die organisierende Gruppe bestätigen.",
-      "url": "https://www.aggsbach.gv.at/system/web/veranstaltung.aspx"
-    },
-    {
-      "date": "16.09.2026, 15:00–17:00 Uhr",
-      "place": "Spitz, Weingut Lagler",
-      "title": "Dem Winzer über die Schulter schauen",
-      "note": "Einblick in die Kellerarbeit mit kommentierter Weinverkostung, € 40. Die reguläre Anmeldung endete gestern um 18:00 Uhr; heute nur mit bestehender Bestätigung einplanen.",
-      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232242/weingut-lagler-dem-winzer-ueber-die-schultern-schauen"
+      "date": "17.09.2026, 12:00–18:00 Uhr",
+      "place": "Spitz, W.E.R.O.",
+      "title": "W.E.R.O. Wine – spontane Verkostung",
+      "note": "Offene Verkostung ohne Anmeldung; der wiederkehrende Termin ist heute bestätigt.",
+      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232237/wero-wine-spontane-verkostung"
     },
     {
       "date": "17.09.2026, 16:00–18:00 Uhr",
       "place": "Spitz, Schifffahrtsmuseum",
-      "title": "Das Archiv der Vinea Wachau",
-      "note": "Archivführung, Museumsbesuch und Weinverkostung, € 30; Anmeldung heute bis 16:00 Uhr.",
+      "title": "Das Archiv der Vinea Wachau – Kompromisslos & einzigartig",
+      "note": "Archivführung, Museumsbesuch und Weinverkostung, € 30. Die Anmeldung endete gestern um 16:00 Uhr; heute nur mit bereits bestätigter Teilnahme einplanen.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232243/das-archiv-der-vinea-wachau-kompromisslos-einzigartig"
     },
     {
       "date": "18.09.2026, 16:00–18:00 Uhr",
       "place": "Spitz, HARTL – Rund um die Marille",
       "title": "Wachauer Marille – von der Blüte bis zum Genuss",
-      "note": "Führung und Verkostung rund um die Wachauer Marille, € 25; Anmeldung bis 17. September, 18:00 Uhr, unter +43 680 1224636 oder info@hartl-wachau.at.",
+      "note": "Führung und Verkostung, € 25; Anmeldung heute bis 18:00 Uhr unter +43 680 1224636 oder info@hartl-wachau.at.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199524/wachauer-marille-von-der-bluete-bis-zum-genuss"
     },
     {
       "date": "19.09.2026, 10:00–12:00 Uhr",
       "place": "Spitz, Schifffahrtsmuseum",
       "title": "Schiff & Wein",
-      "note": "Museumsführung mit kommentierter Weinverkostung, € 25; Anmeldung bis 18. September, 16:00 Uhr.",
+      "note": "Museumsführung mit kommentierter Weinverkostung, € 25; Anmeldung bis Freitag, 18. September, 16:00 Uhr.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199536/schiff-wein"
     },
     {
       "date": "19.09.2026, 13:00–17:00 Uhr",
       "place": "Spitz, Rotes Tor, Ruine Hinterhaus und 1000-Eimerberg",
       "title": "Spitzer Winzer in den Weinterrassen",
-      "note": "Weinausschank direkt in den Terrassen; findet nur bei Schönwetter statt. Wetter und Veranstalterhinweis kurz vorher prüfen.",
+      "note": "Weinausschank direkt in den Terrassen; findet nur bei Schönwetter statt. Live-Wetter und Veranstalterhinweis kurz vorher prüfen.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232240/spitzer-winzer-in-den-weinterrassen"
     },
     {
       "date": "20.09.2026, 09:00–17:00 Uhr",
       "place": "Weißenkirchen, Pfarrkirche und Teisenhoferhof",
       "title": "Erntedank und Pfarrfest",
-      "note": "Im aktuellen offiziellen Veranstaltungskalender bestätigt; für Sonntagsausflüge sowie die örtliche Parkplatz- und Restaurantplanung relevant.",
+      "note": "Im offiziellen Veranstaltungskalender bestätigt; für Sonntagsausflüge sowie die örtliche Parkplatz- und Restaurantplanung relevant.",
       "url": "https://www.weissenkirchen-wachau.at/aktuelles/veranstaltungskalender"
     },
     {
@@ -143,8 +136,22 @@
       "date": "21.09.2026, 11:00–13:30 Uhr",
       "place": "Spitz, Weingut Lagler",
       "title": "Weinsensoriktraining",
-      "note": "Interaktiver Workshop mit Verkostung, € 45; Anmeldung bis 20. September, 18:00 Uhr, maximal 15 Personen.",
+      "note": "Interaktiver Workshop mit Verkostung, € 45; Anmeldung bis Sonntag, 20. September, 18:00 Uhr, maximal 15 Personen.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232241/weinsensoriktraining-am-weingut-lagler"
+    },
+    {
+      "date": "23.09.2026",
+      "place": "Aggsbach Markt, Venussaal",
+      "title": "Line Dance für Anfänger und Fortgeschrittene",
+      "note": "Im aktuellen Gemeindekalender bestätigt. Eine öffentliche Beginnzeit ist nicht angegeben; Teilnahme und Uhrzeit über die organisierende Gruppe bestätigen.",
+      "url": "https://www.aggsbach.gv.at/system/web/veranstaltung.aspx"
+    },
+    {
+      "date": "23.09.2026, 15:00–17:00 Uhr",
+      "place": "Spitz, Weingut Lagler",
+      "title": "Dem Winzer über die Schulter schauen",
+      "note": "Einblick in die Kellerarbeit mit kommentierter Weinverkostung, € 40; Anmeldung bis Dienstag, 22. September, 18:00 Uhr.",
+      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232242/weingut-lagler-dem-winzer-ueber-die-schultern-schauen"
     }
   ],
   "heurigen": [
@@ -219,6 +226,13 @@
       "url": "https://heurigenkalender.niederoesterreich.at/30959/heuriger-mang-hermenegild"
     },
     {
+      "name": "Weinterrasse Kropf",
+      "place": "Weißenkirchen",
+      "period": "04.–20.09.2026",
+      "hours": "Heute ab 14:00 Uhr",
+      "url": "https://heurigenkalender.niederoesterreich.at/89995/heuriger-weinterrasse-kropf"
+    },
+    {
       "name": "Top Heurigen Graf",
       "place": "Unterloiben bei Dürnstein",
       "period": "14.08.–20.09.2026",
@@ -261,15 +275,22 @@
       "place": "Oberloiben bei Dürnstein",
       "hours": "Aussteckzeit 18.–20.09.2026; täglich ab 12:00 Uhr.",
       "url": "https://heurigenkalender.niederoesterreich.at/184075/weinhauer-brustbauer"
+    },
+    {
+      "date": "24.09.2026",
+      "name": "Weingartlerei Denk Petra",
+      "place": "Wösendorf",
+      "hours": "Aussteckzeit 24.09.–06.10.2026; täglich ab 15:00 Uhr.",
+      "url": "https://heurigenkalender.niederoesterreich.at/163245/heuriger-weingartlerei-denk-petra"
     }
   ],
-  "piaTip": "Pias Mittwochstipp: Wenn die Live-Wetterkarte trocken zeigt, um 10:25 Uhr mit der Wachaubahn von Aggsbach Markt nach Weißenkirchen fahren und die 10,53 Kilometer lange Welterbesteig-Etappe nach Spitz wandern; Wasser und Jause mitnehmen und für die Rückfahrt den Zug um 16:45 Uhr ab Spitz zum Bedarfshalt Aggsbach Markt einplanen.",
+  "piaTip": "Pias Donnerstagstipp: Wenn die Live-Wetterkarte trocken zeigt, um 10:25 Uhr mit der Wachaubahn von Aggsbach Markt nach Spitz fahren, ab 12:00 Uhr ohne Anmeldung bei W.E.R.O. verkosten und je nach Tageslust den Zug um 13:45 oder 16:45 Uhr ab Spitz zurück zum Bedarfshalt Aggsbach Markt nehmen.",
   "goodToKnow": [
     "Das Wetter wird in der Gäste-App live geladen und deshalb nicht statisch in Tratsch & Klatsch gespeichert.",
-    "Beim heutigen Line Dance in Aggsbach Markt ist im öffentlichen Kalender keine Beginnzeit angegeben; Uhrzeit und Teilnahme über die Gruppe bestätigen.",
-    "Für „Das Archiv der Vinea Wachau“ am Donnerstag endet die Anmeldung heute um 16:00 Uhr.",
-    "Die Weinterrasse Kropf ist mittwochs geschlossen; Özelt in Spitz und die Weinerei Schwaiger in Wösendorf sind heute nach ihrem bestätigten Wochenschema geöffnet.",
-    "Die Tourismusinformation Spitz ist heute von 09:00–13:00 und 14:00–16:00 Uhr geöffnet; Weißenkirchen von 10:00–13:00 und 15:00–17:00 Uhr.",
-    "Am Freitag, 18. September, beginnen vier bestätigte neue Aussteckzeiten in Spitz, Weißenkirchen und Dürnstein."
+    "Die DDSG fährt wieder regulär, bedient wegen Niedrigwassers derzeit aber weder Emmersdorf noch Weißenkirchen; die Rollfähren sind davon getrennt zu betrachten und bleiben wasserstandsabhängig.",
+    "Die heutige Vinea-Archivführung ist nur für bereits bestätigte Teilnehmer sinnvoll; die reguläre Anmeldung endete gestern.",
+    "Für „Wachauer Marille – von der Blüte bis zum Genuss“ am Freitag endet die Anmeldung heute um 18:00 Uhr.",
+    "Die Weinterrasse Kropf ist donnerstags geöffnet und wurde wieder in den heutigen Heurigenkalender aufgenommen.",
+    "Am Freitag, 18. September, beginnen vier bestätigte Aussteckzeiten; am 24. September folgt die Weingartlerei Denk Petra in Wösendorf."
   ]
 }
