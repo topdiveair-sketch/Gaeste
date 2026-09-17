@@ -1,4 +1,4 @@
-name: Enable guest guide search indexing
+name: Strengthen guest guide SEO
 
 on:
   workflow_dispatch:
@@ -10,30 +10,39 @@ permissions:
   contents: write
 
 jobs:
-  enable-indexing:
+  strengthen-seo:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Safely enable indexing
+      - name: Safely strengthen SEO metadata and heading
         shell: bash
         run: |
           set -euo pipefail
-          test "$(grep -c '<meta name="robots" content="noindex, follow">' index.html)" -eq 1
-          before_lines=$(wc -l < index.html)
-          sed -i 's/<meta name="robots" content="noindex, follow">/<meta name="robots" content="index, follow">/' index.html
-          after_lines=$(wc -l < index.html)
-          test "$before_lines" -eq "$after_lines"
           grep -q '<meta name="robots" content="index, follow">' index.html
           grep -q 'https://topdiveair-sketch.github.io/Direcktbuchungen/' index.html
           grep -q '</html>' index.html
-      - name: Commit only the verified metadata change
+          before_lines=$(wc -l < index.html)
+          sed -i 's#<title>Wachau Gästeguide | Donauradweg & Welterbesteig</title>#<title>Wachau Gästeguide | Donauradweg, Welterbesteig & Direktbuchung</title>#' index.html
+          sed -i 's#<meta name="description" content="Wachau-Gästeguide von Zuhause am Bach – Wachau in Aggsbach Markt: Donauradweg, Welterbesteig, Wanderrouten, Radservice, Frühstück, Wetter und persönliche Gastgeber-Tipps.">#<meta name="description" content="Wachau-Gästeguide in Aggsbach Markt mit Donauradweg-Tipps, Welterbesteig, Wanderrouten, Radservice, Wetter und direktem Weg zur Unterkunft und Direktbuchung bei Zuhause am Bach.">#' index.html
+          sed -i 's#<meta property="og:title" content="Wachau Gästeguide – Donauradweg & Welterbesteig">#<meta property="og:title" content="Wachau Gästeguide – Donauradweg, Welterbesteig & Direktbuchung">#' index.html
+          sed -i 's#<meta property="og:description" content="Persönliche Wachau-Tipps, Wanderrouten, Radservice, Wetter und Gästeinformationen von Zuhause am Bach in Aggsbach Markt.">#<meta property="og:description" content="Wachau-Tipps für Donauradweg und Welterbesteig plus direkter Zugang zur Unterkunft und Direktbuchung bei Zuhause am Bach in Aggsbach Markt.">#' index.html
+          sed -i 's#<meta name="twitter:title" content="Wachau Gästeguide – Zuhause am Bach">#<meta name="twitter:title" content="Wachau Gästeguide – Donauradweg, Welterbesteig & Direktbuchung">#' index.html
+          sed -i 's#<meta name="twitter:description" content="Tipps für Donauradweg, Welterbesteig und Ihren Aufenthalt in Aggsbach Markt.">#<meta name="twitter:description" content="Wachau-Tipps für Donauradweg und Welterbesteig mit direktem Weg zur Buchung bei Zuhause am Bach.">#' index.html
+          sed -i 's#<h1>🐾 Willkommen bei Zuhause am Bach</h1>#<h1>🐾 Wachau Gästeguide für Donauradweg & Welterbesteig</h1>#' index.html
+          after_lines=$(wc -l < index.html)
+          test "$before_lines" -eq "$after_lines"
+          grep -q 'Wachau Gästeguide | Donauradweg, Welterbesteig & Direktbuchung' index.html
+          grep -q 'Wachau Gästeguide für Donauradweg & Welterbesteig' index.html
+          grep -q '<meta name="robots" content="index, follow">' index.html
+          grep -q '</html>' index.html
+      - name: Commit only verified SEO changes
         shell: bash
         run: |
           if git diff --quiet -- index.html; then exit 0; fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add index.html
-          git commit -m 'SEO: allow indexing of Wachau guest guide'
+          git commit -m 'SEO: strengthen Wachau guest guide keywords'
           git push
 
-# This workflow changes exactly one robots meta tag and validates the page before committing.
+# Only exact text substitutions are allowed; line count and page integrity are verified before commit.
