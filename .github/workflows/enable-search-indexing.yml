@@ -1,0 +1,37 @@
+name: Enable guest guide search indexing
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/enable-search-indexing.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  enable-indexing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Safely enable indexing
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(grep -c '<meta name="robots" content="noindex, follow">' index.html)" -eq 1
+          before_lines=$(wc -l < index.html)
+          sed -i 's/<meta name="robots" content="noindex, follow">/<meta name="robots" content="index, follow">/' index.html
+          after_lines=$(wc -l < index.html)
+          test "$before_lines" -eq "$after_lines"
+          grep -q '<meta name="robots" content="index, follow">' index.html
+          grep -q 'https://topdiveair-sketch.github.io/Direcktbuchungen/' index.html
+          grep -q '</html>' index.html
+      - name: Commit only the verified metadata change
+        shell: bash
+        run: |
+          if git diff --quiet -- index.html; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          git commit -m 'SEO: allow indexing of Wachau guest guide'
+          git push
