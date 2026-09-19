@@ -1,17 +1,17 @@
 {
-  "editionDate": "2026-09-18",
-  "editionLabel": "Freitag, 18. September 2026",
-  "intro": "Grüß euch, ich bin Pia! Der Freitag schenkt dem Nordufer gleich vier neue Aussteckzeiten: Lechner in Spitz, Gruber und Trautsamwieser in Weißenkirchen sowie Brustbauer in Oberloiben öffnen heute. Insgesamt sind 17 Heurige aktuell bestätigt – da darf die Jause ruhig ein bisserl länger dauern. Auf der Donau gilt der reguläre DDSG-Fahrplan weiterhin ohne die Stopps Emmersdorf und Weißenkirchen; das Wetter lädt die Gäste-App separat live.",
+  "editionDate": "2026-09-19",
+  "editionLabel": "Samstag, 19. September 2026",
+  "intro": "Grüß euch, ich bin Pia! Heute spielt sich in Spitz besonders viel ab: offene W.E.R.O.-Verkostung, „Schiff & Wein“ und am Nachmittag drei Winzerstationen in den Weinterrassen. Am Nordufer sind 17 Heurige für heute bestätigt. Fähren und Schifffahrt bleiben wegen des niedrigen Wasserstands ein Fall fürs kurze Nachschauen – das Wetter kommt wie gewohnt live aus der Gäste-App.",
   "important": [
     {
-      "title": "DDSG im Linienfahrplan – Emmersdorf und Weißenkirchen entfallen",
-      "text": "Die DDSG fährt regulär laut Hauptsaison-Fahrplan. Wegen Niedrigwassers werden die Anlegestellen Emmersdorf und Weißenkirchen bis auf Weiteres jedoch nicht bedient. Für Fahrten am Nordufer sind derzeit insbesondere Dürnstein und Spitz als bestätigte Einstiege relevant; Verbindung vor der Buchung nochmals prüfen.",
+      "title": "DDSG: heutiger Haltstatus nicht abschließend bestätigt",
+      "text": "Der offizielle Suchindex weist den Linienfahrplan aus; die DDSG-Seite war beim heutigen Direktabruf jedoch technisch nicht erreichbar. Der zuletzt veröffentlichte Niedrigwasserhinweis zu den ausgelassenen Stopps Emmersdorf und Weißenkirchen ließ sich deshalb heute nicht erneut bestätigen. Einstiege dort nicht fest einplanen und die konkrete Verbindung vor der Buchung direkt prüfen.",
       "source": "https://ddsg-blue-danube.at/linienschifffahrt-wachau/",
       "sourceLabel": "DDSG Blue Danube"
     },
     {
       "title": "Rollfähre Weißenkirchen eingeschränkt",
-      "text": "Wegen Niedrigwassers werden Personen und Fahrräder befördert, PKW nur bedingt. Heute gilt der Werktagsfahrplan 09:15–11:30 und 13:30–18:30 Uhr; bei starkem Wind, Sturm oder ungeeignetem Wasserstand kann der Betrieb ruhen.",
+      "text": "Wegen Niedrigwassers werden Personen und Fahrräder befördert, PKW nur bedingt. Heute gilt der Wochenendfahrplan 09:15–11:30 und 12:30–18:30 Uhr; bei starkem Wind, Sturm oder ungeeignetem Wasserstand kann der Betrieb ruhen.",
       "source": "https://www.weissenkirchen-wachau.at/ueber-weissenkirchen/mobilitaet/rollfaehre",
       "sourceLabel": "Marktgemeinde Weißenkirchen"
     },
@@ -22,8 +22,8 @@
       "sourceLabel": "Marktgemeinde Spitz"
     },
     {
-      "title": "Spitz: drei örtliche Verkehrsverordnungen aktiv",
-      "text": "Die amtliche Anschlagtafel führt derzeit Verkehrsmaßnahmen für Hauptstraße, Hinterhaus und eine weitere örtliche Maßnahme. Die Übersichtsseiten nennen keine konkreten Sperrzeiten; Originalverordnungen und Beschilderung vor Ort beachten.",
+      "title": "Spitz: örtliche Verkehrsmaßnahmen aktiv",
+      "text": "Die amtliche Anschlagtafel führt derzeit Verkehrsmaßnahmen für Hauptstraße, Hinterhaus und eine weitere örtliche Maßnahme. Die Übersichtsseiten nennen keine verlässlichen Tageszeiten; Originalverordnungen, Absperrungen und Beschilderung vor Ort beachten.",
       "source": "https://www.spitz-wachau.at/Verordnung_-_Verkehrsmassnahmen_Hauptstrasse_2",
       "sourceLabel": "Marktgemeinde Spitz – Amtstafel"
     }
@@ -63,7 +63,7 @@
     },
     {
       "title": "Bus 715",
-      "text": "Auf der heute geprüften öffentlichen VOR-Seite ist keine Meldung zur Linie 715 oder zu Spitz ausgewiesen. Die konkrete Verbindung zwischen Emmersdorf, Aggsbach Markt, Spitz, Weißenkirchen und Dürnstein vor Abfahrt live prüfen; im Schienenersatzverkehr ist keine Fahrradmitnahme möglich.",
+      "text": "Auf der heute geprüften öffentlichen VOR-Seite ist keine Meldung zur Linie 715 oder zum Zielabschnitt ausgewiesen. Die konkrete Verbindung zwischen Emmersdorf, Aggsbach Markt, Spitz, Weißenkirchen und Dürnstein vor Abfahrt live prüfen; im Schienenersatzverkehr ist keine Fahrradmitnahme möglich.",
       "links": [
         {
           "label": "VOR-Routenplaner",
@@ -88,38 +88,31 @@
   ],
   "events": [
     {
-      "date": "18.09.2026, 12:00–19:00 Uhr",
+      "date": "19.09.2026, 10:00–19:00 Uhr",
       "place": "Spitz, W.E.R.O., Marktstraße 5",
       "title": "W.E.R.O. Wine – spontane Verkostung",
       "note": "Offene Verkostung regionaler Weine ohne vorherige Anmeldung.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232237/wero-wine-spontane-verkostung"
     },
     {
-      "date": "18.09.2026, 16:00–18:00 Uhr",
-      "place": "Spitz, HARTL – Rund um die Marille",
-      "title": "Wachauer Marille – von der Blüte bis zum Genuss",
-      "note": "Führung und Verkostung, € 25. Die Anmeldung endete gestern um 18:00 Uhr; heute nur mit bereits bestätigter Teilnahme einplanen. Nächster Termin: 25. September.",
-      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199524/wachauer-marille-von-der-bluete-bis-zum-genuss"
-    },
-    {
       "date": "19.09.2026, 10:00–12:00 Uhr",
       "place": "Spitz, Schifffahrtsmuseum",
       "title": "Schiff & Wein",
-      "note": "Museumsführung mit kommentierter Weinverkostung, € 25; Anmeldung heute bis 16:00 Uhr unter +43 2713 2246 oder info@schifffahrtsmuseum-spitz.at.",
+      "note": "Museumsführung mit kommentierter Weinverkostung, € 25. Die Anmeldung endete gestern um 16:00 Uhr; heute nur mit bereits bestätigter Teilnahme einplanen.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199536/schiff-wein"
     },
     {
       "date": "19.09.2026, 13:00–17:00 Uhr",
       "place": "Spitz, Rotes Tor, Ruine Hinterhaus und 1000-Eimerberg",
       "title": "Spitzer Winzer in den Weinterrassen",
-      "note": "Weinausschank mit Schöberl, Högl Herbert und Roman Gritsch; findet nur bei Schönwetter statt. Live-Wetter und Veranstalterhinweis kurz vorher prüfen.",
+      "note": "Weinausschank mit Weingut Schöberl, Weingut Högl Herbert und Weingut Roman Gritsch; findet nur bei Schönwetter statt. Live-Wetter und Veranstalterhinweis kurz vorher prüfen.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232240/spitzer-winzer-in-den-weinterrassen"
     },
     {
       "date": "20.09.2026, 09:00–17:00 Uhr",
       "place": "Weißenkirchen, Pfarrkirche und Teisenhoferhof",
       "title": "Erntedank und Pfarrfest",
-      "note": "Im offiziellen Veranstaltungskalender angekündigt; für Sonntagsausflüge sowie die örtliche Parkplatz- und Restaurantplanung relevant.",
+      "note": "Im offiziellen Veranstaltungskalender bestätigt; für Sonntagsausflüge sowie die örtliche Parkplatz- und Restaurantplanung relevant.",
       "url": "https://www.weissenkirchen-wachau.at/aktuelles/veranstaltungskalender"
     },
     {
@@ -149,6 +142,27 @@
       "title": "Dem Winzer über die Schulter schauen",
       "note": "Kellerarbeit und kommentierte Weinverkostung, € 40; Anmeldung bis Dienstag, 22. September, 18:00 Uhr.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232242/weingut-lagler-dem-winzer-ueber-die-schultern-schauen"
+    },
+    {
+      "date": "25.09.2026, 16:00–18:00 Uhr",
+      "place": "Spitz, HARTL – Rund um die Marille",
+      "title": "Wachauer Marille – von der Blüte bis zum Genuss",
+      "note": "Führung und Verkostung, € 25; Anmeldung bis Donnerstag, 24. September, 18:00 Uhr.",
+      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199524/wachauer-marille-von-der-bluete-bis-zum-genuss"
+    },
+    {
+      "date": "26.09.2026, 10:00–12:00 Uhr",
+      "place": "Spitz, Schifffahrtsmuseum",
+      "title": "Schiff & Wein",
+      "note": "Museumsführung mit kommentierter Weinverkostung, € 25; Anmeldung bis Freitag, 25. September, 16:00 Uhr.",
+      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199536/schiff-wein"
+    },
+    {
+      "date": "26.09.2026, 13:00–17:00 Uhr",
+      "place": "Spitz, Weinterrassen",
+      "title": "Spitzer Winzer in den Weinterrassen",
+      "note": "Weinausschank an ausgewählten Aussichtspunkten; findet nur bei Schönwetter statt. Die aktuellen Stationen vor dem Besuch auf der Veranstaltungsseite prüfen.",
+      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232240/spitzer-winzer-in-den-weinterrassen"
     }
   ],
   "heurigen": [
@@ -163,7 +177,7 @@
       "name": "Weingut Thomas Gritsch",
       "place": "Spitz",
       "period": "10.–20.09.2026",
-      "hours": "Heute ab 15:00 Uhr",
+      "hours": "Heute ab 12:00 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/156616/weingut-thomas-gritsch"
     },
     {
@@ -200,13 +214,6 @@
       "period": "18.–27.09.2026",
       "hours": "Heute ab 15:00 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/156621/weingut-karl-und-andrea-lechner"
-    },
-    {
-      "name": "Enothek Eigl",
-      "place": "Wösendorf",
-      "period": "07.–18.09.2026",
-      "hours": "Heute letzter Ausstecktag, ab 12:00 Uhr",
-      "url": "https://heurigenkalender.niederoesterreich.at/30943/heuriger-enothek-eigl"
     },
     {
       "name": "Weinerei Schwaiger",
@@ -251,6 +258,13 @@
       "url": "https://heurigenkalender.niederoesterreich.at/30948/heuriger-weingut-trautsamwieser"
     },
     {
+      "name": "Heuriger Ferdl Denk",
+      "place": "Weißenkirchen",
+      "period": "30.03.–01.11.2026",
+      "hours": "Heute ab 11:00 Uhr",
+      "url": "https://heurigenkalender.niederoesterreich.at/30949/heuriger-ferdl-denk"
+    },
+    {
       "name": "Top Heurigen Graf",
       "place": "Unterloiben bei Dürnstein",
       "period": "14.08.–20.09.2026",
@@ -282,6 +296,13 @@
     },
     {
       "date": "25.09.2026",
+      "name": "Weingut Höllmüller",
+      "place": "Joching",
+      "hours": "Nächste bestätigte Aussteckzeit 25.–27.09.2026; Freitag ab 17:00 Uhr, Samstag und Sonntag ab 15:00 Uhr.",
+      "url": "https://heurigenkalender.niederoesterreich.at/30938/heuriger-weingut-hllmller"
+    },
+    {
+      "date": "25.09.2026",
       "name": "Weingut Florian und Sabine Höllmüller „FLOTT“",
       "place": "Spitz",
       "hours": "Aussteckzeit 25.09.–04.10.2026; täglich 15:00–23:00 Uhr.",
@@ -295,13 +316,13 @@
       "url": "https://heurigenkalender.niederoesterreich.at/156622"
     }
   ],
-  "piaTip": "Pias Freitagstipp: Wenn die Live-Wetterkarte trocken zeigt, um 10:25 Uhr mit der Wachaubahn von Aggsbach Markt nach Spitz fahren und mit dem Rad gemütlich am linken Donauufer zurückrollen – so bleibt ihr unabhängig von den wasserstandsbedingt unsicheren Fährverbindungen und könnt unterwegs eine bestätigte Heurigenpause einlegen.",
+  "piaTip": "Pias Samstagstipp: Wenn die Live-Wetterkarte trocken zeigt, um 10:25 Uhr mit der Wachaubahn von Aggsbach Markt nach Spitz fahren, zuerst bei W.E.R.O. vorbeischauen und ab 13:00 Uhr die Winzerstationen in den Weinterrassen besuchen; für die Rückfahrt am linken Ufer Rad oder Bus einplanen und nicht auf eine wasserstandsabhängige Fähre bauen.",
   "goodToKnow": [
     "Das Wetter wird in der Gäste-App live geladen und deshalb nicht statisch in Tratsch & Klatsch gespeichert.",
-    "Die DDSG fährt regulär, bedient wegen Niedrigwassers derzeit aber weder Emmersdorf noch Weißenkirchen; die Rollfähren sind davon getrennt und bleiben wasserstandsabhängig.",
-    "Für „Schiff & Wein“ am Samstag endet die Anmeldung heute um 16:00 Uhr.",
-    "Die heutige Marillenführung ist nur mit bereits bestätigter Anmeldung sinnvoll; W.E.R.O. ist dagegen von 12:00 bis 19:00 Uhr ohne Anmeldung zugänglich.",
-    "Die Enothek Eigl hat heute ihren letzten Ausstecktag; Lechner, Gruber, Trautsamwieser und Brustbauer beginnen heute.",
-    "Die Tourismusinformationen Spitz und Weißenkirchen sind heute jeweils vormittags und nachmittags geöffnet."
+    "Der heutige DDSG-Haltstatus in Emmersdorf und Weißenkirchen ist nicht abschließend bestätigt; vor Buchung direkt prüfen.",
+    "„Schiff & Wein“ ist heute nur mit bereits bestätigter Anmeldung sinnvoll; W.E.R.O. ist von 10:00 bis 19:00 Uhr ohne Anmeldung zugänglich.",
+    "Die Winzer in den Weinterrassen und die morgige Zornberghütte finden nur bei Schönwetter statt.",
+    "Thomas Gritsch, Schneeweiss-Netterlkeller, Höllmüller in Joching, Kropf, Graf und Brustbauer haben morgen den letzten bestätigten Ausstecktag.",
+    "Die Tourismusinformationen Spitz und Weißenkirchen sind heute vormittags und nachmittags geöffnet."
   ]
 }
