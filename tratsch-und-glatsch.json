@@ -1,29 +1,23 @@
 {
-  "editionDate": "2026-09-20",
-  "editionLabel": "Sonntag, 20. September 2026",
-  "intro": "Grüß euch, ich bin Pia! Der Sonntag hat am Nordufer gleich drei schöne Gründe zum Losziehen: Erntedank und Pfarrfest in Weißenkirchen, Musik in den Spitzer Weinterrassen und Schmankerl bei der Zornberghütte. 14 Heurige sind heute bestätigt geöffnet – bei sechs davon ist allerdings letzter Ausstecktag. Das Wetter bleibt Sache der Live-Anzeige in der Gäste-App.",
+  "editionDate": "2026-09-21",
+  "editionLabel": "Montag, 21. September 2026",
+  "intro": "Grüß euch, ich bin Pia! Nach dem veranstaltungsreichen Sonntag wird es heute ruhiger am Nordufer. In Spitz läuft am Vormittag das Weinsensoriktraining für bereits angemeldete Gäste, sieben Heurige sind bestätigt geöffnet, und die nächsten neuen Aussteckzeiten beginnen am Donnerstag. Das Wetter kommt weiterhin live aus der Gäste-App.",
   "important": [
     {
-      "title": "Heute Erntedank und Pfarrfest in Weißenkirchen",
-      "text": "Von 09:00 bis 17:00 Uhr finden Erntedank und Pfarrfest bei Pfarrkirche und Teisenhoferhof statt. Rund um den Ortskern ist mit mehr Besuchern und knapperen Parkmöglichkeiten zu rechnen.",
-      "source": "https://www.weissenkirchen-wachau.at/aktuelles/veranstaltungskalender",
-      "sourceLabel": "Marktgemeinde Weißenkirchen"
-    },
-    {
-      "title": "Musikalische Weinterrasse: Zufahrt gesperrt",
-      "text": "Beim Roten Tor in Spitz beginnt der Ausschank um 10:00 Uhr, Musik spielt von 11:00 bis 15:00 Uhr, Ende ist um 16:00 Uhr. Die Zufahrten zum Veranstaltungsort sind gesperrt; zu Fuß, per Rad, Bus oder Wachaubahn anreisen.",
-      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/228282/musikalische-weinterrasse-beim-roten-tor",
+      "title": "Heute Weinsensoriktraining in Spitz",
+      "text": "Das Training im Weingut Lagler läuft von 11:00 bis 13:30 Uhr. Die Anmeldung endete gestern um 18:00 Uhr; heute nur mit bereits bestätigter Teilnahme einplanen.",
+      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232241/weinsensoriktraining-am-weingut-lagler",
       "sourceLabel": "Tourismusverein Spitz"
     },
     {
-      "title": "DDSG: Fahrplan online, Tagesstatus vorsorglich prüfen",
-      "text": "Der heute aktualisierte offizielle Suchindex zeigt den Wachau-Linienfahrplan samt Halten in Weißenkirchen und Emmersdorf. Der Direktabruf der Seite lieferte bei der Prüfung jedoch einen technischen Fehler; der konkrete Haltstatus ließ sich deshalb nicht unabhängig bestätigen. Verbindung vor der Buchung nochmals direkt prüfen.",
+      "title": "DDSG: offizieller Linienfahrplan online",
+      "text": "Die heute geprüfte offizielle Fahrplanseite führt die Wachau-Halte einschließlich Weißenkirchen und Emmersdorf. Eine neue datierte Sondermeldung war nicht ausgewiesen; wegen der zuletzt wechselnden Niedrigwasserlage die konkrete Verbindung vor Buchung dennoch nochmals prüfen.",
       "source": "https://ddsg-blue-danube.at/linienschifffahrt-wachau/",
       "sourceLabel": "DDSG Blue Danube"
     },
     {
       "title": "Rollfähre Weißenkirchen eingeschränkt",
-      "text": "Wegen Niedrigwassers werden Personen und Fahrräder befördert, PKW nur bedingt. Heute gilt 09:15–11:30 und 12:30–18:30 Uhr; bei starkem Wind, Sturm oder ungeeignetem Wasserstand kann der Betrieb ruhen.",
+      "text": "Wegen Niedrigwassers werden Personen und Fahrräder befördert, PKW nur bedingt. Heute gilt der Werktagsfahrplan 09:15–11:30 und 13:30–18:30 Uhr; bei starkem Wind, Sturm oder ungeeignetem Wasserstand kann der Betrieb ruhen.",
       "source": "https://www.weissenkirchen-wachau.at/ueber-weissenkirchen/mobilitaet/rollfaehre",
       "sourceLabel": "Marktgemeinde Weißenkirchen"
     },
@@ -37,7 +31,7 @@
   "outdoor": [
     {
       "title": "Donauradweg und B3 am Nordufer",
-      "text": "In der heute geprüften regionalen Übersicht ist für Emmersdorf–Aggsbach Markt–Spitz–Weißenkirchen–Dürnstein keine allgemeine Sperre angeführt. In Spitz gelten örtliche Verkehrsmaßnahmen; rund ums Rote Tor ist die Veranstaltungszufahrt heute gesperrt.",
+      "text": "In der heute geprüften regionalen Übersicht ist für Emmersdorf–Aggsbach Markt–Spitz–Weißenkirchen–Dürnstein keine allgemeine Sperre angeführt. In Spitz bestehen weiterhin örtliche Verkehrsmaßnahmen; Beschilderung beachten und im Ortsgebiet langsam fahren.",
       "links": [
         {
           "label": "Regionale aktuelle Hinweise",
@@ -48,8 +42,8 @@
           "url": "https://www.spitz-wachau.at/Verordnung_-_Verkehrsmassnahmen_Hauptstrasse_2"
         },
         {
-          "label": "Musikalische Weinterrasse",
-          "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/228282/musikalische-weinterrasse-beim-roten-tor"
+          "label": "Spitz – Hinterhaus",
+          "url": "https://www.spitz-wachau.at/Verordnung_-_Verkehrsmassnahmen_Hinterhaus"
         }
       ]
     },
@@ -65,7 +59,7 @@
     },
     {
       "title": "Bus 715",
-      "text": "Auf der heute geprüften VOR-Seite ist keine eigene Störungsmeldung zur Linie 715 oder zum Zielabschnitt ausgewiesen. Die konkrete Sonntagsverbindung zwischen Emmersdorf, Aggsbach Markt, Spitz, Weißenkirchen und Dürnstein vor Abfahrt im Routenplaner prüfen; bei Schienenersatzverkehr ist keine Fahrradmitnahme möglich.",
+      "text": "Auf der heute geprüften VOR-Seite ist keine eigene Störungsmeldung zur Linie 715 oder zum Zielabschnitt ausgewiesen. Die konkrete Verbindung zwischen Emmersdorf, Aggsbach Markt, Spitz, Weißenkirchen und Dürnstein vor Abfahrt im Routenplaner prüfen; bei Schienenersatzverkehr ist keine Fahrradmitnahme möglich.",
       "links": [
         {
           "label": "VOR-Routenplaner",
@@ -90,31 +84,10 @@
   ],
   "events": [
     {
-      "date": "20.09.2026, 09:00–17:00 Uhr",
-      "place": "Weißenkirchen, Pfarrkirche und Teisenhoferhof",
-      "title": "Erntedank und Pfarrfest",
-      "note": "Heute bestätigtes Pfarr- und Ortsfest; erhöhtes Besucheraufkommen im Ortskern einplanen.",
-      "url": "https://www.weissenkirchen-wachau.at/aktuelles/veranstaltungskalender"
-    },
-    {
-      "date": "20.09.2026, 10:00–16:00 Uhr",
-      "place": "Spitz, Weinterrasse beim Roten Tor",
-      "title": "Musikalische Weinterrasse",
-      "note": "Ausschank ab 10:00 Uhr, Volksmusik mit „Schnopsidee“ von 11:00 bis 15:00 Uhr. Zufahrten gesperrt; öffentliche Anreise empfohlen.",
-      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/228282/musikalische-weinterrasse-beim-roten-tor"
-    },
-    {
-      "date": "20.09.2026, 11:00–16:00 Uhr",
-      "place": "Spitz, Zornberghütte",
-      "title": "Schmankerl bei der Zornberghütte",
-      "note": "Einkehr am Panoramawanderweg Spitzer Graben; findet ausschließlich bei Schönwetter statt.",
-      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199537/schmankerl-bei-der-zornberghuette"
-    },
-    {
       "date": "21.09.2026, 11:00–13:30 Uhr",
       "place": "Spitz, Weingut Lagler",
       "title": "Weinsensoriktraining",
-      "note": "Interaktiver Workshop mit Verkostung, € 45; Anmeldung heute bis 18:00 Uhr, maximal 15 Personen.",
+      "note": "Interaktiver Workshop mit Verkostung, € 45. Die Anmeldung endete gestern um 18:00 Uhr; heute nur mit bestätigter Buchung teilnehmen.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232241/weinsensoriktraining-am-weingut-lagler"
     },
     {
@@ -176,32 +149,11 @@
   ],
   "heurigen": [
     {
-      "name": "Weingut Thomas Gritsch",
-      "place": "Spitz",
-      "period": "10.–20.09.2026",
-      "hours": "Heute letzter Ausstecktag, ab 12:00 Uhr",
-      "url": "https://heurigenkalender.niederoesterreich.at/156616/weingut-thomas-gritsch"
-    },
-    {
-      "name": "Weingut Stalzer",
-      "place": "Spitz",
-      "period": "04.–27.09.2026",
-      "hours": "Heute ab 16:00 Uhr",
-      "url": "https://heurigenkalender.niederoesterreich.at/156627/weingut-stalzer"
-    },
-    {
-      "name": "Weingut Schneeweiss – Netterlkeller",
-      "place": "Spitz",
-      "period": "11.–20.09.2026",
-      "hours": "Heute letzter Ausstecktag, ab 12:00 Uhr",
-      "url": "https://heurigenkalender.niederoesterreich.at/156625/weingut-christian-und-birgit-schneeweiss-netterlkeller"
-    },
-    {
-      "name": "Buschenschank Schauer",
-      "place": "Schwallenbach",
-      "period": "12.09.–04.10.2026",
-      "hours": "Heute ab 14:00 Uhr",
-      "url": "https://heurigenkalender.niederoesterreich.at/156624/buschenschank-schauer"
+      "name": "Die Schlosserei | Heuriger | Bar",
+      "place": "Emmersdorf-Luberegg",
+      "period": "17.09.–20.12.2026",
+      "hours": "Heute 16:00–21:00 Uhr",
+      "url": "https://heurigenkalender.niederoesterreich.at/223845/die-schlosserei-heuriger-bar"
     },
     {
       "name": "Weingut Karl und Andrea Lechner",
@@ -211,32 +163,11 @@
       "url": "https://heurigenkalender.niederoesterreich.at/156621/weingut-karl-und-andrea-lechner"
     },
     {
-      "name": "Weinerei Schwaiger",
-      "place": "Wösendorf",
-      "period": "15.04.–18.10.2026",
-      "hours": "Heute 10:00–18:00 Uhr",
-      "url": "https://heurigenkalender.niederoesterreich.at/30957/heuriger-weinerei-schwaiger"
-    },
-    {
-      "name": "Weingut Höllmüller",
-      "place": "Joching",
-      "period": "07.–20.09.2026",
-      "hours": "Heute letzter Ausstecktag, ab 15:00 Uhr",
-      "url": "https://heurigenkalender.niederoesterreich.at/30938/heuriger-weingut-hllmller"
-    },
-    {
       "name": "Heuriger Mang Hermenegild",
       "place": "Weißenkirchen",
       "period": "17.07.–26.10.2026",
       "hours": "Heute ab 12:00 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/30959/heuriger-mang-hermenegild"
-    },
-    {
-      "name": "Weinterrasse Kropf",
-      "place": "Weißenkirchen",
-      "period": "04.–20.09.2026",
-      "hours": "Heute letzter Ausstecktag, ab 14:00 Uhr",
-      "url": "https://heurigenkalender.niederoesterreich.at/89995/heuriger-weinterrasse-kropf"
     },
     {
       "name": "Wildheuriger Familie Gruber",
@@ -256,22 +187,15 @@
       "name": "Heuriger Ferdl Denk",
       "place": "Weißenkirchen",
       "period": "30.03.–01.11.2026",
-      "hours": "Heute ab 11:00 Uhr",
+      "hours": "Heute ab 15:00 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/30949/heuriger-ferdl-denk"
     },
     {
-      "name": "Top Heurigen Graf",
-      "place": "Unterloiben bei Dürnstein",
-      "period": "14.08.–20.09.2026",
-      "hours": "Heute letzter Ausstecktag, ab 11:00 Uhr",
-      "url": "https://heurigenkalender.niederoesterreich.at/31396/top-heurigen-graf"
-    },
-    {
-      "name": "Weinhauer Brustbauer",
-      "place": "Oberloiben bei Dürnstein",
-      "period": "18.–20.09.2026",
-      "hours": "Heute letzter Ausstecktag, ab 12:00 Uhr",
-      "url": "https://heurigenkalender.niederoesterreich.at/184075/weinhauer-brustbauer"
+      "name": "Grill-Heuriger Küffer Keller",
+      "place": "Dürnstein",
+      "period": "01.05.–10.10.2026",
+      "hours": "Heute ab 17:00 Uhr",
+      "url": "https://heurigenkalender.niederoesterreich.at/169394/grill-heuriger-kffer-keller"
     }
   ],
   "openingSoon": [
@@ -304,13 +228,13 @@
       "url": "https://heurigenkalender.niederoesterreich.at/156622"
     }
   ],
-  "piaTip": "Pias Sonntagstipp: Wenn die Live-Wetterkarte trocken zeigt, um 10:25 Uhr mit der Wachaubahn von Aggsbach Markt nach Spitz fahren, die Musikalische Weinterrasse beim Roten Tor zu Fuß besuchen und um 16:45 Uhr ab Spitz wieder Richtung Aggsbach zurückfahren – so bleibt die Tour autofrei und unabhängig von den wasserstandsabhängigen Fähren.",
+  "piaTip": "Pias Montagstipp: Wenn die Live-Wetterkarte trocken zeigt, am späten Vormittag mit dem Rad am linken Ufer von Aggsbach Markt nach Spitz fahren, ab 15:00 Uhr beim Weingut Lechner einkehren und um 16:45 Uhr mit der Wachaubahn ab Spitz nach Aggsbach zurückfahren – ganz ohne Fährpoker.",
   "goodToKnow": [
     "Das Wetter wird in der Gäste-App live geladen und deshalb nicht statisch in Tratsch & Klatsch gespeichert.",
-    "Die Tourismusinformationen in Spitz und Weißenkirchen sind sonntags geschlossen; Fragen und Buchungen daher online oder direkt beim Betrieb klären.",
-    "Die Musikalische Weinterrasse und die Zornberghütte sind wetterabhängig; vor dem Aufbruch die Live-Wetteranzeige prüfen.",
-    "Beim Erntedank- und Pfarrfest in Weißenkirchen ist heute mit mehr Betrieb und begrenzten Parkmöglichkeiten im Ortskern zu rechnen.",
-    "Thomas Gritsch, Schneeweiss-Netterlkeller, Höllmüller in Joching, Kropf, Graf und Brustbauer haben heute ihren letzten bestätigten Ausstecktag.",
-    "Für das Weinsensoriktraining am Montag endet die Anmeldung heute um 18:00 Uhr."
+    "Nach den sechs gestrigen Saisonenden sind heute sieben Heurige am Nordufer bestätigt geöffnet; Stalzer, Schauer, Schwaiger und Özelt haben montags Ruhetag.",
+    "Das heutige Weinsensoriktraining ist nur mit bereits bestätigter Anmeldung sinnvoll.",
+    "Die Tourismusinformationen Spitz und Weißenkirchen sind heute geöffnet; Spitz von 09:00–13:00 und 14:00–16:00 Uhr, Weißenkirchen von 10:00–13:00 und 15:00–17:00 Uhr.",
+    "Die nächsten bestätigten Heurigenstarts sind Denk Petra am Donnerstag sowie Höllmüller, FLOTT und Mayer am Freitag.",
+    "Bei den Rollfähren wegen Niedrigwasser immer mit kurzfristigen Änderungen rechnen."
   ]
 }
