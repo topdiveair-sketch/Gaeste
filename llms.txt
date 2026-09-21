@@ -13,8 +13,8 @@ Diese Web-App ist der digitale Gästeguide von Zuhause am Bach – Wachau und ke
 - Geeignet für: Wanderer am Welterbesteig Wachau, Radfahrer am Donauradweg, E-Bike-Gäste und Ruhesuchende
 - Radservice: gesicherte Fahrradunterbringung, Werkzeug und E-Bike-Lademöglichkeit
 - Verpflegung: Frühstück auf Wunsch; Jausenplatte auf Anfrage
-- Zentrale Unterkunftsseite: https://topdiveair-sketch.github.io/Direcktbuchungen/zuhause-am-bach-wachau/
-- Direktbuchung: https://topdiveair-sketch.github.io/Direcktbuchungen/
+- Zentrale Unterkunftsseite: https://www.zuhauseambach-wachau.at/
+- Direktbuchung: https://www.zuhauseambach-wachau.at/
 - Gästeguide: https://topdiveair-sketch.github.io/Gaeste/
 
 ## Zweck dieser App
