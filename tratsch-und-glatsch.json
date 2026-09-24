@@ -1,30 +1,30 @@
 {
-  "editionDate": "2026-09-23",
-  "editionLabel": "Mittwoch, 23. September 2026",
-  "intro": "Grüß euch, ich bin Pia! Heute ist am Nordufer einiges los: In Aggsbach Markt wird getanzt, in Spitz kann man – mit rechtzeitiger Anmeldung von gestern – dem Winzer über die Schulter schauen, und zehn Heurige sind bestätigt geöffnet. Für die Schifffahrt gilt wegen Niedrigwassers wieder ein deutlich verkürzter Ersatzfahrplan. Das Wetter kommt wie immer live aus der Gäste-App.",
+  "editionDate": "2026-09-24",
+  "editionLabel": "Donnerstag, 24. September 2026",
+  "intro": "Grüß euch, ich bin Pia! Der Donnerstag bringt zwei besondere Termine ans Nordufer: In Spitz öffnet das Archiv der Vinea Wachau seine Türen – allerdings nur für bereits Angemeldete – und in Dürnstein wird am Abend live über Touristenströme diskutiert. Dazu sind zwölf Heurige bestätigt geöffnet; in Wösendorf beginnt heute die Aussteckzeit bei Denk Petra. Das Wetter kommt wie immer live aus der Gäste-App.",
   "important": [
     {
       "title": "DDSG: Niedrigwasser-Ersatzfahrplan",
-      "text": "Die DDSG weist heute vorläufig einen Ersatzfahrplan aus. Ab Krems fahren nur Schleifen bis Weißenkirchen beziehungsweise eine Verbindung Krems–Dürnstein; ab Melk fährt die MS Wachau von 11:00 bis 15:00 Uhr als Schleifenfahrt durch den Nibelungengau. Emmersdorf, Spitz und Weißenkirchen sind im Ersatzfahrplan nicht als reguläre Zu- oder Ausstiege ausgewiesen. Gewünschte Verbindung vor der Anfahrt unbedingt prüfen.",
+      "text": "Wegen Niedrigwassers gilt weiterhin ein verkürzter Ersatzfahrplan. Ab Krems fahren Schleifen bis Weißenkirchen sowie eine Verbindung Krems–Dürnstein; ab Melk fährt die MS Wachau von 11:00 bis 15:00 Uhr als Schleifenfahrt durch den Nibelungengau. Emmersdorf, Spitz und Weißenkirchen sind nicht als reguläre Zu- oder Ausstiege ausgewiesen. Verbindung vor der Anfahrt prüfen.",
       "source": "https://ddsg-blue-danube.at/linienschifffahrt-wachau/",
       "sourceLabel": "DDSG Blue Danube"
     },
     {
-      "title": "Heute Line Dance in Aggsbach Markt",
-      "text": "Der Kurs im Venussaal ist heute bestätigt. Die Veranstaltungsseite zeigt 18:00 Uhr an, weist aber zugleich darauf hin, dass der tatsächliche Beginn um 18:00 oder 19:00 Uhr am Vortag per WhatsApp bekannt gegeben wird. Teilnahme daher nur mit bestätigter Zeit einplanen.",
-      "source": "https://www.aggsbach.gv.at/Line_dance_fuer_Anfaenger_und_Fortgeschrittene",
-      "sourceLabel": "Marktgemeinde Aggsbach"
-    },
-    {
-      "title": "Heute Lagler-Termin nur mit Anmeldung",
-      "text": "„Dem Winzer über die Schulter schauen“ findet heute von 15:00 bis 17:00 Uhr statt. Die Anmeldung endete gestern um 18:00 Uhr; für spontane Gäste ist die Teilnahme daher nicht gesichert.",
-      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232242/weingut-lagler-dem-winzer-ueber-die-schultern-schauen",
+      "title": "Vinea-Archiv heute nur mit Anmeldung",
+      "text": "Die Führung im Schifffahrtsmuseum Spitz findet heute von 16:00 bis 18:00 Uhr statt. Die Anmeldung endete gestern um 16:00 Uhr; spontane Teilnahme ist daher nicht gesichert.",
+      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232243/das-archiv-der-vinea-wachau-kompromisslos-einzigartig",
       "sourceLabel": "Tourismusverein Spitz"
     },
     {
-      "title": "Anmeldeschluss heute um 16:00 Uhr",
-      "text": "Für die Führung „Das Archiv der Vinea Wachau“ morgen von 16:00 bis 18:00 Uhr im Schifffahrtsmuseum endet die Anmeldung heute um 16:00 Uhr. Preis laut Veranstalter: 30 Euro.",
-      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232243/das-archiv-der-vinea-wachau-kompromisslos-einzigartig",
+      "title": "Radio NÖ heute live in Dürnstein",
+      "text": "Um 19:30 Uhr beginnt im Restaurant Alter Klosterkeller die öffentliche Diskussion „Wie viel ist zu viel?“ über Touristenströme. Pünktliches Erscheinen und Platzreservierung unter +43 2711 292 werden empfohlen.",
+      "source": "https://www.duernstein.at/aktuelles/news-detail/radio-noe-live-sendung-ein-ort-am-wort",
+      "sourceLabel": "Stadtgemeinde Dürnstein"
+    },
+    {
+      "title": "Anmeldeschluss heute um 18:00 Uhr",
+      "text": "Für „Wachauer Marille – von der Blüte bis zum Genuss“ morgen von 16:00 bis 18:00 Uhr endet die Anmeldung heute um 18:00 Uhr. Preis laut Veranstalter: 25 Euro.",
+      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199524/wachauer-marille-von-der-bluete-bis-zum-genuss",
       "sourceLabel": "Tourismusverein Spitz"
     },
     {
@@ -61,7 +61,7 @@
       "links": [
         {
           "label": "Fahrplan 2026",
-          "url": "https://www.wachaubahn.at/whb-fahrplan"
+          "url": "https://www.wachaubahn.at/fahrplan"
         }
       ]
     },
@@ -92,24 +92,10 @@
   ],
   "events": [
     {
-      "date": "23.09.2026, laut Kalender 18:00 Uhr",
-      "place": "Aggsbach Markt, Venussaal",
-      "title": "Line Dance für Anfänger und Fortgeschrittene",
-      "note": "Findet wie geplant statt. Die Veranstaltungsseite nennt 18:00 Uhr, zugleich wird der tatsächliche Beginn um 18:00 oder 19:00 Uhr am Vortag per WhatsApp mitgeteilt. Zehnteiliger Kurs, 80 Euro.",
-      "url": "https://www.aggsbach.gv.at/Line_dance_fuer_Anfaenger_und_Fortgeschrittene"
-    },
-    {
-      "date": "23.09.2026, 15:00–17:00 Uhr",
-      "place": "Spitz, Weingut Lagler",
-      "title": "Dem Winzer über die Schulter schauen",
-      "note": "Kellerarbeit und kommentierte Weinverkostung, 40 Euro. Die Anmeldung endete gestern um 18:00 Uhr; nur mit bestätigter Teilnahme einplanen.",
-      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232242/weingut-lagler-dem-winzer-ueber-die-schultern-schauen"
-    },
-    {
       "date": "24.09.2026, 16:00–18:00 Uhr",
       "place": "Spitz, Schifffahrtsmuseum",
       "title": "Das Archiv der Vinea Wachau",
-      "note": "Archivführung, Weinverkostung und Museumseintritt, 30 Euro; Anmeldung heute bis 16:00 Uhr.",
+      "note": "Archivführung, Weinverkostung und Museumseintritt, 30 Euro. Die Anmeldung endete gestern um 16:00 Uhr; nur mit bestätigter Teilnahme einplanen.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232243/das-archiv-der-vinea-wachau-kompromisslos-einzigartig"
     },
     {
@@ -123,7 +109,7 @@
       "date": "25.09.2026, 16:00–18:00 Uhr",
       "place": "Spitz, HARTL – Rund um die Marille",
       "title": "Wachauer Marille – von der Blüte bis zum Genuss",
-      "note": "Führung und Verkostung, 25 Euro; Anmeldung bis Donnerstag, 24. September, 18:00 Uhr.",
+      "note": "Führung und Verkostung, 25 Euro; Anmeldung heute bis 18:00 Uhr.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199524/wachauer-marille-von-der-bluete-bis-zum-genuss"
     },
     {
@@ -188,6 +174,27 @@
       "title": "Yoga mit Julia",
       "note": "Erste Einheit einer bestätigten zehnteiligen Kursreihe.",
       "url": "https://www.aggsbach.gv.at/Yoga_fuer_Junggebliebene_mit_Julia_1"
+    },
+    {
+      "date": "30.09.2026, laut Kalender 18:00 Uhr",
+      "place": "Aggsbach Markt, Venussaal",
+      "title": "Line Dance für Anfänger und Fortgeschrittene",
+      "note": "Die Veranstaltungsseite nennt 18:00 Uhr, weist aber zugleich darauf hin, dass der tatsächliche Beginn um 18:00 oder 19:00 Uhr am Vortag per WhatsApp bekannt gegeben wird.",
+      "url": "https://www.aggsbach.gv.at/Line_dance_fuer_Anfaenger_und_Fortgeschrittene"
+    },
+    {
+      "date": "30.09.2026, 15:00–17:00 Uhr",
+      "place": "Spitz, Weingut Lagler",
+      "title": "Dem Winzer über die Schulter schauen",
+      "note": "Kellerarbeit und kommentierte Weinverkostung, 40 Euro; Anmeldung bis Dienstag, 29. September, 18:00 Uhr.",
+      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232242/weingut-lagler-dem-winzer-ueber-die-schultern-schauen"
+    },
+    {
+      "date": "01.10.2026, 16:00–18:00 Uhr",
+      "place": "Spitz, Schifffahrtsmuseum",
+      "title": "Das Archiv der Vinea Wachau",
+      "note": "Archivführung, Weinverkostung und Museumseintritt, 30 Euro; Anmeldung bis Mittwoch, 30. September, 16:00 Uhr.",
+      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232243/das-archiv-der-vinea-wachau-kompromisslos-einzigartig"
     }
   ],
   "heurigen": [
@@ -234,6 +241,13 @@
       "url": "https://heurigenkalender.niederoesterreich.at/30959/heuriger-mang-hermenegild"
     },
     {
+      "name": "Heuriger Ferdl Denk",
+      "place": "Weißenkirchen",
+      "period": "30.03.–01.11.2026",
+      "hours": "Heute ab 15:00 Uhr",
+      "url": "https://heurigenkalender.niederoesterreich.at/30949/heuriger-ferdl-denk"
+    },
+    {
       "name": "Wildheuriger Familie Gruber",
       "place": "Weißenkirchen",
       "period": "18.09.–11.10.2026",
@@ -255,6 +269,13 @@
       "url": "https://heurigenkalender.niederoesterreich.at/30957/heuriger-weinerei-schwaiger"
     },
     {
+      "name": "Weingartlerei Denk Petra",
+      "place": "Wösendorf",
+      "period": "24.09.–06.10.2026",
+      "hours": "Heute ab 15:00 Uhr – erster Ausstecktag",
+      "url": "https://heurigenkalender.niederoesterreich.at/163245/heuriger-weingartlerei-denk-petra"
+    },
+    {
       "name": "Grill-Heuriger Küffer Keller",
       "place": "Dürnstein",
       "period": "01.05.–10.10.2026",
@@ -263,13 +284,6 @@
     }
   ],
   "openingSoon": [
-    {
-      "date": "24.09.2026",
-      "name": "Weingartlerei Denk Petra",
-      "place": "Wösendorf",
-      "hours": "Aussteckzeit 24.09.–06.10.2026; täglich ab 15:00 Uhr.",
-      "url": "https://heurigenkalender.niederoesterreich.at/163245/heuriger-weingartlerei-denk-petra"
-    },
     {
       "date": "25.09.2026",
       "name": "Weingut Höllmüller",
@@ -289,17 +303,18 @@
       "name": "Weingut Mayer",
       "place": "Spitz, Gut am Steg",
       "hours": "Aussteckzeit 25.09.–04.10.2026 bestätigt; die Quelle weist Sonntag ab 14:30 Uhr aus, übrige Tageszeiten dort nicht eindeutig. Vor dem Besuch direkt prüfen.",
-      "url": "https://heurigenkalender.niederoesterreich.at/156622"
+      "url": "https://heurigenkalender.niederoesterreich.at/156622/weingut-mayer"
     }
   ],
-  "piaTip": "Pias Mittwochstipp: Wenn die Live-Wetterkarte trocken zeigt, mit dem Rad am linken Donauufer von Aggsbach Markt nach Wösendorf fahren, bei der Weinerei Schwaiger einkehren und auf derselben Uferseite zurückrollen – so bleibt die Tour unabhängig von Fähre und Niedrigwasser.",
+  "piaTip": "Pias Donnerstagstipp: Wenn die Live-Wetterkarte trocken zeigt, mit dem Rad am linken Donauufer von Aggsbach Markt nach Wösendorf fahren, ab 15:00 Uhr bei der heute startenden Weingartlerei Denk Petra einkehren und am selben Ufer zurückrollen – ganz ohne Fährpoker.",
   "goodToKnow": [
     "Das Wetter wird in der Gäste-App live geladen und deshalb nicht statisch in Tratsch & Klatsch gespeichert.",
-    "Heute sind zehn Heurige am Nordufer bestätigt geöffnet. Özelt und Schwaiger kommen mit ihrer Mittwochöffnung dazu; Ferdl Denk hat mittwochs Ruhetag.",
-    "Für die morgige Vinea-Archivführung endet die Anmeldung heute um 16:00 Uhr.",
-    "Die DDSG fährt heute nach Niedrigwasser-Ersatzfahrplan; für Fahrten ab Emmersdorf, Spitz oder Weißenkirchen keine reguläre Verbindung voraussetzen.",
+    "Heute sind zwölf Heurige am Nordufer bestätigt geöffnet; Denk Petra startet in Wösendorf, Ferdl Denk ist nach dem Mittwoch-Ruhetag wieder dabei.",
+    "Für die heutige Vinea-Archivführung ist die Anmeldefrist bereits abgelaufen.",
+    "Für den Marillen-Termin morgen endet die Anmeldung heute um 18:00 Uhr.",
+    "Die DDSG fährt nach Niedrigwasser-Ersatzfahrplan; für Fahrten ab Emmersdorf, Spitz oder Weißenkirchen keine reguläre Verbindung voraussetzen.",
     "Bei den Rollfähren wegen Niedrigwasser immer mit kurzfristigen Änderungen rechnen.",
-    "Die nächsten bestätigten Heurigenstarts sind Denk Petra morgen sowie Höllmüller, FLOTT und Mayer am Freitag.",
+    "Die nächsten bestätigten Heurigenstarts sind Höllmüller, FLOTT und Mayer morgen.",
     "In Aggsbach Markt die lokale Baustellenbeschilderung beachten; die Fahrbahndecken-Verordnung gilt bis 15. Oktober."
   ]
 }
