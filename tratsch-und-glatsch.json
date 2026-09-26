@@ -1,29 +1,29 @@
 {
-  "editionDate": "2026-09-25",
-  "editionLabel": "Freitag, 25. September 2026",
-  "intro": "Grüß euch, ich bin Pia! Der Freitag bringt drei neue Heurigenstarts in Joching und Spitz. Der heutige Marillen-Termin in Spitz ist nur für bereits Angemeldete planbar; für „Schiff & Wein“ morgen läuft die Anmeldung noch bis 16:00 Uhr. Auf der Donau gilt weiterhin der Niedrigwasser-Ersatzfahrplan. Das Wetter kommt wie immer live aus der Gäste-App.",
+  "editionDate": "2026-09-26",
+  "editionLabel": "Samstag, 26. September 2026",
+  "intro": "Grüß euch, ich bin Pia! In Spitz stehen heute vier bestätigte Termine auf dem Programm: „Schiff & Wein“, die wetterabhängigen Stationen in den Weinterrassen und an der Zornberghütte sowie am Abend das Chorkonzert „Schiffleid san a Leid“. Dazu sind 15 Heurige am Nordufer bestätigt geöffnet. Die DDSG weist heute wieder den regulären Wachau-Fahrplan aus; die Rollfähren bleiben niedrigwasserabhängig. Das Wetter kommt wie immer live aus der Gäste-App.",
   "important": [
     {
-      "title": "DDSG: Niedrigwasser-Ersatzfahrplan",
-      "text": "Wegen Niedrigwassers gilt weiterhin ein verkürzter Ersatzfahrplan. Ab Krems fahren Schleifen bis Weißenkirchen sowie eine Verbindung Krems–Dürnstein; ab Melk fährt die MS Wachau von 11:00 bis 15:00 Uhr als Schleifenfahrt durch den Nibelungengau. Emmersdorf, Spitz und Weißenkirchen sind nicht als reguläre Zu- oder Ausstiege ausgewiesen. Verbindung vor der Anfahrt prüfen.",
-      "source": "https://ddsg-blue-danube.at/linienschifffahrt-wachau/",
-      "sourceLabel": "DDSG Blue Danube"
-    },
-    {
-      "title": "Marillen-Termin heute nur mit Anmeldung",
-      "text": "„Wachauer Marille – von der Blüte bis zum Genuss“ findet heute von 16:00 bis 18:00 Uhr in Spitz statt. Die Anmeldung endete gestern um 18:00 Uhr; spontane Teilnahme ist daher nicht gesichert.",
-      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199524/wachauer-marille-von-der-bluete-bis-zum-genuss",
+      "title": "Heute vier Termine in Spitz",
+      "text": "„Schiff & Wein“ beginnt um 10:00 Uhr, die Zornberghütte öffnet bei Schönwetter von 11:00 bis 16:00 Uhr, die Spitzer Winzer schenken bei Schönwetter von 13:00 bis 17:00 Uhr in den Weinterrassen aus und um 19:00 Uhr beginnt „Schiffleid san a Leid“ im Schifffahrtsmuseum.",
+      "source": "https://www.spitz-wachau.com/veranstaltungskalender",
       "sourceLabel": "Tourismusverein Spitz"
     },
     {
-      "title": "Anmeldeschluss heute um 16:00 Uhr",
-      "text": "Für „Schiff & Wein“ morgen von 10:00 bis 12:00 Uhr endet die Anmeldung heute um 16:00 Uhr. Preis laut Veranstalter: 25 Euro.",
+      "title": "Schiff & Wein nur mit bestätigter Anmeldung",
+      "text": "Die Führung mit Weinverkostung findet heute von 10:00 bis 12:00 Uhr statt. Die Anmeldung endete gestern um 16:00 Uhr; spontane Teilnahme ist daher nicht gesichert.",
       "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199536/schiff-wein",
       "sourceLabel": "Tourismusverein Spitz"
     },
     {
+      "title": "DDSG: regulärer Linienbetrieb wieder ausgewiesen",
+      "text": "Die offizielle DDSG-Seite weist heute wieder das reguläre Wachau-Linienprogramm aus; ein aktueller Niedrigwasser-Ersatzfahrplan ist dort nicht mehr bestätigt. Da Halte und Fahrten von der gewählten Verbindung abhängen, den konkreten Einstieg in Emmersdorf, Spitz, Weißenkirchen oder Dürnstein vor der Anfahrt im Online-Fahrplan prüfen.",
+      "source": "https://ddsg-blue-danube.at/linienschifffahrt-wachau/",
+      "sourceLabel": "DDSG Blue Danube"
+    },
+    {
       "title": "Rollfähre Weißenkirchen eingeschränkt",
-      "text": "Wegen Niedrigwassers werden Personen und Fahrräder befördert, PKW nur bedingt. Heute gilt der Freitagsfahrplan 09:15–11:30 und 13:30–18:30 Uhr; bei starkem Wind, Sturm oder ungeeignetem Wasserstand kann der Betrieb ruhen.",
+      "text": "Wegen Niedrigwassers werden Personen und Fahrräder befördert, PKW nur bedingt. Heute gelten die Wochenendzeiten 09:15–11:30 und 12:30–18:30 Uhr; bei starkem Wind, Sturm oder ungeeignetem Wasserstand kann der Betrieb ruhen.",
       "source": "https://www.weissenkirchen-wachau.at/ueber-weissenkirchen/mobilitaet/rollfaehre",
       "sourceLabel": "Marktgemeinde Weißenkirchen"
     },
@@ -75,42 +75,39 @@
     },
     {
       "title": "Welterbesteig Weißenkirchen–Spitz",
-      "text": "Die 10,53 km lange, mittelschwere Etappe ist mit rund 3:15 Stunden angegeben. Entlang der Strecke gibt es keine Quelle und keine Einkehrmöglichkeit; ausreichend Wasser, Jause, feste Schuhe und je nach Live-Wetter Regenschutz mitnehmen.",
+      "text": "Die 10,53 km lange, mittelschwere Etappe ist mit rund 3:15 Stunden angegeben. Entlang der Strecke gibt es keine Quelle und keine Einkehrmöglichkeit; ausreichend Wasser, Jause, feste Schuhe und je nach Live-Wetter Regenschutz mitnehmen. Am 3. Oktober nutzt der WACHAU TRAIL Teile des Welterbesteigs; mit zusätzlichem Begegnungsverkehr rechnen.",
       "links": [
         {
           "label": "Aktuelle Etappenbeschreibung",
           "url": "https://www.donau.com/wachau-nibelungengau-kremstal/touren/welterbesteig-wachau-03-weissenkirchen-spitz"
+        },
+        {
+          "label": "WACHAU TRAIL",
+          "url": "https://www.wachautrail.at/"
         }
       ]
     }
   ],
   "events": [
     {
-      "date": "25.09.2026, 16:00–18:00 Uhr",
-      "place": "Spitz, HARTL – Rund um die Marille",
-      "title": "Wachauer Marille – von der Blüte bis zum Genuss",
-      "note": "Führung und Verkostung, 25 Euro. Die Anmeldung endete gestern um 18:00 Uhr; nur mit bestätigter Teilnahme einplanen.",
-      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199524/wachauer-marille-von-der-bluete-bis-zum-genuss"
-    },
-    {
       "date": "26.09.2026, 10:00–12:00 Uhr",
       "place": "Spitz, Schifffahrtsmuseum",
       "title": "Schiff & Wein",
-      "note": "Museumsführung mit kommentierter Weinverkostung, 25 Euro; Anmeldung heute bis 16:00 Uhr.",
+      "note": "Museumsführung mit kommentierter Weinverkostung, 25 Euro. Die Anmeldung endete gestern um 16:00 Uhr; nur mit bestätigter Teilnahme einplanen.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199536/schiff-wein"
     },
     {
       "date": "26.09.2026, 11:00–16:00 Uhr",
       "place": "Spitz, Zornberghütte",
       "title": "Schmankerl bei der Zornberghütte",
-      "note": "Einkehr am Panoramawanderweg Spitzer Graben; nur bei Schönwetter.",
+      "note": "Einkehr am Panoramawanderweg Spitzer Graben; findet nur bei Schönwetter statt.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199537/schmankerl-bei-der-zornberghuette"
     },
     {
       "date": "26.09.2026, 13:00–17:00 Uhr",
       "place": "Spitz, Weinterrassen",
       "title": "Spitzer Winzer in den Weinterrassen",
-      "note": "Nur bei Schönwetter: Ausschank beim Roten Tor mit Weingut Rixinger, bei der Ruine Hinterhaus mit Weingut Großinger Werner und am 1000-Eimerberg mit Weingut Lagler.",
+      "note": "Nur bei Schönwetter: Ausschank beim Roten Tor, bei der Ruine Hinterhaus und am 1000-Eimerberg. Die Stationen liegen ausschließlich zu Fuß erreichbar in den Weinterrassen.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232240/spitzer-winzer-in-den-weinterrassen"
     },
     {
@@ -138,7 +135,7 @@
       "date": "27.09.2026, 11:00–16:00 Uhr",
       "place": "Spitz, Zornberghütte",
       "title": "Schmankerl bei der Zornberghütte",
-      "note": "Einkehr am Panoramawanderweg Spitzer Graben; nur bei Schönwetter.",
+      "note": "Einkehr am Panoramawanderweg Spitzer Graben; findet nur bei Schönwetter statt.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199537/schmankerl-bei-der-zornberghuette"
     },
     {
@@ -182,6 +179,13 @@
       "title": "Wachauer Marille – von der Blüte bis zum Genuss",
       "note": "Führung und Verkostung, 25 Euro; Anmeldung bis Donnerstag, 1. Oktober, 18:00 Uhr.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199524/wachauer-marille-von-der-bluete-bis-zum-genuss"
+    },
+    {
+      "date": "03.10.2026, ganztägig",
+      "place": "Nordufer zwischen Emmersdorf, Aggsbach Markt, Spitz, Weißenkirchen und Dürnstein",
+      "title": "WACHAU TRAIL",
+      "note": "Mehrere Distanzen nutzen Abschnitte des Welterbesteigs Richtung Krems; Starts liegen unter anderem in Emmersdorf, Spitz, Weißenkirchen und Dürnstein. Die Anmeldung ist geschlossen. Auf Wanderwegen mit zusätzlichem Begegnungsverkehr rechnen.",
+      "url": "https://www.wachautrail.at/"
     }
   ],
   "heurigen": [
@@ -231,7 +235,7 @@
       "name": "Heuriger Ferdl Denk",
       "place": "Weißenkirchen",
       "period": "30.03.–01.11.2026",
-      "hours": "Heute ab 15:00 Uhr",
+      "hours": "Heute ab 11:00 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/30949/heuriger-ferdl-denk"
     },
     {
@@ -273,21 +277,21 @@
       "name": "Weingut Höllmüller",
       "place": "Joching",
       "period": "25.–27.09.2026",
-      "hours": "Heute ab 17:00 Uhr – erster Ausstecktag",
+      "hours": "Heute ab 15:00 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/30938/heuriger-weingut-hllmller"
     },
     {
       "name": "Weingut Florian und Sabine Höllmüller „FLOTT“",
       "place": "Spitz",
       "period": "25.09.–06.10.2026",
-      "hours": "Heute 15:00–23:00 Uhr – erster Ausstecktag",
+      "hours": "Heute 15:00–23:00 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/156935/weingut-florian-und-sabine-hllmller-flott"
     },
     {
       "name": "Weingut Mayer",
       "place": "Spitz, Gut am Steg",
       "period": "25.–27.09.2026",
-      "hours": "Heute ab 16:00 Uhr – erster Ausstecktag",
+      "hours": "Heute ab 16:00 Uhr",
       "url": "https://mayerwein.at/heuriger/"
     }
   ],
@@ -312,18 +316,26 @@
       "place": "Dürnstein, Oberloiben",
       "hours": "Aussteckzeit 02.–04.10.2026; täglich ab 12:00 Uhr.",
       "url": "https://heurigenkalender.niederoesterreich.at/184075/weinhauer-brustbauer"
+    },
+    {
+      "date": "02.10.2026",
+      "name": "Schloss Heurige",
+      "place": "Spitz, Schloss zu Spitz",
+      "hours": "Bestätigt am 2. und 3. Oktober jeweils 16:00–22:00 Uhr; keine Reservierungen möglich.",
+      "url": "https://heurigenkalender.niederoesterreich.at/199547/schloss-heurige"
     }
   ],
-  "piaTip": "Pias Freitagstipp: Wenn die Live-Wetterkarte trocken zeigt, mit der Wachaubahn nach Spitz fahren, zum Roten Tor hinaufspazieren und ab 15:00 Uhr beim heute startenden FLOTT einkehren; für die Rückfahrt Bahn oder Bus 715 frisch im Routenplaner prüfen – die Fähren dürfen heute getrost Pause vom Reiseplan haben.",
+  "piaTip": "Pias Samstagstipp: Wenn die Live-Wetterkarte trockene Wege zeigt, mit der Wachaubahn nach Spitz fahren, ab 13:00 Uhr zu den drei Winzerstationen in den Weinterrassen spazieren und den Tag um 19:00 Uhr beim Chorkonzert im Schifffahrtsmuseum ausklingen lassen – für die Rückfahrt Bahn oder Bus 715 vorab frisch prüfen.",
   "goodToKnow": [
     "Das Wetter wird in der Gäste-App live geladen und deshalb nicht statisch in Tratsch & Klatsch gespeichert.",
-    "Heute sind 15 Heurige am Nordufer bestätigt geöffnet; Höllmüller in Joching sowie FLOTT und Mayer in Spitz starten ihre Aussteckzeiten.",
-    "Für den heutigen Marillen-Termin ist die Anmeldefrist bereits abgelaufen.",
-    "Für „Schiff & Wein“ morgen endet die Anmeldung heute um 16:00 Uhr.",
-    "Die DDSG fährt nach Niedrigwasser-Ersatzfahrplan; für Fahrten ab Emmersdorf, Spitz oder Weißenkirchen keine reguläre Verbindung voraussetzen.",
-    "Bei den Rollfähren wegen Niedrigwasser immer mit kurzfristigen Änderungen rechnen.",
-    "Zornberghütte und Winzer in den Weinterrassen finden am Wochenende nur bei Schönwetter statt.",
-    "Für 2. Oktober sind die nächsten Starts bei Höllmüller, Mayer und Weinhauer Brustbauer bestätigt.",
+    "Heute sind 15 Heurige am Nordufer bestätigt geöffnet.",
+    "Lechner, Stalzer, Höllmüller und Mayer haben morgen den letzten Tag ihrer derzeitigen Aussteckzeit.",
+    "Für „Schiff & Wein“ ist die Anmeldefrist bereits abgelaufen.",
+    "Zornberghütte und Spitzer Winzer in den Weinterrassen finden heute nur bei Schönwetter statt.",
+    "Die DDSG weist heute wieder reguläre Wachau-Linienschifffahrt aus; den konkreten Halt trotzdem vor der Anfahrt prüfen.",
+    "Bei den Rollfähren wegen Niedrigwassers weiterhin mit kurzfristigen Änderungen rechnen.",
+    "Für 2. Oktober sind Starts bei Höllmüller, Mayer, Weinhauer Brustbauer und Schloss Heurige bestätigt.",
+    "Der WACHAU TRAIL bringt am 3. Oktober zusätzlichen Betrieb auf Teile des Welterbesteigs; die Anmeldung ist geschlossen.",
     "In Aggsbach Markt die lokale Baustellenbeschilderung beachten; die Fahrbahndecken-Verordnung gilt bis 15. Oktober."
   ]
 }
