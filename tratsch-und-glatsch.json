@@ -1,37 +1,43 @@
 {
-  "editionDate": "2026-09-26",
-  "editionLabel": "Samstag, 26. September 2026",
-  "intro": "Grüß euch, ich bin Pia! In Spitz stehen heute vier bestätigte Termine auf dem Programm: „Schiff & Wein“, die wetterabhängigen Stationen in den Weinterrassen und an der Zornberghütte sowie am Abend das Chorkonzert „Schiffleid san a Leid“. Dazu sind 15 Heurige am Nordufer bestätigt geöffnet. Die DDSG weist heute wieder den regulären Wachau-Fahrplan aus; die Rollfähren bleiben niedrigwasserabhängig. Das Wetter kommt wie immer live aus der Gäste-App.",
+  "editionDate": "2026-09-27",
+  "editionLabel": "Sonntag, 27. September 2026",
+  "intro": "Grüß euch, ich bin Pia! Heute laden der Pfarrkaffee in Aggsbach Markt sowie in Spitz die Musikalische Weinterrasse und bei Schönwetter die Zornberghütte ein. Am Nordufer sind 13 Heurige bestätigt geöffnet; bei Lechner, Stalzer, Höllmüller und Mayer endet heute die aktuelle Aussteckzeit. Die Rollfähren bleiben niedrigwasserabhängig. Der heutige DDSG-Status ließ sich wegen einer vorübergehend nicht erreichbaren offiziellen Seite nicht abschließend neu bestätigen. Das Wetter kommt wie immer live aus der Gäste-App.",
   "important": [
     {
-      "title": "Heute vier Termine in Spitz",
-      "text": "„Schiff & Wein“ beginnt um 10:00 Uhr, die Zornberghütte öffnet bei Schönwetter von 11:00 bis 16:00 Uhr, die Spitzer Winzer schenken bei Schönwetter von 13:00 bis 17:00 Uhr in den Weinterrassen aus und um 19:00 Uhr beginnt „Schiffleid san a Leid“ im Schifffahrtsmuseum.",
-      "source": "https://www.spitz-wachau.com/veranstaltungskalender",
+      "title": "Heute Pfarrkaffee in Aggsbach Markt",
+      "text": "Der bestätigte Pfarrkaffee findet nach der Heiligen Messe von 09:15 bis 11:00 Uhr im Pfarrhof, Aggsbach Markt 13, statt.",
+      "source": "https://www.aggsbach.gv.at/Pfarrkaffe_nach_der_Hl_Messe_im_Pfarrhof",
+      "sourceLabel": "Marktgemeinde Aggsbach"
+    },
+    {
+      "title": "Musikalische Weinterrasse bei der Ruine Hinterhaus",
+      "text": "Ausschank ist heute von 10:00 bis 16:00 Uhr, Manfred Denk & Friends spielen von 11:00 bis 15:00 Uhr. Die Zufahrt zum Veranstaltungsort ist gesperrt; öffentliche Anreise oder Fußweg einplanen.",
+      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/228283/musikalische-weinterrasse-bei-der-ruine-hinterhaus",
       "sourceLabel": "Tourismusverein Spitz"
     },
     {
-      "title": "Schiff & Wein nur mit bestätigter Anmeldung",
-      "text": "Die Führung mit Weinverkostung findet heute von 10:00 bis 12:00 Uhr statt. Die Anmeldung endete gestern um 16:00 Uhr; spontane Teilnahme ist daher nicht gesichert.",
-      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199536/schiff-wein",
+      "title": "Zornberghütte nur bei Schönwetter",
+      "text": "Die Zornberghütte ist heute von 11:00 bis 16:00 Uhr angekündigt. Der Termin findet ausdrücklich nur bei Schönwetter statt; deshalb vor dem Aufbruch die Live-Wetterkarte prüfen.",
+      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199537/schmankerl-bei-der-zornberghuette",
       "sourceLabel": "Tourismusverein Spitz"
     },
     {
-      "title": "DDSG: regulärer Linienbetrieb wieder ausgewiesen",
-      "text": "Die offizielle DDSG-Seite weist heute wieder das reguläre Wachau-Linienprogramm aus; ein aktueller Niedrigwasser-Ersatzfahrplan ist dort nicht mehr bestätigt. Da Halte und Fahrten von der gewählten Verbindung abhängen, den konkreten Einstieg in Emmersdorf, Spitz, Weißenkirchen oder Dürnstein vor der Anfahrt im Online-Fahrplan prüfen.",
+      "title": "Heute Anmeldeschluss für das Weinsensoriktraining",
+      "text": "Für den Workshop morgen im Weingut Lagler endet die Anmeldung heute um 18:00 Uhr. Der bestätigte Termin ist Montag, 28. September, 11:00–13:30 Uhr; Teilnahme 45 Euro.",
+      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232241/weinsensoriktraining-am-weingut-lagler",
+      "sourceLabel": "Tourismusverein Spitz"
+    },
+    {
+      "title": "DDSG-Status heute nicht abschließend bestätigt",
+      "text": "Die offizielle DDSG-Seite war bei der heutigen Prüfung vorübergehend nicht erreichbar. Gestern war das reguläre Wachau-Linienprogramm ausgewiesen; für heute deshalb den konkreten Halt und die Fahrt unmittelbar vor der Anreise im Online-Fahrplan prüfen.",
       "source": "https://ddsg-blue-danube.at/linienschifffahrt-wachau/",
       "sourceLabel": "DDSG Blue Danube"
     },
     {
-      "title": "Rollfähre Weißenkirchen eingeschränkt",
-      "text": "Wegen Niedrigwassers werden Personen und Fahrräder befördert, PKW nur bedingt. Heute gelten die Wochenendzeiten 09:15–11:30 und 12:30–18:30 Uhr; bei starkem Wind, Sturm oder ungeeignetem Wasserstand kann der Betrieb ruhen.",
+      "title": "Rollfähren bleiben wasserstandsabhängig",
+      "text": "Weißenkirchen befördert wegen Niedrigwassers Personen und Fahrräder, PKW nur bedingt; heute gelten 09:15–11:30 und 12:30–18:30 Uhr. Auch Spitz–Arnsdorf kann kurzfristig ausfallen oder keine KFZ mitnehmen.",
       "source": "https://www.weissenkirchen-wachau.at/ueber-weissenkirchen/mobilitaet/rollfaehre",
       "sourceLabel": "Marktgemeinde Weißenkirchen"
-    },
-    {
-      "title": "Rollfähre Spitz bleibt wasserstandsabhängig",
-      "text": "Je nach Wasserstand kann die Fähre Spitz–Arnsdorf vollständig ausfallen oder keine KFZ mitnehmen. Den Tagesstatus vor der Anfahrt unter +43 650 2502103 prüfen.",
-      "source": "https://www.spitz-wachau.at/Rollfaehre_-_Verfuegbarkeit_wegen_Niedrigwasser_eingschraenkt",
-      "sourceLabel": "Marktgemeinde Spitz"
     }
   ],
   "outdoor": [
@@ -74,11 +80,11 @@
       ]
     },
     {
-      "title": "Welterbesteig Weißenkirchen–Spitz",
-      "text": "Die 10,53 km lange, mittelschwere Etappe ist mit rund 3:15 Stunden angegeben. Entlang der Strecke gibt es keine Quelle und keine Einkehrmöglichkeit; ausreichend Wasser, Jause, feste Schuhe und je nach Live-Wetter Regenschutz mitnehmen. Am 3. Oktober nutzt der WACHAU TRAIL Teile des Welterbesteigs; mit zusätzlichem Begegnungsverkehr rechnen.",
+      "title": "Welterbesteig und WACHAU TRAIL",
+      "text": "Die 10,53 km lange Etappe Weißenkirchen–Spitz ist als mittelschwer mit rund 3:15 Stunden angegeben; unterwegs gibt es keine Quelle und keine Einkehrmöglichkeit. Am Samstag, 3. Oktober, nutzt der WACHAU TRAIL Abschnitte des Welterbesteigs. Mit zusätzlichem Begegnungsverkehr rechnen; die Anmeldung ist bereits geschlossen.",
       "links": [
         {
-          "label": "Aktuelle Etappenbeschreibung",
+          "label": "Etappe Weißenkirchen–Spitz",
           "url": "https://www.donau.com/wachau-nibelungengau-kremstal/touren/welterbesteig-wachau-03-weissenkirchen-spitz"
         },
         {
@@ -89,34 +95,6 @@
     }
   ],
   "events": [
-    {
-      "date": "26.09.2026, 10:00–12:00 Uhr",
-      "place": "Spitz, Schifffahrtsmuseum",
-      "title": "Schiff & Wein",
-      "note": "Museumsführung mit kommentierter Weinverkostung, 25 Euro. Die Anmeldung endete gestern um 16:00 Uhr; nur mit bestätigter Teilnahme einplanen.",
-      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199536/schiff-wein"
-    },
-    {
-      "date": "26.09.2026, 11:00–16:00 Uhr",
-      "place": "Spitz, Zornberghütte",
-      "title": "Schmankerl bei der Zornberghütte",
-      "note": "Einkehr am Panoramawanderweg Spitzer Graben; findet nur bei Schönwetter statt.",
-      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199537/schmankerl-bei-der-zornberghuette"
-    },
-    {
-      "date": "26.09.2026, 13:00–17:00 Uhr",
-      "place": "Spitz, Weinterrassen",
-      "title": "Spitzer Winzer in den Weinterrassen",
-      "note": "Nur bei Schönwetter: Ausschank beim Roten Tor, bei der Ruine Hinterhaus und am 1000-Eimerberg. Die Stationen liegen ausschließlich zu Fuß erreichbar in den Weinterrassen.",
-      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232240/spitzer-winzer-in-den-weinterrassen"
-    },
-    {
-      "date": "26.09.2026, 19:00 Uhr",
-      "place": "Spitz, Schifffahrtsmuseum",
-      "title": "„Schiffleid san a Leid“",
-      "note": "Chorkonzert mit dem Wachau-Chor Spitz.",
-      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/230982/schiffleid-san-a-leid"
-    },
     {
       "date": "27.09.2026, 09:15–11:00 Uhr",
       "place": "Aggsbach Markt, Pfarrhof",
@@ -142,7 +120,7 @@
       "date": "28.09.2026, 11:00–13:30 Uhr",
       "place": "Spitz, Weingut Lagler",
       "title": "Weinsensoriktraining",
-      "note": "Interaktiver Workshop mit Verkostung, 45 Euro; Anmeldung bis Sonntag, 27. September, 18:00 Uhr.",
+      "note": "Interaktiver Workshop mit Verkostung, 45 Euro; Anmeldung bis heute, 27. September, 18:00 Uhr.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232241/weinsensoriktraining-am-weingut-lagler"
     },
     {
@@ -186,6 +164,27 @@
       "title": "WACHAU TRAIL",
       "note": "Mehrere Distanzen nutzen Abschnitte des Welterbesteigs Richtung Krems; Starts liegen unter anderem in Emmersdorf, Spitz, Weißenkirchen und Dürnstein. Die Anmeldung ist geschlossen. Auf Wanderwegen mit zusätzlichem Begegnungsverkehr rechnen.",
       "url": "https://www.wachautrail.at/"
+    },
+    {
+      "date": "03.10.2026, 10:00–12:00 Uhr",
+      "place": "Spitz, Schifffahrtsmuseum",
+      "title": "Schiff & Wein",
+      "note": "Museumsführung mit kommentierter Weinverkostung, 25 Euro; Anmeldung bis Freitag, 2. Oktober, 16:00 Uhr.",
+      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199536/schiff-wein"
+    },
+    {
+      "date": "03.10.2026, 11:00–16:00 Uhr",
+      "place": "Spitz, Zornberghütte",
+      "title": "Schmankerl bei der Zornberghütte",
+      "note": "Einkehr am Panoramawanderweg Spitzer Graben; findet nur bei Schönwetter statt.",
+      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199537/schmankerl-bei-der-zornberghuette"
+    },
+    {
+      "date": "03.10.2026, 13:00–17:00 Uhr",
+      "place": "Spitz, Weinterrassen",
+      "title": "Spitzer Winzer in den Weinterrassen",
+      "note": "Nur bei Schönwetter: Ausschank beim Roten Tor, bei der Ruine Hinterhaus und am 1000-Eimerberg. Die Stationen sind ausschließlich zu Fuß erreichbar.",
+      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232240/spitzer-winzer-in-den-weinterrassen"
     }
   ],
   "heurigen": [
@@ -193,14 +192,14 @@
       "name": "Die Schlosserei | Heuriger | Bar",
       "place": "Emmersdorf-Luberegg",
       "period": "17.09.–20.12.2026",
-      "hours": "Heute 16:00–21:00 Uhr",
+      "hours": "Heute 12:00–20:00 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/223845/die-schlosserei-heuriger-bar"
     },
     {
       "name": "Weingut Karl und Andrea Lechner",
       "place": "Spitz",
       "period": "18.–27.09.2026",
-      "hours": "Heute ab 15:00 Uhr",
+      "hours": "Heute ab 15:00 Uhr; letzter Tag der aktuellen Aussteckzeit",
       "url": "https://heurigenkalender.niederoesterreich.at/156621/weingut-karl-und-andrea-lechner"
     },
     {
@@ -214,15 +213,8 @@
       "name": "Weingut Stalzer",
       "place": "Spitz",
       "period": "04.–27.09.2026",
-      "hours": "Heute ab 16:00 Uhr",
+      "hours": "Heute ab 16:00 Uhr; letzter Tag der aktuellen Aussteckzeit",
       "url": "https://heurigenkalender.niederoesterreich.at/156627/weingut-stalzer"
-    },
-    {
-      "name": "Heuriger Özelt",
-      "place": "Spitz",
-      "period": "05.08.–26.10.2026",
-      "hours": "Heute 16:00–23:00 Uhr",
-      "url": "https://heurigenkalender.niederoesterreich.at/200943/offen-is-beim-heurigen-zelt-in-spitz-an-der-donau"
     },
     {
       "name": "Heuriger Mang Hermenegild",
@@ -267,17 +259,10 @@
       "url": "https://heurigenkalender.niederoesterreich.at/163245/heuriger-weingartlerei-denk-petra"
     },
     {
-      "name": "Grill-Heuriger Küffer Keller",
-      "place": "Dürnstein",
-      "period": "01.05.–10.10.2026",
-      "hours": "Heute ab 17:00 Uhr",
-      "url": "https://heurigenkalender.niederoesterreich.at/169394/grill-heuriger-kffer-keller"
-    },
-    {
       "name": "Weingut Höllmüller",
       "place": "Joching",
       "period": "25.–27.09.2026",
-      "hours": "Heute ab 15:00 Uhr",
+      "hours": "Heute ab 15:00 Uhr; letzter Tag der aktuellen Aussteckzeit",
       "url": "https://heurigenkalender.niederoesterreich.at/30938/heuriger-weingut-hllmller"
     },
     {
@@ -291,7 +276,7 @@
       "name": "Weingut Mayer",
       "place": "Spitz, Gut am Steg",
       "period": "25.–27.09.2026",
-      "hours": "Heute ab 16:00 Uhr",
+      "hours": "Heute ab 14:30 Uhr; letzter Tag der aktuellen Aussteckzeit",
       "url": "https://mayerwein.at/heuriger/"
     }
   ],
@@ -325,14 +310,14 @@
       "url": "https://heurigenkalender.niederoesterreich.at/199547/schloss-heurige"
     }
   ],
-  "piaTip": "Pias Samstagstipp: Wenn die Live-Wetterkarte trockene Wege zeigt, mit der Wachaubahn nach Spitz fahren, ab 13:00 Uhr zu den drei Winzerstationen in den Weinterrassen spazieren und den Tag um 19:00 Uhr beim Chorkonzert im Schifffahrtsmuseum ausklingen lassen – für die Rückfahrt Bahn oder Bus 715 vorab frisch prüfen.",
+  "piaTip": "Pias Sonntagstipp: Wenn die Live-Wetterkarte trockene Wege zeigt, mit der Wachaubahn nach Spitz fahren, zu Fuß zur Ruine Hinterhaus und dort ab 10:00 Uhr die Musikalische Weinterrasse genießen. Für den Rückweg wegen der gesperrten Zufahrt und der wasserstandsabhängigen Fähren Bahn oder Bus 715 frisch im Routenplaner prüfen.",
   "goodToKnow": [
     "Das Wetter wird in der Gäste-App live geladen und deshalb nicht statisch in Tratsch & Klatsch gespeichert.",
-    "Heute sind 15 Heurige am Nordufer bestätigt geöffnet.",
-    "Lechner, Stalzer, Höllmüller und Mayer haben morgen den letzten Tag ihrer derzeitigen Aussteckzeit.",
-    "Für „Schiff & Wein“ ist die Anmeldefrist bereits abgelaufen.",
-    "Zornberghütte und Spitzer Winzer in den Weinterrassen finden heute nur bei Schönwetter statt.",
-    "Die DDSG weist heute wieder reguläre Wachau-Linienschifffahrt aus; den konkreten Halt trotzdem vor der Anfahrt prüfen.",
+    "Heute sind 13 Heurige am Nordufer bestätigt geöffnet.",
+    "Lechner, Stalzer, Höllmüller und Mayer haben heute den letzten Tag ihrer derzeitigen Aussteckzeit.",
+    "Für das Weinsensoriktraining morgen endet die Anmeldung heute um 18:00 Uhr.",
+    "Die Zornberghütte öffnet heute nur bei Schönwetter.",
+    "Die DDSG-Seite war bei der heutigen Prüfung vorübergehend nicht erreichbar; den konkreten Fahr- und Haltstatus deshalb unmittelbar vor der Anreise prüfen.",
     "Bei den Rollfähren wegen Niedrigwassers weiterhin mit kurzfristigen Änderungen rechnen.",
     "Für 2. Oktober sind Starts bei Höllmüller, Mayer, Weinhauer Brustbauer und Schloss Heurige bestätigt.",
     "Der WACHAU TRAIL bringt am 3. Oktober zusätzlichen Betrieb auf Teile des Welterbesteigs; die Anmeldung ist geschlossen.",
