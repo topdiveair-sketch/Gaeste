@@ -1,23 +1,23 @@
 {
-  "editionDate": "2026-09-28",
-  "editionLabel": "Montag, 28. September 2026",
-  "intro": "Grüß euch, ich bin Pia! Heute stehen das Weinsensoriktraining in Spitz und am Abend Yoga in Aggsbach Markt im Kalender. Acht Heurige am Nordufer sind für Montag bestätigt geöffnet; die vier gestern beendeten Aussteckzeiten sind entfernt. Die Wachaubahn fährt noch täglich nach Saisonfahrplan, während DDSG und Rollfähren weiterhin niedrigwasserabhängige Hinweise führen. Das Wetter kommt wie immer live aus der Gäste-App.",
+  "editionDate": "2026-09-29",
+  "editionLabel": "Dienstag, 29. September 2026",
+  "intro": "Grüß euch, ich bin Pia! Für heute ist im Zielabschnitt kein eigener Veranstaltungstermin belastbar bestätigt, doch bis 18:00 Uhr läuft die Anmeldung für den morgigen Winzertermin in Spitz. Neun Heurige am Nordufer sind für Dienstag bestätigt geöffnet; die Buschenschank Schauer ist nach dem Montag-Ruhetag wieder dabei. Wachaubahn und Bus fahren planmäßig nach den veröffentlichten Fahrplänen, während die Rollfähren weiterhin niedrigwasserabhängig sind. Das Wetter kommt wie immer live aus der Gäste-App.",
   "important": [
     {
-      "title": "Heute Weinsensoriktraining in Spitz",
-      "text": "Der Workshop im Weingut Lagler läuft von 11:00 bis 13:30 Uhr und kostet 45 Euro. Die Anmeldung endete gestern um 18:00 Uhr; heute daher nur mit bereits bestätigtem Platz einplanen.",
-      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232241/weinsensoriktraining-am-weingut-lagler",
+      "title": "Heute bis 18:00 Uhr für den Winzertermin anmelden",
+      "text": "Für „Dem Winzer über die Schulter schauen“ morgen, 30. September, von 15:00 bis 17:00 Uhr im Weingut Lagler in Spitz endet die Anmeldung heute um 18:00 Uhr. Teilnahmebeitrag: 40 Euro.",
+      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232242/weingut-lagler-dem-winzer-ueber-die-schultern-schauen",
       "sourceLabel": "Tourismusverein Spitz"
     },
     {
-      "title": "Heute Yoga in Aggsbach Markt",
-      "text": "Die erste Einheit der zehnteiligen Reihe „Yoga mit Julia“ findet von 18:30 bis 19:30 Uhr im Venussaal, Aggsbach Markt 183, statt. Die Gemeinde führt den Termin als planmäßig.",
-      "source": "https://www.aggsbach.gv.at/Yoga_fuer_Junggebliebene_mit_Julia_1",
+      "title": "Morgen Line Dance in Aggsbach Markt",
+      "text": "Die Gemeinde bestätigt die Einheit am 30. September im Venussaal. Der Kalender führt 18:00 Uhr; der tatsächliche Beginn um 18:00 oder 19:00 Uhr wird laut Veranstaltungsseite jeweils am Vortag per WhatsApp bekannt gegeben.",
+      "source": "https://www.aggsbach.gv.at/Line_dance_fuer_Anfaenger_und_Fortgeschrittene",
       "sourceLabel": "Marktgemeinde Aggsbach"
     },
     {
-      "title": "DDSG: Niedrigwasserhinweis weiter ausgewiesen",
-      "text": "Die offizielle DDSG-Seite verweist weiterhin auf einen vorläufigen Niedrigwasser-Ersatzfahrplan. Da die direkte Fahrplanseite beim heutigen Abruf zeitweise nicht erreichbar war, konkrete Fahrt und Halte in Emmersdorf, Spitz, Weißenkirchen oder Dürnstein unmittelbar vor der Anreise prüfen.",
+      "title": "DDSG-Fahrplan heute nicht abschließend verifizierbar",
+      "text": "Die offizielle Suchansicht beschreibt das reguläre Wachau-Angebot mit bis zu drei Fahrten täglich; die direkte Fahrplanseite war beim heutigen Abruf jedoch zeitweise nicht erreichbar. Konkrete Fahrt und Halte in Emmersdorf, Spitz, Weißenkirchen oder Dürnstein deshalb unmittelbar vor der Anreise prüfen.",
       "source": "https://ddsg-blue-danube.at/linienschifffahrt-wachau/",
       "sourceLabel": "DDSG Blue Danube"
     },
@@ -30,7 +30,7 @@
     {
       "title": "Rollfähre Spitz bleibt wasserstandsabhängig",
       "text": "Der Betrieb Spitz–Arnsdorf kann wegen Niedrigwassers kurzfristig eingeschränkt sein, vollständig ausfallen oder keine KFZ mitnehmen. Den Tagesstatus vor der Anfahrt prüfen.",
-      "source": "https://www.spitz-wachau.at/Rollfaehre_-_Verfuegbarkeit_wegen_Niedrigwasser_eingschraenkt_11",
+      "source": "https://www.spitz-wachau.at/Rollfaehre_-_Verfuegbarkeit_wegen_Niedrigwasser_eingschraenkt",
       "sourceLabel": "Marktgemeinde Spitz"
     },
     {
@@ -42,8 +42,8 @@
   ],
   "outdoor": [
     {
-      "title": "Donauradweg und B3 am Nordufer",
-      "text": "Die heute geprüfte regionale Übersicht führt für Emmersdorf–Aggsbach Markt–Spitz–Weißenkirchen–Dürnstein keine allgemeine Sperre des Donauradwegs oder der B3 an. In Aggsbach bestehen örtliche Baustellen auf Gemeindestraßen: Im Bereich Hausnummer 107 bis 156 sind bis 15. Oktober abschnittsweise halbseitige Sperren und bei entsprechender Beschilderung kurze Totalsperren möglich.",
+      "title": "Donauradweg, B3 und örtliche Verkehrsmaßnahmen",
+      "text": "Die heute geprüfte regionale Übersicht führt für Emmersdorf–Aggsbach Markt–Spitz–Weißenkirchen–Dürnstein keine allgemeine Sperre des Donauradwegs oder der B3 an. In Aggsbach bestehen örtliche Baustellen auf Gemeindestraßen; in Spitz sind aktuelle Verordnungen zu Verkehrsmaßnahmen bei Gut am Steg, an der B217 und zum Erntedankfest kundgemacht. Beschilderung vor Ort beachten.",
       "links": [
         {
           "label": "Regionale aktuelle Hinweise",
@@ -52,6 +52,10 @@
         {
           "label": "Amtstafel Aggsbach",
           "url": "https://www.aggsbach.gv.at/Buergerservice/Aktuelles_Termine/Amtstafel"
+        },
+        {
+          "label": "Amtstafel Spitz",
+          "url": "https://www.spitz-wachau.at/system/web/amtstafel.aspx"
         }
       ]
     },
@@ -95,20 +99,6 @@
     }
   ],
   "events": [
-    {
-      "date": "28.09.2026, 11:00–13:30 Uhr",
-      "place": "Spitz, Weingut Lagler",
-      "title": "Weinsensoriktraining",
-      "note": "Interaktiver Workshop mit Verkostung, 45 Euro. Die Anmeldung endete gestern um 18:00 Uhr; nur mit bestätigtem Platz einplanen.",
-      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232241/weinsensoriktraining-am-weingut-lagler"
-    },
-    {
-      "date": "28.09.2026, 18:30–19:30 Uhr",
-      "place": "Aggsbach Markt, Venussaal",
-      "title": "Yoga mit Julia",
-      "note": "Erste Einheit einer bestätigten zehnteiligen Kursreihe; die Gemeinde führt den Termin als planmäßig.",
-      "url": "https://www.aggsbach.gv.at/Yoga_fuer_Junggebliebene_mit_Julia_1"
-    },
     {
       "date": "30.09.2026, 15:00–17:00 Uhr",
       "place": "Spitz, Weingut Lagler",
@@ -185,6 +175,13 @@
       "title": "Schmankerl bei der Zornberghütte",
       "note": "Einkehr am Panoramawanderweg Spitzer Graben; findet nur bei Schönwetter statt.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199537/schmankerl-bei-der-zornberghuette"
+    },
+    {
+      "date": "04.10.2026, Abmarsch 08:00 Uhr",
+      "place": "Aggsbach Markt, Kirche",
+      "title": "Pfarrwallfahrt nach Maria Laach",
+      "note": "Die Gemeinde bestätigt den Termin als planmäßig; gemeinsamer Abmarsch um 08:00 Uhr bei der Kirche in Aggsbach Markt.",
+      "url": "https://www.aggsbach.gv.at/Pfarrwallfahrt"
     }
   ],
   "heurigen": [
@@ -201,6 +198,13 @@
       "period": "25.09.–06.10.2026",
       "hours": "Heute 15:00–23:00 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/156935/weingut-florian-und-sabine-hllmller-flott"
+    },
+    {
+      "name": "Buschenschank Schauer",
+      "place": "Schwallenbach",
+      "period": "12.09.–04.10.2026",
+      "hours": "Heute ab 14:00 Uhr",
+      "url": "https://heurigenkalender.niederoesterreich.at/156624/buschenschank-schauer"
     },
     {
       "name": "Heuriger Mang Hermenegild",
@@ -228,7 +232,7 @@
       "place": "Weißenkirchen",
       "period": "18.09.–18.10.2026",
       "hours": "Heute ab 15:00 Uhr",
-      "url": "https://heurigenkalender.niederoesterreich.at/30948/heuriger-weingut-trautsamwieser"
+      "url": "https://heurigenkalender.niederoesterreich.at/30948/heuriger-trautsamwieser"
     },
     {
       "name": "Weingartlerei Denk Petra",
@@ -275,18 +279,20 @@
       "url": "https://heurigenkalender.niederoesterreich.at/199547/schloss-heurige"
     }
   ],
-  "piaTip": "Pias Montagstipp: Für einen entspannten Ausflug mit der Wachaubahn nach Spitz fahren und vor der Rückreise die konkrete Bahn- oder Bus-715-Verbindung frisch prüfen. Wer beim Weinsensoriktraining dabei sein möchte, braucht wegen der bereits abgelaufenen Anmeldefrist eine bestätigte Buchung.",
+  "piaTip": "Pias Dienstagstipp: Wer morgen beim Winzertermin im Weingut Lagler dabei sein möchte, sollte die Anmeldung heute spätestens um 18:00 Uhr erledigen. Für einen spontanen Ausflug sind Wachaubahn und Bus die verlässlichsten Donauquerungs-freien Optionen; Fährstatus und Rückfahrt trotzdem kurz vor dem Start prüfen.",
   "goodToKnow": [
     "Das Wetter wird in der Gäste-App live geladen und deshalb nicht statisch in Tratsch & Klatsch gespeichert.",
-    "Heute sind acht Heurige am Nordufer bestätigt geöffnet.",
-    "Lechner, Stalzer, Höllmüller und Mayer wurden nach dem Ende ihrer gestrigen Aussteckzeit aus der heutigen Liste entfernt.",
-    "Buschenschank Schauer und Weinerei Schwaiger haben montags geschlossen.",
-    "Für das heutige Weinsensoriktraining ist die reguläre Anmeldefrist bereits abgelaufen.",
+    "Heute sind neun Heurige am Nordufer bestätigt geöffnet.",
+    "Buschenschank Schauer ist nach dem Montag-Ruhetag heute wieder ab 14:00 Uhr geöffnet.",
+    "Weinerei Schwaiger und Heuriger Özelt haben dienstags geschlossen.",
+    "Weingut Mayer öffnet in dieser Woche wieder von 2. bis 4. Oktober.",
+    "Für den morgigen Lagler-Termin endet die Anmeldung heute um 18:00 Uhr.",
     "Die Wachaubahn fährt bis 1. November täglich; die kleinen Stationen im Zielabschnitt sind Bedarfshalte.",
-    "Die DDSG weist weiterhin einen Niedrigwasserhinweis aus; konkrete Fahrt und Halte vor der Anreise prüfen.",
+    "Der DDSG-Fahrplan war beim Direktabruf heute nicht abschließend verifizierbar; konkrete Fahrt und Halte vor der Anreise prüfen.",
     "Bei den Rollfähren wegen Niedrigwassers weiterhin mit kurzfristigen Änderungen rechnen.",
     "Für 2. Oktober sind Starts bei Höllmüller, Mayer, Weinhauer Brustbauer und Schloss Heurige bestätigt.",
     "Der WACHAU TRAIL bringt am 3. Oktober zusätzlichen Betrieb auf Teile des Welterbesteigs; die Anmeldung ist geschlossen.",
-    "In Aggsbach Markt die lokale Baustellenbeschilderung beachten; die Fahrbahndecken-Verordnung gilt bis 15. Oktober."
+    "Am 4. Oktober startet die bestätigte Pfarrwallfahrt nach Maria Laach um 08:00 Uhr bei der Kirche in Aggsbach Markt.",
+    "In Aggsbach Markt und Spitz aktuelle Baustellen- und Veranstaltungsbeschilderung beachten."
   ]
 }
