@@ -1,23 +1,29 @@
 {
-  "editionDate": "2026-09-29",
-  "editionLabel": "Dienstag, 29. September 2026",
-  "intro": "Grüß euch, ich bin Pia! Für heute ist im Zielabschnitt kein eigener Veranstaltungstermin belastbar bestätigt, doch bis 18:00 Uhr läuft die Anmeldung für den morgigen Winzertermin in Spitz. Neun Heurige am Nordufer sind für Dienstag bestätigt geöffnet; die Buschenschank Schauer ist nach dem Montag-Ruhetag wieder dabei. Wachaubahn und Bus fahren planmäßig nach den veröffentlichten Fahrplänen, während die Rollfähren weiterhin niedrigwasserabhängig sind. Das Wetter kommt wie immer live aus der Gäste-App.",
+  "editionDate": "2026-09-30",
+  "editionLabel": "Mittwoch, 30. September 2026",
+  "intro": "Grüß euch, ich bin Pia! Heute stehen in Spitz der bereits buchungspflichtig angemeldete Winzertermin bei Lagler und in Aggsbach Markt Line Dance auf dem Programm. Zehn Heurige am Nordufer sind für Mittwoch bestätigt geöffnet; Özelt und die Weinerei Schwaiger sind wieder dabei, Ferdl Denk hat mittwochs geschlossen. Die DDSG fährt wegen Niedrigwassers nach Ersatzfahrplan, auch die Rollfähren bleiben wasserstandsabhängig. Das Wetter kommt wie immer live aus der Gäste-App.",
   "important": [
     {
-      "title": "Heute bis 18:00 Uhr für den Winzertermin anmelden",
-      "text": "Für „Dem Winzer über die Schulter schauen“ morgen, 30. September, von 15:00 bis 17:00 Uhr im Weingut Lagler in Spitz endet die Anmeldung heute um 18:00 Uhr. Teilnahmebeitrag: 40 Euro.",
+      "title": "Heute: Winzertermin bei Lagler",
+      "text": "„Dem Winzer über die Schulter schauen“ findet heute von 15:00 bis 17:00 Uhr im Weingut Lagler in Spitz statt. Die Anmeldefrist endete gestern um 18:00 Uhr; daher nur mit bereits bestätigter Buchung teilnehmen.",
       "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232242/weingut-lagler-dem-winzer-ueber-die-schultern-schauen",
       "sourceLabel": "Tourismusverein Spitz"
     },
     {
-      "title": "Morgen Line Dance in Aggsbach Markt",
-      "text": "Die Gemeinde bestätigt die Einheit am 30. September im Venussaal. Der Kalender führt 18:00 Uhr; der tatsächliche Beginn um 18:00 oder 19:00 Uhr wird laut Veranstaltungsseite jeweils am Vortag per WhatsApp bekannt gegeben.",
+      "title": "Heute: Line Dance in Aggsbach Markt",
+      "text": "Die Gemeinde bestätigt die heutige Einheit im Venussaal. Der Kalender führt 18:00 Uhr; der tatsächliche Beginn um 18:00 oder 19:00 Uhr wird laut Veranstaltungsseite per WhatsApp bekannt gegeben.",
       "source": "https://www.aggsbach.gv.at/Line_dance_fuer_Anfaenger_und_Fortgeschrittene",
       "sourceLabel": "Marktgemeinde Aggsbach"
     },
     {
-      "title": "DDSG-Fahrplan heute nicht abschließend verifizierbar",
-      "text": "Die offizielle Suchansicht beschreibt das reguläre Wachau-Angebot mit bis zu drei Fahrten täglich; die direkte Fahrplanseite war beim heutigen Abruf jedoch zeitweise nicht erreichbar. Konkrete Fahrt und Halte in Emmersdorf, Spitz, Weißenkirchen oder Dürnstein deshalb unmittelbar vor der Anreise prüfen.",
+      "title": "Heute bis 16:00 Uhr fürs Vinea-Archiv anmelden",
+      "text": "Die Archivführung im Schifffahrtsmuseum Spitz findet morgen, 1. Oktober, von 16:00 bis 18:00 Uhr statt. Die Anmeldung endet heute um 16:00 Uhr; Teilnahmebeitrag 30 Euro.",
+      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232243/das-archiv-der-vinea-wachau-kompromisslos-einzigartig",
+      "sourceLabel": "Tourismusverein Spitz"
+    },
+    {
+      "title": "DDSG fährt nach Niedrigwasser-Ersatzfahrplan",
+      "text": "Aktuell veröffentlicht sind Fahrten ab Krems mit Schleifen beziehungsweise Rundfahrten bis Weißenkirchen und Dürnstein sowie ab Melk eine Schleifenfahrt durch den Nibelungengau. Spitz und Emmersdorf sind in diesem Ersatzfahrplan nicht als Halte ausgewiesen; konkrete Verbindung vor der Anreise nochmals prüfen.",
       "source": "https://ddsg-blue-danube.at/linienschifffahrt-wachau/",
       "sourceLabel": "DDSG Blue Danube"
     },
@@ -43,7 +49,7 @@
   "outdoor": [
     {
       "title": "Donauradweg, B3 und örtliche Verkehrsmaßnahmen",
-      "text": "Die heute geprüfte regionale Übersicht führt für Emmersdorf–Aggsbach Markt–Spitz–Weißenkirchen–Dürnstein keine allgemeine Sperre des Donauradwegs oder der B3 an. In Aggsbach bestehen örtliche Baustellen auf Gemeindestraßen; in Spitz sind aktuelle Verordnungen zu Verkehrsmaßnahmen bei Gut am Steg, an der B217 und zum Erntedankfest kundgemacht. Beschilderung vor Ort beachten.",
+      "text": "Die heute geprüfte regionale Übersicht führt für Emmersdorf–Aggsbach Markt–Spitz–Weißenkirchen–Dürnstein keine allgemeine Sperre des Donauradwegs oder der B3 an. In Aggsbach bestehen örtliche Baustellen auf Gemeindestraßen; in Spitz sind aktuelle Verkehrsverordnungen kundgemacht. Beschilderung vor Ort beachten.",
       "links": [
         {
           "label": "Regionale aktuelle Hinweise",
@@ -65,7 +71,7 @@
       "links": [
         {
           "label": "Fahrplan 2026",
-          "url": "https://www.wachaubahn.at/fahrplan"
+          "url": "https://www.wachaubahn.at/whb-fahrplan"
         }
       ]
     },
@@ -103,21 +109,21 @@
       "date": "30.09.2026, 15:00–17:00 Uhr",
       "place": "Spitz, Weingut Lagler",
       "title": "Dem Winzer über die Schulter schauen",
-      "note": "Kellerarbeit und kommentierte Weinverkostung, 40 Euro; Anmeldung bis Dienstag, 29. September, 18:00 Uhr.",
+      "note": "Kellerarbeit und kommentierte Weinverkostung, 40 Euro. Die Anmeldung ist beendet; Teilnahme nur mit bestätigter Buchung.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232242/weingut-lagler-dem-winzer-ueber-die-schultern-schauen"
     },
     {
       "date": "30.09.2026, laut Kalender 18:00 Uhr",
       "place": "Aggsbach Markt, Venussaal",
       "title": "Line Dance für Anfänger und Fortgeschrittene",
-      "note": "Die Veranstaltungsseite nennt 18:00 Uhr, weist aber zugleich darauf hin, dass der tatsächliche Beginn um 18:00 oder 19:00 Uhr am Vortag per WhatsApp bekannt gegeben wird.",
+      "note": "Die Veranstaltungsseite nennt 18:00 Uhr, weist aber zugleich darauf hin, dass der tatsächliche Beginn um 18:00 oder 19:00 Uhr per WhatsApp bekannt gegeben wird.",
       "url": "https://www.aggsbach.gv.at/Line_dance_fuer_Anfaenger_und_Fortgeschrittene"
     },
     {
       "date": "01.10.2026, 16:00–18:00 Uhr",
       "place": "Spitz, Schifffahrtsmuseum",
       "title": "Das Archiv der Vinea Wachau",
-      "note": "Archivführung, Weinverkostung und Museumseintritt, 30 Euro; Anmeldung bis Mittwoch, 30. September, 16:00 Uhr.",
+      "note": "Archivführung, Weinverkostung und Museumseintritt, 30 Euro; Anmeldung bis heute, 30. September, 16:00 Uhr.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232243/das-archiv-der-vinea-wachau-kompromisslos-einzigartig"
     },
     {
@@ -207,6 +213,13 @@
       "url": "https://heurigenkalender.niederoesterreich.at/156624/buschenschank-schauer"
     },
     {
+      "name": "Heuriger Özelt",
+      "place": "Spitz",
+      "period": "01.09.–26.10.2026",
+      "hours": "Heute 16:00–23:00 Uhr",
+      "url": "https://heurigenkalender.niederoesterreich.at/200943/offen-is-heuriger-zi"
+    },
+    {
       "name": "Heuriger Mang Hermenegild",
       "place": "Weißenkirchen",
       "period": "17.07.–26.10.2026",
@@ -214,18 +227,18 @@
       "url": "https://heurigenkalender.niederoesterreich.at/30959/heuriger-mang-hermenegild"
     },
     {
-      "name": "Heuriger Ferdl Denk",
-      "place": "Weißenkirchen",
-      "period": "30.03.–01.11.2026",
-      "hours": "Heute ab 15:00 Uhr",
-      "url": "https://heurigenkalender.niederoesterreich.at/30949/heuriger-ferdl-denk"
-    },
-    {
       "name": "Wildheuriger Familie Gruber",
       "place": "Weißenkirchen",
       "period": "18.09.–11.10.2026",
       "hours": "Heute ab 15:00 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/30935/wildheuriger-familie-gruber"
+    },
+    {
+      "name": "Weinerei Schwaiger",
+      "place": "Wösendorf",
+      "period": "bestätigte Saisonöffnung",
+      "hours": "Heute 10:00–18:00 Uhr",
+      "url": "https://heurigenkalender.niederoesterreich.at/Gemeinde/31351/Weienkirchen-in-der-wachau"
     },
     {
       "name": "Heuriger Weingut Trautsamwieser",
@@ -279,16 +292,14 @@
       "url": "https://heurigenkalender.niederoesterreich.at/199547/schloss-heurige"
     }
   ],
-  "piaTip": "Pias Dienstagstipp: Wer morgen beim Winzertermin im Weingut Lagler dabei sein möchte, sollte die Anmeldung heute spätestens um 18:00 Uhr erledigen. Für einen spontanen Ausflug sind Wachaubahn und Bus die verlässlichsten Donauquerungs-freien Optionen; Fährstatus und Rückfahrt trotzdem kurz vor dem Start prüfen.",
+  "piaTip": "Pias Mittwochstipp: Wer heute zum Line Dance nach Aggsbach Markt möchte, sollte die per WhatsApp bekannt gegebene Startzeit prüfen. Für die morgige Vinea-Archivführung läuft die Anmeldung nur noch bis 16:00 Uhr. Bei Ausflügen über die Donau Fährstatus und Rückfahrt unmittelbar vor dem Start kontrollieren.",
   "goodToKnow": [
     "Das Wetter wird in der Gäste-App live geladen und deshalb nicht statisch in Tratsch & Klatsch gespeichert.",
-    "Heute sind neun Heurige am Nordufer bestätigt geöffnet.",
-    "Buschenschank Schauer ist nach dem Montag-Ruhetag heute wieder ab 14:00 Uhr geöffnet.",
-    "Weinerei Schwaiger und Heuriger Özelt haben dienstags geschlossen.",
-    "Weingut Mayer öffnet in dieser Woche wieder von 2. bis 4. Oktober.",
-    "Für den morgigen Lagler-Termin endet die Anmeldung heute um 18:00 Uhr.",
+    "Heute sind zehn Heurige am Nordufer bestätigt geöffnet.",
+    "Heuriger Özelt und Weinerei Schwaiger sind mittwochs geöffnet; Ferdl Denk hat Mittwoch-Ruhetag.",
+    "Für die morgige Vinea-Archivführung endet die Anmeldung heute um 16:00 Uhr.",
+    "Die DDSG fährt wegen Niedrigwassers nach Ersatzfahrplan; Spitz und Emmersdorf sind darin nicht als Halte ausgewiesen.",
     "Die Wachaubahn fährt bis 1. November täglich; die kleinen Stationen im Zielabschnitt sind Bedarfshalte.",
-    "Der DDSG-Fahrplan war beim Direktabruf heute nicht abschließend verifizierbar; konkrete Fahrt und Halte vor der Anreise prüfen.",
     "Bei den Rollfähren wegen Niedrigwassers weiterhin mit kurzfristigen Änderungen rechnen.",
     "Für 2. Oktober sind Starts bei Höllmüller, Mayer, Weinhauer Brustbauer und Schloss Heurige bestätigt.",
     "Der WACHAU TRAIL bringt am 3. Oktober zusätzlichen Betrieb auf Teile des Welterbesteigs; die Anmeldung ist geschlossen.",
