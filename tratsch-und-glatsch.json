@@ -1,29 +1,35 @@
 {
-  "editionDate": "2026-10-01",
-  "editionLabel": "Donnerstag, 1. Oktober 2026",
-  "intro": "Grüß euch, ich bin Pia! Heute führt Karl Zanzinger durch das Archiv der Vinea Wachau im Schifffahrtsmuseum Spitz; teilnehmen kann nur, wer sich rechtzeitig angemeldet hat. Elf Heurige am Nordufer sind für Donnerstag bestätigt geöffnet, darunter Ferdl Denk nach dem Mittwoch-Ruhetag. Die DDSG kann wegen Niedrigwassers nicht alle Fahrten durchführen, und auch die Rollfähren bleiben wasserstandsabhängig. Das Wetter kommt wie immer live aus der Gäste-App.",
+  "editionDate": "2026-10-02",
+  "editionLabel": "Freitag, 2. Oktober 2026",
+  "intro": "Grüß euch, ich bin Pia! Heute steht in Spitz die Wachauer Marille im Mittelpunkt; teilnehmen kann nur, wer bis gestern angemeldet war. Vier Heurige starten heute neu, damit sind 15 Betriebe am Nordufer bestätigt geöffnet. Beim WACHAU TRAIL beginnt heute Abend bereits der 77-km-Bewerb in Emmersdorf, morgen folgen weitere Starts in Spitz, Weißenkirchen und Dürnstein. DDSG und Rollfähren bleiben wegen Niedrigwassers eingeschränkt. Das Wetter kommt wie immer live aus der Gäste-App.",
   "important": [
     {
-      "title": "Heute: Archiv der Vinea Wachau",
-      "text": "Die Führung im Schifffahrtsmuseum Spitz findet heute von 16:00 bis 18:00 Uhr statt und umfasst Archivführung, Weinverkostung und Museumseintritt. Die Anmeldung endete gestern um 16:00 Uhr; Teilnahme daher nur mit bestätigter Buchung.",
-      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232243/das-archiv-der-vinea-wachau-kompromisslos-einzigartig",
-      "sourceLabel": "Tourismusverein Spitz"
-    },
-    {
-      "title": "Heute bis 18:00 Uhr für den Marillentermin anmelden",
-      "text": "„Wachauer Marille – von der Blüte bis zum Genuss“ findet morgen, 2. Oktober, von 16:00 bis 18:00 Uhr bei HARTL in Spitz statt. Die Anmeldung endet heute um 18:00 Uhr; Teilnahmebeitrag 25 Euro.",
+      "title": "Heute: Wachauer Marille in Spitz",
+      "text": "„Wachauer Marille – von der Blüte bis zum Genuss“ findet heute von 16:00 bis 18:00 Uhr bei HARTL in Spitz statt. Die Anmeldung endete gestern um 18:00 Uhr; Teilnahme daher nur mit bestätigter Buchung.",
       "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199524/wachauer-marille-von-der-bluete-bis-zum-genuss",
       "sourceLabel": "Tourismusverein Spitz"
     },
     {
-      "title": "Laglers Weinleseerlebnis startet heute",
-      "text": "Vom 1. bis 30. Oktober ist die Mitarbeit bei der Weinlese werktags und nur bei Schönwetter möglich. Ein halber oder ganzer Tag kostet 35 Euro inklusive Verpflegung und Diplom; Anmeldung mindestens zwei Tage vor dem gewünschten Termin.",
-      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/70941/weinherbst-2026-laglers-weinerlebnis",
+      "title": "WACHAU TRAIL beginnt heute Abend",
+      "text": "Die Wanderer des WACHAU77 starten heute um 22:00 Uhr in Emmersdorf, die Läufer morgen um 04:00 Uhr. Am Samstag folgen weitere Bewerbe mit Starts in Spitz, Weißenkirchen und Dürnstein. Die Anmeldung ist geschlossen; auf Abschnitten des Welterbesteigs mit zusätzlichem Betrieb rechnen.",
+      "source": "https://www.wachautrail.at/",
+      "sourceLabel": "WACHAU TRAIL"
+    },
+    {
+      "title": "Heute bis 16:00 Uhr für „Schiff & Wein“ anmelden",
+      "text": "Die Museumsführung mit kommentierter Weinverkostung findet morgen von 10:00 bis 12:00 Uhr im Schifffahrtsmuseum Spitz statt. Anmeldung nur noch heute bis 16:00 Uhr; Teilnahmebeitrag 25 Euro.",
+      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199536/schiff-wein",
       "sourceLabel": "Tourismusverein Spitz"
     },
     {
+      "title": "Vier Heurige starten heute",
+      "text": "Neu geöffnet sind Weingut Höllmüller in Joching ab 17:00 Uhr, Weingut Mayer in Gut am Steg ab 16:00 Uhr, Weinhauer Brustbauer in Oberloiben ab 12:00 Uhr und Schloss Heurige in Spitz von 16:00 bis 22:00 Uhr.",
+      "source": "https://heurigenkalender.niederoesterreich.at/Gemeinde/31344/Spitz",
+      "sourceLabel": "Niederösterreichischer Heurigenkalender"
+    },
+    {
       "title": "DDSG mit Einschränkungen wegen Niedrigwassers",
-      "text": "Die DDSG weist aktuell darauf hin, dass nicht alle Fahrten durchgeführt werden können. Verbindlich sind nur die für heute im Buchungsbereich auswählbaren Verbindungen; gewünschte Anlegestelle und Rückfahrt vor der Anreise prüfen.",
+      "text": "Die DDSG weist aktuell darauf hin, dass nicht alle Fahrten durchgeführt werden können. Verbindlich sind nur die im Buchungsbereich für heute auswählbaren Verbindungen; gewünschte Anlegestelle und Rückfahrt vor der Anreise prüfen.",
       "source": "https://ddsg-blue-danube.at/de/produkte/wachauschifffahrten/",
       "sourceLabel": "DDSG Blue Danube"
     },
@@ -35,15 +41,9 @@
     },
     {
       "title": "Rollfähre Spitz bleibt wasserstandsabhängig",
-      "text": "Die regulären Donnerstagzeiten sind 06:15–19:00 Uhr, letzte Fahrt 15 Minuten vor Betriebsschluss. Bei Niedrigwasser können Autos ausgeschlossen werden; bei noch niedrigerem Wasserstand oder ungünstiger Witterung ist kein Betrieb möglich.",
+      "text": "Die regulären Freitagzeiten sind 06:15–19:00 Uhr, letzte Fahrt 15 Minuten vor Betriebsschluss. Bei Niedrigwasser können Autos ausgeschlossen werden; bei noch niedrigerem Wasserstand oder ungünstiger Witterung ist kein Betrieb möglich.",
       "source": "https://www.spitz-wachau.com/oeffis-faehren/oeffis-faehren-in-der-wachau/rollfaehre-spitz-arnsdorf",
       "sourceLabel": "Tourismusverein Spitz"
-    },
-    {
-      "title": "WACHAU TRAIL am Samstag",
-      "text": "Am 3. Oktober starten mehrere Distanzen unter anderem in Emmersdorf, Spitz, Weißenkirchen und Dürnstein und nutzen Teile des Welterbesteigs. Die Anmeldung ist geschlossen; auf Wanderwegen mit zusätzlichem Begegnungsverkehr rechnen.",
-      "source": "https://www.wachautrail.at/",
-      "sourceLabel": "WACHAU TRAIL"
     }
   ],
   "outdoor": [
@@ -91,27 +91,20 @@
     },
     {
       "title": "Welterbesteig und WACHAU TRAIL",
-      "text": "Die 10,53 km lange Etappe Weißenkirchen–Spitz ist als mittelschwer mit rund 3:15 Stunden angegeben; unterwegs gibt es keine Quelle und keine Einkehrmöglichkeit. Am Samstag, 3. Oktober, nutzt der WACHAU TRAIL Abschnitte des Welterbesteigs. Mit zusätzlichem Begegnungsverkehr rechnen; die Anmeldung ist bereits geschlossen.",
+      "text": "Ab heute Abend und besonders morgen nutzen mehrere Bewerbe Abschnitte des Welterbesteigs. Starts liegen unter anderem in Emmersdorf, Spitz, Weißenkirchen und Dürnstein. Wer wandert, sollte zusätzliche Begegnungen einplanen und markierte Wettkampfstrecken freihalten.",
       "links": [
-        {
-          "label": "Etappe Weißenkirchen–Spitz",
-          "url": "https://www.donau.com/wachau-nibelungengau-kremstal/touren/welterbesteig-wachau-03-weissenkirchen-spitz"
-        },
         {
           "label": "WACHAU TRAIL",
           "url": "https://www.wachautrail.at/"
+        },
+        {
+          "label": "Etappe Weißenkirchen–Spitz",
+          "url": "https://www.donau.com/wachau-nibelungengau-kremstal/touren/welterbesteig-wachau-03-weissenkirchen-spitz"
         }
       ]
     }
   ],
   "events": [
-    {
-      "date": "01.10.2026, 16:00–18:00 Uhr",
-      "place": "Spitz, Schifffahrtsmuseum",
-      "title": "Das Archiv der Vinea Wachau",
-      "note": "Archivführung, Weinverkostung und Museumseintritt, 30 Euro. Die Anmeldung ist beendet; Teilnahme nur mit bestätigter Buchung.",
-      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232243/das-archiv-der-vinea-wachau-kompromisslos-einzigartig"
-    },
     {
       "date": "01.–30.10.2026, Montag bis Freitag",
       "place": "Spitz, Weingut Lagler",
@@ -123,21 +116,21 @@
       "date": "02.10.2026, 16:00–18:00 Uhr",
       "place": "Spitz, HARTL – Rund um die Marille",
       "title": "Wachauer Marille – von der Blüte bis zum Genuss",
-      "note": "Führung und Verkostung, 25 Euro; Anmeldung bis heute, 1. Oktober, 18:00 Uhr.",
+      "note": "Führung und Verkostung, 25 Euro. Die Anmeldung endete gestern um 18:00 Uhr; Teilnahme nur mit bestätigter Buchung.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199524/wachauer-marille-von-der-bluete-bis-zum-genuss"
     },
     {
-      "date": "03.10.2026, ganztägig",
+      "date": "02.10.2026, 22:00 Uhr / 03.10.2026",
       "place": "Nordufer zwischen Emmersdorf, Spitz, Weißenkirchen und Dürnstein",
       "title": "WACHAU TRAIL",
-      "note": "Mehrere Distanzen nutzen Abschnitte des Welterbesteigs Richtung Krems. Die Anmeldung ist geschlossen; auf Wanderwegen mit zusätzlichem Begegnungsverkehr rechnen.",
+      "note": "WACHAU77-Wanderstart heute um 22:00 Uhr in Emmersdorf, Läuferstart morgen um 04:00 Uhr. Weitere Samstagsbewerbe starten in Spitz, Weißenkirchen und Dürnstein. Anmeldung geschlossen.",
       "url": "https://www.wachautrail.at/"
     },
     {
       "date": "03.10.2026, 10:00–12:00 Uhr",
       "place": "Spitz, Schifffahrtsmuseum",
       "title": "Schiff & Wein",
-      "note": "Museumsführung mit kommentierter Weinverkostung, 25 Euro; Anmeldung bis Freitag, 2. Oktober, 16:00 Uhr.",
+      "note": "Museumsführung mit kommentierter Weinverkostung, 25 Euro; Anmeldung bis heute, 2. Oktober, 16:00 Uhr.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199536/schiff-wein"
     },
     {
@@ -181,6 +174,27 @@
       "title": "Schmankerl bei der Zornberghütte",
       "note": "Einkehr am Panoramawanderweg Spitzer Graben; findet nur bei Schönwetter statt.",
       "url": "https://www.spitz-wachau.com/wanderbares/zornberghuette"
+    },
+    {
+      "date": "05.10.2026",
+      "place": "Aggsbach Markt, Venussaal",
+      "title": "Yoga mit Julia",
+      "note": "Der Termin ist im aktuellen Veranstaltungskalender der Marktgemeinde bestätigt; eine belastbare Beginnzeit ist dort derzeit nicht ausgewiesen.",
+      "url": "https://www.aggsbach.gv.at/Yoga_fuer_Junggebliebene_mit_Julia_1"
+    },
+    {
+      "date": "07.10.2026",
+      "place": "Aggsbach Markt",
+      "title": "Line Dance für Anfänger und Fortgeschrittene",
+      "note": "Die Gemeinde bestätigt den Termin. Die veröffentlichten Anfangszeiten unterscheiden sich je nach Gruppe; Details unmittelbar vorab auf der Veranstaltungsseite prüfen.",
+      "url": "https://www.aggsbach.gv.at/Line_dance_fuer_Anfaenger_und_Fortgeschrittene"
+    },
+    {
+      "date": "08.10.2026, 16:00–18:00 Uhr",
+      "place": "Spitz, Schifffahrtsmuseum",
+      "title": "Das Archiv der Vinea Wachau",
+      "note": "Archivführung, Weinverkostung und Museumseintritt; Anmeldung bis Mittwoch, 7. Oktober, 16:00 Uhr erforderlich.",
+      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232243/das-archiv-der-vinea-wachau-kompromisslos-einzigartig"
     }
   ],
   "heurigen": [
@@ -213,6 +227,20 @@
       "url": "https://heurigenkalender.niederoesterreich.at/200943/offen-is-heuriger-zi"
     },
     {
+      "name": "Weingut Mayer",
+      "place": "Spitz, Gut am Steg",
+      "period": "02.–04.10.2026",
+      "hours": "Heute ab 16:00 Uhr",
+      "url": "https://mayerwein.at/heuriger/"
+    },
+    {
+      "name": "Schloss Heurige",
+      "place": "Spitz, Schloss zu Spitz",
+      "period": "02.–03.10.2026",
+      "hours": "Heute 16:00–22:00 Uhr; keine Reservierungen",
+      "url": "https://heurigenkalender.niederoesterreich.at/199547/schloss-heurige"
+    },
+    {
       "name": "Heuriger Mang Hermenegild",
       "place": "Weißenkirchen",
       "period": "17.07.–26.10.2026",
@@ -241,6 +269,13 @@
       "url": "https://heurigenkalender.niederoesterreich.at/30957/heuriger-weinerei-schwaiger"
     },
     {
+      "name": "Weingut Höllmüller",
+      "place": "Joching",
+      "period": "02.–04.10.2026",
+      "hours": "Heute ab 17:00 Uhr",
+      "url": "https://heurigenkalender.niederoesterreich.at/30938/weingut-hllmller"
+    },
+    {
       "name": "Heuriger Weingut Trautsamwieser",
       "place": "Weißenkirchen",
       "period": "18.09.–18.10.2026",
@@ -255,6 +290,13 @@
       "url": "https://heurigenkalender.niederoesterreich.at/163245/heuriger-weingartlerei-denk-petra"
     },
     {
+      "name": "Weinhauer Brustbauer",
+      "place": "Dürnstein, Oberloiben",
+      "period": "02.–04.10.2026",
+      "hours": "Heute ab 12:00 Uhr",
+      "url": "https://heurigenkalender.niederoesterreich.at/184075/weinhauer-brustbauer"
+    },
+    {
       "name": "Grill-Heuriger Küffer Keller",
       "place": "Dürnstein",
       "period": "01.05.–10.10.2026",
@@ -264,47 +306,47 @@
   ],
   "openingSoon": [
     {
-      "date": "02.10.2026",
+      "date": "09.10.2026",
+      "name": "Fanie’s Heuriger",
+      "place": "Spitz",
+      "hours": "Bestätigter Aussteckbeginn am Freitag, 9. Oktober, ab 12:00 Uhr; Aussteckzeit bis 26.10.2026.",
+      "url": "https://heurigenkalender.niederoesterreich.at/235315/fanie-s-heuriger"
+    },
+    {
+      "date": "09.10.2026",
       "name": "Weingut Höllmüller",
       "place": "Joching",
-      "hours": "Bestätigter Aussteckbeginn am Freitag, 2. Oktober, ab 17:00 Uhr; Samstag und Sonntag ab 15:00 Uhr, Aussteckzeit 02.–04.10.2026.",
+      "hours": "Nächster bestätigter Aussteckbeginn am Freitag, 9. Oktober, ab 17:00 Uhr; Aussteckzeit 09.–11.10.2026.",
       "url": "https://heurigenkalender.niederoesterreich.at/30938/weingut-hllmller"
     },
     {
-      "date": "02.10.2026",
+      "date": "09.10.2026",
       "name": "Weingut Mayer",
       "place": "Spitz, Gut am Steg",
-      "hours": "Bestätigter Aussteckbeginn am Freitag, 2. Oktober, ab 16:00 Uhr; Aussteckzeit 02.–04.10.2026.",
+      "hours": "Nächster bestätigter Aussteckbeginn am Freitag, 9. Oktober, ab 16:00 Uhr; Aussteckzeit 09.–11.10.2026.",
       "url": "https://mayerwein.at/heuriger/"
     },
     {
-      "date": "02.10.2026",
-      "name": "Weinhauer Brustbauer",
-      "place": "Dürnstein, Oberloiben",
-      "hours": "Aussteckzeit 02.–04.10.2026; täglich ab 12:00 Uhr.",
-      "url": "https://heurigenkalender.niederoesterreich.at/184075/weinhauer-brustbauer"
-    },
-    {
-      "date": "02.10.2026",
+      "date": "09.10.2026",
       "name": "Schloss Heurige",
       "place": "Spitz, Schloss zu Spitz",
-      "hours": "Bestätigt am 2. und 3. Oktober jeweils 16:00–22:00 Uhr; keine Reservierungen möglich.",
+      "hours": "Nächster bestätigter Aussteckbeginn am Freitag, 9. Oktober, von 16:00 bis 22:00 Uhr; außerdem Samstag, 10. Oktober.",
       "url": "https://heurigenkalender.niederoesterreich.at/199547/schloss-heurige"
     }
   ],
-  "piaTip": "Pias Donnerstagstipp: Für die morgige Führung rund um die Wachauer Marille läuft die Anmeldung heute nur noch bis 18:00 Uhr. Wer am Wochenende wandern möchte, sollte wegen des WACHAU TRAIL mit zusätzlichem Betrieb am Welterbesteig rechnen. Bei Schifffahrt oder Fährüberfahrt die tatsächlich verfügbare Verbindung unmittelbar vor dem Start prüfen.",
+  "piaTip": "Pias Freitagstipp: Heute starten gleich vier Heurige neu. Für den Marillentermin um 16:00 Uhr braucht ihr bereits eine bestätigte Buchung; für „Schiff & Wein“ morgen kann man sich noch bis 16:00 Uhr anmelden. Ab heute Abend bringt der WACHAU TRAIL zusätzlichen Betrieb auf den Welterbesteig – bei Fähre oder Schiff die tatsächlich verfügbare Verbindung kurz vor dem Start nochmals prüfen.",
   "goodToKnow": [
     "Das Wetter wird in der Gäste-App live geladen und deshalb nicht statisch in Tratsch & Klatsch gespeichert.",
-    "Heute sind elf Heurige am Nordufer bestätigt geöffnet.",
-    "Ferdl Denk ist nach dem Mittwoch-Ruhetag heute wieder ab 15:00 Uhr geöffnet.",
-    "Weinterrasse Kropf ist derzeit nicht ausgesteckt; der nächste bestätigte Zeitraum beginnt am 17. Oktober.",
-    "Für den morgigen Marillentermin endet die Anmeldung heute um 18:00 Uhr.",
+    "Heute sind 15 Heurige am Nordufer bestätigt geöffnet.",
+    "Höllmüller in Joching, Mayer in Gut am Steg, Brustbauer in Oberloiben und Schloss Heurige in Spitz starten heute ihre Aussteckzeit.",
+    "Die Anmeldung für den heutigen Marillentermin endete gestern; Teilnahme nur mit bestätigter Buchung.",
+    "Für „Schiff & Wein“ morgen endet die Anmeldung heute um 16:00 Uhr.",
+    "Der WACHAU77-Wanderstart erfolgt heute um 22:00 Uhr in Emmersdorf; morgen folgen weitere Bewerbe in Spitz, Weißenkirchen und Dürnstein.",
     "Laglers Weinleseerlebnis läuft werktags bis 30. Oktober, nur bei Schönwetter und mit mindestens zwei Tagen Voranmeldung.",
     "Die DDSG kann wegen Niedrigwassers derzeit nicht alle Fahrten durchführen; maßgeblich sind die aktuell buchbaren Verbindungen.",
     "Die Wachaubahn fährt bis 1. November täglich; die kleinen Stationen im Zielabschnitt sind Bedarfshalte.",
     "Bei den Rollfähren wegen Niedrigwassers weiterhin mit kurzfristigen Änderungen rechnen.",
-    "Für morgen sind Starts bei Höllmüller, Mayer, Weinhauer Brustbauer und Schloss Heurige bestätigt.",
-    "Der WACHAU TRAIL bringt am 3. Oktober zusätzlichen Betrieb auf Teile des Welterbesteigs; die Anmeldung ist geschlossen.",
-    "Am 4. Oktober startet die bestätigte Pfarrwallfahrt nach Maria Laach um 08:00 Uhr bei der Kirche in Aggsbach Markt."
+    "Am 4. Oktober startet die bestätigte Pfarrwallfahrt nach Maria Laach um 08:00 Uhr bei der Kirche in Aggsbach Markt.",
+    "Am 9. Oktober sind bestätigte Starts beziehungsweise Wiedereröffnungen bei Fanie’s Heuriger, Höllmüller, Mayer und Schloss Heurige vorgesehen."
   ]
 }
