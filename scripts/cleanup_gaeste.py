@@ -18,9 +18,9 @@ for old, new in replacements.items():
 
 replacement = '''<section id="zimmer" class="card">
   <div class="kicker">🛏️ Zimmer</div>
-  <h2>Bachblick – unser aktuell buchbares Zimmer</h2>
+  <h2>Gartenzimmer – unser aktuell buchbares Zimmer</h2>
   <div class="room-grid">
-    <article><h3>🌿 Bachblick</h3><p>Gemütliches Doppelzimmer für maximal zwei Personen. Das eigene private Badezimmer liegt direkt gegenüber und ist nicht ensuite.</p></article>
+    <article><h3>🌿 Gartenzimmer</h3><p>Gemütliches Doppelzimmer für maximal zwei Personen. Das eigene private Badezimmer liegt direkt gegenüber und ist nicht ensuite.</p></article>
   </div>
 </section>'''
 
