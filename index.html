@@ -26,7 +26,7 @@
 <meta name="twitter:title" content="Wachau Gästeguide – Zuhause am Bach">
 <meta name="twitter:description" content="Tipps für Donauradweg, Welterbesteig und Ihren Aufenthalt in Aggsbach Markt.">
 <meta name="twitter:image" content="https://topdiveair-sketch.github.io/Gaeste/hero-windis.webp">
-<link rel="stylesheet" href="style.css?v=20261002-buttons">
+<link rel="stylesheet" href="style.css?v=20261003-transport">
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -99,8 +99,8 @@
   <button onclick="go('wandern')">🥾 Wandern</button>
   <button onclick="go('rad')">🚴 Radfahren</button>
   <button onclick="go('essen')">🍽️ Genuss</button>
-  <button onclick="go('kinder')">🐾 Kinder & Windis</button>
   <a class="btn-link windi-secrets-nav" href="https://topdiveair-sketch.github.io/Direcktbuchungen/wilde-wachauer-windis/" target="_blank" rel="noopener">🐾 Wilde Wachauer Windis</a>
+  <button onclick="go('mobilitaet')">🚆 Bahn & Bus</button>
   <button onclick="go('service')">☎ Service</button>
 </nav>
 
@@ -213,9 +213,9 @@
 
 <section id="zimmer" class="card">
   <div class="kicker">🛏️ Ihr Zimmer</div>
-  <h2>Bachblick</h2>
+  <h2>Gartenzimmer</h2>
   <div class="room-grid">
-    <article><h3>🌿 Bachblick</h3><p>Gemütliches Doppelzimmer für maximal zwei Personen. Das eigene private Badezimmer liegt direkt gegenüber und ist ausschließlich für die Gäste dieses Zimmers bestimmt.</p></article>
+    <article><h3>🌿 Gartenzimmer</h3><p>Gemütliches Doppelzimmer für maximal zwei Personen. Das eigene private Badezimmer liegt direkt gegenüber und ist ausschließlich für die Gäste dieses Zimmers bestimmt.</p></article>
   </div>
   <p class="small"><strong>Zur Klarstellung:</strong> Die Unterkunft ist kein ganzes Ferienhaus. Es gibt keinen Whirlpool, keinen Innenpool, keine Gästeküche und keine Klimaanlage. Ein umweltbewusster Luftraumbefeuchter ist vorhanden.</p>
 </section>
@@ -357,19 +357,6 @@
   <div id="heurigenResult" class="result"></div>
 </section>
 
-<section id="kinder" class="card">
-  <div class="kicker">🐾 Kinder & Windis</div>
-  <h2>Pias Kinderwelt</h2>
-  <p>Quiz, Schatzsuche, Geschichten und kleine Wachau-Abenteuer mit Pia.</p>
-  <div class="button-row">
-    <button onclick="showPia('quiz')">🏆 Wachau-Quiz</button>
-    <button onclick="showPia('suche')">🔍 Schatzsuche</button>
-    <button onclick="showPia('story')">📖 Geschichten</button>
-    <button onclick="showCertificate()">🏆 Urkunde</button>
-  </div>
-  <div id="piaResult" class="result"></div>
-</section>
-
 <section id="buecherwelt" class="card books-card">
   <div class="kicker">📚 Die Wilden Wachauer Windis</div>
   <h2>Windis-Bücher & Wachau-Abenteuer</h2>
@@ -472,6 +459,59 @@
   </div>
 </section>
 
+<section id="mobilitaet" class="card transport-card" aria-labelledby="transport-heading">
+  <div class="kicker">🚆 Unterwegs in der Wachau</div>
+  <h2 id="transport-heading">Bahn &amp; Bus: Ihre nächste Verbindung</h2>
+  <p>Von Melk und Emmersdorf über Aggsbach Markt, Spitz und Dürnstein bis Krems. Start und Ziel eingeben und aktuelle Verbindungen bei VOR AnachB öffnen.</p>
+  <form id="transport-form">
+    <div class="transport-route">
+      <label for="transport-origin">Start<input id="transport-origin" type="text" list="transport-places" value="Aggsbach Markt" placeholder="Ort, Haltestelle oder Adresse" required maxlength="200" autocomplete="off"></label>
+      <button id="transport-swap" type="button" class="transport-swap" aria-label="Start und Ziel tauschen">⇄ <span>Rückfahrt</span></button>
+      <label for="transport-destination">Ziel<input id="transport-destination" type="text" list="transport-places" value="Spitz an der Donau" placeholder="Ort, Haltestelle oder Adresse" required maxlength="200" autocomplete="off"></label>
+    </div>
+    <datalist id="transport-places">
+      <option value="Zuhause am Bach, Aggsbach Markt 82, 3641 Aggsbach Markt"></option>
+      <option value="Melk Bahnhof"></option><option value="Emmersdorf an der Donau"></option>
+      <option value="Emmersdorf an der Donau Bahnhof"></option><option value="Aggsbach Markt"></option>
+      <option value="Aggsbach Markt Erholungszentrum"></option><option value="Aggsbach Markt Bahnhof"></option>
+      <option value="Willendorf in der Wachau"></option><option value="Schwallenbach"></option>
+      <option value="Spitz an der Donau"></option><option value="Spitz an der Donau Bahnhof"></option>
+      <option value="Spitz an der Donau Fähre"></option><option value="Spitz/Donau Hinterhaus"></option>
+      <option value="Weißenkirchen in der Wachau"></option><option value="Dürnstein"></option>
+      <option value="Krems an der Donau Bahnhof"></option>
+    </datalist>
+    <div class="button-row"><button id="transport-locate" type="button" class="brown">📍 Meinen Standort verwenden</button></div>
+    <p class="small transport-privacy">Standort nur auf Wunsch. Beim Öffnen der Auskunft werden Start, Ziel und gegebenenfalls Standortkoordinaten an VOR übermittelt.</p>
+    <div class="transport-times">
+      <label for="transport-when">Wann möchten Sie fahren?<select id="transport-when"><option value="now">Jetzt abfahren</option><option value="later">Datum und Uhrzeit wählen</option></select></label>
+      <div id="transport-departure-fields" class="transport-departure" hidden>
+        <label for="transport-date">Datum<input id="transport-date" type="date" required disabled></label>
+        <label for="transport-time">Abfahrt<input id="transport-time" type="time" required disabled></label>
+      </div>
+    </div>
+    <p class="small">Alle Zeiten gelten für Österreich.</p>
+    <div class="transport-destinations" aria-label="Beliebte Ziele">
+      <button type="button" data-transport-destination="Melk Bahnhof">Melk</button>
+      <button type="button" data-transport-destination="Emmersdorf an der Donau">Emmersdorf</button>
+      <button type="button" data-transport-destination="Aggsbach Markt">Aggsbach Markt</button>
+      <button type="button" data-transport-destination="Spitz an der Donau">Spitz</button>
+      <button type="button" data-transport-destination="Weißenkirchen in der Wachau">Weißenkirchen</button>
+      <button type="button" data-transport-destination="Dürnstein">Dürnstein</button>
+      <button type="button" data-transport-destination="Krems an der Donau Bahnhof">Krems</button>
+    </div>
+    <div class="button-row"><button type="submit">Aktuelle Verbindungen bei VOR öffnen ↗</button></div>
+    <p id="transport-status" class="small" role="status" aria-live="polite"></p>
+  </form>
+  <div class="button-row transport-links">
+    <a id="transport-origin-map" class="btn-link" href="https://www.google.com/maps/search/?api=1&amp;query=Aggsbach+Markt" target="_blank" rel="noopener noreferrer">🗺 Start auf Karte</a>
+    <a id="transport-destination-map" class="btn-link" href="https://www.google.com/maps/search/?api=1&amp;query=Spitz+an+der+Donau" target="_blank" rel="noopener noreferrer">🗺 Ziel auf Karte</a>
+    <a class="btn-link brown" href="https://www.wachaubahn.at/fahrplan" target="_blank" rel="noopener noreferrer">🚂 Wachaubahn-Fahrplan</a>
+  </div>
+  <p class="small">Die Ergebnisse öffnen sich bei VOR AnachB in einem neuen Tab. Dort sehen Sie Bahn- und Busverbindungen mit Fußwegen, Umstiegen und verfügbaren Verkehrsmeldungen.</p>
+  <p class="small"><strong>Gut zu wissen:</strong> Aggsbach Markt liegt am Nordufer; Aggsbach Dorf liegt gegenüber. Bahnhof und Bushaltestelle können an unterschiedlichen Orten liegen. Die Wachaubahn verkehrt saisonal; Aggsbach Markt ist ein Bedarfshalt.</p>
+  <noscript><p>Bitte öffnen Sie die <a href="https://anachb.vor.at/" target="_blank" rel="noopener noreferrer">VOR-Fahrplanauskunft</a> und geben Sie dort Start und Ziel ein.</p></noscript>
+</section>
+
 <section id="service" class="card">
   <div class="kicker">☎ Service & Hilfe</div>
   <h2>Service für Gäste</h2>
@@ -481,7 +521,7 @@
     <a href="https://wa.me/436646437526?text=Hallo%20Zuhause%20am%20Bach%2C%20ich%20m%C3%B6chte%20Gep%C3%A4cktransport%20anfragen." target="_blank" rel="noopener">🎒 Gepäcktransport anfragen</a>
     <a href="https://wa.me/436646437526" target="_blank" rel="noopener">💬 WhatsApp-Hilfe</a>
     <a href="https://www.google.com/search?q=F%C3%A4hre+Wachau+Spitz+Arnsdorf+Fahrzeiten" target="_blank" rel="noopener">⛴ Fähren prüfen</a>
-    <a href="https://www.google.com/search?q=Wachaubahn+Fahrplan" target="_blank" rel="noopener">🚂 Wachaubahn prüfen</a>
+    <a href="https://www.wachaubahn.at/fahrplan" target="_blank" rel="noopener">🚂 Wachaubahn prüfen</a>
   </div>
 </section>
 
@@ -506,7 +546,7 @@
     <li><a href="https://www.donau.com/welterbesteig-wachau" target="_blank" rel="noopener noreferrer">Welterbesteig Wachau – Donau Niederösterreich</a></li>
     <li><a href="https://www.donau.com/donauradweg" target="_blank" rel="noopener noreferrer">Donauradweg – Donau Niederösterreich</a></li>
     <li><a href="https://www.donau.com/aktuelle-hinweise" target="_blank" rel="noopener noreferrer">Aktuelle Umleitungen und Sperren</a></li>
-    <li><a href="https://www.wachaubahn.at/whb-fahrplan" target="_blank" rel="noopener noreferrer">Wachaubahn – aktueller Fahrplan</a></li>
+    <li><a href="https://www.wachaubahn.at/fahrplan" target="_blank" rel="noopener noreferrer">Wachaubahn – aktueller Fahrplan</a></li>
     <li><a href="https://open-meteo.com/en/docs" target="_blank" rel="noopener noreferrer">Wetterdaten und Methodik – Open-Meteo</a></li>
   </ul>
 </section>
@@ -526,10 +566,11 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="app.js?v=77.2"></script>
+<script src="app.js?v=20261003-transport"></script>
 <script src="chronicle-config.js?v=76.1"></script>
 <script src="chronicle.js?v=76.1"></script>
-<script src="i18n.js?v=76.1"></script>
+<script src="transport.js?v=20261003"></script>
+<script src="i18n.js?v=20261003-transport"></script>
 <script src="chronicle-i18n.js?v=76.1"></script>
 <script src="chronicle-message-i18n.js?v=76.1"></script>
 <script src="review-links.js?v=20260902"></script>

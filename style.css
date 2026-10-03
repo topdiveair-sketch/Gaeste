@@ -400,3 +400,20 @@ button:focus-visible,.btn-link:focus-visible,.source-card li a:focus-visible,.ac
  .guest-tour-card{padding:16px}
  .quick-nav > .btn-link{font-size:14px;padding:12px 10px}
 }
+
+/* Wachau journey planner */
+.transport-card{background:linear-gradient(180deg,#fff,#f3f7ee)}
+.transport-route{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:14px;align-items:end;margin:18px 0 12px}
+.transport-swap{min-height:46px;gap:6px}
+.transport-times{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:end}
+.transport-departure{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.transport-card [hidden]{display:none!important}
+.transport-card input[type=time]{width:100%;margin-top:6px;border:1px solid var(--border);border-radius:14px;padding:12px;background:#fff;color:var(--text);font:inherit;font-weight:700;min-height:46px}
+.transport-destinations{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.transport-destinations button{background:#fff8e8;color:#4a2a14!important;border:1px solid var(--border);box-shadow:none;padding:10px 14px;min-height:44px}
+.transport-card button:disabled{opacity:.65;cursor:wait}
+.transport-card input,.transport-card select{min-width:0;font-size:16px}
+.transport-card :focus-visible{outline:3px solid #17678f;outline-offset:3px}
+.transport-privacy{max-width:760px}
+#transport-status:empty{display:none}
+@media(max-width:760px){.transport-route,.transport-times{grid-template-columns:1fr}.transport-swap{justify-self:start}.transport-links a,.transport-card button[type=submit]{width:100%}.transport-departure{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
