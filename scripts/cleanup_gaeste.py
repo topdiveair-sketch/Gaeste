@@ -17,11 +17,12 @@ for old, new in replacements.items():
     s = s.replace(old, new)
 
 replacement = '''<section id="zimmer" class="card">
-  <div class="kicker">🛏️ Zimmer</div>
-  <h2>Gartenzimmer – unser aktuell buchbares Zimmer</h2>
+  <div class="kicker">🛏️ Ihr Zimmer</div>
+  <h2>Gartenzimmer</h2>
   <div class="room-grid">
-    <article><h3>🌿 Gartenzimmer</h3><p>Gemütliches Doppelzimmer für maximal zwei Personen. Das eigene private Badezimmer liegt direkt gegenüber und ist nicht ensuite.</p></article>
+    <article><h3>🌿 Gartenzimmer</h3><p>Gemütliches Doppelzimmer für maximal zwei Personen. Das eigene private Badezimmer liegt direkt gegenüber und ist ausschließlich für die Gäste dieses Zimmers bestimmt.</p></article>
   </div>
+  <p class="small"><strong>Zur Klarstellung:</strong> Die Unterkunft ist kein ganzes Ferienhaus. Es gibt keinen Whirlpool, keinen Innenpool, keine Gästeküche und keine Klimaanlage. Ein umweltbewusster Luftraumbefeuchter ist vorhanden.</p>
 </section>'''
 
 s, n = re.subn(r'<section id="zimmer" class="card">.*?</section>', replacement, s, count=1, flags=re.S)
