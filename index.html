@@ -461,7 +461,7 @@
 
 <section id="mobilitaet" class="card transport-card" aria-labelledby="transport-heading">
   <div class="kicker">🚆 Unterwegs in der Wachau</div>
-  <h2 id="transport-heading">Bahn &amp; Bus: Ihre nächste Verbindung</h2>
+  <h2 id="transport-heading">Bahn &amp; Bus in der Wachau</h2>
   <p>Von Melk und Emmersdorf über Aggsbach Markt, Spitz und Dürnstein bis Krems. Start und Ziel eingeben und aktuelle Verbindungen bei VOR AnachB öffnen.</p>
   <form id="transport-form">
     <div class="transport-route">
@@ -508,6 +508,17 @@
     <a class="btn-link brown" href="https://www.wachaubahn.at/fahrplan" target="_blank" rel="noopener noreferrer">🚂 Wachaubahn-Fahrplan</a>
   </div>
   <p class="small">Die Ergebnisse öffnen sich bei VOR AnachB in einem neuen Tab. Dort sehen Sie Bahn- und Busverbindungen mit Fußwegen, Umstiegen und verfügbaren Verkehrsmeldungen.</p>
+  <div class="transport-station-navigation">
+    <h3>Zur Einstiegshaltestelle navigieren</h3>
+    <p class="small">Wählen Sie zuerst Ihre Verbindung bei VOR. Tragen Sie dann die dort genannte Einstiegshaltestelle ein – Bahnhof und Bushaltestelle können verschieden sein.</p>
+    <label for="transport-station">Haltestelle aus Ihrer Verbindung<input id="transport-station" type="text" list="transport-places" placeholder="Zum Beispiel: Aggsbach Markt Erholungszentrum" maxlength="200" autocomplete="off"></label>
+    <div class="button-row">
+      <button type="button" data-station-mode="walking">🚶 Zu Fuß zur Haltestelle</button>
+      <button type="button" data-station-mode="bicycling">🚴 Mit dem Rad zur Haltestelle</button>
+    </div>
+    <p id="transport-station-status" class="small" role="status" aria-live="polite"></p>
+    <p class="small">Die Navigation öffnet Google Maps. Ihr gewählter Standort und die Haltestelle werden dabei an Google übermittelt. Ohne Standortübernahme können Sie Ihren Startpunkt in Google Maps wählen. Fahrradmitnahme in Bahn oder Bus bitte separat prüfen.</p>
+  </div>
   <p class="small"><strong>Gut zu wissen:</strong> Aggsbach Markt liegt am Nordufer; Aggsbach Dorf liegt gegenüber. Bahnhof und Bushaltestelle können an unterschiedlichen Orten liegen. Die Wachaubahn verkehrt saisonal; Aggsbach Markt ist ein Bedarfshalt.</p>
   <noscript><p>Bitte öffnen Sie die <a href="https://anachb.vor.at/" target="_blank" rel="noopener noreferrer">VOR-Fahrplanauskunft</a> und geben Sie dort Start und Ziel ein.</p></noscript>
 </section>
@@ -569,8 +580,8 @@
 <script src="app.js?v=20261003-transport"></script>
 <script src="chronicle-config.js?v=76.1"></script>
 <script src="chronicle.js?v=76.1"></script>
-<script src="transport.js?v=20261003"></script>
-<script src="i18n.js?v=20261003-transport"></script>
+<script src="transport.js?v=20261003-nav"></script>
+<script src="i18n.js?v=20261003-nav-transport"></script>
 <script src="chronicle-i18n.js?v=76.1"></script>
 <script src="chronicle-message-i18n.js?v=76.1"></script>
 <script src="review-links.js?v=20260902"></script>

@@ -29,7 +29,20 @@
     url.searchParams.set('start', 'yes');
     return url.href;
   }
-  const api = { viennaTime, journeyUrl };
+  function navigationUrl({ station, coords, mode }) {
+    if (!station?.trim() || !['walking', 'bicycling'].includes(mode)) throw new Error('Invalid station route');
+    const url = new URL('https://www.google.com/maps/dir/');
+    url.searchParams.set('api', '1');
+    url.searchParams.set('destination', station.trim());
+    url.searchParams.set('travelmode', mode);
+    url.searchParams.set('dir_action', 'navigate');
+    if (coords) {
+      if (!Number.isFinite(coords.latitude) || !Number.isFinite(coords.longitude) || Math.abs(coords.latitude) > 90 || Math.abs(coords.longitude) > 180) throw new Error('Invalid location');
+      url.searchParams.set('origin', `${coords.latitude},${coords.longitude}`);
+    }
+    return url.href;
+  }
+  const api = { viennaTime, journeyUrl, navigationUrl };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   if (!root.document) return;
   root.WachauTransport = api;
@@ -42,7 +55,9 @@
   const time = document.getElementById('transport-time');
   const status = document.getElementById('transport-status');
   const locate = document.getElementById('transport-locate');
-  let originCoords = null, destinationCoords = null, locationRequest = 0;
+  let originCoords = null, destinationCoords = null, currentCoords = null, locationRequest = 0;
+  const station = document.getElementById("transport-station");
+  const stationStatus = document.getElementById("transport-station-status");
   const english = () => document.documentElement.lang !== 'de';
   const message = (de, en) => { status.textContent = english() ? en : de; };
   function mapUrl(text, coords) {
@@ -97,6 +112,7 @@
       if (request !== locationRequest) return;
       locate.disabled = false; locate.removeAttribute('aria-busy');
       originCoords = { latitude: position.coords.latitude, longitude: position.coords.longitude };
+      currentCoords = { ...originCoords };
       origin.value = english() ? 'My location' : 'Mein Standort';
       message('Standort übernommen. Er wird erst beim Öffnen der Auskunft an VOR übermittelt.', 'Location selected. It is shared with VOR only when you open the journey planner.');
       updateMaps();
@@ -105,7 +121,7 @@
       locate.disabled = false; locate.removeAttribute('aria-busy');
       message(error.code === 1 ? 'Standortzugriff abgelehnt. Bitte Startort eingeben.' : 'Standort konnte nicht ermittelt werden. Bitte Startort eingeben.',
         error.code === 1 ? 'Location access denied. Please enter your starting point.' : 'Could not find your location. Please enter your starting point.');
-    }, { enableHighAccuracy: false, timeout: 10000, maximumAge: 60000 });
+    }, { enableHighAccuracy: true, timeout: 15000, maximumAge: 0 });
   });
   form.addEventListener('submit', event => {
     event.preventDefault();
@@ -122,5 +138,16 @@
     document.body.appendChild(link); link.click(); link.remove();
     message('VOR-Auskunft geöffnet. Dort finden Sie Abfahrten, Umstiege und Haltestellen.', 'VOR journey planner opened. Find departures, transfers and stops there.');
   });
+  document.querySelectorAll('[data-station-mode]').forEach(button => button.addEventListener('click', () => {
+    if (!station.value.trim()) {
+      stationStatus.textContent = english() ? 'Please enter the boarding stop from your VOR connection.' : 'Bitte die Einstiegshaltestelle aus Ihrer VOR-Verbindung eingeben.';
+      station.focus(); return;
+    }
+    stationStatus.textContent = '';
+    const link = document.createElement('a');
+    link.href = navigationUrl({ station: station.value, coords: currentCoords, mode: button.dataset.stationMode });
+    link.target = '_blank'; link.rel = 'noopener noreferrer';
+    document.body.appendChild(link); link.click(); link.remove();
+  }));
   updateMaps();
 })(typeof window === 'undefined' ? globalThis : window);
