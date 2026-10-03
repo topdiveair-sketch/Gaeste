@@ -1,7 +1,23 @@
 
 const HOME = "Aggsbach Markt 82, 3641 Aggsbach Markt, Österreich";
+const guestPreferences = new Map();
+function readGuestPreference(key){try{return localStorage.getItem(key)??guestPreferences.get(key)??null}catch(_e){return guestPreferences.get(key)??null}}
+function saveGuestPreference(key,value){guestPreferences.set(key,String(value));try{localStorage.setItem(key,String(value))}catch(_e){}}
+function removeGuestPreference(key){guestPreferences.delete(key);try{localStorage.removeItem(key)}catch(_e){}}
+function wachauDate(offset=0,now=new Date()){
+ const parts=new Intl.DateTimeFormat("en-GB",{timeZone:"Europe/Vienna",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(now);
+ const value=type=>Number(parts.find(part=>part.type===type).value);
+ return new Date(Date.UTC(value("year"),value("month")-1,value("day")+offset)).toISOString().slice(0,10);
+}
 function enc(x){return encodeURIComponent(x)}
 function go(id){document.getElementById(id)?.scrollIntoView({behavior:"smooth",block:"start"})}
+function setupGuestNavigation(){
+ const nav=document.querySelector(".quick-nav");if(!nav)return;
+ const measure=()=>document.documentElement.style.setProperty("--guest-nav-offset",`${Math.ceil(nav.getBoundingClientRect().height)+16}px`);
+ measure();
+ if(typeof ResizeObserver!=="undefined")new ResizeObserver(measure).observe(nav);
+ else window.addEventListener("resize",measure);
+}
 function route(dest,mode="walking"){return `https://www.google.com/maps/dir/?api=1&origin=${enc(HOME)}&destination=${enc(dest)}&travelmode=${enc(mode)}`}
 function komoot(q){return "https://www.google.com/search?q="+enc("site:komoot.com "+q+" Wachau Tour")}
 function google(q){return "https://www.google.com/search?q="+enc(q)}
@@ -21,7 +37,7 @@ async function loadDailyNewspaper(force=false){
   const edition=await response.json();
   document.getElementById("newspaperStand").textContent=`Ausgabe: ${edition.editionLabel||edition.editionDate||"Stand nicht angegeben"}`;
   document.getElementById("newspaperIntro").textContent=edition.intro||"Pias Tagesüberblick für das Wachauer Nordufer.";
-  const viennaToday = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Vienna", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
+  const viennaToday = wachauDate();
   const editionFresh = edition.editionDate === viennaToday;
   status.textContent = editionFresh
     ? "Heutige redaktionelle Ausgabe geladen · Wetter wird live aktualisiert"
@@ -81,7 +97,7 @@ function showToast(msg){
 function updateSmartWifi(){
  const box=document.getElementById("wifiStatusBox"), title=document.getElementById("wifiStatusTitle"), text=document.getElementById("wifiStatusText");
  if(!box||!title||!text)return;
- const confirmed=localStorage.getItem("zabWifiConfirmed")==="yes";
+ const confirmed=readGuestPreference("zabWifiConfirmed")==="yes";
  box.classList.remove("online","offline","confirmed");
  if(confirmed){
    box.classList.add("confirmed");
@@ -100,7 +116,7 @@ function updateSmartWifi(){
  }
 }
 function confirmWifiGuest(){
- localStorage.setItem("zabWifiConfirmed","yes");
+ saveGuestPreference("zabWifiConfirmed","yes");
  updateSmartWifi();
  showToast("Willkommen im WLAN Zuhause am Bach 🐾");
 }
@@ -124,7 +140,7 @@ async function loadWeather(){
   if(!r.ok)throw new Error("Wetterdienst HTTP "+r.status);
   const d=await r.json();
   if(!d.daily||!Array.isArray(d.daily.time)||d.daily.time.length<2)throw new Error("Unvollständige Wetterdaten");
-  try{localStorage.setItem("zabWeatherCache",JSON.stringify({saved:Date.now(),data:d}));}catch(_e){}
+  try{saveGuestPreference("zabWeatherCache",JSON.stringify({saved:Date.now(),data:d}));}catch(_e){}
   const codes={0:"☀️ Sonnig",1:"🌤️ Klar",2:"⛅ Teilweise bewölkt",3:"☁️ Bewölkt",45:"🌫️ Nebel",48:"🌫️ Nebel",51:"🌦️ Niesel",53:"🌦️ Niesel",55:"🌧️ Niesel",61:"🌧️ Leichter Regen",63:"🌧️ Regen",65:"🌧️ Starker Regen",71:"❄️ Schnee",80:"🌦️ Schauer",81:"🌧️ Schauer",82:"⛈️ Starke Schauer",95:"⛈️ Gewitter",96:"⛈️ Gewitter",99:"⛈️ Gewitter"};
   function dayLabel(iso,weekday=false){
     const date=new Date(iso+"T12:00:00");
@@ -170,8 +186,8 @@ async function loadWeather(){
   }
  }catch(e){
    let cache=null;
-   try{cache=JSON.parse(localStorage.getItem("zabWeatherCache")||"null");}catch(_e){}
-   if(cache&&cache.data&&Date.now()-cache.saved<21600000){
+   try{cache=JSON.parse(readGuestPreference("zabWeatherCache")||"null");}catch(_e){}
+   if(cache&&cache.data?.daily?.time?.[0]===wachauDate()&&Date.now()-cache.saved<21600000){
      const d=cache.data;
      const weatherText=i=>`${Math.round(d.daily.temperature_2m_min[i])}–${Math.round(d.daily.temperature_2m_max[i])} °C · Schauer ${d.daily.precipitation_probability_max[i]??0}%`;
      box.innerHTML=`<article><h3>🌤 Heute</h3><p>${weatherText(0)}</p></article><article><h3>🌦 Morgen</h3><p>${weatherText(1)}</p></article>`;
@@ -224,7 +240,7 @@ function showGloria(mode){
  if(mode==="service")b.innerHTML=`<div class="tip-grid"><article><h3>🚲 Fahrradgarage</h3><p>Sicher unterstellen.</p></article><article><h3>🔋 E-Bike laden</h3><p>Ladegerät bitte mitbringen.</p></article><article><h3>🧰 Werkzeug & Pumpe</h3><p>Kleine Hilfe bei Radproblemen.</p></article><article><h3>💧 Wasser</h3><p>Vor der Tour auffüllen.</p></article></div>`;
 }
 const HEURIGE=[["Genussterrasse","im Ort Aggsbach Markt","Genussterrasse Aggsbach Markt"],["Donauschlössel / Gritsch","Spitz an der Donau","Donauschlössel Gritsch Spitz an der Donau"],["Heurige in Spitz","Spitz an der Donau","Heuriger Spitz an der Donau"],["Heurige in Schwallenbach","Schwallenbach","Heuriger Schwallenbach Wachau"],["Heurige in Willendorf","Willendorf","Heuriger Willendorf Wachau"],["Heurige in Weißenkirchen","Weißenkirchen","Heuriger Weißenkirchen Wachau"]];
-function setHeurigenDate(mode){const d=new Date();if(mode==="tomorrow")d.setDate(d.getDate()+1);document.getElementById("heurigenDate").value=d.toISOString().slice(0,10);renderHeurigen()}
+function setHeurigenDate(mode){document.getElementById("heurigenDate").value=wachauDate(mode==="tomorrow"?1:0);renderHeurigen()}
 function dateLabel(){const v=document.getElementById("heurigenDate").value;if(!v)return"heute";const d=new Date(v+"T12:00:00");return["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"][d.getDay()]+", "+String(d.getDate()).padStart(2,"0")+"."+String(d.getMonth()+1).padStart(2,"0")+"."+d.getFullYear()}
 function aiUrl(){return "https://www.google.com/search?udm=50&q="+enc("Welche Heurigen haben am "+dateLabel()+" am Nordufer der Wachau im Umkreis von 15 km von Aggsbach Markt geöffnet? Bitte nur tatsächlich geöffnete Betriebe anzeigen, keine geschlossenen. Mit Öffnungszeiten und Quelle.")}
 function renderHeurigen(){
@@ -292,12 +308,12 @@ const CHALLENGE_ITEMS = [
   {id:"trail", emoji:"🥾", title:"Bonus: Welterbesteig-Etappe", text:"Für alle, die ein Stück Welterbesteig gegangen sind.", points:10, main:false},
   {id:"bike", emoji:"🚴", title:"Bonus: Donauradweg-Etappe", text:"Für alle, die ein Stück Donauradweg gefahren sind.", points:10, main:false}
 ];
-function getChallenge(){try{return JSON.parse(localStorage.getItem(CHALLENGE_KEY)||"{}")}catch(e){return {}}}
-function saveChallenge(state){localStorage.setItem(CHALLENGE_KEY,JSON.stringify(state))}
+function getChallenge(){try{const value=JSON.parse(readGuestPreference(CHALLENGE_KEY)||"{}");return value&&typeof value==="object"&&!Array.isArray(value)?value:{}}catch(e){return {}}}
+function saveChallenge(state){saveGuestPreference(CHALLENGE_KEY,JSON.stringify(state))}
 function challengeScore(state){return CHALLENGE_ITEMS.filter(x=>state[x.id]).reduce((sum,x)=>sum+x.points,0)}
 function challengeRank(points){if(points>=100)return "🥇 Wachau-Meister"; if(points>=60)return "🥈 Wachau-Kenner"; if(points>=30)return "🥉 Wachau-Freund"; return "🐾 Neues Rudelmitglied"}
 function toggleChallenge(id){const state=getChallenge();state[id]=!state[id];saveChallenge(state);renderChallenge()}
-function resetChallenge(){if(confirm("Wachau-Challenge wirklich zurücksetzen?")){localStorage.removeItem(CHALLENGE_KEY);renderChallenge()}}
+function resetChallenge(){if(confirm("Wachau-Challenge wirklich zurücksetzen?")){removeGuestPreference(CHALLENGE_KEY);renderChallenge()}}
 function renderChallenge(){
  const grid=document.getElementById("challengeGrid"); if(!grid)return;
  const state=getChallenge(), points=challengeScore(state), capped=Math.min(points,100), rank=challengeRank(points);
@@ -317,13 +333,14 @@ function renderChallenge(){
  }).join("");
 }
 function showWachauCertificate(){
- const d=new Date(),date=String(d.getDate()).padStart(2,"0")+"."+String(d.getMonth()+1).padStart(2,"0")+"."+d.getFullYear();
+ const date=wachauDate().split("-").reverse().join(".");
  const points=challengeScore(getChallenge()), rank=challengeRank(points);
  const box=document.getElementById("challengeGrid"); if(!box)return;
- box.innerHTML=`<div id="certificatePrint" class="certificate wachau-cert"><h3>🏆 Wachau-Challenge</h3><p>Diese Urkunde erhält</p><input id="certName" type="text" placeholder="Name eintragen"><h2 id="certPreview">${rank}</h2><p>für ${points} gesammelte Wachau-Punkte bei Zuhause am Bach.</p><p><strong>Aggsbach Markt, ${date}</strong></p><p>🐾 Fidel · Gloria · Pia</p><p>🏡 Zuhause am Bach – Gästehaus Wachau</p></div><div class="button-row"><button onclick="updateCert()">Name übernehmen</button><button onclick="window.print()">🖨️ Drucken</button><button onclick="renderChallenge()">Zurück zur Challenge</button></div>`;
+ box.innerHTML=`<div id="certificatePrint" class="certificate wachau-cert"><h3>🏆 Wachau-Challenge</h3><p>Diese Urkunde erhält</p><input id="certName" type="text" oninput="updateCert()" maxlength="80" placeholder="Name eintragen"><h2 id="certPreview"></h2><p><strong>${rank}</strong></p><p>für ${points} gesammelte Wachau-Punkte bei Zuhause am Bach.</p><p><strong>Aggsbach Markt, ${date}</strong></p><p>🐾 Fidel · Gloria · Pia</p><p>🏡 Zuhause am Bach – Gästehaus Wachau</p></div><div class="button-row"><button onclick="updateCert()">Name übernehmen</button><button onclick="window.print()">🖨️ Drucken</button><button onclick="renderChallenge()">Zurück zur Challenge</button></div>`;
 }
+function updateCert(){const input=document.getElementById("certName"),preview=document.getElementById("certPreview");if(input&&preview)preview.textContent=input.value.trim().slice(0,80)}
 function setupRecommendLinks(){
- const url="https://topdiveair-sketch.github.io/Gaeste/";
+ const url=document.getElementById("directRecommend")?.href||"https://www.zuhauseambach-wachau.at/";
  const text="Ich war bei Zuhause am Bach in Aggsbach Markt – perfekt für Welterbesteig-Wanderer und Donauradweg-Radfahrer. Willkommen im Rudel der Wilden Wachauer Windis: "+url;
  const wa=document.getElementById("whatsappRecommend"); if(wa)wa.href="https://wa.me/?text="+enc(text);
  const mail=document.getElementById("mailRecommend"); if(mail)mail.href="mailto:?subject="+enc("Tipp: Zuhause am Bach in der Wachau")+"&body="+enc(text);
@@ -378,7 +395,7 @@ function setupFoodNotice(){
  const box=document.getElementById("foodDayNotice");
  const button=document.getElementById("snackWhatsApp");
  if(!box||!button)return;
- const day=new Date().getDay();
+ const day=new Date(wachauDate()+"T12:00:00Z").getUTCDay();
  if(day===2){
    box.className="food-day-notice warning";
    box.innerHTML="<h3>⚠️ Dienstag</h3><p>Heute ist die Genussterrasse geschlossen. In Aggsbach Markt gibt es derzeit keine verlässliche Möglichkeit zum Abendessen.</p>";
@@ -396,7 +413,7 @@ function setupFoodNotice(){
 Wir möchten gerne eine Jausenplatte vorbestellen.
 
 🥨 Jausenplatte für 2 Personen
-💶 Gesamtpreis: 29,80 €
+💶 Gesamtpreis: 29,90 €
 🕒 Ankunft: _____ Uhr
 👥 Personen: _____
 🧀 Wünsche/Unverträglichkeiten: _____
@@ -431,6 +448,7 @@ function setupQuickBooking(){
 }
 
 document.addEventListener("DOMContentLoaded",()=>{
+ setupGuestNavigation();
  const arrival=document.getElementById("anreise"),chronicle=document.getElementById("chronik");
  if(arrival&&chronicle)arrival.after(chronicle);
  renderChallenge();

@@ -5,7 +5,7 @@ const configured=/^https:\/\//.test(cfg.supabaseUrl||"")&&!String(cfg.supabaseAn
 const db=configured&&window.supabase?window.supabase.createClient(cfg.supabaseUrl,cfg.supabaseAnonKey):null;
 const categories={welterbesteig:"🚶 Welterbesteig",donauradweg:"🚴 Donauradweg",heuriger:"🍷 Heuriger",ausflug:"🌄 Ausflug",windis:"🐾 Windis",marillen:"🍑 Marillen",fruehstueck:"☕ Frühstück",sonstiges:"😊 Sonstiges"};
 const statusTexts={de:["Beiträge werden geladen …","Noch keine veröffentlichten Beiträge.","Die Chronik konnte gerade nicht geladen werden.","📖 Zum Lesen ausklappen"],en:["Loading stories …","No published stories yet.","The chronicle could not be loaded.","📖 Open to read"],cz:["Načítání příspěvků …","Zatím nejsou zveřejněny žádné příspěvky.","Kroniku se nepodařilo načíst.","📖 Rozbalit a číst"],sk:["Načítavajú sa príspevky …","Zatiaľ nie sú zverejnené žiadne príspevky.","Kroniku sa nepodarilo načítať.","📖 Rozbaliť a čítať"],hu:["Bejegyzések betöltése …","Még nincsenek közzétett bejegyzések.","A krónika nem tölthető be.","📖 Megnyitás olvasáshoz"],es:["Cargando historias …","Todavía no hay historias publicadas.","No se pudo cargar la crónica.","📖 Abrir para leer"],fr:["Chargement des histoires …","Aucune histoire publiée pour le moment.","La chronique n’a pas pu être chargée.","📖 Ouvrir pour lire"]};
-function statusText(index){let lang=localStorage.getItem("zabLang")||document.documentElement.lang||"de";if(lang==="cs")lang="cz";return (statusTexts[lang]||statusTexts.de)[index]}
+function statusText(index){let lang=readGuestPreference("zabLang")||document.documentElement.lang||"de";if(lang==="cs")lang="cz";return (statusTexts[lang]||statusTexts.de)[index]}
 const $=id=>document.getElementById(id);
 const photoFormats={
  "image/jpeg":{ext:"jpg",mime:"image/jpeg"},"image/jpg":{ext:"jpg",mime:"image/jpeg"},"image/pjpeg":{ext:"jpg",mime:"image/jpeg"},
@@ -18,22 +18,25 @@ const photoFormats={
 const photoExtensions={jpg:"image/jpeg",jpeg:"image/jpeg",png:"image/png",webp:"image/webp",gif:"image/gif",avif:"image/avif",heic:"image/heic",heif:"image/heif",bmp:"image/bmp",tif:"image/tiff",tiff:"image/tiff"};
 function photoFormat(file){const byMime=photoFormats[String(file.type||"").toLowerCase()];if(byMime)return byMime;const ext=(file.name.split(".").pop()||"").toLowerCase(),mime=photoExtensions[ext];return mime?{ext:ext==="jpeg"?"jpg":ext==="tif"?"tiff":ext,mime}:null}
 const demo=[{id:"willkommen",title:"Willkommen in der Windi-Chronik",body:"Hier sammeln wir bewusst keine Bewertungen und keine Sterne. Uns sind Ihre persönlichen Geschichten und Erlebnisse viel wichtiger: die Geschichten, die Sie von Ihrem Weg mitbringen, besondere Entdeckungen unterwegs und schöne Momente bei uns mit den Wilden Wachauer Windis. Erzählen Sie uns, was Ihnen besonders gefallen hat – damit Ihre Wachau-Erinnerung lebendig bleibt.",category:"windis",author_name:"Fidel, Gloria und Pia",published_at:new Date().toISOString(),photo_urls:[]}];
-function esc(v){const d=document.createElement("div");d.textContent=v??"";return d.innerHTML}
+function esc(v){return escapeHtml(v)}
+function photoUrl(value){try{const url=new URL(value);return ["https:","http:"].includes(url.protocol)?url.href:null}catch(_e){return null}}
 function date(v){return new Intl.DateTimeFormat(document.documentElement.lang||"de",{day:"numeric",month:"long",year:"numeric"}).format(new Date(v))}
-function shareUrl(id){const u=new URL(location.href);u.hash="chronik-"+id;return u.href}
+function shareUrl(id){const u=new URL(location.href);u.hash="chronik-"+encodeURIComponent(id);return u.href}
 function entryHtml(e){
- const photos=(e.photo_urls||[]).slice(0,10).map((src,i)=>`<img src="${esc(src)}" alt="Foto ${i+1}: ${esc(e.title)}" loading="lazy">`).join("");
+ const photos=(Array.isArray(e.photo_urls)?e.photo_urls:[]).map(photoUrl).filter(Boolean).slice(0,10).map((src,i)=>`<img src="${esc(src)}" alt="Foto ${i+1}: ${esc(e.title)}" loading="lazy">`).join("");
  const url=shareUrl(e.id); const qr=`https://api.qrserver.com/v1/create-qr-code/?size=130x130&data=${encodeURIComponent(url)}`;
  return `<details class="chronicle-entry" id="chronik-${esc(e.id)}"><summary class="chronicle-entry-summary"><span class="chronicle-meta">📅 ${date(e.published_at||e.created_at)} · ${categories[e.category]||categories.sonstiges}</span><strong>${esc(e.title)}</strong><span class="chronicle-read-more">${statusText(3)}</span></summary><div class="chronicle-entry-content">${photos?`<div class="chronicle-photos">${photos}</div>`:""}<p>${esc(e.body).replace(/\n/g,"<br>")}</p><div class="chronicle-author">👤 ${esc(e.author_name||"Anonym")}</div><div class="entry-footer"><details class="share-details"><summary>🔗 Teilen & QR-Code</summary><img class="entry-qr" src="${qr}" alt="QR-Code zu diesem Beitrag"><a href="${url}">${esc(url)}</a></details></div></div></details>`;
 }
-function openLinkedEntry(){if(!location.hash.startsWith("#chronik-"))return;const target=document.getElementById(decodeURIComponent(location.hash.slice(1)));if(target?.matches?.("details.chronicle-entry")){target.open=true;setTimeout(()=>target.scrollIntoView({behavior:"smooth",block:"start"}),60)}}
+function openLinkedEntry(){if(!location.hash.startsWith("#chronik-"))return;let id;try{id=decodeURIComponent(location.hash.slice(1))}catch(_e){return}const target=document.getElementById(id);if(target?.matches?.("details.chronicle-entry")){target.open=true;setTimeout(()=>target.scrollIntoView({behavior:"smooth",block:"start"}),60)}}
 async function loadPublished(){
  const box=$("chronicleEntries"),status=$("chronicleStatus"); if(!box)return;
  if(!db){status.textContent="Demo-Betrieb – für gemeinsame Beiträge muss Supabase verbunden werden.";status.className="chronicle-status demo";box.innerHTML=demo.map(entryHtml).join("");return}
  status.textContent=statusText(0);
- const {data,error}=await db.from("chronicle_entries").select("id,title,body,category,author_name,published_at,photo_urls").eq("status","published").order("published_at",{ascending:false});
- if(error){status.textContent=statusText(2);box.innerHTML="";return}
- status.textContent=data.length?`${data.length} veröffentlichte Beiträge`:statusText(1);box.innerHTML=data.map(entryHtml).join("");openLinkedEntry();
+ try{
+  const {data,error}=await db.from("chronicle_entries").select("id,title,body,category,author_name,published_at,photo_urls").eq("status","published").order("published_at",{ascending:false});
+  if(error||!Array.isArray(data))throw error||new Error("Invalid chronicle response");
+  status.textContent=data.length?`${data.length} veröffentlichte Beiträge`:statusText(1);box.innerHTML=data.map(entryHtml).join("");openLinkedEntry();
+ }catch(_e){status.textContent=statusText(2);box.innerHTML=""}
 }
 async function uploadPhotos(files,entryId){
  const urls=[];
