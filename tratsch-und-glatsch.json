@@ -1,35 +1,35 @@
 {
-  "editionDate": "2026-10-03",
-  "editionLabel": "Samstag, 3. Oktober 2026",
-  "intro": "Grüß euch, ich bin Pia! Heute prägt der WACHAU TRAIL den Welterbesteig: Die langen Bewerbe sind seit der Nacht unterwegs, weitere Starts folgen in Spitz, Weißenkirchen und Dürnstein. In Spitz stehen außerdem „Schiff & Wein“, die Zornberghütte und drei Ausschankstationen in den Weinterrassen auf dem Programm. 15 Heurige am Nordufer sind für Samstag bestätigt geöffnet; Schloss Heurige hat heute den letzten Öffnungstag dieses Aussteckzeitraums. DDSG und Rollfähren bleiben wegen Niedrigwassers eingeschränkt. Das Wetter kommt live aus der Gäste-App.",
+  "editionDate": "2026-10-04",
+  "editionLabel": "Sonntag, 4. Oktober 2026",
+  "intro": "Grüß euch, ich bin Pia! Heute stehen am Nordufer vier bestätigte Sonntagstermine im Mittelpunkt: die Pfarrwallfahrt ab Aggsbach Markt, Erntedank in Spitz, die Musikalische Weinterrasse in der Ried Setzberg und die wetterabhängige Zornberghütte. 12 Heurige sind für heute bestätigt geöffnet; Schauer, Mayer, Höllmüller in Joching und Brustbauer haben den letzten Tag ihres aktuellen Aussteckzeitraums. DDSG und Rollfähren bleiben wegen Niedrigwassers eingeschränkt. Das Wetter kommt live aus der Gäste-App.",
   "important": [
     {
-      "title": "Heute: WACHAU TRAIL auf dem Welterbesteig",
-      "text": "Die langen Bewerbe sind seit der Nacht unterwegs. In Spitz starten heute die WACHAU56-Wanderer um 06:00 Uhr, die Läufer um 08:00 Uhr und der WACHAU35 um 10:00 Uhr; Weißenkirchen folgt um 11:00 Uhr, Dürnstein um 13:00 Uhr. Die Anmeldung ist geschlossen. Auf markierten Wanderwegen bitte mit vielen Teilnehmenden rechnen und die Wettkampfstrecke freihalten.",
-      "source": "https://www.wachautrail.at/start-ziel",
-      "sourceLabel": "WACHAU TRAIL"
+      "title": "Heute: Pfarrwallfahrt ab Aggsbach Markt",
+      "text": "Die Pfarrwallfahrt nach Maria Laach findet heute wie geplant statt. Gemeinsamer Abmarsch ist um 08:00 Uhr bei der Kirche in Aggsbach Markt.",
+      "source": "https://www.aggsbach.gv.at/Pfarrwallfahrt",
+      "sourceLabel": "Marktgemeinde Aggsbach"
     },
     {
-      "title": "Heute: Schiff & Wein",
-      "text": "Die Museumsführung mit kommentierter Weinverkostung findet von 10:00 bis 12:00 Uhr im Schifffahrtsmuseum Spitz statt. Die Anmeldung endete gestern um 16:00 Uhr; Teilnahme nur mit bestätigter Buchung.",
-      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199536/schiff-wein",
+      "title": "Heute: Erntedank in Spitz",
+      "text": "Der Festumzug beginnt beim alten Rathaus, danach folgen Erntedankmesse, Kronentanz, Frühschoppen und erster Sturm am Kirchenplatz. Die offizielle Seite nennt im Detail 10:00 Uhr als Beginn und in der Terminzeile 09:45 Uhr; für den Umzug besser spätestens um 09:45 Uhr vor Ort sein.",
+      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199260/erntedank",
       "sourceLabel": "Tourismusverein Spitz"
     },
     {
-      "title": "Heute: Spitzer Winzer in den Weinterrassen",
-      "text": "Von 13:00 bis 17:00 Uhr schenken Weingut Lechner beim Roten Tor, Weingut Hofstätter bei der Ruine Hinterhaus und Weingut Christoph Donabaum am 1000-Eimerberg aus. Die Stationen sind nur zu Fuß erreichbar; die Veranstaltung findet nur bei Schönwetter statt.",
-      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232240/spitzer-winzer-in-den-weinterrassen",
+      "title": "Heute: Musikalische Weinterrasse",
+      "text": "In der Ried Setzberg wird von 10:00 bis 16:00 Uhr ausgeschenkt, Musik spielt von 11:00 bis 15:00 Uhr. Die Zufahrten zum Veranstaltungsort sind gesperrt; öffentliche Anreise oder Fußweg einplanen. Der Freilufttermin ist witterungsabhängig.",
+      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/228286/musikalische-weinterrasse-in-der-ried-setzberg",
       "sourceLabel": "Tourismusverein Spitz"
     },
     {
       "title": "Heute: Zornberghütte",
-      "text": "Die Zornberghütte am Panoramaweg Spitzer Graben ist von 11:00 bis 16:00 Uhr als Einkehr vorgesehen. Der Termin findet nur bei Schönwetter statt.",
+      "text": "Die Zornberghütte am Panoramaweg Spitzer Graben ist von 11:00 bis 16:00 Uhr bewirtschaftet. Der Termin findet nur bei Schönwetter statt; Änderungen sind vorbehalten.",
       "source": "https://www.spitz-wachau.com/wanderbares/zornberghuette",
       "sourceLabel": "Tourismusverein Spitz"
     },
     {
-      "title": "DDSG mit Einschränkungen wegen Niedrigwassers",
-      "text": "Die DDSG nennt heute 09:00 Uhr als nächste Fahrt, weist aber ausdrücklich darauf hin, dass derzeit nicht alle Fahrten durchgeführt werden können. Verbindlich sind nur die im Buchungsbereich aktuell auswählbaren Verbindungen.",
+      "title": "DDSG: Niedrigwasser und Saisonwechsel",
+      "text": "Wegen Niedrigwassers können heute nicht alle Fahrten durchgeführt werden; verbindlich sind nur die aktuell buchbaren Verbindungen. Heute endet der Hauptsaisonfahrplan, ab Montag gilt der Nachsaisonfahrplan.",
       "source": "https://ddsg-blue-danube.at/de/produkte/wachauschifffahrten/",
       "sourceLabel": "DDSG Blue Danube"
     },
@@ -40,24 +40,24 @@
       "sourceLabel": "Marktgemeinde Weißenkirchen"
     },
     {
-      "title": "Morgen: großer Veranstaltungssonntag",
-      "text": "Am Sonntag stehen die Pfarrwallfahrt ab Aggsbach Markt, Erntedank in Spitz, die Musikalische Weinterrasse in der Ried Setzberg und nochmals die Zornberghütte auf dem Programm. Zur Ried Setzberg sind die Zufahrten gesperrt; öffentliche Anreise oder Fußweg einplanen.",
-      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/228286/musikalische-weinterrasse-in-der-ried-setzberg",
-      "sourceLabel": "Tourismusverein Spitz"
+      "title": "Vier Heurige mit heutigem letztem Ausstecktag",
+      "text": "Buschenschank Schauer, Weingut Mayer, Weingut Höllmüller in Joching und Weinhauer Brustbauer beenden heute ihren aktuellen Aussteckzeitraum. Bei FLOTT ist die heutige Öffnung bestätigt, die offiziellen Quellen nennen für das Ende jedoch abweichend den 4. bzw. 6. Oktober; daher kein letzter-Tag-Hinweis.",
+      "source": "https://heurigenkalender.niederoesterreich.at/",
+      "sourceLabel": "Heurigenkalender Niederösterreich"
     }
   ],
   "outdoor": [
     {
-      "title": "Donauradweg, B3 und örtliche Verkehrsmaßnahmen",
-      "text": "Die heute geprüfte regionale Übersicht führt für Emmersdorf–Aggsbach Markt–Spitz–Weißenkirchen–Dürnstein keine allgemeine Sperre des Donauradwegs oder der B3 an. Durch den WACHAU TRAIL ist heute jedoch mit zusätzlichem Verkehr rund um die Startorte und auf Zugängen zum Welterbesteig zu rechnen. In Aggsbach und Spitz gelten außerdem örtliche Verkehrsmaßnahmen; Beschilderung beachten.",
+      "title": "Donauradweg, B3 und Zufahrt Ried Setzberg",
+      "text": "Für den Norduferabschnitt Emmersdorf–Aggsbach Markt–Spitz–Weißenkirchen–Dürnstein ist heute keine allgemeine Sperre des Donauradwegs oder der B3 ausgewiesen. In Spitz sind jedoch die Zufahrten zur Musikalischen Weinterrasse in der Ried Setzberg gesperrt; Beschilderung beachten und zu Fuß oder öffentlich anreisen.",
       "links": [
         {
-          "label": "Regionale aktuelle Hinweise",
-          "url": "https://www.donau.com/aktuelle-hinweise"
+          "label": "Donauradweg Nordufer",
+          "url": "https://www.donau.com/touren/donauradweg-etappe-5-nordufer-emmersdorf-krems"
         },
         {
-          "label": "WACHAU TRAIL",
-          "url": "https://www.wachautrail.at/"
+          "label": "Musikalische Weinterrasse",
+          "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/228286/musikalische-weinterrasse-in-der-ried-setzberg"
         },
         {
           "label": "Amtstafel Aggsbach",
@@ -70,46 +70,46 @@
       ]
     },
     {
-      "title": "Wachaubahn fährt heute regulär",
-      "text": "Bis 1. November gilt täglicher Saisonbetrieb. Ab Aggsbach Markt Richtung Spitz/Dürnstein fährt die Bahn um 10:25, 12:25, 15:05 und 18:05 Uhr, Richtung Emmersdorf um 09:54, 11:54, 13:54 und 16:54 Uhr. Aggsbach Markt, Willendorf, Schwallenbach und Wösendorf-Joching sind Bedarfshalte.",
+      "title": "Wachaubahn fährt heute",
+      "text": "Der Saisonfahrplan gilt bis 1. November. Ab Aggsbach Markt Richtung Spitz, Weißenkirchen und Dürnstein fährt die Bahn um 10:25, 12:25, 15:05 und 18:05 Uhr, Richtung Emmersdorf um 09:54, 11:54, 13:54 und 16:54 Uhr. Aggsbach Markt, Willendorf, Schwallenbach und Wösendorf-Joching sind Bedarfshalte.",
       "links": [
         {
-          "label": "Fahrplan 2026",
+          "label": "Wachaubahn-Fahrplan 2026",
           "url": "https://www.wachaubahn.at/fahrplan"
         }
       ]
     },
     {
       "title": "Bus 715",
-      "text": "Auf der heute geprüften VOR-Seite ist keine eigene Störungsmeldung zur Linie 715 oder zum Zielabschnitt ausgewiesen. Die konkrete Verbindung zwischen Emmersdorf, Aggsbach Markt, Spitz, Weißenkirchen und Dürnstein vor Abfahrt im Routenplaner prüfen; öffentliche Verkehrsmittel sind heute wegen der Trail-Veranstaltung besonders sinnvoll.",
+      "text": "Die Linie 715 verbindet Melk und Krems am nördlichen Donauufer im Stundentakt. Für die konkrete Abfahrt bitte den VOR-Routenplaner prüfen; rund um die Spitzer Veranstaltungen kann es lokal zu mehr Andrang kommen.",
       "links": [
+        {
+          "label": "Mobil in der Wachau",
+          "url": "https://www.vor.at/wachau"
+        },
         {
           "label": "VOR-Routenplaner",
           "url": "https://anachb.vor.at/"
-        },
-        {
-          "label": "VOR-Verkehrsmeldungen",
-          "url": "https://www.vor.at/aktuelles/news/verkehrsmeldungen"
         }
       ]
     },
     {
-      "title": "Welterbesteig heute stark frequentiert",
-      "text": "Mehrere WACHAU-TRAIL-Distanzen verlaufen heute über Abschnitte des Welterbesteigs. Starts erfolgen unter anderem in Spitz, Weißenkirchen und Dürnstein; die langen Bewerbe sind bereits seit der Nacht unterwegs. Wandernde sollten markierte Strecken freihalten und mit Gegenverkehr rechnen.",
+      "title": "Welterbesteig und Panoramawege",
+      "text": "Für die Etappen am Nordufer ist keine allgemeine Sperre ausgewiesen. Rund um Spitz führen heute Erntedank, Musikalische Weinterrasse und Zornberghütte zu mehr Betrieb; die Freiluftangebote sind witterungsabhängig und die Ried Setzberg nur zu Fuß erreichbar.",
       "links": [
         {
-          "label": "Startorte und Startzeiten",
-          "url": "https://www.wachautrail.at/start-ziel"
+          "label": "Welterbesteig Weißenkirchen–Spitz",
+          "url": "https://www.donau.com/wachau-nibelungengau-kremstal/touren/welterbesteig-wachau-03-weissenkirchen-spitz"
         },
         {
-          "label": "Etappe Weißenkirchen–Spitz",
-          "url": "https://www.donau.com/wachau-nibelungengau-kremstal/touren/welterbesteig-wachau-03-weissenkirchen-spitz"
+          "label": "Zornberghütte",
+          "url": "https://www.spitz-wachau.com/wanderbares/zornberghuette"
         }
       ]
     },
     {
       "title": "Rollfähre Spitz wasserstandsabhängig",
-      "text": "Samstags gelten regulär 08:15–19:30 Uhr, letzte Fahrt 15 Minuten vor Betriebsschluss. Bei Niedrigwasser können Autos ausgeschlossen werden; bei noch niedrigerem Wasserstand, Nebel, Sturm oder anderer ungeeigneter Witterung ist kein Betrieb möglich.",
+      "text": "Für Sonntag gilt regulär 08:15–19:30 Uhr, letzte Fahrt 15 Minuten vor Betriebsschluss. Bei Niedrigwasser können Autos ausgeschlossen werden; bei noch niedrigerem Wasserstand, Nebel, Sturm oder anderer ungeeigneter Witterung ist kein Betrieb möglich.",
       "links": [
         {
           "label": "Rollfähre Spitz–Arnsdorf",
@@ -120,59 +120,31 @@
   ],
   "events": [
     {
-      "date": "03.10.2026, ganztägig",
-      "place": "Nordufer zwischen Emmersdorf, Spitz, Weißenkirchen und Dürnstein",
-      "title": "WACHAU TRAIL",
-      "note": "Die langen Bewerbe sind seit der Nacht unterwegs; weitere Starts heute in Spitz um 06:00, 08:00 und 10:00 Uhr, in Weißenkirchen um 11:00 Uhr und in Dürnstein um 13:00 Uhr. Anmeldung geschlossen.",
-      "url": "https://www.wachautrail.at/start-ziel"
-    },
-    {
-      "date": "03.10.2026, 10:00–12:00 Uhr",
-      "place": "Spitz, Schifffahrtsmuseum",
-      "title": "Schiff & Wein",
-      "note": "Museumsführung mit kommentierter Weinverkostung, 25 Euro. Die Anmeldung endete gestern; Teilnahme nur mit bestätigter Buchung.",
-      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199536/schiff-wein"
-    },
-    {
-      "date": "03.10.2026, 11:00–16:00 Uhr",
-      "place": "Spitz, Zornberghütte",
-      "title": "Schmankerl bei der Zornberghütte",
-      "note": "Einkehr am Panoramaweg Spitzer Graben; findet nur bei Schönwetter statt.",
-      "url": "https://www.spitz-wachau.com/wanderbares/zornberghuette"
-    },
-    {
-      "date": "03.10.2026, 13:00–17:00 Uhr",
-      "place": "Spitz, Weinterrassen",
-      "title": "Spitzer Winzer in den Weinterrassen",
-      "note": "Ausschank beim Roten Tor, bei der Ruine Hinterhaus und am 1000-Eimerberg; nur zu Fuß erreichbar und nur bei Schönwetter.",
-      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232240/spitzer-winzer-in-den-weinterrassen"
-    },
-    {
       "date": "04.10.2026, 08:00 Uhr",
       "place": "Aggsbach Markt, Kirche",
       "title": "Pfarrwallfahrt nach Maria Laach",
-      "note": "Die Gemeinde bestätigt den Termin; gemeinsamer Abmarsch um 08:00 Uhr bei der Kirche in Aggsbach Markt.",
+      "note": "Gemeinsamer Abmarsch um 08:00 Uhr; die Gemeinde bestätigt, dass die Veranstaltung wie geplant stattfindet.",
       "url": "https://www.aggsbach.gv.at/Pfarrwallfahrt"
     },
     {
-      "date": "04.10.2026, 10:00 Uhr",
-      "place": "Spitz, Kirchenplatz und Marktstraße",
+      "date": "04.10.2026, ab 09:45/10:00 Uhr",
+      "place": "Spitz, altes Rathaus, Pfarrkirche und Kirchenplatz",
       "title": "Erntedank in Spitz",
-      "note": "Festumzug, Erntedankmesse, Kronentanz, Frühschoppen und Ausschank des ersten Sturms.",
+      "note": "Festumzug, Messe, Kronentanz, Frühschoppen und erster Sturm. Die offizielle Seite nennt 10:00 Uhr als Beginn und 09:45 Uhr in der Terminzeile; spätestens 09:45 Uhr einplanen.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199260/erntedank"
     },
     {
       "date": "04.10.2026, 10:00–16:00 Uhr",
       "place": "Spitz, Ried Setzberg",
       "title": "Musikalische Weinterrasse",
-      "note": "Ausschank ab 10:00 Uhr, Musik von 11:00 bis 15:00 Uhr. Die Zufahrten sind gesperrt; öffentliche Anreise oder Fußweg einplanen.",
+      "note": "Ausschank ab 10:00 Uhr, Musik von 11:00 bis 15:00 Uhr. Zufahrten gesperrt; öffentliche Anreise oder Fußweg. Witterungsabhängiger Freilufttermin.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/228286/musikalische-weinterrasse-in-der-ried-setzberg"
     },
     {
       "date": "04.10.2026, 11:00–16:00 Uhr",
       "place": "Spitz, Zornberghütte",
       "title": "Schmankerl bei der Zornberghütte",
-      "note": "Einkehr am Panoramaweg Spitzer Graben; findet nur bei Schönwetter statt.",
+      "note": "Einkehr am Panoramaweg Spitzer Graben; nur bei Schönwetter, Änderungen vorbehalten.",
       "url": "https://www.spitz-wachau.com/wanderbares/zornberghuette"
     },
     {
@@ -186,7 +158,7 @@
       "date": "05.10.2026",
       "place": "Spitz, Weingut Lagler",
       "title": "Weinsensoriktraining",
-      "note": "Der Termin ist im aktuellen Spitzer Veranstaltungskalender bestätigt; Teilnahmebedingungen und Beginnzeit vorab beim Veranstalter prüfen.",
+      "note": "Der Termin ist im aktuellen Spitzer Veranstaltungskalender bestätigt; Beginn und Teilnahmebedingungen vorab beim Veranstalter prüfen.",
       "url": "https://www.spitz-wachau.com/veranstaltungskalender"
     },
     {
@@ -211,10 +183,31 @@
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199524/wachauer-marille-von-der-bluete-bis-zum-genuss"
     },
     {
-      "date": "01.–30.10.2026, Montag bis Freitag",
+      "date": "10.10.2026, 10:00–12:00 Uhr",
+      "place": "Spitz, Schifffahrtsmuseum",
+      "title": "Schiff & Wein",
+      "note": "Museumsführung mit kommentierter Weinverkostung; Anmeldung bis Freitag, 9. Oktober, 16:00 Uhr erforderlich.",
+      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199536/schiff-wein"
+    },
+    {
+      "date": "10.10.2026, 11:00–16:00 Uhr",
+      "place": "Spitz, Zornberghütte",
+      "title": "Schmankerl bei der Zornberghütte",
+      "note": "Einkehr am Panoramaweg Spitzer Graben; nur bei Schönwetter, Änderungen vorbehalten.",
+      "url": "https://www.spitz-wachau.com/wanderbares/zornberghuette"
+    },
+    {
+      "date": "10.10.2026, 13:00–17:00 Uhr",
+      "place": "Spitz, Weinterrassen",
+      "title": "Spitzer Winzer in den Weinterrassen",
+      "note": "Ausschankstationen in den Weinrieden; nur zu Fuß erreichbar und nur bei Schönwetter.",
+      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232240/spitzer-winzer-in-den-weinterrassen"
+    },
+    {
+      "date": "01.–30.10.2026, Montag bis Freitag ab 07:00 Uhr",
       "place": "Spitz, Weingut Lagler",
       "title": "Weinherbst 2026 – Laglers Weinerlebnis",
-      "note": "Mitarbeit bei der Weinlese nur werktags und bei Schönwetter; 35 Euro inklusive Verpflegung und Diplom. Anmeldung mindestens zwei Tage vorher erforderlich.",
+      "note": "Mitarbeit bei der Weinlese nur werktags und bei Schönwetter; Anmeldung mindestens zwei Tage vorher erforderlich.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/70941/weinherbst-2026-laglers-weinerlebnis"
     }
   ],
@@ -223,13 +216,13 @@
       "name": "Die Schlosserei | Heuriger | Bar",
       "place": "Emmersdorf-Luberegg",
       "period": "17.09.–20.12.2026",
-      "hours": "Heute 16:00–21:00 Uhr",
+      "hours": "Heute 12:00–20:00 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/223845/die-schlosserei-heuriger-bar"
     },
     {
       "name": "Weingut Florian und Sabine Höllmüller „FLOTT“",
       "place": "Spitz",
-      "period": "25.09.–04.10.2026",
+      "period": "Heute geöffnet; offizielles Enddatum je nach Quelle 04. bzw. 06.10.2026",
       "hours": "Heute 15:00–23:00 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/156935/weingut-florian-und-sabine-hllmller-flott"
     },
@@ -237,29 +230,15 @@
       "name": "Buschenschank Schauer",
       "place": "Schwallenbach",
       "period": "12.09.–04.10.2026",
-      "hours": "Heute ab 14:00 Uhr",
+      "hours": "Heute ab 14:00 Uhr; letzter Tag",
       "url": "https://heurigenkalender.niederoesterreich.at/156624/buschenschank-schauer"
-    },
-    {
-      "name": "Heuriger Özelt",
-      "place": "Spitz",
-      "period": "05.08.–26.10.2026",
-      "hours": "Heute 16:00–23:00 Uhr",
-      "url": "https://heurigenkalender.niederoesterreich.at/200943/offen-is-heuriger-zi"
     },
     {
       "name": "Weingut Mayer",
       "place": "Spitz, Gut am Steg",
-      "period": "02.–04.10.2026",
-      "hours": "Heute ab 16:00 Uhr",
-      "url": "https://mayerwein.at/heuriger/"
-    },
-    {
-      "name": "Schloss Heurige",
-      "place": "Spitz, Schloss zu Spitz",
-      "period": "02.–03.10.2026",
-      "hours": "Heute 16:00–22:00 Uhr; letzter Tag, keine Reservierungen",
-      "url": "https://heurigenkalender.niederoesterreich.at/199547/schloss-heurige"
+      "period": "25.09.–04.10.2026",
+      "hours": "Heute ab 14:30 Uhr; letzter Tag",
+      "url": "https://heurigenkalender.niederoesterreich.at/156622/weingut-mayer"
     },
     {
       "name": "Heuriger Mang Hermenegild",
@@ -293,8 +272,8 @@
       "name": "Weingut Höllmüller",
       "place": "Joching",
       "period": "02.–04.10.2026",
-      "hours": "Heute ab 15:00 Uhr",
-      "url": "https://heurigenkalender.niederoesterreich.at/30938/weingut-hllmller"
+      "hours": "Heute ab 15:00 Uhr; letzter Tag",
+      "url": "https://heurigenkalender.niederoesterreich.at/30938/heuriger-weingut-hllmller"
     },
     {
       "name": "Heuriger Weingut Trautsamwieser",
@@ -314,15 +293,8 @@
       "name": "Weinhauer Brustbauer",
       "place": "Dürnstein, Oberloiben",
       "period": "02.–04.10.2026",
-      "hours": "Heute ab 12:00 Uhr",
+      "hours": "Heute ab 12:00 Uhr; letzter Tag",
       "url": "https://heurigenkalender.niederoesterreich.at/184075/weinhauer-brustbauer"
-    },
-    {
-      "name": "Grill-Heuriger Küffer Keller",
-      "place": "Dürnstein",
-      "period": "01.05.–10.10.2026",
-      "hours": "Heute ab 17:00 Uhr",
-      "url": "https://heurigenkalender.niederoesterreich.at/169394/grill-heuriger-kffer-keller"
     }
   ],
   "openingSoon": [
@@ -338,35 +310,31 @@
       "name": "Weingut Höllmüller",
       "place": "Joching",
       "hours": "Nächster bestätigter Aussteckbeginn am Freitag, 9. Oktober, ab 17:00 Uhr; Aussteckzeit 09.–11.10.2026.",
-      "url": "https://heurigenkalender.niederoesterreich.at/30938/weingut-hllmller"
+      "url": "https://heurigenkalender.niederoesterreich.at/30938/heuriger-weingut-hllmller"
     },
     {
       "date": "09.10.2026",
       "name": "Weingut Mayer",
       "place": "Spitz, Gut am Steg",
       "hours": "Nächster bestätigter Aussteckbeginn am Freitag, 9. Oktober, ab 16:00 Uhr; Aussteckzeit 09.–11.10.2026.",
-      "url": "https://mayerwein.at/heuriger/"
+      "url": "https://heurigenkalender.niederoesterreich.at/156622/weingut-mayer"
     },
     {
       "date": "09.10.2026",
       "name": "Schloss Heurige",
       "place": "Spitz, Schloss zu Spitz",
-      "hours": "Nächster bestätigter Aussteckbeginn am Freitag, 9. Oktober, von 16:00 bis 22:00 Uhr; außerdem Samstag, 10. Oktober.",
+      "hours": "Nächster bestätigter Aussteckbeginn am Freitag, 9. Oktober, 16:00–22:00 Uhr; außerdem Samstag, 10. Oktober.",
       "url": "https://heurigenkalender.niederoesterreich.at/199547/schloss-heurige"
     }
   ],
-  "piaTip": "Pias Samstagstipp: Heute lohnt sich frühes Planen. Der WACHAU TRAIL bringt viel Betrieb auf den Welterbesteig, während in Spitz „Schiff & Wein“, die Zornberghütte und drei Ausschankstationen in den Weinterrassen warten. Die Außenveranstaltungen finden nur bei Schönwetter statt. Bei Fähre oder Schiff die tatsächlich verfügbare Verbindung unmittelbar vor dem Start nochmals prüfen.",
+  "piaTip": "Pias Sonntagstipp: Früh nach Spitz starten: Für den Erntedank nennt die offizielle Seite 09:45 Uhr in der Terminzeile und 10:00 Uhr als Beginn. Danach lassen sich die Musikalische Weinterrasse in der Ried Setzberg oder die Zornberghütte zu Fuß verbinden – beide Freiluftangebote sind witterungsabhängig. Für Fähre und DDSG die tatsächlich verfügbare Verbindung unmittelbar vor dem Start nochmals prüfen.",
   "goodToKnow": [
     "Das Wetter wird in der Gäste-App live geladen und deshalb nicht statisch in Tratsch & Klatsch gespeichert.",
-    "Heute sind 15 Heurige am Nordufer bestätigt geöffnet.",
-    "Schloss Heurige hat heute den letzten Tag des aktuellen Aussteckzeitraums.",
-    "FLOTT, Schauer, Mayer, Höllmüller in Joching und Brustbauer haben morgen ihren letzten bestätigten Ausstecktag.",
-    "Der WACHAU TRAIL sorgt heute auf Teilen des Welterbesteigs und rund um die Startorte für zusätzlichen Betrieb; die Anmeldung ist geschlossen.",
-    "Die Veranstaltungen bei der Zornberghütte und in den Weinterrassen finden nur bei Schönwetter statt.",
-    "Die DDSG kann wegen Niedrigwassers derzeit nicht alle Fahrten durchführen; maßgeblich sind die aktuell buchbaren Verbindungen.",
-    "Die Wachaubahn fährt bis 1. November täglich; die kleinen Stationen im Zielabschnitt sind Bedarfshalte.",
-    "Bei den Rollfähren wegen Niedrigwassers weiterhin mit kurzfristigen Änderungen rechnen.",
-    "Morgen startet die Pfarrwallfahrt nach Maria Laach um 08:00 Uhr bei der Kirche in Aggsbach Markt.",
-    "Am 9. Oktober sind bestätigte Starts beziehungsweise Wiedereröffnungen bei Fanie’s Heuriger, Höllmüller, Mayer und Schloss Heurige vorgesehen."
+    "Heute sind 12 Heurige am Nordufer bestätigt geöffnet.",
+    "Buschenschank Schauer, Weingut Mayer, Weingut Höllmüller in Joching und Weinhauer Brustbauer haben heute den letzten Tag ihres aktuellen Aussteckzeitraums.",
+    "Bei FLOTT ist die heutige Öffnung bestätigt; zum Enddatum des Aussteckzeitraums widersprechen sich zwei offizielle Quellen, daher ist kein letzter-Tag-Hinweis gesetzt.",
+    "Vier bestätigte Heurigenöffnungen beziehungsweise Wiederöffnungen sind für Freitag, 9. Oktober, vorgemerkt.",
+    "Die Rollfähren und die DDSG können bei Niedrigwasser kurzfristig weitere Fahrten oder Fahrzeugtransporte einschränken.",
+    "Ab Montag, 5. Oktober, wechselt die DDSG vom Haupt- in den Nachsaisonfahrplan."
   ]
 }
