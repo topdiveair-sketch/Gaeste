@@ -1,40 +1,40 @@
 {
-  "editionDate": "2026-10-06",
-  "editionLabel": "Dienstag, 6. Oktober 2026",
-  "intro": "Grüß euch, ich bin Pia! Heute sind am Nordufer acht Heurige bestätigt geöffnet. FLOTT in Spitz und die Weingartlerei Denk Petra in Wösendorf haben ihren letzten Ausstecktag. Wer morgen beim Lagler-Erlebnis „Dem Winzer über die Schultern schauen“ dabei sein möchte, muss sich heute bis 18:00 Uhr anmelden. Die DDSG fährt im Nachsaisonfahrplan, wegen Niedrigwassers bleiben aber ausschließlich die aktuell buchbaren Verbindungen verbindlich. Das Wetter kommt live aus der Gäste-App.",
+  "editionDate": "2026-10-07",
+  "editionLabel": "Mittwoch, 7. Oktober 2026",
+  "intro": "Grüß euch, ich bin Pia! Heute stehen am Nordufer zwei bestätigte Termine im Mittelpunkt: Um 15:00 Uhr beginnt bei Lagler in Spitz „Dem Winzer über die Schultern schauen“, am Abend folgt Line Dance im Venussaal Aggsbach Markt. Sieben Heurige sind heute bestätigt geöffnet. Für die morgige Vinea-Archivführung endet die Anmeldung heute um 16:00 Uhr. Die DDSG fährt wegen Niedrigwassers nur mit den aktuell buchbaren Verbindungen. Das Wetter kommt live aus der Gäste-App.",
   "important": [
     {
-      "title": "Heute: zwei letzte Ausstecktage",
-      "text": "FLOTT in Spitz ist heute von 15:00 bis 23:00 Uhr geöffnet, die Weingartlerei Denk Petra in Wösendorf ab 15:00 Uhr. Bei beiden endet heute der aktuelle Aussteckzeitraum.",
-      "source": "https://heurigenkalender.niederoesterreich.at/156935/weingut-florian-und-sabine-hllmller-flott",
-      "sourceLabel": "Heurigenkalender Niederösterreich"
+      "title": "Heute 15:00 Uhr: Blick hinter die Kulissen bei Lagler",
+      "text": "„Dem Winzer über die Schultern schauen“ findet heute von 15:00 bis 17:00 Uhr im Weingut Lagler in Spitz statt. Preis: 40 Euro inklusive kommentierter Weinverkostung. Die vorgeschriebene Anmeldung war bis gestern 18:00 Uhr möglich; Teilnahme daher nur mit bereits bestätigter Anmeldung.",
+      "source": "https://spitz.va.vdbnoe.gugler.at/232242/weingut-lagler-dem-winzer-ber-die-schultern-schauen",
+      "sourceLabel": "Veranstaltungskalender Spitz"
     },
     {
-      "title": "Weingut Mayer heute geöffnet",
-      "text": "Der heute neu geprüfte Detaileintrag führt den Aussteckzeitraum durchgehend vom 2. bis 15. Oktober. Das Weingut Mayer in Gut am Steg öffnet heute um 16:00 Uhr und wird deshalb bereits unter den heutigen Heurigen geführt.",
-      "source": "https://heurigenkalender.niederoesterreich.at/156622/weingut-mayer",
-      "sourceLabel": "Heurigenkalender Niederösterreich"
-    },
-    {
-      "title": "Heute 18:00 Uhr: Anmeldeschluss bei Lagler",
-      "text": "Für „Dem Winzer über die Schultern schauen“ morgen von 15:00 bis 17:00 Uhr ist die Anmeldung bis heute um 18:00 Uhr erforderlich. Preis: 40 Euro pro Person inklusive kommentierter Weinverkostung.",
-      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail?tx_vadb_detail%5Baction%5D=detail&tx_vadb_detail%5Bcontroller%5D=Vadb&tx_vadb_detail%5Bid%5D=232242",
-      "sourceLabel": "Tourismusverein Spitz"
-    },
-    {
-      "title": "Morgen: Line Dance in Aggsbach Markt",
-      "text": "Der Termin im Venussaal findet wie geplant statt. Die Gemeindeseite nennt 18:00 Uhr, weist aber zugleich darauf hin, dass die Gruppe am Vortag per WhatsApp über 18:00 oder 19:00 Uhr informiert wird.",
+      "title": "Heute: Line Dance in Aggsbach Markt",
+      "text": "Der Termin im Venussaal findet wie geplant statt. Die Gemeindeseite nennt 18:00 Uhr, weist jedoch darauf hin, dass die Gruppe am Vortag per WhatsApp über 18:00 oder 19:00 Uhr informiert wird.",
       "source": "https://www.aggsbach.gv.at/Line_dance_fuer_Anfaenger_und_Fortgeschrittene",
       "sourceLabel": "Marktgemeinde Aggsbach"
     },
     {
-      "title": "DDSG: Nachsaison und Niedrigwasser",
-      "text": "Der Nachsaisonfahrplan gilt bis 1. November. Die tägliche MS Dürnstein hält am Nordufer in Dürnstein und Spitz; Weißenkirchen und Emmersdorf sind bei dieser Fahrt nicht vorgesehen. Wegen Niedrigwassers sind nur die aktuell auswählbaren und buchbaren Verbindungen verbindlich.",
-      "source": "https://ddsg-blue-danube.at/de/produkte/wachauschifffahrten/",
+      "title": "Heute 16:00 Uhr: Anmeldeschluss fürs Vinea-Archiv",
+      "text": "Für die morgige Archivführung im Schifffahrtsmuseum Spitz von 16:00 bis 18:00 Uhr ist die Anmeldung bis heute um 16:00 Uhr erforderlich. Preis: 30 Euro inklusive Führung, Verkostung und Museumseintritt.",
+      "source": "https://spitz.va.vdbnoe.gugler.at/232243/das-archiv-der-vinea-wachau-kompromisslos-einzigartig",
+      "sourceLabel": "Veranstaltungskalender Spitz"
+    },
+    {
+      "title": "Heute sieben Heurige bestätigt geöffnet",
+      "text": "Neu gegenüber Dienstag sind der Heurige Özelt in Spitz und die Weinerei Schwaiger in Wösendorf geöffnet. FLOTT und Weingartlerei Denk Petra wurden nach dem Ende ihrer Aussteckzeiten entfernt; Ferdl Denk hat mittwochs Ruhetag.",
+      "source": "https://heurigenkalender.niederoesterreich.at/Gemeinde/31351/Weienkirchen-in-der-wachau",
+      "sourceLabel": "Heurigenkalender Niederösterreich"
+    },
+    {
+      "title": "DDSG: Niedrigwasser schränkt Fahrplan ein",
+      "text": "Für heute wird eine nächste Abfahrt angezeigt, gleichzeitig weist die DDSG ausdrücklich darauf hin, dass nicht alle planmäßigen Wachaufahrten durchgeführt werden können. Verbindlich sind nur die aktuell auswählbaren und buchbaren Verbindungen.",
+      "source": "https://ddsg-blue-danube.at/en/products/wachau-cruises/",
       "sourceLabel": "DDSG Blue Danube"
     },
     {
-      "title": "Rollfähre Weißenkirchen eingeschränkt",
+      "title": "Rollfähre Weißenkirchen weiterhin eingeschränkt",
       "text": "Wegen Niedrigwassers werden Personen und Fahrräder befördert, PKW nur bedingt. Heute gelten 09:15–11:30 und 13:30–18:30 Uhr; letzte Abfahrten sind in Weißenkirchen um 11:30 und 18:30 Uhr sowie in St. Lorenz um 11:45 und 18:45 Uhr.",
       "source": "https://www.weissenkirchen-wachau.at/ueber-weissenkirchen/mobilitaet/rollfaehre",
       "sourceLabel": "Marktgemeinde Weißenkirchen"
@@ -43,7 +43,7 @@
   "outdoor": [
     {
       "title": "Donauradweg und B3",
-      "text": "Auf der aktuellen überregionalen Hinweisseite ist für den Norduferabschnitt Emmersdorf–Aggsbach Markt–Spitz–Weißenkirchen–Dürnstein keine allgemeine Sperre des Donauradwegs ausgewiesen. Die Aggsbacher Amtstafel führt jedoch eine lokale Straßensperre bis 16. Oktober, halbseitige Sperren bis 19. Oktober beziehungsweise 5. November sowie dauernde Verkehrsmaßnahmen an der B3; vor Ort gilt die Beschilderung.",
+      "text": "Auf der heute geprüften überregionalen Hinweisseite ist für den Norduferabschnitt Emmersdorf–Aggsbach Markt–Spitz–Weißenkirchen–Dürnstein keine allgemeine Sperre des Donauradwegs ausgewiesen. Die Aggsbacher Amtstafel führt eine Straßensperre bis 16. Oktober, halbseitige Sperren bis 19. Oktober beziehungsweise 5. November sowie dauernde Verkehrsmaßnahmen an der B3; vor Ort gilt die Beschilderung.",
       "links": [
         {
           "label": "Aktuelle Donauradweg-Hinweise",
@@ -91,7 +91,7 @@
     },
     {
       "title": "Rollfähre Spitz wasserstandsabhängig",
-      "text": "Von Montag bis Freitag gilt regulär 06:15–19:00 Uhr, letzte Fahrt 15 Minuten vor Betriebsschluss. Bei Niedrigwasser können Autos ausgeschlossen werden; bei noch niedrigerem Wasserstand, Hochwasser, Nebel oder Sturm ist kein Fährbetrieb möglich.",
+      "text": "Für den Fährbetrieb gilt weiterhin: Bei Niedrigwasser können Autos ausgeschlossen werden; bei noch niedrigerem Wasserstand, Hochwasser, Nebel oder Sturm ist kein Betrieb möglich. Den aktuellen Status unmittelbar vor der Überfahrt prüfen.",
       "links": [
         {
           "label": "Rollfähre Spitz–Arnsdorf",
@@ -105,29 +105,29 @@
       "date": "07.10.2026, 15:00–17:00 Uhr",
       "place": "Spitz, Weingut Lagler",
       "title": "Dem Winzer über die Schultern schauen",
-      "note": "Kellerarbeit und kommentierte Weinverkostung, 40 Euro. Anmeldung bis heute, Dienstag, 6. Oktober, 18:00 Uhr erforderlich.",
-      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail?tx_vadb_detail%5Baction%5D=detail&tx_vadb_detail%5Bcontroller%5D=Vadb&tx_vadb_detail%5Bid%5D=232242"
+      "note": "Kellerarbeit und kommentierte Weinverkostung, 40 Euro. Teilnahme nur mit bereits bestätigter Anmeldung; die Anmeldefrist endete gestern um 18:00 Uhr.",
+      "url": "https://spitz.va.vdbnoe.gugler.at/232242/weingut-lagler-dem-winzer-ber-die-schultern-schauen"
     },
     {
       "date": "07.10.2026, 18:00 oder 19:00 Uhr",
       "place": "Aggsbach Markt, Venussaal",
       "title": "Line Dance für Anfänger und Fortgeschrittene",
-      "note": "Die Veranstaltung findet wie geplant statt. Die Gemeindeseite nennt 18:00 Uhr; die tatsächliche Gruppenzeit 18:00 oder 19:00 Uhr wird am Vortag per WhatsApp kommuniziert.",
+      "note": "Die Veranstaltung findet wie geplant statt. Die Gemeindeseite nennt 18:00 Uhr; die tatsächliche Gruppenzeit 18:00 oder 19:00 Uhr wird per WhatsApp kommuniziert.",
       "url": "https://www.aggsbach.gv.at/Line_dance_fuer_Anfaenger_und_Fortgeschrittene"
     },
     {
       "date": "08.10.2026, 16:00–18:00 Uhr",
       "place": "Spitz, Schifffahrtsmuseum",
       "title": "Das Archiv der Vinea Wachau",
-      "note": "Archivführung, Weinverkostung und Museumseintritt; Anmeldung bis Mittwoch, 7. Oktober, 16:00 Uhr erforderlich.",
-      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail?tx_vadb_detail%5Baction%5D=detail&tx_vadb_detail%5Bcontroller%5D=Vadb&tx_vadb_detail%5Bid%5D=232243"
+      "note": "Archivführung, Weinverkostung und Museumseintritt, 30 Euro. Anmeldung bis heute, Mittwoch, 7. Oktober, 16:00 Uhr erforderlich.",
+      "url": "https://spitz.va.vdbnoe.gugler.at/232243/das-archiv-der-vinea-wachau-kompromisslos-einzigartig"
     },
     {
       "date": "09.10.2026, 16:00–18:00 Uhr",
       "place": "Spitz, HARTL – Rund um die Marille",
       "title": "Wachauer Marille – von der Blüte bis zum Genuss",
       "note": "Führung und Verkostung, 25 Euro; Anmeldung bis Donnerstag, 8. Oktober, 18:00 Uhr.",
-      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail?tx_vadb_detail%5Baction%5D=detail&tx_vadb_detail%5Bcontroller%5D=Vadb&tx_vadb_detail%5Bid%5D=199524"
+      "url": "https://spitz.va.vdbnoe.gugler.at/199524/wachauer-marille-von-der-blte-bis-zum-genuss"
     },
     {
       "date": "10.10.2026, 10:00–12:00 Uhr",
@@ -160,13 +160,6 @@
   ],
   "heurigen": [
     {
-      "name": "Weingut Florian und Sabine Höllmüller „FLOTT“",
-      "place": "Spitz",
-      "period": "25.09.–06.10.2026",
-      "hours": "Heute 15:00–23:00 Uhr; letzter Tag",
-      "url": "https://heurigenkalender.niederoesterreich.at/156935/weingut-florian-und-sabine-hllmller-flott"
-    },
-    {
       "name": "Weingut Mayer",
       "place": "Spitz, Gut am Steg",
       "period": "02.–15.10.2026",
@@ -174,18 +167,18 @@
       "url": "https://heurigenkalender.niederoesterreich.at/156622/weingut-mayer"
     },
     {
+      "name": "Heuriger Özelt",
+      "place": "Spitz",
+      "period": "05.08.–26.10.2026, Mittwoch bis Samstag",
+      "hours": "Heute 16:00–23:00 Uhr",
+      "url": "https://heurigenkalender.niederoesterreich.at/200943/offen-is-heuriger-zelt"
+    },
+    {
       "name": "Heuriger Mang Hermenegild",
       "place": "Weißenkirchen",
       "period": "17.07.–26.10.2026",
       "hours": "Heute ab 12:00 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/30959/heuriger-mang-hermenegild"
-    },
-    {
-      "name": "Heuriger Ferdl Denk",
-      "place": "Weißenkirchen",
-      "period": "30.03.–01.11.2026",
-      "hours": "Heute ab 15:00 Uhr",
-      "url": "https://heurigenkalender.niederoesterreich.at/30949/heuriger-ferdl-denk"
     },
     {
       "name": "Wildheuriger Familie Gruber",
@@ -202,16 +195,16 @@
       "url": "https://heurigenkalender.niederoesterreich.at/30948/heuriger-weingut-trautsamwieser"
     },
     {
-      "name": "Weingartlerei Denk Petra",
+      "name": "Weinerei Schwaiger",
       "place": "Wösendorf",
-      "period": "24.09.–06.10.2026",
-      "hours": "Heute ab 15:00 Uhr; letzter Tag",
-      "url": "https://heurigenkalender.niederoesterreich.at/163245/heuriger-weingartlerei-denk-petra"
+      "period": "15.04.–18.10.2026, Mittwoch bis Sonntag",
+      "hours": "Heute 10:00–18:00 Uhr",
+      "url": "https://heurigenkalender.niederoesterreich.at/30957/heuriger-weinerei-schwaiger"
     },
     {
       "name": "Grill-Heuriger Küffer Keller",
       "place": "Dürnstein",
-      "period": "01.05.–10.10.2026",
+      "period": "01.05.–10.10.2026, Montag bis Samstag",
       "hours": "Heute ab 17:00 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/169394/grill-heuriger-kffer-keller"
     }
@@ -228,25 +221,25 @@
       "date": "09.10.2026",
       "name": "Weingut Höllmüller",
       "place": "Joching",
-      "hours": "Nächster bestätigter Aussteckbeginn am Freitag, 9. Oktober, ab 17:00 Uhr; Aussteckzeit 09.–11.10.2026.",
+      "hours": "Bestätigter Aussteckbeginn am Freitag, 9. Oktober, ab 17:00 Uhr; Aussteckzeit 09.–11.10.2026.",
       "url": "https://heurigenkalender.niederoesterreich.at/30938/heuriger-weingut-hllmller"
     },
     {
       "date": "09.10.2026",
       "name": "Schloss Heurige",
       "place": "Spitz, Schloss zu Spitz",
-      "hours": "Nächster bestätigter Aussteckbeginn am Freitag, 9. Oktober, 16:00–22:00 Uhr; außerdem Samstag, 10. Oktober.",
+      "hours": "Bestätigter Aussteckbeginn am Freitag, 9. Oktober, 16:00–22:00 Uhr; außerdem Samstag, 10. Oktober.",
       "url": "https://heurigenkalender.niederoesterreich.at/199547/schloss-heurige"
     }
   ],
-  "piaTip": "Pias Dienstagstipp: Heute ist die letzte Gelegenheit für FLOTT in Spitz und die Weingartlerei Denk Petra in Wösendorf. Wer morgen um 15:00 Uhr beim Lagler hinter die Kulissen schauen möchte, sollte die Anmeldung unbedingt bis heute 18:00 Uhr erledigen. Für Schifffahrt und Fähren die tatsächlich verfügbare Verbindung unmittelbar vor der Abfahrt nochmals prüfen.",
+  "piaTip": "Pias Mittwochstipp: Wer für heute bereits bei Lagler angemeldet ist, erlebt von 15:00 bis 17:00 Uhr Kellerarbeit und Weinverkostung. In Aggsbach steht am Abend Line Dance auf dem Programm. Für die morgige Vinea-Archivführung die Anmeldung unbedingt noch heute bis 16:00 Uhr erledigen; bei Schifffahrt und Fähren den aktuellen Niedrigwasserstatus vor der Abfahrt prüfen.",
   "goodToKnow": [
     "Das Wetter wird in der Gäste-App live geladen und deshalb nicht statisch in Tratsch & Klatsch gespeichert.",
-    "Heute sind acht Heurige am Nordufer bestätigt geöffnet.",
-    "FLOTT und Weingartlerei Denk Petra haben heute den letzten Tag ihres aktuellen Aussteckzeitraums.",
-    "Weingut Mayer ist laut dem heute geprüften Detaileintrag durchgehend vom 2. bis 15. Oktober geöffnet und wurde deshalb aus openingSoon entfernt.",
+    "Heute sind sieben Heurige am Nordufer bestätigt geöffnet.",
+    "FLOTT und Weingartlerei Denk Petra wurden nach dem Ende ihrer Aussteckzeiten entfernt; Ferdl Denk ist wegen Mittwoch-Ruhetag nicht gelistet.",
+    "Özelt in Spitz und die Weinerei Schwaiger in Wösendorf sind mittwochs geöffnet und wurden für heute ergänzt.",
     "Drei bestätigte Heurigenöffnungen sind für Freitag, 9. Oktober, vorgemerkt.",
-    "Für heute ist in den aktuellen Veranstaltungskalendern von Aggsbach und Spitz kein eigener Tagestermin ausgewiesen; wichtig ist jedoch der Anmeldeschluss um 18:00 Uhr für den morgigen Lagler-Termin.",
-    "Die Rollfähren und die DDSG können bei Niedrigwasser kurzfristig weitere Fahrten oder Fahrzeugtransporte einschränken."
+    "Die Anmeldefrist für die Vinea-Archivführung am Donnerstag endet heute um 16:00 Uhr.",
+    "Rollfähren und DDSG können bei Niedrigwasser kurzfristig weitere Fahrten oder Fahrzeugtransporte einschränken."
   ]
 }
