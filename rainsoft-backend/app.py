@@ -174,5 +174,7 @@ def returned():
 def cancel():return "Payment cancelled. No subscription access activated.",200
 from customer_dashboard import mount_customer_dashboard
 mount_customer_dashboard(app,db,tenant_paid,internal_authorised)
+from operator_api import mount_operator_api
+mount_operator_api(app,db,internal_authorised,ready,allowed)
 
 if __name__=="__main__":app.run(host="0.0.0.0",port=int(os.getenv("PORT","8080")))
