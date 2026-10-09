@@ -126,7 +126,13 @@ def webhook():
     tenant=details.get("custom_id")
     if not valid_tenant(tenant):return "",200
     status=details.get("status","UNKNOWN")
+    # Payment events may be delivered before subscription details are updated.
+    # Only a canonical ACTIVE record with a completed payment can grant access.
     last=((details.get("billing_info") or {}).get("last_payment") or {}).get("time")
+    # A different PayPal subscription must not silently take over an existing tenant.
+    with db() as c:
+        existing=c.execute("SELECT paypal_id FROM subscriptions WHERE tenant_id=?",(tenant,)).fetchone()
+        if existing and existing[0]!=subscription_id:return "",409
     # ACTIVE without a completed payment does not grant service access.
     with db() as c:
         c.execute("""INSERT INTO subscriptions VALUES (?,?,?,?,?)
