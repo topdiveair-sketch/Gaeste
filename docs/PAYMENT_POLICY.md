@@ -15,3 +15,6 @@ Vom Betreiber angegebener PayPal-Empfaenger: topdiveair@gmail.com
 - Unbekannte oder abweichende Zahlungsempfaenger blockieren und manuell pruefen.
 
 Status: Konfiguration und Sicherheitsvorgaben dokumentiert. Keine PayPal-API angebunden, keine Zahlungsfunktion live, keine Kontoinhaberschaft bestaetigt.
+
+## Betreibererklaerung 09.10.2026
+Der Betreiber gibt an, dass Konto- und Rechtsfragen geklaert sind. Diese Angabe wird als Betreibererklaerung erfasst und nicht mit einer technischen PayPal-Verifizierung oder abgeschlossener API-Anbindung verwechselt. Freischaltung von Livezahlungen erst nach verifiziertem Zahlungsdienstleister-Onboarding, sicheren Server-Credentials, Webhook-Validierung und End-to-End-Zahlungstest. Bis dahin bleibt livePaymentsEnabled=false.
