@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rainsoft GastKompass – Pilot-Demo</title><meta name="robots" content="noindex,nofollow">
+<style>
+:root{font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#17352b;background:#f5f8f4}*{box-sizing:border-box}
+body{margin:0}header{background:#173c30;color:#fff;padding:18px max(20px,calc((100vw - 1040px)/2))}
+main{max-width:1050px;margin:auto;padding:25px 16px 80px}h1{font-size:clamp(28px,4vw,43px);margin:8px 0}h2{margin:8px 0 15px;font-size:24px}
+small,.hint{color:#64766b}header small{color:#b9d2c4}.banner{background:#fff3d3;border:1px solid #ebd18b;border-radius:12px;padding:14px;margin:15px 0}
+.layout{display:grid;grid-template-columns:330px minmax(0,1fr);gap:22px;align-items:start}.panel,.phone,.tile{background:#fff;border:1px solid #dee8dd;border-radius:18px;box-shadow:0 6px 18px #1438250b}
+.panel{padding:20px}label{display:block;font-size:13px;font-weight:700;margin:12px 0 6px}input,textarea,select{width:100%;padding:11px;border:1px solid #b9cabc;border-radius:9px;font:inherit}textarea{min-height:70px}
+button,.btn{display:inline-block;background:#227a50;border:0;border-radius:9px;padding:11px 15px;color:white;text-decoration:none;font-weight:700;cursor:pointer;margin:8px 5px 0 0}button.secondary{background:#e6eee7;color:#20472e}
+.phone{max-width:490px;margin:auto;overflow:hidden}.hero{background:linear-gradient(140deg,#164c38,#609a73);color:#fff;padding:25px}.hero p{color:#e0eedd}.guest{padding:20px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:10px}.tile{padding:15px}.tile strong{display:block;margin-bottom:7px}.tile p{font-size:14px;line-height:1.4;margin:0;overflow-wrap:anywhere} .pill{display:inline-block;border-radius:30px;background:#e4f3e7;padding:5px 10px;font-size:12px;font-weight:700}
+section{margin-top:22px} .metric{font-size:30px;font-weight:800}.footer{font-size:13px;color:#526d5b;margin-top:25px}
+@media(max-width:740px){.layout{grid-template-columns:1fr}.phone{max-width:none}.cards{grid-template-columns:1fr}}
+</style></head>
+<body><header><b>Rainsoft Johann Prem</b><div><small>GastKompass · Markttest / Funktionsprototyp</small></div></header>
+<main><span class="pill">Pilotprototyp · Keine Buchungs- oder Zahlungsfunktion</span>
+<h1>Weniger Rückfragen. Besser informierte Gäste.</h1><p>Teste eine digitale Gästemappe, die Vermieter ohne technische Kenntnisse selbst anpassen können.</p>
+<div class="banner"><strong>Wichtig:</strong> Dies ist eine lokale Demo. Eingaben werden nur in diesem Browser gespeichert. Es gibt noch keine Kundenkonten, keine Server-Speicherung, keine automatischen Nachrichten und kein zahlungspflichtiges Angebot.</div>
+<div class="layout"><div class="panel">
+<h2>Gastgeber-Editor</h2><p class="hint">Änderungen sofort rechts ansehen. Beispieldaten – bitte keine personenbezogenen oder geheimen Zugangsdaten eingeben.</p>
+<label for="name">Name der Unterkunft</label><input id="name" maxlength="70" value="Pension Musterblick">
+<label for="arrival">Anreise & Check-in</label><textarea id="arrival">Check-in ab 15 Uhr. Bitte melde dich bei Ankunft am Eingang.</textarea>
+<label for="wifi">WLAN-Hinweis (keine Passwörter eingeben)</label><input id="wifi" maxlength="130" value="WLAN-Zugang erhältst du vor Ort.">
+<label for="parking">Parkplatz & Anfahrt</label><textarea id="parking">Parkplatz direkt beim Haus. Fahrräder können sicher abgestellt werden.</textarea>
+<label for="rules">Hausinformationen</label><textarea id="rules">Check-out bis 10 Uhr. Bitte Nachtruhe ab 22 Uhr beachten.</textarea>
+<label for="tips">Ausflugsempfehlung</label><textarea id="tips">Entdecke die schönsten Wander- und Radwege in der Umgebung.</textarea>
+<label for="extras">Zusatzangebot (unverbindliche Anfrage)</label><input id="extras" maxlength="130" value="Frühstück auf Anfrage">
+<button id="reset" class="secondary" type="button">Beispiel zurücksetzen</button>
+<button id="switch" type="button">Nur Gästeansicht</button>
+<p class="footer">Pilotstand: lokale Browser-Demo. Noch nicht mandantenfähig, kein veröffentlichter SaaS-Dienst.</p>
+</div><div><div class="phone" id="phone"><div class="hero"><small style="color:#d4ebd9">Willkommen</small><h2 id="out-name">Pension Musterblick</h2><p>Alle wichtigen Informationen für deinen Aufenthalt an einem Ort.</p></div>
+<div class="guest"><span class="pill">Für Gäste · ohne App-Download</span><div class="cards">
+<div class="tile"><strong>🕒 Anreise</strong><p id="out-arrival"></p></div><div class="tile"><strong>📶 WLAN</strong><p id="out-wifi"></p></div>
+<div class="tile"><strong>🚗 Parkplatz</strong><p id="out-parking"></p></div><div class="tile"><strong>🏡 Hausregeln</strong><p id="out-rules"></p></div>
+<div class="tile"><strong>🥾 Entdecken</strong><p id="out-tips"></p></div><div class="tile"><strong>☕ Extras</strong><p id="out-extras"></p></div>
+</div><p class="footer">Informationen werden vom Gastgeber gepflegt. Keine Gewähr für die Aktualität externer Empfehlungen.</p></div></div></div></div>
+<section class="panel"><h2>Markttest – würde sich das für deinen Betrieb lohnen?</h2><p>Geplanter Testpreis: <strong>19 € monatlich je Unterkunft</strong>, nur nach gesonderter Freigabe, Gewerbeprüfung und einem regulären Vertragsangebot. Für die kostenlose Pilotphase entsteht keine Zahlungspflicht.</p><p>Bitte prüfe selbst: Spart diese Gästeansicht Aufwand? Fehlt eine wichtige Funktion? Ist der vorgeschlagene Preis angemessen?</p>
+<a class="btn" id="interest" href="mailto:zuhause.am.bach@outlook.com?subject=Rainsoft%20GastKompass%20Pilotinteresse">Unverbindliches Pilotinteresse per E-Mail</a>
+<a class="btn" href="mailto:zuhause.am.bach@outlook.com?subject=Rainsoft%20GastKompass%20Feedback&body=Mein%20Feedback%3A%0A">Feedback per E-Mail</a>
+<p class="footer">Es werden bei der Demo-Nutzung keine Angaben an Rainsoft übermittelt. Erst beim bewussten Absenden einer E-Mail verlassen Angaben dein Gerät.</p>
+</section></main>
+<script>
+const keys=["name","arrival","wifi","parking","rules","tips","extras"];const defaults=Object.fromEntries(keys.map(k=>[k,document.getElementById(k).value]));
+let cache={};try{cache=JSON.parse(localStorage.getItem("rainsoft-guest-demo")||"{}")||{}}catch(e){}
+function paint(){for(const k of keys){document.getElementById("out-"+k).textContent=document.getElementById(k).value}}
+for(const k of keys){const el=document.getElementById(k);if(typeof cache[k]==="string")el.value=cache[k];el.addEventListener("input",()=>{paint();const value=Object.fromEntries(keys.map(x=>[x,document.getElementById(x).value]));try{localStorage.setItem("rainsoft-guest-demo",JSON.stringify(value))}catch(e){}})}
+document.getElementById("reset").addEventListener("click",()=>{for(const k of keys)document.getElementById(k).value=defaults[k];try{localStorage.removeItem("rainsoft-guest-demo")}catch(e){}paint()});
+let guest=false;document.getElementById("switch").addEventListener("click",()=>{guest=!guest;document.querySelector(".layout > .panel").hidden=guest;document.getElementById("switch").textContent=guest?"Zurück zum Editor":"Nur Gästeansicht";if(guest){document.querySelector(".layout").style.gridTemplateColumns="1fr";const back=document.createElement("button");back.id="guest-back";back.textContent="Zurück zum Gastgeber-Editor";back.onclick=()=>{guest=false;document.querySelector(".layout > .panel").hidden=false;document.querySelector(".layout").style.gridTemplateColumns="";back.remove()};document.getElementById("phone").before(back)}else{document.getElementById("guest-back")?.remove();document.querySelector(".layout").style.gridTemplateColumns=""}});
+paint();
+</script></body></html>
