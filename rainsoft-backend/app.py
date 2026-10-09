@@ -172,4 +172,7 @@ def returned():
     return "PayPal authorisation received. Activation only follows verified successful payment.",200
 @app.get("/cancel")
 def cancel():return "Payment cancelled. No subscription access activated.",200
+from customer_dashboard import mount_customer_dashboard
+mount_customer_dashboard(app,db,tenant_paid,internal_authorised)
+
 if __name__=="__main__":app.run(host="0.0.0.0",port=int(os.getenv("PORT","8080")))
