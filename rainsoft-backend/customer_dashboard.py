@@ -92,6 +92,25 @@ def mount_customer_dashboard(app, db, tenant_paid, internal_authorised):
         if not approval:return jsonify(error="Missing approval URL"),502
         return jsonify(approval_url=approval,subscription_id=result["id"])
 
+    @bp.get("/g/<tenant>")
+    def public_guide_page(tenant):
+        if not valid(tenant):return jsonify(error="not found"),404
+        if not tenant_paid(tenant):return jsonify(error="not found"),404
+        return send_from_directory(os.path.dirname(__file__),"guest.html")
+
+    @bp.get("/api/host/<tenant>/qr.svg")
+    def guide_qr(tenant):
+        if not owner(tenant):return jsonify(error="unauthorised"),401
+        import io, qrcode, qrcode.image.svg
+        from flask import Response
+        # Origin has to match the configured public host. Do not use request.host.
+        origin=os.getenv("PUBLIC_ORIGIN","").rstrip("/")
+        if not origin.startswith("https://"):return jsonify(error="Public HTTPS origin not configured"),503
+        image=qrcode.make(origin+"/g/"+tenant,image_factory=qrcode.image.svg.SvgPathImage,box_size=8,border=2)
+        output=io.BytesIO()
+        image.save(output)
+        return Response(output.getvalue(),mimetype="image/svg+xml",headers={"Cache-Control":"private, no-store"})
+
     @bp.get("/host")
     def host_ui():return send_from_directory(os.path.dirname(__file__),"dashboard.html")
     app.register_blueprint(bp)
