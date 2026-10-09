@@ -49,3 +49,10 @@ Leads, Demoanfragen, Pilotaktivierung, zahlende Kunden, MRR, Churn, Supportminut
 
 ## Fehlende Freigaben / Voraussetzungen
 Betreiberdaten, Gewerbe-/Steuerstatus, Datenschutzvertraege, Markenpruefung, Zahlungsvertrag und eigene PayPal-Business-Verknuepfung. Keine fremden Zahlungen auf ein KI-Konto oder manuelle Gewinnueberweisungen.
+
+## Betreiberangaben (vom Auftraggeber am 09.10.2026 festgelegt)
+- Geschäftsbezeichnung: Rainsoft Johann Prem.
+- Unternehmer/Vertragspartner: Johann Prem persönlich.
+- Geschäftsadresse: bisherige Adresse unverändert; exakte postalische Schreibweise für Impressum/Rechnungen noch gegen bestätigte Stammdaten prüfen.
+- Rechtlicher Status der Geschäftsbezeichnung und erforderliche Gewerbeberechtigung vor Verkauf prüfen. Keine Behauptung einer Firmenbucheintragung.
+- Zahlungsabwicklung und Auszahlungen ausschließlich über vom Betreiber freigegebene, auf ihn lautende Geschäftskonten; keine Zahlungsdaten im öffentlichen Repository.
