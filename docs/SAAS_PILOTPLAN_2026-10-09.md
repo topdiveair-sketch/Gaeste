@@ -56,3 +56,10 @@ Betreiberdaten, Gewerbe-/Steuerstatus, Datenschutzvertraege, Markenpruefung, Zah
 - Geschäftsadresse: bisherige Adresse unverändert; exakte postalische Schreibweise für Impressum/Rechnungen noch gegen bestätigte Stammdaten prüfen.
 - Rechtlicher Status der Geschäftsbezeichnung und erforderliche Gewerbeberechtigung vor Verkauf prüfen. Keine Behauptung einer Firmenbucheintragung.
 - Zahlungsabwicklung und Auszahlungen ausschließlich über vom Betreiber freigegebene, auf ihn lautende Geschäftskonten; keine Zahlungsdaten im öffentlichen Repository.
+
+## Gewerbe- und Steuerstatus (Rueckmeldung vom 09.10.2026)
+- Auftraggeber moechte vorerst im umsatzsteuerlichen Kleinunternehmermodell arbeiten.
+- Eine aufrechte IT-Gewerbeberechtigung wurde nicht bestaetigt (Antwort: 'vorerst nicht').
+- Bis Klaerung keine entgeltlichen Kundenvertraege, Rechnungen oder Live-Zahlungsabwicklung aktivieren.
+- WKO-Pruefung: Das freie Gewerbe 'Dienstleistungen in der automatischen Datenverarbeitung und Informationstechnik' kann Softwareentwicklung und Vertrieb abdecken; eine Anmeldung ist unabhaengig von der Kleinunternehmerregelung erforderlich, soweit die Taetigkeit der GewO unterliegt.
+- Die Grenze von 55.000 EUR ist eine Umsatzsteuerregel, nicht automatisch eine Befreiung von Gewerbe und SVS.
