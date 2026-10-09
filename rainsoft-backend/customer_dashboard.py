@@ -11,6 +11,10 @@ def mount_customer_dashboard(app, db, tenant_paid, internal_authorised):
                       SESSION_COOKIE_SECURE=os.getenv("APP_ENV")=="production",
                       PERMANENT_SESSION_LIFETIME=3600)
     bp=Blueprint("customer_dashboard",__name__)
+    # A random development key is acceptable for local testing but must never
+    # silently become a rotating session key in production.
+    if os.getenv("APP_ENV")=="production" and len(os.getenv("RAINSOFT_SESSION_SECRET",""))<32:
+        raise RuntimeError("Production requires RAINSOFT_SESSION_SECRET (32+ characters)")
     def valid(t): return bool(re.fullmatch(r"[A-Za-z0-9_-]{3,64}",t))
     def owner(t): return valid(t) and session.get("tenant")==t and session.get("authenticated") is True
     def check_origin():
