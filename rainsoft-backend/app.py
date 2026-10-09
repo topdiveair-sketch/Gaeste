@@ -52,6 +52,26 @@ def internal_authorised(tenant):
 
 def ready():
     return ENABLED and bool(PLAN and os.getenv("PAYPAL_WEBHOOK_ID") and os.getenv("PAYPAL_CLIENT_ID") and os.getenv("PAYPAL_CLIENT_SECRET") and os.getenv("PUBLIC_ORIGIN"))
+@app.get("/internal/operator/readiness")
+def operational_readiness():
+    if not internal_authorised("admin"):return jsonify(error="unauthorised"),401
+    keys=("PAYPAL_CLIENT_ID","PAYPAL_CLIENT_SECRET","PAYPAL_WEBHOOK_ID","PAYPAL_PLAN_ID","PUBLIC_ORIGIN","RAINSOFT_INTERNAL_SECRET","RAINSOFT_SESSION_SECRET")
+    missing=[key for key in keys if not os.getenv(key)]
+    mode=os.getenv("PAYPAL_MODE","sandbox")
+    https_origin=os.getenv("PUBLIC_ORIGIN","").startswith("https://")
+    db_ok=False
+    try:
+        with db() as c:
+            c.execute("SELECT 1").fetchone()
+        db_ok=True
+    except (sqlite3.Error,OSError):
+        pass
+    return jsonify(environment=os.getenv("APP_ENV","test"),paypal_mode=mode,
+        payment_activation_flag=ENABLED,db_healthy=db_ok,
+        https_origin=https_origin,missing_configuration=missing,
+        sandbox_ready=(not missing and db_ok and https_origin and mode=="sandbox"),
+        live_ready=(not missing and db_ok and https_origin and mode=="live" and ENABLED))
+
 @app.get("/health")
 def health(): return jsonify(status="ok",paypal_live=bool(ready() and os.getenv("PAYPAL_MODE")=="live"))
 @app.post("/api/subscribe")
