@@ -30,6 +30,12 @@ class DashboardTests(unittest.TestCase):
         self.assertEqual(self.client.get("/api/host/kunde2/guide").status_code,401)
     def test_reject_cross_origin(self):
         self.assertEqual(self.client.post("/api/host/kunde1/login",headers={"Origin":"https://evil.invalid"},json={"password":"long-enough-password-123"}).status_code,401)
+    def test_subscribe_disabled_without_live_setup(self):
+        self.client.post("/api/host/kunde1/login",headers=self.origin,json={"password":"long-enough-password-123"})
+        with patch.object(app,"ENABLED",False):
+            self.assertEqual(self.client.post("/api/host/kunde1/subscribe",headers=self.origin,json={}).status_code,503)
+    def test_subscribe_rejects_no_login(self):
+        self.assertEqual(self.client.post("/api/host/kunde1/subscribe",headers=self.origin,json={}).status_code,401)
     def test_public_view_unpaid(self):
         self.assertEqual(self.client.get("/api/guest/kunde1").status_code,404)
     def test_logout(self):
