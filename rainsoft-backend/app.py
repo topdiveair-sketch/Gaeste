@@ -51,6 +51,10 @@ def internal_authorised(tenant):
     return hmac.compare_digest(digest,signature)
 
 def ready():
+    mode=os.getenv("PAYPAL_MODE","sandbox")
+    production=os.getenv("APP_ENV")=="production"
+    if mode not in ("live","sandbox") or (mode=="live")!=production:return False
+    if not ORIGIN.startswith("https://"):return False
     return ENABLED and bool(PLAN and os.getenv("PAYPAL_WEBHOOK_ID") and os.getenv("PAYPAL_CLIENT_ID") and os.getenv("PAYPAL_CLIENT_SECRET") and os.getenv("PUBLIC_ORIGIN"))
 @app.get("/internal/operator/readiness")
 def operational_readiness():
@@ -120,7 +124,7 @@ def webhook():
     details=paypal("GET","/v1/billing/subscriptions/"+subscription_id,token=access_token())
     if details.get("plan_id")!=PLAN:return "",200
     tenant=details.get("custom_id")
-    if not tenant:return "",200
+    if not valid_tenant(tenant):return "",200
     status=details.get("status","UNKNOWN")
     last=((details.get("billing_info") or {}).get("last_payment") or {}).get("time")
     # ACTIVE without a completed payment does not grant service access.
