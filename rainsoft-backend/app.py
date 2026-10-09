@@ -70,8 +70,7 @@ def webhook():
     if not verified(event):return "",401
     eventid=event["id"]
     with db() as c:
-        try:c.execute("INSERT INTO events VALUES (?,?)",(eventid,int(time.time())))
-        except sqlite3.IntegrityError:return "",200
+        if c.execute("SELECT 1 FROM events WHERE event_id=?",(eventid,)).fetchone():return "",200
     resource=event.get("resource") or {}
     subscription_id=resource.get("id") if event.get("event_type","").startswith("BILLING.SUBSCRIPTION") else (resource.get("billing_agreement_id") or resource.get("subscription_id"))
     if not subscription_id:return "",200
@@ -87,6 +86,7 @@ def webhook():
         c.execute("""INSERT INTO subscriptions VALUES (?,?,?,?,?)
           ON CONFLICT(paypal_id) DO UPDATE SET status=excluded.status,last_payment=excluded.last_payment,updated_at=excluded.updated_at""",
           (subscription_id,tenant,status,last,int(time.time())))
+        c.execute("INSERT OR IGNORE INTO events VALUES (?,?)",(eventid,int(time.time())))
     return "",200
 @app.get("/return")
 def returned():
