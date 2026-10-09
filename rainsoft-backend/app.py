@@ -1,5 +1,5 @@
 """Rainsoft subscription backend. Run separately from the Zuhause am Bach booking system."""
-import os, sqlite3, json, time, secrets, urllib.request, urllib.error
+import os, sqlite3, json, time, secrets, urllib.request, urllib.error, hmac, hashlib, datetime
 from flask import Flask, jsonify, request, redirect
 app=Flask(__name__)
 DB=os.getenv("RAINSOFT_DB","/data/rainsoft.sqlite3")
@@ -29,6 +29,26 @@ def access_token():
     auth=base64.b64encode((a+":"+b).encode()).decode()
     req=urllib.request.Request(API+"/v1/oauth2/token",data=b"grant_type=client_credentials",headers={"Authorization":"Basic "+auth,"Content-Type":"application/x-www-form-urlencoded"})
     with urllib.request.urlopen(req,timeout=20) as res: return json.loads(res.read())["access_token"]
+def parse_time(value):
+    if not value:return None
+    try:return int(datetime.datetime.fromisoformat(value.replace("Z","+00:00")).timestamp())
+    except (ValueError,TypeError):return None
+
+def allowed(status,last,now=None):
+    now=int(time.time()) if now is None else now
+    payment=parse_time(last)
+    max_age=int(os.getenv("RAINSOFT_MAX_PAYMENT_AGE_DAYS","35"))*86400
+    return status=="ACTIVE" and payment is not None and 0<=now-payment<=max_age
+
+def internal_authorised(tenant):
+    key=os.getenv("RAINSOFT_INTERNAL_SECRET","")
+    stamp=request.headers.get("X-Rainsoft-Timestamp","")
+    signature=request.headers.get("X-Rainsoft-Signature","")
+    if len(key)<32 or not stamp.isdigit() or not signature:return False
+    if abs(int(time.time())-int(stamp))>120:return False
+    digest=hmac.new(key.encode(),(tenant+":"+stamp).encode(),hashlib.sha256).hexdigest()
+    return hmac.compare_digest(digest,signature)
+
 def ready():
     return ENABLED and bool(PLAN and os.getenv("PAYPAL_WEBHOOK_ID") and os.getenv("PAYPAL_CLIENT_ID") and os.getenv("PAYPAL_CLIENT_SECRET") and os.getenv("PUBLIC_ORIGIN"))
 @app.get("/health")
@@ -88,6 +108,18 @@ def webhook():
           (subscription_id,tenant,status,last,int(time.time())))
         c.execute("INSERT OR IGNORE INTO events VALUES (?,?)",(eventid,int(time.time())))
     return "",200
+@app.get("/internal/entitlement/<tenant>")
+def entitlement(tenant):
+    if not internal_authorised(tenant):return jsonify(error="unauthorised"),401
+    if not ready():return jsonify(active=False,reason="service_not_ready"),503
+    with db() as c:
+        row=c.execute("SELECT status,last_payment,updated_at FROM subscriptions WHERE tenant_id=?",(tenant,)).fetchone()
+    if not row:return jsonify(active=False,reason="not_subscribed")
+    status,last,updated=row
+    if int(time.time())-updated>86400:return jsonify(active=False,reason="reconciliation_required"),503
+    active=allowed(status,last)
+    return jsonify(active=active,reason="paid" if active else "inactive_or_unpaid")
+
 @app.get("/return")
 def returned():
     return "PayPal authorisation received. Activation only follows verified successful payment.",200
