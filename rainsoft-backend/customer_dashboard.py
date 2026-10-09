@@ -64,6 +64,30 @@ def mount_customer_dashboard(app, db, tenant_paid, internal_authorised):
                 return jsonify(saved=True)
             import json
             return jsonify(display_name=row[0],guest_info=json.loads(row[1]),paid=bool(tenant_paid(tenant)))
+    @bp.post("/api/host/<tenant>/subscribe")
+    def customer_subscribe(tenant):
+        if not owner(tenant):return jsonify(error="unauthorised"),401
+        if not check_origin():return jsonify(error="forbidden"),403
+        from app import ready, access_token, paypal, PLAN, ORIGIN
+        if not ready():return jsonify(error="Checkout not enabled"),503
+        with db() as c:
+            if not c.execute("SELECT 1 FROM tenants WHERE tenant_id=?",(tenant,)).fetchone():
+                return jsonify(error="unknown tenant"),404
+        token=access_token()
+        result=paypal("POST","/v1/billing/subscriptions",{
+            "plan_id":PLAN,
+            "custom_id":tenant,
+            "application_context":{
+                "brand_name":"Rainsoft GastKompass",
+                "user_action":"SUBSCRIBE_NOW",
+                "return_url":ORIGIN+"/return",
+                "cancel_url":ORIGIN+"/cancel"
+            }
+        },token)
+        approval=next((link.get("href") for link in result.get("links",[]) if link.get("rel")=="approve"),None)
+        if not approval:return jsonify(error="Missing approval URL"),502
+        return jsonify(approval_url=approval,subscription_id=result["id"])
+
     @bp.get("/host")
     def host_ui():return send_from_directory(os.path.dirname(__file__),"dashboard.html")
     app.register_blueprint(bp)
