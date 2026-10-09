@@ -12,6 +12,7 @@ def db():
     c=sqlite3.connect(DB,timeout=15)
     c.execute("CREATE TABLE IF NOT EXISTS subscriptions (paypal_id TEXT PRIMARY KEY, tenant_id TEXT UNIQUE NOT NULL, status TEXT NOT NULL, last_payment TEXT, updated_at INTEGER NOT NULL)")
     c.execute("CREATE TABLE IF NOT EXISTS events (event_id TEXT PRIMARY KEY, received_at INTEGER NOT NULL)")
+    c.execute("CREATE TABLE IF NOT EXISTS tenants (tenant_id TEXT PRIMARY KEY, display_name TEXT NOT NULL, guest_info TEXT NOT NULL, created_at INTEGER NOT NULL)")
     c.commit()
     return c
 def paypal(method,path,payload=None,token=None):
@@ -59,8 +60,9 @@ def subscribe():
     obj=request.get_json(silent=True) or {}
     tenant=obj.get("tenant_id","")
     if not isinstance(tenant,str) or not (3<=len(tenant)<=64) or not all(c.isalnum() or c in "_-" for c in tenant): return jsonify(error="Invalid tenant"),400
-    # In production this endpoint MUST authenticate tenant ownership before enabling paid acquisition.
-    if os.getenv("RAINSOFT_TENANT_AUTH_READY")!="true":return jsonify(error="Tenant authentication not configured"),503
+    if not internal_authorised(tenant):return jsonify(error="unauthorised"),401
+    with db() as c:
+        if not c.execute("SELECT 1 FROM tenants WHERE tenant_id=?",(tenant,)).fetchone():return jsonify(error="Unknown tenant"),404
     token=access_token()
     result=paypal("POST","/v1/billing/subscriptions",{
         "plan_id":PLAN,"custom_id":tenant,
@@ -119,6 +121,51 @@ def entitlement(tenant):
     if int(time.time())-updated>86400:return jsonify(active=False,reason="reconciliation_required"),503
     active=allowed(status,last)
     return jsonify(active=active,reason="paid" if active else "inactive_or_unpaid")
+
+def valid_tenant(tenant):
+    return isinstance(tenant,str) and 3<=len(tenant)<=64 and all(c.isascii() and (c.isalnum() or c in "_-") for c in tenant)
+
+def tenant_paid(tenant):
+    if not ready():return False
+    with db() as c:
+        row=c.execute("SELECT status,last_payment,updated_at FROM subscriptions WHERE tenant_id=?",(tenant,)).fetchone()
+    return bool(row and int(time.time())-row[2]<86400 and allowed(row[0],row[1]))
+
+@app.post("/internal/tenants")
+def create_tenant():
+    obj=request.get_json(silent=True) or {}
+    tenant=obj.get("tenant_id")
+    if not valid_tenant(tenant):return jsonify(error="Invalid tenant"),400
+    if not internal_authorised(tenant):return jsonify(error="unauthorised"),401
+    name=obj.get("display_name","")
+    if not isinstance(name,str) or not 1<=len(name)<=80:return jsonify(error="Invalid name"),400
+    data=json.dumps({"arrival":"","parking":"","wifi_info":"","house_rules":"","extras":""})
+    with db() as c:
+        try:c.execute("INSERT INTO tenants VALUES (?,?,?,?)",(tenant,name,data,int(time.time())))
+        except sqlite3.IntegrityError:return jsonify(error="Already exists"),409
+    return jsonify(tenant_id=tenant),201
+
+@app.route("/internal/tenants/<tenant>/guide",methods=["GET","PUT"])
+def manage_guide(tenant):
+    if not valid_tenant(tenant) or not internal_authorised(tenant):return jsonify(error="unauthorised"),401
+    with db() as c:
+        row=c.execute("SELECT display_name,guest_info FROM tenants WHERE tenant_id=?",(tenant,)).fetchone()
+        if not row:return jsonify(error="Not found"),404
+        if request.method=="PUT":
+            obj=request.get_json(silent=True)
+            keys={"arrival","parking","wifi_info","house_rules","extras"}
+            if not isinstance(obj,dict) or set(obj)!=keys or any(not isinstance(v,str) or len(v)>1000 for v in obj.values()):return jsonify(error="Invalid guest guide"),400
+            c.execute("UPDATE tenants SET guest_info=? WHERE tenant_id=?",(json.dumps(obj),tenant))
+            return jsonify(saved=True)
+        return jsonify(display_name=row[0],guest_info=json.loads(row[1]))
+
+@app.get("/api/guest/<tenant>")
+def guest_guide(tenant):
+    if not valid_tenant(tenant) or not tenant_paid(tenant):return jsonify(error="Unavailable"),404
+    with db() as c:
+        row=c.execute("SELECT display_name,guest_info FROM tenants WHERE tenant_id=?",(tenant,)).fetchone()
+    if not row:return jsonify(error="Unavailable"),404
+    return jsonify(display_name=row[0],guest_info=json.loads(row[1]))
 
 @app.get("/return")
 def returned():
