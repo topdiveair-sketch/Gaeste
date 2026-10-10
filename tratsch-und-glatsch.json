@@ -1,7 +1,7 @@
 {
-  "editionDate": "2026-10-09",
-  "editionLabel": "Freitag, 9. Oktober 2026",
-  "intro": "Grüß euch, ich bin Pia! Heute dreht sich in Spitz von 16:00 bis 18:00 Uhr alles um die Wachauer Marille; teilnehmen können nur Gäste mit bereits bestätigter Anmeldung. Bis 16:00 Uhr ist noch die Anmeldung für das morgige Erlebnis \"Schiff & Wein\" möglich. Elf Heurige sind heute am Nordufer bestätigt geöffnet, darunter Fanie’s Heuriger, das Weingut Höllmüller und die Schloss Heurige mit heutigem Aussteckbeginn. In Aggsbach Markt informiert die Gemeinde aktuell über eine milchige Eintrübung des Trinkwassers, laut Trinkwasseraufsicht besteht kein Grund zur Beunruhigung. Das Wetter kommt live aus der Gäste-App.",
+  "editionDate": "2026-10-10",
+  "editionLabel": "Samstag, 10. Oktober 2026",
+  "intro": "Grüß euch, ich bin Pia! Heute ist in Spitz viel los: Um 10:00 Uhr beginnt \"Schiff & Wein\", von 11:00 bis 16:00 Uhr öffnet bei Schönwetter die Zornberghütte und von 13:00 bis 17:00 Uhr schenken drei Winzer in den Weinterrassen aus. Zwölf Heurige sind am Nordufer bestätigt geöffnet; Weinbau Wagner startet heute in Wösendorf, Schloss Heurige und Küffer Keller haben ihren letzten Ausstecktag. In Aggsbach Markt gilt weiterhin die aktuelle Trinkwasser-Information der Gemeinde. Das Wetter kommt live aus der Gäste-App.",
   "important": [
     {
       "title": "Aggsbach Markt: aktuelle Trinkwasser-Information",
@@ -10,20 +10,26 @@
       "sourceLabel": "Marktgemeinde Aggsbach, 8. Oktober 2026"
     },
     {
-      "title": "Heute 16:00–18:00 Uhr: Wachauer Marille in Spitz",
-      "text": "Bei HARTL geht es von der Blüte bis zum Genuss inklusive Verkostung. Preis: 25 Euro. Die vorgeschriebene Anmeldung endete gestern um 18:00 Uhr; Teilnahme daher nur mit bereits bestätigter Anmeldung.",
-      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail?tx_vadb_detail%5Baction%5D=detail&tx_vadb_detail%5Bcontroller%5D=Vadb&tx_vadb_detail%5Bid%5D=199524",
-      "sourceLabel": "Veranstaltungskalender Spitz"
-    },
-    {
-      "title": "Heute 16:00 Uhr: Anmeldeschluss für Schiff & Wein",
-      "text": "Die Museumsführung mit kommentierter Weinverkostung findet morgen, Samstag, von 10:00 bis 12:00 Uhr im Schifffahrtsmuseum Spitz statt. Preis: 25 Euro; Anmeldung bis heute um 16:00 Uhr erforderlich.",
+      "title": "Heute 10:00–12:00 Uhr: Schiff & Wein",
+      "text": "Im Schifffahrtsmuseum Spitz verbindet eine Museumsführung die Geschichte der Donauschifffahrt mit einer kommentierten Weinverkostung. Die Anmeldefrist endete gestern um 16:00 Uhr; Teilnahme daher nur mit bestätigter Anmeldung.",
       "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail?tx_vadb_detail%5Baction%5D=detail&tx_vadb_detail%5Bcontroller%5D=Vadb&tx_vadb_detail%5Bid%5D=199536",
       "sourceLabel": "Veranstaltungskalender Spitz"
     },
     {
-      "title": "Heute elf Heurige bestätigt geöffnet",
-      "text": "Neu dabei sind Fanie’s Heuriger in Spitz, die Schloss Heurige in Spitz und das Weingut Höllmüller in Joching. Außerdem geöffnet: Mayer, Özelt, Mang, Ferdl Denk, Gruber, Trautsamwieser, Weinerei Schwaiger und Küffer Keller.",
+      "title": "Heute 11:00–16:00 Uhr: Zornberghütte",
+      "text": "Am Panoramaweg Spitzer Graben gibt es Schmankerl und regionale Weine. Die Veranstaltung findet nur bei Schönwetter statt; Änderungen sind vorbehalten.",
+      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199537/schmankerl-bei-der-zornberghuette",
+      "sourceLabel": "Tourismusverein Spitz"
+    },
+    {
+      "title": "Heute 13:00–17:00 Uhr: Winzer in den Weinterrassen",
+      "text": "Höllmüller schenkt beim Roten Tor aus, Stalzer bei der Ruine Hinterhaus und Gebetsberger am 1000-Eimerberg. Alle Stationen sind nur zu Fuß erreichbar; Ausschank nur bei Schönwetter.",
+      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232240/spitzer-winzer-in-den-weinterrassen",
+      "sourceLabel": "Tourismusverein Spitz"
+    },
+    {
+      "title": "Heute zwölf Heurige bestätigt geöffnet",
+      "text": "Weinbau Wagner startet heute in Wösendorf. Außerdem geöffnet: Fanie’s, Schloss Heurige, Mayer, Özelt, Mang, Ferdl Denk, Gruber, Trautsamwieser, Weinerei Schwaiger, Höllmüller und Küffer Keller. Schloss Heurige und Küffer Keller haben heute ihren letzten Ausstecktag.",
       "source": "https://heurigenkalender.niederoesterreich.at/",
       "sourceLabel": "Heurigenkalender Niederösterreich"
     },
@@ -35,7 +41,7 @@
     },
     {
       "title": "Rollfähre Weißenkirchen weiterhin eingeschränkt",
-      "text": "Wegen Niedrigwassers werden Personen und Fahrräder befördert, PKW nur bedingt. Heute gelten 09:15–11:30 und 13:30–18:30 Uhr; letzte Abfahrten sind in Weißenkirchen um 11:30 und 18:30 Uhr sowie in St. Lorenz um 11:45 und 18:45 Uhr.",
+      "text": "Wegen Niedrigwassers werden Personen und Fahrräder befördert, PKW nur bedingt. Heute gelten die Wochenendzeiten 09:15–11:30 und 12:30–18:30 Uhr; letzte Abfahrten sind in Weißenkirchen um 11:30 und 18:30 Uhr sowie in St. Lorenz um 11:45 und 18:45 Uhr.",
       "source": "https://www.weissenkirchen-wachau.at/ueber-weissenkirchen/mobilitaet/rollfaehre",
       "sourceLabel": "Marktgemeinde Weißenkirchen"
     },
@@ -111,7 +117,7 @@
     },
     {
       "title": "Rollfähren",
-      "text": "Weißenkirchen–St. Lorenz fährt heute eingeschränkt wegen Niedrigwassers. Für Spitz–Arnsdorf nennt der veröffentlichte Oktoberfahrplan werktags 06:15–19:00 Uhr, letzte Fahrt 15 Minuten vor Betriebsschluss; der tatsächliche Betrieb bleibt wasserstands- und wetterabhängig.",
+      "text": "Weißenkirchen–St. Lorenz fährt heute wegen Niedrigwassers eingeschränkt von 09:15–11:30 und 12:30–18:30 Uhr. Für Spitz–Arnsdorf gilt am Samstag 08:15–19:30 Uhr, letzte Fahrt 15 Minuten vor Betriebsschluss. Der tatsächliche Betrieb bleibt wasserstands- und wetterabhängig.",
       "links": [
         {
           "label": "Rollfähre Weißenkirchen",
@@ -126,17 +132,10 @@
   ],
   "events": [
     {
-      "date": "09.10.2026, 16:00–18:00 Uhr",
-      "place": "Spitz, HARTL – Rund um die Marille",
-      "title": "Wachauer Marille – von der Blüte bis zum Genuss",
-      "note": "Führung und Verkostung, 25 Euro. Teilnahme nur mit bereits bestätigter Anmeldung; die Frist endete gestern um 18:00 Uhr.",
-      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail?tx_vadb_detail%5Baction%5D=detail&tx_vadb_detail%5Bcontroller%5D=Vadb&tx_vadb_detail%5Bid%5D=199524"
-    },
-    {
       "date": "10.10.2026, 10:00–12:00 Uhr",
       "place": "Spitz, Schifffahrtsmuseum",
       "title": "Schiff & Wein",
-      "note": "Museumsführung mit kommentierter Weinverkostung, 25 Euro; Anmeldung bis heute, Freitag, 9. Oktober, 16:00 Uhr erforderlich.",
+      "note": "Museumsführung mit kommentierter Weinverkostung, 25 Euro. Teilnahme nur mit bestätigter Anmeldung; die Frist endete gestern um 16:00 Uhr.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail?tx_vadb_detail%5Baction%5D=detail&tx_vadb_detail%5Bcontroller%5D=Vadb&tx_vadb_detail%5Bid%5D=199536"
     },
     {
@@ -285,25 +284,25 @@
       "name": "Heuriger Weingut Höllmüller",
       "place": "Joching",
       "period": "09.–11.10.2026",
-      "hours": "Heute ab 17:00 Uhr",
+      "hours": "Heute ab 15:00 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/30938/heuriger-weingut-hllmller"
     },
     {
       "name": "Grill-Heuriger Küffer Keller",
       "place": "Dürnstein",
       "period": "01.05.–10.10.2026, Montag bis Samstag",
-      "hours": "Heute ab 17:00 Uhr",
+      "hours": "Heute ab 17:00 Uhr; letzter Ausstecktag",
       "url": "https://heurigenkalender.niederoesterreich.at/169394/grill-heuriger-kffer-keller"
+    },
+    {
+      "name": "Heuriger Weinbau Wagner",
+      "place": "Wösendorf",
+      "period": "10.–14.10.2026",
+      "hours": "Heute ab 12:00 Uhr; erster Ausstecktag",
+      "url": "https://heurigenkalender.niederoesterreich.at/30952/heuriger-weinbau-wagner"
     }
   ],
   "openingSoon": [
-    {
-      "date": "10.10.2026",
-      "name": "Heuriger Weinbau Wagner",
-      "place": "Wösendorf",
-      "hours": "Bestätigter Aussteckbeginn am Samstag, 10. Oktober, ab 12:00 Uhr; Aussteckzeit 10.–14.10.2026.",
-      "url": "https://heurigenkalender.niederoesterreich.at/30952/heuriger-weinbau-wagner"
-    },
     {
       "date": "15.10.2026",
       "name": "Weinbau Familie Pölzer Adam-Mühle",
@@ -331,17 +330,38 @@
       "place": "Oberloiben, Dürnstein",
       "hours": "Bestätigter Aussteckbeginn am Freitag, 16. Oktober, ab 12:00 Uhr; Aussteckzeit 16.–18.10.2026.",
       "url": "https://heurigenkalender.niederoesterreich.at/184075/weinhauer-brustbauer"
+    },
+    {
+      "date": "16.10.2026",
+      "name": "Schloss Heurige",
+      "place": "Spitz, Schloss zu Spitz",
+      "hours": "Bestätigter neuer Aussteckbeginn am Freitag, 16. Oktober, 16:00–22:00 Uhr; geöffnet auch Samstag, 17. Oktober.",
+      "url": "https://heurigenkalender.niederoesterreich.at/199547/schlossheurige"
+    },
+    {
+      "date": "17.10.2026",
+      "name": "Heuriger Weinterrasse Kropf",
+      "place": "Weißenkirchen",
+      "hours": "Bestätigter Aussteckbeginn am Samstag, 17. Oktober, ab 14:00 Uhr; Aussteckzeit bis 1. November, Mittwoch Ruhetag.",
+      "url": "https://heurigenkalender.niederoesterreich.at/89995/heuriger-weinterrasse-kropf"
+    },
+    {
+      "date": "17.10.2026",
+      "name": "Winzerhof Familie Stöger",
+      "place": "Dürnstein",
+      "hours": "Bestätigter Aussteckbeginn am Samstag, 17. Oktober, ab 12:00 Uhr; Aussteckzeit 17.–26.10.2026.",
+      "url": "https://heurigenkalender.niederoesterreich.at/31620/winzerhof-familie-stger"
     }
   ],
-  "piaTip": "Pias Freitagstipp: Wer für das heutige Marillenerlebnis bereits angemeldet ist, startet um 16:00 Uhr bei HARTL in Spitz. Spontanentschlossene können heute bis 16:00 Uhr noch \"Schiff & Wein\" für morgen buchen. Für eine Einkehr stehen elf bestätigte Heurige zur Wahl; Fanie’s Heuriger und die Schloss Heurige starten heute in Spitz, Höllmüller in Joching. Bei Schifffahrt und Fähren die Niedrigwasserlage vor Abfahrt prüfen.",
+  "piaTip": "Pias Samstagstipp: Nach \"Schiff & Wein\" am Vormittag lässt sich Spitz heute zu Fuß besonders schön entdecken: ab 11:00 Uhr zur Zornberghütte oder von 13:00 bis 17:00 Uhr zu Höllmüller, Stalzer und Gebetsberger in den Weinterrassen – beides nur bei Schönwetter. Danach warten zwölf bestätigte Heurige; Schloss Heurige und Küffer Keller haben heute ihren letzten Ausstecktag. Bei Schifffahrt und Fähren die Niedrigwasserlage vor Abfahrt prüfen.",
   "goodToKnow": [
     "Das Wetter wird in der Gäste-App live geladen und deshalb nicht statisch in Tratsch & Klatsch gespeichert.",
     "Die Gemeinde Aggsbach meldet milchige Eintrübung des Trinkwassers; laut Trinkwasseraufsicht besteht kein Grund zur Beunruhigung. Eine reguläre Untersuchung folgt in der kommenden Woche.",
-    "Heute sind elf Heurige am Nordufer bestätigt geöffnet; Fanie’s Heuriger, Schloss Heurige und Höllmüller starten heute.",
-    "Fünf bestätigte Heurigenöffnungen der kommenden sieben Tage sind vorgemerkt: Wagner am 10. Oktober, Adam-Mühle am 15. Oktober sowie Gebetsberger, Stalzer und Brustbauer am 16. Oktober.",
+    "Heute sind zwölf Heurige am Nordufer bestätigt geöffnet; Weinbau Wagner startet heute, Schloss Heurige und Küffer Keller haben ihren letzten Ausstecktag.",
+    "Sieben bestätigte Heurigenöffnungen der kommenden sieben Tage sind vorgemerkt: Adam-Mühle am 15. Oktober; Gebetsberger, Stalzer, Brustbauer und Schloss Heurige am 16. Oktober; Kropf und Stöger am 17. Oktober.",
     "Die DDSG weist wegen Niedrigwassers nicht alle planmäßigen Fahrten als verfügbar aus; konkrete Verbindung und Halt vor Abfahrt in der Buchungsmaske prüfen.",
     "Die Rollfähre Weißenkirchen befördert wegen Niedrigwassers weiterhin Personen und Fahrräder, PKW nur bedingt.",
     "Am Donauradweg-Nordufer ist die frühere Weißenkirchner Umleitung beendet; die nächste angekündigte Totalsperre beginnt erst am 27. Oktober.",
-    "Schiff & Wein kann für morgen nur noch bis heute 16:00 Uhr angemeldet werden; die Veranstaltungen in den Weinterrassen und an der Zornberghütte finden nur bei Schönwetter statt."
+    "Für Schiff & Wein ist nur Teilnahme mit bestätigter Anmeldung möglich; die Veranstaltungen in den Weinterrassen und an der Zornberghütte finden nur bei Schönwetter statt."
   ]
 }
