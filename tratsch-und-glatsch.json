@@ -1,7 +1,7 @@
 {
-  "editionDate": "2026-10-10",
-  "editionLabel": "Samstag, 10. Oktober 2026",
-  "intro": "Grüß euch, ich bin Pia! Heute ist in Spitz viel los: Um 10:00 Uhr beginnt \"Schiff & Wein\", von 11:00 bis 16:00 Uhr öffnet bei Schönwetter die Zornberghütte und von 13:00 bis 17:00 Uhr schenken drei Winzer in den Weinterrassen aus. Zwölf Heurige sind am Nordufer bestätigt geöffnet; Weinbau Wagner startet heute in Wösendorf, Schloss Heurige und Küffer Keller haben ihren letzten Ausstecktag. In Aggsbach Markt gilt weiterhin die aktuelle Trinkwasser-Information der Gemeinde. Das Wetter kommt live aus der Gäste-App.",
+  "editionDate": "2026-10-11",
+  "editionLabel": "Sonntag, 11. Oktober 2026",
+  "intro": "Grüß euch, ich bin Pia! Heute locken in Spitz der Sturmfrühschoppen von 10:00 bis 15:00 Uhr und die Zornberghütte von 11:00 bis 16:00 Uhr – beide nur bei Schönwetter. Zehn Heurige sind am Nordufer bestätigt geöffnet; Gruber und Höllmüller haben ihren letzten Ausstecktag. Wer morgen zum Weinsensoriktraining möchte, muss sich heute bis 18:00 Uhr anmelden. In Aggsbach Markt gilt weiterhin die aktuelle Trinkwasser-Information der Gemeinde. Das Wetter kommt live aus der Gäste-App.",
   "important": [
     {
       "title": "Aggsbach Markt: aktuelle Trinkwasser-Information",
@@ -10,10 +10,10 @@
       "sourceLabel": "Marktgemeinde Aggsbach, 8. Oktober 2026"
     },
     {
-      "title": "Heute 10:00–12:00 Uhr: Schiff & Wein",
-      "text": "Im Schifffahrtsmuseum Spitz verbindet eine Museumsführung die Geschichte der Donauschifffahrt mit einer kommentierten Weinverkostung. Die Anmeldefrist endete gestern um 16:00 Uhr; Teilnahme daher nur mit bestätigter Anmeldung.",
-      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail?tx_vadb_detail%5Baction%5D=detail&tx_vadb_detail%5Bcontroller%5D=Vadb&tx_vadb_detail%5Bid%5D=199536",
-      "sourceLabel": "Veranstaltungskalender Spitz"
+      "title": "Heute 10:00–15:00 Uhr: Sturmfrühschoppen",
+      "text": "Am Kirchenplatz Spitz spielen die Musikerinnen und Musiker der Trachtenkapelle; dazu gibt es frischen Sturm und Herbstschmankerl. Die Veranstaltung findet nur bei Schönwetter statt.",
+      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail?tx_vadb_detail%5Baction%5D=detail&tx_vadb_detail%5Bcontroller%5D=Vadb&tx_vadb_detail%5Bid%5D=232248",
+      "sourceLabel": "Tourismusverein Spitz"
     },
     {
       "title": "Heute 11:00–16:00 Uhr: Zornberghütte",
@@ -22,16 +22,16 @@
       "sourceLabel": "Tourismusverein Spitz"
     },
     {
-      "title": "Heute 13:00–17:00 Uhr: Winzer in den Weinterrassen",
-      "text": "Höllmüller schenkt beim Roten Tor aus, Stalzer bei der Ruine Hinterhaus und Gebetsberger am 1000-Eimerberg. Alle Stationen sind nur zu Fuß erreichbar; Ausschank nur bei Schönwetter.",
-      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232240/spitzer-winzer-in-den-weinterrassen",
-      "sourceLabel": "Tourismusverein Spitz"
-    },
-    {
-      "title": "Heute zwölf Heurige bestätigt geöffnet",
-      "text": "Weinbau Wagner startet heute in Wösendorf. Außerdem geöffnet: Fanie’s, Schloss Heurige, Mayer, Özelt, Mang, Ferdl Denk, Gruber, Trautsamwieser, Weinerei Schwaiger, Höllmüller und Küffer Keller. Schloss Heurige und Küffer Keller haben heute ihren letzten Ausstecktag.",
+      "title": "Heute zehn Heurige bestätigt geöffnet",
+      "text": "Geöffnet sind Fanie’s, Mayer, Özelt, Mang, Ferdl Denk, Gruber, Trautsamwieser, Weinerei Schwaiger, Höllmüller und Wagner. Gruber und Höllmüller haben heute ihren letzten Ausstecktag.",
       "source": "https://heurigenkalender.niederoesterreich.at/",
       "sourceLabel": "Heurigenkalender Niederösterreich"
+    },
+    {
+      "title": "Heute bis 18:00 Uhr: Anmeldung zum Weinsensoriktraining",
+      "text": "Für den interaktiven Workshop morgen von 11:00 bis 13:30 Uhr beim Weingut Lagler ist die Anmeldung heute bis 18:00 Uhr möglich; maximal 15 Personen.",
+      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail?tx_vadb_detail%5Baction%5D=detail&tx_vadb_detail%5Bcontroller%5D=Vadb&tx_vadb_detail%5Bid%5D=232241",
+      "sourceLabel": "Tourismusverein Spitz"
     },
     {
       "title": "DDSG: Niedrigwasser schränkt Fahrten ein",
@@ -117,7 +117,7 @@
     },
     {
       "title": "Rollfähren",
-      "text": "Weißenkirchen–St. Lorenz fährt heute wegen Niedrigwassers eingeschränkt von 09:15–11:30 und 12:30–18:30 Uhr. Für Spitz–Arnsdorf gilt am Samstag 08:15–19:30 Uhr, letzte Fahrt 15 Minuten vor Betriebsschluss. Der tatsächliche Betrieb bleibt wasserstands- und wetterabhängig.",
+      "text": "Weißenkirchen–St. Lorenz fährt heute wegen Niedrigwassers eingeschränkt von 09:15–11:30 und 12:30–18:30 Uhr. Für Spitz–Arnsdorf gilt am Sonntag 08:15–19:30 Uhr, letzte Fahrt 15 Minuten vor Betriebsschluss. Der tatsächliche Betrieb bleibt wasserstands- und wetterabhängig.",
       "links": [
         {
           "label": "Rollfähre Weißenkirchen",
@@ -131,27 +131,6 @@
     }
   ],
   "events": [
-    {
-      "date": "10.10.2026, 10:00–12:00 Uhr",
-      "place": "Spitz, Schifffahrtsmuseum",
-      "title": "Schiff & Wein",
-      "note": "Museumsführung mit kommentierter Weinverkostung, 25 Euro. Teilnahme nur mit bestätigter Anmeldung; die Frist endete gestern um 16:00 Uhr.",
-      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail?tx_vadb_detail%5Baction%5D=detail&tx_vadb_detail%5Bcontroller%5D=Vadb&tx_vadb_detail%5Bid%5D=199536"
-    },
-    {
-      "date": "10.10.2026, 11:00–16:00 Uhr",
-      "place": "Spitz, Zornberghütte",
-      "title": "Schmankerl bei der Zornberghütte",
-      "note": "Einkehr am Panoramaweg Spitzer Graben mit Familie Penner; nur bei Schönwetter, Änderungen vorbehalten.",
-      "url": "https://www.spitz-wachau.com/wanderbares/zornberghuette"
-    },
-    {
-      "date": "10.10.2026, 13:00–17:00 Uhr",
-      "place": "Spitz, Rotes Tor, Ruine Hinterhaus und 1000-Eimerberg",
-      "title": "Spitzer Winzer in den Weinterrassen",
-      "note": "Ausschank bei Höllmüller, Stalzer und Gebetsberger; nur zu Fuß erreichbar und nur bei Schönwetter.",
-      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232240/spitzer-winzer-in-den-weinterrassen"
-    },
     {
       "date": "11.10.2026, 10:00–15:00 Uhr",
       "place": "Spitz, Kirchenplatz",
@@ -170,7 +149,7 @@
       "date": "12.10.2026, 11:00–13:30 Uhr",
       "place": "Spitz, Weingut Lagler",
       "title": "Weinsensoriktraining",
-      "note": "Interaktiver Workshop mit Weinverkostung, 45 Euro; Anmeldung bis Sonntag, 11. Oktober, 18:00 Uhr, maximal 15 Personen.",
+      "note": "Interaktiver Workshop mit Weinverkostung, 45 Euro; Anmeldung heute bis 18:00 Uhr, maximal 15 Personen.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail?tx_vadb_detail%5Baction%5D=detail&tx_vadb_detail%5Bcontroller%5D=Vadb&tx_vadb_detail%5Bid%5D=232241"
     },
     {
@@ -225,17 +204,10 @@
       "url": "https://heurigenkalender.niederoesterreich.at/235315/fanie-s-heuriger"
     },
     {
-      "name": "Schloss Heurige",
-      "place": "Spitz, Schloss zu Spitz",
-      "period": "09.–10.10.2026",
-      "hours": "Heute 16:00–22:00 Uhr",
-      "url": "https://heurigenkalender.niederoesterreich.at/199547/schloss-heurige"
-    },
-    {
       "name": "Weingut Mayer",
       "place": "Spitz, Gut am Steg",
       "period": "02.–15.10.2026",
-      "hours": "Heute ab 16:00 Uhr",
+      "hours": "Heute ab 14:30 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/156622/weingut-mayer"
     },
     {
@@ -263,7 +235,7 @@
       "name": "Wildheuriger Familie Gruber",
       "place": "Weißenkirchen",
       "period": "18.09.–11.10.2026",
-      "hours": "Heute ab 15:00 Uhr",
+      "hours": "Heute ab 15:00 Uhr; letzter Ausstecktag",
       "url": "https://heurigenkalender.niederoesterreich.at/30935/wildheuriger-familie-gruber"
     },
     {
@@ -284,21 +256,14 @@
       "name": "Heuriger Weingut Höllmüller",
       "place": "Joching",
       "period": "09.–11.10.2026",
-      "hours": "Heute ab 15:00 Uhr",
+      "hours": "Heute ab 15:00 Uhr; letzter Ausstecktag",
       "url": "https://heurigenkalender.niederoesterreich.at/30938/heuriger-weingut-hllmller"
-    },
-    {
-      "name": "Grill-Heuriger Küffer Keller",
-      "place": "Dürnstein",
-      "period": "01.05.–10.10.2026, Montag bis Samstag",
-      "hours": "Heute ab 17:00 Uhr; letzter Ausstecktag",
-      "url": "https://heurigenkalender.niederoesterreich.at/169394/grill-heuriger-kffer-keller"
     },
     {
       "name": "Heuriger Weinbau Wagner",
       "place": "Wösendorf",
       "period": "10.–14.10.2026",
-      "hours": "Heute ab 12:00 Uhr; erster Ausstecktag",
+      "hours": "Heute ab 12:00 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/30952/heuriger-weinbau-wagner"
     }
   ],
@@ -353,15 +318,15 @@
       "url": "https://heurigenkalender.niederoesterreich.at/31620/winzerhof-familie-stger"
     }
   ],
-  "piaTip": "Pias Samstagstipp: Nach \"Schiff & Wein\" am Vormittag lässt sich Spitz heute zu Fuß besonders schön entdecken: ab 11:00 Uhr zur Zornberghütte oder von 13:00 bis 17:00 Uhr zu Höllmüller, Stalzer und Gebetsberger in den Weinterrassen – beides nur bei Schönwetter. Danach warten zwölf bestätigte Heurige; Schloss Heurige und Küffer Keller haben heute ihren letzten Ausstecktag. Bei Schifffahrt und Fähren die Niedrigwasserlage vor Abfahrt prüfen.",
+  "piaTip": "Pias Sonntagstipp: Bei Schönwetter zuerst zum Sturmfrühschoppen am Spitzer Kirchenplatz und anschließend zur Zornberghütte am Panoramaweg. Danach warten zehn bestätigte Heurige; Gruber und Höllmüller haben heute ihren letzten Ausstecktag. Für das Weinsensoriktraining morgen endet die Anmeldung heute um 18:00 Uhr. Bei Schifffahrt und Fähren die Niedrigwasserlage vor Abfahrt prüfen.",
   "goodToKnow": [
     "Das Wetter wird in der Gäste-App live geladen und deshalb nicht statisch in Tratsch & Klatsch gespeichert.",
     "Die Gemeinde Aggsbach meldet milchige Eintrübung des Trinkwassers; laut Trinkwasseraufsicht besteht kein Grund zur Beunruhigung. Eine reguläre Untersuchung folgt in der kommenden Woche.",
-    "Heute sind zwölf Heurige am Nordufer bestätigt geöffnet; Weinbau Wagner startet heute, Schloss Heurige und Küffer Keller haben ihren letzten Ausstecktag.",
+    "Heute sind zehn Heurige am Nordufer bestätigt geöffnet; Gruber und Höllmüller haben ihren letzten Ausstecktag.",
     "Sieben bestätigte Heurigenöffnungen der kommenden sieben Tage sind vorgemerkt: Adam-Mühle am 15. Oktober; Gebetsberger, Stalzer, Brustbauer und Schloss Heurige am 16. Oktober; Kropf und Stöger am 17. Oktober.",
     "Die DDSG weist wegen Niedrigwassers nicht alle planmäßigen Fahrten als verfügbar aus; konkrete Verbindung und Halt vor Abfahrt in der Buchungsmaske prüfen.",
     "Die Rollfähre Weißenkirchen befördert wegen Niedrigwassers weiterhin Personen und Fahrräder, PKW nur bedingt.",
     "Am Donauradweg-Nordufer ist die frühere Weißenkirchner Umleitung beendet; die nächste angekündigte Totalsperre beginnt erst am 27. Oktober.",
-    "Für Schiff & Wein ist nur Teilnahme mit bestätigter Anmeldung möglich; die Veranstaltungen in den Weinterrassen und an der Zornberghütte finden nur bei Schönwetter statt."
+    "Sturmfrühschoppen und Zornberghütte finden heute nur bei Schönwetter statt; für das Weinsensoriktraining morgen endet die Anmeldung heute um 18:00 Uhr."
   ]
 }
