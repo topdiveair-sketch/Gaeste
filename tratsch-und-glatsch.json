@@ -1,7 +1,7 @@
 {
-  "editionDate": "2026-10-11",
-  "editionLabel": "Sonntag, 11. Oktober 2026",
-  "intro": "Grüß euch, ich bin Pia! Heute locken in Spitz der Sturmfrühschoppen von 10:00 bis 15:00 Uhr und die Zornberghütte von 11:00 bis 16:00 Uhr – beide nur bei Schönwetter. Zehn Heurige sind am Nordufer bestätigt geöffnet; Gruber und Höllmüller haben ihren letzten Ausstecktag. Wer morgen zum Weinsensoriktraining möchte, muss sich heute bis 18:00 Uhr anmelden. In Aggsbach Markt gilt weiterhin die aktuelle Trinkwasser-Information der Gemeinde. Das Wetter kommt live aus der Gäste-App.",
+  "editionDate": "2026-10-12",
+  "editionLabel": "Montag, 12. Oktober 2026",
+  "intro": "Grüß euch, ich bin Pia! Heute findet in Spitz von 11:00 bis 13:30 Uhr das Weinsensoriktraining statt; teilnehmen kann nur, wer sich gestern rechtzeitig angemeldet hat. Um 18:30 Uhr beginnt Yoga im Venussaal Aggsbach Markt. Sechs Heurige sind am Nordufer bestätigt geöffnet. Die Rollfähre Weißenkirchen fährt heute nicht, die Fähre Spitz–Arnsdorf dagegen werktags ab 06:15 Uhr. In Aggsbach Markt gilt weiterhin die aktuelle Trinkwasser-Information der Gemeinde. Das Wetter kommt live aus der Gäste-App.",
   "important": [
     {
       "title": "Aggsbach Markt: aktuelle Trinkwasser-Information",
@@ -10,28 +10,22 @@
       "sourceLabel": "Marktgemeinde Aggsbach, 8. Oktober 2026"
     },
     {
-      "title": "Heute 10:00–15:00 Uhr: Sturmfrühschoppen",
-      "text": "Am Kirchenplatz Spitz spielen die Musikerinnen und Musiker der Trachtenkapelle; dazu gibt es frischen Sturm und Herbstschmankerl. Die Veranstaltung findet nur bei Schönwetter statt.",
-      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail?tx_vadb_detail%5Baction%5D=detail&tx_vadb_detail%5Bcontroller%5D=Vadb&tx_vadb_detail%5Bid%5D=232248",
-      "sourceLabel": "Tourismusverein Spitz"
-    },
-    {
-      "title": "Heute 11:00–16:00 Uhr: Zornberghütte",
-      "text": "Am Panoramaweg Spitzer Graben gibt es Schmankerl und regionale Weine. Die Veranstaltung findet nur bei Schönwetter statt; Änderungen sind vorbehalten.",
-      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199537/schmankerl-bei-der-zornberghuette",
-      "sourceLabel": "Tourismusverein Spitz"
-    },
-    {
-      "title": "Heute zehn Heurige bestätigt geöffnet",
-      "text": "Geöffnet sind Fanie’s, Mayer, Özelt, Mang, Ferdl Denk, Gruber, Trautsamwieser, Weinerei Schwaiger, Höllmüller und Wagner. Gruber und Höllmüller haben heute ihren letzten Ausstecktag.",
+      "title": "Heute sechs Heurige bestätigt geöffnet",
+      "text": "Geöffnet sind Fanie’s und Mayer in Spitz sowie Mang, Ferdl Denk, Trautsamwieser und Wagner in Weißenkirchen beziehungsweise Wösendorf. Die Aussteckzeiten von Gruber und Höllmüller endeten gestern; Özelt und Weinerei Schwaiger haben montags geschlossen.",
       "source": "https://heurigenkalender.niederoesterreich.at/",
       "sourceLabel": "Heurigenkalender Niederösterreich"
     },
     {
-      "title": "Heute bis 18:00 Uhr: Anmeldung zum Weinsensoriktraining",
-      "text": "Für den interaktiven Workshop morgen von 11:00 bis 13:30 Uhr beim Weingut Lagler ist die Anmeldung heute bis 18:00 Uhr möglich; maximal 15 Personen.",
+      "title": "Heute 11:00–13:30 Uhr: Weinsensoriktraining",
+      "text": "Beim Weingut Lagler werden Geruchs- und Geschmacksgedächtnis trainiert und ausgewählte Weine verkostet. Die Anmeldefrist endete gestern um 18:00 Uhr; Teilnahme nur mit bestätigter Anmeldung.",
       "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail?tx_vadb_detail%5Baction%5D=detail&tx_vadb_detail%5Bcontroller%5D=Vadb&tx_vadb_detail%5Bid%5D=232241",
       "sourceLabel": "Tourismusverein Spitz"
+    },
+    {
+      "title": "Heute 18:30–19:30 Uhr: Yoga in Aggsbach Markt",
+      "text": "Yoga mit Julia findet laut offiziellem Veranstaltungskalender planmäßig im Venussaal statt.",
+      "source": "https://www.aggsbach.gv.at/Yoga_fuer_Junggebliebene_mit_Julia_1",
+      "sourceLabel": "Marktgemeinde Aggsbach"
     },
     {
       "title": "DDSG: Niedrigwasser schränkt Fahrten ein",
@@ -40,8 +34,8 @@
       "sourceLabel": "DDSG Blue Danube"
     },
     {
-      "title": "Rollfähre Weißenkirchen weiterhin eingeschränkt",
-      "text": "Wegen Niedrigwassers werden Personen und Fahrräder befördert, PKW nur bedingt. Heute gelten die Wochenendzeiten 09:15–11:30 und 12:30–18:30 Uhr; letzte Abfahrten sind in Weißenkirchen um 11:30 und 18:30 Uhr sowie in St. Lorenz um 11:45 und 18:45 Uhr.",
+      "title": "Rollfähre Weißenkirchen fährt heute nicht",
+      "text": "Seit heute gilt der Nachsaisonfahrplan: Betrieb nur Donnerstag bis Sonntag und an Feiertagen. Die nächste planmäßige Fahrt ist am Donnerstag von 09:15–11:30 und 13:30–17:30 Uhr. Wegen Niedrigwassers werden Personen und Fahrräder, PKW nur bedingt befördert.",
       "source": "https://www.weissenkirchen-wachau.at/ueber-weissenkirchen/mobilitaet/rollfaehre",
       "sourceLabel": "Marktgemeinde Weißenkirchen"
     },
@@ -117,7 +111,7 @@
     },
     {
       "title": "Rollfähren",
-      "text": "Weißenkirchen–St. Lorenz fährt heute wegen Niedrigwassers eingeschränkt von 09:15–11:30 und 12:30–18:30 Uhr. Für Spitz–Arnsdorf gilt am Sonntag 08:15–19:30 Uhr, letzte Fahrt 15 Minuten vor Betriebsschluss. Der tatsächliche Betrieb bleibt wasserstands- und wetterabhängig.",
+      "text": "Weißenkirchen–St. Lorenz fährt heute nicht; vom 12. bis 26. Oktober gilt dort Betrieb nur Donnerstag bis Sonntag und an Feiertagen. Spitz–Arnsdorf fährt heute werktags von 06:15–19:00 Uhr, letzte Fahrt 15 Minuten vor Betriebsschluss. Der tatsächliche Betrieb bleibt wasserstands- und wetterabhängig.",
       "links": [
         {
           "label": "Rollfähre Weißenkirchen",
@@ -132,24 +126,10 @@
   ],
   "events": [
     {
-      "date": "11.10.2026, 10:00–15:00 Uhr",
-      "place": "Spitz, Kirchenplatz",
-      "title": "Sturmfrühschoppen",
-      "note": "Musik der Trachtenkapelle Spitz, frischer Sturm und Herbstschmankerl; nur bei Schönwetter.",
-      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail?tx_vadb_detail%5Baction%5D=detail&tx_vadb_detail%5Bcontroller%5D=Vadb&tx_vadb_detail%5Bid%5D=232248"
-    },
-    {
-      "date": "11.10.2026, 11:00–16:00 Uhr",
-      "place": "Spitz, Zornberghütte",
-      "title": "Schmankerl bei der Zornberghütte",
-      "note": "Einkehr mit Familie Penner; nur bei Schönwetter, Änderungen vorbehalten.",
-      "url": "https://www.spitz-wachau.com/wanderbares/zornberghuette"
-    },
-    {
       "date": "12.10.2026, 11:00–13:30 Uhr",
       "place": "Spitz, Weingut Lagler",
       "title": "Weinsensoriktraining",
-      "note": "Interaktiver Workshop mit Weinverkostung, 45 Euro; Anmeldung heute bis 18:00 Uhr, maximal 15 Personen.",
+      "note": "Interaktiver Workshop mit Weinverkostung, 45 Euro. Die Anmeldefrist endete gestern um 18:00 Uhr; Teilnahme nur mit bestätigter Anmeldung.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail?tx_vadb_detail%5Baction%5D=detail&tx_vadb_detail%5Bcontroller%5D=Vadb&tx_vadb_detail%5Bid%5D=232241"
     },
     {
@@ -181,11 +161,39 @@
       "url": "https://www.aggsbach.gv.at/system/web/veranstaltung.aspx"
     },
     {
+      "date": "16.10.2026, 16:00–18:00 Uhr",
+      "place": "Spitz, HARTL – Rund um die Marille",
+      "title": "Wachauer Marille – Von der Blüte bis zum Genuss",
+      "note": "Einblicke in Anbau und Verarbeitung samt Verkostung, 25 Euro; Anmeldung bis Donnerstag, 15. Oktober, 18:00 Uhr erforderlich.",
+      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199524/wachauer-marille-von-der-bluete-bis-zum-genuss"
+    },
+    {
+      "date": "17.10.2026, 13:00–17:00 Uhr",
+      "place": "Spitz, Rotes Tor, Ruine Hinterhaus und 1000-Eimerberg",
+      "title": "Spitzer Winzer in den Weinterrassen",
+      "note": "Ausschank bei Özelt, Johann Donabaum und Graben Gritsch; nur zu Fuß erreichbar und nur bei Schönwetter.",
+      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232240/spitzer-winzer-in-den-weinterrassen"
+    },
+    {
+      "date": "17.10.2026, 15:00–18:00 Uhr",
+      "place": "Aggsbach Markt, Venussaal",
+      "title": "Kaffee für Junggebliebene",
+      "note": "Der Termin ist im offiziellen Aggsbacher Veranstaltungskalender als planmäßig bestätigt.",
+      "url": "https://www.aggsbach.gv.at/Kaffee_fuer_Junggebliebene"
+    },
+    {
       "date": "17.10.2026, ab 16:00 Uhr",
       "place": "Aggsbach Markt, Galerie am Platz",
       "title": "Vernissage FORMENSPRACHE",
       "note": "Ausstellung zeitgenössischer Keramik mit Performance von Sascha Alexandra Zaitseva; Anne Bennent eröffnet und stellt die Kunstschaffenden vor.",
       "url": "https://www.aggsbach.gv.at/system/web/news.aspx?detailonr=228049294-1900&menuonr=222922001"
+    },
+    {
+      "date": "18.10.2026, 10:00–16:00 Uhr",
+      "place": "Spitz, Ried Hartberg",
+      "title": "Musikalische Weinterrasse",
+      "note": "Ausschank ab 10:00 Uhr, Musik von 11:00 bis 15:00 Uhr; Zufahrten zum Veranstaltungsort sind gesperrt, öffentliche Anreise wird empfohlen.",
+      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/228287/musikalische-weinterrasse-in-der-ried-hartberg"
     },
     {
       "date": "01.–30.10.2026, Montag bis Freitag ab 07:00 Uhr",
@@ -200,22 +208,15 @@
       "name": "Fanie’s Heuriger",
       "place": "Spitz",
       "period": "09.–26.10.2026",
-      "hours": "Heute ab 12:00 Uhr",
+      "hours": "Heute ab 15:00 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/235315/fanie-s-heuriger"
     },
     {
       "name": "Weingut Mayer",
       "place": "Spitz, Gut am Steg",
       "period": "02.–15.10.2026",
-      "hours": "Heute ab 14:30 Uhr",
+      "hours": "Heute ab 16:00 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/156622/weingut-mayer"
-    },
-    {
-      "name": "Heuriger Özelt",
-      "place": "Spitz",
-      "period": "bis 26.10.2026",
-      "hours": "Heute 16:00–23:00 Uhr",
-      "url": "https://heurigenkalender.niederoesterreich.at/200943/offen-is-beim-heurigen-zelt-in-spitz-an-der-donau"
     },
     {
       "name": "Heuriger Mang Hermenegild",
@@ -232,13 +233,6 @@
       "url": "https://heurigenkalender.niederoesterreich.at/30949/heuriger-ferdl-denk"
     },
     {
-      "name": "Wildheuriger Familie Gruber",
-      "place": "Weißenkirchen",
-      "period": "18.09.–11.10.2026",
-      "hours": "Heute ab 15:00 Uhr; letzter Ausstecktag",
-      "url": "https://heurigenkalender.niederoesterreich.at/30935/wildheuriger-familie-gruber"
-    },
-    {
       "name": "Heuriger Weingut Trautsamwieser",
       "place": "Weißenkirchen",
       "period": "18.09.–18.10.2026",
@@ -246,24 +240,10 @@
       "url": "https://heurigenkalender.niederoesterreich.at/30948/heuriger-weingut-trautsamwieser"
     },
     {
-      "name": "Weinerei Schwaiger",
-      "place": "Wösendorf",
-      "period": "15.04.–18.10.2026, Mittwoch bis Sonntag",
-      "hours": "Heute 10:00–18:00 Uhr",
-      "url": "https://heurigenkalender.niederoesterreich.at/30957/heuriger-weinerei-schwaiger"
-    },
-    {
-      "name": "Heuriger Weingut Höllmüller",
-      "place": "Joching",
-      "period": "09.–11.10.2026",
-      "hours": "Heute ab 15:00 Uhr; letzter Ausstecktag",
-      "url": "https://heurigenkalender.niederoesterreich.at/30938/heuriger-weingut-hllmller"
-    },
-    {
       "name": "Heuriger Weinbau Wagner",
       "place": "Wösendorf",
       "period": "10.–14.10.2026",
-      "hours": "Heute ab 12:00 Uhr",
+      "hours": "Heute ab 15:00 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/30952/heuriger-weinbau-wagner"
     }
   ],
@@ -298,6 +278,13 @@
     },
     {
       "date": "16.10.2026",
+      "name": "Heuriger Weingut Höllmüller",
+      "place": "Joching",
+      "hours": "Bestätigter neuer Aussteckbeginn am Freitag, 16. Oktober, ab 17:00 Uhr; Aussteckzeit 16.–18.10.2026.",
+      "url": "https://heurigenkalender.niederoesterreich.at/30938/weingut-hllmller"
+    },
+    {
+      "date": "16.10.2026",
       "name": "Schloss Heurige",
       "place": "Spitz, Schloss zu Spitz",
       "hours": "Bestätigter neuer Aussteckbeginn am Freitag, 16. Oktober, 16:00–22:00 Uhr; geöffnet auch Samstag, 17. Oktober.",
@@ -316,17 +303,24 @@
       "place": "Dürnstein",
       "hours": "Bestätigter Aussteckbeginn am Samstag, 17. Oktober, ab 12:00 Uhr; Aussteckzeit 17.–26.10.2026.",
       "url": "https://heurigenkalender.niederoesterreich.at/31620/winzerhof-familie-stger"
+    },
+    {
+      "date": "19.10.2026",
+      "name": "Heuriger Schweighofer",
+      "place": "Oberloiben, Dürnstein",
+      "hours": "Bestätigter Aussteckbeginn am Montag, 19. Oktober, ab 15:00 Uhr; Aussteckzeit bis 26.10.2026.",
+      "url": "https://heurigenkalender.niederoesterreich.at/31625/heuriger-schweighofer"
     }
   ],
-  "piaTip": "Pias Sonntagstipp: Bei Schönwetter zuerst zum Sturmfrühschoppen am Spitzer Kirchenplatz und anschließend zur Zornberghütte am Panoramaweg. Danach warten zehn bestätigte Heurige; Gruber und Höllmüller haben heute ihren letzten Ausstecktag. Für das Weinsensoriktraining morgen endet die Anmeldung heute um 18:00 Uhr. Bei Schifffahrt und Fähren die Niedrigwasserlage vor Abfahrt prüfen.",
+  "piaTip": "Pias Montagstipp: Wer für das Weinsensoriktraining angemeldet ist, startet heute um 11:00 Uhr beim Weingut Lagler. Ab 18:30 Uhr gibt es Yoga im Venussaal Aggsbach Markt. Sechs bestätigte Heurige sind geöffnet. Für den Donauübergang heute die Fähre Spitz–Arnsdorf nutzen, denn Weißenkirchen–St. Lorenz fährt montags bis mittwochs nicht. Bei der DDSG die Niedrigwasserlage vor Abfahrt prüfen.",
   "goodToKnow": [
     "Das Wetter wird in der Gäste-App live geladen und deshalb nicht statisch in Tratsch & Klatsch gespeichert.",
     "Die Gemeinde Aggsbach meldet milchige Eintrübung des Trinkwassers; laut Trinkwasseraufsicht besteht kein Grund zur Beunruhigung. Eine reguläre Untersuchung folgt in der kommenden Woche.",
-    "Heute sind zehn Heurige am Nordufer bestätigt geöffnet; Gruber und Höllmüller haben ihren letzten Ausstecktag.",
-    "Sieben bestätigte Heurigenöffnungen der kommenden sieben Tage sind vorgemerkt: Adam-Mühle am 15. Oktober; Gebetsberger, Stalzer, Brustbauer und Schloss Heurige am 16. Oktober; Kropf und Stöger am 17. Oktober.",
+    "Heute sind sechs Heurige am Nordufer bestätigt geöffnet: Fanie’s, Mayer, Mang, Ferdl Denk, Trautsamwieser und Wagner.",
+    "Neun bestätigte Heurigenöffnungen der kommenden sieben Tage sind vorgemerkt: Adam-Mühle am 15. Oktober; Gebetsberger, Stalzer, Brustbauer, Höllmüller und Schloss Heurige am 16. Oktober; Kropf und Stöger am 17. Oktober; Schweighofer am 19. Oktober.",
     "Die DDSG weist wegen Niedrigwassers nicht alle planmäßigen Fahrten als verfügbar aus; konkrete Verbindung und Halt vor Abfahrt in der Buchungsmaske prüfen.",
-    "Die Rollfähre Weißenkirchen befördert wegen Niedrigwassers weiterhin Personen und Fahrräder, PKW nur bedingt.",
+    "Die Rollfähre Weißenkirchen fährt heute nicht; im Nachsaisonfahrplan besteht Betrieb nur Donnerstag bis Sonntag und an Feiertagen. Die Niedrigwasserbeschränkung bleibt bestehen.",
     "Am Donauradweg-Nordufer ist die frühere Weißenkirchner Umleitung beendet; die nächste angekündigte Totalsperre beginnt erst am 27. Oktober.",
-    "Sturmfrühschoppen und Zornberghütte finden heute nur bei Schönwetter statt; für das Weinsensoriktraining morgen endet die Anmeldung heute um 18:00 Uhr."
+    "Das heutige Weinsensoriktraining ist nur mit bestätigter Anmeldung zugänglich; Yoga in Aggsbach Markt beginnt um 18:30 Uhr."
   ]
 }
