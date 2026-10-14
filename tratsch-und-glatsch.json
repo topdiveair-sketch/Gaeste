@@ -1,7 +1,7 @@
 {
-  "editionDate": "2026-10-13",
-  "editionLabel": "Dienstag, 13. Oktober 2026",
-  "intro": "Grüß euch, ich bin Pia! Sechs Heurige sind heute am Nordufer bestätigt geöffnet. Wer morgen in Spitz dem Winzer über die Schultern schauen möchte, muss sich heute bis 18:00 Uhr anmelden. Die Rollfähre Weißenkirchen fährt dienstags nicht, die Fähre Spitz–Arnsdorf dagegen werktags ab 06:15 Uhr. Die DDSG zeigt wegen des niedrigen Wasserstands heute keine buchbare Wachaufahrt; die nächste ausgewiesene Abfahrt ist am Freitag, 16. Oktober. In Aggsbach Markt gilt weiterhin die aktuelle Trinkwasser-Information der Gemeinde. Das Wetter kommt live aus der Gäste-App.",
+  "editionDate": "2026-10-14",
+  "editionLabel": "Mittwoch, 14. Oktober 2026",
+  "intro": "Grüß euch, ich bin Pia! Sieben Heurige sind heute am Nordufer bestätigt geöffnet; bei Wagner in Wösendorf ist letzter Ausstecktag. In Spitz findet von 15:00 bis 17:00 Uhr der bereits anmeldepflichtige Lagler-Winzertermin statt. Wer morgen das Archiv der Vinea Wachau besuchen möchte, muss sich heute bis 16:00 Uhr anmelden. Die Rollfähre Weißenkirchen fährt mittwochs nicht, die Fähre Spitz–Arnsdorf dagegen werktags ab 06:15 Uhr. Die DDSG zeigt wegen des niedrigen Wasserstands heute keine buchbare Wachaufahrt; die nächste ausgewiesene Abfahrt ist am Freitag, 16. Oktober. In Aggsbach Markt gilt weiterhin die aktuelle Trinkwasser-Information der Gemeinde. Das Wetter kommt live aus der Gäste-App.",
   "important": [
     {
       "title": "Aggsbach Markt: aktuelle Trinkwasser-Information",
@@ -10,15 +10,21 @@
       "sourceLabel": "Marktgemeinde Aggsbach, 8. Oktober 2026"
     },
     {
-      "title": "Heute sechs Heurige bestätigt geöffnet",
-      "text": "Geöffnet sind Fanie’s und Mayer in Spitz sowie Mang, Ferdl Denk, Trautsamwieser und Wagner in Weißenkirchen beziehungsweise Wösendorf. Özelt und Weinerei Schwaiger haben dienstags geschlossen.",
+      "title": "Heute sieben Heurige bestätigt geöffnet",
+      "text": "Geöffnet sind Fanie’s, Mayer und Özelt in Spitz sowie Mang, Weinerei Schwaiger, Trautsamwieser und Wagner in Weißenkirchen beziehungsweise Wösendorf. Bei Wagner ist heute letzter Ausstecktag. Ferdl Denk hat mittwochs Ruhetag.",
       "source": "https://heurigenkalender.niederoesterreich.at/",
       "sourceLabel": "Heurigenkalender Niederösterreich"
     },
     {
-      "title": "Heute bis 18:00 Uhr: Anmeldung für den morgigen Winzertermin",
-      "text": "Am Mittwoch von 15:00 bis 17:00 Uhr kann man beim Weingut Lagler dem Kellermeister über die Schultern schauen und anschließend Weine verkosten. Die Anmeldung endet heute um 18:00 Uhr.",
+      "title": "Heute: dem Winzer über die Schultern schauen",
+      "text": "Der Termin beim Weingut Lagler findet heute von 15:00 bis 17:00 Uhr statt. Gezeigt werden Kellerarbeit und Weinbereitung, anschließend gibt es eine kommentierte Verkostung. Die Anmeldung endete bereits gestern um 18:00 Uhr; Teilnahme daher nur mit bestätigter Anmeldung.",
       "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232242/weingut-lagler-dem-winzer-ueber-die-schultern-schauen",
+      "sourceLabel": "Tourismusverein Spitz"
+    },
+    {
+      "title": "Heute bis 16:00 Uhr: Anmeldung für das Vinea-Archiv",
+      "text": "Die Führung durch das Archiv der Vinea Wachau mit Weinverkostung und Museumseintritt findet morgen von 16:00 bis 18:00 Uhr im Schifffahrtsmuseum Spitz statt. Anmeldung ist heute noch bis 16:00 Uhr erforderlich.",
+      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232243/das-archiv-der-vinea-wachau-kompromisslos-einzigartig",
       "sourceLabel": "Tourismusverein Spitz"
     },
     {
@@ -35,7 +41,7 @@
     },
     {
       "title": "Aggsbach: mehrere örtliche Verkehrsbehinderungen",
-      "text": "Auf Gemeindestraßen gelten weiterhin Baustellen- und Engstellenregelungen: bei den Häusern 107–156 bis 15. Oktober, bei Haus 3 bis 17. Oktober und bei Haus 47 bis 5. November. Die zuvor angeführte Maßnahme in Groisbach ist an der heute geprüften Amtstafel nicht mehr gelistet. Maßgeblich ist die Beschilderung vor Ort.",
+      "text": "Die heute geprüfte Amtstafel führt weiterhin eine Straßensperre bis 16. Oktober sowie zwei halbseitige Straßensperren bis 19. Oktober beziehungsweise 5. November. Die am 13. Oktober abgehängte Verkehrsmaßnahme ist nicht mehr aktuell. Maßgeblich sind die verlinkten Verordnungen und die Beschilderung vor Ort.",
       "source": "https://www.aggsbach.gv.at/Buergerservice/Aktuelles_Termine/Amtstafel",
       "sourceLabel": "Amtstafel Aggsbach"
     }
@@ -57,7 +63,7 @@
     },
     {
       "title": "Aggsbach Markt: Baustellen abseits der B3",
-      "text": "Auf mehreren Gemeindestraßen gelten halbseitige Sperren beziehungsweise Wartepflicht. Betroffen sind die Bereiche Haus 107–156, Haus 3 und Haus 47. Für die B3 ist im Zielabschnitt keine neue allgemeine Sperre veröffentlicht; Beschilderung und kurzfristige Anordnungen vor Ort beachten.",
+      "text": "Die Amtstafel führt eine örtliche Straßensperre bis 16. Oktober sowie halbseitige Sperren bis 19. Oktober und 5. November. Für die B3 ist im Zielabschnitt keine neue allgemeine Sperre veröffentlicht; Beschilderung und kurzfristige Anordnungen vor Ort beachten.",
       "links": [
         {
           "label": "Amtstafel Aggsbach",
@@ -90,12 +96,12 @@
       ]
     },
     {
-      "title": "Welterbesteig Wachau",
-      "text": "Für die heute geprüften Norduferetappen ist keine allgemeine Sperre veröffentlicht. Auf den steilen Stein-, Wald- und Weinbergpassagen Markierungen, örtliche Hinweise und den tatsächlichen Wegzustand beachten.",
+      "title": "Welterbesteig: Umleitung Weißenkirchen–Spitz",
+      "text": "Auf Etappe 3 gilt eine ausgeschilderte Umleitung: Von der Ried Kollmitz führt sie durch die Weingärten nach Wösendorf, weiter über St. Michael und anschließend am Treppelweg nach Spitz. Entlang der Umleitungsstrecke gibt es keine Einkehrmöglichkeit oder Quelle; ausreichend Proviant und Getränke mitnehmen.",
       "links": [
         {
-          "label": "Welterbesteig Weißenkirchen–Spitz",
-          "url": "https://www.donau.com/touren/welterbesteig-wachau-03-weissenkirchen-spitz"
+          "label": "Aktuelle Umleitung Weißenkirchen–Spitz",
+          "url": "https://www.donau.com/touren/welterbesteig-wachau-umleitung-03-weissenkirchen-spitz"
         },
         {
           "label": "Welterbesteig Aggsbach Markt–Emmersdorf",
@@ -123,7 +129,7 @@
       "date": "14.10.2026, 15:00–17:00 Uhr",
       "place": "Spitz, Weingut Lagler",
       "title": "Dem Winzer über die Schultern schauen",
-      "note": "Kellerarbeit und kommentierte Weinverkostung, 40 Euro; Anmeldung bis Dienstag, 13. Oktober, 18:00 Uhr.",
+      "note": "Kellerarbeit und kommentierte Weinverkostung, 40 Euro. Die Anmeldefrist endete gestern um 18:00 Uhr; Teilnahme nur mit bestätigter Anmeldung.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail?tx_vadb_detail%5Baction%5D=detail&tx_vadb_detail%5Bcontroller%5D=Vadb&tx_vadb_detail%5Bid%5D=232242"
     },
     {
@@ -199,6 +205,13 @@
       "url": "https://heurigenkalender.niederoesterreich.at/156622/weingut-mayer"
     },
     {
+      "name": "Özelt – Offen is'",
+      "place": "Spitz",
+      "period": "05.08.–26.10.2026",
+      "hours": "Heute 16:00–23:00 Uhr",
+      "url": "https://heurigenkalender.niederoesterreich.at/200943/offen-is-heuriger-zi"
+    },
+    {
       "name": "Heuriger Mang Hermenegild",
       "place": "Weißenkirchen",
       "period": "17.07.–26.10.2026",
@@ -206,17 +219,17 @@
       "url": "https://heurigenkalender.niederoesterreich.at/30959/heuriger-mang-hermenegild"
     },
     {
-      "name": "Heuriger Ferdl Denk",
-      "place": "Weißenkirchen",
-      "period": "30.03.–01.11.2026",
-      "hours": "Heute ab 15:00 Uhr",
-      "url": "https://heurigenkalender.niederoesterreich.at/30949/heuriger-ferdl-denk"
+      "name": "Weinerei Schwaiger",
+      "place": "Wösendorf",
+      "period": "15.04.–18.10.2026",
+      "hours": "Heute 10:00–18:00 Uhr",
+      "url": "https://heurigenkalender.niederoesterreich.at/30957/heuriger-weinerei-schwaiger"
     },
     {
       "name": "Heuriger Weingut Trautsamwieser",
       "place": "Weißenkirchen",
       "period": "18.09.–18.10.2026",
-      "hours": "Heute ab 15:00 Uhr",
+      "hours": "Heute letzter Ausstecktag, ab 15:00 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/30948/heuriger-weingut-trautsamwieser"
     },
     {
@@ -290,17 +303,25 @@
       "place": "Oberloiben, Dürnstein",
       "hours": "Bestätigter Aussteckbeginn am Montag, 19. Oktober, ab 15:00 Uhr; Aussteckzeit bis 26.10.2026.",
       "url": "https://heurigenkalender.niederoesterreich.at/31625/heuriger-schweighofer"
+    },
+    {
+      "date": "21.10.2026",
+      "name": "Heuriger Familie Weixelbaum",
+      "place": "Weißenkirchen",
+      "hours": "Bestätigter Aussteckbeginn am Mittwoch, 21. Oktober, ab 15:00 Uhr; Aussteckzeit 21.–26.10.2026, täglich ab 15:00 Uhr.",
+      "url": "https://heurigenkalender.niederoesterreich.at/30965/heuriger-familie-weixelbaum"
     }
   ],
-  "piaTip": "Pias Dienstagstipp: Wer morgen beim Weingut Lagler dem Kellermeister über die Schultern schauen möchte, meldet sich heute spätestens um 18:00 Uhr an. Sechs bestätigte Heurige sind geöffnet. Für den Donauübergang heute die Fähre Spitz–Arnsdorf nutzen, denn Weißenkirchen–St. Lorenz fährt dienstags nicht. Die DDSG zeigt heute keine buchbare Wachaufahrt; nächste ausgewiesene Abfahrt ist am Freitag.",
+  "piaTip": "Pias Mittwochstipp: Heute haben sieben Heurige bestätigt geöffnet; bei Wagner in Wösendorf ist letzter Ausstecktag. Für die morgige Führung durch das Vinea-Wachau-Archiv endet die Anmeldung heute um 16:00 Uhr. Für den Donauübergang fährt Spitz–Arnsdorf werktags ab 06:15 Uhr, während Weißenkirchen–St. Lorenz mittwochs pausiert. Die DDSG zeigt heute keine buchbare Wachaufahrt; nächste ausgewiesene Abfahrt ist am Freitag.",
   "goodToKnow": [
     "Das Wetter wird in der Gäste-App live geladen und deshalb nicht statisch in Tratsch & Klatsch gespeichert.",
     "Die Gemeinde Aggsbach meldet milchige Eintrübung des Trinkwassers; laut Trinkwasseraufsicht besteht kein Grund zur Beunruhigung. Eine reguläre Untersuchung folgt in der kommenden Woche.",
-    "Heute sind sechs Heurige am Nordufer bestätigt geöffnet: Fanie’s, Mayer, Mang, Ferdl Denk, Trautsamwieser und Wagner.",
-    "Neun bestätigte Heurigenöffnungen der kommenden sieben Tage sind vorgemerkt: Adam-Mühle am 15. Oktober; Gebetsberger, Stalzer, Brustbauer, Höllmüller und Schloss Heurige am 16. Oktober; Kropf und Stöger am 17. Oktober; Schweighofer am 19. Oktober.",
+    "Heute sind sieben Heurige am Nordufer bestätigt geöffnet: Fanie’s, Mayer, Özelt, Mang, Weinerei Schwaiger, Trautsamwieser und Wagner. Bei Wagner ist letzter Ausstecktag.",
+    "Zehn bestätigte Heurigenöffnungen der kommenden sieben Tage sind vorgemerkt: Adam-Mühle am 15. Oktober; Gebetsberger, Stalzer, Brustbauer, Höllmüller und Schloss Heurige am 16. Oktober; Kropf und Stöger am 17. Oktober; Schweighofer am 19. Oktober; Weixelbaum am 21. Oktober.",
     "Die DDSG zeigt wegen Niedrigwassers heute keine buchbare Wachaufahrt; die nächste ausgewiesene Abfahrt ist am Freitag, 16. Oktober, um 08:15 Uhr.",
     "Die Rollfähre Weißenkirchen fährt heute nicht; im Nachsaisonfahrplan besteht Betrieb nur Donnerstag bis Sonntag und an Feiertagen. Die Niedrigwasserbeschränkung bleibt bestehen.",
     "Am Donauradweg-Nordufer ist die frühere Weißenkirchner Umleitung beendet; die nächste angekündigte Totalsperre beginnt erst am 27. Oktober.",
-    "Für den morgigen Lagler-Termin „Dem Winzer über die Schultern schauen“ endet die Anmeldung heute um 18:00 Uhr."
+    "Auf dem Welterbesteig zwischen Weißenkirchen und Spitz gilt eine ausgeschilderte Umleitung über Wösendorf, St. Michael und den Treppelweg; unterwegs gibt es keine Einkehrmöglichkeit oder Quelle.",
+    "Der Lagler-Termin „Dem Winzer über die Schultern schauen“ findet heute von 15:00 bis 17:00 Uhr statt; die Anmeldung ist bereits geschlossen. Für die morgige Vinea-Archivführung endet die Anmeldung heute um 16:00 Uhr."
   ]
 }
