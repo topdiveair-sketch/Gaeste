@@ -1,0 +1,24 @@
+name: KDP book catalog public check
+on:
+  schedule:
+    - cron: '20 7,13,19 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify generated public book catalog
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s buecher.html
+          grep -Fq 'Die Bücherwelten aus der Wachau' buecher.html
+          grep -Fq 'href="buecher.html"' index.html
+          url='https://topdiveair-sketch.github.io/Gaeste/buecher.html'
+          curl --fail --location --silent --show-error --retry 2 --retry-delay 3 --max-time 30 -o /tmp/catalog "$url"
+          grep -Fq 'Die Bücherwelten aus der Wachau' /tmp/catalog
+          echo "Verified public catalog; check only, no edits to KDP or prices."
