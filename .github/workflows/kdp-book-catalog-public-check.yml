@@ -21,4 +21,10 @@ jobs:
           url='https://topdiveair-sketch.github.io/Gaeste/buecher.html'
           curl --fail --location --silent --show-error --retry 2 --retry-delay 3 --max-time 30 -o /tmp/catalog "$url"
           grep -Fq 'Die Bücherwelten aus der Wachau' /tmp/catalog
+          test -s books.html
+          grep -Fq 'English-language paperback' books.html
+          grep -Fq 'hreflang="en"' buecher.html
+          grep -Fq 'hreflang="de"' books.html
+          curl --fail --location --silent --show-error --retry 2 --retry-delay 3 --max-time 30 -o /tmp/books 'https://topdiveair-sketch.github.io/Gaeste/books.html'
+          grep -Fq 'English-language paperback' /tmp/books
           echo "Verified public catalog; check only, no edits to KDP or prices."
