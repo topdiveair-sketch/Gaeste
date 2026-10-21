@@ -407,12 +407,13 @@ function setupFoodNotice(){
  }else{
    box.className="food-day-notice open";
    box.innerHTML="<h3>🍽️ Heute</h3><p>Die Genussterrasse hat geöffnet. Öffnungszeiten bitte prüfen.</p>";
-   button.hidden=true;
+   button.hidden=false;
  }
- const snackMessage=`Hallo! 😊
-Wir möchten gerne eine Jausenplatte vorbestellen.
+ // Die hauseigene Jausenplatte kann unabhängig von Restaurant-Ruhetagen angefragt werden.
+ const snackMessage=`Hallo Zuhause am Bach! 😊
+Wir möchten für unseren Aufenthalt bei euch eine Jausenplatte vorbestellen.
 
-🥨 Jausenplatte für 2 Personen
+🥨 Eure Jausenplatte für 2 Personen
 💶 Gesamtpreis: 29,90 €
 🕒 Ankunft: _____ Uhr
 👥 Personen: _____
