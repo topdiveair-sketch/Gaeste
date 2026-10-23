@@ -1,35 +1,41 @@
 {
-  "editionDate": "2026-10-22",
-  "editionLabel": "Donnerstag, 22. Oktober 2026",
-  "intro": "Grüß euch, ich bin Pia! Heute sind zwölf Heurige am nördlichen Donauufer bestätigt geöffnet; Adam-Mühle, Enothek Eigl und Bäuerl beginnen ihren Aussteckzeitraum. Um 16:00 Uhr startet die Vinea-Archivführung für bereits Angemeldete, um 18:00 Uhr die bestätigte Ideenwerkstatt in Willendorf. Ebenfalls um 18:00 Uhr endet die Anmeldung für den morgigen Marillen-Termin. Für Wandernde gelten weiterhin die vollständigen Sperren am Glatzberg/Bachleiten sowie zwischen St. Michael und Spitz. Das Wetter wird ausschließlich live in der Gäste-App geladen.",
+  "editionDate": "2026-10-23",
+  "editionLabel": "Freitag, 23. Oktober 2026",
+  "intro": "Grüß euch, ich bin Pia! Heute sind dreizehn Heurige am nördlichen Donauufer bestätigt geöffnet; Weinhauer Brustbauer startet in Oberloiben. In Spitz läuft die Jour-Fixe-Verkostung von 10:00 bis 19:00 Uhr; der Marillen-Termin um 16:00 Uhr ist nur mit bereits bestätigter Anmeldung sinnvoll. Bis 16:00 Uhr kann man sich noch für „Schiff & Wein“ am Samstag anmelden. Die für Samstag und Sonntag angekündigten Zornberghütten-Termine wurden abgesagt; der nächste bestätigte Termin ist Montag, 26. Oktober, nur bei Schönwetter. Für Wandernde gelten weiterhin die vollständigen Sperren am Glatzberg/Bachleiten sowie zwischen St. Michael und Spitz. Das Wetter wird ausschließlich live in der Gäste-App geladen.",
   "important": [
     {
-      "title": "Heute zwölf bestätigte Heurige",
-      "text": "Fanie’s, Stalzer, Özelt, Adam-Mühle, Mang, Weixelbaum, Ferdl Denk, Kropf, Enothek Eigl, Stöger, Schweighofer und Bäuerl sind heute bestätigt geöffnet. Adam-Mühle, Enothek Eigl und Bäuerl beginnen heute ihren Aussteckzeitraum.",
+      "title": "Heute dreizehn bestätigte Heurige",
+      "text": "Fanie’s, Stalzer, Özelt, Adam-Mühle, Mang, Weixelbaum, Ferdl Denk, Kropf, Enothek Eigl, Stöger, Schweighofer, Bäuerl und Brustbauer sind heute bestätigt geöffnet. Brustbauer beginnt heute seinen Aussteckzeitraum.",
       "source": "https://heurigenkalender.niederoesterreich.at/",
-      "sourceLabel": "Heurigenkalender Niederösterreich, geprüft 22. Oktober 2026"
+      "sourceLabel": "Heurigenkalender Niederösterreich, geprüft 23. Oktober 2026"
     },
     {
-      "title": "Heute: Vinea-Archiv und Ideenwerkstatt",
-      "text": "Die Führung durch das Archiv der Vinea Wachau findet von 16:00 bis 18:00 Uhr im Schifffahrtsmuseum Spitz statt; die Anmeldefrist ist bereits abgelaufen, daher nur mit bestätigter Anmeldung einplanen. Die Ideenwerkstatt der Gesunden Gemeinde findet laut Marktgemeinde wie geplant von 18:00 bis 20:00 Uhr im Gasthof zur Venus von Willendorf statt.",
-      "source": "https://www.aggsbach.gv.at/Ideenwerkstatt_der_Gesunden_Gemeinde",
-      "sourceLabel": "Marktgemeinde Aggsbach und Tourismusverein Spitz"
-    },
-    {
-      "title": "Heute bis 18:00 Uhr für den Marillen-Termin anmelden",
-      "text": "„Wachauer Marille – Von der Blüte bis zum Genuss“ findet morgen, Freitag, 23. Oktober, von 16:00 bis 18:00 Uhr in Spitz statt. Die Anmeldung endet heute um 18:00 Uhr.",
-      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199524/wachauer-marille-von-der-bluete-bis-zum-genuss",
+      "title": "Heute in Spitz: Jour Fixe und Wachauer Marille",
+      "text": "Die Jour-Fixe-Verkostung in der Vinothek Fohringer läuft von 10:00 bis 19:00 Uhr. „Wachauer Marille – Von der Blüte bis zum Genuss“ findet von 16:00 bis 18:00 Uhr statt; die Anmeldung endete gestern, daher heute nur mit bereits bestätigter Anmeldung einplanen.",
+      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/234528/jour-fixe-verkostung-2026",
       "sourceLabel": "Tourismusverein Spitz"
     },
     {
+      "title": "Heute bis 16:00 Uhr für „Schiff & Wein“ anmelden",
+      "text": "Die Führung mit kommentierter Weinverkostung findet morgen, Samstag, 24. Oktober, von 10:00 bis 12:00 Uhr im Schifffahrtsmuseum Spitz statt. Anmeldung bis heute um 16:00 Uhr erforderlich.",
+      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199536/schiff-wein",
+      "sourceLabel": "Tourismusverein Spitz"
+    },
+    {
+      "title": "Zornberghütte: Wochenende abgesagt",
+      "text": "Die Termine am 24. und 25. Oktober wurden offiziell abgesagt. Als nächster bestätigter Termin ist Montag, 26. Oktober, von 11:00 bis 16:00 Uhr ausgewiesen, ausschließlich bei Schönwetter.",
+      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199537/schmankerl-bei-der-zornberghuette",
+      "sourceLabel": "Tourismusverein Spitz, geprüft 23. Oktober 2026"
+    },
+    {
       "title": "DDSG heute mit Niedrigwasseränderungen",
-      "text": "Die DDSG-Buchungsanzeige nennt heute die nächste Fahrt am 22. Oktober um 08:30 Uhr. Wegen Niedrigwassers können weiterhin nicht alle Fahrten durchgeführt werden; nur konkret buchbare Verbindungen nutzen und deren Halte vor der Anreise prüfen.",
+      "text": "Die DDSG-Buchungsanzeige nennt heute die nächste Fahrt am 23. Oktober um 08:15 Uhr. Wegen Niedrigwassers können weiterhin nicht alle Fahrten durchgeführt werden; nur konkret buchbare Verbindungen nutzen und deren Halte vor der Anreise prüfen.",
       "source": "https://ddsg-blue-danube.at/linienschifffahrt-wachau/",
-      "sourceLabel": "DDSG Blue Danube, geprüft 22. Oktober 2026"
+      "sourceLabel": "DDSG Blue Danube, geprüft 23. Oktober 2026"
     },
     {
       "title": "Rollfähren heute in Betrieb",
-      "text": "Spitz–Arnsdorf fährt donnerstags planmäßig von 06:15 bis 19:00 Uhr, letzte Fahrt 15 Minuten vor Betriebsschluss. Weißenkirchen–St. Lorenz fährt im Nachsaisonbetrieb von 09:15 bis 11:30 Uhr und von 13:30 bis 17:30 Uhr; wegen der aktuellen Einschränkung werden Personen und Fahrräder, PKW nur bedingt befördert.",
+      "text": "Spitz–Arnsdorf fährt freitags planmäßig von 06:15 bis 19:00 Uhr, letzte Fahrt 15 Minuten vor Betriebsschluss. Weißenkirchen–St. Lorenz fährt im Nachsaisonbetrieb von 09:15 bis 11:30 Uhr und von 13:30 bis 17:30 Uhr; Personen und Fahrräder, PKW nur bedingt.",
       "source": "https://www.weissenkirchen-wachau.at/ueber-weissenkirchen/mobilitaet/rollfaehre",
       "sourceLabel": "Marktgemeinde Weißenkirchen und Tourismusverein Spitz"
     },
@@ -43,7 +49,7 @@
       "title": "Aggsbach: örtliche Verkehrsmaßnahmen",
       "text": "Laut Amtstafel bleibt eine halbseitige Straßensperre bis 5. November bestehen. Für die B3 ist im Zielabschnitt keine neue allgemeine Vollsperre veröffentlicht; Beschilderung vor Ort beachten.",
       "source": "https://www.aggsbach.gv.at/Buergerservice/Aktuelles_Termine/Amtstafel",
-      "sourceLabel": "Amtstafel Aggsbach, geprüft 22. Oktober 2026"
+      "sourceLabel": "Amtstafel Aggsbach, geprüft 23. Oktober 2026"
     }
   ],
   "outdoor": [
@@ -136,20 +142,6 @@
   ],
   "events": [
     {
-      "date": "22.10.2026, 16:00–18:00 Uhr",
-      "place": "Spitz, Schifffahrtsmuseum",
-      "title": "Das Archiv der Vinea Wachau",
-      "note": "Archivführung, Weinverkostung und Museumseintritt, 30 Euro; die Anmeldung endete gestern um 16:00 Uhr, daher heute nur mit bestätigter Anmeldung einplanen.",
-      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232243/das-archiv-der-vinea-wachau-kompromisslos-einzigartig"
-    },
-    {
-      "date": "22.10.2026, 18:00–20:00 Uhr",
-      "place": "Willendorf, Gasthof zur Venus von Willendorf",
-      "title": "Ideenwerkstatt der Gesunden Gemeinde",
-      "note": "Die Marktgemeinde bestätigt, dass die Veranstaltung wie geplant stattfindet.",
-      "url": "https://www.aggsbach.gv.at/Ideenwerkstatt_der_Gesunden_Gemeinde"
-    },
-    {
       "date": "23.10.2026, 10:00–19:00 Uhr",
       "place": "Spitz, Vinothek Fohringer",
       "title": "Jour Fixe Verkostung 2026",
@@ -160,14 +152,14 @@
       "date": "23.10.2026, 16:00–18:00 Uhr",
       "place": "Spitz, HARTL – Rund um die Marille",
       "title": "Wachauer Marille – Von der Blüte bis zum Genuss",
-      "note": "Einblicke in Anbau und Verarbeitung samt Verkostung, 25 Euro; Anmeldung heute, Donnerstag, 22. Oktober, bis 18:00 Uhr erforderlich.",
+      "note": "Einblicke in Anbau und Verarbeitung samt Verkostung, 25 Euro; die Anmeldung endete gestern um 18:00 Uhr, daher heute nur mit bestätigter Anmeldung einplanen.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199524/wachauer-marille-von-der-bluete-bis-zum-genuss"
     },
     {
       "date": "24.10.2026, 10:00–12:00 Uhr",
       "place": "Spitz, Schifffahrtsmuseum",
       "title": "Schiff & Wein",
-      "note": "Museumsführung mit kommentierter Weinverkostung, 25 Euro; Anmeldung bis Freitag, 23. Oktober, 16:00 Uhr erforderlich.",
+      "note": "Museumsführung mit kommentierter Weinverkostung, 25 Euro; Anmeldung bis heute, Freitag, 23. Oktober, 16:00 Uhr erforderlich.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199536/schiff-wein"
     },
     {
@@ -178,13 +170,6 @@
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/234528/jour-fixe-verkostung-2026"
     },
     {
-      "date": "24.10.2026, 11:00–16:00 Uhr",
-      "place": "Spitz, Zornberghütte",
-      "title": "Schmankerl bei der Zornberghütte",
-      "note": "Regionale Schmankerl und Weine am Panoramawanderweg Spitzer Graben; nur bei Schönwetter.",
-      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199537/schmankerl-bei-der-zornberghuette"
-    },
-    {
       "date": "24.10.2026, 13:00–17:00 Uhr",
       "place": "Spitz, Rotes Tor, Ruine Hinterhaus und 1000-Eimerberg",
       "title": "Spitzer Winzer in den Weinterrassen",
@@ -192,18 +177,25 @@
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232240/spitzer-winzer-in-den-weinterrassen"
     },
     {
-      "date": "25.10.2026, 10:00–16:00 Uhr",
-      "place": "Spitz, 1000-Eimerberg und Burgberg",
-      "title": "Musikalische Weinterrasse",
-      "note": "Ausschank ab 10:00 Uhr, Musik von 11:00 bis 15:00 Uhr; Zufahrten zum Veranstaltungsort sind gesperrt, öffentliche Anreise beziehungsweise Fußweg einplanen.",
-      "url": "https://www.spitz-wachau.com/events-veranstaltungen"
-    },
-    {
       "date": "25.10.2026, 09:15–11:00 Uhr",
       "place": "Aggsbach Markt, Pfarrhof",
       "title": "Pfarrkaffee",
       "note": "Pfarrkaffee des Pfarrgemeinderats nach der Heiligen Messe; der Termin ist offiziell als planmäßig bestätigt.",
       "url": "https://www.aggsbach.gv.at/Pfarrkaffe_nach_der_Hl_Messe_im_Pfarrhof"
+    },
+    {
+      "date": "25.10.2026, Uhrzeit derzeit nicht belastbar bestätigt",
+      "place": "Spitz, 1000-Eimerberg und Burgberg",
+      "title": "Musikalische Weinterrasse",
+      "note": "Der Termin ist im offiziellen Spitzer Veranstaltungskalender weiterhin für 25. Oktober gelistet; die Detailseite ist derzeit nicht abrufbar. Beginn und Programm vor der Anreise nochmals prüfen.",
+      "url": "https://www.spitz-wachau.com/veranstaltungskalender"
+    },
+    {
+      "date": "26.10.2026, 11:00–16:00 Uhr",
+      "place": "Spitz, Zornberghütte",
+      "title": "Schmankerl bei der Zornberghütte",
+      "note": "Der Termin am Montag ist bestätigt und findet nur bei Schönwetter statt. Die zuvor angekündigten Termine am 24. und 25. Oktober wurden abgesagt.",
+      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199537/schmankerl-bei-der-zornberghuette"
     },
     {
       "date": "01.–30.10.2026, Montag bis Freitag ab 07:00 Uhr",
@@ -218,7 +210,7 @@
       "name": "Fanie’s Heuriger",
       "place": "Spitz",
       "period": "09.–26.10.2026",
-      "hours": "Heute ab 15:00 Uhr",
+      "hours": "Heute ab 12:00 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/235315/fanie-s-heuriger"
     },
     {
@@ -239,7 +231,7 @@
       "name": "Weinbau Familie Pölzer Adam-Mühle",
       "place": "Spitz",
       "period": "22.–27.10.2026",
-      "hours": "Heute erster Ausstecktag, ab 15:00 Uhr",
+      "hours": "Heute ab 15:00 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/160941/weinbau-familie-plzer-adam-mhle"
     },
     {
@@ -274,7 +266,7 @@
       "name": "Heuriger Enothek Eigl",
       "place": "Wösendorf",
       "period": "22.–30.10.2026",
-      "hours": "Heute erster Ausstecktag, ab 15:00 Uhr",
+      "hours": "Heute ab 15:00 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/30943/heuriger-enothek-eigl"
     },
     {
@@ -295,18 +287,18 @@
       "name": "Heuriger Weingut Bäuerl",
       "place": "Oberloiben, Dürnstein",
       "period": "22.–26.10.2026",
-      "hours": "Heute erster Ausstecktag, ab 15:00 Uhr",
+      "hours": "Heute ab 15:00 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/198482/heuriger-weingut-buerl"
+    },
+    {
+      "name": "Weinhauer Brustbauer",
+      "place": "Oberloiben, Dürnstein",
+      "period": "23.–25.10.2026",
+      "hours": "Heute erster Ausstecktag, ab 12:00 Uhr",
+      "url": "https://heurigenkalender.niederoesterreich.at/184075/weinhauer-brustbauer"
     }
   ],
   "openingSoon": [
-    {
-      "date": "23.10.2026",
-      "name": "Weinhauer Brustbauer",
-      "place": "Oberloiben, Dürnstein",
-      "hours": "Bestätigter erneuter Aussteckbeginn am Freitag, 23. Oktober, ab 12:00 Uhr; Aussteckzeit 23.–25.10.2026.",
-      "url": "https://heurigenkalender.niederoesterreich.at/184075/weinhauer-brustbauer"
-    },
     {
       "date": "24.10.2026",
       "name": "Heuriger Weingut Höllmüller",
@@ -327,19 +319,41 @@
       "place": "Spitz",
       "hours": "Bestätigte Sonderöffnung am Sonntag, 25. Oktober, von 16:00 bis 23:00 Uhr; danach erneuter täglicher Aussteckzeitraum von 28. bis 31. Oktober, jeweils 16:00–23:00 Uhr.",
       "url": "https://heurigenkalender.niederoesterreich.at/200943/offen-is-beim-heurigen-zelt-in-spitz-an-der-donau"
+    },
+    {
+      "date": "29.10.2026",
+      "name": "Heuriger Weingut Bäuerl",
+      "place": "Oberloiben, Dürnstein",
+      "hours": "Bestätigter erneuter Aussteckbeginn am Donnerstag, 29. Oktober, ab 15:00 Uhr; Aussteckzeit bis 01.11.2026.",
+      "url": "https://heurigenkalender.niederoesterreich.at/198482/heuriger-weingut-buerl"
+    },
+    {
+      "date": "30.10.2026",
+      "name": "Heuriger Denk Walter & Gabriele",
+      "place": "Weißenkirchen",
+      "hours": "Bestätigter Aussteckbeginn am Freitag, 30. Oktober, ab 15:00 Uhr; Aussteckzeit bis 10.11.2026.",
+      "url": "https://heurigenkalender.niederoesterreich.at/30950/heuriger-denk-walter-gabriele"
+    },
+    {
+      "date": "30.10.2026",
+      "name": "Netterlkeller",
+      "place": "Spitz",
+      "hours": "Bestätigter Aussteckbeginn am Freitag, 30. Oktober, ab 15:00 Uhr; Aussteckzeit bis 01.11.2026.",
+      "url": "https://heurigenkalender.niederoesterreich.at/27395/netterlkeller"
     }
   ],
-  "piaTip": "Pias Donnerstagstipp: Wer für die Vinea-Archivführung bereits angemeldet ist, startet um 16:00 Uhr im Schifffahrtsmuseum Spitz. Um 18:00 Uhr beginnt die bestätigte Ideenwerkstatt im Gasthof zur Venus in Willendorf – zugleich endet die Anmeldung für den morgigen Marillen-Termin.",
+  "piaTip": "Pias Freitagstipp: Die Jour-Fixe-Verkostung läuft heute von 10:00 bis 19:00 Uhr in der Vinothek Fohringer. Wer morgen „Schiff & Wein“ erleben möchte, muss sich heute bis 16:00 Uhr anmelden; für den Marillen-Termin heute Nachmittag ist die Anmeldefrist bereits abgelaufen.",
   "goodToKnow": [
     "Das Wetter wird in der Gäste-App live geladen und deshalb nicht statisch in Tratsch & Klatsch gespeichert.",
-    "Heute sind zwölf Heurige am Nordufer bestätigt geöffnet; Adam-Mühle, Enothek Eigl und Bäuerl beginnen heute ihren Aussteckzeitraum.",
-    "Vier bestätigte Heurigenöffnungen oder Wiedereröffnungen der kommenden sieben Tage sind vorgemerkt: Brustbauer am 23., Höllmüller und Winklheuriger am 24. sowie Özelt am 25. Oktober beziehungsweise erneut ab 28. Oktober.",
-    "Die Vinea-Archivführung findet heute von 16:00 bis 18:00 Uhr statt; die Anmeldefrist ist bereits abgelaufen.",
-    "Die Ideenwerkstatt der Gesunden Gemeinde findet heute von 18:00 bis 20:00 Uhr in Willendorf wie geplant statt.",
-    "Die Anmeldung für „Wachauer Marille – Von der Blüte bis zum Genuss“ am 23. Oktober endet heute um 18:00 Uhr.",
+    "Heute sind dreizehn Heurige am Nordufer bestätigt geöffnet; Brustbauer beginnt heute in Oberloiben.",
+    "Sechs bestätigte Heurigenöffnungen oder Wiedereröffnungen der kommenden sieben Tage sind vorgemerkt: Höllmüller und Winklheuriger am 24., Özelt am 25. beziehungsweise erneut ab 28., Bäuerl am 29. sowie Denk Walter & Gabriele und Netterlkeller am 30. Oktober.",
+    "Die Jour-Fixe-Verkostung läuft heute von 10:00 bis 19:00 Uhr; der Marillen-Termin von 16:00 bis 18:00 Uhr ist nur mit bereits bestätigter Anmeldung sinnvoll.",
+    "Die Anmeldung für „Schiff & Wein“ am 24. Oktober endet heute um 16:00 Uhr.",
+    "Die Zornberghütten-Termine am 24. und 25. Oktober sind abgesagt; der Termin am 26. Oktober ist bestätigt und wetterabhängig.",
+    "Die Musikalische Weinterrasse bleibt im offiziellen Kalender für 25. Oktober gelistet; Uhrzeit und Detailprogramm sind derzeit nicht belastbar bestätigt.",
     "Der Welterbesteig ist im Bereich Glatzberg/Bachleiten bis voraussichtlich 20. November vollständig gesperrt; die Bachleiten-Forststraße ist keine Umgehung.",
     "Auch Etappe 3 zwischen St. Michael und Spitz ist im Bereich Atzberg bis voraussichtlich November gesperrt; die beschilderte Umleitung führt über Wösendorf.",
-    "Die DDSG-Buchungsanzeige weist heute eine Fahrt ab 08:30 Uhr aus, gleichzeitig gelten weiterhin Niedrigwasseränderungen. Nur konkret buchbare Verbindungen und deren Halte nutzen.",
+    "Die DDSG-Buchungsanzeige weist heute eine Fahrt ab 08:15 Uhr aus, gleichzeitig gelten weiterhin Niedrigwasseränderungen. Nur konkret buchbare Verbindungen und deren Halte nutzen.",
     "Spitz–Arnsdorf fährt heute planmäßig 06:15–19:00 Uhr. Weißenkirchen–St. Lorenz fährt 09:15–11:30 Uhr und 13:30–17:30 Uhr; PKW werden nur bedingt befördert.",
     "Für den Donauradweg am Nordufer ist im Zielabschnitt derzeit keine allgemeine Sperre ausgewiesen.",
     "Eine Aggsbacher halbseitige Straßensperre läuft laut Amtstafel bis 5. November."
