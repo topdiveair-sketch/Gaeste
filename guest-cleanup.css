@@ -1,0 +1,42 @@
+/* Gaesteguide 2026-10-26: eine Bedienlogik und vier Hauptbereiche */
+:root{--guest-action:#315b45;--guest-action-hover:#244534;--guest-action-text:#fff}
+.quick-nav{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:8px!important;padding:9px max(12px,calc((100% - 1160px)/2))!important;align-items:stretch;background:rgba(246,244,236,.98)!important;box-shadow:0 3px 14px #00000012}
+.quick-nav button{width:100%;min-height:48px!important;font-size:clamp(.81rem,1.3vw,1rem)!important;padding:10px 8px!important;white-space:normal;line-height:1.2}
+.quick-nav button,.language-bar select,main button,main a.btn-link,main a.booking-button,main a.whatsapp-primary,main a.sms-alternative,main a.maps-primary,main a.storm-primary,main .actions a,main .chronicle-primary,main .chronicle-secondary,main .guest-tour-actions a,main .transport-links a{border-radius:12px!important}
+.quick-nav button,main button,main a.btn-link,main a.booking-button,main a.whatsapp-primary,main a.sms-alternative,main a.maps-primary,main a.storm-primary,main .actions a,main .chronicle-primary,main .chronicle-secondary,main .guest-tour-actions a,main .transport-links a{background:var(--guest-action)!important;color:var(--guest-action-text)!important;border:1px solid var(--guest-action)!important;box-shadow:none!important;font-weight:700!important;text-decoration:none}
+.quick-nav button:hover,main button:hover,main a.btn-link:hover,main a.booking-button:hover,main a.whatsapp-primary:hover,main a.sms-alternative:hover,main a.maps-primary:hover,main a.storm-primary:hover,main .actions a:hover,main .guest-tour-actions a:hover,main .transport-links a:hover{background:var(--guest-action-hover)!important;color:#fff!important}
+.quick-nav button:focus-visible,main button:focus-visible,main a.btn-link:focus-visible,main a.booking-button:focus-visible,.language-bar select:focus-visible{outline:3px solid #d9a43c!important;outline-offset:3px}
+.language-bar select{min-width:118px;max-width:145px;padding:8px 12px;font:700 14px system-ui,sans-serif;background:#fff;color:#213c2c;border:1px solid #b0c3b6;min-height:42px}
+.guest-hub{max-width:1200px;margin:18px auto 32px;scroll-margin-top:var(--guest-nav-offset,110px)}
+.guest-hub > h2{font-size:clamp(1.25rem,3vw,1.7rem);margin:0 0 12px;padding:10px 5px;color:#244534}
+.guest-hub > .card,.guest-hub > details{margin-bottom:14px}
+.guest-more,.guest-news-fold,.guest-inner-more{border:1px solid #d4dfd6;background:#fafcf9;border-radius:14px;margin:12px 0;padding:0}
+.guest-more > summary,.guest-news-fold > summary,.guest-inner-more > summary{padding:15px 17px;font-weight:750;color:#284b37;cursor:pointer;list-style-position:inside}
+.guest-more[open] > summary,.guest-news-fold[open] > summary,.guest-inner-more[open] > summary{border-bottom:1px solid #d4dfd6}
+.guest-more > .card{margin:12px!important}
+.guest-inner-more > .form-grid,.guest-inner-more > .button-row,.guest-inner-more > .result{margin:14px!important}
+.guest-news-fold{background:#fff}
+.guest-news-fold > .newspaper-section{border:0;box-shadow:none;margin:0}
+.newspaper-sections > .guest-news-fold{min-width:0}
+.guest-more .card{scroll-margin-top:var(--guest-nav-offset,110px)}
+#tratsch-glatsch .newspaper-sections{align-items:start}
+.guest-news-fold .newspaper-section{padding:12px}
+.guest-inner-more .button-row{display:flex;flex-wrap:wrap}
+.guest-hub .card{scroll-margin-top:var(--guest-nav-offset,110px)}
+@media(max-width:760px){
+ .quick-nav{grid-template-columns:repeat(2,minmax(0,1fr))!important;padding:8px 10px!important;gap:6px!important}
+ .quick-nav button{min-height:43px!important;font-size:13px!important;padding:9px 5px!important}
+ .guest-hub{margin:12px 8px 26px}
+ .guest-hub > .card{margin-left:0;margin-right:0}
+ .guest-more > .card{margin:10px 6px!important}
+ .hero-img{max-height:245px!important;object-fit:cover!important;object-position:center}
+ .topbar{gap:5px}
+ .topbar .badge{padding:7px 9px;font-size:12px}
+ .language-bar select{min-width:106px;max-width:120px;font-size:13px}
+ main .button-row>*{max-width:100%;white-space:normal;overflow-wrap:anywhere}
+}
+@media(max-width:420px){.hero-img{max-height:205px!important}.guest-hub > h2{font-size:1.25rem}.quick-nav button{font-size:12.5px!important}}
+
+.guest-legacy-hidden{display:none!important}
+.guest-more > .guest-legacy-hidden{display:none!important}
+.quick-nav + main{scroll-margin-top:100px}
