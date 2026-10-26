@@ -42,6 +42,7 @@ async function loadDailyNewspaper(force=false){
   status.textContent = editionFresh
     ? "Heutige redaktionelle Ausgabe geladen · Wetter wird live aktualisiert"
     : `⚠️ Ausgabe nicht aktuell (${edition.editionLabel||edition.editionDate||"ohne Datum"}). Wetter ist live, redaktionelle Inhalte bitte nicht als heutigen Stand verwenden.`;
+  content.removeAttribute("data-guest-compact");
   content.innerHTML=`
    <article class="newspaper-section"><h3>📌 Heute wichtig</h3>${newspaperList(edition.important,item=>`<div class="news-item"><h4>${escapeHtml(item.title)}</h4><p>${escapeHtml(item.text)}</p>${item.source?newspaperLink(item.source,item.sourceLabel||"Quelle"):""}</div>`,"Keine neue wichtige Meldung.")}</article>
    <article class="newspaper-section"><h3>🚴 Rad & Welterbesteig</h3>${newspaperList(edition.outdoor,item=>`<div class="news-item"><h4>${escapeHtml(item.title)}</h4><p>${escapeHtml(item.text)}</p><div class="news-links">${newspaperList(item.links,link=>newspaperLink(link.url,link.label),"")}</div></div>`,"Derzeit kein zusätzlicher Streckenhinweis.")}</article>
@@ -239,12 +240,61 @@ function showGloria(mode){
  if(mode==="terrasse")b.innerHTML=`<div class="result-card"><h3>🍽️ Unser Restaurant-Tipp: Genussterrasse</h3><p>Direkt an der Donau in Aggsbach Markt: regionale und saisonale Küche mit Blick auf die Ruine Aggstein.</p><p>Dienstag und Mittwoch Ruhetage. Saisonale Öffnungszeiten und kurzfristige Änderungen bitte direkt beim Restaurant prüfen.</p><div class="actions"><a href="https://www.restaurant-genussterrasse.at/" target="_blank" rel="noopener noreferrer">🌐 Website &amp; Speisekarte</a><a href="tel:+43271268846">📞 Tisch anfragen</a></div></div>`;
  if(mode==="service")b.innerHTML=`<div class="tip-grid"><article><h3>🚲 Fahrradgarage</h3><p>Sicher unterstellen.</p></article><article><h3>🔋 E-Bike laden</h3><p>Ladegerät bitte mitbringen.</p></article><article><h3>🧰 Fahrradservice für unsere Gäste</h3><p>Für kleinere Pannen steht nach Absprache Werkzeug aus unserer gut ausgestatteten privaten Werkstatt zur Verfügung. Wir helfen gerne im Rahmen unserer Möglichkeiten.</p><p>Wir sind kein Fahrradfachbetrieb und führen keine gewerblichen Fahrradreparaturen durch.</p></article><article><h3>💧 Wasser</h3><p>Vor der Tour auffüllen.</p></article></div>`;
 }
-const HEURIGE=[["Genussterrasse","im Ort Aggsbach Markt","Genussterrasse Aggsbach Markt"],["Donauschlössel / Gritsch","Spitz an der Donau","Donauschlössel Gritsch Spitz an der Donau"],["Heurige in Spitz","Spitz an der Donau","Heuriger Spitz an der Donau"],["Heurige in Schwallenbach","Schwallenbach","Heuriger Schwallenbach Wachau"],["Heurige in Willendorf","Willendorf","Heuriger Willendorf Wachau"],["Heurige in Weißenkirchen","Weißenkirchen","Heuriger Weißenkirchen Wachau"]];
-function setHeurigenDate(mode){document.getElementById("heurigenDate").value=wachauDate(mode==="tomorrow"?1:0);renderHeurigen()}
-function dateLabel(){const v=document.getElementById("heurigenDate").value;if(!v)return"heute";const d=new Date(v+"T12:00:00");return["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"][d.getDay()]+", "+String(d.getDate()).padStart(2,"0")+"."+String(d.getMonth()+1).padStart(2,"0")+"."+d.getFullYear()}
-function aiUrl(){return "https://www.google.com/search?udm=50&q="+enc("Welche Heurigen haben am "+dateLabel()+" am Nordufer der Wachau im Umkreis von 15 km von Aggsbach Markt geöffnet? Bitte nur tatsächlich geöffnete Betriebe anzeigen, keine geschlossenen. Mit Öffnungszeiten und Quelle.")}
-function renderHeurigen(){
- document.getElementById("heurigenResult").innerHTML=`<div class="result-card"><h3>🍷 Google-KI-Modus für ${dateLabel()}</h3><p>1. Google-KI-Modus starten. 2. Nur bestätigte offene Heurige auswählen. 3. Route öffnen.</p><div class="actions"><a href="${aiUrl()}" target="_blank">🤖 Google-KI-Modus starten</a></div></div><div class="map-grid">`+HEURIGE.map((h,i)=>`<article><h3>${h[0]}</h3><p>${h[1]}</p><div class="actions"><a href="${route(h[2],'driving')}" target="_blank">Route anzeigen</a></div></article>`).join("")+"</div>";
+/* Der Heurigenfinder zeigt nur fuer einen konkreten Tag bestaetigte Daten.
+   Eine Aussteckperiode ist kein Beleg, dass an jedem Tag geoeffnet ist. */
+let heurigenRequestSequence=0;
+function setHeurigenDate(mode){
+ const input=document.getElementById("heurigenDate");if(!input)return;
+ input.value=wachauDate(mode==="tomorrow"?1:0);
+ renderHeurigen();
+}
+function heurigenDateFromDisplay(value){
+ const match=String(value||"").match(/^(\d{1,2})\.(\d{1,2})\.(\d{4})$/);
+ if(!match)return "";
+ const iso=match[3]+"-"+match[2].padStart(2,"0")+"-"+match[1].padStart(2,"0");
+ const d=new Date(iso+"T12:00:00Z");
+ return !Number.isNaN(d.getTime())&&d.toISOString().slice(0,10)===iso?iso:"";
+}
+function heurigenListMarkup(items,{opening=false}={}){
+ if(!items.length)return "";
+ return '<div class="guest-heurigen-grid">'+items.map(item=>{
+  const url=safeUrl(item.url||"https://heurigenkalender.niederoesterreich.at/list");
+  const map="https://www.google.com/maps/search/?api=1&query="+enc(item.name+", "+item.place+", Wachau");
+  return '<article class="guest-heurigen-card"><h3>'+escapeHtml(item.name)+'</h3><p>'+escapeHtml(item.place)+'</p><p>'+escapeHtml(item.hours||"Zeiten vor Besuch prüfen")+'</p>'+(opening?'<p class="small">Gemeldeter Aussteckbeginn, nicht automatisch für weitere Tage gültig.</p>':'')+'<div class="button-row"><a class="btn-link" href="'+url+'" target="_blank" rel="noopener noreferrer">Öffnung prüfen</a><a class="btn-link" href="'+map+'" target="_blank" rel="noopener noreferrer">Route</a></div></article>';
+ }).join("")+'</div>';
+}
+async function renderHeurigen(){
+ const date=document.getElementById("heurigenDate")?.value||wachauDate();
+ const box=document.getElementById("heurigenResult");
+ const status=document.getElementById("heurigenStand");
+ if(!box)return;
+ const request=++heurigenRequestSequence;
+ const today=wachauDate();
+ const calendar='https://heurigenkalender.niederoesterreich.at/list';
+ const official='<a class="btn-link" href="'+calendar+'" target="_blank" rel="noopener noreferrer">🍷 Offiziellen Heurigenkalender öffnen</a>';
+ box.textContent="Heurigen-Einträge werden geladen …";
+ if(status)status.textContent="";
+ try{
+  const response=await fetch("tratsch-und-glatsch.json",{cache:"no-store"});
+  if(!response.ok)throw new Error("Ausgabe nicht erreichbar");
+  const edition=await response.json();
+  if(request!==heurigenRequestSequence)return;
+  const editionDate=edition.editionDate||"";
+  if(status)status.textContent="Ausgabestand: "+escapeHtml(edition.editionLabel||editionDate||"unbekannt")+". Tagesdaten nur am ausgewiesenen Tag gültig.";
+  if(date===today && date===editionDate){
+    const todayItems=Array.isArray(edition.heurigen)?edition.heurigen:[];
+    box.innerHTML='<p><strong>Heute ('+todayItems.length+')</strong> – in der heutigen Gästezeitung eingetragene Heurige. Kurzfristige Änderungen möglich.</p>'+heurigenListMarkup(todayItems)+(todayItems.length?'':'<p>Heute wurden keine geöffneten Heurigen bestätigt.</p>')+'<div class="button-row">'+official+'</div>';
+  }else{
+    const soon=(Array.isArray(edition.openingSoon)?edition.openingSoon:[]).filter(item=>heurigenDateFromDisplay(item.date)===date);
+    const tomorrow=date===wachauDate(1);
+    const intro=date<today?'Für vergangene Tage werden keine aktuellen Öffnungen ausgewiesen.':tomorrow?'Für morgen liegt keine vollständige, tagesaktuell geprüfte Heurigenliste vor.':'Für diesen Wunschtag liegt keine vollständige, tagesaktuell geprüfte Heurigenliste vor.';
+    box.innerHTML='<p>'+escapeHtml(intro)+'</p>'+(soon.length?'<h3>Für diesen Tag vorgemerkte Aussteckbeginne ('+soon.length+')</h3>'+heurigenListMarkup(soon,{opening:true}):'<p>Keine ausdrücklich bestätigten Aussteckbeginne für diesen Tag in dieser Ausgabe.</p>')+'<div class="button-row">'+official+'</div>';
+  }
+ }catch(_error){
+  if(request!==heurigenRequestSequence)return;
+  if(status)status.textContent="Der tagesaktuelle Datenstand ist derzeit nicht abrufbar.";
+  box.innerHTML='<p>Keine zuverlässige Heurigenliste verfügbar. Bitte den offiziellen Kalender prüfen.</p><div class="button-row">'+official+'</div>';
+ }
 }
 function runAppCheck(){
  const checks=[
