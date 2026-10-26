@@ -56,6 +56,12 @@
   window.compactGuestNewspaper=compactGuestNewspaper;
   document.addEventListener('DOMContentLoaded',()=>{
     updateLanguagePicker();
+    const news=document.getElementById('newspaperContent');
+    if(news){
+      const observer=new MutationObserver(()=>{if(news.dataset.guestCompact!=='yes')compactGuestNewspaper(news);});
+      observer.observe(news,{childList:true});
+      compactGuestNewspaper(news);
+    }
     document.querySelectorAll('.quick-nav button[data-target]').forEach(button=>{
       button.addEventListener('click',()=>showAnchor(button.dataset.target));
     });
