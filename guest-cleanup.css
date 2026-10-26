@@ -36,3 +36,7 @@
  main .button-row>*{max-width:100%;white-space:normal;overflow-wrap:anywhere}
 }
 @media(max-width:420px){.hero-img{max-height:205px!important}.guest-hub > h2{font-size:1.25rem}.quick-nav button{font-size:12.5px!important}}
+
+.guest-legacy-hidden{display:none!important}
+.guest-more > .guest-legacy-hidden{display:none!important}
+.quick-nav + main{scroll-margin-top:100px}
