@@ -249,7 +249,7 @@ function setHeurigenDate(mode){
  renderHeurigen();
 }
 function heurigenDateFromDisplay(value){
- const match=String(value||"").match(/^(\\d{1,2})\\.(\\d{1,2})\\.(\\d{4})$/);
+ const match=String(value||"").match(/^(\d{1,2})\.(\d{1,2})\.(\d{4})$/);
  if(!match)return "";
  const iso=match[3]+"-"+match[2].padStart(2,"0")+"-"+match[1].padStart(2,"0");
  const d=new Date(iso+"T12:00:00Z");
