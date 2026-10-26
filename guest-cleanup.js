@@ -56,6 +56,9 @@
   window.compactGuestNewspaper=compactGuestNewspaper;
   document.addEventListener('DOMContentLoaded',()=>{
     updateLanguagePicker();
+    const trend=document.getElementById('weatherTrend');
+    if(trend)trend.addEventListener('toggle',()=>{if(trend.open && window.zabWeatherChart){window.zabWeatherChart.resize();}});
+
     const news=document.getElementById('newspaperContent');
     if(news){
       const observer=new MutationObserver(()=>{if(news.dataset.guestCompact!=='yes')compactGuestNewspaper(news);});
