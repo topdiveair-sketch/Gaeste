@@ -1,61 +1,55 @@
 {
-  "editionDate": "2026-10-26",
-  "editionLabel": "Montag, 26. Oktober 2026",
-  "intro": "Grüß euch, ich bin Pia! Am heutigen Nationalfeiertag sind vierzehn Heurige am nördlichen Donauufer bestätigt geöffnet; Fanie’s, Mang, Weixelbaum, Stöger, Schweighofer und Bäuerl haben ihren letzten bestätigten Ausstecktag. In Spitz ist die Zornberghütte von 11:00 bis 16:00 Uhr ausschließlich bei Schönwetter angekündigt, W.E.R.O. lädt von 12:00 bis 18:00 Uhr zur spontanen Verkostung. Das Weinsensoriktraining und Laglers Weinerlebnis sind heute nur für bereits Angemeldete sinnvoll. Das Wetter wird ausschließlich live in der Gäste-App geladen.",
+  "editionDate": "2026-10-27",
+  "editionLabel": "Dienstag, 27. Oktober 2026",
+  "intro": "Grüß euch, ich bin Pia! Heute sind acht Heurige am nördlichen Donauufer bestätigt geöffnet: Familie Georg Kurz beginnt den aktuellen Aussteckzeitraum, die Adam-Mühle hat ihren letzten bestätigten Ausstecktag. In Aggsbach Markt starten heute ungefähr zwischen 07:00 und 17:00 Uhr Kanalreinigungsarbeiten. Öffentliche Tagesveranstaltungen sind nicht bestätigt; Laglers Weinerlebnis ist heute nur mit mindestens zwei Tage zuvor bestätigter Anmeldung und bei Schönwetter sinnvoll. Das Wetter wird ausschließlich live in der Gäste-App geladen.",
   "important": [
     {
-      "title": "Heute vierzehn bestätigte Heurige",
-      "text": "Fanie’s, Stalzer, Adam-Mühle, Mang, Weixelbaum, Ferdl Denk, Kropf, Enothek Eigl, Stöger, Schweighofer, Bäuerl, Höllmüller, Winklheuriger und Familie Georg Kurz sind heute geöffnet. Fanie’s, Mang, Weixelbaum, Stöger, Schweighofer und Bäuerl haben heute ihren letzten bestätigten Ausstecktag.",
+      "title": "Heute acht bestätigte Heurige",
+      "text": "Stalzer, Adam-Mühle, Ferdl Denk, Kropf, Enothek Eigl, Höllmüller, Winklheuriger und Familie Georg Kurz sind heute bestätigt geöffnet. Familie Kurz beginnt heute den aktuell veröffentlichten Zeitraum; die Adam-Mühle hat heute ihren letzten Ausstecktag.",
       "source": "https://heurigenkalender.niederoesterreich.at/",
-      "sourceLabel": "Heurigenkalender Niederösterreich und Marktgemeinde Aggsbach, geprüft 26. Oktober 2026"
+      "sourceLabel": "Heurigenkalender Niederösterreich und Marktgemeinde Aggsbach, geprüft 27. Oktober 2026"
     },
     {
-      "title": "Zornberghütte heute nur bei Schönwetter",
-      "text": "Der heutige Termin ist von 11:00 bis 16:00 Uhr bestätigt, findet aber ausdrücklich nur bei Schönwetter statt. Kurzfristige Änderungen bleiben vorbehalten.",
-      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199537/schmankerl-bei-der-zornberghuette",
-      "sourceLabel": "Tourismusverein Spitz, geprüft 26. Oktober 2026"
-    },
-    {
-      "title": "W.E.R.O. heute 12:00–18:00 Uhr",
-      "text": "Die spontane Verkostung in der Marktstraße 5 findet heute ohne vorherige Anmeldung statt. Heute ist der letzte bestätigte Termin dieser Veranstaltungsreihe.",
-      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232237/wero-wine-spontane-verkostung",
-      "sourceLabel": "Tourismusverein Spitz"
-    },
-    {
-      "title": "Weinsensoriktraining nur für Angemeldete",
-      "text": "Das Training läuft heute von 11:00 bis 13:30 Uhr. Die Anmeldung endete gestern um 18:00 Uhr; deshalb heute nur mit bereits bestätigter Anmeldung einplanen.",
-      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232241/weinsensoriktraining-am-weingut-lagler",
-      "sourceLabel": "Tourismusverein Spitz"
-    },
-    {
-      "title": "DDSG weiterhin mit Niedrigwasseränderungen",
-      "text": "Die DDSG-Buchungsanzeige nennt heute die nächste Wachaufahrt um 09:30 Uhr. Wegen Niedrigwassers können nicht alle Verbindungen durchgeführt werden; nur konkret buchbare Fahrten und deren ausgewiesene Halte nutzen.",
-      "source": "https://ddsg-blue-danube.at/linienschifffahrt-wachau/",
-      "sourceLabel": "DDSG Blue Danube, geprüft 26. Oktober 2026"
-    },
-    {
-      "title": "Rollfähren am Feiertag",
-      "text": "Spitz–Arnsdorf fährt heute nach Sonn- und Feiertagsfahrplan von 08:15 bis 19:30 Uhr, letzte Fahrt 15 Minuten vor Betriebsschluss. Weißenkirchen–St. Lorenz fährt am letzten Tag des veröffentlichten Oktoberzeitraums von 09:15 bis 11:30 Uhr und 13:30 bis 17:30 Uhr; PKW wegen Niedrigwassers nur bedingt.",
-      "source": "https://www.weissenkirchen-wachau.at/ueber-weissenkirchen/mobilitaet/rollfaehre",
-      "sourceLabel": "Marktgemeinde Weißenkirchen und Tourismusverein Spitz"
-    },
-    {
-      "title": "Welterbesteig: zwei vollständige Sperren",
-      "text": "Glatzberg/Bachleiten ist bis voraussichtlich 20. November vollständig gesperrt; auch die Bachleiten-Forststraße ist keine Umgehung. Zwischen St. Michael und Spitz bleibt Etappe 3 im Bereich Atzberg bis voraussichtlich November gesperrt; die beschilderte Umleitung führt über Wösendorf.",
-      "source": "https://www.donau.com/touren/welterbesteig-wachau-umleitung-03-weissenkirchen-spitz",
-      "sourceLabel": "Donau Niederösterreich und Marktgemeinde Aggsbach"
-    },
-    {
-      "title": "Aggsbach: Kanalreinigung beginnt morgen",
-      "text": "Ab Dienstag, 27. Oktober, finden ungefähr von 07:00 bis 17:00 Uhr Kanalreinigungsarbeiten statt. Bei Gebäuden ohne Rückstauklappe oder Strangentlüftung kann kurzfristiger Überdruck zu geringfügigen Wasseraustritten führen. Die halbseitige Straßensperre bleibt bis 5. November bestehen.",
+      "title": "Aggsbach: Kanalreinigung beginnt heute",
+      "text": "Ab heute werden in der Katastralgemeinde Aggsbach Markt Kanalreinigungsarbeiten durchgeführt, annähernd von 07:00 bis 17:00 Uhr und witterungsbedingt. Bei Gebäuden ohne Strangentlüftung oder Rückstauklappe kann kurzfristiger Überdruck geringfügige Wasseraustritte verursachen; WC-Deckel geschlossen halten.",
       "source": "https://www.aggsbach.gv.at/Buergerservice/Aktuelles_Termine/Amtstafel",
-      "sourceLabel": "Amtstafel Aggsbach, geprüft 26. Oktober 2026"
+      "sourceLabel": "Amtstafel Marktgemeinde Aggsbach, geprüft 27. Oktober 2026"
+    },
+    {
+      "title": "DDSG: Niedrigwasseränderungen und nächste Fahrt 09:30 Uhr",
+      "text": "Die DDSG zeigt für heute die nächste Wachaufahrt um 09:30 Uhr an. Wegen Niedrigwassers werden nicht alle Verbindungen durchgeführt. Im täglichen Nachsaisonfahrplan halten die bestätigten Fahrten in Dürnstein und Spitz; Weißenkirchen und Emmersdorf sind bei dieser Verbindung ohne Halt.",
+      "source": "https://ddsg-blue-danube.at/linienschifffahrt-wachau/",
+      "sourceLabel": "DDSG Blue Danube, geprüft 27. Oktober 2026"
+    },
+    {
+      "title": "Rollfähren: Spitz fährt, Weißenkirchen ist beendet",
+      "text": "Spitz–Arnsdorf fährt heute nach dem veröffentlichten Werktagsfahrplan von 06:15 bis 19:00 Uhr; letzte Fahrt 15 Minuten vor Betriebsschluss. Der veröffentlichte Saisonzeitraum Weißenkirchen–St. Lorenz endete am 26. Oktober, daher heute kein regulärer Fährbetrieb.",
+      "source": "https://www.weissenkirchen-wachau.at/ueber-weissenkirchen/mobilitaet/rollfaehre",
+      "sourceLabel": "Marktgemeinde Weißenkirchen und Tourismusverein Spitz, geprüft 27. Oktober 2026"
+    },
+    {
+      "title": "Welterbesteig: zwei Sperren mit Umleitungen",
+      "text": "Im Bereich Glatzberg bleibt Etappe 7 gesperrt; die offizielle Umleitung führt ab Aggsbach über den Seeber-Rundweg. Zwischen St. Michael und Spitz ist Etappe 3 im Bereich Atzberg samt Abzweigung zur Buschandlwand weiterhin komplett gesperrt; die beschilderte Umleitung führt über Wösendorf und St. Michael.",
+      "source": "https://www.donau.com/touren/welterbesteig-wachau-umleitung-03-weissenkirchen-spitz",
+      "sourceLabel": "Donau Niederösterreich, geprüft 27. Oktober 2026"
+    },
+    {
+      "title": "Aggsbach: halbseitige Straßensperre bis 5. November",
+      "text": "Bei Haus Nr. 47 gilt auf der Gemeindestraße weiterhin eine halbseitige Sperre jeweils nur in den notwendigen Zeiten und Abschnitten. Die Verordnung läuft bis 5. November; Gegenverkehrsregelung und Beschilderung beachten.",
+      "source": "https://www.aggsbach.gv.at/Buergerservice/Aktuelles_Termine/Amtstafel",
+      "sourceLabel": "Amtstafel Marktgemeinde Aggsbach"
+    },
+    {
+      "title": "Heute keine bestätigte öffentliche Tagesveranstaltung",
+      "text": "Die aktuellen Kalender für den Zielabschnitt weisen heute keine frei zugängliche öffentliche Tagesveranstaltung aus. Laglers Weinerlebnis läuft werktags bei Schönwetter, verlangt aber zwingend eine Anmeldung mindestens zwei Tage im Voraus.",
+      "source": "https://www.spitz-wachau.com/events-veranstaltungen/detail/70941/weinherbst-2026-laglers-weinerlebnis",
+      "sourceLabel": "Tourismusverein Spitz und örtliche Veranstaltungskalender, geprüft 27. Oktober 2026"
     }
   ],
   "outdoor": [
     {
       "title": "Donauradweg Nordufer",
-      "text": "Für den Abschnitt Emmersdorf–Aggsbach Markt–Spitz–Weißenkirchen–Dürnstein ist aktuell keine allgemeine Sperre ausgewiesen. Kurzfristige Beschilderungen und lokale Baustellenhinweise vor Ort beachten.",
+      "text": "Für Emmersdorf–Aggsbach Markt–Spitz–Weißenkirchen–Dürnstein ist aktuell keine allgemeine Sperre des Donauradwegs ausgewiesen. Lokale Baustellenbeschilderungen und die heutigen Arbeiten in Aggsbach beachten.",
       "links": [
         {
           "label": "Donauradweg Etappe 5 Nordufer",
@@ -68,22 +62,18 @@
       ]
     },
     {
-      "title": "Welterbesteig: Glatzberg vollständig gesperrt",
-      "text": "Der Teilabschnitt Glatzberg/Bachleiten ist bis voraussichtlich 20. November nicht begehbar. Die Bachleiten-Forststraße ist ebenfalls gesperrt und ausdrücklich keine Ausweichroute. Absperrungen unbedingt einhalten.",
+      "title": "Welterbesteig Etappe 7: Umleitung am Glatzberg",
+      "text": "Der gesperrte Bereich am Glatzberg darf nicht betreten werden. Die offizielle Umleitung führt ab Aggsbach auf dem Seeber-Rundweg; ausschließlich der veröffentlichten Beschilderung folgen.",
       "links": [
         {
-          "label": "Offizielle Sperrmitteilung",
-          "url": "https://www.aggsbach.gv.at/Forstliches_Sperrgebiet_-_Welterbesteig_Wachau_Teilabschnitt_Glatzberg"
-        },
-        {
-          "label": "Tourismus-Hinweis zur Etappe 7",
+          "label": "Offizielle Umleitung Etappe 7",
           "url": "https://www.donau.com/touren/umleitung"
         }
       ]
     },
     {
-      "title": "Welterbesteig: Totalsperre und Umleitung Weißenkirchen–Spitz",
-      "text": "Etappe 3 ist zwischen St. Michael und Spitz im Bereich Atzberg weiterhin bis voraussichtlich November vollständig gesperrt. Die beschilderte Umleitung führt ab Ried Hochrain über Wösendorf und St. Michael zum Treppelweg nach Spitz. Unterwegs gibt es keine Einkehrmöglichkeit oder Quelle.",
+      "title": "Welterbesteig Etappe 3: Totalsperre St. Michael–Spitz",
+      "text": "Atzberg und die Abzweigung zur Buschandlwand sind bis voraussichtlich November nicht begehbar. Die markierte Umleitung führt ab Ried Hochrain über Wösendorf und St. Michael zum Treppelweg nach Spitz; unterwegs gibt es keine Einkehrmöglichkeit oder Quelle.",
       "links": [
         {
           "label": "Offizielle Umleitung Weißenkirchen–Spitz",
@@ -102,8 +92,8 @@
       ]
     },
     {
-      "title": "Bus 715 am Feiertag",
-      "text": "Die Linie 715 verbindet die Orte am nördlichen Donauufer zwischen Melk und Krems. Wegen des Nationalfeiertags für die konkrete heutige Abfahrt den tagesaktuellen VOR-Routenplaner verwenden.",
+      "title": "Bus 715",
+      "text": "Die Linie 715 verbindet die Orte am nördlichen Donauufer zwischen Melk und Krems. Für die konkrete heutige Abfahrt und kurzfristige Abweichungen den VOR-Routenplaner verwenden.",
       "links": [
         {
           "label": "Mobil in der Wachau",
@@ -117,7 +107,7 @@
     },
     {
       "title": "Rollfähren",
-      "text": "Spitz–Arnsdorf fährt heute nach Sonn- und Feiertagsfahrplan von 08:15 bis 19:30 Uhr, letzte Fahrt 15 Minuten vor Betriebsschluss. Weißenkirchen–St. Lorenz fährt von 09:15 bis 11:30 Uhr und von 13:30 bis 17:30 Uhr; Personen und Fahrräder, PKW nur bedingt. Niedrigwasser, Hochwasser, Nebel oder starker Wind können den Betrieb kurzfristig einschränken oder stoppen.",
+      "text": "Spitz–Arnsdorf fährt heute von 06:15 bis 19:00 Uhr, letzte Überfahrt 15 Minuten vor Betriebsschluss. Der publizierte Saisonbetrieb Weißenkirchen–St. Lorenz endete gestern; heute kein regulärer Betrieb. Niedrigwasser, Nebel oder starker Wind können auch in Spitz kurzfristig einschränken.",
       "links": [
         {
           "label": "Rollfähre Spitz–Arnsdorf",
@@ -130,8 +120,8 @@
       ]
     },
     {
-      "title": "Aggsbach: örtliche Verkehrsmaßnahmen",
-      "text": "Eine halbseitige Straßensperre ist laut Amtstafel noch bis 5. November ausgewiesen. Ab morgen, 27. Oktober, finden in Aggsbach Markt tagsüber Kanalreinigungsarbeiten statt. Für die B3 ist im Zielabschnitt keine neue allgemeine Vollsperre veröffentlicht.",
+      "title": "B3 und Aggsbacher Ortsverkehr",
+      "text": "Für die B3 im Zielabschnitt ist keine neue allgemeine Vollsperre veröffentlicht. In Aggsbach Markt können die heutigen Kanalreinigungsarbeiten sowie die halbseitige Sperre bei Haus Nr. 47 zu kurzen Behinderungen führen.",
       "links": [
         {
           "label": "Amtstafel Aggsbach",
@@ -142,82 +132,47 @@
   ],
   "events": [
     {
-      "date": "26.10.2026, 11:00–13:30 Uhr",
-      "place": "Spitz, Weingut Lagler",
-      "title": "Weinsensoriktraining",
-      "note": "Interaktiver Workshop mit Weinverkostung, 45 Euro. Die Anmeldung endete gestern um 18:00 Uhr; heute nur mit bestätigter Anmeldung einplanen.",
-      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232241/weinsensoriktraining-am-weingut-lagler"
-    },
-    {
-      "date": "26.10.2026, 11:00–16:00 Uhr",
-      "place": "Spitz, Zornberghütte",
-      "title": "Schmankerl bei der Zornberghütte",
-      "note": "Bestätigter Feiertagstermin, ausschließlich bei Schönwetter. Kurzfristige Änderungen vorbehalten.",
-      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/199537/schmankerl-bei-der-zornberghuette"
-    },
-    {
-      "date": "26.10.2026, 12:00–18:00 Uhr",
-      "place": "Spitz, Marktstraße 5",
-      "title": "W.E.R.O. Wine – Spontane Verkostung",
-      "note": "Spontane Verkostung regionaler Weine ohne vorherige Anmeldung; heute letzter bestätigter Veranstaltungstag.",
-      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/232237/wero-wine-spontane-verkostung"
-    },
-    {
-      "date": "Bis 30.10.2026, Montag bis Freitag ab 07:00 Uhr",
+      "date": "27.–30.10.2026, Montag bis Freitag ab 07:00 Uhr",
       "place": "Spitz, Weingut Lagler",
       "title": "Weinherbst 2026 – Laglers Weinerlebnis",
-      "note": "Mitarbeit bei der Weinlese nur werktags und bei Schönwetter; Anmeldung mindestens zwei Tage vorher erforderlich. Für heute daher nur mit bereits bestätigter Anmeldung.",
+      "note": "Mitarbeit bei der Weinlese nur werktags und bei Schönwetter; zwingende Anmeldung mindestens zwei Tage vorher. Für heute daher nur mit bereits bestätigter Anmeldung.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/70941/weinherbst-2026-laglers-weinerlebnis"
     },
     {
-      "date": "31.10.2026, 18:00 Uhr",
+      "date": "31.10.2026, 18:00–19:30 Uhr",
       "place": "Spitz, Pfarrkirche St. Mauritius",
       "title": "Abschlusskonzert der Spitzer SINGEREY",
       "note": "Vokalwerke deutscher Komponisten aus Renaissance und Barock; Eintritt gegen freiwillige Spenden.",
       "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail/236164/abschlusskonzert-der-spitzer-singerey"
+    },
+    {
+      "date": "02.11.2026, 18:30–19:30 Uhr",
+      "place": "Aggsbach Markt, Venussaal",
+      "title": "Yoga mit Julia",
+      "note": "Der Termin ist im offiziellen Aggsbacher Veranstaltungskalender als planmäßig bestätigt.",
+      "url": "https://www.aggsbach.gv.at/Yoga_fuer_Junggebliebene_mit_Julia_1"
     }
   ],
   "heurigen": [
     {
-      "name": "Fanie’s Heuriger",
-      "place": "Spitz",
-      "period": "09.–26.10.2026",
-      "hours": "Heute ab 15:00 Uhr; letzter Ausstecktag",
-      "url": "https://heurigenkalender.niederoesterreich.at/235315/fanie-s-heuriger"
-    },
-    {
       "name": "Weingut Stalzer",
       "place": "Spitz",
       "period": "16.10.–01.11.2026",
-      "hours": "Heute Sonderöffnung ab 16:00 Uhr",
+      "hours": "Heute ab 16:00 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/156627/weingut-stalzer"
     },
     {
       "name": "Weinbau Familie Pölzer Adam-Mühle",
       "place": "Spitz",
       "period": "22.–27.10.2026",
-      "hours": "Heute ab 12:00 Uhr",
-      "url": "https://heurigenkalender.niederoesterreich.at/160941/weinbau-familie-plzer-adam-mhle"
-    },
-    {
-      "name": "Heuriger Mang Hermenegild",
-      "place": "Weißenkirchen",
-      "period": "17.07.–26.10.2026",
-      "hours": "Heute ab 12:00 Uhr; letzter Ausstecktag",
-      "url": "https://heurigenkalender.niederoesterreich.at/30959/heuriger-mang-hermenegild"
-    },
-    {
-      "name": "Heuriger Familie Weixelbaum",
-      "place": "Weißenkirchen",
-      "period": "21.–26.10.2026",
       "hours": "Heute ab 15:00 Uhr; letzter Ausstecktag",
-      "url": "https://heurigenkalender.niederoesterreich.at/30965/heuriger-familie-weixelbaum"
+      "url": "https://heurigenkalender.niederoesterreich.at/160941"
     },
     {
       "name": "Heuriger Ferdl Denk",
       "place": "Weißenkirchen",
       "period": "30.03.–01.11.2026",
-      "hours": "Heute am Feiertag ab 11:00 Uhr",
+      "hours": "Heute ab 15:00 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/30949/heuriger-ferdl-denk"
     },
     {
@@ -233,27 +188,6 @@
       "period": "22.–30.10.2026",
       "hours": "Heute ab 15:00 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/30943/heuriger-enothek-eigl"
-    },
-    {
-      "name": "Winzerhof Familie Stöger",
-      "place": "Dürnstein",
-      "period": "17.–26.10.2026",
-      "hours": "Heute ab 15:00 Uhr; letzter Ausstecktag",
-      "url": "https://heurigenkalender.niederoesterreich.at/31620/winzerhof-familie-stger"
-    },
-    {
-      "name": "Heuriger Schweighofer",
-      "place": "Oberloiben, Dürnstein",
-      "period": "19.–26.10.2026",
-      "hours": "Heute ab 15:00 Uhr; letzter Ausstecktag",
-      "url": "https://heurigenkalender.niederoesterreich.at/31625/heuriger-schweighofer"
-    },
-    {
-      "name": "Heuriger Weingut Bäuerl",
-      "place": "Oberloiben, Dürnstein",
-      "period": "22.–26.10.2026",
-      "hours": "Heute ab 15:00 Uhr; letzter Ausstecktag",
-      "url": "https://heurigenkalender.niederoesterreich.at/198482/heuriger-weingut-buerl"
     },
     {
       "name": "Heuriger Weingut Höllmüller",
@@ -272,7 +206,7 @@
     {
       "name": "Heuriger Familie Georg Kurz",
       "place": "Aggsbach Markt",
-      "period": "24.10.–08.11.2026",
+      "period": "27.10.–08.11.2026",
       "hours": "Heute geöffnet; eine Beginnzeit ist im offiziellen Kalender nicht veröffentlicht",
       "url": "https://www.aggsbach.gv.at/Heuriger_Fam_Georg_Kurz_9"
     }
@@ -282,8 +216,8 @@
       "date": "28.10.2026",
       "name": "Özelt – Offen is’",
       "place": "Spitz",
-      "hours": "Bestätigter erneuter Aussteckbeginn am Mittwoch, 28. Oktober, 16:00–23:00 Uhr; täglich bis 31.10.2026.",
-      "url": "https://heurigenkalender.niederoesterreich.at/200943/offen-is-beim-heurigen-zelt-in-spitz-an-der-donau"
+      "hours": "Bestätigter Aussteckbeginn am Mittwoch, 28. Oktober, 16:00–23:00 Uhr; täglich bis 31.10.2026.",
+      "url": "https://heurigenkalender.niederoesterreich.at/200943/offen-is-heuriger-zi"
     },
     {
       "date": "29.10.2026",
@@ -296,15 +230,15 @@
       "date": "30.10.2026",
       "name": "Heuriger Denk Walter & Gabriele",
       "place": "Weißenkirchen",
-      "hours": "Bestätigter Aussteckbeginn am Freitag, 30. Oktober, ab 15:00 Uhr; Aussteckzeit bis 10.11.2026.",
-      "url": "https://heurigenkalender.niederoesterreich.at/30950/heuriger-denk-walter-gabriele"
+      "hours": "Bestätigter Aussteckbeginn am Freitag, 30. Oktober, ab 15:00 Uhr; täglich bis 10.11.2026.",
+      "url": "https://heurigenkalender.niederoesterreich.at/30941"
     },
     {
       "date": "30.10.2026",
       "name": "Netterlkeller",
       "place": "Spitz",
       "hours": "Bestätigter Aussteckbeginn am Freitag, 30. Oktober, ab 15:00 Uhr; Aussteckzeit bis 01.11.2026.",
-      "url": "https://heurigenkalender.niederoesterreich.at/27395/netterlkeller"
+      "url": "https://www.donau.com/veranstaltungen/weingut-christian-und-birgit-schneeweiss-netterlkeller"
     },
     {
       "date": "02.11.2026",
@@ -314,24 +248,22 @@
       "url": "https://heurigenkalender.niederoesterreich.at/30943/heuriger-enothek-eigl"
     }
   ],
-  "piaTip": "Pias Feiertagstipp: Bei passender aktueller Witterung führt der Weg zur Zornberghütte, heute von 11:00 bis 16:00 Uhr. Als wetterunabhängige Alternative bietet W.E.R.O. in der Spitzer Marktstraße von 12:00 bis 18:00 Uhr eine spontane Verkostung ohne Anmeldung.",
+  "piaTip": "Pias Tipp: Heute lässt sich die Wachaubahn gut mit einem kurzen Ortsrundgang in Spitz oder Weißenkirchen verbinden. Für den Abschluss sind dort mehrere Heurige bestätigt geöffnet; bei Wanderungen unbedingt die beiden Welterbesteig-Sperren und die ausgeschilderten Umleitungen beachten.",
   "goodToKnow": [
     "Das Wetter wird in der Gäste-App live geladen und deshalb nicht statisch in Tratsch & Klatsch gespeichert.",
-    "Heute sind vierzehn Heurige am Nordufer bestätigt geöffnet; sechs Betriebe haben ihren letzten Ausstecktag.",
+    "Heute sind acht Heurige am Nordufer bestätigt geöffnet; die Adam-Mühle hat ihren letzten Ausstecktag, Familie Georg Kurz beginnt den aktuell veröffentlichten Zeitraum.",
     "Fünf bestätigte Heurigenöffnungen oder Wiedereröffnungen der kommenden sieben Tage sind vorgemerkt: Özelt am 28., Bäuerl am 29., Denk Walter & Gabriele und Netterlkeller am 30. Oktober sowie Enothek Eigl am 2. November.",
-    "Die Zornberghütte ist heute von 11:00 bis 16:00 Uhr angekündigt und öffnet nur bei Schönwetter.",
-    "W.E.R.O. Wine läuft heute von 12:00 bis 18:00 Uhr ohne Anmeldung; heute letzter bestätigter Termin.",
-    "Das Weinsensoriktraining findet heute nur für bereits Angemeldete statt.",
-    "Laglers Weinerlebnis ist heute nur mit rechtzeitig bestätigter Anmeldung sinnvoll und läuft werktags bis 30. Oktober.",
+    "In Aggsbach Markt beginnen heute ungefähr von 07:00 bis 17:00 Uhr witterungsabhängige Kanalreinigungsarbeiten.",
+    "Die halbseitige Straßensperre bei Haus Nr. 47 in Aggsbach läuft laut Verordnung bis 5. November.",
+    "Laglers Weinerlebnis läuft werktags bis 30. Oktober, heute aber nur mit mindestens zwei Tage zuvor bestätigter Anmeldung und bei Schönwetter.",
     "Das Abschlusskonzert der Spitzer SINGEREY findet am 31. Oktober um 18:00 Uhr in der Pfarrkirche St. Mauritius statt.",
-    "Der Welterbesteig ist im Bereich Glatzberg/Bachleiten bis voraussichtlich 20. November vollständig gesperrt; die Bachleiten-Forststraße ist keine Umgehung.",
-    "Auch Etappe 3 zwischen St. Michael und Spitz ist im Bereich Atzberg bis voraussichtlich November gesperrt; die beschilderte Umleitung führt über Wösendorf.",
-    "Die DDSG weist heute eine nächste Wachaufahrt um 09:30 Uhr aus, gleichzeitig gelten Niedrigwasseränderungen. Nur konkret buchbare Verbindungen nutzen.",
-    "Spitz–Arnsdorf fährt heute nach Feiertagsfahrplan 08:15–19:30 Uhr. Weißenkirchen–St. Lorenz fährt 09:15–11:30 Uhr und 13:30–17:30 Uhr; PKW werden nur bedingt befördert.",
+    "Yoga mit Julia ist für 2. November von 18:30 bis 19:30 Uhr im Aggsbacher Venussaal bestätigt.",
+    "Die DDSG weist heute die nächste Wachaufahrt um 09:30 Uhr aus; wegen Niedrigwassers nur konkret buchbare Verbindungen nutzen.",
+    "Spitz–Arnsdorf fährt heute werktags von 06:15 bis 19:00 Uhr. Der veröffentlichte Saisonbetrieb Weißenkirchen–St. Lorenz endete am 26. Oktober.",
     "Die Wachaubahn fährt heute nach täglichem Saisonfahrplan; Aggsbach Markt, Willendorf, Schwallenbach und Wösendorf-Joching sind Bedarfshalte.",
-    "Für den Bus 715 gilt heute der Feiertagsfahrplan; konkrete Abfahrt im VOR-Routenplaner prüfen.",
+    "Für den Bus 715 konkrete Abfahrten und kurzfristige Änderungen im VOR-Routenplaner prüfen.",
     "Für den Donauradweg am Nordufer ist im Zielabschnitt derzeit keine allgemeine Sperre ausgewiesen.",
-    "Ab morgen, 27. Oktober, finden in Aggsbach Markt ungefähr von 07:00 bis 17:00 Uhr Kanalreinigungsarbeiten statt.",
-    "Eine Aggsbacher halbseitige Straßensperre läuft laut Amtstafel bis 5. November."
+    "Etappe 7 des Welterbesteigs ist am Glatzberg gesperrt; die offizielle Umleitung führt über den Seeber-Rundweg.",
+    "Etappe 3 ist zwischen St. Michael und Spitz am Atzberg samt Abzweigung Buschandlwand weiterhin komplett gesperrt; Umleitung über Wösendorf und St. Michael."
   ]
 }
