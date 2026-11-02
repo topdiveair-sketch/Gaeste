@@ -1,0 +1,56 @@
+name: Notify IndexNow for book pages
+on:
+  push:
+    branches: [main]
+    paths:
+      - buecher.html
+      - books.html
+      - buecher-johann-prem.html
+      - auswandern-ungarn-rentner-2027.html
+      - .github/workflows/indexnow-books.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow-bookpages
+  cancel-in-progress: true
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Notify only modified book pages
+        shell: bash
+        run: |
+          set -euo pipefail
+          KEY="6c55801bf1e6b26751e88c0f4b1274ef"
+          LOCATION="https://topdiveair-sketch.github.io/Gaeste/${KEY}.txt"
+          if [ "${GITHUB_EVENT_NAME}" = "workflow_dispatch" ]; then
+            FILES="buecher.html books.html buecher-johann-prem.html auswandern-ungarn-rentner-2027.html"
+          else
+            FILES="$(jq -r '.commits[]? | (.added[]?, .modified[]?)' "${GITHUB_EVENT_PATH}" | sort -u)"
+            if grep -q '^\.github/workflows/indexnow-books\.yml$' <<< "${FILES}"; then
+              FILES="buecher-johann-prem.html auswandern-ungarn-rentner-2027.html"
+            fi
+          fi
+          count=0
+          for PAGE in buecher.html books.html buecher-johann-prem.html auswandern-ungarn-rentner-2027.html; do
+            if ! grep -qw -- "${PAGE}" <<< "${FILES}"; then
+              continue
+            fi
+            HTTP_CODE="$(curl --silent --show-error --max-time 20 --get \
+              --data-urlencode "url=https://topdiveair-sketch.github.io/Gaeste/${PAGE}" \
+              --data-urlencode "key=${KEY}" \
+              --data-urlencode "keyLocation=${LOCATION}" \
+              --output /tmp/indexnow-response --write-out "%{http_code}" \
+              https://api.indexnow.org/indexnow)"
+            echo "${PAGE}: IndexNow HTTP ${HTTP_CODE}"
+            case "${HTTP_CODE}" in
+              200|202) count=$((count+1)) ;;
+              *) cat /tmp/indexnow-response; exit 1 ;;
+            esac
+          done
+          echo "IndexNow notifications submitted: ${count}. This is not proof of search indexing."
