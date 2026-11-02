@@ -3,8 +3,6 @@ on:
   push:
     branches: [main]
     paths:
-      - buecher.html
-      - books.html
       - buecher-johann-prem.html
       - auswandern-ungarn-rentner-2027.html
       - .github/workflows/indexnow-books.yml
@@ -22,25 +20,19 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
-      - name: Notify only modified book pages
+      - name: Verify published key and notify two book pages
         shell: bash
         run: |
           set -euo pipefail
           KEY="6c55801bf1e6b26751e88c0f4b1274ef"
           LOCATION="https://topdiveair-sketch.github.io/Gaeste/${KEY}.txt"
-          if [ "${GITHUB_EVENT_NAME}" = "workflow_dispatch" ]; then
-            FILES="buecher.html books.html buecher-johann-prem.html auswandern-ungarn-rentner-2027.html"
-          else
-            FILES="$(jq -r '.commits[]? | (.added[]?, .modified[]?)' "${GITHUB_EVENT_PATH}" | sort -u)"
-            if grep -q '^\.github/workflows/indexnow-books\.yml$' <<< "${FILES}"; then
-              FILES="buecher-johann-prem.html auswandern-ungarn-rentner-2027.html"
-            fi
+          HOSTED_KEY="$(curl --silent --show-error --location --max-time 20 "${LOCATION}")"
+          if [ "${HOSTED_KEY}" != "${KEY}" ]; then
+            echo "IndexNow key not yet public or incorrect."
+            exit 1
           fi
           count=0
-          for PAGE in buecher.html books.html buecher-johann-prem.html auswandern-ungarn-rentner-2027.html; do
-            if ! grep -qw -- "${PAGE}" <<< "${FILES}"; then
-              continue
-            fi
+          for PAGE in buecher-johann-prem.html auswandern-ungarn-rentner-2027.html; do
             HTTP_CODE="$(curl --silent --show-error --max-time 20 --get \
               --data-urlencode "url=https://topdiveair-sketch.github.io/Gaeste/${PAGE}" \
               --data-urlencode "key=${KEY}" \
