@@ -1,55 +1,55 @@
 {
-  "editionDate": "2026-11-03",
-  "editionLabel": "Dienstag, 3. November 2026",
-  "intro": "Grüß euch, ich bin Pia! Heute sind fünf Heurige beziehungsweise Heurigen-Restaurants am nördlichen Donauufer bestätigt geöffnet: der Alte Klosterkeller in Dürnstein, Schöberl in Spitz, Enothek Eigl in Wösendorf, Familie Kurz in Aggsbach Markt und Denk Walter & Gabriele in Weißenkirchen. Für heute ist in den offiziellen örtlichen Kalendern kein neuer öffentlicher Veranstaltungstermin ausgewiesen; morgen folgt Line Dance in Aggsbach Markt. Die Spitz-Fähre ist heute wegen Seilwartung vollständig außer Betrieb. Wachaubahn und reguläre DDSG-Wachau-Linie fahren heute nicht; wichtigste öffentliche Verbindung bleibt der Bus 715. Das Wetter wird ausschließlich live in der Gäste-App geladen.",
+  "editionDate": "2026-11-04",
+  "editionLabel": "Mittwoch, 4. November 2026",
+  "intro": "Grüß euch, ich bin Pia! Heute sind sieben Heurige beziehungsweise Heurigen-Restaurants am nördlichen Donauufer bestätigt geöffnet: Der Alte Klosterkeller in Dürnstein, Denk Walter & Gabriele in Weißenkirchen, Enothek Eigl in Wösendorf, Familie Kurz in Aggsbach Markt, Schöberl und Werner Großinger in Spitz sowie die nach dem Betriebsurlaub wieder geöffnete Schlosserei in Luberegg. Um 18:00 Uhr ist Line Dance im Venussaal Aggsbach Markt angekündigt; laut Veranstalter kann die konkrete Einheit per WhatsApp auf 18:00 oder 19:00 Uhr bestätigt werden. Die Spitz-Fähre bleibt wegen Seilwartung vollständig außer Betrieb. Wachaubahn und reguläre DDSG-Wachau-Linie fahren heute nicht. Das Wetter wird ausschließlich live in der Gäste-App geladen.",
   "important": [
     {
-      "title": "Heute fünf bestätigte Heurige",
-      "text": "Der Alte Klosterkeller in Dürnstein ist laut eigener Website täglich geöffnet; sie nennt 11:30 Uhr, das Tourismusportal 12:00 Uhr als Beginn. Schöberl in Spitz, Enothek Eigl in Wösendorf und Denk Walter & Gabriele in Weißenkirchen öffnen ab 15:00 Uhr, Familie Georg Kurz in Aggsbach Markt ab 17:00 Uhr.",
-      "source": "https://www.alter-klosterkeller.at/",
-      "sourceLabel": "Betriebswebsite, Heurigenkalender Niederösterreich sowie Gemeinden Aggsbach und Spitz, geprüft 3. November 2026"
+      "title": "Heute sieben bestätigte Heurige",
+      "text": "Die Schlosserei in Luberegg öffnet nach dem Betriebsurlaub wieder ab 16:00 Uhr, Werner Großinger in Spitz beginnt heute seinen Aussteckzeitraum ab 15:00 Uhr. Der Alte Klosterkeller in Dürnstein ist laut Betriebswebsite ab 11:30 Uhr geöffnet, Schöberl, Enothek Eigl und Denk Walter & Gabriele ab 15:00 Uhr. Bei Familie Kurz widersprechen sich die veröffentlichten Beginnzeiten: Die Gemeinde nennt 17:00 Uhr, das Tourismusportal 16:00 Uhr; die heutige Öffnung selbst ist bestätigt.",
+      "source": "https://www.luberegg.at/oeffnungszeiten/",
+      "sourceLabel": "Betriebswebsites, Heurigenkalender Niederösterreich sowie Gemeinden Aggsbach, Spitz und Weißenkirchen, geprüft 4. November 2026"
     },
     {
-      "title": "Heute kein neuer öffentlicher Veranstaltungstermin",
-      "text": "In den offiziellen Kalendern von Aggsbach, Emmersdorf, Spitz, Weißenkirchen und Dürnstein ist für Dienstag, 3. November, kein neuer öffentlicher Termin im Zielabschnitt ausgewiesen. Nächster bestätigter Termin: Line Dance morgen um 18:00 Uhr im Venussaal Aggsbach Markt; die konkrete Einheit kann am Vortag per WhatsApp auf 18:00 oder 19:00 Uhr bestätigt werden.",
-      "source": "https://www.aggsbach.gv.at/system/web/veranstaltung.aspx",
-      "sourceLabel": "Offizielle Veranstaltungskalender der Zielgemeinden, geprüft 3. November 2026"
+      "title": "Heute: Line Dance in Aggsbach Markt",
+      "text": "Line Dance für Anfänger und Fortgeschrittene ist heute im Venussaal offiziell als planmäßig eingetragen. Der Kalender nennt 18:00 Uhr; laut Veranstalter wird einen Tag vorher per WhatsApp mitgeteilt, ob die Einheit um 18:00 oder 19:00 Uhr beginnt.",
+      "source": "https://www.aggsbach.gv.at/Line_dance_fuer_Anfaenger_und_Fortgeschrittene_1",
+      "sourceLabel": "Marktgemeinde Aggsbach, geprüft 4. November 2026"
     },
     {
-      "title": "Spitz-Fähre heute vollständig eingestellt",
-      "text": "Die Rollfähre Spitz–Arnsdorf ist vom 3. bis voraussichtlich 5. November wegen Wartungsarbeiten am Seil außer Betrieb. Weißenkirchen–St. Lorenz befindet sich bereits in Winterpause.",
-      "source": "https://www.spitz-wachau.at/system/web/news.aspx?detailonr=228061423-1915&menuonr=223779125&typid=2023",
-      "sourceLabel": "Marktgemeinde Spitz und ÖAMTC, geprüft 3. November 2026"
+      "title": "Spitz-Fähre weiterhin vollständig eingestellt",
+      "text": "Die Rollfähre Spitz–Arnsdorf ist bis voraussichtlich einschließlich 5. November wegen Wartungsarbeiten am Seil außer Betrieb. Weißenkirchen–St. Lorenz befindet sich in Winterpause.",
+      "source": "https://www.spitz-wachau.at/SYSTEM/web/news.aspx?detailonr=228061423-1915&gnr_search=1915&menuonr=223779125&typ=0",
+      "sourceLabel": "Marktgemeinde Spitz, geprüft 4. November 2026"
     },
     {
       "title": "Wachaubahn fährt heute nicht",
-      "text": "Der tägliche Saisonbetrieb endete am 1. November. Heute, Dienstag, fährt keine Wachaubahn. Für die Rest-Saison bis 15. November nennt die Wachaubahn Freitag, Samstag, Sonntag und Feiertag; die Buchungsseite weist eindeutig Samstag und Sonntag aus. Verbindungen vor Fahrtantritt prüfen.",
+      "text": "Der tägliche Saisonbetrieb endete am 1. November. Heute, Mittwoch, fährt keine Wachaubahn. Die nächste eindeutig buchbare Wochenendverbindung ist für Samstag und Sonntag ausgewiesen; vor Fahrtantritt nochmals prüfen.",
       "source": "https://www.wachaubahn.at/fahrplan",
-      "sourceLabel": "Wachaubahn/NÖVOG, geprüft 3. November 2026"
+      "sourceLabel": "Wachaubahn/NÖVOG, geprüft 4. November 2026"
     },
     {
       "title": "DDSG: reguläre Wachau-Liniensaison beendet",
       "text": "Die regulären DDSG-Wachauschifffahrten waren bis einschließlich 1. November veröffentlicht. Heute ist keine reguläre Wachau-Linienfahrt ausgewiesen.",
       "source": "https://ddsg-blue-danube.at/de/",
-      "sourceLabel": "DDSG Blue Danube, geprüft 3. November 2026"
+      "sourceLabel": "DDSG Blue Danube, geprüft 4. November 2026"
     },
     {
       "title": "Welterbesteig: Sperren und offizielle Umleitungen",
-      "text": "Etappe 7 ist am Glatzberg bis voraussichtlich 20. November gesperrt. Donau Niederösterreich veröffentlicht nun eine Umleitung ab Aggsbach über den Seeber-Rundweg; die ebenfalls gesperrte Bachleiten-Forststraße darf nicht als Alternative benutzt werden. Etappe 3 bleibt am Atzberg samt Abzweigung Buschandlwand gesperrt; die ausgeschilderte Umleitung führt über Wösendorf, St. Michael und den Treppelweg.",
+      "text": "Etappe 7 ist am Glatzberg bis voraussichtlich 20. November gesperrt. Die offizielle Umleitung führt ab Aggsbach über den Seeber-Rundweg; die ebenfalls gesperrte Bachleiten-Forststraße darf nicht benutzt werden. Etappe 3 bleibt am Atzberg samt Abzweigung Buschandlwand gesperrt; der ausgeschilderten Umleitung über Wösendorf, St. Michael und den Treppelweg folgen.",
       "source": "https://www.donau.com/touren/umleitung",
-      "sourceLabel": "Marktgemeinde Aggsbach und Donau Niederösterreich, geprüft 3. November 2026"
+      "sourceLabel": "Marktgemeinde Aggsbach und Donau Niederösterreich, geprüft 4. November 2026"
     },
     {
       "title": "Donauradweg Weißenkirchen: Angabe weiterhin nicht eindeutig",
       "text": "Die allgemeine aktuelle Streckenhinweis-Seite nennt im Zielabschnitt keine Sperre. Die aktuelle Etappenbeschreibung verweist dagegen auf eine seit 27. Oktober vorgesehene Sperre in der Weißenkirchner Ortsmitte mit Umleitung über den Treppelweg. Eine neue amtliche Gemeindebestätigung war weiterhin nicht auffindbar; Beschilderung vor Ort beachten.",
       "source": "https://www.donau.com/touren/donauradweg-etappe-5-nordufer-emmersdorf-krems",
-      "sourceLabel": "Donau Niederösterreich und Marktgemeinde Weißenkirchen, geprüft 3. November 2026"
+      "sourceLabel": "Donau Niederösterreich und Marktgemeinde Weißenkirchen, geprüft 4. November 2026"
     },
     {
       "title": "Aggsbach: halbseitige Straßensperre bis 5. November",
       "text": "Die Amtstafel führt weiterhin eine halbseitige Straßensperre mit Abhangdatum 5. November. Im betroffenen Ortsbereich Gegenverkehrsregelung und Beschilderung beachten.",
       "source": "https://www.aggsbach.gv.at/Buergerservice/Aktuelles_Termine/Amtstafel",
-      "sourceLabel": "Amtstafel Marktgemeinde Aggsbach, geprüft 3. November 2026"
+      "sourceLabel": "Amtstafel Marktgemeinde Aggsbach, geprüft 4. November 2026"
     }
   ],
   "outdoor": [
@@ -93,7 +93,7 @@
     },
     {
       "title": "Wachaubahn: heute kein Personenverkehr",
-      "text": "Der tägliche Saisonfahrplan endete am 1. November; dienstags gibt es heute keine Fahrt. Die nächste eindeutig buchbare Wochenendverbindung ist für Samstag und Sonntag ausgewiesen. Entlang der Strecke laufen werktags tagsüber angekündigte Erhaltungs- und Modernisierungsarbeiten.",
+      "text": "Der tägliche Saisonfahrplan endete am 1. November; mittwochs gibt es heute keine Fahrt. Die nächste eindeutig buchbare Wochenendverbindung ist für Samstag und Sonntag ausgewiesen. Entlang der Strecke laufen werktags tagsüber angekündigte Erhaltungs- und Modernisierungsarbeiten.",
       "links": [
         {
           "label": "Wachaubahn-Fahrplan",
@@ -125,7 +125,7 @@
       "links": [
         {
           "label": "Wartungsmeldung Spitz",
-          "url": "https://www.spitz-wachau.at/system/web/news.aspx?detailonr=228061423-1915&menuonr=223779125&typid=2023"
+          "url": "https://www.spitz-wachau.at/SYSTEM/web/news.aspx?detailonr=228061423-1915&gnr_search=1915&menuonr=223779125&typ=0"
         },
         {
           "label": "Rollfähre Weißenkirchen",
@@ -149,7 +149,7 @@
       "date": "04.11.2026, 18:00 Uhr",
       "place": "Aggsbach Markt, Venussaal",
       "title": "Line Dance für Anfänger und Fortgeschrittene",
-      "note": "Der offizielle Eintrag nennt 18:00 Uhr; die konkrete Einheit kann am Vortag per WhatsApp auf 18:00 oder 19:00 Uhr bestätigt werden.",
+      "note": "Heute planmäßig. Der offizielle Kalender nennt 18:00 Uhr; laut Veranstalter wird einen Tag vorher per WhatsApp mitgeteilt, ob die Einheit um 18:00 oder 19:00 Uhr beginnt.",
       "url": "https://www.aggsbach.gv.at/Line_dance_fuer_Anfaenger_und_Fortgeschrittene_1"
     },
     {
@@ -205,8 +205,15 @@
       "date": "09.11.2026, 18:30–19:30 Uhr",
       "place": "Aggsbach Markt, Venussaal",
       "title": "Yoga mit Julia",
-      "note": "Der Folgetermin ist im offiziellen Aggsbacher Veranstaltungskalender bestätigt.",
+      "note": "Der Termin ist im offiziellen Aggsbacher Veranstaltungskalender bestätigt.",
       "url": "https://www.aggsbach.gv.at/Yoga_fuer_Junggebliebene_mit_Julia_1"
+    },
+    {
+      "date": "11.11.2026, 18:00 Uhr",
+      "place": "Aggsbach Markt, Venussaal",
+      "title": "Line Dance für Anfänger und Fortgeschrittene",
+      "note": "Der Folgetermin ist offiziell bestätigt; die genaue Beginnzeit 18:00 oder 19:00 Uhr wird laut Veranstalter am Vortag per WhatsApp mitgeteilt.",
+      "url": "https://www.aggsbach.gv.at/Line_dance_fuer_Anfaenger_und_Fortgeschrittene_1"
     }
   ],
   "heurigen": [
@@ -222,7 +229,14 @@
       "place": "Spitz",
       "period": "02.–08.11.2026",
       "hours": "Heute ab 15:00 Uhr",
-      "url": "https://spitz.va.vdbnoe.gugler.at/185437/weingut-schberl-pichl-hof"
+      "url": "https://www.spitz-wachau.com/wein-kulinarik/winzer-heurige/heurigen-detail?tx_vadb_detail%5Bid%5D=185437"
+    },
+    {
+      "name": "Weingut Werner Großinger",
+      "place": "Spitz",
+      "period": "04.–22.11.2026",
+      "hours": "Heute ab 15:00 Uhr; erster Ausstecktag",
+      "url": "https://heurigenkalender.niederoesterreich.at/156619/heuriger-werner-groinger"
     },
     {
       "name": "Heuriger Enothek Eigl",
@@ -232,35 +246,28 @@
       "url": "https://heurigenkalender.niederoesterreich.at/30943"
     },
     {
-      "name": "Heuriger Familie Georg Kurz",
-      "place": "Aggsbach Markt",
-      "period": "23.10.–08.11.2026",
-      "hours": "Heute ab 17:00 Uhr",
-      "url": "https://www.aggsbach.gv.at/Heuriger_-_Familie_Georg_Kurz"
-    },
-    {
       "name": "Heuriger Denk Walter & Gabriele",
       "place": "Weißenkirchen",
       "period": "30.10.–10.11.2026",
       "hours": "Heute ab 15:00 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/30941"
+    },
+    {
+      "name": "Heuriger Familie Georg Kurz",
+      "place": "Aggsbach Markt",
+      "period": "23.10.–08.11.2026",
+      "hours": "Heute geöffnet; Gemeinde nennt 17:00 Uhr, Tourismusportal 16:00 Uhr",
+      "url": "https://www.aggsbach.gv.at/Heuriger_-_Familie_Georg_Kurz"
+    },
+    {
+      "name": "Die Schlosserei – Heuriger | Bar",
+      "place": "Luberegg bei Emmersdorf",
+      "period": "04.11.–20.12.2026 mit veröffentlichten Ruhetagen",
+      "hours": "Heute ab 16:00 Uhr; erster Tag nach dem Betriebsurlaub",
+      "url": "https://www.luberegg.at/oeffnungszeiten/"
     }
   ],
   "openingSoon": [
-    {
-      "date": "04.11.2026",
-      "name": "Die Schlosserei – Heuriger | Bar",
-      "place": "Luberegg bei Emmersdorf",
-      "hours": "Bestätigte Wiederöffnung nach dem Betriebsurlaub am Mittwoch, 4. November, ab 16:00 Uhr; Montag bis Samstag 16:00–21:00 Uhr, Sonntag 12:00–20:00 Uhr.",
-      "url": "https://www.luberegg.at/oeffnungszeiten/"
-    },
-    {
-      "date": "04.11.2026",
-      "name": "Weingut Werner Großinger",
-      "place": "Spitz",
-      "hours": "Bestätigter Aussteckbeginn am Mittwoch, 4. November, ab 15:00 Uhr; Montag bis Samstag ab 15:00 Uhr, Sonntag ab 13:00 Uhr, bis 22.11.2026.",
-      "url": "https://heurigenkalender.niederoesterreich.at/156619/weingut-werner-groinger"
-    },
     {
       "date": "05.11.2026",
       "name": "Heuriger Leonhartsberger",
@@ -273,7 +280,7 @@
       "name": "Heuriger Weingärtnerei Lengsteiner",
       "place": "Wösendorf",
       "hours": "Bestätigter Aussteckbeginn am Freitag, 6. November, ab 15:00 Uhr; täglich bis 15.11.2026.",
-      "url": "https://heurigenkalender.niederoesterreich.at/90004/heuriger-weingrtnerei-lengsteiner"
+      "url": "https://weissenkirchen.va.vdbnoe.gugler.at/90004/heuriger-weingrtnerei-lengsteiner"
     },
     {
       "date": "06.11.2026",
@@ -281,15 +288,23 @@
       "place": "Weißenkirchen",
       "hours": "Bestätigte Wiederöffnung am Freitag, 6. November, ab 15:00 Uhr; danach Freitag ab 15:00 Uhr sowie Samstag und Sonntag ab 11:00 Uhr.",
       "url": "https://heurigenkalender.niederoesterreich.at/30949/heuriger-ferdl-denk"
+    },
+    {
+      "date": "11.11.2026",
+      "name": "Heuriger Familie Amon-Ottmann",
+      "place": "Weißenkirchen",
+      "hours": "Bestätigter Aussteckbeginn am Mittwoch, 11. November, ab 12:00 Uhr; täglich bis 20.11.2026.",
+      "url": "https://heurigenkalender.niederoesterreich.at/30947/heuriger-familie-amon-ottmann"
     }
   ],
-  "piaTip": "Pias Tipp: Heute lässt sich die Wachau am verlässlichsten mit dem Bus 715 erkunden. Für eine Einkehr sind ab Mittag der Alte Klosterkeller in Dürnstein und ab 15:00 Uhr Schöberl in Spitz, Enothek Eigl in Wösendorf sowie Denk Walter & Gabriele in Weißenkirchen bestätigt. Die Spitz-Fähre wegen der vollständigen Wartungssperre nicht einplanen.",
+  "piaTip": "Pias Tipp: Heute bietet sich eine Norduferfahrt mit dem Bus 715 an: ab 15:00 Uhr zu Schöberl oder Werner Großinger in Spitz, zur Enothek Eigl in Wösendorf oder zu Denk Walter & Gabriele in Weißenkirchen. In Aggsbach Markt ist am Abend Line Dance angekündigt. Die Spitz-Fähre wegen der vollständigen Wartungssperre nicht einplanen.",
   "goodToKnow": [
     "Das Wetter wird in der Gäste-App live geladen und deshalb nicht statisch in Tratsch & Klatsch gespeichert.",
-    "Heute sind fünf Heurige beziehungsweise Heurigen-Restaurants bestätigt geöffnet. Beim Alten Klosterkeller weichen die veröffentlichten Beginnzeiten um 30 Minuten ab; die Betriebswebsite nennt 11:30 Uhr, das Tourismusportal 12:00 Uhr.",
-    "Die Schlosserei in Luberegg bleibt heute wegen Betriebsurlaub geschlossen und öffnet laut eigener Website morgen, 4. November, wieder.",
-    "Fünf bestätigte Öffnungen der kommenden sieben Tage sind vorgemerkt: Schlosserei und Werner Großinger am 4. November, Leonhartsberger am 5. November sowie Lengsteiner und Ferdl Denk am 6. November.",
-    "Für heute ist in den offiziellen örtlichen Kalendern kein neuer öffentlicher Veranstaltungstermin ausgewiesen. Morgen folgt Line Dance im Venussaal Aggsbach Markt.",
+    "Heute sind sieben Heurige beziehungsweise Heurigen-Restaurants bestätigt geöffnet. Die Schlosserei und Werner Großinger starten heute.",
+    "Beim Alten Klosterkeller weichen die veröffentlichten Beginnzeiten um 30 Minuten ab; die Betriebswebsite nennt 11:30 Uhr, das Tourismusportal 12:00 Uhr.",
+    "Bei Familie Kurz weichen die Beginnzeiten ab: Die Gemeinde nennt 17:00 Uhr, das Tourismusportal 16:00 Uhr. Die heutige Öffnung selbst ist bestätigt.",
+    "Vier bestätigte Öffnungen der kommenden sieben Tage sind vorgemerkt: Leonhartsberger am 5. November, Lengsteiner und Ferdl Denk am 6. November sowie Amon-Ottmann am 11. November.",
+    "Heute ist Line Dance im Venussaal Aggsbach Markt angekündigt. Die genaue Beginnzeit 18:00 oder 19:00 Uhr wird laut Veranstalter am Vortag per WhatsApp mitgeteilt.",
     "Die Wachaubahn fährt heute nicht. Die nächste eindeutig buchbare Wochenendverbindung ist für Samstag und Sonntag ausgewiesen.",
     "Die reguläre DDSG-Wachau-Liniensaison endete am 1. November; heute ist keine reguläre Linienfahrt ausgewiesen.",
     "Spitz–Arnsdorf ist heute wegen Seilwartung vollständig eingestellt; die Sperre dauert voraussichtlich bis einschließlich 5. November.",
