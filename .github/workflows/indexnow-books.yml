@@ -5,6 +5,9 @@ on:
     paths:
       - buecher-johann-prem.html
       - auswandern-ungarn-rentner-2027.html
+      - ungarn-2027-budgetrechner.html
+      - ungarn-2027-krankenversicherung-s1-rentner.html
+      - auswandern-griechenland-rentner-2027.html
       - .github/workflows/indexnow-books.yml
   workflow_dispatch:
 
@@ -20,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
-      - name: Verify published key and notify two book pages
+      - name: Verify published key and notify five book information pages
         shell: bash
         run: |
           set -euo pipefail
@@ -32,7 +35,7 @@ jobs:
             exit 1
           fi
           count=0
-          for PAGE in buecher-johann-prem.html auswandern-ungarn-rentner-2027.html; do
+          for PAGE in buecher-johann-prem.html auswandern-ungarn-rentner-2027.html ungarn-2027-budgetrechner.html ungarn-2027-krankenversicherung-s1-rentner.html auswandern-griechenland-rentner-2027.html; do
             HTTP_CODE="$(curl --silent --show-error --max-time 20 --get \
               --data-urlencode "url=https://topdiveair-sketch.github.io/Gaeste/${PAGE}" \
               --data-urlencode "key=${KEY}" \
