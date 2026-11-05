@@ -1,5 +1,14 @@
 name: KDP book catalog public check
 on:
+  push:
+    branches: [main]
+    paths:
+      - index.html
+      - buecher-johann-prem.html
+      - buecher.html
+      - books.html
+      - scripts/check-book-catalog.py
+      - .github/workflows/kdp-book-catalog-public-check.yml
   schedule:
     - cron: '20 7,13,19 * * *'
   workflow_dispatch:
@@ -15,16 +24,17 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          test -s buecher.html
-          grep -Fq 'Die Bücherwelten aus der Wachau' buecher.html
-          grep -Fq 'href="buecher.html"' index.html
-          url='https://topdiveair-sketch.github.io/Gaeste/buecher.html'
-          curl --fail --location --silent --show-error --retry 2 --retry-delay 3 --max-time 30 -o /tmp/catalog "$url"
-          grep -Fq 'Die Bücherwelten aus der Wachau' /tmp/catalog
-          test -s books.html
-          grep -Fq 'English-language paperback' books.html
-          grep -Fq 'hreflang="en"' buecher.html
-          grep -Fq 'hreflang="de"' books.html
-          curl --fail --location --silent --show-error --retry 2 --retry-delay 3 --max-time 30 -o /tmp/books 'https://topdiveair-sketch.github.io/Gaeste/books.html'
-          grep -Fq 'English-language paperback' /tmp/books
+          python3 scripts/check-book-catalog.py
+      - name: Verify published catalogs and navigation
+        shell: bash
+        run: |
+          set -euo pipefail
+          public_dir=$(mktemp -d)
+          trap 'rm -rf "$public_dir"' EXIT
+          for page in index.html buecher-johann-prem.html buecher.html books.html; do
+            echo "Fetching public page: $page"
+            curl --fail --location --silent --show-error --retry 2 --retry-delay 3 --max-time 30 \
+              -o "$public_dir/$page" "https://topdiveair-sketch.github.io/Gaeste/$page"
+          done
+          python3 scripts/check-book-catalog.py --root "$public_dir"
           echo "Verified public catalog; check only, no edits to KDP or prices."
