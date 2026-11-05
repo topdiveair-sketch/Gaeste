@@ -2,6 +2,15 @@
 
 **Status: vorbereitet, NICHT LIVE.** Stand: 2026-11-05. Keine echten Abbuchungen, kein freigeschalteter Dateidownload.
 
+## Zahlung und Produktstatus (Kontrollstand 2026-11-05, 11:25 MEZ)
+- **PayPal für EUR in Systeme.io bestätigt:** `get_available_payment_methods(eur)` gibt `["paypal-rest"]` zurück. Der Nutzer hat eine PayPal-Bestätigungsseite geliefert. Welche E-Mail-Adresse und welcher rechtliche Verkäufer am PayPal-Gateway hinterlegt sind, wurde über die Schnittstelle **nicht unabhängig bestätigt**. Gewünschte PayPal-Adresse: `topdiveair@gmail.com`.
+- **Preisplan tatsächlich angelegt und rückgelesen:** ID `3529200`, `one_shot`, `2900` Euro-Cent, `eur`, `taxBehavior=inclusive`, Descriptor `JFX PREM UNGARN`. Die korrekte Steuerbehandlung ist vor dem ersten echten Verkauf zu prüfen.
+- **Digitalprodukt tatsächlich angelegt und rückgelesen:** ID `3474080`, Name `Ungarn 2027 – Entscheidungs- und Budgetpaket`, `source=digital-store`, verknüpft mit Preisplan `3529200`.
+- **HARTER AUSLIEFERUNGSBLOCKER:** `resources=[]`, `confirmationEmailId=null`, Systeme.io-Dateimanager `items=[]`. Das Produkt hat **keine** hinterlegte Download-Datei und **keine** bestätigte automatische Liefer-E-Mail.
+- **SICHERHEITSSTATUS:** Produkt derzeit **nicht als geprüft bestellbar bezeichnet**; keinen öffentlichen Checkout-Link setzen oder Verkauf bewerben. Ein bezahlter Testkauf wurde nicht durchgeführt.
+- Die verfügbare Systeme.io-MCP-Schnittstelle bietet `get_files`, aber **keine passende Upload-Aktion für lokale ZIP-Dateien**; Opera-Browserconnector ist derzeit nur lesend/navigierend. Die Datei muss über Creator Store → Digital Download im eingeloggten Systeme.io-Editor hochgeladen und der Bestellablauf dort komplettiert werden.
+- **ZIP-Prüfung erneut ausgeführt:** `unzip -t` meldet drei fehlerfreie Dateien, SHA-256 wie unten dokumentiert.
+
 ## Quelle des Produkts
 - Produkt: **Ungarn 2027 – Entscheidungs- und Budgetpaket**
 - Autor: J.F.X. Prem
@@ -19,7 +28,7 @@
 4. Keine individuelle Steuer-, Rechts- oder Krankenversicherungsberatung, keine aktualisierten Daten auf Abruf, kein Abonnement.
 
 ## Aktueller technischer Befund
-- Systeme.io: `get_available_payment_methods(currency=eur)` liefert **[]**; keine EUR-Bezahlmethode einsatzbereit.
+- Systeme.io: `get_available_payment_methods(currency=eur)` liefert **[paypal-rest]**; Zahlungs-Gateway nun erkannt, aber Verkäuferidentität nicht geprüft.
 - Systeme.io File Manager: `get_files(types=document)` liefert **0** Dateien.
 - Über Stripe verbunden: ausschließlich `Zuhause am Bach Sandbox`, `livemode=false`; kein verifiziertes Live-Konto des tatsächlichen Verkäufers.
 - Systeme.io Public-API/MCP: `downloadable_file` kann **nicht** als File-Resource in einem über die API konfigurierten Funnel-Offer verwendet werden. Für fertige Downloadprodukte laut Anbieter die **Creator Store / Digital download**-Oberfläche nutzen.
