@@ -1,61 +1,61 @@
 {
-  "editionDate": "2026-11-06",
-  "editionLabel": "Freitag, 6. November 2026",
-  "intro": "Grüß euch, ich bin Pia! Heute sind neun Heurige beziehungsweise Heurigen-Restaurants am nördlichen Donauufer bestätigt geöffnet. Die Weingärtnerei Lengsteiner in Wösendorf und Ferdl Denk in Weißenkirchen starten heute in ihren neuen Aussteckzeitraum. In Emmersdorf und Luberegg stehen heute das Kinder-Naturprojekt „Frieda Friezie“, die Pub Quiz Night und der literarische Abend „Wein, Weib und (k)ein Gesang“ auf dem Programm. Für die Rollfähre Spitz–Arnsdorf fehlt nach der bis gestern angekündigten Seilwartung noch eine ausdrückliche Wiederaufnahmemeldung; auch die heutigen Wachaubahn-Angaben sind widersprüchlich. Das Wetter wird ausschließlich live in der Gäste-App geladen.",
+  "editionDate": "2026-11-07",
+  "editionLabel": "Samstag, 7. November 2026",
+  "intro": "Grüß euch, ich bin Pia! Heute sind neun Heurige beziehungsweise Heurigen-Restaurants am nördlichen Donauufer bestätigt geöffnet. Um 18:00 Uhr beginnt in Weißenkirchen die Wachauer Weintaufe mit der Segnung des neuen Jahrgangs in der Pfarrkirche und anschließendem Festakt im Teisenhoferhof. Die Wachaubahn fährt heute planmäßig, der Bus 715 bleibt die regelmäßige Verbindung am Nordufer. Die Rollfähren Spitz–Arnsdorf und Weißenkirchen–St. Lorenz fahren heute nicht. Das Wetter wird ausschließlich live in der Gäste-App geladen.",
   "important": [
     {
       "title": "Heute neun bestätigte Heurige",
-      "text": "Die Weingärtnerei Lengsteiner in Wösendorf öffnet heute ab 15:00 Uhr und Ferdl Denk in Weißenkirchen freitags ab 15:00 Uhr. Ebenfalls bestätigt sind Alter Klosterkeller in Dürnstein, Schöberl und Werner Großinger in Spitz, Denk Walter & Gabriele in Weißenkirchen, Familie Kurz in Aggsbach Markt, die Schlosserei in Luberegg sowie Leonhartsberger in Oberloiben.",
-      "source": "https://heurigenkalender.niederoesterreich.at/90004/heuriger-weingrtnerei-lengsteiner",
-      "sourceLabel": "Betriebswebsites, Heurigenkalender Niederösterreich sowie Gemeinden Aggsbach und Spitz, geprüft 6. November 2026"
+      "text": "Bestätigt geöffnet sind Alter Klosterkeller in Dürnstein, Schöberl und Werner Großinger in Spitz, Denk Walter & Gabriele, Lengsteiner und Ferdl Denk in Weißenkirchen beziehungsweise Wösendorf, Familie Kurz in Aggsbach Markt, die Schlosserei in Luberegg sowie Leonhartsberger in Oberloiben. Ferdl Denk öffnet samstags bereits um 11:00 Uhr.",
+      "source": "https://heurigenkalender.niederoesterreich.at/30949/heuriger-ferdl-denk",
+      "sourceLabel": "Betriebswebsites, Heurigenkalender Niederösterreich sowie Gemeinden Aggsbach und Spitz, geprüft 7. November 2026"
     },
     {
-      "title": "Heute drei bestätigte Veranstaltungen",
-      "text": "„Frieda Friezie & Wald der friedvollen Worte“ läuft von 14:00 bis 18:30 Uhr im Wald bei Fahnsdorf. Im Schloss Luberegg beginnt um 19:00 Uhr die Pub Quiz Night, im Haus Seegarten um 19:30 Uhr „Wein, Weib und (k)ein Gesang“.",
-      "source": "https://www.emmersdorf.gv.at/Aktuelles/Aktuelles/Veranstaltungen",
-      "sourceLabel": "Marktgemeinde Emmersdorf, geprüft 6. November 2026"
+      "title": "Heute Wachauer Weintaufe in Weißenkirchen",
+      "text": "Die Veranstaltung beginnt um 18:00 Uhr mit der feierlichen Segnung des neuen Weinjahrgangs in der Pfarrkirche. Danach folgen Festakt, Musik und Jungweinverkostung im Teisenhoferhof. Der Eintritt ist frei; laut Veranstalter ist der Termin nicht für Gruppen geeignet.",
+      "source": "https://veranstaltungen.niederoesterreich.at/48086/wachauer-weintaufe",
+      "sourceLabel": "Marktgemeinde Weißenkirchen über Veranstaltungskalender Niederösterreich, geprüft 7. November 2026"
     },
     {
-      "title": "Spitz-Fähre: Wiederaufnahme noch nicht ausdrücklich bestätigt",
-      "text": "Die Seilwartung war bis voraussichtlich gestern angekündigt. Eine aktuelle Abschluss- oder Wiederaufnahmemeldung ist heute früh auf der offiziellen News-Seite nicht veröffentlicht. Im regulären Winterfahrplan wäre Freitag Betrieb von 06:15 bis 09:45 Uhr sowie 13:30 bis 18:00 Uhr vorgesehen; Fahrt heute vorab über die offiziellen Hinweise prüfen. Weißenkirchen–St. Lorenz befindet sich in Winterpause.",
-      "source": "https://www.spitz-wachau.at/SYSTEM/web/news.aspx?detailonr=228061423-1915&menuonr=223779125",
-      "sourceLabel": "Marktgemeinde Spitz und Marktgemeinde Weißenkirchen, geprüft 6. November 2026"
-    },
-    {
-      "title": "Wachaubahn heute nicht verlässlich bestätigt",
-      "text": "Die allgemeine Fahrplanseite nennt Freitag, Samstag und Sonntag bis 15. November. Die offizielle Buchungsseite weist für 7. bis 15. November dagegen nur Samstag und Sonntag aus und beginnt erst morgen. Eine heutige Freitagsfahrt ist damit nicht belastbar bestätigt; Bus 715 als sichere Alternative einplanen.",
+      "title": "Wachaubahn fährt heute planmäßig",
+      "text": "Der Samstagsbetrieb bis 15. November ist auf Fahrplan- und Buchungsseite bestätigt. Ab Krems fahren Züge um 09:18, 11:18, 13:18 und 16:18 Uhr nach Emmersdorf; retour ab Emmersdorf um 10:17, 12:17, 14:57 und 17:57 Uhr. Aggsbach Markt, Willendorf, Schwallenbach und Wösendorf-Joching sind Bedarfshalte.",
       "source": "https://www.wachaubahn.at/fahrplan",
-      "sourceLabel": "Wachaubahn/NÖVOG Fahrplan- und Buchungsseite, geprüft 6. November 2026"
+      "sourceLabel": "Wachaubahn/NÖVOG, geprüft 7. November 2026"
     },
     {
-      "title": "DDSG: reguläre Wachau-Liniensaison beendet",
-      "text": "Der veröffentlichte Wachau-Linienfahrplan endete mit 1. November. Heute ist keine reguläre DDSG-Wachau-Linienfahrt ausgewiesen.",
-      "source": "https://ddsg-blue-danube.at/wp-content/uploads/2026/01/YAY_DDSG_Fahrplan_2026_Ganzjahres_Linie_WEB2.pdf",
-      "sourceLabel": "DDSG Blue Danube, geprüft 6. November 2026"
+      "title": "Rollfähren heute ohne Betrieb",
+      "text": "Spitz–Arnsdorf fährt im Winterfahrplan von November bis Februar nur Montag bis Freitag; samstags, sonntags und an Feiertagen gibt es keinen Betrieb. Weißenkirchen–St. Lorenz hat den Saisonbetrieb am 26. Oktober beendet.",
+      "source": "https://www.spitz-wachau.at/Rollfaehre_Spitz-Arnsdorf",
+      "sourceLabel": "Marktgemeinden Spitz und Weißenkirchen, geprüft 7. November 2026"
+    },
+    {
+      "title": "DDSG-Wachau-Linie heute nicht eindeutig bestätigt",
+      "text": "Die reguläre Linienseite nennt als Wachau-Saisonende den 1. November. Ein DDSG-PDF zum Kombiticket Schiff und Wachaubahn führt dagegen für 6. bis 15. November Freitag bis Sonntag an, ohne die danach tatsächlich verfügbaren Schiffstrecken eindeutig abzugrenzen. Eine reguläre heutige Linienfahrt wird daher nicht als gesichert ausgewiesen; die bestätigte Sonderfahrt aus Wien nach Dürnstein ist kein regionaler Linienersatz.",
+      "source": "https://ddsg-blue-danube.at/linienschifffahrt-wachau/kombiticket-schiff-wachaubahn/",
+      "sourceLabel": "DDSG Blue Danube, geprüft 7. November 2026"
     },
     {
       "title": "Welterbesteig: zwei Sperren mit offiziellen Umleitungen",
       "text": "Etappe 7 ist im Bereich Glatzberg gesperrt; die offizielle Umleitung führt ab Aggsbach über den Seeber-Rundweg, gesperrte Forstbereiche keinesfalls betreten. Etappe 3 bleibt am Atzberg samt Abzweigung Buschandlwand gesperrt; der markierten Umleitung über Wösendorf, St. Michael und den Treppelweg folgen.",
       "source": "https://www.donau.com/touren/umleitung",
-      "sourceLabel": "Donau Niederösterreich und Marktgemeinde Spitz, geprüft 6. November 2026"
+      "sourceLabel": "Donau Niederösterreich und Marktgemeinde Spitz, geprüft 7. November 2026"
     },
     {
       "title": "Donauradweg Weißenkirchen: Quellen weiterhin widersprüchlich",
-      "text": "Die allgemeine Seite mit aktuellen Streckenhinweisen nennt im Zielabschnitt keine Sperre. Die Winter-Etappenbeschreibung verweist dagegen auf eine seit 27. Oktober vorgesehene Sperre in der Weißenkirchner Ortsmitte mit Umleitung über den Treppelweg. Eine neue amtliche Bestätigung war nicht auffindbar; Beschilderung vor Ort beachten.",
+      "text": "Die allgemeine Seite mit aktuellen Streckenhinweisen nennt im Zielabschnitt keine Sperre. Die Etappenbeschreibung verweist dagegen auf eine ab 27. Oktober vorgesehene Sperre in der Weißenkirchner Ortsmitte. Eine aktuelle amtliche Detailbestätigung war nicht auffindbar; Beschilderung vor Ort beachten.",
       "source": "https://www.donau.com/touren/donauradweg-im-winter-etappe-5-nordufer-emmersdorf-krems",
-      "sourceLabel": "Donau Niederösterreich, geprüft 6. November 2026"
+      "sourceLabel": "Donau Niederösterreich, geprüft 7. November 2026"
     },
     {
       "title": "B3 und Aggsbach: keine neue Tagesvollsperre bestätigt",
-      "text": "Für die B3 zwischen Emmersdorf und Dürnstein ist heute keine neue allgemeine Vollsperre veröffentlicht. Die zuletzt geführte halbseitige Sperre in Aggsbach endete laut Amtstafel am 5. November und wird daher nicht mehr als heutige Sperre ausgewiesen. Dauernde Verkehrsmaßnahmen und Beschilderung bleiben zu beachten.",
+      "text": "Für die B3 zwischen Emmersdorf und Dürnstein ist heute keine neue allgemeine Vollsperre veröffentlicht. Die frühere halbseitige Sperre in Aggsbach endete laut Amtstafel am 5. November. Dauernde Verkehrsmaßnahmen und örtliche Beschilderung bleiben zu beachten.",
       "source": "https://www.aggsbach.gv.at/Buergerservice/Aktuelles_Termine/Amtstafel",
-      "sourceLabel": "Amtstafel Marktgemeinde Aggsbach, geprüft 6. November 2026"
+      "sourceLabel": "Amtstafel Marktgemeinde Aggsbach, geprüft 7. November 2026"
     }
   ],
   "outdoor": [
     {
       "title": "Donauradweg Nordufer",
-      "text": "Die allgemeine Hinweis-Seite nennt zwischen Emmersdorf und Dürnstein keine aktuelle Sperre. Die Winter-Etappenbeschreibung verweist jedoch auf eine seit 27. Oktober vorgesehene Sperre in der Ortsmitte Weißenkirchen und eine Umleitung über den Treppelweg. Da eine aktuelle amtliche Bestätigung fehlt, gilt die Angabe als nicht abschließend bestätigt; Beschilderung beachten.",
+      "text": "Die allgemeine Hinweis-Seite nennt zwischen Emmersdorf und Dürnstein keine aktuelle Sperre. Eine Etappenbeschreibung verweist jedoch auf eine ab 27. Oktober vorgesehene Sperre in der Ortsmitte Weißenkirchen. Da eine aktuelle amtliche Detailbestätigung fehlt, gilt die Angabe als nicht abschließend bestätigt; Beschilderung beachten.",
       "links": [
         {
           "label": "Aktuelle Streckenhinweise",
@@ -82,14 +82,14 @@
       "text": "Atzberg und die Abzweigung zur Buschandlwand sind bis auf Weiteres nicht begehbar. Der beschilderten Umleitung über Wösendorf, St. Michael und den Treppelweg nach Spitz folgen.",
       "links": [
         {
-          "label": "Offizielle Umleitung Etappe 3",
-          "url": "https://www.donau.com/touren/welterbesteig-wachau-umleitung-03-weissenkirchen-spitz"
+          "label": "Offizieller Sperrhinweis",
+          "url": "https://www.spitz-wachau.at/Information_Wegsperre_auf_der_Etappe_03_von_Weissenkirchen_nach_Spitz_7"
         }
       ]
     },
     {
-      "title": "Wachaubahn: Freitagsfahrt heute unklar",
-      "text": "Die Fahrplanseite nennt Freitag, Samstag und Sonntag bis 15. November, die Buchungsseite dagegen nur Samstag und Sonntag ab 7. November. Eine heutige Fahrt ist daher nicht belastbar bestätigt. Samstag und Sonntag sind eindeutig ausgewiesen.",
+      "title": "Wachaubahn heute bestätigt",
+      "text": "Samstagsbetrieb mit vier Zugpaaren zwischen Krems und Emmersdorf. Ab Krems 09:18, 11:18, 13:18 und 16:18 Uhr; ab Emmersdorf 10:17, 12:17, 14:57 und 17:57 Uhr. Bei Bedarfshalten rechtzeitig die Haltewunschtaste drücken beziehungsweise sichtbar am Bahnsteig warten.",
       "links": [
         {
           "label": "Wachaubahn-Fahrplan",
@@ -103,7 +103,7 @@
     },
     {
       "title": "Bus 715",
-      "text": "Die Linie 715 verbindet Melk und Krems am nördlichen Donauufer laut VOR im Stundentakt und ist heute die verlässlichste öffentliche Verbindung durch den Zielabschnitt. Konkrete Abfahrten im VOR-Routenplaner prüfen.",
+      "text": "Die Linie 715 verbindet Melk und Krems am nördlichen Donauufer laut VOR im Stundentakt. Auch am Freitag- und Samstagabend gibt es Verbindungen für den Heimweg vom Heurigen; konkrete Abfahrten im VOR-Routenplaner prüfen.",
       "links": [
         {
           "label": "Mobil in der Wachau",
@@ -117,14 +117,10 @@
     },
     {
       "title": "Rollfähren heute",
-      "text": "Spitz–Arnsdorf: Die Wartung war bis voraussichtlich gestern angekündigt, eine ausdrückliche Wiederaufnahmemeldung fehlt heute früh. Im regulären Winterfahrplan wäre Freitag 06:15–09:45 Uhr und 13:30–18:00 Uhr vorgesehen; aktuelle Kundmachung vor Abfahrt prüfen. Weißenkirchen–St. Lorenz hat den Saisonbetrieb beendet.",
+      "text": "Spitz–Arnsdorf fährt im Winterfahrplan von November bis Februar samstags, sonntags und an Feiertagen nicht. Weißenkirchen–St. Lorenz befindet sich nach dem Saisonende am 26. Oktober ebenfalls außer Betrieb.",
       "links": [
         {
-          "label": "Aktuelle Fährmeldung Spitz",
-          "url": "https://www.spitz-wachau.at/SYSTEM/web/news.aspx?detailonr=228061423-1915&menuonr=223779125"
-        },
-        {
-          "label": "Reguläre Fährzeiten Spitz",
+          "label": "Fährzeiten Spitz",
           "url": "https://www.spitz-wachau.at/Rollfaehre_Spitz-Arnsdorf"
         },
         {
@@ -134,43 +130,40 @@
       ]
     },
     {
+      "title": "Schifffahrt",
+      "text": "Eine reguläre DDSG-Wachau-Linienfahrt ist heute wegen widersprüchlicher Saisonangaben nicht belastbar bestätigt. Für eine Schifffahrt nur aktuell buchbare Verbindungen im DDSG-Shop einplanen; die Sonderfahrt aus Wien nach Dürnstein ersetzt keine regionale Linie.",
+      "links": [
+        {
+          "label": "DDSG Wachau",
+          "url": "https://ddsg-blue-danube.at/linienschifffahrt-wachau/"
+        },
+        {
+          "label": "DDSG aktuelle Angebote",
+          "url": "https://ddsg-blue-danube.at/de/angebote/"
+        }
+      ]
+    },
+    {
       "title": "B3 und Aggsbacher Ortsverkehr",
-      "text": "Keine neue allgemeine Vollsperre für den Zielabschnitt bestätigt. Die bis 5. November veröffentlichte halbseitige Sperre in Aggsbach ist abgelaufen und wurde aus den heutigen Tageshinweisen entfernt; örtliche Beschilderung und dauernde Verkehrsmaßnahmen beachten.",
+      "text": "Keine neue allgemeine Vollsperre für den Zielabschnitt bestätigt. Die bis 5. November veröffentlichte halbseitige Sperre in Aggsbach ist abgelaufen; örtliche Beschilderung und dauernde Verkehrsmaßnahmen beachten.",
       "links": [
         {
           "label": "Amtstafel Aggsbach",
           "url": "https://www.aggsbach.gv.at/Buergerservice/Aktuelles_Termine/Amtstafel"
+        },
+        {
+          "label": "Amtstafel Spitz",
+          "url": "https://www.spitz-wachau.at/SYSTEM/web/amtstafel.aspx?menuonr=223779198"
         }
       ]
     }
   ],
   "events": [
     {
-      "date": "06.11.2026, 14:00–18:30 Uhr",
-      "place": "Wald bei Fahnsdorf, Emmersdorf",
-      "title": "Frieda Friezie & Wald der friedvollen Worte",
-      "note": "Naturprojekt für Kinder zu Achtsamkeit und gewaltfreier Kommunikation; der offizielle Eintrag bestätigt die planmäßige Durchführung.",
-      "url": "https://www.emmersdorf.at/system/web/veranstaltung.aspx?detailonr=226884463-1945&menuonr=222856525"
-    },
-    {
-      "date": "06.11.2026, 19:00–21:00 Uhr",
-      "place": "Luberegg bei Emmersdorf, Schloss Luberegg",
-      "title": "Pub Quiz Night",
-      "note": "Der Termin ist im offiziellen Emmersdorfer Veranstaltungskalender bestätigt.",
-      "url": "https://www.emmersdorf.gv.at/PUB_QUIZ_NIGHT_in_der_SCHLOSSEREI"
-    },
-    {
-      "date": "06.11.2026, 19:30 Uhr",
-      "place": "Emmersdorf, Haus Seegarten",
-      "title": "Wein, Weib und (k)ein Gesang",
-      "note": "Literarischer Abend mit Birgit Linauer; der Termin ist im offiziellen Emmersdorfer Veranstaltungskalender bestätigt.",
-      "url": "https://www.emmersdorf.gv.at/system/web/veranstaltung.aspx?detailonr=226839993-1945&menuonr=222856612&sprache=1"
-    },
-    {
       "date": "07.11.2026, 18:00 Uhr",
       "place": "Weißenkirchen, Pfarrkirche und Teisenhoferhof",
       "title": "Wachauer Weintaufe",
-      "note": "Segnung des neuen Jahrgangs in der Pfarrkirche, anschließend Festakt und Jungweinverkostung im Teisenhoferhof. Laut Veranstalter nicht für Gruppen geeignet.",
+      "note": "Segnung des neuen Jahrgangs in der Pfarrkirche, anschließend Festakt und Jungweinverkostung im Teisenhoferhof. Eintritt frei; laut Veranstalter nicht für Gruppen geeignet.",
       "url": "https://veranstaltungen.niederoesterreich.at/48086/wachauer-weintaufe"
     },
     {
@@ -214,6 +207,13 @@
       "title": "Vortrag „Energiereich – Zeit zum Aufladen und Durchatmen“",
       "note": "Vortrag mit Mag. Natalia Ölsböck; der offizielle Aggsbacher Kalender bestätigt den Termin.",
       "url": "https://www.aggsbach.gv.at/Vortrag_Energiereich_-_Zeit_zum_Aufladen_und_Durchatmen_-_Mag_Natalia_Oelsboeck_4"
+    },
+    {
+      "date": "12.11.2026, 19:30 Uhr",
+      "place": "Spitz, Schloss zu Spitz",
+      "title": "Johannes Silberschneider – Hollywood und retour",
+      "note": "Erzählabend mit Johannes Silberschneider sowie Musik von Georg Laube und Miloš Milojević; offiziell bestätigt.",
+      "url": "https://www.spitz-wachau.com/events-veranstaltungen/detail?tx_vadb_detail%5Bid%5D=228056"
     }
   ],
   "heurigen": [
@@ -270,14 +270,14 @@
       "name": "Heuriger Weingärtnerei Lengsteiner",
       "place": "Wösendorf",
       "period": "06.–15.11.2026",
-      "hours": "Heute ab 15:00 Uhr; erster Ausstecktag",
+      "hours": "Heute ab 15:00 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/90004/heuriger-weingrtnerei-lengsteiner"
     },
     {
       "name": "Heuriger Ferdl Denk",
       "place": "Weißenkirchen",
       "period": "02.11.–13.12.2026, Freitag bis Sonntag",
-      "hours": "Heute ab 15:00 Uhr; erster Freitag dieses Aussteckzeitraums",
+      "hours": "Heute ab 11:00 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/30949/heuriger-ferdl-denk"
     }
   ],
@@ -302,24 +302,29 @@
       "place": "Spitz",
       "hours": "Bestätigter Aussteckbeginn am Freitag, 13. November, 15:00–23:00 Uhr; täglich bis 22.11.2026.",
       "url": "https://www.spitz-wachau.com/wein-kulinarik/winzer-heurige/heurigen-detail?tx_vadb_detail%5Bid%5D=156935"
+    },
+    {
+      "date": "14.11.2026",
+      "name": "Heuriger Weingut Höllmüller",
+      "place": "Joching",
+      "hours": "Bestätigter Aussteckbeginn am Samstag, 14. November, ab 16:00 Uhr; täglich bis 22.11.2026.",
+      "url": "https://veranstaltungen.niederoesterreich.at/30938"
     }
   ],
-  "piaTip": "Pias Tipp: Heute lässt sich ein Spaziergang in Emmersdorf gut mit dem literarischen Abend „Wein, Weib und (k)ein Gesang“ um 19:30 Uhr verbinden; alternativ startet um 19:00 Uhr die Pub Quiz Night in Luberegg. Für Wege entlang des Nordufers ist Bus 715 heute die verlässlichste öffentliche Verbindung, weil Fähre und Wachaubahn nicht eindeutig bestätigt sind.",
+  "piaTip": "Pias Tipp: Mit der Wachaubahn lässt sich heute ein Ausflug nach Weißenkirchen bequem mit der Wachauer Weintaufe um 18:00 Uhr verbinden. Für die Rückfahrt die letzten Bahn- und Busverbindungen vorher im Fahrplan prüfen; die Rollfähren fahren heute nicht.",
   "goodToKnow": [
     "Das Wetter wird in der Gäste-App live geladen und deshalb nicht statisch in Tratsch & Klatsch gespeichert.",
-    "Heute sind neun Heurige beziehungsweise Heurigen-Restaurants bestätigt geöffnet. Lengsteiner und Ferdl Denk starten heute in ihren Aussteckzeitraum.",
+    "Heute sind neun Heurige beziehungsweise Heurigen-Restaurants bestätigt geöffnet; Ferdl Denk öffnet samstags bereits um 11:00 Uhr.",
     "Beim Alten Klosterkeller weichen die veröffentlichten Beginnzeiten ab; die Betriebswebsite nennt 11:30 Uhr, die Reservierungsseite 12:00 Uhr.",
-    "Drei bestätigte Öffnungen der kommenden sieben Tage sind vorgemerkt: Amon-Ottmann am 11. November, Leonhartsberger erneut am 12. November und FLOTT in Spitz am 13. November.",
-    "Heute finden in Emmersdorf und Luberegg Frieda Friezie, die Pub Quiz Night und „Wein, Weib und (k)ein Gesang“ statt.",
-    "Die Anmeldefrist für die Kirchenführung am 10. November endete gestern; der Termin bleibt für bereits Angemeldete bestehen.",
-    "Die Wachaubahn-Angaben für heute widersprechen sich: Die Fahrplanseite nennt Freitag, die Buchungsseite erst Samstag und Sonntag ab 7. November.",
-    "Die reguläre DDSG-Wachau-Liniensaison endete am 1. November; heute ist keine reguläre Linienfahrt ausgewiesen.",
-    "Für Spitz–Arnsdorf fehlt nach der bis gestern angekündigten Seilwartung eine ausdrückliche Wiederaufnahmemeldung. Der reguläre Winterfahrplan gilt nur, wenn die Wartung abgeschlossen ist.",
-    "Der Saisonbetrieb Weißenkirchen–St. Lorenz ist beendet.",
-    "Für Bus 715 konkrete Abfahrten und kurzfristige Änderungen im VOR-Routenplaner prüfen.",
+    "Vier bestätigte Öffnungen der kommenden sieben Tage sind vorgemerkt: Amon-Ottmann am 11. November, Leonhartsberger am 12. November, FLOTT in Spitz am 13. November und Höllmüller in Joching am 14. November.",
+    "Die Wachauer Weintaufe beginnt heute um 18:00 Uhr in der Pfarrkirche Weißenkirchen; anschließend Festakt und Jungweinverkostung im Teisenhoferhof.",
+    "Die Wachaubahn fährt heute mit vier Zugpaaren zwischen Krems und Emmersdorf; mehrere Stationen im Zielabschnitt sind Bedarfshalte.",
+    "Die reguläre DDSG-Wachau-Linie ist wegen widersprüchlicher Saisonangaben nicht belastbar bestätigt; nur aktuell buchbare Verbindungen einplanen.",
+    "Spitz–Arnsdorf fährt im Winterfahrplan am Wochenende nicht. Weißenkirchen–St. Lorenz befindet sich ebenfalls in Winterpause.",
+    "Bus 715 verkehrt am Nordufer laut VOR im Stundentakt; konkrete Abfahrten im Routenplaner prüfen.",
     "Etappe 7 des Welterbesteigs ist am Glatzberg gesperrt; die offizielle Umleitung führt ab Aggsbach über den Seeber-Rundweg.",
     "Etappe 3 ist am Atzberg samt Abzweigung Buschandlwand weiterhin gesperrt; der markierten Umleitung über Wösendorf, St. Michael und den Treppelweg folgen.",
-    "Beim Donauradweg widersprechen sich die allgemeine Hinweis-Seite und die Winter-Etappenbeschreibung zur Weißenkirchner Ortsmitte; Beschilderung vor Ort beachten.",
-    "Die bis 5. November veröffentlichte halbseitige Straßensperre in Aggsbach ist abgelaufen und wurde aus den heutigen Tageshinweisen entfernt."
+    "Beim Donauradweg widersprechen sich die allgemeine Hinweis-Seite und die Etappenbeschreibung zur Weißenkirchner Ortsmitte; Beschilderung vor Ort beachten.",
+    "Die frühere halbseitige Straßensperre in Aggsbach ist abgelaufen; keine neue allgemeine B3-Vollsperre für heute bestätigt."
   ]
 }
