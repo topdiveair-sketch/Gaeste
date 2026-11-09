@@ -156,7 +156,10 @@
       "buy_url": null,
       "subcategory": "Auswanderer-Ratgeber",
       "reader_book_id": "griechenland-2027-reader",
-      "info": "Interaktiver Leser mit Budgetrechner; private Testversion, nicht verkauft."
+      "info": "Interaktiver Leser mit Budgetrechner; private Testversion, nicht verkauft.",
+      "cover_url": "images/ebooks/griechenland-2027.jpg",
+      "cover_alt": "Cover: Auswandern nach Griechenland – J.F.X. Prem",
+      "cover_verified_at": "2026-11-09"
     },
     {
       "id": "ungarn-2027",
@@ -169,7 +172,10 @@
       "buy_url": null,
       "info": "Private HTML-Lesefassung aus vollständiger vorhandener EPUB-Datei erstellt. Noch kein geschützter Zugang oder getesteter 9,90-Euro-Checkout. 29-Euro-Planungspaket separat.",
       "subcategory": "Auswanderer-Ratgeber",
-      "reader_book_id": "ungarn-2027-reader"
+      "reader_book_id": "ungarn-2027-reader",
+      "cover_url": "images/ebooks/ungarn-2027.jpg",
+      "cover_alt": "Cover: Ungarn für Rentner – J.F.X. Prem",
+      "cover_verified_at": "2026-11-09"
     },
     {
       "id": "griechenland-2027-planung",
@@ -191,7 +197,10 @@
       "buy_url": null,
       "subcategory": "Zukunft & Dystopie",
       "reader_book_id": "die-ader-reader",
-      "info": "Private HTML-Lesefassung erstellt. Noch kein geschützter Zugang oder Checkout."
+      "info": "Private HTML-Lesefassung erstellt. Noch kein geschützter Zugang oder Checkout.",
+      "cover_url": "images/ebooks/die-ader.jpg",
+      "cover_alt": "Cover: DIE ADER – Johann Prem",
+      "cover_verified_at": "2026-11-09"
     },
     {
       "id": "unter-uns",
