@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "last_reviewed": "2026-11-09",
+  "purpose": "Zentraler Cross-Selling-Katalog fuer eigene Digital-Editionen. Nur bestaetigte Direktverkaufs-URLs als kaufbar markieren.",
+  "channels": "Eigener Direktvertrieb ohne Amazon- und Buchhandels-Kauflinks",
+  "categories": [
+    {
+      "id": "auswandern",
+      "label": "Auswanderer-Ratgeber"
+    },
+    {
+      "id": "romane",
+      "label": "Romane & Thriller"
+    },
+    {
+      "id": "sachbuecher",
+      "label": "Sachbücher & Zeitfragen"
+    },
+    {
+      "id": "kinderbuecher",
+      "label": "Kinderbücher"
+    }
+  ],
+  "books": [
+    {
+      "id": "griechenland-2027-reader",
+      "category": "auswandern",
+      "title": "Auswandern nach Griechenland",
+      "subtitle": "Der ehrliche Praxisratgeber für Auswanderer",
+      "edition": "Interaktive Digital Edition 2027",
+      "author": "J.F.X. Prem",
+      "status": "testversion_nicht_kaufbar",
+      "price_eur": 9.9,
+      "buy_url": null
+    },
+    {
+      "id": "ungarn-2027",
+      "category": "auswandern",
+      "title": "Ungarn für Rentner",
+      "edition": "2027",
+      "author": "J.F.X. Prem",
+      "status": "direktverkauf_nicht_ende_zu_ende_getestet",
+      "price_eur": null,
+      "buy_url": null,
+      "info": "29-Euro-Planungspaket separat; keine verifizierte eigene Reader-Ausgabe"
+    },
+    {
+      "id": "griechenland-2027-planung",
+      "category": "auswandern",
+      "title": "Griechenland 2027 – digitales Planungspaket",
+      "author": "J.F.X. Prem",
+      "status": "direktverkauf_nicht_ende_zu_ende_getestet",
+      "price_eur": 29,
+      "buy_url": null,
+      "info": "Separates Produkt, nicht mit dem Reader verwechseln"
+    },
+    {
+      "id": "die-ader",
+      "category": "romane",
+      "title": "DIE ADER",
+      "author": "Johann Prem",
+      "status": "eigene_digitalausgabe_ausstehend",
+      "buy_url": null
+    },
+    {
+      "id": "unter-uns",
+      "category": "romane",
+      "title": "UNTER UNS – Das Hohenegg-Protokoll",
+      "author": "Johann Prem",
+      "status": "eigene_digitalausgabe_ausstehend",
+      "buy_url": null
+    },
+    {
+      "id": "die-stadt-darunter",
+      "category": "romane",
+      "title": "DIE STADT DARUNTER",
+      "author": "Johann Prem",
+      "status": "eigene_digitalausgabe_ausstehend",
+      "buy_url": null
+    },
+    {
+      "id": "45-jahre",
+      "category": "romane",
+      "title": "45 Jahre – Die Rechnung kommt zum Schluss",
+      "author": "Johann Prem",
+      "status": "eigene_digitalausgabe_ausstehend",
+      "buy_url": null
+    },
+    {
+      "id": "ufos-nukleare-welt",
+      "category": "sachbuecher",
+      "title": "UFOs und die nukleare Welt",
+      "author": "Johann Prem",
+      "status": "eigene_digitalausgabe_ausstehend",
+      "buy_url": null
+    },
+    {
+      "id": "windis",
+      "category": "kinderbuecher",
+      "title": "Die wilden Wachauer Windis",
+      "author": "Pia Ordelia / Johann Prem",
+      "status": "eigene_digitalausgabe_ausstehend",
+      "buy_url": null
+    }
+  ]
+}
