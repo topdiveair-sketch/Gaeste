@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow"><meta name="theme-color" content="#0a3967">
+<title>Prem Digital Edition – Bücher direkt entdecken</title>
+<meta name="description" content="Digitale Bücher von J.F.X. Prem, Johann Prem und Pia Ordelia. Auswanderer, Romane, Sachbücher und Kinderbücher. Direkt für Autoren, ohne Amazon- oder Buchhandels-Kauflinks.">
+<style>
+:root{font-family:system-ui,-apple-system,Segoe UI,sans-serif;color-scheme:light;--ink:#132e4b;--blue:#0a3967;--gold:#b77f19;--line:#d9e0e9;--paper:#f5f8fc}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);line-height:1.55}
+header{background:linear-gradient(135deg,#073c75,#115491);color:white;padding:45px max(18px,calc((100vw - 1100px)/2));}
+h1{font:700 clamp(30px,6vw,54px)/1.13 Georgia,serif;margin:12px 0 18px}h2{font:700 27px/1.2 Georgia,serif}p{max-width:72ch}
+.brand{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#ffe1a0;font-weight:800}
+.highlight{display:inline-block;border:1px solid #ffe3a4;padding:7px 13px;border-radius:100px;margin-top:10px;font-weight:650}
+main{max-width:1100px;margin:auto;padding:25px 18px 65px}
+nav{display:flex;gap:9px;flex-wrap:wrap;margin:10px 0 27px}
+nav a{border:1px solid #b8c8d9;background:white;border-radius:50px;padding:10px 15px;text-decoration:none;color:var(--ink);font-weight:650}
+section{scroll-margin-top:20px;margin:36px 0}section>p{color:#4b5c6c}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+article{background:#fff;border:1px solid var(--line);padding:22px;border-radius:15px;box-shadow:0 4px 17px #122c4810}
+article h3{font:700 19px/1.3 Georgia,serif;margin:0 0 8px}
+.meta{font-size:13px;color:#587088}
+.state{display:inline-block;margin-top:15px;font-size:12px;font-weight:650;padding:6px 10px;border-radius:7px;background:#edf1f6;color:#42566a}
+a.buy{display:inline-block;margin-top:15px;border-radius:9px;padding:10px 13px;background:#0b4b78;color:white;text-decoration:none;font-weight:700}
+footer{max-width:1100px;margin:0 auto;padding:20px 18px 50px;border-top:1px solid var(--line);color:#4b5c6c}
+:focus-visible{outline:3px solid #bd7e00;outline-offset:3px}
+</style></head>
+<body><header><span class="brand">Prem Digital Edition</span><h1>Weitere Bücher entdecken</h1><p>Ein unabhängiger Katalog für digitale Titel von J.F.X. Prem, Johann Prem und Pia Ordelia – nach Themen sortiert. Neue Bücher und Leser-Ausgaben können zentral ergänzt werden.</p>
+<div class="highlight">100 % Amazon &amp; Co. frei · Direkt für Autoren</div></header>
+<main><nav aria-label="Buchkategorien"><a href="#auswandern">Auswanderer-Ratgeber</a><a href="#romane">Romane</a><a href="#sachbuecher">Sachbücher</a><a href="#kinderbuecher">Kinderbücher</a></nav>
+<p><strong>Wichtig:</strong> Hier werden nur direkt verfügbare Angebote mit einem Kaufbutton versehen. Ausgaben in Vorbereitung sind noch nicht kaufbar. Zahlungsdienstleister können Gebühren berechnen; „Direkt für Autoren“ bedeutet nicht 100 % Auszahlungsquote.</p>
+<div id="catalog" role="status" aria-live="polite">Buchkatalog wird geladen …</div>
+<noscript>JavaScript ist für die automatische Kataloganzeige erforderlich.</noscript></main>
+<footer>© Johann Prem / J.F.X. Prem · Unabhängiger Digital-Katalog · Alle Angaben zu Verfügbarkeit und Preisen vor dem Kauf prüfen.</footer>
+<script>
+(async()=>{const host=document.getElementById('catalog');
+try{const resp=await fetch('./prem-digital-katalog.json',{cache:'no-store'});if(!resp.ok)throw new Error('HTTP '+resp.status);
+const data=await resp.json();host.replaceChildren();host.removeAttribute('role');
+for(const cat of data.categories){const section=document.createElement('section');section.id=cat.id;const title=document.createElement('h2');title.textContent=cat.label;section.append(title);
+const grid=document.createElement('div');grid.className='grid';
+const books=data.books.filter(b=>b.category===cat.id);
+for(const b of books){const card=document.createElement('article');const h=document.createElement('h3');h.textContent=b.title;card.append(h);
+const meta=document.createElement('div');meta.className='meta';meta.textContent=[b.subtitle,b.edition,b.author].filter(Boolean).join(' · ');card.append(meta);
+if(b.status==='live_verified'&&typeof b.buy_url==='string'&&/^https:\/\/topdiveair\.systeme\.io\//.test(b.buy_url)){
+const a=document.createElement('a');a.href=b.buy_url;a.className='buy';a.rel='noopener noreferrer';a.target='_blank';a.textContent='Digitalausgabe direkt kaufen';card.append(a);
+}else{const state=document.createElement('span');state.className='state';state.textContent='Digitalausgabe: in Vorbereitung / noch nicht geprüft';card.append(state);}
+grid.append(card);}section.append(grid);host.append(section);}
+}catch(err){host.textContent='Der Katalog konnte derzeit nicht geladen werden. Bitte später erneut öffnen.';console.error('Catalog load failed',err)}
+})();
+</script></body></html>
