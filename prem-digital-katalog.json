@@ -154,7 +154,9 @@
       "status": "testversion_nicht_kaufbar",
       "price_eur": 9.9,
       "buy_url": null,
-      "subcategory": "Auswanderer-Ratgeber"
+      "subcategory": "Auswanderer-Ratgeber",
+      "reader_book_id": "griechenland-2027-reader",
+      "info": "Interaktiver Leser mit Budgetrechner; private Testversion, nicht verkauft."
     },
     {
       "id": "ungarn-2027",
@@ -162,11 +164,12 @@
       "title": "Ungarn für Rentner",
       "edition": "2027",
       "author": "J.F.X. Prem",
-      "status": "direktverkauf_nicht_ende_zu_ende_getestet",
+      "status": "testversion_nicht_kaufbar",
       "price_eur": null,
       "buy_url": null,
-      "info": "29-Euro-Planungspaket separat; keine verifizierte eigene Reader-Ausgabe",
-      "subcategory": "Auswanderer-Ratgeber"
+      "info": "Private HTML-Lesefassung aus vollständiger vorhandener EPUB-Datei erstellt. Noch kein geschützter Zugang oder getesteter 9,90-Euro-Checkout. 29-Euro-Planungspaket separat.",
+      "subcategory": "Auswanderer-Ratgeber",
+      "reader_book_id": "ungarn-2027-reader"
     },
     {
       "id": "griechenland-2027-planung",
@@ -184,9 +187,11 @@
       "category": "science-fiction-fantasy",
       "title": "DIE ADER",
       "author": "Johann Prem",
-      "status": "eigene_digitalausgabe_ausstehend",
+      "status": "testversion_nicht_kaufbar",
       "buy_url": null,
-      "subcategory": "Zukunft & Dystopie"
+      "subcategory": "Zukunft & Dystopie",
+      "reader_book_id": "die-ader-reader",
+      "info": "Private HTML-Lesefassung erstellt. Noch kein geschützter Zugang oder Checkout."
     },
     {
       "id": "unter-uns",
