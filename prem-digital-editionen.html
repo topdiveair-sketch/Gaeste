@@ -23,6 +23,10 @@ section{scroll-margin-top:20px;margin:36px 0 48px}
 section .subgenres{color:var(--muted);margin:0 0 17px;font-size:14px}
 .book-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(238px,1fr));gap:14px}
 .book{background:#fff;border:1px solid var(--border);border-radius:14px;padding:21px;display:flex;flex-direction:column;gap:10px;box-shadow:0 5px 23px #153e6010}
+.book-cover{display:flex;align-items:center;justify-content:center;height:290px;margin:-21px -21px 5px;background:linear-gradient(135deg,#dae8f3,#f1f6fb);border-radius:14px 14px 0 0;padding:14px;overflow:hidden}
+.book-cover img{max-width:100%;max-height:100%;height:auto;width:auto;object-fit:contain;box-shadow:0 12px 26px #0c223b46;border-radius:4px}
+.book .teaser{font-size:14px;color:#334f63;margin:0}
+.book .preview-price{font-weight:800;color:#194b74;font-size:17px;margin:1px 0 0}
 .book h3{font:700 20px/1.3 Georgia,serif;margin:0}
 .book .meta{color:var(--muted);font-size:14px;margin:0}.book .subgenre{font-size:12px;letter-spacing:.02em;color:#5a6c7b}
 .state{align-self:flex-start;background:#edf2f6;color:#39516b;border-radius:7px;font-size:12px;font-weight:700;padding:6px 10px;margin-top:auto}
@@ -88,8 +92,25 @@ function makeEl(tag,className,content){
 }
 function makeBook(b){
  const card=makeEl('article','book');
+ if(typeof b.cover_url==='string'&&/^images\/ebooks\/[a-z0-9-]+\.jpg$/.test(b.cover_url)){
+  const cover=makeEl('div','book-cover');
+  const img=document.createElement('img');
+  img.src=b.cover_url;
+  img.alt=b.cover_alt||('Titelcover '+b.title);
+  img.loading='lazy';
+  img.decoding='async';
+  img.width=460;
+  img.onerror=()=>{cover.style.display='none';};
+  cover.append(img);
+  card.append(cover);
+ }
  card.append(makeEl('h3','',b.title),makeEl('p','meta',[b.subtitle,b.edition,b.author].filter(Boolean).join(' · ')));
  if(b.subcategory)card.append(makeEl('div','subgenre',b.subcategory));
+ if(typeof b.teaser==='string'&&b.teaser.trim())card.append(makeEl('p','teaser',b.teaser));
+ if(b.price_eur!==undefined && b.price_eur!==null && b.status!=='live_verified'){
+  const p=makeEl('p','preview-price',Number(b.price_eur).toLocaleString('de-AT',{style:'currency',currency:'EUR'})+' · geplanter Preis');
+  card.append(p);
+ }
  if(isSafeBuyLink(b)){
    const a=makeEl('a','buy','Jetzt direkt kaufen');a.href=b.buy_url;a.target='_blank';a.rel='noopener noreferrer';card.append(a);
  }else{card.append(makeEl('span','state',statusLabels[b.status]||'Kaufangebot noch nicht bestätigt'));}
