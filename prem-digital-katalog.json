@@ -162,7 +162,9 @@
       "cover_verified_at": "2026-11-09",
       "teaser": "Praxisratgeber für den geplanten Umzug nach Griechenland: Kosten, Wohnen, Aufenthaltsfragen und Alltag. Die Reader-Testversion bietet zusätzlich Budgetrechner und Checkliste.",
       "sample_url": "griechenland-2027-leseprobe.html",
-      "sample_scope": "Vorwort, Einleitung, Kapitel 1 und 2. Kapitel 3–68 nicht öffentlich."
+      "sample_scope": "Vorwort, Einleitung, Kapitel 1 und 2. Kapitel 3–68 nicht öffentlich.",
+      "tools_url": "griechenland-2027-werkzeuge.html",
+      "tools_description": "Kostenloser Budgetrechner und 19-Punkte-Checkliste; keine personenbezogene Datenübertragung."
     },
     {
       "id": "ungarn-2027",
