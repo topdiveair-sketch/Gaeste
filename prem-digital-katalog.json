@@ -1,24 +1,146 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "last_reviewed": "2026-11-09",
-  "purpose": "Zentraler Cross-Selling-Katalog fuer eigene Digital-Editionen. Nur bestaetigte Direktverkaufs-URLs als kaufbar markieren.",
+  "purpose": "Genreuebergreifender, zentral gepflegter Cross-Selling-Katalog fuer unabhaengige Autoren. Keine Kauflinks ohne Live-Nachweis.",
   "channels": "Eigener Direktvertrieb ohne Amazon- und Buchhandels-Kauflinks",
   "categories": [
     {
       "id": "auswandern",
-      "label": "Auswanderer-Ratgeber"
+      "label": "Auswandern & Reisen",
+      "subcategories": [
+        "Auswanderer-Ratgeber",
+        "Länder & Regionen",
+        "Ruhestand im Ausland",
+        "Reisen & Alltag"
+      ]
     },
     {
       "id": "romane",
-      "label": "Romane & Thriller"
+      "label": "Romane & Literatur",
+      "subcategories": [
+        "Gesellschaftsromane",
+        "Liebesromane",
+        "Humor & Satire",
+        "Historische Romane"
+      ]
+    },
+    {
+      "id": "krimi-thriller",
+      "label": "Krimi & Thriller",
+      "subcategories": [
+        "Krimi",
+        "Psychothriller",
+        "Mystery",
+        "Spannungsroman"
+      ]
+    },
+    {
+      "id": "science-fiction-fantasy",
+      "label": "Science-Fiction & Fantasy",
+      "subcategories": [
+        "Zukunft & Dystopie",
+        "Weltraum",
+        "Fantasy",
+        "Science-Fiction"
+      ]
+    },
+    {
+      "id": "geld-beruf",
+      "label": "Geld & Beruf",
+      "subcategories": [
+        "Finanzen",
+        "Rente",
+        "Selbstständigkeit",
+        "Steuern"
+      ]
     },
     {
       "id": "sachbuecher",
-      "label": "Sachbücher & Zeitfragen"
+      "label": "Wissenschaft & Technik",
+      "subcategories": [
+        "Wissenschaft",
+        "Weltraum & UFOs",
+        "Künstliche Intelligenz",
+        "Technologie"
+      ]
+    },
+    {
+      "id": "geschichte-politik",
+      "label": "Geschichte & Politik",
+      "subcategories": [
+        "Zeitgeschichte",
+        "Gesellschaft",
+        "Politik",
+        "Geschichtsforschung"
+      ]
+    },
+    {
+      "id": "gesundheit-leben",
+      "label": "Gesundheit & Leben",
+      "subcategories": [
+        "Gesundheit",
+        "Ernährung",
+        "Lebenshilfe",
+        "Psychologie"
+      ]
+    },
+    {
+      "id": "biografien",
+      "label": "Biografien & Erinnerungen",
+      "subcategories": [
+        "Lebensgeschichten",
+        "Erfahrungsberichte",
+        "Memoiren"
+      ]
     },
     {
       "id": "kinderbuecher",
-      "label": "Kinderbücher"
+      "label": "Kinderbücher",
+      "subcategories": [
+        "Bilderbücher",
+        "Vorlesen",
+        "Erstleser",
+        "Tiergeschichten"
+      ]
+    },
+    {
+      "id": "jugendbuecher",
+      "label": "Jugendbücher",
+      "subcategories": [
+        "Jugendabenteuer",
+        "Jugendfantasy",
+        "Coming-of-Age"
+      ]
+    },
+    {
+      "id": "hobby-freizeit",
+      "label": "Hobby & Freizeit",
+      "subcategories": [
+        "Natur",
+        "Garten",
+        "Kochen",
+        "Tiere"
+      ]
+    },
+    {
+      "id": "spiritualitaet-philosophie",
+      "label": "Spiritualität & Philosophie",
+      "subcategories": [
+        "Philosophie",
+        "Lebensfragen",
+        "Spiritualität",
+        "Religion"
+      ]
+    },
+    {
+      "id": "bildung-lernen",
+      "label": "Bildung & Lernen",
+      "subcategories": [
+        "Sprachen",
+        "Schule",
+        "Weiterbildung",
+        "Lernen"
+      ]
     }
   ],
   "books": [
@@ -31,7 +153,8 @@
       "author": "J.F.X. Prem",
       "status": "testversion_nicht_kaufbar",
       "price_eur": 9.9,
-      "buy_url": null
+      "buy_url": null,
+      "subcategory": "Auswanderer-Ratgeber"
     },
     {
       "id": "ungarn-2027",
@@ -42,7 +165,8 @@
       "status": "direktverkauf_nicht_ende_zu_ende_getestet",
       "price_eur": null,
       "buy_url": null,
-      "info": "29-Euro-Planungspaket separat; keine verifizierte eigene Reader-Ausgabe"
+      "info": "29-Euro-Planungspaket separat; keine verifizierte eigene Reader-Ausgabe",
+      "subcategory": "Auswanderer-Ratgeber"
     },
     {
       "id": "griechenland-2027-planung",
@@ -52,31 +176,35 @@
       "status": "direktverkauf_nicht_ende_zu_ende_getestet",
       "price_eur": 29,
       "buy_url": null,
-      "info": "Separates Produkt, nicht mit dem Reader verwechseln"
+      "info": "Separates Produkt, nicht mit dem Reader verwechseln",
+      "subcategory": "Auswanderer-Ratgeber"
     },
     {
       "id": "die-ader",
-      "category": "romane",
+      "category": "science-fiction-fantasy",
       "title": "DIE ADER",
       "author": "Johann Prem",
       "status": "eigene_digitalausgabe_ausstehend",
-      "buy_url": null
+      "buy_url": null,
+      "subcategory": "Zukunft & Dystopie"
     },
     {
       "id": "unter-uns",
-      "category": "romane",
+      "category": "krimi-thriller",
       "title": "UNTER UNS – Das Hohenegg-Protokoll",
       "author": "Johann Prem",
       "status": "eigene_digitalausgabe_ausstehend",
-      "buy_url": null
+      "buy_url": null,
+      "subcategory": "Mystery"
     },
     {
       "id": "die-stadt-darunter",
-      "category": "romane",
+      "category": "krimi-thriller",
       "title": "DIE STADT DARUNTER",
       "author": "Johann Prem",
       "status": "eigene_digitalausgabe_ausstehend",
-      "buy_url": null
+      "buy_url": null,
+      "subcategory": "Mystery"
     },
     {
       "id": "45-jahre",
@@ -84,7 +212,8 @@
       "title": "45 Jahre – Die Rechnung kommt zum Schluss",
       "author": "Johann Prem",
       "status": "eigene_digitalausgabe_ausstehend",
-      "buy_url": null
+      "buy_url": null,
+      "subcategory": "Humor & Satire"
     },
     {
       "id": "ufos-nukleare-welt",
@@ -92,7 +221,8 @@
       "title": "UFOs und die nukleare Welt",
       "author": "Johann Prem",
       "status": "eigene_digitalausgabe_ausstehend",
-      "buy_url": null
+      "buy_url": null,
+      "subcategory": "Weltraum & UFOs"
     },
     {
       "id": "windis",
@@ -100,7 +230,26 @@
       "title": "Die wilden Wachauer Windis",
       "author": "Pia Ordelia / Johann Prem",
       "status": "eigene_digitalausgabe_ausstehend",
-      "buy_url": null
+      "buy_url": null,
+      "subcategory": "Tiergeschichten"
     }
-  ]
+  ],
+  "brand": {
+    "working_name": "Buchivo",
+    "public_label": "Unabhängige Digitalbücher",
+    "review_status": "ungeprueft",
+    "note": "buchivo.com zeigt bereits Coming Soon. Marken- und Domainfreigabe ausstehend."
+  },
+  "author_onboarding": {
+    "status": "pilot_nicht_gestartet",
+    "availability": "nicht_freigeschaltet",
+    "minimum_checks": [
+      "Autorenrechte",
+      "Autorenvertrag",
+      "Datenschutz und Rechnungsstellung",
+      "Zahlungsabwicklung",
+      "Sichere Leser-Zugaenge",
+      "Echte Ende-zu-Ende-Testbestellung"
+    ]
+  }
 }
