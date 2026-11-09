@@ -1,48 +1,134 @@
 <!doctype html>
-<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="index,follow"><meta name="theme-color" content="#0a3967">
-<title>Prem Digital Edition – Bücher direkt entdecken</title>
-<meta name="description" content="Digitale Bücher von J.F.X. Prem, Johann Prem und Pia Ordelia. Auswanderer, Romane, Sachbücher und Kinderbücher. Direkt für Autoren, ohne Amazon- oder Buchhandels-Kauflinks.">
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow"><meta name="theme-color" content="#0b355b">
+<link rel="canonical" href="https://topdiveair-sketch.github.io/Gaeste/prem-digital-editionen.html">
+<title>Unabhängige Digitalbücher | Geschichten und Wissen direkt entdecken</title>
+<meta name="description" content="Unabhängiger Digitalkatalog von Johann Prem, J.F.X. Prem und Pia Ordelia. Nach Genres suchen, weitere Bücher entdecken und geprüfte digitale Angebote direkt kaufen.">
 <style>
-:root{font-family:system-ui,-apple-system,Segoe UI,sans-serif;color-scheme:light;--ink:#132e4b;--blue:#0a3967;--gold:#b77f19;--line:#d9e0e9;--paper:#f5f8fc}
-*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);line-height:1.55}
-header{background:linear-gradient(135deg,#073c75,#115491);color:white;padding:45px max(18px,calc((100vw - 1100px)/2));}
-h1{font:700 clamp(30px,6vw,54px)/1.13 Georgia,serif;margin:12px 0 18px}h2{font:700 27px/1.2 Georgia,serif}p{max-width:72ch}
-.brand{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#ffe1a0;font-weight:800}
-.highlight{display:inline-block;border:1px solid #ffe3a4;padding:7px 13px;border-radius:100px;margin-top:10px;font-weight:650}
-main{max-width:1100px;margin:auto;padding:25px 18px 65px}
-nav{display:flex;gap:9px;flex-wrap:wrap;margin:10px 0 27px}
-nav a{border:1px solid #b8c8d9;background:white;border-radius:50px;padding:10px 15px;text-decoration:none;color:var(--ink);font-weight:650}
-section{scroll-margin-top:20px;margin:36px 0}section>p{color:#4b5c6c}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
-article{background:#fff;border:1px solid var(--line);padding:22px;border-radius:15px;box-shadow:0 4px 17px #122c4810}
-article h3{font:700 19px/1.3 Georgia,serif;margin:0 0 8px}
-.meta{font-size:13px;color:#587088}
-.state{display:inline-block;margin-top:15px;font-size:12px;font-weight:650;padding:6px 10px;border-radius:7px;background:#edf1f6;color:#42566a}
-a.buy{display:inline-block;margin-top:15px;border-radius:9px;padding:10px 13px;background:#0b4b78;color:white;text-decoration:none;font-weight:700}
-footer{max-width:1100px;margin:0 auto;padding:20px 18px 50px;border-top:1px solid var(--line);color:#4b5c6c}
-:focus-visible{outline:3px solid #bd7e00;outline-offset:3px}
-</style></head>
-<body><header><span class="brand">Prem Digital Edition</span><h1>Weitere Bücher entdecken</h1><p>Ein unabhängiger Katalog für digitale Titel von J.F.X. Prem, Johann Prem und Pia Ordelia – nach Themen sortiert. Neue Bücher und Leser-Ausgaben können zentral ergänzt werden.</p>
-<div class="highlight">100 % Amazon &amp; Co. frei · Direkt für Autoren</div></header>
-<main><nav aria-label="Buchkategorien"><a href="#auswandern">Auswanderer-Ratgeber</a><a href="#romane">Romane</a><a href="#sachbuecher">Sachbücher</a><a href="#kinderbuecher">Kinderbücher</a></nav>
-<p><strong>Wichtig:</strong> Hier werden nur direkt verfügbare Angebote mit einem Kaufbutton versehen. Ausgaben in Vorbereitung sind noch nicht kaufbar. Zahlungsdienstleister können Gebühren berechnen; „Direkt für Autoren“ bedeutet nicht 100 % Auszahlungsquote.</p>
-<div id="catalog" role="status" aria-live="polite">Buchkatalog wird geladen …</div>
-<noscript>JavaScript ist für die automatische Kataloganzeige erforderlich.</noscript></main>
-<footer>© Johann Prem / J.F.X. Prem · Unabhängiger Digital-Katalog · Alle Angaben zu Verfügbarkeit und Preisen vor dem Kauf prüfen.</footer>
+:root{--ink:#183048;--muted:#506578;--navy:#0b355b;--gold:#e6bc72;--border:#dae4ed;--background:#f5f8fa}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--background);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
+header{background:linear-gradient(125deg,#0b355b,#24618b);color:#fff;padding:42px max(18px,calc((100vw - 1120px)/2)) 47px}
+header h1{font:700 clamp(30px,5vw,52px)/1.12 Georgia,serif;margin:12px 0 15px}
+header p{max-width:64ch;color:#eef5fa;margin:0 0 18px}.eyebrow{font-weight:800;text-transform:uppercase;font-size:12px;letter-spacing:.14em;color:var(--gold)}
+.claim{font-weight:750;border:1px solid #e7c886;padding:10px 14px;border-radius:12px;display:inline-block}
+main{max-width:1120px;margin:auto;padding:28px 18px 70px}
+.search-panel{background:#fff;border:1px solid var(--border);border-radius:18px;padding:20px;box-shadow:0 5px 25px #153e6010}
+.formline{display:flex;flex-wrap:wrap;gap:12px;align-items:end}.formline label{flex:1 1 250px;font-weight:700;font-size:14px}
+input,select{display:block;margin-top:6px;width:100%;padding:11px 12px;background:#fff;border:1px solid #a9bdcf;border-radius:9px;font:inherit;min-height:44px}
+nav{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}nav a{padding:8px 13px;background:#fff;color:var(--ink);border:1px solid #c5d6e1;border-radius:999px;font-size:14px;font-weight:700;text-decoration:none}
+nav a:hover{background:#e5eef5}h2{font:700 clamp(23px,3vw,31px)/1.18 Georgia,serif;margin:0 0 8px}
+section{scroll-margin-top:20px;margin:36px 0 48px}
+section .subgenres{color:var(--muted);margin:0 0 17px;font-size:14px}
+.book-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(238px,1fr));gap:14px}
+.book{background:#fff;border:1px solid var(--border);border-radius:14px;padding:21px;display:flex;flex-direction:column;gap:10px;box-shadow:0 5px 23px #153e6010}
+.book h3{font:700 20px/1.3 Georgia,serif;margin:0}
+.book .meta{color:var(--muted);font-size:14px;margin:0}.book .subgenre{font-size:12px;letter-spacing:.02em;color:#5a6c7b}
+.state{align-self:flex-start;background:#edf2f6;color:#39516b;border-radius:7px;font-size:12px;font-weight:700;padding:6px 10px;margin-top:auto}
+a.buy{display:inline-flex;align-items:center;justify-content:center;background:#07567c;padding:11px 15px;border-radius:9px;color:#fff;text-decoration:none;font-weight:750;min-height:44px;margin-top:auto}
+.note{font-size:14px;color:var(--muted)}
+.planned{background:#edf3f7;padding:20px;border:1px solid var(--border);border-radius:15px}
+.planned-grid{display:flex;gap:8px;flex-wrap:wrap}.pill{border:1px solid #c2d0dc;background:#fff;border-radius:999px;padding:7px 11px;font-size:13px}
+footer{max-width:1120px;margin:auto;padding:26px 18px 45px;border-top:1px solid var(--border);color:var(--muted);font-size:14px}
+:focus-visible{outline:3px solid #c18b1d;outline-offset:3px}
+@media(max-width:620px){header{padding-top:30px}.search-panel{padding:15px}main{padding:22px 14px 48px}}
+</style>
+</head>
+<body>
+<header>
+<div class="eyebrow">Unabhängige Digitalbücher</div>
+<h1>Geschichten entdecken. Wissen erleben.</h1>
+<p>Digitalausgaben und neue Leseformate von unabhängigen Autoren – kategorisiert, durchsuchbar und ohne Amazon- oder Buchhandels-Kauflinks.</p>
+<div class="claim">100 % Amazon &amp; Co. frei · Direkt für Autoren</div>
+</header>
+<main>
+<div class="search-panel">
+ <div class="formline">
+ <label for="search">Nach Buch oder Autor suchen<input id="search" type="search" placeholder="z. B. Griechenland, Thriller, Windis" autocomplete="off"></label>
+ <label for="genre">Genre auswählen<select id="genre"><option value="">Alle Genres</option></select></label>
+ </div>
+ <p class="note">Das Angebot befindet sich im Aufbau. Ein Kaufbutton erscheint nur bei einem ausdrücklich als geprüft markierten Direktangebot. Andere Bücher sind noch nicht über diesen Dienst erhältlich.</p>
+</div>
+<nav id="genre-nav" aria-label="Verfügbare Buchgenres"></nav>
+<p id="result-count" class="note" aria-live="polite">Buchkatalog wird geladen …</p>
+<div id="catalog"></div>
+<section class="planned" id="ausblick"><h2>Weitere Genres im Aufbau</h2><p class="note">Die Kategorien sind technisch vorbereitet und werden mit echten Titeln befüllt. Wir zeigen keine erfundenen Bücher.</p><div class="planned-grid" id="planned-genres"></div></section>
+</main>
+<footer>
+<p>© Johann Prem / J.F.X. Prem · Digitaler Autorenkatalog. Direktverkauf ersetzt nicht die jeweils erforderliche Rechte-, Verbraucher- und Steuerprüfung.</p>
+<p>„Direkt für Autoren“ ist kein Versprechen, dass der komplette Kaufpreis ausgezahlt wird: Zahlungsdienstleister berechnen Gebühren.</p>
+</footer>
 <script>
-(async()=>{const host=document.getElementById('catalog');
-try{const resp=await fetch('./prem-digital-katalog.json',{cache:'no-store'});if(!resp.ok)throw new Error('HTTP '+resp.status);
-const data=await resp.json();host.replaceChildren();host.removeAttribute('role');
-for(const cat of data.categories){const section=document.createElement('section');section.id=cat.id;const title=document.createElement('h2');title.textContent=cat.label;section.append(title);
-const grid=document.createElement('div');grid.className='grid';
-const books=data.books.filter(b=>b.category===cat.id);
-for(const b of books){const card=document.createElement('article');const h=document.createElement('h3');h.textContent=b.title;card.append(h);
-const meta=document.createElement('div');meta.className='meta';meta.textContent=[b.subtitle,b.edition,b.author].filter(Boolean).join(' · ');card.append(meta);
-if(b.status==='live_verified'&&typeof b.buy_url==='string'&&/^https:\/\/topdiveair\.systeme\.io\//.test(b.buy_url)){
-const a=document.createElement('a');a.href=b.buy_url;a.className='buy';a.rel='noopener noreferrer';a.target='_blank';a.textContent='Digitalausgabe direkt kaufen';card.append(a);
-}else{const state=document.createElement('span');state.className='state';state.textContent='Digitalausgabe: in Vorbereitung / noch nicht geprüft';card.append(state);}
-grid.append(card);}section.append(grid);host.append(section);}
-}catch(err){host.textContent='Der Katalog konnte derzeit nicht geladen werden. Bitte später erneut öffnen.';console.error('Catalog load failed',err)}
+(function(){
+'use strict';
+const host=document.getElementById('catalog');
+const nav=document.getElementById('genre-nav');
+const select=document.getElementById('genre');
+const search=document.getElementById('search');
+const planned=document.getElementById('planned-genres');
+const counter=document.getElementById('result-count');
+const statusLabels={
+'testversion_nicht_kaufbar':'Reader-Testversion – noch nicht kaufbar',
+'direktverkauf_nicht_ende_zu_ende_getestet':'Bezahlung und Auslieferung noch nicht vollständig geprüft',
+'eigene_digitalausgabe_ausstehend':'Digitalausgabe in Vorbereitung'
+};
+function isSafeBuyLink(book){
+  if(book.status!=='live_verified' || typeof book.buy_url!=='string')return false;
+  try{
+    const u=new URL(book.buy_url);
+    return u.protocol==='https:' && !/(^|\.)((amazon|amzn|epubli|thalia|hugendubel|buchhandel|bol)\.[a-z.]+)$/i.test(u.hostname);
+  }catch(_){return false;}
+}
+function makeEl(tag,className,content){
+  const el=document.createElement(tag);
+  if(className)el.className=className;
+  if(content!==undefined)el.textContent=content;
+  return el;
+}
+function makeBook(b){
+ const card=makeEl('article','book');
+ card.append(makeEl('h3','',b.title),makeEl('p','meta',[b.subtitle,b.edition,b.author].filter(Boolean).join(' · ')));
+ if(b.subcategory)card.append(makeEl('div','subgenre',b.subcategory));
+ if(isSafeBuyLink(b)){
+   const a=makeEl('a','buy','Jetzt direkt kaufen');a.href=b.buy_url;a.target='_blank';a.rel='noopener noreferrer';card.append(a);
+ }else{card.append(makeEl('span','state',statusLabels[b.status]||'Kaufangebot noch nicht bestätigt'));}
+ return card;
+}
+fetch('./prem-digital-katalog.json',{cache:'no-store'})
+ .then(r=>{if(!r.ok)throw new Error('Katalog HTTP '+r.status);return r.json();})
+ .then(data=>{
+  const cats=Array.isArray(data.categories)?data.categories:[];
+  const books=Array.isArray(data.books)?data.books:[];
+  const active=cats.filter(c=>books.some(b=>b.category===c.id));
+  for(const c of active){
+    const option=document.createElement('option');option.value=c.id;option.textContent=c.label;select.append(option);
+    const a=makeEl('a','',c.label);a.href='#'+c.id;nav.append(a);
+  }
+  for(const c of cats.filter(c=>!active.includes(c))){planned.append(makeEl('span','pill',c.label));}
+  function render(){
+    const term=search.value.trim().toLocaleLowerCase('de');
+    const chosen=select.value;
+    const matches=books.filter(b=>(!chosen||b.category===chosen)&&
+      (!term||[b.title,b.author,b.subtitle,b.edition,b.subcategory].filter(Boolean).join(' ').toLocaleLowerCase('de').includes(term)));
+    host.replaceChildren();
+    for(const c of cats){
+      const inCat=matches.filter(b=>b.category===c.id);
+      if(!inCat.length)continue;
+      const s=makeEl('section');s.id=c.id;s.append(makeEl('h2','',c.label));
+      const sub=Array.isArray(c.subcategories)?c.subcategories.join(' · '):'';
+      if(sub)s.append(makeEl('p','subgenres',sub));
+      const grid=makeEl('div','book-grid');
+      for(const b of inCat)grid.append(makeBook(b));
+      s.append(grid);host.append(s);
+    }
+    counter.textContent=matches.length+' erfasste Titel · '+matches.filter(isSafeBuyLink).length+' nachweislich kaufbare Direktangebote';
+    if(!matches.length)host.append(makeEl('p','note','Keine Titel gefunden. Andere Suchbegriffe verwenden.'));
+  }
+  search.addEventListener('input',render);
+  select.addEventListener('change',render);
+  render();
+ }).catch(err=>{counter.textContent='Katalog derzeit nicht erreichbar';host.replaceChildren(makeEl('p','note','Bitte versuchen Sie es später erneut.'));console.error(err);});
 })();
-</script></body></html>
+</script>
+</body></html>
