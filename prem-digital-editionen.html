@@ -114,7 +114,8 @@ function makeBook(b){
  if(typeof b.sample_url==='string'&&/^[-a-z0-9]+\.html$/.test(b.sample_url)){
   const a=makeEl('a','preview','Kostenlose Leseprobe öffnen');a.href=b.sample_url;card.append(a);
  }
- if(typeof b.tools_url==='string'&&/^[-a-z0-9]+\.html$/.test(b.tools_url)){const a=makeEl('a','preview','Budgetrechner und Checkliste testen');a.href=b.tools_url;card.append(a);}\n if(isSafeBuyLink(b)){
+ if(typeof b.tools_url==='string'&&/^[-a-z0-9]+\.html$/.test(b.tools_url)){const a=makeEl('a','preview','Budgetrechner und Checkliste testen');a.href=b.tools_url;card.append(a);}
+ if(isSafeBuyLink(b)){
    const a=makeEl('a','buy','Jetzt direkt kaufen');a.href=b.buy_url;a.target='_blank';a.rel='noopener noreferrer';card.append(a);
  }else{card.append(makeEl('span','state',statusLabels[b.status]||'Kaufangebot noch nicht bestätigt'));}
  return card;
