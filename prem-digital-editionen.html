@@ -30,7 +30,7 @@ section .subgenres{color:var(--muted);margin:0 0 17px;font-size:14px}
 .book h3{font:700 20px/1.3 Georgia,serif;margin:0}
 .book .meta{color:var(--muted);font-size:14px;margin:0}.book .subgenre{font-size:12px;letter-spacing:.02em;color:#5a6c7b}
 .state{align-self:flex-start;background:#edf2f6;color:#39516b;border-radius:7px;font-size:12px;font-weight:700;padding:6px 10px;margin-top:auto}
-a.buy{display:inline-flex;align-items:center;justify-content:center;background:#07567c;padding:11px 15px;border-radius:9px;color:#fff;text-decoration:none;font-weight:750;min-height:44px;margin-top:auto}
+a.preview{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:9px;border:1px solid #206b95;color:#1a5d84;background:#e7f4fc;text-decoration:none;font-weight:800;min-height:44px;margin-top:10px}\na.preview:hover{background:#d6ecfa}\na.buy{display:inline-flex;align-items:center;justify-content:center;background:#07567c;padding:11px 15px;border-radius:9px;color:#fff;text-decoration:none;font-weight:750;min-height:44px;margin-top:auto}
 .note{font-size:14px;color:var(--muted)}
 .planned{background:#edf3f7;padding:20px;border:1px solid var(--border);border-radius:15px}
 .planned-grid{display:flex;gap:8px;flex-wrap:wrap}.pill{border:1px solid #c2d0dc;background:#fff;border-radius:999px;padding:7px 11px;font-size:13px}
@@ -44,7 +44,7 @@ footer{max-width:1120px;margin:auto;padding:26px 18px 45px;border-top:1px solid 
 <div class="eyebrow">Unabhängige Digitalbücher</div>
 <h1>Geschichten entdecken. Wissen erleben.</h1>
 <p>Digitalausgaben und neue Leseformate von unabhängigen Autoren – kategorisiert, durchsuchbar und ohne Amazon- oder Buchhandels-Kauflinks.</p>
-<div class="claim">100 % Amazon &amp; Co. frei · Direkt für Autoren</div>
+<div class="claim">100 % Amazon &amp; Co. frei · Direkt für Autoren</div><p style="margin-top:14px;font-size:14px;color:#d4eee5">Digital lesen. Papier und Versand sparen.</p>
 </header>
 <main>
 <div class="search-panel">
@@ -110,6 +110,9 @@ function makeBook(b){
  if(b.price_eur!==undefined && b.price_eur!==null && b.status!=='live_verified'){
   const p=makeEl('p','preview-price',Number(b.price_eur).toLocaleString('de-AT',{style:'currency',currency:'EUR'})+' · geplanter Preis');
   card.append(p);
+ }
+ if(typeof b.sample_url==='string'&&/^[-a-z0-9]+\.html$/.test(b.sample_url)){
+  const a=makeEl('a','preview','Kostenlose Leseprobe öffnen');a.href=b.sample_url;card.append(a);
  }
  if(isSafeBuyLink(b)){
    const a=makeEl('a','buy','Jetzt direkt kaufen');a.href=b.buy_url;a.target='_blank';a.rel='noopener noreferrer';card.append(a);
