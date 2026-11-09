@@ -159,7 +159,8 @@
       "info": "Interaktiver Leser mit Budgetrechner; private Testversion, nicht verkauft.",
       "cover_url": "images/ebooks/griechenland-2027.jpg",
       "cover_alt": "Cover: Auswandern nach Griechenland – J.F.X. Prem",
-      "cover_verified_at": "2026-11-09"
+      "cover_verified_at": "2026-11-09",
+      "teaser": "Praxisratgeber für den geplanten Umzug nach Griechenland: Kosten, Wohnen, Aufenthaltsfragen und Alltag. Die Reader-Testversion bietet zusätzlich Budgetrechner und Checkliste."
     },
     {
       "id": "ungarn-2027",
@@ -175,7 +176,8 @@
       "reader_book_id": "ungarn-2027-reader",
       "cover_url": "images/ebooks/ungarn-2027.jpg",
       "cover_alt": "Cover: Ungarn für Rentner – J.F.X. Prem",
-      "cover_verified_at": "2026-11-09"
+      "cover_verified_at": "2026-11-09",
+      "teaser": "Ruhestand in Ungarn vorbereiten: Rente, Steuern, Krankenversicherung, Wohnen und konkrete Entscheidungshilfen. Der private Online-Reader wird derzeit getestet."
     },
     {
       "id": "griechenland-2027-planung",
@@ -200,7 +202,8 @@
       "info": "Private HTML-Lesefassung erstellt. Noch kein geschützter Zugang oder Checkout.",
       "cover_url": "images/ebooks/die-ader.jpg",
       "cover_alt": "Cover: DIE ADER – Johann Prem",
-      "cover_verified_at": "2026-11-09"
+      "cover_verified_at": "2026-11-09",
+      "teaser": "Ein Zukunftsthriller über Kontrolle, Freiheit und eine Welt, in der eine technologische Verbindung über das Leben der Menschen entscheidet."
     },
     {
       "id": "unter-uns",
