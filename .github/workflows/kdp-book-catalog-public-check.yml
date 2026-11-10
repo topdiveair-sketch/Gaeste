@@ -46,7 +46,13 @@ jobs:
                   if item['status'] == 'pilot_sale_active':
                       pilot = item.get('pilot_launch') or {}
                       assert pilot.get('owner_authorized_open_release') is True or (pilot.get('sale_limit') or 0) > 0, f'Pilot offer missing limit or owner approval: {key}'
-                      assert item.get('checkout_test',{}).get('paid_charge_tested') is False, f'Pilot test status ambiguous: {key}'
+                      test = item.get('checkout_test') or {}
+                      assert isinstance(test.get('paid_charge_tested'), bool), f'Paid test state missing: {key}'
+                      if test['paid_charge_tested']:
+                          assert test.get('paid_test_amount_eur') == 9.9, f'Paid test amount not recorded: {key}'
+                          assert test.get('stripe_receipt_received') is True, f'Paid test receipt not confirmed: {key}'
+                      if test.get('live_verified') is True:
+                          assert test.get('all_chapters_access_verified') is True, f'Live status without buyer chapter access: {key}'
               else:
                   assert not item.get('buy_url'), f'Unverified offer linked: {key}'
           print('OK: catalog, two own e-books, legal links, 24-month promise and product safety')
