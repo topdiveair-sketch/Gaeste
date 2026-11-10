@@ -4,8 +4,8 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="index,follow"><meta name="theme-color" content="#0b355b">
 <link rel="canonical" href="https://topdiveair-sketch.github.io/Gaeste/prem-digital-editionen.html">
-<title>Unabhängige Digitalbücher | Geschichten und Wissen direkt entdecken</title>
-<meta name="description" content="Unabhängiger Digitalkatalog von Johann Prem, J.F.X. Prem und Pia Ordelia. Nach Genres suchen, weitere Bücher entdecken und geprüfte digitale Angebote direkt kaufen.">
+<title>Digitale Bücher 9,90 € und Planungspakete 29 € | Unabhängiger Buchkatalog</title>
+<meta name="description" content="Unabhängiger Digitalkatalog von Johann Prem, J.F.X. Prem und Pia Ordelia. Digital Editions für 9,90 € und Planungspakete für 29,00 € nach Titel und Autor entdecken. Kauf erst nach vollständigem Test.">
 <style>
 :root{--ink:#183048;--muted:#506578;--navy:#0b355b;--gold:#e6bc72;--border:#dae4ed;--background:#f5f8fa}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--background);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
@@ -17,6 +17,13 @@ main{max-width:1120px;margin:auto;padding:28px 18px 70px}
 .search-panel{background:#fff;border:1px solid var(--border);border-radius:18px;padding:20px;box-shadow:0 5px 25px #153e6010}
 .formline{display:flex;flex-wrap:wrap;gap:12px;align-items:end}.formline label{flex:1 1 250px;font-weight:700;font-size:14px}
 input,select{display:block;margin-top:6px;width:100%;padding:11px 12px;background:#fff;border:1px solid #a9bdcf;border-radius:9px;font:inherit;min-height:44px}
+.price-intro{margin-top:25px}.price-nav{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:13px;margin:16px 0 20px}
+.price-nav a{display:block;text-decoration:none;color:var(--ink);border:1px solid #b9cddd;border-radius:15px;padding:17px 19px;background:#fff;box-shadow:0 3px 16px #153e6010}
+.price-nav a:hover,.price-nav a:focus-visible{border-color:#3e769e;background:#f0f7fc}
+.price-nav strong{display:block;font:700 25px/1.2 Georgia,serif;color:#0b355b;margin:3px 0}
+.price-nav span{display:block;color:#4f6174;font-size:14px}
+.price-tag{display:inline-block;background:#e8f1f8;border-radius:999px;padding:5px 10px;font-size:12px;font-weight:750;color:#0c4c70}
+.price-note{max-width:75ch;font-size:14px;color:var(--muted)}
 nav{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}nav a{padding:8px 13px;background:#fff;color:var(--ink);border:1px solid #c5d6e1;border-radius:999px;font-size:14px;font-weight:700;text-decoration:none}
 nav a:hover{background:#e5eef5}h2{font:700 clamp(23px,3vw,31px)/1.18 Georgia,serif;margin:0 0 8px}
 section{scroll-margin-top:20px;margin:36px 0 48px}
@@ -59,6 +66,12 @@ footer{max-width:1120px;margin:auto;padding:26px 18px 45px;border-top:1px solid 
  </div>
  <p class="note">Dieser Katalog führt auch Bücher aus dem bisherigen Autorenverzeichnis auf. Bei Titeln ohne Originalcover ist die Übernahme aus dem lokalen Bücherordner noch offen. Ein Kaufbutton erscheint nur bei nachweislich getesteten Direktangeboten.</p>
 </div>
+<div class="price-intro"><h2>Digitalbücher nach Preis</h2><p class="price-note">Vier Angebote in zwei Preisgruppen. Der Verkauf bleibt bis zum nachgewiesenen Zahlungs- und Auslieferungstest gesperrt. Einzelne Buchausgaben und Planungspakete sind unterschiedliche Produkte.</p></div>
+<div class="price-nav" aria-label="Preisgruppen">
+<a href="#preis-990"><span>Digital Editions</span><strong>9,90 €</strong><span>Online-Ratgeber, persönlicher Lesebereich</span></a>
+<a href="#preis-2900"><span>Planungspakete</span><strong>29,00 €</strong><span>Budgetrechner, Checklisten und Download-Unterlagen</span></a>
+</div>
+<h2 id="weitere-genres">Weitere Bücher nach Genre</h2>
 <nav id="genre-nav" aria-label="Verfügbare Buchgenres"></nav>
 <p id="result-count" class="note" aria-live="polite">43 erfasste Titel · 37 Buchbilder hinterlegt (einschließlich Produkt- und Reihenmotiven) · keine ungeprüften Direktkaufangebote</p>
 <div id="catalog">
@@ -219,13 +232,29 @@ fetch('./prem-digital-katalog.json',{cache:'no-store'})
     const matches=books.filter(b=>(!chosen||b.category===chosen)&&
       (!term||[b.title,b.author,b.subtitle,b.edition,b.subcategory,b.legacy_asin,b.isbn,b.legacy_isbn,b.series].filter(Boolean).join(' ').toLocaleLowerCase('de').includes(term)));
     host.replaceChildren();
+    const tiers=[
+      {id:'preis-990',label:'Digital Editions',price:9.9,description:'9,90 € einmalig: Online-Ratgeber mit persönlichem Lesebereich, kein herunterladbares EPUB oder PDF.'},
+      {id:'preis-2900',label:'Planungspakete',price:29,description:'29,00 € einmalig: separate digitale ZIP-Pakete mit Checklisten und Planungswerkzeugen.'}
+    ];
+    for(const t of tiers){
+      const inTier=matches.filter(b=>Number(b.price_eur)===t.price);
+      if(!inTier.length)continue;
+      const s=makeEl('section');s.id=t.id;
+      s.append(makeEl('h2','',t.label+' · '+t.price.toLocaleString('de-AT',{style:'currency',currency:'EUR'})));
+      s.append(makeEl('p','subgenres',t.description));
+      const grid=makeEl('div','book-grid');
+      for(const b of inTier)grid.append(makeBook(b));
+      s.append(grid);host.append(s);
+    }
+    const remaining=matches.filter(b=>b.price_eur==null);
+    if(remaining.length){
+      const heading=makeEl('section');heading.id='weitere-titel';
+      heading.append(makeEl('h2','','Weitere Bücher und geplante Digitalausgaben'));
+      heading.append(makeEl('p','subgenres','Nach Themen geordnet; ohne eigene geprüfte Direktkauf-Angebote.'));
+      host.append(heading);
+    }
     for(const c of cats){
-      const inCat=matches.filter(b=>b.category===c.id).sort((a,b)=>{
-        const ap=['griechenland-2027-reader','ungarn-2027','die-ader'].indexOf(a.id);
-        const bp=['griechenland-2027-reader','ungarn-2027','die-ader'].indexOf(b.id);
-        if(ap>=0||bp>=0)return (ap<0?999:ap)-(bp<0?999:bp);
-        return a.title.localeCompare(b.title,'de',{sensitivity:'base',numeric:true});
-      });
+      const inCat=remaining.filter(b=>b.category===c.id).sort((a,b)=>a.title.localeCompare(b.title,'de',{sensitivity:'base',numeric:true}));
       if(!inCat.length)continue;
       const s=makeEl('section');s.id=c.id;s.append(makeEl('h2','',c.label));
       const sub=Array.isArray(c.subcategories)?c.subcategories.join(' · '):'';
@@ -234,7 +263,7 @@ fetch('./prem-digital-katalog.json',{cache:'no-store'})
       for(const b of inCat)grid.append(makeBook(b));
       s.append(grid);host.append(s);
     }
-    counter.textContent=matches.length+' erfasste Titel · '+matches.filter(isSafeBuyLink).length+' nachweislich kaufbare Direktangebote';
+    counter.textContent=matches.length+' erfasste Titel und digitale Angebote · '+matches.filter(isSafeBuyLink).length+' nachweislich kaufbare Direktangebote';
     if(!matches.length)host.append(makeEl('p','note','Keine Titel gefunden. Andere Suchbegriffe verwenden.'));
   }
   search.addEventListener('input',render);
