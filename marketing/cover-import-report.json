@@ -1,0 +1,179 @@
+{
+  "date": "2026-11-10",
+  "source": "Existing buecher.html historical cover images, not the inaccessible Windows folder",
+  "candidate_count": 28,
+  "downloaded_count": 28,
+  "static_html_patched_count": 5,
+  "imported": [
+    {
+      "book_id": "45-jahre",
+      "asin": "B0HP3RN61C",
+      "filename": "legacy-b0hp3rn61c.jpg",
+      "size": 49788
+    },
+    {
+      "book_id": "bestand-abenteuer-am-welterbesteig-die-wilden-wachauer-windis",
+      "asin": "B0GM6NJ2PK",
+      "filename": "legacy-b0gm6nj2pk.jpg",
+      "size": 44901
+    },
+    {
+      "book_id": "bestand-arbeiten-bis-zum-umfallen",
+      "asin": "B0GJTB2748",
+      "filename": "legacy-b0gjtb2748.jpg",
+      "size": 29565
+    },
+    {
+      "book_id": "bestand-auswandern-nach-griechenland-der-grosse-praxisratgeber-fur-rentner",
+      "asin": "B0GHNB7V34",
+      "filename": "legacy-b0ghnb7v34.jpg",
+      "size": 33963
+    },
+    {
+      "book_id": "bestand-der-ausstieg-leben-nach-der-leistung",
+      "asin": "B0GK7VM1FQ",
+      "filename": "legacy-b0gk7vm1fq.jpg",
+      "size": 19576
+    },
+    {
+      "book_id": "bestand-der-deutsche-rentenbetrug",
+      "asin": "B0G6Y1C5KQ",
+      "filename": "legacy-b0g6y1c5kq.jpg",
+      "size": 21734
+    },
+    {
+      "book_id": "bestand-der-krieg-im-system-band-2",
+      "asin": "B0GGH1ZMCM",
+      "filename": "legacy-b0ggh1zmcm.jpg",
+      "size": 38479
+    },
+    {
+      "book_id": "bestand-der-letzte-spielraum-band-3",
+      "asin": "B0GGJ4TL28",
+      "filename": "legacy-b0ggj4tl28.jpg",
+      "size": 32041
+    },
+    {
+      "book_id": "bestand-die-wilden-wachauer-windis-abenteuer-mit-der-schnaufi-bahn",
+      "asin": "B0G2C4FBTC",
+      "filename": "legacy-b0g2c4fbtc.jpg",
+      "size": 26413
+    },
+    {
+      "book_id": "bestand-die-wilden-wachauer-windis-achtung-gleise",
+      "asin": "B0GF2LCTWW",
+      "filename": "legacy-b0gf2lctww.jpg",
+      "size": 41205
+    },
+    {
+      "book_id": "bestand-die-wilden-wachauer-windis-geheimnisse-des-dunkelsteinerwaldes",
+      "asin": "B0GC543X8J",
+      "filename": "legacy-b0gc543x8j.jpg",
+      "size": 30493
+    },
+    {
+      "book_id": "bestand-die-wilden-wachauer-windis-in-pressburg-bratislava",
+      "asin": "B0G539RHKH",
+      "filename": "legacy-b0g539rhkh.jpg",
+      "size": 29943
+    },
+    {
+      "book_id": "bestand-die-wilden-wachauer-windis-in-regensburg",
+      "asin": "B0GC613B6T",
+      "filename": "legacy-b0gc613b6t.jpg",
+      "size": 28986
+    },
+    {
+      "book_id": "bestand-die-wilden-wachauer-windis-und-dem-spatz-vom-rathausplatz-in-wien",
+      "asin": "B0G6SVNHMX",
+      "filename": "legacy-b0g6svnhmx.jpg",
+      "size": 29395
+    },
+    {
+      "book_id": "bestand-die-wilden-wachauer-windis-und-der-marillenknodel-fall",
+      "asin": "B0GDVBRXV7",
+      "filename": "legacy-b0gdvbrxv7.jpg",
+      "size": 49256
+    },
+    {
+      "book_id": "bestand-die-wilden-wachauer-windis-vom-wind-spaniens-zum-zuhause-in-der-wachau",
+      "asin": "B0G888WYWD",
+      "filename": "legacy-b0g888wywd.jpg",
+      "size": 59442
+    },
+    {
+      "book_id": "bestand-die-wilden-windis-auf-geisterwanderung-zu-nittenau",
+      "asin": "B0G1LYBRKK",
+      "filename": "legacy-b0g1lybrkk.jpg",
+      "size": 26003
+    },
+    {
+      "book_id": "bestand-die-wilden-windis-und-das-geheimnis-von-durnstein",
+      "asin": "B0G1JV4K48",
+      "filename": "legacy-b0g1jv4k48.jpg",
+      "size": 24254
+    },
+    {
+      "book_id": "bestand-die-windis-und-das-geheimnis-der-ruine-aggstein",
+      "asin": "B0FZ9WBVX5",
+      "filename": "legacy-b0fz9wbvx5.jpg",
+      "size": 27046
+    },
+    {
+      "book_id": "bestand-ein-leben-im-system-2-0",
+      "asin": "B0GDRHX7KG",
+      "filename": "legacy-b0gdrhx7kg.jpg",
+      "size": 38937
+    },
+    {
+      "book_id": "bestand-invaliditat-wenn-das-system-dich-nicht-mehr-braucht",
+      "asin": "B0GJSF9W41",
+      "filename": "legacy-b0gjsf9w41.jpg",
+      "size": 33611
+    },
+    {
+      "book_id": "bestand-leben-unter-der-sonne-balis",
+      "asin": "B0GK6GCMQ5",
+      "filename": "legacy-b0gk6gcmq5.jpg",
+      "size": 45193
+    },
+    {
+      "book_id": "bestand-pflegegeld-der-kampf-gegen-gutachter-und-systeme",
+      "asin": "B0GJSRK4S7",
+      "filename": "legacy-b0gjsrk4s7.jpg",
+      "size": 28121
+    },
+    {
+      "book_id": "bestand-the-wild-wachau-windis-mind-the-tracks",
+      "asin": "B0GG5XPGPV",
+      "filename": "legacy-b0gg5xpgpv.jpg",
+      "size": 39892
+    },
+    {
+      "book_id": "bestand-versichert-und-trotzdem-pleite",
+      "asin": "B0GKKZXXMV",
+      "filename": "legacy-b0gkkzxxmv.jpg",
+      "size": 39228
+    },
+    {
+      "book_id": "bestand-vier-wege-der-macht",
+      "asin": "B0G6T3WB7Y",
+      "filename": "legacy-b0g6t3wb7y.jpg",
+      "size": 27090
+    },
+    {
+      "book_id": "bestand-warum-pia-vier-pfoten-hat-und-nicht-zwolf",
+      "asin": "B0GD14JWYJ",
+      "filename": "legacy-b0gd14jwyj.jpg",
+      "size": 36993
+    },
+    {
+      "book_id": "bestand-weltkrieg-ohne-kriegserklarung",
+      "asin": "B0GG9LZWDB",
+      "filename": "legacy-b0gg9lzwdb.jpg",
+      "size": 39813
+    }
+  ],
+  "failed": [],
+  "caveat": "Current publication and exact-edition cover are not independently verified. No checkout links enabled."
+}

@@ -264,7 +264,13 @@
       "buy_url": null,
       "subcategory": "Humor & Satire",
       "legacy_asin": "B0HP3RN61C",
-      "legacy_asin_origin": "Historical catalog listing; current ISBN/ASIN/product association must be verified before public sale"
+      "legacy_asin_origin": "Historical catalog listing; current ISBN/ASIN/product association must be verified before public sale",
+      "cover_url": "images/ebooks/legacy-b0hp3rn61c.jpg",
+      "cover_alt": "Originalcover laut bisherigem Autoren-Buchkatalog: 45 Jahre – Die Rechnung kommt zum Schluss",
+      "cover_source": "Aus bisherigem Autorenbuchverzeichnis zugehöriger ASIN-Bildlink; als eigene Datei gespeichert",
+      "cover_verified": false,
+      "cover_match": "ASIN und Bildpfad stimmen überein; Motiv noch nicht mit lokaler Originaldatei abgeglichen",
+      "cover_imported_at": "2026-11-10"
     },
     {
       "id": "ufos-nukleare-welt",
@@ -307,7 +313,12 @@
       "info": "Im bisherigen Autorenkatalog erfasst. Autorenzuordnung, Originalcover, vollständiges Manuskript und eigene Digitalausgabe noch mit dem lokalen Bücherverzeichnis abgleichen.",
       "legacy_asin": "B0G888WYWD",
       "series": "Die wilden Wachauer Windis",
-      "subcategory": "Kinderabenteuer / Tiergeschichten"
+      "subcategory": "Kinderabenteuer / Tiergeschichten",
+      "cover_url": "images/ebooks/legacy-b0g888wywd.jpg",
+      "cover_alt": "Originalcover laut bisherigem Autoren-Buchkatalog: Die wilden Wachauer Windis – Vom Wind Spaniens zum Zuhause in der Wachau",
+      "cover_source": "Aus bisherigem Autorenbuchverzeichnis zugehöriger ASIN-Bildlink; als eigene Datei gespeichert",
+      "cover_match": "ASIN und Bildpfad stimmen überein; Motiv noch nicht mit lokaler Originaldatei abgeglichen",
+      "cover_imported_at": "2026-11-10"
     },
     {
       "id": "bestand-die-windis-und-das-geheimnis-der-ruine-aggstein",
@@ -325,7 +336,12 @@
       "info": "Im bisherigen Autorenkatalog erfasst. Autorenzuordnung, Originalcover, vollständiges Manuskript und eigene Digitalausgabe noch mit dem lokalen Bücherverzeichnis abgleichen.",
       "legacy_asin": "B0FZ9WBVX5",
       "series": "Die wilden Wachauer Windis",
-      "subcategory": "Kinderabenteuer / Tiergeschichten"
+      "subcategory": "Kinderabenteuer / Tiergeschichten",
+      "cover_url": "images/ebooks/legacy-b0fz9wbvx5.jpg",
+      "cover_alt": "Originalcover laut bisherigem Autoren-Buchkatalog: Die Windis & das Geheimnis der Ruine Aggstein",
+      "cover_source": "Aus bisherigem Autorenbuchverzeichnis zugehöriger ASIN-Bildlink; als eigene Datei gespeichert",
+      "cover_match": "ASIN und Bildpfad stimmen überein; Motiv noch nicht mit lokaler Originaldatei abgeglichen",
+      "cover_imported_at": "2026-11-10"
     },
     {
       "id": "bestand-die-wilden-windis-und-das-geheimnis-von-durnstein",
@@ -343,7 +359,12 @@
       "info": "Im bisherigen Autorenkatalog erfasst. Autorenzuordnung, Originalcover, vollständiges Manuskript und eigene Digitalausgabe noch mit dem lokalen Bücherverzeichnis abgleichen.",
       "legacy_asin": "B0G1JV4K48",
       "series": "Die wilden Wachauer Windis",
-      "subcategory": "Kinderabenteuer / Tiergeschichten"
+      "subcategory": "Kinderabenteuer / Tiergeschichten",
+      "cover_url": "images/ebooks/legacy-b0g1jv4k48.jpg",
+      "cover_alt": "Originalcover laut bisherigem Autoren-Buchkatalog: Die wilden Windis & das Geheimnis von Dürnstein",
+      "cover_source": "Aus bisherigem Autorenbuchverzeichnis zugehöriger ASIN-Bildlink; als eigene Datei gespeichert",
+      "cover_match": "ASIN und Bildpfad stimmen überein; Motiv noch nicht mit lokaler Originaldatei abgeglichen",
+      "cover_imported_at": "2026-11-10"
     },
     {
       "id": "bestand-die-wilden-wachauer-windis-achtung-gleise",
@@ -361,7 +382,12 @@
       "info": "Im bisherigen Autorenkatalog erfasst. Autorenzuordnung, Originalcover, vollständiges Manuskript und eigene Digitalausgabe noch mit dem lokalen Bücherverzeichnis abgleichen.",
       "legacy_asin": "B0GF2LCTWW",
       "series": "Die wilden Wachauer Windis",
-      "subcategory": "Kinderabenteuer / Tiergeschichten"
+      "subcategory": "Kinderabenteuer / Tiergeschichten",
+      "cover_url": "images/ebooks/legacy-b0gf2lctww.jpg",
+      "cover_alt": "Originalcover laut bisherigem Autoren-Buchkatalog: Die Wilden Wachauer Windis – Achtung Gleise!",
+      "cover_source": "Aus bisherigem Autorenbuchverzeichnis zugehöriger ASIN-Bildlink; als eigene Datei gespeichert",
+      "cover_match": "ASIN und Bildpfad stimmen überein; Motiv noch nicht mit lokaler Originaldatei abgeglichen",
+      "cover_imported_at": "2026-11-10"
     },
     {
       "id": "bestand-die-wilden-wachauer-windis-abenteuer-mit-der-schnaufi-bahn",
@@ -379,7 +405,12 @@
       "info": "Im bisherigen Autorenkatalog erfasst. Autorenzuordnung, Originalcover, vollständiges Manuskript und eigene Digitalausgabe noch mit dem lokalen Bücherverzeichnis abgleichen.",
       "legacy_asin": "B0G2C4FBTC",
       "series": "Die wilden Wachauer Windis",
-      "subcategory": "Kinderabenteuer / Tiergeschichten"
+      "subcategory": "Kinderabenteuer / Tiergeschichten",
+      "cover_url": "images/ebooks/legacy-b0g2c4fbtc.jpg",
+      "cover_alt": "Originalcover laut bisherigem Autoren-Buchkatalog: Die wilden Wachauer Windis – Abenteuer mit der Schnaufi-Bahn",
+      "cover_source": "Aus bisherigem Autorenbuchverzeichnis zugehöriger ASIN-Bildlink; als eigene Datei gespeichert",
+      "cover_match": "ASIN und Bildpfad stimmen überein; Motiv noch nicht mit lokaler Originaldatei abgeglichen",
+      "cover_imported_at": "2026-11-10"
     },
     {
       "id": "bestand-warum-pia-vier-pfoten-hat-und-nicht-zwolf",
@@ -397,7 +428,12 @@
       "info": "Im bisherigen Autorenkatalog erfasst. Autorenzuordnung, Originalcover, vollständiges Manuskript und eigene Digitalausgabe noch mit dem lokalen Bücherverzeichnis abgleichen.",
       "legacy_asin": "B0GD14JWYJ",
       "series": "Die wilden Wachauer Windis",
-      "subcategory": "Kinderabenteuer / Tiergeschichten"
+      "subcategory": "Kinderabenteuer / Tiergeschichten",
+      "cover_url": "images/ebooks/legacy-b0gd14jwyj.jpg",
+      "cover_alt": "Originalcover laut bisherigem Autoren-Buchkatalog: Warum Pia vier Pfoten hat & nicht zwölf",
+      "cover_source": "Aus bisherigem Autorenbuchverzeichnis zugehöriger ASIN-Bildlink; als eigene Datei gespeichert",
+      "cover_match": "ASIN und Bildpfad stimmen überein; Motiv noch nicht mit lokaler Originaldatei abgeglichen",
+      "cover_imported_at": "2026-11-10"
     },
     {
       "id": "bestand-die-wilden-wachauer-windis-und-der-marillenknodel-fall",
@@ -415,7 +451,12 @@
       "info": "Im bisherigen Autorenkatalog erfasst. Autorenzuordnung, Originalcover, vollständiges Manuskript und eigene Digitalausgabe noch mit dem lokalen Bücherverzeichnis abgleichen.",
       "legacy_asin": "B0GDVBRXV7",
       "series": "Die wilden Wachauer Windis",
-      "subcategory": "Kinderabenteuer / Tiergeschichten"
+      "subcategory": "Kinderabenteuer / Tiergeschichten",
+      "cover_url": "images/ebooks/legacy-b0gdvbrxv7.jpg",
+      "cover_alt": "Originalcover laut bisherigem Autoren-Buchkatalog: Die Wilden Wachauer Windis & Der Marillenknödel-Fall",
+      "cover_source": "Aus bisherigem Autorenbuchverzeichnis zugehöriger ASIN-Bildlink; als eigene Datei gespeichert",
+      "cover_match": "ASIN und Bildpfad stimmen überein; Motiv noch nicht mit lokaler Originaldatei abgeglichen",
+      "cover_imported_at": "2026-11-10"
     },
     {
       "id": "bestand-die-wilden-wachauer-windis-und-das-geheimnis-am-bach",
@@ -455,7 +496,12 @@
       "info": "Im bisherigen Autorenkatalog erfasst. Autorenzuordnung, Originalcover, vollständiges Manuskript und eigene Digitalausgabe noch mit dem lokalen Bücherverzeichnis abgleichen.",
       "legacy_asin": "B0GM6NJ2PK",
       "series": "Die wilden Wachauer Windis",
-      "subcategory": "Kinderabenteuer / Tiergeschichten"
+      "subcategory": "Kinderabenteuer / Tiergeschichten",
+      "cover_url": "images/ebooks/legacy-b0gm6nj2pk.jpg",
+      "cover_alt": "Originalcover laut bisherigem Autoren-Buchkatalog: Abenteuer am Welterbesteig – Die Wilden Wachauer Windis",
+      "cover_source": "Aus bisherigem Autorenbuchverzeichnis zugehöriger ASIN-Bildlink; als eigene Datei gespeichert",
+      "cover_match": "ASIN und Bildpfad stimmen überein; Motiv noch nicht mit lokaler Originaldatei abgeglichen",
+      "cover_imported_at": "2026-11-10"
     },
     {
       "id": "bestand-die-wilden-wachauer-windis-geheimnisse-des-dunkelsteinerwaldes",
@@ -473,7 +519,12 @@
       "info": "Im bisherigen Autorenkatalog erfasst. Autorenzuordnung, Originalcover, vollständiges Manuskript und eigene Digitalausgabe noch mit dem lokalen Bücherverzeichnis abgleichen.",
       "legacy_asin": "B0GC543X8J",
       "series": "Die wilden Wachauer Windis",
-      "subcategory": "Kinderabenteuer / Tiergeschichten"
+      "subcategory": "Kinderabenteuer / Tiergeschichten",
+      "cover_url": "images/ebooks/legacy-b0gc543x8j.jpg",
+      "cover_alt": "Originalcover laut bisherigem Autoren-Buchkatalog: Die wilden Wachauer Windis – Geheimnisse des Dunkelsteinerwaldes",
+      "cover_source": "Aus bisherigem Autorenbuchverzeichnis zugehöriger ASIN-Bildlink; als eigene Datei gespeichert",
+      "cover_match": "ASIN und Bildpfad stimmen überein; Motiv noch nicht mit lokaler Originaldatei abgeglichen",
+      "cover_imported_at": "2026-11-10"
     },
     {
       "id": "bestand-die-wilden-wachauer-windis-in-regensburg",
@@ -491,7 +542,12 @@
       "info": "Im bisherigen Autorenkatalog erfasst. Autorenzuordnung, Originalcover, vollständiges Manuskript und eigene Digitalausgabe noch mit dem lokalen Bücherverzeichnis abgleichen.",
       "legacy_asin": "B0GC613B6T",
       "series": "Die wilden Wachauer Windis",
-      "subcategory": "Kinderabenteuer / Tiergeschichten"
+      "subcategory": "Kinderabenteuer / Tiergeschichten",
+      "cover_url": "images/ebooks/legacy-b0gc613b6t.jpg",
+      "cover_alt": "Originalcover laut bisherigem Autoren-Buchkatalog: Die wilden Wachauer Windis in Regensburg",
+      "cover_source": "Aus bisherigem Autorenbuchverzeichnis zugehöriger ASIN-Bildlink; als eigene Datei gespeichert",
+      "cover_match": "ASIN und Bildpfad stimmen überein; Motiv noch nicht mit lokaler Originaldatei abgeglichen",
+      "cover_imported_at": "2026-11-10"
     },
     {
       "id": "bestand-die-wilden-wachauer-windis-und-dem-spatz-vom-rathausplatz-in-wien",
@@ -509,7 +565,12 @@
       "info": "Im bisherigen Autorenkatalog erfasst. Autorenzuordnung, Originalcover, vollständiges Manuskript und eigene Digitalausgabe noch mit dem lokalen Bücherverzeichnis abgleichen.",
       "legacy_asin": "B0G6SVNHMX",
       "series": "Die wilden Wachauer Windis",
-      "subcategory": "Kinderabenteuer / Tiergeschichten"
+      "subcategory": "Kinderabenteuer / Tiergeschichten",
+      "cover_url": "images/ebooks/legacy-b0g6svnhmx.jpg",
+      "cover_alt": "Originalcover laut bisherigem Autoren-Buchkatalog: Die Wilden Wachauer Windis & dem Spatz vom Rathausplatz in Wien",
+      "cover_source": "Aus bisherigem Autorenbuchverzeichnis zugehöriger ASIN-Bildlink; als eigene Datei gespeichert",
+      "cover_match": "ASIN und Bildpfad stimmen überein; Motiv noch nicht mit lokaler Originaldatei abgeglichen",
+      "cover_imported_at": "2026-11-10"
     },
     {
       "id": "bestand-die-wilden-windis-auf-dem-durnsteiner-weihnachtsmarkt",
@@ -549,7 +610,12 @@
       "info": "Im bisherigen Autorenkatalog erfasst. Autorenzuordnung, Originalcover, vollständiges Manuskript und eigene Digitalausgabe noch mit dem lokalen Bücherverzeichnis abgleichen.",
       "legacy_asin": "B0G539RHKH",
       "series": "Die wilden Wachauer Windis",
-      "subcategory": "Kinderabenteuer / Tiergeschichten"
+      "subcategory": "Kinderabenteuer / Tiergeschichten",
+      "cover_url": "images/ebooks/legacy-b0g539rhkh.jpg",
+      "cover_alt": "Originalcover laut bisherigem Autoren-Buchkatalog: Die Wilden Wachauer Windis in Pressburg / Bratislava",
+      "cover_source": "Aus bisherigem Autorenbuchverzeichnis zugehöriger ASIN-Bildlink; als eigene Datei gespeichert",
+      "cover_match": "ASIN und Bildpfad stimmen überein; Motiv noch nicht mit lokaler Originaldatei abgeglichen",
+      "cover_imported_at": "2026-11-10"
     },
     {
       "id": "bestand-die-wilden-windis-auf-geisterwanderung-zu-nittenau",
@@ -567,7 +633,12 @@
       "info": "Im bisherigen Autorenkatalog erfasst. Autorenzuordnung, Originalcover, vollständiges Manuskript und eigene Digitalausgabe noch mit dem lokalen Bücherverzeichnis abgleichen.",
       "legacy_asin": "B0G1LYBRKK",
       "series": "Die wilden Wachauer Windis",
-      "subcategory": "Kinderabenteuer / Tiergeschichten"
+      "subcategory": "Kinderabenteuer / Tiergeschichten",
+      "cover_url": "images/ebooks/legacy-b0g1lybrkk.jpg",
+      "cover_alt": "Originalcover laut bisherigem Autoren-Buchkatalog: Die wilden Windis – Auf Geisterwanderung zu Nittenau",
+      "cover_source": "Aus bisherigem Autorenbuchverzeichnis zugehöriger ASIN-Bildlink; als eigene Datei gespeichert",
+      "cover_match": "ASIN und Bildpfad stimmen überein; Motiv noch nicht mit lokaler Originaldatei abgeglichen",
+      "cover_imported_at": "2026-11-10"
     },
     {
       "id": "bestand-the-wild-wachau-windis-mind-the-tracks",
@@ -585,7 +656,12 @@
       "info": "Im bisherigen Autorenkatalog erfasst. Autorenzuordnung, Originalcover, vollständiges Manuskript und eigene Digitalausgabe noch mit dem lokalen Bücherverzeichnis abgleichen.",
       "legacy_asin": "B0GG5XPGPV",
       "series": "Die wilden Wachauer Windis",
-      "subcategory": "Kinderabenteuer / Tiergeschichten"
+      "subcategory": "Kinderabenteuer / Tiergeschichten",
+      "cover_url": "images/ebooks/legacy-b0gg5xpgpv.jpg",
+      "cover_alt": "Originalcover laut bisherigem Autoren-Buchkatalog: The Wild Wachau Windis – Mind the Tracks!",
+      "cover_source": "Aus bisherigem Autorenbuchverzeichnis zugehöriger ASIN-Bildlink; als eigene Datei gespeichert",
+      "cover_match": "ASIN und Bildpfad stimmen überein; Motiv noch nicht mit lokaler Originaldatei abgeglichen",
+      "cover_imported_at": "2026-11-10"
     },
     {
       "id": "bestand-auswandern-nach-griechenland-der-grosse-praxisratgeber-fur-rentner",
@@ -603,7 +679,12 @@
       "info": "Im bisherigen Autorenkatalog erfasst. Autorenzuordnung, Originalcover, vollständiges Manuskript und eigene Digitalausgabe noch mit dem lokalen Bücherverzeichnis abgleichen.",
       "legacy_asin": "B0GHNB7V34",
       "edition": "Bisherige Ausgabe 2026 – nicht mit dem interaktiven Reader 2027 verwechseln",
-      "subcategory": "Länder & Regionen"
+      "subcategory": "Länder & Regionen",
+      "cover_url": "images/ebooks/legacy-b0ghnb7v34.jpg",
+      "cover_alt": "Originalcover laut bisherigem Autoren-Buchkatalog: Auswandern nach Griechenland – Der große Praxisratgeber für Rentner",
+      "cover_source": "Aus bisherigem Autorenbuchverzeichnis zugehöriger ASIN-Bildlink; als eigene Datei gespeichert",
+      "cover_match": "ASIN und Bildpfad stimmen überein; Motiv noch nicht mit lokaler Originaldatei abgeglichen",
+      "cover_imported_at": "2026-11-10"
     },
     {
       "id": "bestand-leben-unter-der-sonne-balis",
@@ -622,7 +703,12 @@
       "legacy_asin": "B0GK6GCMQ5",
       "subcategory": "Länder & Regionen",
       "historical_isbn": "9783565368532",
-      "metadata_source": "Freigegebene ProjectOS-Buchtitelliste 16.09.2026"
+      "metadata_source": "Freigegebene ProjectOS-Buchtitelliste 16.09.2026",
+      "cover_url": "images/ebooks/legacy-b0gk6gcmq5.jpg",
+      "cover_alt": "Originalcover laut bisherigem Autoren-Buchkatalog: Leben unter der Sonne Balis",
+      "cover_source": "Aus bisherigem Autorenbuchverzeichnis zugehöriger ASIN-Bildlink; als eigene Datei gespeichert",
+      "cover_match": "ASIN und Bildpfad stimmen überein; Motiv noch nicht mit lokaler Originaldatei abgeglichen",
+      "cover_imported_at": "2026-11-10"
     },
     {
       "id": "bestand-vier-wege-der-macht",
@@ -638,7 +724,12 @@
       "cover_verified": false,
       "format_for_direct_reader": "noch_nicht_vorhanden",
       "info": "Im bisherigen Autorenkatalog erfasst. Autorenzuordnung, Originalcover, vollständiges Manuskript und eigene Digitalausgabe noch mit dem lokalen Bücherverzeichnis abgleichen.",
-      "legacy_asin": "B0G6T3WB7Y"
+      "legacy_asin": "B0G6T3WB7Y",
+      "cover_url": "images/ebooks/legacy-b0g6t3wb7y.jpg",
+      "cover_alt": "Originalcover laut bisherigem Autoren-Buchkatalog: VIER WEGE DER MACHT",
+      "cover_source": "Aus bisherigem Autorenbuchverzeichnis zugehöriger ASIN-Bildlink; als eigene Datei gespeichert",
+      "cover_match": "ASIN und Bildpfad stimmen überein; Motiv noch nicht mit lokaler Originaldatei abgeglichen",
+      "cover_imported_at": "2026-11-10"
     },
     {
       "id": "bestand-weltkrieg-ohne-kriegserklarung",
@@ -654,7 +745,12 @@
       "cover_verified": false,
       "format_for_direct_reader": "noch_nicht_vorhanden",
       "info": "Im bisherigen Autorenkatalog erfasst. Autorenzuordnung, Originalcover, vollständiges Manuskript und eigene Digitalausgabe noch mit dem lokalen Bücherverzeichnis abgleichen.",
-      "legacy_asin": "B0GG9LZWDB"
+      "legacy_asin": "B0GG9LZWDB",
+      "cover_url": "images/ebooks/legacy-b0gg9lzwdb.jpg",
+      "cover_alt": "Originalcover laut bisherigem Autoren-Buchkatalog: WELTKRIEG OHNE KRIEGSERKLÄRUNG",
+      "cover_source": "Aus bisherigem Autorenbuchverzeichnis zugehöriger ASIN-Bildlink; als eigene Datei gespeichert",
+      "cover_match": "ASIN und Bildpfad stimmen überein; Motiv noch nicht mit lokaler Originaldatei abgeglichen",
+      "cover_imported_at": "2026-11-10"
     },
     {
       "id": "bestand-ein-leben-im-system-2-0",
@@ -670,7 +766,12 @@
       "cover_verified": false,
       "format_for_direct_reader": "noch_nicht_vorhanden",
       "info": "Im bisherigen Autorenkatalog erfasst. Autorenzuordnung, Originalcover, vollständiges Manuskript und eigene Digitalausgabe noch mit dem lokalen Bücherverzeichnis abgleichen.",
-      "legacy_asin": "B0GDRHX7KG"
+      "legacy_asin": "B0GDRHX7KG",
+      "cover_url": "images/ebooks/legacy-b0gdrhx7kg.jpg",
+      "cover_alt": "Originalcover laut bisherigem Autoren-Buchkatalog: EIN LEBEN IM SYSTEM 2.0",
+      "cover_source": "Aus bisherigem Autorenbuchverzeichnis zugehöriger ASIN-Bildlink; als eigene Datei gespeichert",
+      "cover_match": "ASIN und Bildpfad stimmen überein; Motiv noch nicht mit lokaler Originaldatei abgeglichen",
+      "cover_imported_at": "2026-11-10"
     },
     {
       "id": "bestand-der-deutsche-rentenbetrug",
@@ -686,7 +787,12 @@
       "cover_verified": false,
       "format_for_direct_reader": "noch_nicht_vorhanden",
       "info": "Im bisherigen Autorenkatalog erfasst. Autorenzuordnung, Originalcover, vollständiges Manuskript und eigene Digitalausgabe noch mit dem lokalen Bücherverzeichnis abgleichen.",
-      "legacy_asin": "B0G6Y1C5KQ"
+      "legacy_asin": "B0G6Y1C5KQ",
+      "cover_url": "images/ebooks/legacy-b0g6y1c5kq.jpg",
+      "cover_alt": "Originalcover laut bisherigem Autoren-Buchkatalog: Der deutsche Rentenbetrug",
+      "cover_source": "Aus bisherigem Autorenbuchverzeichnis zugehöriger ASIN-Bildlink; als eigene Datei gespeichert",
+      "cover_match": "ASIN und Bildpfad stimmen überein; Motiv noch nicht mit lokaler Originaldatei abgeglichen",
+      "cover_imported_at": "2026-11-10"
     },
     {
       "id": "bestand-versichert-und-trotzdem-pleite",
@@ -702,7 +808,12 @@
       "cover_verified": false,
       "format_for_direct_reader": "noch_nicht_vorhanden",
       "info": "Im bisherigen Autorenkatalog erfasst. Autorenzuordnung, Originalcover, vollständiges Manuskript und eigene Digitalausgabe noch mit dem lokalen Bücherverzeichnis abgleichen.",
-      "legacy_asin": "B0GKKZXXMV"
+      "legacy_asin": "B0GKKZXXMV",
+      "cover_url": "images/ebooks/legacy-b0gkkzxxmv.jpg",
+      "cover_alt": "Originalcover laut bisherigem Autoren-Buchkatalog: Versichert und trotzdem pleite",
+      "cover_source": "Aus bisherigem Autorenbuchverzeichnis zugehöriger ASIN-Bildlink; als eigene Datei gespeichert",
+      "cover_match": "ASIN und Bildpfad stimmen überein; Motiv noch nicht mit lokaler Originaldatei abgeglichen",
+      "cover_imported_at": "2026-11-10"
     },
     {
       "id": "bestand-der-ausstieg-leben-nach-der-leistung",
@@ -718,7 +829,12 @@
       "cover_verified": false,
       "format_for_direct_reader": "noch_nicht_vorhanden",
       "info": "Im bisherigen Autorenkatalog erfasst. Autorenzuordnung, Originalcover, vollständiges Manuskript und eigene Digitalausgabe noch mit dem lokalen Bücherverzeichnis abgleichen.",
-      "legacy_asin": "B0GK7VM1FQ"
+      "legacy_asin": "B0GK7VM1FQ",
+      "cover_url": "images/ebooks/legacy-b0gk7vm1fq.jpg",
+      "cover_alt": "Originalcover laut bisherigem Autoren-Buchkatalog: Der Ausstieg – Leben nach der Leistung",
+      "cover_source": "Aus bisherigem Autorenbuchverzeichnis zugehöriger ASIN-Bildlink; als eigene Datei gespeichert",
+      "cover_match": "ASIN und Bildpfad stimmen überein; Motiv noch nicht mit lokaler Originaldatei abgeglichen",
+      "cover_imported_at": "2026-11-10"
     },
     {
       "id": "bestand-arbeiten-bis-zum-umfallen",
@@ -734,7 +850,12 @@
       "cover_verified": false,
       "format_for_direct_reader": "noch_nicht_vorhanden",
       "info": "Im bisherigen Autorenkatalog erfasst. Autorenzuordnung, Originalcover, vollständiges Manuskript und eigene Digitalausgabe noch mit dem lokalen Bücherverzeichnis abgleichen.",
-      "legacy_asin": "B0GJTB2748"
+      "legacy_asin": "B0GJTB2748",
+      "cover_url": "images/ebooks/legacy-b0gjtb2748.jpg",
+      "cover_alt": "Originalcover laut bisherigem Autoren-Buchkatalog: Arbeiten bis zum Umfallen",
+      "cover_source": "Aus bisherigem Autorenbuchverzeichnis zugehöriger ASIN-Bildlink; als eigene Datei gespeichert",
+      "cover_match": "ASIN und Bildpfad stimmen überein; Motiv noch nicht mit lokaler Originaldatei abgeglichen",
+      "cover_imported_at": "2026-11-10"
     },
     {
       "id": "bestand-invaliditat-wenn-das-system-dich-nicht-mehr-braucht",
@@ -750,7 +871,12 @@
       "cover_verified": false,
       "format_for_direct_reader": "noch_nicht_vorhanden",
       "info": "Im bisherigen Autorenkatalog erfasst. Autorenzuordnung, Originalcover, vollständiges Manuskript und eigene Digitalausgabe noch mit dem lokalen Bücherverzeichnis abgleichen.",
-      "legacy_asin": "B0GJSF9W41"
+      "legacy_asin": "B0GJSF9W41",
+      "cover_url": "images/ebooks/legacy-b0gjsf9w41.jpg",
+      "cover_alt": "Originalcover laut bisherigem Autoren-Buchkatalog: Invalidität – Wenn das System dich nicht mehr braucht",
+      "cover_source": "Aus bisherigem Autorenbuchverzeichnis zugehöriger ASIN-Bildlink; als eigene Datei gespeichert",
+      "cover_match": "ASIN und Bildpfad stimmen überein; Motiv noch nicht mit lokaler Originaldatei abgeglichen",
+      "cover_imported_at": "2026-11-10"
     },
     {
       "id": "bestand-pflegegeld-der-kampf-gegen-gutachter-und-systeme",
@@ -766,7 +892,12 @@
       "cover_verified": false,
       "format_for_direct_reader": "noch_nicht_vorhanden",
       "info": "Im bisherigen Autorenkatalog erfasst. Autorenzuordnung, Originalcover, vollständiges Manuskript und eigene Digitalausgabe noch mit dem lokalen Bücherverzeichnis abgleichen.",
-      "legacy_asin": "B0GJSRK4S7"
+      "legacy_asin": "B0GJSRK4S7",
+      "cover_url": "images/ebooks/legacy-b0gjsrk4s7.jpg",
+      "cover_alt": "Originalcover laut bisherigem Autoren-Buchkatalog: Pflegegeld – Der Kampf gegen Gutachter und Systeme",
+      "cover_source": "Aus bisherigem Autorenbuchverzeichnis zugehöriger ASIN-Bildlink; als eigene Datei gespeichert",
+      "cover_match": "ASIN und Bildpfad stimmen überein; Motiv noch nicht mit lokaler Originaldatei abgeglichen",
+      "cover_imported_at": "2026-11-10"
     },
     {
       "id": "bestand-der-krieg-im-system-band-2",
@@ -782,7 +913,12 @@
       "cover_verified": false,
       "format_for_direct_reader": "noch_nicht_vorhanden",
       "info": "Im bisherigen Autorenkatalog erfasst. Autorenzuordnung, Originalcover, vollständiges Manuskript und eigene Digitalausgabe noch mit dem lokalen Bücherverzeichnis abgleichen.",
-      "legacy_asin": "B0GGH1ZMCM"
+      "legacy_asin": "B0GGH1ZMCM",
+      "cover_url": "images/ebooks/legacy-b0ggh1zmcm.jpg",
+      "cover_alt": "Originalcover laut bisherigem Autoren-Buchkatalog: Der Krieg im System Band 2",
+      "cover_source": "Aus bisherigem Autorenbuchverzeichnis zugehöriger ASIN-Bildlink; als eigene Datei gespeichert",
+      "cover_match": "ASIN und Bildpfad stimmen überein; Motiv noch nicht mit lokaler Originaldatei abgeglichen",
+      "cover_imported_at": "2026-11-10"
     },
     {
       "id": "bestand-der-letzte-spielraum-band-3",
@@ -798,7 +934,12 @@
       "cover_verified": false,
       "format_for_direct_reader": "noch_nicht_vorhanden",
       "info": "Im bisherigen Autorenkatalog erfasst. Autorenzuordnung, Originalcover, vollständiges Manuskript und eigene Digitalausgabe noch mit dem lokalen Bücherverzeichnis abgleichen.",
-      "legacy_asin": "B0GGJ4TL28"
+      "legacy_asin": "B0GGJ4TL28",
+      "cover_url": "images/ebooks/legacy-b0ggj4tl28.jpg",
+      "cover_alt": "Originalcover laut bisherigem Autoren-Buchkatalog: Der letzte Spielraum Band 3",
+      "cover_source": "Aus bisherigem Autorenbuchverzeichnis zugehöriger ASIN-Bildlink; als eigene Datei gespeichert",
+      "cover_match": "ASIN und Bildpfad stimmen überein; Motiv noch nicht mit lokaler Originaldatei abgeglichen",
+      "cover_imported_at": "2026-11-10"
     },
     {
       "id": "bestand-auswandern-bulgarien",
