@@ -269,7 +269,13 @@
         "paused_reason": "Vertragsangaben und tatsächlicher Leserzugang noch nicht vollständig geprüft; bestehende rechtliche Informationsseite schreibt vor einem echten Angebot verbindliche Zugangsbedingungen und geprüfte Steuer-/Datenschutzangaben vor.",
         "consent_terms_updated": "2026-11-10",
         "order_confirmation_email_prepared": true,
-        "required_consent_tested": false
+        "required_consent_tested": true,
+        "required_consent_0_eur_checkout_behavior": "LIVE GEPRUEFT: 9,90 EUR Ungarn, 1x 100% Gutschein korrekt auf 0,00 EUR; mit beiden nicht angekreuzten Zustimmungen wurden zwei eigenstaendige Fehler angezeigt; Testbestellung blockiert und nicht abgeschlossen.",
+        "prechecked": false,
+        "consent_form_error_message": "Systeme.io Standardplatzhalter je Feld: 'Meldung, wenn das Kontrollkästchen nicht angekreuzt ist'; kundengerechter Text im visuellen Editor noch anzupassen.",
+        "complete_new_order_tested": false,
+        "confirmation_email_delivery_tested": false,
+        "coupon_removed": true
       },
       "access_terms": {
         "minimum_months_from_purchase": 24,
@@ -283,8 +289,8 @@
         "checked_2026_11_10": true,
         "legal_basis": "AT FAGG §18 Abs1 Z11; E-Book digital content; applicability to online access to be reviewed",
         "separate_customer_consents_prepared": 2,
-        "required_checkbox_validation": "UNGARN noch nicht via Checkout getestet; Benutzer hat nur Griechenland Optional ausgeschaltet",
-        "checkout_consent_record": "Nachweis erst nach einer Testtransaktion möglich",
+        "required_checkbox_validation": "LIVE GEPRUEFT 2026-11-10: beide Zustimmungspflichtfelder blockieren 0,00-EUR-Test mit je einer sichtbaren Fehlermeldung; keine Bestellung",
+        "checkout_consent_record": "Keine abgeschlossene Ungarn-Transaktion; Einwilligungsprotokoll nicht pruefbar",
         "durable_contract_confirmation_with_consent": "Buchspezifische Bestellbestätigungs-E-Mail wurde erstellt und am Digitalprodukt hinterlegt; Pflichtfeld-/Zustellungsprüfung und zeitliche Reihenfolge vor Leistungsbeginn offen",
         "paid_sale_linked": false,
         "rule": "Keinen rechtssicheren Ausschluss des Rücktrittsrechts behaupten, bevor beide Pflichtkästchen und die vollständige Bestätigung auf dauerhaftem Datenträger nachgewiesen sind.",
@@ -1281,7 +1287,7 @@
     "access_duration": "Nutzer hat 24 Monate garantierten Online-Lesezugang je Digitalbuch ab Kauf bestätigt; GitHub-Kaufhinweise und Systeme.io Bibliotheksbeschreibung aktualisiert. Käuferseitige Anmeldetests, Steuer-/Datenschutzprüfung und technische Ersatzbereitstellung bleiben offen.",
     "branding_ungarn": "Digitaler Ungarn-Titel jetzt auch in Systeme.io als Ungarn 2027 – Digitalbuch für Auswanderer geführt; gedruckte Originalausgaben bleiben unverändert. Das alte Cover muss noch getrennt bearbeitet werden.",
     "withdrawal_protection": "10.11.2026: Zwei getrennte Rücktritts-/Sofortbereitstellungs-Checkboxen je Buch im Checkout gespeichert; buchspezifische Vertragsbestätigungs-E-Mails in Systeme.io angelegt und über confirmationEmailId zugeordnet. Rechtssicherer Entfall des Rücktrittsrechts nicht belegt: Checkbox-Pflichtstatus, tatsächlicher Transaktionsnachweis, Zustellung/Reihenfolge der Vertragsbestätigung und persönlicher Lesetest fehlen. Keine Kaufschaltflächen/Produktverküpfungen aktiv.",
-    "consent_validation_20261110": "Griechenland: echter Checkout-Test mit 100% 1x Gutschein und Gesamtsumme 0,00 EUR, ohne gesetzliche Zustimmung -> Blockade mit zwei getrennten Fehlermeldungen bestaetigt. 0,00 EUR Bestellung mit angekreuzten Feldern NICHT abgeschlossen (PayPal-Schritt/Automations-Timeout). Gutschein von Angebot entkoppelt, geloescht, Coupon UI und PaymentButton entfernt, Produkt wieder entkoppelt. Ungarn Pflichtfeld noch nicht getestet. ConfirmationEmails sind an beiden Produkten hinterlegt, Versand noch nicht getestet. Keine Verkaufsfreigabe."
+    "consent_validation_20261110": "Griechenland und Ungarn: separate Zustimmungen bei frischem Checkout nicht vorangekreuzt, mit beiden ungekreuzten Feldern blockierten zwei sichtbare Fehlermeldungen jeweils den 0,00-EUR-Coupon-Test. Keine 9,90-EUR-Zahlung, kein neuer Kundenabschluss. Beide Tests nachweislich bereinigt (1x-Coupons entfernt/gelöscht, Testbuttons entfernt, digitale Produkte vom Angebot entkoppelt). Vertragsbestaetigungsmails sind je Produkt hinterlegt, Versand nach erfolgreichem Kauf und Mitgliederzugriff nicht vollstaendig geprueft. Nicht als live verkaufen markieren."
   },
   "price_categories": [
     {
