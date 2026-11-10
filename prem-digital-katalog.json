@@ -248,6 +248,23 @@
         "paid_charge_tested": false,
         "all_downloads_verified": false,
         "notes": "Neben Kunden-ZIP ist eine PRUEFFASSUNG als zweite auszuliefernde Ressource hinterlegt. Vor kostenpflichtiger Freigabe Dateien prüfen und ausschließlich freigegebene Produktfassung ausliefern."
+      },
+      "store_check": {
+        "date": "2026-11-10",
+        "store_url": "https://topdiveair.systeme.io/jfxprem",
+        "publicly_listed": true,
+        "checkout_overlay_opened": true,
+        "listed_price_eur": 29,
+        "payment_methods_visible": [
+          "card",
+          "paypal"
+        ],
+        "checkout_order_tested": false,
+        "file_download_tested": false,
+        "legal_impressum_visible": false,
+        "legal_privacy_visible": false,
+        "store_product_direct_url": null,
+        "notes": "Beide Produktkarten im öffentlichen nativen Systeme.io Digital Store ohne Login geöffnet; keine Bestellung abgeschlossen. Auf der untersuchten Oberfläche Impressum-/Datenschutzlinks nicht sichtbar. Kauf und Dateiinhalt nicht verifiziert."
       }
     },
     {
@@ -274,6 +291,23 @@
         "access_email_received": false,
         "all_downloads_verified": false,
         "notes": "Trotz 100%-Rabatt verlangte das Formular PayPal bzw. Karte; Bestellung wurde sicher abgebrochen. Testcoupon und sichtbares Testfeld danach entfernt."
+      },
+      "store_check": {
+        "date": "2026-11-10",
+        "store_url": "https://topdiveair.systeme.io/jfxprem",
+        "publicly_listed": true,
+        "checkout_overlay_opened": true,
+        "listed_price_eur": 29,
+        "payment_methods_visible": [
+          "card",
+          "paypal"
+        ],
+        "checkout_order_tested": false,
+        "file_download_tested": false,
+        "legal_impressum_visible": false,
+        "legal_privacy_visible": false,
+        "store_product_direct_url": null,
+        "notes": "Beide Produktkarten im öffentlichen nativen Systeme.io Digital Store ohne Login geöffnet; keine Bestellung abgeschlossen. Auf der untersuchten Oberfläche Impressum-/Datenschutzlinks nicht sichtbar. Kauf und Dateiinhalt nicht verifiziert."
       }
     },
     {
@@ -1170,7 +1204,8 @@
     "metadata_caveat": "Historische ASIN-Zuordnungen sind nicht neu geprüft. Bei bestehendem DIE ADER Eintrag und früherer Griechenland-Ausgabe besteht möglicher ASIN-Konflikt B0HPNTM55C; vor Veröffentlichung eines Kaufangebots gesondert klären.",
     "additional_project_titles": 5,
     "price_group_change": "Vier vorhandene Angebote in zwei Preiskategorien 9,90 EUR und 29,00 EUR gruppiert. Keine Freigabe für direkten Kauf, bis Zahlung und Auslieferung live geprüft wurden.",
-    "delivery_note": "Systeme.io MCP weist explizit darauf hin, dass downloadable_file-Ressourcen über die Digital Store Area und nicht über Funnel-Offers voll unterstützt sind. 29-EUR-Planungspakete in Funnels daher nicht als sicher zugestellt werten ohne echten Nachweis. Die Griechenland-Prüffassung ist weiterhin als zweite Dateiressource angehängt; Änderung ohne unterstützte Dateizuordnung unterblieb."
+    "delivery_note": "Systeme.io MCP weist explizit darauf hin, dass downloadable_file-Ressourcen über die Digital Store Area und nicht über Funnel-Offers voll unterstützt sind. 29-EUR-Planungspakete in Funnels daher nicht als sicher zugestellt werten ohne echten Nachweis. Die Griechenland-Prüffassung ist weiterhin als zweite Dateiressource angehängt; Änderung ohne unterstützte Dateizuordnung unterblieb.",
+    "store_product_discovery": "10.11.2026: Nativer Systeme.io Store https://topdiveair.systeme.io/jfxprem mit beiden 29-EUR-Downloadprodukten und Checkout-Overlay öffentlich bestätigt. Es wurden keine direkten geprüften Kauf-URLs pro Produkt und keine End-to-End-Käufe bestätigt. Externe Amazon-Kauflinks bleiben entfernt."
   },
   "price_categories": [
     {
