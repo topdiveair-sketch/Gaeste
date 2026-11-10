@@ -1,4 +1,4 @@
-# Freigabeprotokoll: Prem Digital Edition – Stand 9. November 2026
+# Freigabeprotokoll: Prem Digital Edition – Stand 10. November 2026
 
 **Status: NO-GO für echte Verkäufe.** Volltexte stehen geschützt bereit, aber ein erfolgreicher Zahlungs-/Autorisierungs-/Rücktritts-Test sowie die rechtliche und steuerliche Freigabe fehlen.
 
@@ -39,3 +39,19 @@ Keine neuen bezahlten Plattformtarife oder Werbebudgets genehmigt. Das Systeme.i
 - WKO: https://www.wko.at/internetrecht/webshops-die-wesentlichen-bestimmungen-verbraucherrechte
 - WKO: https://www.wko.at/internetrecht/vgg-leistungsfrist-leistungsaenderung
 - USP: https://www.usp.gv.at/themen/steuern-finanzen/umsatzsteuer-ueberblick/weitere-informationen-zur-umsatzsteuer/umsaetze-mit-auslandsbezug/grenzueberschreitende-dienstleistungen/elektronisch-erbrachte-dienstleistungen_telekommunikations_rundfunk--und-fernsehdienstleistungen.html
+
+## Aktualisierung 10. November 2026 – finanzielle und rechtliche Stop-Kriterien
+
+- **Bestandsprüfung:** Systeme.io-Griechenland-Kurs ist aktiv, aber die neue 9,90-EUR-Verkaufsseite hat weiterhin **keine Zahlungsmethoden**. Produkt 3478160 weist einen einmaligen 990-Cent-EUR-Preisplan und nur zehn Griechenland-Module unter `partial_access` auf. Das neue Ungarn-Produkt hat eigene sieben Module; bezahltes End-to-End-Verhalten nicht bestätigt.
+- **Technisch beschränkte Testaktivierung:** `stripe:card` ließ sich zeitweise als einzige Zahlart beim neuen Funnel speichern. Die anschließende öffentliche Checkout-Verifikation schlug mit Timeout fehl; Zahlung wurde wieder entfernt und der deaktivierte Zustand verifiziert. **Keine erfolgreiche Live- oder Testabbuchung und keine erfolgreiche Freischaltung bestätigt.** Andere 29-EUR-Funnels unverändert.
+- **WKO Eigenverlag, Stand 30.10.2026:** Vertrieb ausschließlich eigener urheberrechtlich kontrollierter Bücher ist grundsätzlich von der Gewerbeordnung ausgenommen; bei Verlagsvertrieb fremder Autoren kann das freie Gewerbe „Verlag“ erforderlich sein. Quelle: https://www.wko.at/information-consulting/buch-medienwirtschaft/eigenverlag-selbstverlag-erstinformationen
+- **AMS-Leistungen / Selbstständigkeit:** Gemäß AMS gelten seit 01.01.2026 verschärfte Regeln für geringfügige Erwerbstätigkeit und deren Vereinbarkeit mit Arbeitslosengeld/Notstandshilfe. Vor Live-Umsätzen die konkrete, schriftlich nachvollziehbare Auskunft des AMS zur eigenen Konstellation sicherstellen. Quelle: https://www.ams.at/arbeitsuchende/faq
+- **Umsatzsteuer:** WKO bestätigt 55.000-EUR-Kleinunternehmergrenze und gesonderte umsatzsteuerliche Behandlung grenzüberschreitender elektronischer Leistungen innerhalb der EU. Steuerstatus und gegebenenfalls FinanzOnline-Meldung/UID/OSS **nicht geprüft**. Quelle: https://www.wko.at/steuern/kleinunternehmerregelung-umsatzsteuer
+- **Käuferrechte:** WKO FAGG/VGG-Informationen zu Rücktritt, unmittelbarer Bereitstellung, Preisangaben und digitalem Leistungszugang geprüft; Produkteigenschaften/erforderliche Updates und Zugangsdauer müssen im Vertragsangebot verbindlich sein. Quellen: https://www.wko.at/internetrecht/ruecktrittsrecht-bei-dienstleistungen-im-internet ; https://www.wko.at/internetrecht/vgg-leistungsfrist-leistungsaenderung
+- **Entscheidung:** NO-GO für echte Buchverkäufe bis AMS/Steuerstatus klar und ein eigener, korrekter Bezahl-/Autorisierungstest durchgeführt wurde. **Keine fremden Zahlungen, keine Steuer-/Gewerbemeldungen ohne berechtigte Angaben, keine kostenpflichtigen Pläne.**
+
+## Optionale spätere Sparte – Wissenschaft & Hochschulschriften (nicht freigegeben)
+
+- In `prem-digital-katalog.json` technisch als **intern / deaktiviert** vorgesehen, inklusive Recherchemetadaten, Open Access, Drittmaterial-, Sperrfrist- und Urheberrechtsprüfung.
+- Marktvergleich nach Anbieterquellen: GRIN (https://www.grin.com/autorenhonorare/), Diplom.de (https://www.diplom.de/hilfe.html), ProQuest (https://about.proquest.com/de/dissertations/include-dissertations-and-theses/), u:theses Wien (https://bibliothek.univie.ac.at/u-theses.html) und TU Wien reposiTUm (https://www.tuwien.at/bibliothek/beratung-und-kurse/fokus-abschlussarbeiten/).
+- Hochschuleinreichung nach § 86 UG wird **nicht** durch einen kommerziellen Readerverkauf ersetzt. Embargo, vollständige kommerzielle Rechte, korrekte akademische Qualifikation, DOI/Metadaten und externe Lizenzrechte gehören zu Pflichtprüfungen. Ein OpenAIRE-kompatibles Metadatenschema/OAI-PMH ist mittelfristig denkbar, aber noch nicht integriert und eine Hochschulpartnerschaft besteht nicht.
