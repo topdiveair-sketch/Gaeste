@@ -197,7 +197,10 @@
         "library_renamed_verified": true,
         "product_linked": false,
         "checkout_button_present": false,
-        "paused_reason": "Vertragsangaben und tatsächlicher Leserzugang noch nicht vollständig geprüft; bestehende rechtliche Informationsseite schreibt vor einem echten Angebot verbindliche Zugangsbedingungen und geprüfte Steuer-/Datenschutzangaben vor."
+        "paused_reason": "Vertragsangaben und tatsächlicher Leserzugang noch nicht vollständig geprüft; bestehende rechtliche Informationsseite schreibt vor einem echten Angebot verbindliche Zugangsbedingungen und geprüfte Steuer-/Datenschutzangaben vor.",
+        "consent_terms_updated": "2026-11-10",
+        "order_confirmation_email_prepared": true,
+        "required_consent_tested": false
       },
       "reader_title": "Rainsoft-Book – Meine Digitalbücher",
       "access_terms": {
@@ -211,11 +214,15 @@
         "checked_2026_11_10": true,
         "legal_basis": "AT FAGG §18 Abs1 Z11; E-Book digital content; applicability to online access to be reviewed",
         "separate_customer_consents_prepared": 2,
-        "required_checkbox_validation": "nicht geprüft/über API nicht konfigurierbar",
-        "checkout_consent_record": "noch nicht durch Testbestellung geprüft",
-        "durable_contract_confirmation_with_consent": "nicht eingerichtet/nicht nachgewiesen",
+        "required_checkbox_validation": "Im visuellen Editor noch nicht als Pflichtfeld nachgewiesen; API zeigt diese Einstellung nicht",
+        "checkout_consent_record": "Nachweis erst nach einer Testtransaktion möglich",
+        "durable_contract_confirmation_with_consent": "Buchspezifische Bestellbestätigungs-E-Mail wurde erstellt und am Digitalprodukt hinterlegt; Pflichtfeld-/Zustellungsprüfung und zeitliche Reihenfolge vor Leistungsbeginn offen",
         "paid_sale_linked": false,
-        "rule": "Keinen rechtssicheren Ausschluss des Rücktrittsrechts behaupten, bevor beide Pflichtkästchen und die vollständige Bestätigung auf dauerhaftem Datenträger nachgewiesen sind."
+        "rule": "Keinen rechtssicheren Ausschluss des Rücktrittsrechts behaupten, bevor beide Pflichtkästchen und die vollständige Bestätigung auf dauerhaftem Datenträger nachgewiesen sind.",
+        "confirmation_email_saved": true,
+        "confirmation_email_bound_to_product": true,
+        "confirmation_email_sent_tested": false,
+        "confirmation_email_id": 13400760
       }
     },
     {
@@ -252,7 +259,10 @@
         "reader_title": "Rainsoft-Book – Meine Digitalbücher",
         "product_linked": false,
         "checkout_button_present": false,
-        "paused_reason": "Vertragsangaben und tatsächlicher Leserzugang noch nicht vollständig geprüft; bestehende rechtliche Informationsseite schreibt vor einem echten Angebot verbindliche Zugangsbedingungen und geprüfte Steuer-/Datenschutzangaben vor."
+        "paused_reason": "Vertragsangaben und tatsächlicher Leserzugang noch nicht vollständig geprüft; bestehende rechtliche Informationsseite schreibt vor einem echten Angebot verbindliche Zugangsbedingungen und geprüfte Steuer-/Datenschutzangaben vor.",
+        "consent_terms_updated": "2026-11-10",
+        "order_confirmation_email_prepared": true,
+        "required_consent_tested": false
       },
       "access_terms": {
         "minimum_months_from_purchase": 24,
@@ -266,11 +276,15 @@
         "checked_2026_11_10": true,
         "legal_basis": "AT FAGG §18 Abs1 Z11; E-Book digital content; applicability to online access to be reviewed",
         "separate_customer_consents_prepared": 2,
-        "required_checkbox_validation": "nicht geprüft/über API nicht konfigurierbar",
-        "checkout_consent_record": "noch nicht durch Testbestellung geprüft",
-        "durable_contract_confirmation_with_consent": "nicht eingerichtet/nicht nachgewiesen",
+        "required_checkbox_validation": "Im visuellen Editor noch nicht als Pflichtfeld nachgewiesen; API zeigt diese Einstellung nicht",
+        "checkout_consent_record": "Nachweis erst nach einer Testtransaktion möglich",
+        "durable_contract_confirmation_with_consent": "Buchspezifische Bestellbestätigungs-E-Mail wurde erstellt und am Digitalprodukt hinterlegt; Pflichtfeld-/Zustellungsprüfung und zeitliche Reihenfolge vor Leistungsbeginn offen",
         "paid_sale_linked": false,
-        "rule": "Keinen rechtssicheren Ausschluss des Rücktrittsrechts behaupten, bevor beide Pflichtkästchen und die vollständige Bestätigung auf dauerhaftem Datenträger nachgewiesen sind."
+        "rule": "Keinen rechtssicheren Ausschluss des Rücktrittsrechts behaupten, bevor beide Pflichtkästchen und die vollständige Bestätigung auf dauerhaftem Datenträger nachgewiesen sind.",
+        "confirmation_email_saved": true,
+        "confirmation_email_bound_to_product": true,
+        "confirmation_email_sent_tested": false,
+        "confirmation_email_id": 13400766
       }
     },
     {
@@ -1259,7 +1273,7 @@
     "reader_safety_status": "10.11.2026: Beide 9,90-EUR-Angebote im Systeme.io Funnel von digitalen Produkten entkoppelt und PaymentButton entfernt; die 68 Ungarn-Lektionen und 85 Griechenland-Lektionen bleiben in der Bücherbibliothek aktiv. Keine neuen Zahlungen angenommen. Wiederfreigabe nach Vertrag/Datenschutz/Steuerprüfung und End-to-End-Auslieferungstest.",
     "access_duration": "Nutzer hat 24 Monate garantierten Online-Lesezugang je Digitalbuch ab Kauf bestätigt; GitHub-Kaufhinweise und Systeme.io Bibliotheksbeschreibung aktualisiert. Käuferseitige Anmeldetests, Steuer-/Datenschutzprüfung und technische Ersatzbereitstellung bleiben offen.",
     "branding_ungarn": "Digitaler Ungarn-Titel jetzt auch in Systeme.io als Ungarn 2027 – Digitalbuch für Auswanderer geführt; gedruckte Originalausgaben bleiben unverändert. Das alte Cover muss noch getrennt bearbeitet werden.",
-    "withdrawal_protection": "10.11.2026: §18 Abs 1 Z11 FAGG geprüft. Zwei getrennte Zustimmungs-Checkboxen auf Griechenland- und Ungarn-Checkout erstellt. Pflichtfeld-Status und dokumentierte Auftragsbestätigung sind über die verfügbare API nicht verfügbar/nicht verifiziert. Beide Angebote bleiben im Funnel ohne Produktverknüpfung; kein Verkauf als rechtssicher gekennzeichnet."
+    "withdrawal_protection": "10.11.2026: Zwei getrennte Rücktritts-/Sofortbereitstellungs-Checkboxen je Buch im Checkout gespeichert; buchspezifische Vertragsbestätigungs-E-Mails in Systeme.io angelegt und über confirmationEmailId zugeordnet. Rechtssicherer Entfall des Rücktrittsrechts nicht belegt: Checkbox-Pflichtstatus, tatsächlicher Transaktionsnachweis, Zustellung/Reihenfolge der Vertragsbestätigung und persönlicher Lesetest fehlen. Keine Kaufschaltflächen/Produktverküpfungen aktiv."
   },
   "price_categories": [
     {
