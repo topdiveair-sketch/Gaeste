@@ -24,6 +24,10 @@ section .subgenres{color:var(--muted);margin:0 0 17px;font-size:14px}
 .book-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(238px,1fr));gap:14px}
 .book{background:#fff;border:1px solid var(--border);border-radius:14px;padding:21px;display:flex;flex-direction:column;gap:10px;box-shadow:0 5px 23px #153e6010}
 .book-cover{display:flex;align-items:center;justify-content:center;height:290px;margin:-21px -21px 5px;background:linear-gradient(135deg,#dae8f3,#f1f6fb);border-radius:14px 14px 0 0;padding:14px;overflow:hidden}
+.book-cover.no-original{background:linear-gradient(145deg,#d6e6ed,#edf2f8);border-bottom:1px solid #d7e2ea}
+.no-original-cover{width:156px;min-height:214px;background:linear-gradient(160deg,#18456d,#0e2f4e);border-left:9px solid #d0af77;box-shadow:6px 8px 18px #0e34542b;border-radius:3px 9px 9px 3px;padding:21px 13px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:13px;text-align:center;color:#fff}
+.no-original-cover strong{font:700 16px/1.25 Georgia,serif}
+.no-original-cover small{font-size:11px;color:#f4d99e;line-height:1.5}
 .book-cover img{max-width:100%;max-height:100%;height:auto;width:auto;object-fit:contain;box-shadow:0 12px 26px #0c223b46;border-radius:4px}
 .book .teaser{font-size:14px;color:#334f63;margin:0}
 .book .preview-price{font-weight:800;color:#194b74;font-size:17px;margin:1px 0 0}
@@ -52,7 +56,7 @@ footer{max-width:1120px;margin:auto;padding:26px 18px 45px;border-top:1px solid 
  <label for="search">Nach Buch oder Autor suchen<input id="search" type="search" placeholder="z. B. Griechenland, Thriller, Windis" autocomplete="off"></label>
  <label for="genre">Genre auswählen<select id="genre"><option value="">Alle Genres</option></select></label>
  </div>
- <p class="note">Das Angebot befindet sich im Aufbau. Ein Kaufbutton erscheint nur bei einem ausdrücklich als geprüft markierten Direktangebot. Andere Bücher sind noch nicht über diesen Dienst erhältlich.</p>
+ <p class="note">Dieser Katalog führt auch Bücher aus dem bisherigen Autorenverzeichnis auf. Bei Titeln ohne Originalcover ist die Übernahme aus dem lokalen Bücherordner noch offen. Ein Kaufbutton erscheint nur bei nachweislich getesteten Direktangeboten.</p>
 </div>
 <nav id="genre-nav" aria-label="Verfügbare Buchgenres"></nav>
 <p id="result-count" class="note" aria-live="polite">Drei erste Buchausgaben im Aufbau. Noch kein Live-Verkauf.</p>
@@ -82,6 +86,7 @@ const search=document.getElementById('search');
 const planned=document.getElementById('planned-genres');
 const counter=document.getElementById('result-count');
 const statusLabels={
+'katalog_erfasst_verkauf_nicht_geprueft':'Im Bücherverzeichnis erfasst · Direktlese-Ausgabe noch nicht verfügbar',
 'testversion_nicht_kaufbar':'Reader-Testversion – noch nicht kaufbar',
 'direktverkauf_nicht_ende_zu_ende_getestet':'Bezahlung und Auslieferung noch nicht vollständig geprüft',
 'eigene_digitalausgabe_ausstehend':'Digitalausgabe in Vorbereitung'
@@ -101,6 +106,14 @@ function makeEl(tag,className,content){
 }
 function makeBook(b){
  const card=makeEl('article','book');
+ if(!b.cover_url){
+  const cover=makeEl('div','book-cover no-original');
+  cover.setAttribute('aria-label','Originalcover noch nicht bereitgestellt');
+  const mock=makeEl('div','no-original-cover');
+  mock.append(makeEl('strong','',b.title),makeEl('small','','Originalcover wird ergänzt'));
+  cover.append(mock);
+  card.append(cover);
+ }
  if(typeof b.cover_url==='string'&&/^images\/ebooks\/[a-z0-9-]+\.jpg$/.test(b.cover_url)){
   const cover=makeEl('div','book-cover');
   const img=document.createElement('img');
@@ -144,10 +157,15 @@ fetch('./prem-digital-katalog.json',{cache:'no-store'})
     const term=search.value.trim().toLocaleLowerCase('de');
     const chosen=select.value;
     const matches=books.filter(b=>(!chosen||b.category===chosen)&&
-      (!term||[b.title,b.author,b.subtitle,b.edition,b.subcategory].filter(Boolean).join(' ').toLocaleLowerCase('de').includes(term)));
+      (!term||[b.title,b.author,b.subtitle,b.edition,b.subcategory,b.legacy_asin,b.isbn,b.legacy_isbn,b.series].filter(Boolean).join(' ').toLocaleLowerCase('de').includes(term)));
     host.replaceChildren();
     for(const c of cats){
-      const inCat=matches.filter(b=>b.category===c.id);
+      const inCat=matches.filter(b=>b.category===c.id).sort((a,b)=>{
+        const ap=['griechenland-2027-reader','ungarn-2027','die-ader'].indexOf(a.id);
+        const bp=['griechenland-2027-reader','ungarn-2027','die-ader'].indexOf(b.id);
+        if(ap>=0||bp>=0)return (ap<0?999:ap)-(bp<0?999:bp);
+        return a.title.localeCompare(b.title,'de',{sensitivity:'base',numeric:true});
+      });
       if(!inCat.length)continue;
       const s=makeEl('section');s.id=c.id;s.append(makeEl('h2','',c.label));
       const sub=Array.isArray(c.subcategories)?c.subcategories.join(' · '):'';
