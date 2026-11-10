@@ -158,11 +158,12 @@ const counter=document.getElementById('result-count');
 const statusLabels={
 'katalog_erfasst_verkauf_nicht_geprueft':'Im Bücherverzeichnis erfasst · Direktlese-Ausgabe noch nicht verfügbar',
 'testversion_nicht_kaufbar':'Reader-Testversion – noch nicht kaufbar',
+'pilot_sale_active':'Begrenzter Direktverkauf · Auslieferung noch nicht vollstaendig live geprüft',
 'direktverkauf_nicht_ende_zu_ende_getestet':'Bezahlung und Auslieferung noch nicht vollständig geprüft',
 'eigene_digitalausgabe_ausstehend':'Digitalausgabe in Vorbereitung'
 };
 function isSafeBuyLink(book){
-  if(book.status!=='live_verified' || typeof book.buy_url!=='string')return false;
+  if(!['live_verified','pilot_sale_active'].includes(book.status) || typeof book.buy_url!=='string')return false;
   try{
     const u=new URL(book.buy_url);
     return u.protocol==='https:' && !/(^|\.)((amazon|amzn|epubli|thalia|hugendubel|buchhandel|bol)\.[a-z.]+)$/i.test(u.hostname);
@@ -202,7 +203,7 @@ function makeBook(b){
  card.append(makeEl('h3','',b.title),makeEl('p','meta',[b.subtitle,b.edition,b.author].filter(Boolean).join(' · ')));
  if(b.subcategory)card.append(makeEl('div','subgenre',b.subcategory));
  if(typeof b.teaser==='string'&&b.teaser.trim())card.append(makeEl('p','teaser',b.teaser));
- if(b.price_eur!==undefined && b.price_eur!==null && b.status!=='live_verified'){
+ if(b.price_eur!==undefined && b.price_eur!==null && !['live_verified','pilot_sale_active'].includes(b.status)){
   const p=makeEl('p','preview-price',Number(b.price_eur).toLocaleString('de-AT',{style:'currency',currency:'EUR'})+' · geplanter Preis');
   card.append(p);
  }
@@ -211,7 +212,7 @@ function makeBook(b){
  }
  if(typeof b.tools_url==='string'&&/^[-a-z0-9]+\.html$/.test(b.tools_url)){const a=makeEl('a','preview','Budgetrechner und Checkliste testen');a.href=b.tools_url;card.append(a);}
  if(isSafeBuyLink(b)){
-   const a=makeEl('a','buy','Jetzt direkt kaufen');a.href=b.buy_url;a.target='_blank';a.rel='noopener noreferrer';card.append(a);
+   const a=makeEl('a','buy',b.status==='pilot_sale_active'?'Griechenland für 9,90 € direkt kaufen':'Jetzt direkt kaufen');a.href=b.buy_url;a.target='_blank';a.rel='noopener noreferrer';card.append(a);
  }else{card.append(makeEl('span','state',statusLabels[b.status]||'Kaufangebot noch nicht bestätigt'));}
  return card;
 }
@@ -263,7 +264,7 @@ fetch('./prem-digital-katalog.json',{cache:'no-store'})
       for(const b of inCat)grid.append(makeBook(b));
       s.append(grid);host.append(s);
     }
-    counter.textContent=matches.length+' erfasste Titel und digitale Angebote · '+matches.filter(isSafeBuyLink).length+' nachweislich kaufbare Direktangebote';
+    counter.textContent=matches.length+' erfasste Titel und digitale Angebote · '+matches.filter(isSafeBuyLink).length+' direkt verlinkte Kaufangebote (einschließlich Pilotstart)';
     if(!matches.length)host.append(makeEl('p','note','Keine Titel gefunden. Andere Suchbegriffe verwenden.'));
   }
   search.addEventListener('input',render);
