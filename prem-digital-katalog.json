@@ -169,7 +169,7 @@
       "buy_url": null,
       "subcategory": "Auswanderer-Ratgeber",
       "reader_book_id": "griechenland-2027-reader",
-      "info": "0-EUR-Testbestellung über Systeme.io erfolgreich; Bestätigungsseite und automatische Zugangsmail nachweislich erhalten. Persönliche Passwortaktivierung, Zugriff auf alle Kapitel, echter Zahlungseingang und Vertragsunterlagen nicht abschließend geprüft. Noch nicht als zahlungspflichtiges Angebot freigegeben.",
+      "info": "0-EUR-Testbestellung und automatische Zugangsmail bestätigt. Persönlicher Aktivierungslink öffnet echtes Formular zum Anlegen eines Passworts. Automatisierte Eingabe scheiterte; Anmeldung und tatsächliche Lektüre als Käufer nicht verifiziert. Dankeseite enthält jetzt korrekte Schritte zum Erstzugang. Echte 9,90-EUR-Zahlung, vollständige Buchfreischaltung, Vertragsdetails und Steuern weiterhin offen.",
       "cover_url": "images/ebooks/griechenland-2027.jpg",
       "cover_alt": "Cover: Auswandern nach Griechenland – J.F.X. Prem",
       "cover_verified_at": "2026-11-09",
@@ -187,7 +187,13 @@
         "access_email_received": true,
         "account_login_verified": false,
         "all_chapters_access_verified": false,
-        "notes": "Testbestellung 0,00 EUR; Gmail-Zugangsmail am 10.11.2026 eingegangen. Gutschein danach aus Angebot und Seite entfernt und gelöscht. Es erfolgte keine echte 9,90-EUR-Abbuchung."
+        "notes": "Testbestellung 0,00 EUR; Gmail-Zugangsmail am 10.11.2026 eingegangen. Gutschein danach aus Angebot und Seite entfernt und gelöscht. Es erfolgte keine echte 9,90-EUR-Abbuchung.",
+        "activation_link_verified": true,
+        "activation_password_required": true,
+        "activation_password_set": false,
+        "test_browser_result": "Login-Formular zeigt Passwort-Erstellung, automatisierte Texteingabe scheiterte; kein erfolgreicher Login, kein Kapitel-Lesetest.",
+        "thank_you_page_help_updated": true,
+        "thank_you_page_help_verified_public": true
       }
     },
     {
@@ -1163,7 +1169,8 @@
     "cover_handling": "Keine Abhängigkeit von Amazon-Covern im unabhängigen Shop; echte Cover aus lokalem Ordner nach ZIP-Upload importieren",
     "metadata_caveat": "Historische ASIN-Zuordnungen sind nicht neu geprüft. Bei bestehendem DIE ADER Eintrag und früherer Griechenland-Ausgabe besteht möglicher ASIN-Konflikt B0HPNTM55C; vor Veröffentlichung eines Kaufangebots gesondert klären.",
     "additional_project_titles": 5,
-    "price_group_change": "Vier vorhandene Angebote in zwei Preiskategorien 9,90 EUR und 29,00 EUR gruppiert. Keine Freigabe für direkten Kauf, bis Zahlung und Auslieferung live geprüft wurden."
+    "price_group_change": "Vier vorhandene Angebote in zwei Preiskategorien 9,90 EUR und 29,00 EUR gruppiert. Keine Freigabe für direkten Kauf, bis Zahlung und Auslieferung live geprüft wurden.",
+    "delivery_note": "Systeme.io MCP weist explizit darauf hin, dass downloadable_file-Ressourcen über die Digital Store Area und nicht über Funnel-Offers voll unterstützt sind. 29-EUR-Planungspakete in Funnels daher nicht als sicher zugestellt werten ohne echten Nachweis. Die Griechenland-Prüffassung ist weiterhin als zweite Dateiressource angehängt; Änderung ohne unterstützte Dateizuordnung unterblieb."
   },
   "price_categories": [
     {
