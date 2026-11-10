@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "last_reviewed": "2026-11-10",
-  "purpose": "Genreuebergreifender, zentral gepflegter Cross-Selling-Katalog fuer unabhaengige Autoren. Keine Kauflinks ohne Live-Nachweis.",
+  "purpose": "Zentraler Rainsoft-Book-Katalog ausschließlich für selbst verfasste Bücher von Johann Prem, J.F.X. Prem und Pia Ordelia. Erst Griechenland 2027 und Ungarn 2027 mit nachweislich funktionierender Zahlung und Auslieferung testen; danach weitere eigene Titel schrittweise ergänzen. Keine externen Autoren, keine Kauflinks ohne belastbaren Test.",
   "channels": "Eigener Direktvertrieb ohne Amazon- und Buchhandels-Kauflinks",
   "categories": [
     {
@@ -1168,14 +1168,14 @@
     }
   ],
   "brand": {
-    "working_name": "Buchivo",
-    "public_label": "Unabhängige Digitalbücher",
-    "review_status": "ungeprueft",
-    "note": "buchivo.com zeigt bereits Coming Soon. Marken- und Domainfreigabe ausstehend."
+    "working_name": "Rainsoft-Book",
+    "public_label": "Rainsoft-Book – Meine Digitalbücher",
+    "review_status": "marken_und_domainpruefung_nicht_abgeschlossen",
+    "note": "Nutzerbezeichnung Rainsoft-Book; rechtliche Marken-/Domainprüfung noch offen. Vorläufig nur eigene Werke."
   },
   "author_onboarding": {
-    "status": "pilot_nicht_gestartet",
-    "availability": "nicht_freigeschaltet",
+    "status": "ausgesetzt_eigene_werke_zuerst",
+    "availability": "keine_fremden_autoren",
     "minimum_checks": [
       "Autorenrechte",
       "Autorenvertrag",
@@ -1183,7 +1183,8 @@
       "Zahlungsabwicklung",
       "Sichere Leser-Zugaenge",
       "Echte Ende-zu-Ende-Testbestellung"
-    ]
+    ],
+    "note": "Schrittweise sämtliche eigenen Werke aufnehmen; Fremdautoren und Provisionen erst nach belegter Nachfrage separat prüfen."
   },
   "academic_publishing": {
     "enabled": false,
@@ -1262,5 +1263,25 @@
       ],
       "verified_checkout": false
     }
-  ]
+  ],
+  "pilot_strategy": {
+    "scope": "nur_eigene_buecher",
+    "authors": [
+      "Johann Prem",
+      "J.F.X. Prem",
+      "Pia Ordelia"
+    ],
+    "phase_1": [
+      "griechenland-2027-reader",
+      "ungarn-2027"
+    ],
+    "phase_2": "Andere eigene Bücher schrittweise für den Direktvertrieb aufbereiten, jeweils nach bestandenem Zahlungs- und Auslieferungstest; keine fremden Autoren.",
+    "ad_spend_limit_eur": 0,
+    "extra_software_spend_limit_eur": 0,
+    "trial_duration_days": 14,
+    "trial_starts": "erst mit nachweislich freigegebenen und funktionierenden Kaufmöglichkeiten",
+    "signal": "mindestens eine tatsächlich bezahlte und ausgelieferte Bestellung eines eigenen Buches",
+    "abort_or_review": "Wenn keine Käufe zustande kommen, zuerst Zugriffe und Auffindbarkeit prüfen und keine weiteren kostenpflichtigen Investitionen; fehlende Besucher sind kein Beweis für fehlende Nachfrage.",
+    "progress_status": "technisch_vorbereitet_bisher_kein_nachgewiesener_bezahlter_testkauf"
+  }
 }
