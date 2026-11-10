@@ -1,18 +1,15 @@
-name: KDP book catalog public check
+name: Rainsoft-Book catalog and legal pages check
 on:
   push:
     branches: [main]
     paths:
-      - index.html
-      - buecher-johann-prem.html
-      - buecher.html
-      - books.html
       - prem-digital-editionen.html
       - prem-digital-katalog.json
-      - scripts/check-book-catalog.py
+      - digitalbuch-kaufhinweise.html
+      - datenschutz-digitalbuecher.html
       - .github/workflows/kdp-book-catalog-public-check.yml
   schedule:
-    - cron: '20 7,13,19 * * *'
+    - cron: '20 7 * * *'
   workflow_dispatch:
 permissions:
   contents: read
@@ -22,21 +19,55 @@ jobs:
     timeout-minutes: 6
     steps:
       - uses: actions/checkout@v4
-      - name: Verify generated public book catalog
+      - name: Validate own-books catalog and buyer information
         shell: bash
         run: |
           set -euo pipefail
-          python3 scripts/check-book-catalog.py
-      - name: Verify published catalogs and navigation
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          data = json.loads(Path('prem-digital-katalog.json').read_text(encoding='utf-8'))
+          page = Path('prem-digital-editionen.html').read_text(encoding='utf-8')
+          terms = Path('digitalbuch-kaufhinweise.html').read_text(encoding='utf-8')
+          privacy = Path('datenschutz-digitalbuecher.html').read_text(encoding='utf-8')
+          items = {item['id']: item for item in data['books']}
+          assert len(items) == len(data['books']), 'Duplicate book IDs'
+          assert 'Rainsoft-Book' in page, 'Rainsoft-Book brand missing'
+          assert 'datenschutz-digitalbuecher.html' in page, 'Missing digital privacy link'
+          assert 'digitalbuch-kaufhinweise.html' in page, 'Missing legal link'
+          assert all(token in terms for token in ('24 Monate', 'Griechenland', 'Ungarn', '9,90')), 'Book terms incomplete'
+          assert all(token in privacy for token in ('Systeme.io', 'Stripe', 'PayPal')), 'Privacy providers missing'
+          for key in ('griechenland-2027-reader', 'ungarn-2027'):
+              item = items[key]
+              assert item['price_eur'] == 9.9, f'Wrong price for {key}'
+              assert item['access_terms']['minimum_months_from_purchase'] == 24, f'Wrong term for {key}'
+              if item['status'] != 'live_verified':
+                  assert not item.get('buy_url'), f'Unverified offer linked: {key}'
+              else:
+                  assert (item.get('buy_url') or '').startswith('https://'), f'Live offer missing HTTPS link: {key}'
+          print('OK: catalog, two own e-books, legal links, 24-month promise and product safety')
+          PY
+      - name: Verify current public legal and catalog pages
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         shell: bash
         run: |
           set -euo pipefail
           public_dir=$(mktemp -d)
           trap 'rm -rf "$public_dir"' EXIT
-          for page in index.html buecher-johann-prem.html buecher.html books.html prem-digital-editionen.html prem-digital-katalog.json; do
-            echo "Fetching public page: $page"
-            curl --fail --location --silent --show-error --retry 2 --retry-delay 3 --max-time 30 \
-              -o "$public_dir/$page" "https://topdiveair-sketch.github.io/Gaeste/$page"
+          for page in prem-digital-editionen.html prem-digital-katalog.json digitalbuch-kaufhinweise.html datenschutz-digitalbuecher.html; do
+            echo "Checking public page: $page"
+            curl --fail --location --silent --show-error --retry 2 --retry-delay 2 --max-time 25 -o "$public_dir/$page" "https://topdiveair-sketch.github.io/Gaeste/$page"
           done
-          python3 scripts/check-book-catalog.py --root "$public_dir"
-          echo "Verified public catalog; check only, no edits to KDP or prices."
+          python3 - "$public_dir" <<'PY'
+          import json
+          import sys
+          from pathlib import Path
+          root=Path(sys.argv[1])
+          j=json.loads((root/'prem-digital-katalog.json').read_text(encoding='utf-8'))
+          assert len(j.get('books',[]))>=2, 'Public catalog empty'
+          assert 'Rainsoft-Book' in (root/'prem-digital-editionen.html').read_text(encoding='utf-8')
+          assert '24 Monate' in (root/'digitalbuch-kaufhinweise.html').read_text(encoding='utf-8')
+          text=(root/'datenschutz-digitalbuecher.html').read_text(encoding='utf-8')
+          assert 'Stripe' in text and 'PayPal' in text
+          print('OK: public Rainsoft-Book pages respond with current buyer information')
+          PY
