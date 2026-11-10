@@ -169,7 +169,7 @@
       "buy_url": null,
       "subcategory": "Auswanderer-Ratgeber",
       "reader_book_id": "griechenland-2027-reader",
-      "info": "Systeme.io Online-Reader mit 68 Buchkapiteln in geschützter Bibliothek. 9,90-EUR-Angebot und Stripe/PayPal hinterlegt; keine erfolgreiche echte Zahlung oder vollständige automatische Freischaltung verifiziert. Keine öffentliche Kauf-Freigabe.",
+      "info": "0-EUR-Testbestellung über Systeme.io erfolgreich; Bestätigungsseite und automatische Zugangsmail nachweislich erhalten. Persönliche Passwortaktivierung, Zugriff auf alle Kapitel, echter Zahlungseingang und Vertragsunterlagen nicht abschließend geprüft. Noch nicht als zahlungspflichtiges Angebot freigegeben.",
       "cover_url": "images/ebooks/griechenland-2027.jpg",
       "cover_alt": "Cover: Auswandern nach Griechenland – J.F.X. Prem",
       "cover_verified_at": "2026-11-09",
@@ -177,7 +177,18 @@
       "sample_url": "griechenland-2027-leseprobe.html",
       "sample_scope": "Vorwort, Einleitung, Kapitel 1 und 2. Kapitel 3–68 nicht öffentlich.",
       "tools_url": "griechenland-2027-werkzeuge.html",
-      "tools_description": "Kostenloser Budgetrechner und 19-Punkte-Checkliste; keine personenbezogene Datenübertragung."
+      "tools_description": "Kostenloser Budgetrechner und 19-Punkte-Checkliste; keine personenbezogene Datenübertragung.",
+      "checkout_test": {
+        "date": "2026-11-10",
+        "method": "browser",
+        "result": "0_EUR_coupon_order_completed",
+        "paid_charge_tested": false,
+        "confirmation_page_verified": true,
+        "access_email_received": true,
+        "account_login_verified": false,
+        "all_chapters_access_verified": false,
+        "notes": "Testbestellung 0,00 EUR; Gmail-Zugangsmail am 10.11.2026 eingegangen. Gutschein danach aus Angebot und Seite entfernt und gelöscht. Es erfolgte keine echte 9,90-EUR-Abbuchung."
+      }
     },
     {
       "id": "ungarn-2027",
@@ -200,7 +211,13 @@
       "tools_url": "ungarn-2027-werkzeuge.html",
       "tools_description": "Kostenloser Budgetrechner und 19-Punkte-Checkliste; Berechnung in Euro mit eigenem aktuellen EUR/HUF-Umrechnungskurs.",
       "legacy_asin": "B0HQ4M32NL",
-      "legacy_asin_origin": "Historical catalog listing; current ISBN/ASIN/product association must be verified before public sale"
+      "legacy_asin_origin": "Historical catalog listing; current ISBN/ASIN/product association must be verified before public sale",
+      "checkout_test": {
+        "date": "2026-11-10",
+        "result": "blocked_inactive_lessons_and_detached_offer",
+        "paid_charge_tested": false,
+        "all_chapters_access_verified": false
+      }
     },
     {
       "id": "griechenland-2027-planung",
@@ -218,7 +235,14 @@
       "cover_source": "Eigenes Bild aus der Bücherbibliothek: Griechenland 2027: Digitales Auswandererpaket.png",
       "cover_verified": true,
       "cover_verified_at": "2026-11-10",
-      "teaser": "Eigenständiges Planungspaket mit Budgetunterlagen und Checklisten zum Auswandern nach Griechenland. Kein Bestandteil des 9,90-€-Readers."
+      "teaser": "Eigenständiges Planungspaket mit Budgetunterlagen und Checklisten zum Auswandern nach Griechenland. Kein Bestandteil des 9,90-€-Readers.",
+      "checkout_test": {
+        "date": "2026-11-10",
+        "result": "blocked_pending_delivery_file_cleanup",
+        "paid_charge_tested": false,
+        "all_downloads_verified": false,
+        "notes": "Neben Kunden-ZIP ist eine PRUEFFASSUNG als zweite auszuliefernde Ressource hinterlegt. Vor kostenpflichtiger Freigabe Dateien prüfen und ausschließlich freigegebene Produktfassung ausliefern."
+      }
     },
     {
       "id": "ungarn-2027-planung",
@@ -230,11 +254,21 @@
       "price_eur": 29,
       "buy_url": null,
       "subcategory": "Auswanderer-Ratgeber",
-      "info": "29-EUR-Angebot im bestehenden Systeme.io-Funnel, Stripe/PayPal hinterlegt; separates ZIP-Downloadprodukt vorhanden. Kauf, Zahlung, automatische Zustellung und Dateiinhalt noch nicht Ende zu Ende getestet.",
+      "info": "29-EUR-Produkt, eine ZIP-Ressource und Stripe/PayPal vorhanden. Kostenfreier Gutscheintest 10.11.2026 abgebrochen: 0,00 EUR wurde angezeigt, Checkout verlangte trotzdem Zahlungsdaten. Download und Zustellung nicht getestet.",
       "teaser": "Zusätzliche Planungshilfen zum Auswandern nach Ungarn: Budgetrechner, Checklisten und Behördenfragen. Separates Paket, kein Online-Reader.",
       "cover_verified": false,
       "cover_kind": "kein verifiziertes Einzelproduktcover",
-      "current_listing_verified": false
+      "current_listing_verified": false,
+      "checkout_test": {
+        "date": "2026-11-10",
+        "method": "browser",
+        "result": "0_EUR_coupon_applied_but_payment_credentials_required",
+        "paid_charge_tested": false,
+        "confirmation_page_verified": false,
+        "access_email_received": false,
+        "all_downloads_verified": false,
+        "notes": "Trotz 100%-Rabatt verlangte das Formular PayPal bzw. Karte; Bestellung wurde sicher abgebrochen. Testcoupon und sichtbares Testfeld danach entfernt."
+      }
     },
     {
       "id": "die-ader",
