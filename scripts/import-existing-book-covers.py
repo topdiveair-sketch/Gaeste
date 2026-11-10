@@ -82,18 +82,25 @@ def get_image(payload):
 
 
 def update_static(html_source, book):
-    """Update only static fallback cover for an exact, escaped book title."""
+    """Replace the placeholder only inside the matching individual article."""
     title = html.escape(book['title'], quote=True)
-    pattern = (
-        r'(<article class="book">)'
-        r'(<div class="book-cover no-original"[^>]*>.*?</div></div>)'
-        r'(<h3>' + re.escape(title) + r'</h3>)'
-    )
-    alt=html.escape(book.get('cover_alt') or ('Originalcover: '+book['title']),quote=True)
-    url=html.escape(book['cover_url'],quote=True)
-    replacement=(r'\1'+f'<div class="book-cover"><img src="{url}" alt="{alt}" loading="lazy" width="460"></div>'+r'\3')
-    next_html, changed = re.subn(pattern,lambda m:m.group(1)+f'<div class="book-cover"><img src="{url}" alt="{alt}" loading="lazy" width="460"></div>'+m.group(3),html_source,count=1,flags=re.S)
-    return next_html, changed
+    alt = html.escape(book.get('cover_alt') or ('Originalcover: ' + book['title']), quote=True)
+    url = html.escape(book['cover_url'], quote=True)
+    picture = f'<div class="book-cover"><img src="{url}" alt="{alt}" loading="lazy" width="460"></div>'
+    article_pattern = re.compile(r'<article class="book">[\\s\\S]*?</article>')
+
+    found = [0]
+
+    def replace_article(match):
+        section = match.group(0)
+        if '<h3>' + title + '</h3>' not in section:
+            return section
+        placeholder = re.compile(r'<div class="book-cover no-original"[^>]*><div class="no-original-cover">[\\s\\S]*?</div></div>')
+        updated, count = placeholder.subn(picture, section, count=1)
+        found[0] += count
+        return updated
+
+    return article_pattern.sub(replace_article, html_source), found[0]
 
 
 def main():
@@ -109,6 +116,9 @@ def main():
         used.add(asin)
         candidates.append((b['id'],asin,history[asin]))
     candidates.sort()
+    if not candidates:
+        print('No new source covers; previous import report unchanged')
+        return
     IMAGES.mkdir(parents=True,exist_ok=True)
     imported=[];failed=[]
     with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool:
