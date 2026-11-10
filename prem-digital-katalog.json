@@ -239,7 +239,12 @@
       "buy_url": null,
       "subcategory": "Mystery",
       "legacy_asin": "B0HPJRCCCS",
-      "legacy_asin_origin": "Historical catalog listing; current ISBN/ASIN/product association must be verified before public sale"
+      "legacy_asin_origin": "Historical catalog listing; current ISBN/ASIN/product association must be verified before public sale",
+      "cover_url": "images/ebooks/unter-uns.jpg",
+      "cover_alt": "Originalcover: UNTER UNS – Das Hohenegg-Protokoll",
+      "cover_verified": true,
+      "cover_source": "Eigene Originaldatei aus der Bücherbibliothek, Vorderseite zugeschnitten und verkleinert",
+      "cover_verified_at": "2026-11-10"
     },
     {
       "id": "die-stadt-darunter",
@@ -270,7 +275,12 @@
       "buy_url": null,
       "subcategory": "Weltraum & UFOs",
       "isbn": "9783565849994",
-      "isbn_origin": "existing public German book catalog; current availability not reverified"
+      "isbn_origin": "existing public German book catalog; current availability not reverified",
+      "cover_url": "images/ebooks/ufos-2027.jpg",
+      "cover_alt": "Originalcover: UFOs und die nukleare Welt",
+      "cover_verified": true,
+      "cover_source": "Eigene Originaldatei aus der Bücherbibliothek, Vorderseite zugeschnitten und verkleinert",
+      "cover_verified_at": "2026-11-10"
     },
     {
       "id": "windis",
@@ -418,12 +428,16 @@
       "source_reference": "buecher.html – bestehender öffentlicher Autorenkatalog, Stand 5./6. November 2026",
       "author_assignment_confirmed": false,
       "current_listing_verified": false,
-      "cover_verified": false,
+      "cover_verified": true,
       "format_for_direct_reader": "noch_nicht_vorhanden",
       "info": "Im bisherigen Autorenkatalog erfasst. Autorenzuordnung, Originalcover, vollständiges Manuskript und eigene Digitalausgabe noch mit dem lokalen Bücherverzeichnis abgleichen.",
       "legacy_asin": "B0GDX4H45F",
       "series": "Die wilden Wachauer Windis",
-      "subcategory": "Kinderabenteuer / Tiergeschichten"
+      "subcategory": "Kinderabenteuer / Tiergeschichten",
+      "cover_url": "images/ebooks/windis-geheimnis-am-bach.jpg",
+      "cover_alt": "Originalcover: Die Wilden Wachauer Windis & Das Geheimnis am Bach",
+      "cover_source": "Eigene Originaldatei aus der Bücherbibliothek, Vorderseite zugeschnitten und verkleinert",
+      "cover_verified_at": "2026-11-10"
     },
     {
       "id": "bestand-abenteuer-am-welterbesteig-die-wilden-wachauer-windis",
@@ -508,12 +522,16 @@
       "source_reference": "buecher.html – bestehender öffentlicher Autorenkatalog, Stand 5./6. November 2026",
       "author_assignment_confirmed": false,
       "current_listing_verified": false,
-      "cover_verified": false,
+      "cover_verified": true,
       "format_for_direct_reader": "noch_nicht_vorhanden",
       "info": "Im bisherigen Autorenkatalog erfasst. Autorenzuordnung, Originalcover, vollständiges Manuskript und eigene Digitalausgabe noch mit dem lokalen Bücherverzeichnis abgleichen.",
       "legacy_asin": "B0G2RYG75Y",
       "series": "Die wilden Wachauer Windis",
-      "subcategory": "Kinderabenteuer / Tiergeschichten"
+      "subcategory": "Kinderabenteuer / Tiergeschichten",
+      "cover_url": "images/ebooks/windis-duernsteiner-weihnachtsmarkt.jpg",
+      "cover_alt": "Originalcover: Die wilden Windis auf dem Dürnsteiner Weihnachtsmarkt",
+      "cover_source": "Eigene Originaldatei aus der Bücherbibliothek, Vorderseite zugeschnitten und verkleinert",
+      "cover_verified_at": "2026-11-10"
     },
     {
       "id": "bestand-die-wilden-wachauer-windis-in-pressburg-bratislava",
