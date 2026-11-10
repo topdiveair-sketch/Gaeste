@@ -2,11 +2,11 @@
 <html lang="de"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Auswandern nach Griechenland 2027 – kostenlose Leseprobe | Digital Edition</title>
-<meta name="description" content="Auswandern nach Griechenland 2027 von J.F.X. Prem kostenlos probelesen: Vorwort, Einleitung und die ersten zwei Kapitel. Interaktive Digital Edition zum geplanten Preis von 9,90 €.">
+<meta name="description" content="Auswandern nach Griechenland 2027 von J.F.X. Prem kostenlos probelesen: Vorwort, Einleitung und die ersten zwei Kapitel. Interaktive Digital Edition zum Einmalpreis von 9,90 €.">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://topdiveair-sketch.github.io/Gaeste/griechenland-2027-leseprobe.html">
 <meta property="og:type" content="book"><meta property="og:title" content="Griechenland 2027 – kostenlos probelesen">
-<meta property="og:description" content="Leseprobe bis Kapitel 2. Dann für 9,90 € weiterlesen, sobald der sichere Online-Zugang freigeschaltet ist.">
+<meta property="og:description" content="Leseprobe bis Kapitel 2. Danach die Online-Buchausgabe für 9,90 € auf der Verkaufsseite entdecken und bestellen.">
 <meta property="og:image" content="https://topdiveair-sketch.github.io/Gaeste/images/ebooks/griechenland-2027.jpg">
 <style>
 :root{--deep:#113c68;--deep2:#0b253d;--gold:#f2c466;--ink:#1b3448;--muted:#65717f;--line:#d9e1e8;--paper:#fffefa;--panel:#f5f7f8;--text-size:19px;color-scheme:light}
@@ -92,19 +92,10 @@ function render(){
  content.replaceChildren();
  if(locked){
   const box=document.createElement('div');box.className='paygate';
-  box.innerHTML='<h3>Du möchtest wissen, wie es weitergeht?</h3><p>Die kostenlose Leseprobe endet nach Kapitel 2. Die vollständige Digital Edition mit 68 Kapiteln, Budgetrechner und Checklisten kostet geplant <strong>9,90 € einmalig</strong>.</p>';
-  const btn=document.createElement('button');btn.id='buy';btn.className='buy';btn.textContent='Für 9,90 € weiterlesen';btn.disabled=true;
-  const s=document.createElement('span');s.className='status';s.id='checkout-status';s.textContent='Kauf und sicherer Zugang befinden sich in Vorbereitung. Es wird noch kein Geld eingezogen.';
-  box.append(btn,s);content.append(box);
-  // Erst wenn ein eigener Checkout samt automatischer Auslieferung nachweislich live ist, aktivieren.
-  fetch('prem-digital-katalog.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(c=>{
-    const b=c&&Array.isArray(c.books)?c.books.find(x=>x.id==='griechenland-2027-reader'):null;
-    if(!b||b.status!=='live_verified'||typeof b.buy_url!=='string')return;
-    const u=new URL(b.buy_url);
-    if(u.protocol!=='https:'||u.hostname!=='topdiveair.systeme.io')return;
-    btn.disabled=false;s.textContent='Du wirst für die Bezahlung zum sicheren Checkout weitergeleitet.';
-    btn.addEventListener('click',()=>{location.href=u.href;},{once:true});
-  }).catch(()=>{});
+  box.innerHTML='<h3>Du möchtest wissen, wie es weitergeht?</h3><p>Die kostenlose Leseprobe endet nach Kapitel 2. Die vollständige Digital Edition mit 68 Kapiteln, Budgetrechner und Checklisten ist für <strong>9,90 € einmalig</strong> erhältlich – ohne Buchversand und ohne Abonnement.</p>';
+  const a=document.createElement('a');a.id='buy';a.className='buy';a.href='griechenland-2027-digitalbuch.html';a.textContent='Buch für 9,90 € ansehen und kaufen';a.setAttribute('aria-label','Zur Buchvorstellung und anschließendem sicheren Bestellformular');
+  const s=document.createElement('span');s.className='status';s.id='checkout-status';s.textContent='Zuerst Buchbeschreibung und Kaufbedingungen ansehen. Auf der Verkaufsseite führt ein eigener Button zur sicheren Kasse. Die erste bezahlte Auslieferung ist noch nicht vollständig getestet.';
+  box.append(a,s);content.append(box);
  }else{ content.innerHTML=sections[ix].html; }
  document.getElementById('back').disabled=ix===0;
  document.getElementById('forward').textContent=ix===MAX?'Leseprobe beendet':'Weiterlesen →';
