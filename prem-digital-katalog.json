@@ -301,7 +301,16 @@
       "author": "Pia Ordelia / Johann Prem",
       "status": "eigene_digitalausgabe_ausstehend",
       "buy_url": null,
-      "subcategory": "Tiergeschichten"
+      "subcategory": "Tiergeschichten",
+      "cover_url": "images/ebooks/legacy-b0g888wywd.jpg",
+      "cover_alt": "Reihenmotiv: Originalcover von Band 1 „Vom Wind Spaniens zum Zuhause in der Wachau“, keine eigenständige Coverausgabe",
+      "cover_kind": "Beispielcover Band 1 als Reihenmotiv",
+      "cover_source": "Eigenes Autorenverzeichnis buecher-johann-prem.html; original Band-1-Cover",
+      "cover_verified": true,
+      "cover_verified_at": "2026-11-10",
+      "catalog_item_type": "Reihenübersicht (keine zusätzliche separate Digitalausgabe)",
+      "teaser": "Die Buchreihe rund um Fidel, Gloria und Pia. Das Bild zeigt Band 1; weitere Einzeltitel findest du in dieser Kategorie.",
+      "related_book_id": "bestand-die-wilden-wachauer-windis-vom-wind-spaniens-zum-zuhause-in-der-wachau"
     },
     {
       "id": "bestand-die-wilden-wachauer-windis-vom-wind-spaniens-zum-zuhause-in-der-wachau",
