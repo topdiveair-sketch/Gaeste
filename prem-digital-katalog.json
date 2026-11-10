@@ -169,7 +169,7 @@
       "buy_url": null,
       "subcategory": "Auswanderer-Ratgeber",
       "reader_book_id": "griechenland-2027-reader",
-      "info": "Geschützter Reader aktiv mit 68 Buchkapiteln; Greece-Kauf gibt nur 10 Griechenland-Module frei. Zahlung für neue Käufer noch deaktiviert, Bestell- und Rechteprüfung offen.",
+      "info": "Systeme.io Online-Reader mit 68 Buchkapiteln in geschützter Bibliothek. 9,90-EUR-Angebot und Stripe/PayPal hinterlegt; keine erfolgreiche echte Zahlung oder vollständige automatische Freischaltung verifiziert. Keine öffentliche Kauf-Freigabe.",
       "cover_url": "images/ebooks/griechenland-2027.jpg",
       "cover_alt": "Cover: Auswandern nach Griechenland – J.F.X. Prem",
       "cover_verified_at": "2026-11-09",
@@ -188,7 +188,7 @@
       "status": "testversion_nicht_kaufbar",
       "price_eur": 9.9,
       "buy_url": null,
-      "info": "67 vollständige Leseabschnitte und 24 nummerierte Kapitel in 7 inaktiven Bibliotheksmodulen. Eigenes 9,90-EUR-Produkt mit separat eingeschränkter Modulfreigabe vorbereitet. Checkout nicht eingerichtet, keine echte Zahlung.",
+      "info": "Geschützter Online-Reader mit 68 inaktiven Lektionen in sieben Ungarn-Modulen. 9,90-EUR-Bestellseite im bestehenden Funnel vorbereitet und öffentliche Vorschau geprüft; Produktverknüpfung aus Sicherheitsgründen deaktiviert. Keine echte Bestellung zulassen, bis Lektionen, Zahlungsablauf und Zugang vollständig geprüft sind.",
       "subcategory": "Auswanderer-Ratgeber",
       "reader_book_id": "ungarn-2027-reader",
       "cover_url": "images/ebooks/ungarn-2027.jpg",
@@ -210,14 +210,31 @@
       "status": "direktverkauf_nicht_ende_zu_ende_getestet",
       "price_eur": 29,
       "buy_url": null,
-      "info": "Separates Produkt, nicht mit dem Reader verwechseln",
+      "info": "29-EUR-Angebot mit Stripe/PayPal hinterlegt. Bestell- und Bestätigungsseiten öffentlich erreichbar, aber keine erfolgreiche Testzahlung oder Auslieferung bestätigt. Zwei Dateien hinterlegt, darunter eine ausdrücklich als PRUEFFASSUNG bezeichnete ZIP; vor Freigabe bereinigen.",
       "subcategory": "Auswanderer-Ratgeber",
       "cover_url": "images/ebooks/griechenland-2027-planung-paketmotiv.jpg",
       "cover_alt": "Produktmotiv zum digitalen Griechenland-Planungspaket 2027; Foto einer Werbegrafik, kein eigenständiges Originalcover",
       "cover_kind": "aus Original-Paketgrafik zugeschnittenes Produktmotiv (kein Buchcover)",
       "cover_source": "Eigenes Bild aus der Bücherbibliothek: Griechenland 2027: Digitales Auswandererpaket.png",
       "cover_verified": true,
-      "cover_verified_at": "2026-11-10"
+      "cover_verified_at": "2026-11-10",
+      "teaser": "Eigenständiges Planungspaket mit Budgetunterlagen und Checklisten zum Auswandern nach Griechenland. Kein Bestandteil des 9,90-€-Readers."
+    },
+    {
+      "id": "ungarn-2027-planung",
+      "category": "auswandern",
+      "title": "Ungarn 2027 – Entscheidungs- und Budgetpaket",
+      "edition": "Digitales Planungspaket 2027",
+      "author": "J.F.X. Prem",
+      "status": "direktverkauf_nicht_ende_zu_ende_getestet",
+      "price_eur": 29,
+      "buy_url": null,
+      "subcategory": "Auswanderer-Ratgeber",
+      "info": "29-EUR-Angebot im bestehenden Systeme.io-Funnel, Stripe/PayPal hinterlegt; separates ZIP-Downloadprodukt vorhanden. Kauf, Zahlung, automatische Zustellung und Dateiinhalt noch nicht Ende zu Ende getestet.",
+      "teaser": "Zusätzliche Planungshilfen zum Auswandern nach Ungarn: Budgetrechner, Checklisten und Behördenfragen. Separates Paket, kein Online-Reader.",
+      "cover_verified": false,
+      "cover_kind": "kein verifiziertes Einzelproduktcover",
+      "current_listing_verified": false
     },
     {
       "id": "die-ader",
@@ -1111,6 +1128,33 @@
     "current_live_product_status": "nicht bestätigt; keine neuen Direktkauf-URLs",
     "cover_handling": "Keine Abhängigkeit von Amazon-Covern im unabhängigen Shop; echte Cover aus lokalem Ordner nach ZIP-Upload importieren",
     "metadata_caveat": "Historische ASIN-Zuordnungen sind nicht neu geprüft. Bei bestehendem DIE ADER Eintrag und früherer Griechenland-Ausgabe besteht möglicher ASIN-Konflikt B0HPNTM55C; vor Veröffentlichung eines Kaufangebots gesondert klären.",
-    "additional_project_titles": 5
-  }
+    "additional_project_titles": 5,
+    "price_group_change": "Vier vorhandene Angebote in zwei Preiskategorien 9,90 EUR und 29,00 EUR gruppiert. Keine Freigabe für direkten Kauf, bis Zahlung und Auslieferung live geprüft wurden."
+  },
+  "price_categories": [
+    {
+      "id": "digitaledition-990",
+      "price_eur": 9.9,
+      "label": "Digital Editions",
+      "format": "Geschützter Online-Reader",
+      "description": "Online lesen mit persönlichem Zugriff; keine PDF- oder EPUB-Datei im Reader-Angebot",
+      "product_ids": [
+        "griechenland-2027-reader",
+        "ungarn-2027"
+      ],
+      "verified_checkout": false
+    },
+    {
+      "id": "planungspaket-2900",
+      "price_eur": 29,
+      "label": "Planungspakete",
+      "format": "Digitale Unterlagen als ZIP-Download",
+      "description": "Zusätzliche Budget- und Checklisten-Unterlagen",
+      "product_ids": [
+        "griechenland-2027-planung",
+        "ungarn-2027-planung"
+      ],
+      "verified_checkout": false
+    }
+  ]
 }
