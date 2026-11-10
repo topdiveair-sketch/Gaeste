@@ -1,0 +1,15 @@
+{
+  "imported": [],
+  "failed": [
+    {
+      "id": "bestand-auswandern-bulgarien",
+      "reason": "ValueError: Insufficient resolution 90x120"
+    },
+    {
+      "id": "bestand-auslandshund",
+      "reason": "ValueError: Insufficient resolution 90x120"
+    }
+  ],
+  "source": "Matched by ISBN in named public catalog, not original Windows files",
+  "verified_edition": false
+}
