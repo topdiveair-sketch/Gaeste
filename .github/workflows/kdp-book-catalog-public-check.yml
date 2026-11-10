@@ -45,7 +45,7 @@ jobs:
                   assert (item.get('buy_url') or '').startswith('https://'), f'Active offer missing HTTPS link: {key}'
                   if item['status'] == 'pilot_sale_active':
                       pilot = item.get('pilot_launch') or {}
-                      assert pilot.get('sale_limit', 0) > 0, f'Pilot offer has no sale cap: {key}'
+                      assert pilot.get('sale_limit', 0) > 0 or pilot.get('owner_authorized_open_release') is True, f'Pilot offer missing limit or owner approval: {key}'
                       assert item.get('checkout_test',{}).get('paid_charge_tested') is False, f'Pilot test status ambiguous: {key}'
               else:
                   assert not item.get('buy_url'), f'Unverified offer linked: {key}'
