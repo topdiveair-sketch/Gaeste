@@ -211,7 +211,13 @@
       "price_eur": 29,
       "buy_url": null,
       "info": "Separates Produkt, nicht mit dem Reader verwechseln",
-      "subcategory": "Auswanderer-Ratgeber"
+      "subcategory": "Auswanderer-Ratgeber",
+      "cover_url": "images/ebooks/griechenland-2027-planung-paketmotiv.jpg",
+      "cover_alt": "Produktmotiv zum digitalen Griechenland-Planungspaket 2027; Foto einer Werbegrafik, kein eigenständiges Originalcover",
+      "cover_kind": "aus Original-Paketgrafik zugeschnittenes Produktmotiv (kein Buchcover)",
+      "cover_source": "Eigenes Bild aus der Bücherbibliothek: Griechenland 2027: Digitales Auswandererpaket.png",
+      "cover_verified": true,
+      "cover_verified_at": "2026-11-10"
     },
     {
       "id": "die-ader",
