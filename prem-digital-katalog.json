@@ -169,7 +169,7 @@
       "buy_url": "https://topdiveair.systeme.io/156e93b0",
       "subcategory": "Auswanderer-Ratgeber",
       "reader_book_id": "griechenland-2027-reader",
-      "info": "Begrenzter Direktverkauf seit 10.11.2026 zu 9,90 EUR. Produkt im Systeme.io Checkout verknuepft, Bestellung mit 2 Pflicht-Zustimmungen. Die zuvor erfolgreiche Gratis-Testbestellung zeigte Zugangsmail-Versand, neuer kostenpflichtiger Zahlungs- und Vertragsbestaetigungsablauf aber NOCH NICHT Ende-zu-Ende bestaetigt. Verkauf mengenmaessig begrenzt, bei Auslieferungsproblemen Kontakt topdiveair@gmail.com.",
+      "info": "Freigegeben fuer echte 9,90-EUR-Einzelbestellungen am 10.11.2026 auf ausdruecklichen Wunsch des Autors. Beide Zustimmungscheckboxen wurden in einem 0,00-EUR-Checkout-Test als Pflichtfelder bestaetigt, Zahlung und individuelle Buchauslieferung jedoch noch nicht vollstaendig Ende-zu-Ende geprueft. Bei Problemen Kontakt: topdiveair@gmail.com.",
       "cover_url": "images/ebooks/griechenland-2027.jpg",
       "cover_alt": "Cover: Auswandern nach Griechenland – J.F.X. Prem",
       "cover_verified_at": "2026-11-09",
@@ -197,7 +197,6 @@
         "library_renamed_verified": true,
         "product_linked": true,
         "checkout_button_present": true,
-        "paused_reason": "Vertragsangaben und tatsächlicher Leserzugang noch nicht vollständig geprüft; bestehende rechtliche Informationsseite schreibt vor einem echten Angebot verbindliche Zugangsbedingungen und geprüfte Steuer-/Datenschutzangaben vor.",
         "consent_terms_updated": "2026-11-10",
         "order_confirmation_email_prepared": true,
         "required_consent_tested": true,
@@ -210,8 +209,10 @@
         "coupon_removed": true,
         "trial_paid_mode": "limited_paid_pilot",
         "paid_test_attempt": "0-Euro-Coupon mit beiden Zustimmungen und 0,00 Gesamtpreis erfolgreich; Stripe verlangte trotzdem gueltige Karte, daher kein Abschluss ohne echte Zahlung moeglich.",
-        "sale_limit_configured": 2,
-        "live_verified": false
+        "sale_limit_configured": null,
+        "live_verified": false,
+        "current_status": "owner_authorized_open_self_test",
+        "paid_self_test_responsibility": "Buchautor testet den ersten echten Kauf selbst"
       },
       "reader_title": "Rainsoft-Book – Meine Digitalbücher",
       "access_terms": {
@@ -240,10 +241,17 @@
         "price_eur": 9.9,
         "product_id": 3478160,
         "offer_id": 5491746,
-        "sale_limit": 2,
-        "note": "Begrenzte Bestellmenge des Funnels, historischer 0-EUR-Test kann das Limit bereits zaehlen. Erste echte Kundenzahlung/Auslieferung ist noch zu bestaetigen.",
-        "success_metric": "echte bezahlte und automatisch ausgelieferte Bestellung",
-        "first_sale_status": "not_verified"
+        "sale_limit": null,
+        "owner_authorized_open_release": true,
+        "release_scope": "nur eigene Griechenland- und Ungarn-Digitalbuecher",
+        "payment_provider_modes": [
+          "stripe:card",
+          "paypal-rest"
+        ],
+        "first_sale_status": "not_verified",
+        "member_access_status": "not_verified_by_buyer",
+        "consent_validation": "unmarked required checkboxes blocked checkout on each book",
+        "next_check": "Nach selbst durchgefuehrtem 9,90-EUR-Kauf Zahlungseingang, Vertragsmail, Mitgliederfreigabe und Buchinhalte pruefen"
       }
     },
     {
@@ -252,10 +260,10 @@
       "title": "Ungarn 2027 – Digitalbuch für Auswanderer",
       "edition": "Online-Ausgabe 2027",
       "author": "J.F.X. Prem",
-      "status": "testversion_nicht_kaufbar",
+      "status": "pilot_sale_active",
       "price_eur": 9.9,
-      "buy_url": null,
-      "info": "Alle 68 Buchabschnitte in sieben Ungarn-Modulen am 10.11.2026 in Systeme.io aktiviert und Status danach verifiziert. Mehrere Text- und Arbeitsblattseiten als Betreiber geöffnet und inhaltlich sichtbar. Der 9,90-EUR-Checkout ist aktuell absichtlich ohne Produktverknüpfung und ohne Kaufknopf, da Zugangsbedingungen, Steuer-/Datenschutzangaben und ein echter Zahlung-/Zugangstest noch offen sind.",
+      "buy_url": "https://topdiveair.systeme.io/a1773bd7",
+      "info": "Freigegeben fuer echte 9,90-EUR-Einzelbestellungen am 10.11.2026 auf ausdruecklichen Wunsch des Autors. Beide Zustimmungscheckboxen wurden in einem 0,00-EUR-Checkout-Test als Pflichtfelder bestaetigt, Zahlung und individuelle Buchauslieferung jedoch noch nicht vollstaendig Ende-zu-Ende geprueft. Bei Problemen Kontakt: topdiveair@gmail.com.",
       "subcategory": "Auswanderer-Ratgeber",
       "reader_book_id": "ungarn-2027-reader",
       "cover_url": "images/ebooks/ungarn-2027.jpg",
@@ -278,9 +286,8 @@
         "paid_charge_tested": false,
         "all_chapters_access_verified": false,
         "reader_title": "Rainsoft-Book – Meine Digitalbücher",
-        "product_linked": false,
-        "checkout_button_present": false,
-        "paused_reason": "Vertragsangaben und tatsächlicher Leserzugang noch nicht vollständig geprüft; bestehende rechtliche Informationsseite schreibt vor einem echten Angebot verbindliche Zugangsbedingungen und geprüfte Steuer-/Datenschutzangaben vor.",
+        "product_linked": true,
+        "checkout_button_present": true,
         "consent_terms_updated": "2026-11-10",
         "order_confirmation_email_prepared": true,
         "required_consent_tested": true,
@@ -289,7 +296,11 @@
         "consent_form_error_message": "Systeme.io Standardplatzhalter je Feld: 'Meldung, wenn das Kontrollkästchen nicht angekreuzt ist'; kundengerechter Text im visuellen Editor noch anzupassen.",
         "complete_new_order_tested": false,
         "confirmation_email_delivery_tested": false,
-        "coupon_removed": true
+        "coupon_removed": true,
+        "current_status": "owner_authorized_open_self_test",
+        "paid_self_test_responsibility": "Buchautor testet den ersten echten Kauf selbst",
+        "sale_limit_configured": null,
+        "live_verified": false
       },
       "access_terms": {
         "minimum_months_from_purchase": 24,
@@ -306,12 +317,29 @@
         "required_checkbox_validation": "LIVE GEPRUEFT 2026-11-10: beide Zustimmungspflichtfelder blockieren 0,00-EUR-Test mit je einer sichtbaren Fehlermeldung; keine Bestellung",
         "checkout_consent_record": "Keine abgeschlossene Ungarn-Transaktion; Einwilligungsprotokoll nicht pruefbar",
         "durable_contract_confirmation_with_consent": "Buchspezifische Bestellbestätigungs-E-Mail wurde erstellt und am Digitalprodukt hinterlegt; Pflichtfeld-/Zustellungsprüfung und zeitliche Reihenfolge vor Leistungsbeginn offen",
-        "paid_sale_linked": false,
+        "paid_sale_linked": true,
         "rule": "Keinen rechtssicheren Ausschluss des Rücktrittsrechts behaupten, bevor beide Pflichtkästchen und die vollständige Bestätigung auf dauerhaftem Datenträger nachgewiesen sind.",
         "confirmation_email_saved": true,
         "confirmation_email_bound_to_product": true,
         "confirmation_email_sent_tested": false,
         "confirmation_email_id": 13400766
+      },
+      "pilot_launch": {
+        "launched_date": "2026-11-10",
+        "price_eur": 9.9,
+        "product_id": 3478378,
+        "offer_id": 5493298,
+        "sale_limit": null,
+        "owner_authorized_open_release": true,
+        "release_scope": "nur eigene Griechenland- und Ungarn-Digitalbuecher",
+        "payment_provider_modes": [
+          "stripe:card",
+          "paypal-rest"
+        ],
+        "first_sale_status": "not_verified",
+        "member_access_status": "not_verified_by_buyer",
+        "consent_validation": "unmarked required checkboxes blocked checkout on each book",
+        "next_check": "Nach selbst durchgefuehrtem 9,90-EUR-Kauf Zahlungseingang, Vertragsmail, Mitgliederfreigabe und Buchinhalte pruefen"
       }
     },
     {
@@ -1302,7 +1330,8 @@
     "branding_ungarn": "Digitaler Ungarn-Titel jetzt auch in Systeme.io als Ungarn 2027 – Digitalbuch für Auswanderer geführt; gedruckte Originalausgaben bleiben unverändert. Das alte Cover muss noch getrennt bearbeitet werden.",
     "withdrawal_protection": "10.11.2026: Zwei getrennte Rücktritts-/Sofortbereitstellungs-Checkboxen je Buch im Checkout gespeichert; buchspezifische Vertragsbestätigungs-E-Mails in Systeme.io angelegt und über confirmationEmailId zugeordnet. Rechtssicherer Entfall des Rücktrittsrechts nicht belegt: Checkbox-Pflichtstatus, tatsächlicher Transaktionsnachweis, Zustellung/Reihenfolge der Vertragsbestätigung und persönlicher Lesetest fehlen. Keine Kaufschaltflächen/Produktverküpfungen aktiv.",
     "consent_validation_20261110": "Griechenland und Ungarn: separate Zustimmungen bei frischem Checkout nicht vorangekreuzt, mit beiden ungekreuzten Feldern blockierten zwei sichtbare Fehlermeldungen jeweils den 0,00-EUR-Coupon-Test. Keine 9,90-EUR-Zahlung, kein neuer Kundenabschluss. Beide Tests nachweislich bereinigt (1x-Coupons entfernt/gelöscht, Testbuttons entfernt, digitale Produkte vom Angebot entkoppelt). Vertragsbestaetigungsmails sind je Produkt hinterlegt, Versand nach erfolgreichem Kauf und Mitgliederzugriff nicht vollstaendig geprueft. Nicht als live verkaufen markieren.",
-    "pilot_launch_20261110": "Griechenland jetzt als limitiertes 9,90-EUR-Pilotangebot mit echtem Produkt, 2 Pflichtcheckboxen, Stripe und PayPal, zugeordnetem Bestellbestaetigungstext und Liefermodulen freigegeben. Keine volle paid-live-Verifikation; Kartenpflicht blockiert 0-EUR-Durchlauf. Der erste echte Verkauf muss auf Lieferbarkeit und Ruecktrittsbestätigung kontrolliert werden. Ungarn noch gesperrt."
+    "pilot_launch_20261110": "Griechenland jetzt als limitiertes 9,90-EUR-Pilotangebot mit echtem Produkt, 2 Pflichtcheckboxen, Stripe und PayPal, zugeordnetem Bestellbestaetigungstext und Liefermodulen freigegeben. Keine volle paid-live-Verifikation; Kartenpflicht blockiert 0-EUR-Durchlauf. Der erste echte Verkauf muss auf Lieferbarkeit und Ruecktrittsbestätigung kontrolliert werden. Ungarn noch gesperrt.",
+    "owner_release_20261110": "Auf ausdruecklichen Wunsch des Autors beide 9,90-EUR-Digitalbuecher ohne Verkaufslimit freigegeben. Offer verknuepft mit je passendem Digitalprodukt, Checkoutbutton und zwei Pflicht-Checkboxen. GitHub Katalog verlinkt. Zahlung und alle Zugangsschritte werden erst nach selbst durchgefuehrtem Kauf durch den Autor verifiziert. Nicht als end-to-end live_verified kennzeichnen. 29-EUR-Pakete und andere eigene Titel unveraendert."
   },
   "price_categories": [
     {
