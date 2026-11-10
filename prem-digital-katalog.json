@@ -206,6 +206,16 @@
         "continuation": "ohne Zusatzgebühr solange die Buchbibliothek betrieben wird",
         "early_shutdown": "gleichwertige Ersatzbereitstellung; gesetzliche Rechte bleiben unberührt",
         "status": "in_kaufhinweisen_verankert_ersatzbereitstellung_organisatorisch_noch_offen"
+      },
+      "withdrawal_protection": {
+        "checked_2026_11_10": true,
+        "legal_basis": "AT FAGG §18 Abs1 Z11; E-Book digital content; applicability to online access to be reviewed",
+        "separate_customer_consents_prepared": 2,
+        "required_checkbox_validation": "nicht geprüft/über API nicht konfigurierbar",
+        "checkout_consent_record": "noch nicht durch Testbestellung geprüft",
+        "durable_contract_confirmation_with_consent": "nicht eingerichtet/nicht nachgewiesen",
+        "paid_sale_linked": false,
+        "rule": "Keinen rechtssicheren Ausschluss des Rücktrittsrechts behaupten, bevor beide Pflichtkästchen und die vollständige Bestätigung auf dauerhaftem Datenträger nachgewiesen sind."
       }
     },
     {
@@ -251,7 +261,17 @@
         "early_shutdown": "gleichwertige Ersatzbereitstellung; gesetzliche Rechte bleiben unberührt",
         "status": "in_kaufhinweisen_verankert_ersatzbereitstellung_organisatorisch_noch_offen"
       },
-      "cover_mismatch_review": "Die digitale Ausgabe ist auf Auswanderer umbenannt. Das vorhandene Buchbild stammt von der älteren Rentner-Titelfassung und darf nicht als endgültiges neues Cover bestätigt werden."
+      "cover_mismatch_review": "Die digitale Ausgabe ist auf Auswanderer umbenannt. Das vorhandene Buchbild stammt von der älteren Rentner-Titelfassung und darf nicht als endgültiges neues Cover bestätigt werden.",
+      "withdrawal_protection": {
+        "checked_2026_11_10": true,
+        "legal_basis": "AT FAGG §18 Abs1 Z11; E-Book digital content; applicability to online access to be reviewed",
+        "separate_customer_consents_prepared": 2,
+        "required_checkbox_validation": "nicht geprüft/über API nicht konfigurierbar",
+        "checkout_consent_record": "noch nicht durch Testbestellung geprüft",
+        "durable_contract_confirmation_with_consent": "nicht eingerichtet/nicht nachgewiesen",
+        "paid_sale_linked": false,
+        "rule": "Keinen rechtssicheren Ausschluss des Rücktrittsrechts behaupten, bevor beide Pflichtkästchen und die vollständige Bestätigung auf dauerhaftem Datenträger nachgewiesen sind."
+      }
     },
     {
       "id": "griechenland-2027-planung",
@@ -1238,7 +1258,8 @@
     "reader_launch": "10.11.2026: Alle 68 Ungarn-Lektionen aktiviert; mehrere Textseiten via Systeme.io Betreiberansicht lesbar. Ungarn-9,90-Checkout nach Feststellung offener Kaufhinweise (Zugangsdauer, Steuern, Vertragstexte) wieder von Produkt getrennt und Kaufknopf entfernt. Griechenland 9,90 weiterhin technisch gekoppelt, aber kein zentraler Kaufbutton veröffentlicht. Leserbibliothek als Rainsoft-Book – Meine Digitalbücher benannt.",
     "reader_safety_status": "10.11.2026: Beide 9,90-EUR-Angebote im Systeme.io Funnel von digitalen Produkten entkoppelt und PaymentButton entfernt; die 68 Ungarn-Lektionen und 85 Griechenland-Lektionen bleiben in der Bücherbibliothek aktiv. Keine neuen Zahlungen angenommen. Wiederfreigabe nach Vertrag/Datenschutz/Steuerprüfung und End-to-End-Auslieferungstest.",
     "access_duration": "Nutzer hat 24 Monate garantierten Online-Lesezugang je Digitalbuch ab Kauf bestätigt; GitHub-Kaufhinweise und Systeme.io Bibliotheksbeschreibung aktualisiert. Käuferseitige Anmeldetests, Steuer-/Datenschutzprüfung und technische Ersatzbereitstellung bleiben offen.",
-    "branding_ungarn": "Digitaler Ungarn-Titel jetzt auch in Systeme.io als Ungarn 2027 – Digitalbuch für Auswanderer geführt; gedruckte Originalausgaben bleiben unverändert. Das alte Cover muss noch getrennt bearbeitet werden."
+    "branding_ungarn": "Digitaler Ungarn-Titel jetzt auch in Systeme.io als Ungarn 2027 – Digitalbuch für Auswanderer geführt; gedruckte Originalausgaben bleiben unverändert. Das alte Cover muss noch getrennt bearbeitet werden.",
+    "withdrawal_protection": "10.11.2026: §18 Abs 1 Z11 FAGG geprüft. Zwei getrennte Zustimmungs-Checkboxen auf Griechenland- und Ungarn-Checkout erstellt. Pflichtfeld-Status und dokumentierte Auftragsbestätigung sind über die verfügbare API nicht verfügbar/nicht verifiziert. Beide Angebote bleiben im Funnel ohne Produktverknüpfung; kein Verkauf als rechtssicher gekennzeichnet."
   },
   "price_categories": [
     {
