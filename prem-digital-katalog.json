@@ -211,8 +211,8 @@
     {
       "id": "ungarn-2027",
       "category": "auswandern",
-      "title": "Ungarn für Rentner",
-      "edition": "2027",
+      "title": "Ungarn 2027 – Digitalbuch für Auswanderer",
+      "edition": "Online-Ausgabe 2027",
       "author": "J.F.X. Prem",
       "status": "testversion_nicht_kaufbar",
       "price_eur": 9.9,
@@ -221,9 +221,9 @@
       "subcategory": "Auswanderer-Ratgeber",
       "reader_book_id": "ungarn-2027-reader",
       "cover_url": "images/ebooks/ungarn-2027.jpg",
-      "cover_alt": "Cover: Ungarn für Rentner – J.F.X. Prem",
+      "cover_alt": "Bisheriges Covermotiv der Ungarn-Ausgabe – Gestaltung des neuen Digitalbuchcovers noch zu prüfen",
       "cover_verified_at": "2026-11-09",
-      "teaser": "Ruhestand in Ungarn vorbereiten: Rente, Steuern, Krankenversicherung, Wohnen und konkrete Entscheidungshilfen. Der private Online-Reader wird derzeit getestet.",
+      "teaser": "Ratgeber für Auswanderer nach Ungarn: Aufenthalt, Rente, Steuern, Krankenversicherung, Wohnen und Entscheidungshilfen. Vollständige Online-Ausgabe vorbereitet; Direktkauf bis zum abschließenden Funktionstest ausgesetzt.",
       "sample_url": "ungarn-2027-leseprobe.html",
       "sample_scope": "Vorwort sowie Kapitel 1 und 2; danach nur Kapitelüberschriften. Kein vollständiger Buchtext öffentlich.",
       "tools_url": "ungarn-2027-werkzeuge.html",
@@ -250,7 +250,8 @@
         "continuation": "ohne Zusatzgebühr solange die Buchbibliothek betrieben wird",
         "early_shutdown": "gleichwertige Ersatzbereitstellung; gesetzliche Rechte bleiben unberührt",
         "status": "in_kaufhinweisen_verankert_ersatzbereitstellung_organisatorisch_noch_offen"
-      }
+      },
+      "cover_mismatch_review": "Die digitale Ausgabe ist auf Auswanderer umbenannt. Das vorhandene Buchbild stammt von der älteren Rentner-Titelfassung und darf nicht als endgültiges neues Cover bestätigt werden."
     },
     {
       "id": "griechenland-2027-planung",
@@ -1236,7 +1237,8 @@
     "store_product_discovery": "10.11.2026: Nativer Systeme.io Store https://topdiveair.systeme.io/jfxprem mit beiden 29-EUR-Downloadprodukten und Checkout-Overlay öffentlich bestätigt. Es wurden keine direkten geprüften Kauf-URLs pro Produkt und keine End-to-End-Käufe bestätigt. Externe Amazon-Kauflinks bleiben entfernt.",
     "reader_launch": "10.11.2026: Alle 68 Ungarn-Lektionen aktiviert; mehrere Textseiten via Systeme.io Betreiberansicht lesbar. Ungarn-9,90-Checkout nach Feststellung offener Kaufhinweise (Zugangsdauer, Steuern, Vertragstexte) wieder von Produkt getrennt und Kaufknopf entfernt. Griechenland 9,90 weiterhin technisch gekoppelt, aber kein zentraler Kaufbutton veröffentlicht. Leserbibliothek als Rainsoft-Book – Meine Digitalbücher benannt.",
     "reader_safety_status": "10.11.2026: Beide 9,90-EUR-Angebote im Systeme.io Funnel von digitalen Produkten entkoppelt und PaymentButton entfernt; die 68 Ungarn-Lektionen und 85 Griechenland-Lektionen bleiben in der Bücherbibliothek aktiv. Keine neuen Zahlungen angenommen. Wiederfreigabe nach Vertrag/Datenschutz/Steuerprüfung und End-to-End-Auslieferungstest.",
-    "access_duration": "Nutzer hat 24 Monate garantierten Online-Lesezugang je Digitalbuch ab Kauf bestätigt; GitHub-Kaufhinweise und Systeme.io Bibliotheksbeschreibung aktualisiert. Käuferseitige Anmeldetests, Steuer-/Datenschutzprüfung und technische Ersatzbereitstellung bleiben offen."
+    "access_duration": "Nutzer hat 24 Monate garantierten Online-Lesezugang je Digitalbuch ab Kauf bestätigt; GitHub-Kaufhinweise und Systeme.io Bibliotheksbeschreibung aktualisiert. Käuferseitige Anmeldetests, Steuer-/Datenschutzprüfung und technische Ersatzbereitstellung bleiben offen.",
+    "branding_ungarn": "Digitaler Ungarn-Titel jetzt auch in Systeme.io als Ungarn 2027 – Digitalbuch für Auswanderer geführt; gedruckte Originalausgaben bleiben unverändert. Das alte Cover muss noch getrennt bearbeitet werden."
   },
   "price_categories": [
     {
