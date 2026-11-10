@@ -7,6 +7,8 @@ on:
       - buecher-johann-prem.html
       - buecher.html
       - books.html
+      - prem-digital-editionen.html
+      - prem-digital-katalog.json
       - scripts/check-book-catalog.py
       - .github/workflows/kdp-book-catalog-public-check.yml
   schedule:
@@ -31,7 +33,7 @@ jobs:
           set -euo pipefail
           public_dir=$(mktemp -d)
           trap 'rm -rf "$public_dir"' EXIT
-          for page in index.html buecher-johann-prem.html buecher.html books.html; do
+          for page in index.html buecher-johann-prem.html buecher.html books.html prem-digital-editionen.html prem-digital-katalog.json; do
             echo "Fetching public page: $page"
             curl --fail --location --silent --show-error --retry 2 --retry-delay 3 --max-time 30 \
               -o "$public_dir/$page" "https://topdiveair-sketch.github.io/Gaeste/$page"
