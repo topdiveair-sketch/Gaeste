@@ -2,6 +2,7 @@
 """Check catalog content and real HTML links, locally or in downloaded Pages HTML."""
 
 import argparse
+import json
 from collections import deque
 from html.parser import HTMLParser
 from pathlib import Path
@@ -10,7 +11,7 @@ import sys
 from urllib.parse import urljoin, urlsplit, urlunsplit
 
 BASE = "https://topdiveair-sketch.github.io/Gaeste/"
-PAGES = ("index.html", "buecher-johann-prem.html", "buecher.html", "books.html")
+PAGES = ("index.html", "buecher-johann-prem.html", "buecher.html", "books.html", "prem-digital-editionen.html")
 VOID = set("area base br col embed hr img input link meta param source track wbr".split())
 
 
@@ -119,11 +120,30 @@ def check(root):
         require(other in graph[name], f"{name}: clickable language switch to {other} missing")
         amazon = {a["href"] for a in page.links()
                   if urlsplit(a["href"]).hostname == "www.amazon.de"}
-        require(amazon, f"{name}: no Amazon book links")
+        require("prem-digital-editionen.html" in graph[name], f"{name}: independent digital catalog link missing")
         require(all(re.fullmatch(r"https://www\.amazon\.de/dp/[A-Z0-9]{10}(?:[/?#].*)?", url)
                     for url in amazon), f"{name}: malformed Amazon product link")
-        print(f"{name}: content, language links, canonical and {len(amazon)} Amazon URL formats verified")
-    print("Catalog checks passed (Amazon stock, prices and product contents are not checked).")
+        print(f"{name}: content, language links, canonical and independent reader catalog navigation verified")
+
+    independent = pages["prem-digital-editionen.html"]
+    require(independent.language == "de", "Independent digital catalog: incorrect language")
+    require("prem-digital-editionen.html" in routes, "Independent digital catalog not reachable through site navigation")
+    require("Unabhängige Digitalbücher" in " ".join(independent.text), "Independent catalog: heading missing")
+    require(not any(urlsplit(link["href"]).hostname in {"www.amazon.de", "www.epubli.de", "www.epubli.com"}
+                    for link in independent.links()), "Independent digital catalog contains external retailer links")
+
+    raw_catalog = (root / "prem-digital-editionen.html").read_text(encoding="utf-8")
+    data = json.loads((root / "prem-digital-katalog.json").read_text(encoding="utf-8"))
+    books = data["books"]
+    require(len({book["id"] for book in books}) == len(books), "Duplicate digital catalog book IDs")
+    require(len(re.findall(r'<article class="book">', raw_catalog)) == len(books),
+            "Digital catalog static book entries do not match JSON records")
+    require(all(book.get("status") != "katalog_erfasst_verkauf_nicht_geprueft" or not book.get("buy_url")
+                for book in books), "Unverified imported books must not have purchase links")
+    require(not any(book.get("category") == "hochschulschriften" for book in books),
+            "Disabled university category must not contain published books")
+    print(f"Independent catalog: {len(books)} unique books with matching static display; unverified offers gated")
+    print("Catalog checks passed (prices, checkout and Amazon availability are not verified).")
 
 
 def main():
