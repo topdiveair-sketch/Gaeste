@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "last_reviewed": "2026-11-09",
+  "last_reviewed": "2026-11-10",
   "purpose": "Genreuebergreifender, zentral gepflegter Cross-Selling-Katalog fuer unabhaengige Autoren. Keine Kauflinks ohne Live-Nachweis.",
   "channels": "Eigener Direktvertrieb ohne Amazon- und Buchhandels-Kauflinks",
   "categories": [
@@ -72,6 +72,19 @@
         "Gesellschaft",
         "Politik",
         "Geschichtsforschung"
+      ]
+    },
+    {
+      "id": "hochschulschriften",
+      "label": "Wissenschaft & Hochschulschriften",
+      "visibility": "internal",
+      "status": "erst_spaeter_freischalten",
+      "subcategories": [
+        "Diplom- & Masterarbeiten",
+        "Dissertationen",
+        "Forschungsberichte",
+        "Erweiterte Fachausgaben",
+        "Open-Access-Verweise"
       ]
     },
     {
@@ -275,6 +288,42 @@
       "Zahlungsabwicklung",
       "Sichere Leser-Zugaenge",
       "Echte Ende-zu-Ende-Testbestellung"
+    ]
+  },
+  "academic_publishing": {
+    "enabled": false,
+    "accept_submissions": false,
+    "promote_to_universities": false,
+    "commercial_sale_enabled": false,
+    "verified_university_partnerships": [],
+    "policy_version": "internal-draft-2026-11",
+    "required_metadata": [
+      "title",
+      "authors",
+      "institution",
+      "degree_type",
+      "faculty",
+      "year",
+      "abstract",
+      "keywords",
+      "language",
+      "source_repository_url",
+      "persistent_identifier_optional",
+      "rights_and_license",
+      "embargo_until_optional",
+      "third_party_material_clearance",
+      "commercial_rights_declaration",
+      "version_and_revision",
+      "price_and_access_type"
+    ],
+    "review_gates": [
+      "Author verified and owns rights to distribute and commercialize",
+      "No university embargo or conflicting prior exclusive licenses",
+      "No third-party copyrighted charts, personal data, or confidential interviews without clearance",
+      "Institutional repository publication requirements must be checked separately",
+      "Academic designation and grades may only be represented with evidence",
+      "University branding and endorsement may not be implied without agreement",
+      "Financial dashboard and payment settlement live-tested before author onboarding"
     ]
   }
 }
