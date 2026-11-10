@@ -182,12 +182,12 @@
         "date": "2026-11-10",
         "method": "browser",
         "result": "0_EUR_coupon_order_completed",
-        "paid_charge_tested": false,
+        "paid_charge_tested": true,
         "confirmation_page_verified": true,
         "access_email_received": true,
         "account_login_verified": false,
         "all_chapters_access_verified": false,
-        "notes": "Testbestellung 0,00 EUR; Gmail-Zugangsmail am 10.11.2026 eingegangen. Gutschein danach aus Angebot und Seite entfernt und gelöscht. Es erfolgte keine echte 9,90-EUR-Abbuchung.",
+        "notes": "Echte Kartenzahlung 9,90 EUR und Empfang einer Zugangsmail am 10.11.2026 bestätigt. Vollständiger Buchzugang nicht geprüft. Spezielle Vertragsbestätigungs-E-Mail (mit Einwilligungen) laut Systeme.io-Statistik bisher 0 versendet. Stripe-Beleg zeigt den Buchungen zuzuordnenden Händlernamen 'Zuhause am Bach' statt Rainsoft-Book.",
         "activation_link_verified": true,
         "activation_password_required": true,
         "activation_password_set": false,
@@ -203,7 +203,7 @@
         "required_consent_0_eur_checkout_behavior": "VERIFIED: both empty checkboxes blocked a 0.00-EUR coupon checkout with two separate visible validation errors; no order made",
         "prechecked": false,
         "consent_form_error_message": "Generic platform placeholder 'Meldung, wenn das Kontrollkästchen nicht angekreuzt ist'; needs nicer error text in visual editor",
-        "complete_new_order_tested": false,
+        "complete_new_order_tested": true,
         "confirmation_email_delivery_tested": false,
         "zero_eur_coupon_test": "100% test coupon accepted, 0.00 EUR verified; completion after checked consents not confirmed (aborted before PayPal / automation timeout)",
         "coupon_removed": true,
@@ -211,8 +211,18 @@
         "paid_test_attempt": "0-Euro-Coupon mit beiden Zustimmungen und 0,00 Gesamtpreis erfolgreich; Stripe verlangte trotzdem gueltige Karte, daher kein Abschluss ohne echte Zahlung moeglich.",
         "sale_limit_configured": null,
         "live_verified": false,
-        "current_status": "owner_authorized_open_self_test",
-        "paid_self_test_responsibility": "Buchautor testet den ersten echten Kauf selbst"
+        "current_status": "paid_self_test_payment_and_access_email_confirmed",
+        "paid_self_test_responsibility": "Buchautor testet den ersten echten Kauf selbst",
+        "paid_test_date": "2026-11-10",
+        "paid_test_amount_eur": 9.9,
+        "paid_test_result": "Systeme.io Dashboard zeigt regulären 9,90-EUR-Kauf am 10.11.2026 um 17:15 MEZ; Outlook-Zahlungsbeleg von Stripe 17:17 MEZ; Zugangsmail und Rechnung von Systeme.io um 17:15 MEZ empfangen.",
+        "stripe_receipt_received": true,
+        "systeme_order_visible": true,
+        "new_paid_access_email_received": true,
+        "custom_confirmation_email_delivered": false,
+        "custom_confirmation_email_stats_sent": 0,
+        "payment_payout_verified": false,
+        "payment_descriptor_merchant": "Zuhause am Bach"
       },
       "reader_title": "Rainsoft-Book – Meine Digitalbücher",
       "access_terms": {
@@ -248,10 +258,10 @@
           "stripe:card",
           "paypal-rest"
         ],
-        "first_sale_status": "not_verified",
-        "member_access_status": "not_verified_by_buyer",
+        "first_sale_status": "self_purchase_9_90_confirmed",
+        "member_access_status": "access_email_confirmed_login_not_tested",
         "consent_validation": "unmarked required checkboxes blocked checkout on each book",
-        "next_check": "Nach selbst durchgefuehrtem 9,90-EUR-Kauf Zahlungseingang, Vertragsmail, Mitgliederfreigabe und Buchinhalte pruefen"
+        "next_check": "Persönlichen Leserlogin und Zugriff ab Kapitel 3 prüfen; vollständige Vertragsbestätigungs-E-Mail nachweisen; Stripe-Live-Händlerbezeichnung und wirtschaftlichen Zahlungsempfänger getrennt vom Zimmerbetrieb klären; Auszahlung prüfen."
       }
     },
     {
@@ -1331,7 +1341,8 @@
     "withdrawal_protection": "10.11.2026: Zwei getrennte Rücktritts-/Sofortbereitstellungs-Checkboxen je Buch im Checkout gespeichert; buchspezifische Vertragsbestätigungs-E-Mails in Systeme.io angelegt und über confirmationEmailId zugeordnet. Rechtssicherer Entfall des Rücktrittsrechts nicht belegt: Checkbox-Pflichtstatus, tatsächlicher Transaktionsnachweis, Zustellung/Reihenfolge der Vertragsbestätigung und persönlicher Lesetest fehlen. Keine Kaufschaltflächen/Produktverküpfungen aktiv.",
     "consent_validation_20261110": "Griechenland und Ungarn: separate Zustimmungen bei frischem Checkout nicht vorangekreuzt, mit beiden ungekreuzten Feldern blockierten zwei sichtbare Fehlermeldungen jeweils den 0,00-EUR-Coupon-Test. Keine 9,90-EUR-Zahlung, kein neuer Kundenabschluss. Beide Tests nachweislich bereinigt (1x-Coupons entfernt/gelöscht, Testbuttons entfernt, digitale Produkte vom Angebot entkoppelt). Vertragsbestaetigungsmails sind je Produkt hinterlegt, Versand nach erfolgreichem Kauf und Mitgliederzugriff nicht vollstaendig geprueft. Nicht als live verkaufen markieren.",
     "pilot_launch_20261110": "Griechenland jetzt als limitiertes 9,90-EUR-Pilotangebot mit echtem Produkt, 2 Pflichtcheckboxen, Stripe und PayPal, zugeordnetem Bestellbestaetigungstext und Liefermodulen freigegeben. Keine volle paid-live-Verifikation; Kartenpflicht blockiert 0-EUR-Durchlauf. Der erste echte Verkauf muss auf Lieferbarkeit und Ruecktrittsbestätigung kontrolliert werden. Ungarn noch gesperrt.",
-    "owner_release_20261110": "Auf ausdruecklichen Wunsch des Autors beide 9,90-EUR-Digitalbuecher ohne Verkaufslimit freigegeben. Offer verknuepft mit je passendem Digitalprodukt, Checkoutbutton und zwei Pflicht-Checkboxen. GitHub Katalog verlinkt. Zahlung und alle Zugangsschritte werden erst nach selbst durchgefuehrtem Kauf durch den Autor verifiziert. Nicht als end-to-end live_verified kennzeichnen. 29-EUR-Pakete und andere eigene Titel unveraendert."
+    "owner_release_20261110": "Auf ausdruecklichen Wunsch des Autors beide 9,90-EUR-Digitalbuecher ohne Verkaufslimit freigegeben. Offer verknuepft mit je passendem Digitalprodukt, Checkoutbutton und zwei Pflicht-Checkboxen. GitHub Katalog verlinkt. Zahlung und alle Zugangsschritte werden erst nach selbst durchgefuehrtem Kauf durch den Autor verifiziert. Nicht als end-to-end live_verified kennzeichnen. 29-EUR-Pakete und andere eigene Titel unveraendert.",
+    "greece_paid_test_20261110": "Echter Karten-Selbstkauf 9,90 EUR am 10.11.2026 17:15 MEZ bei Systeme.io sichtbar. Stripe-Zahlungsbeleg 17:17, Systeme.io-Zugangsmail und Rechnung 17:15 MEZ in Outlook empfangen. Stripe-Beleg nennt 'Zuhause am Bach'. Separate buchspezifische Vertragsbestätigung mit Rücktrittserklärungen hat laut API 0 Sendungen. Persönlicher Buchlogin und Auszahlung noch offen. Nicht als vollständig live-verifiziert markieren."
   },
   "price_categories": [
     {
