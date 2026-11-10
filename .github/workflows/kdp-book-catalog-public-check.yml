@@ -41,10 +41,14 @@ jobs:
               item = items[key]
               assert item['price_eur'] == 9.9, f'Wrong price for {key}'
               assert item['access_terms']['minimum_months_from_purchase'] == 24, f'Wrong term for {key}'
-              if item['status'] != 'live_verified':
-                  assert not item.get('buy_url'), f'Unverified offer linked: {key}'
+              if item['status'] in ('live_verified', 'pilot_sale_active'):
+                  assert (item.get('buy_url') or '').startswith('https://'), f'Active offer missing HTTPS link: {key}'
+                  if item['status'] == 'pilot_sale_active':
+                      pilot = item.get('pilot_launch') or {}
+                      assert pilot.get('sale_limit', 0) > 0, f'Pilot offer has no sale cap: {key}'
+                      assert item.get('checkout_test',{}).get('paid_charge_tested') is False, f'Pilot test status ambiguous: {key}'
               else:
-                  assert (item.get('buy_url') or '').startswith('https://'), f'Live offer missing HTTPS link: {key}'
+                  assert not item.get('buy_url'), f'Unverified offer linked: {key}'
           print('OK: catalog, two own e-books, legal links, 24-month promise and product safety')
           PY
       - name: Verify current public legal and catalog pages
