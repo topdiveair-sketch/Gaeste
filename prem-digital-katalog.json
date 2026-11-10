@@ -193,8 +193,10 @@
         "activation_password_set": false,
         "test_browser_result": "Login-Formular zeigt Passwort-Erstellung, automatisierte Texteingabe scheiterte; kein erfolgreicher Login, kein Kapitel-Lesetest.",
         "thank_you_page_help_updated": true,
-        "thank_you_page_help_verified_public": true
-      }
+        "thank_you_page_help_verified_public": true,
+        "library_renamed_verified": true
+      },
+      "reader_title": "Rainsoft-Book – Meine Digitalbücher"
     },
     {
       "id": "ungarn-2027",
@@ -205,7 +207,7 @@
       "status": "testversion_nicht_kaufbar",
       "price_eur": 9.9,
       "buy_url": null,
-      "info": "Geschützter Online-Reader mit 68 inaktiven Lektionen in sieben Ungarn-Modulen. 9,90-EUR-Bestellseite im bestehenden Funnel vorbereitet und öffentliche Vorschau geprüft; Produktverknüpfung aus Sicherheitsgründen deaktiviert. Keine echte Bestellung zulassen, bis Lektionen, Zahlungsablauf und Zugang vollständig geprüft sind.",
+      "info": "Alle 68 Buchabschnitte in sieben Ungarn-Modulen am 10.11.2026 in Systeme.io aktiviert und Status danach verifiziert. Mehrere Text- und Arbeitsblattseiten als Betreiber geöffnet und inhaltlich sichtbar. Der 9,90-EUR-Checkout ist aktuell absichtlich ohne Produktverknüpfung und ohne Kaufknopf, da Zugangsbedingungen, Steuer-/Datenschutzangaben und ein echter Zahlung-/Zugangstest noch offen sind.",
       "subcategory": "Auswanderer-Ratgeber",
       "reader_book_id": "ungarn-2027-reader",
       "cover_url": "images/ebooks/ungarn-2027.jpg",
@@ -220,9 +222,16 @@
       "legacy_asin_origin": "Historical catalog listing; current ISBN/ASIN/product association must be verified before public sale",
       "checkout_test": {
         "date": "2026-11-10",
-        "result": "blocked_inactive_lessons_and_detached_offer",
+        "result": "chapters_68_active_checkout_paused",
+        "lesson_activation_verified": true,
+        "active_lessons": 68,
+        "total_lessons": 68,
+        "member_login_verified": false,
         "paid_charge_tested": false,
-        "all_chapters_access_verified": false
+        "all_chapters_access_verified": false,
+        "reader_title": "Rainsoft-Book – Meine Digitalbücher",
+        "product_linked": false,
+        "checkout_button_present": false
       }
     },
     {
@@ -1205,7 +1214,8 @@
     "additional_project_titles": 5,
     "price_group_change": "Vier vorhandene Angebote in zwei Preiskategorien 9,90 EUR und 29,00 EUR gruppiert. Keine Freigabe für direkten Kauf, bis Zahlung und Auslieferung live geprüft wurden.",
     "delivery_note": "Systeme.io MCP weist explizit darauf hin, dass downloadable_file-Ressourcen über die Digital Store Area und nicht über Funnel-Offers voll unterstützt sind. 29-EUR-Planungspakete in Funnels daher nicht als sicher zugestellt werten ohne echten Nachweis. Die Griechenland-Prüffassung ist weiterhin als zweite Dateiressource angehängt; Änderung ohne unterstützte Dateizuordnung unterblieb.",
-    "store_product_discovery": "10.11.2026: Nativer Systeme.io Store https://topdiveair.systeme.io/jfxprem mit beiden 29-EUR-Downloadprodukten und Checkout-Overlay öffentlich bestätigt. Es wurden keine direkten geprüften Kauf-URLs pro Produkt und keine End-to-End-Käufe bestätigt. Externe Amazon-Kauflinks bleiben entfernt."
+    "store_product_discovery": "10.11.2026: Nativer Systeme.io Store https://topdiveair.systeme.io/jfxprem mit beiden 29-EUR-Downloadprodukten und Checkout-Overlay öffentlich bestätigt. Es wurden keine direkten geprüften Kauf-URLs pro Produkt und keine End-to-End-Käufe bestätigt. Externe Amazon-Kauflinks bleiben entfernt.",
+    "reader_launch": "10.11.2026: Alle 68 Ungarn-Lektionen aktiviert; mehrere Textseiten via Systeme.io Betreiberansicht lesbar. Ungarn-9,90-Checkout nach Feststellung offener Kaufhinweise (Zugangsdauer, Steuern, Vertragstexte) wieder von Produkt getrennt und Kaufknopf entfernt. Griechenland 9,90 weiterhin technisch gekoppelt, aber kein zentraler Kaufbutton veröffentlicht. Leserbibliothek als Rainsoft-Book – Meine Digitalbücher benannt."
   },
   "price_categories": [
     {
