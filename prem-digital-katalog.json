@@ -200,7 +200,14 @@
         "paused_reason": "Vertragsangaben und tatsächlicher Leserzugang noch nicht vollständig geprüft; bestehende rechtliche Informationsseite schreibt vor einem echten Angebot verbindliche Zugangsbedingungen und geprüfte Steuer-/Datenschutzangaben vor.",
         "consent_terms_updated": "2026-11-10",
         "order_confirmation_email_prepared": true,
-        "required_consent_tested": false
+        "required_consent_tested": true,
+        "required_consent_0_eur_checkout_behavior": "VERIFIED: both empty checkboxes blocked a 0.00-EUR coupon checkout with two separate visible validation errors; no order made",
+        "prechecked": false,
+        "consent_form_error_message": "Generic platform placeholder 'Meldung, wenn das Kontrollkästchen nicht angekreuzt ist'; needs nicer error text in visual editor",
+        "complete_new_order_tested": false,
+        "confirmation_email_delivery_tested": false,
+        "zero_eur_coupon_test": "100% test coupon accepted, 0.00 EUR verified; completion after checked consents not confirmed (aborted before PayPal / automation timeout)",
+        "coupon_removed": true
       },
       "reader_title": "Rainsoft-Book – Meine Digitalbücher",
       "access_terms": {
@@ -214,8 +221,8 @@
         "checked_2026_11_10": true,
         "legal_basis": "AT FAGG §18 Abs1 Z11; E-Book digital content; applicability to online access to be reviewed",
         "separate_customer_consents_prepared": 2,
-        "required_checkbox_validation": "Im visuellen Editor noch nicht als Pflichtfeld nachgewiesen; API zeigt diese Einstellung nicht",
-        "checkout_consent_record": "Nachweis erst nach einer Testtransaktion möglich",
+        "required_checkbox_validation": "LIVE GEPRUEFT 2026-11-10: Checkout blocked with both unmarked, two error notices",
+        "checkout_consent_record": "No completed new test order; not verified",
         "durable_contract_confirmation_with_consent": "Buchspezifische Bestellbestätigungs-E-Mail wurde erstellt und am Digitalprodukt hinterlegt; Pflichtfeld-/Zustellungsprüfung und zeitliche Reihenfolge vor Leistungsbeginn offen",
         "paid_sale_linked": false,
         "rule": "Keinen rechtssicheren Ausschluss des Rücktrittsrechts behaupten, bevor beide Pflichtkästchen und die vollständige Bestätigung auf dauerhaftem Datenträger nachgewiesen sind.",
@@ -276,7 +283,7 @@
         "checked_2026_11_10": true,
         "legal_basis": "AT FAGG §18 Abs1 Z11; E-Book digital content; applicability to online access to be reviewed",
         "separate_customer_consents_prepared": 2,
-        "required_checkbox_validation": "Im visuellen Editor noch nicht als Pflichtfeld nachgewiesen; API zeigt diese Einstellung nicht",
+        "required_checkbox_validation": "UNGARN noch nicht via Checkout getestet; Benutzer hat nur Griechenland Optional ausgeschaltet",
         "checkout_consent_record": "Nachweis erst nach einer Testtransaktion möglich",
         "durable_contract_confirmation_with_consent": "Buchspezifische Bestellbestätigungs-E-Mail wurde erstellt und am Digitalprodukt hinterlegt; Pflichtfeld-/Zustellungsprüfung und zeitliche Reihenfolge vor Leistungsbeginn offen",
         "paid_sale_linked": false,
@@ -1273,7 +1280,8 @@
     "reader_safety_status": "10.11.2026: Beide 9,90-EUR-Angebote im Systeme.io Funnel von digitalen Produkten entkoppelt und PaymentButton entfernt; die 68 Ungarn-Lektionen und 85 Griechenland-Lektionen bleiben in der Bücherbibliothek aktiv. Keine neuen Zahlungen angenommen. Wiederfreigabe nach Vertrag/Datenschutz/Steuerprüfung und End-to-End-Auslieferungstest.",
     "access_duration": "Nutzer hat 24 Monate garantierten Online-Lesezugang je Digitalbuch ab Kauf bestätigt; GitHub-Kaufhinweise und Systeme.io Bibliotheksbeschreibung aktualisiert. Käuferseitige Anmeldetests, Steuer-/Datenschutzprüfung und technische Ersatzbereitstellung bleiben offen.",
     "branding_ungarn": "Digitaler Ungarn-Titel jetzt auch in Systeme.io als Ungarn 2027 – Digitalbuch für Auswanderer geführt; gedruckte Originalausgaben bleiben unverändert. Das alte Cover muss noch getrennt bearbeitet werden.",
-    "withdrawal_protection": "10.11.2026: Zwei getrennte Rücktritts-/Sofortbereitstellungs-Checkboxen je Buch im Checkout gespeichert; buchspezifische Vertragsbestätigungs-E-Mails in Systeme.io angelegt und über confirmationEmailId zugeordnet. Rechtssicherer Entfall des Rücktrittsrechts nicht belegt: Checkbox-Pflichtstatus, tatsächlicher Transaktionsnachweis, Zustellung/Reihenfolge der Vertragsbestätigung und persönlicher Lesetest fehlen. Keine Kaufschaltflächen/Produktverküpfungen aktiv."
+    "withdrawal_protection": "10.11.2026: Zwei getrennte Rücktritts-/Sofortbereitstellungs-Checkboxen je Buch im Checkout gespeichert; buchspezifische Vertragsbestätigungs-E-Mails in Systeme.io angelegt und über confirmationEmailId zugeordnet. Rechtssicherer Entfall des Rücktrittsrechts nicht belegt: Checkbox-Pflichtstatus, tatsächlicher Transaktionsnachweis, Zustellung/Reihenfolge der Vertragsbestätigung und persönlicher Lesetest fehlen. Keine Kaufschaltflächen/Produktverküpfungen aktiv.",
+    "consent_validation_20261110": "Griechenland: echter Checkout-Test mit 100% 1x Gutschein und Gesamtsumme 0,00 EUR, ohne gesetzliche Zustimmung -> Blockade mit zwei getrennten Fehlermeldungen bestaetigt. 0,00 EUR Bestellung mit angekreuzten Feldern NICHT abgeschlossen (PayPal-Schritt/Automations-Timeout). Gutschein von Angebot entkoppelt, geloescht, Coupon UI und PaymentButton entfernt, Produkt wieder entkoppelt. Ungarn Pflichtfeld noch nicht getestet. ConfirmationEmails sind an beiden Produkten hinterlegt, Versand noch nicht getestet. Keine Verkaufsfreigabe."
   },
   "price_categories": [
     {
