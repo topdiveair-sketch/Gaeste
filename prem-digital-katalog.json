@@ -263,7 +263,17 @@
         "consent_validation": "unmarked required checkboxes blocked checkout on each book",
         "next_check": "Persönlichen Leserlogin und Zugriff ab Kapitel 3 prüfen; vollständige Vertragsbestätigungs-E-Mail nachweisen; Stripe-Live-Händlerbezeichnung und wirtschaftlichen Zahlungsempfänger getrennt vom Zimmerbetrieb klären; Auszahlung prüfen."
       },
-      "sales_page_url": "griechenland-2027-digitalbuch.html"
+      "sales_page_url": "griechenland-2027-digitalbuch.html",
+      "confirmation_monitoring": {
+        "configured_at": "2026-11-10",
+        "email_template_id": 13400760,
+        "method": "active_automation_rule_new_sale",
+        "config_checked": true,
+        "actual_sent_count": 0,
+        "first_actual_dispatch_tested": false,
+        "first_paid_book_last_chapter_tested": false,
+        "notes": "Die Automation ist aktiviert, der Versand der gesonderten Vertragsbestätigung an einen künftigen realen Käufer ist noch nicht bestätigt. Die normale Buch-Zugangsmail aus einem Griechenland-Selbstkauf wurde zuvor empfangen."
+      }
     },
     {
       "id": "ungarn-2027",
@@ -383,6 +393,16 @@
         "stale_blocked_copy_removed": true,
         "public_link_to_sales_page_verified": true,
         "old_nonbuyable_claim_removed": true
+      },
+      "confirmation_monitoring": {
+        "configured_at": "2026-11-10",
+        "email_template_id": 13400766,
+        "method": "active_workflow_new_sale",
+        "config_checked": true,
+        "actual_sent_count": 0,
+        "first_actual_dispatch_tested": false,
+        "first_paid_book_last_chapter_tested": false,
+        "notes": "Die Automation ist aktiviert, der Versand der gesonderten Vertragsbestätigung an einen künftigen realen Käufer ist noch nicht bestätigt. Die normale Buch-Zugangsmail aus einem Griechenland-Selbstkauf wurde zuvor empfangen."
       }
     },
     {
@@ -1378,7 +1398,8 @@
     "greece_paid_test_20261110": "Echter Karten-Selbstkauf 9,90 EUR am 10.11.2026 17:15 MEZ bei Systeme.io sichtbar. Stripe-Zahlungsbeleg 17:17, Systeme.io-Zugangsmail und Rechnung 17:15 MEZ in Outlook empfangen. Stripe-Beleg nennt 'Zuhause am Bach'. Separate buchspezifische Vertragsbestätigung mit Rücktrittserklärungen hat laut API 0 Sendungen. Persönlicher Buchlogin und Auszahlung noch offen. Nicht als vollständig live-verifiziert markieren.",
     "course_navigation_20261110": "Gemeinsame Rainsoft-Book Leserbibliothek ist weiterhin 1 aktiver Systeme.io-Kurs (703718). Alle 10 Griechenland-Module wurden sichtbarer mit 'Griechenland 2027' praefixiert; die 7 Ungarn-Module behalten 'Ungarn 2027'. Beschreibung erlaeutert 153 Lektionen = beide separat erwerbbaren Digitalbuecher, Schlosssymbole und 24-Monats-Zusage. Beide Digitalprodukte bleiben unveraendert mit partial_access jeweils nur auf ihre 10 bzw. 7 Module; beide 9,90-Euro-Offers sind weiter verknuepft. Zwei tatsaechlich getrennte aktive Kurse sind noch NICHT umgesetzt; laut Systeme.io offiziellem Gratisplan nur 1 Kurs enthalten. Keine kostenpflichtige Erweiterung aktiviert und keine bestehenden Kaeuferzugriffe umgestellt.",
     "ungarn_sale_page_20261110": "Ungarn-2027-Buchverkaufsseite öffentlich geladen, 68/68 aktive Ungarn-Lektionen in 7 getrennt berechtigten Modulen bei Systeme.io verifiziert. Öffentlicher Browser-Klicktest Leseprobe -> Ungarn-Verkaufsseite -> 9,90 EUR Systeme.io Checkout mit zwei Zustimmungskästchen, Stripe und PayPal erfolgreich, ohne Zahlung. Keine echte Ungarn-9,90-EUR-Bestellung/Inbox-Freischaltung nachgewiesen. Griechenland-Kartenselbstkauf + Zugangsmail zuvor bestaetigt.",
-    "facebook_catalog_review_20261110": "FB-Link inkl fbclid und Katalog unter normaler URL erfolgreich oeffentlich geprueft. Verkaufsseiten, Leseproben und Preise (2x 9,90) erreichbar, Suche und Genre-Filter funktionieren. Facebook-OG-Metadaten und prominenter Abschnitt vor Suchleiste im HTML ergaenzt; alte Footer-Warteformel entfernt. Griechenland Teaser von nicht mehr stimmiger Reader-Testversion auf bestellbare Online-Ausgabe aktualisiert. Zahlungs- und Kapitelzugangsstatus unveraendert, kein neuer Kauf erzeugt."
+    "facebook_catalog_review_20261110": "FB-Link inkl fbclid und Katalog unter normaler URL erfolgreich oeffentlich geprueft. Verkaufsseiten, Leseproben und Preise (2x 9,90) erreichbar, Suche und Genre-Filter funktionieren. Facebook-OG-Metadaten und prominenter Abschnitt vor Suchleiste im HTML ergaenzt; alte Footer-Warteformel entfernt. Griechenland Teaser von nicht mehr stimmiger Reader-Testversion auf bestellbare Online-Ausgabe aktualisiert. Zahlungs- und Kapitelzugangsstatus unveraendert, kein neuer Kauf erzeugt.",
+    "automations_post_sale_20261110": "Beide alten 9,90 EUR Preisplan-Innennamen ohne 'vorbereitet - nicht live' und 'Freigabe offen' korrigiert. Griechenland: Systeme.io Automation Rule 2514510 fuer neue Verkaeufe von offer-form 26114528 => Vertragsbestaetigungs-Email 13400760 AKTIV. Kostenloser Systeme.io Tarif verweigerte zweite Regel; als Alternative Ungarn Workflow 572905 AKTIV, Trigger new_sale 26121605, Aktion send_email 13400766. Fuer beide Email-Templates sentAmount noch 0, daher Automatikversand bei kuenftigem Kauf NICHT Ende-zu-Ende geprueft. Keine Bestellungen oder Refunds ausgeloest. Opera Browser Connector aktuell nicht verbunden, daher personlicher letzter Kapitelzugriff noch nicht per Login geprueft. Laufende ChatGPT condition_watch Automation 'Rainsoft-Book Verkaufswache' ab 11.11.2026 09:00 Europe/Vienna taeglich, nur bei neuen Sales oder Störungen melden; historische Selbstkauf-Testzahlungen nicht als Fremdumsatz zaehlen."
   },
   "price_categories": [
     {
