@@ -132,7 +132,7 @@ function makeBook(b){
 fetch('./prem-digital-katalog.json',{cache:'no-store'})
  .then(r=>{if(!r.ok)throw new Error('Katalog HTTP '+r.status);return r.json();})
  .then(data=>{
-  const cats=Array.isArray(data.categories)?data.categories:[];
+  const cats=Array.isArray(data.categories)?data.categories.filter(c=>c.visibility!=='internal'):[];
   const books=Array.isArray(data.books)?data.books:[];
   const active=cats.filter(c=>books.some(b=>b.category===c.id));
   for(const c of active){
