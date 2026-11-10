@@ -279,7 +279,7 @@
       "cover_url": "images/ebooks/ungarn-2027.jpg",
       "cover_alt": "Bisheriges Covermotiv der Ungarn-Ausgabe – Gestaltung des neuen Digitalbuchcovers noch zu prüfen",
       "cover_verified_at": "2026-11-09",
-      "teaser": "Ratgeber für Auswanderer nach Ungarn: Aufenthalt, Rente, Steuern, Krankenversicherung, Wohnen und Entscheidungshilfen. Vollständige Online-Ausgabe vorbereitet; Direktkauf bis zum abschließenden Funktionstest ausgesetzt.",
+      "teaser": "Papierloser Online-Ratgeber für Auswanderer nach Ungarn: Aufenthalt, Rente, Steuern, Krankenversicherung, Wohnen und Entscheidungshilfen. Für einmalig 9,90 € direkt bestellbar, kein Abonnement, mindestens 24 Monate Zugang.",
       "sample_url": "ungarn-2027-leseprobe.html",
       "sample_scope": "Vorwort sowie Kapitel 1 und 2; danach nur Kapitelüberschriften. Kein vollständiger Buchtext öffentlich.",
       "tools_url": "ungarn-2027-werkzeuge.html",
@@ -350,6 +350,27 @@
         "member_access_status": "not_verified_by_buyer",
         "consent_validation": "unmarked required checkboxes blocked checkout on each book",
         "next_check": "Nach selbst durchgefuehrtem 9,90-EUR-Kauf Zahlungseingang, Vertragsmail, Mitgliederfreigabe und Buchinhalte pruefen"
+      },
+      "sales_page_url": "ungarn-2027-digitalbuch.html",
+      "sales_page_check": {
+        "date": "2026-11-10",
+        "status": "created_and_linked_pending_public_browser_test",
+        "includes": [
+          "Buchbeschreibung",
+          "Kostenlose Leseprobe",
+          "9,90-EUR-Kaufbutton",
+          "Vertragsbedingungen",
+          "Datenschutz",
+          "Impressum"
+        ],
+        "direct_checkout": "https://topdiveair.systeme.io/a1773bd7",
+        "self_purchase_verified": false
+      },
+      "sample_page_check": {
+        "date": "2026-11-10",
+        "status": "updated_pending_public_browser_test",
+        "locked_chapters_cta": "ungarn-2027-digitalbuch.html",
+        "stale_blocked_copy_removed": true
       }
     },
     {
@@ -1343,7 +1364,8 @@
     "pilot_launch_20261110": "Griechenland jetzt als limitiertes 9,90-EUR-Pilotangebot mit echtem Produkt, 2 Pflichtcheckboxen, Stripe und PayPal, zugeordnetem Bestellbestaetigungstext und Liefermodulen freigegeben. Keine volle paid-live-Verifikation; Kartenpflicht blockiert 0-EUR-Durchlauf. Der erste echte Verkauf muss auf Lieferbarkeit und Ruecktrittsbestätigung kontrolliert werden. Ungarn noch gesperrt.",
     "owner_release_20261110": "Auf ausdruecklichen Wunsch des Autors beide 9,90-EUR-Digitalbuecher ohne Verkaufslimit freigegeben. Offer verknuepft mit je passendem Digitalprodukt, Checkoutbutton und zwei Pflicht-Checkboxen. GitHub Katalog verlinkt. Zahlung und alle Zugangsschritte werden erst nach selbst durchgefuehrtem Kauf durch den Autor verifiziert. Nicht als end-to-end live_verified kennzeichnen. 29-EUR-Pakete und andere eigene Titel unveraendert.",
     "greece_paid_test_20261110": "Echter Karten-Selbstkauf 9,90 EUR am 10.11.2026 17:15 MEZ bei Systeme.io sichtbar. Stripe-Zahlungsbeleg 17:17, Systeme.io-Zugangsmail und Rechnung 17:15 MEZ in Outlook empfangen. Stripe-Beleg nennt 'Zuhause am Bach'. Separate buchspezifische Vertragsbestätigung mit Rücktrittserklärungen hat laut API 0 Sendungen. Persönlicher Buchlogin und Auszahlung noch offen. Nicht als vollständig live-verifiziert markieren.",
-    "course_navigation_20261110": "Gemeinsame Rainsoft-Book Leserbibliothek ist weiterhin 1 aktiver Systeme.io-Kurs (703718). Alle 10 Griechenland-Module wurden sichtbarer mit 'Griechenland 2027' praefixiert; die 7 Ungarn-Module behalten 'Ungarn 2027'. Beschreibung erlaeutert 153 Lektionen = beide separat erwerbbaren Digitalbuecher, Schlosssymbole und 24-Monats-Zusage. Beide Digitalprodukte bleiben unveraendert mit partial_access jeweils nur auf ihre 10 bzw. 7 Module; beide 9,90-Euro-Offers sind weiter verknuepft. Zwei tatsaechlich getrennte aktive Kurse sind noch NICHT umgesetzt; laut Systeme.io offiziellem Gratisplan nur 1 Kurs enthalten. Keine kostenpflichtige Erweiterung aktiviert und keine bestehenden Kaeuferzugriffe umgestellt."
+    "course_navigation_20261110": "Gemeinsame Rainsoft-Book Leserbibliothek ist weiterhin 1 aktiver Systeme.io-Kurs (703718). Alle 10 Griechenland-Module wurden sichtbarer mit 'Griechenland 2027' praefixiert; die 7 Ungarn-Module behalten 'Ungarn 2027'. Beschreibung erlaeutert 153 Lektionen = beide separat erwerbbaren Digitalbuecher, Schlosssymbole und 24-Monats-Zusage. Beide Digitalprodukte bleiben unveraendert mit partial_access jeweils nur auf ihre 10 bzw. 7 Module; beide 9,90-Euro-Offers sind weiter verknuepft. Zwei tatsaechlich getrennte aktive Kurse sind noch NICHT umgesetzt; laut Systeme.io offiziellem Gratisplan nur 1 Kurs enthalten. Keine kostenpflichtige Erweiterung aktiviert und keine bestehenden Kaeuferzugriffe umgestellt.",
+    "ungarn_sale_page_20261110": "Ungarn eigene Rainsoft-Verkaufsseite ungarn-2027-digitalbuch.html erstellt (mit Leseprobe, Leserwerkzeugen, 9,90 Euro Checkout, Rechtshinweisen); Leseprobe mit CTA zur Verkaufsseite statt veralteter Kaufsperre aktualisiert. Static & JS Dynamic-Katalogkarten verlinken Verkaufsseite. Paywall-Module 7, Online-Lesebuch 68 Lektionen, Verkaufspreis 9,90 Euro unveraendert. Public browser end-to-end click test noch offen, bezahlter Ungarn-Selbstkauf nicht bestaetigt."
   },
   "price_categories": [
     {
