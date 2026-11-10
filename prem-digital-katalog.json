@@ -173,7 +173,7 @@
       "cover_url": "images/ebooks/griechenland-2027.jpg",
       "cover_alt": "Cover: Auswandern nach Griechenland – J.F.X. Prem",
       "cover_verified_at": "2026-11-09",
-      "teaser": "Praxisratgeber für den geplanten Umzug nach Griechenland: Kosten, Wohnen, Aufenthaltsfragen und Alltag. Die Reader-Testversion bietet zusätzlich Budgetrechner und Checkliste.",
+      "teaser": "Papierloser Praxisratgeber für die Auswanderung nach Griechenland 2027: Aufenthalt, Kosten, Wohnen, Rente, Steuern und Alltag. Online-Buch mit Budgetrechner und Checkliste für einmalig 9,90 €.",
       "sample_url": "griechenland-2027-leseprobe.html",
       "sample_scope": "Vorwort, Einleitung, Kapitel 1 und 2. Kapitel 3–68 nicht öffentlich.",
       "tools_url": "griechenland-2027-werkzeuge.html",
@@ -262,7 +262,8 @@
         "member_access_status": "access_email_confirmed_login_not_tested",
         "consent_validation": "unmarked required checkboxes blocked checkout on each book",
         "next_check": "Persönlichen Leserlogin und Zugriff ab Kapitel 3 prüfen; vollständige Vertragsbestätigungs-E-Mail nachweisen; Stripe-Live-Händlerbezeichnung und wirtschaftlichen Zahlungsempfänger getrennt vom Zimmerbetrieb klären; Auszahlung prüfen."
-      }
+      },
+      "sales_page_url": "griechenland-2027-digitalbuch.html"
     },
     {
       "id": "ungarn-2027",
@@ -1376,7 +1377,8 @@
     "owner_release_20261110": "Auf ausdruecklichen Wunsch des Autors beide 9,90-EUR-Digitalbuecher ohne Verkaufslimit freigegeben. Offer verknuepft mit je passendem Digitalprodukt, Checkoutbutton und zwei Pflicht-Checkboxen. GitHub Katalog verlinkt. Zahlung und alle Zugangsschritte werden erst nach selbst durchgefuehrtem Kauf durch den Autor verifiziert. Nicht als end-to-end live_verified kennzeichnen. 29-EUR-Pakete und andere eigene Titel unveraendert.",
     "greece_paid_test_20261110": "Echter Karten-Selbstkauf 9,90 EUR am 10.11.2026 17:15 MEZ bei Systeme.io sichtbar. Stripe-Zahlungsbeleg 17:17, Systeme.io-Zugangsmail und Rechnung 17:15 MEZ in Outlook empfangen. Stripe-Beleg nennt 'Zuhause am Bach'. Separate buchspezifische Vertragsbestätigung mit Rücktrittserklärungen hat laut API 0 Sendungen. Persönlicher Buchlogin und Auszahlung noch offen. Nicht als vollständig live-verifiziert markieren.",
     "course_navigation_20261110": "Gemeinsame Rainsoft-Book Leserbibliothek ist weiterhin 1 aktiver Systeme.io-Kurs (703718). Alle 10 Griechenland-Module wurden sichtbarer mit 'Griechenland 2027' praefixiert; die 7 Ungarn-Module behalten 'Ungarn 2027'. Beschreibung erlaeutert 153 Lektionen = beide separat erwerbbaren Digitalbuecher, Schlosssymbole und 24-Monats-Zusage. Beide Digitalprodukte bleiben unveraendert mit partial_access jeweils nur auf ihre 10 bzw. 7 Module; beide 9,90-Euro-Offers sind weiter verknuepft. Zwei tatsaechlich getrennte aktive Kurse sind noch NICHT umgesetzt; laut Systeme.io offiziellem Gratisplan nur 1 Kurs enthalten. Keine kostenpflichtige Erweiterung aktiviert und keine bestehenden Kaeuferzugriffe umgestellt.",
-    "ungarn_sale_page_20261110": "Ungarn-2027-Buchverkaufsseite öffentlich geladen, 68/68 aktive Ungarn-Lektionen in 7 getrennt berechtigten Modulen bei Systeme.io verifiziert. Öffentlicher Browser-Klicktest Leseprobe -> Ungarn-Verkaufsseite -> 9,90 EUR Systeme.io Checkout mit zwei Zustimmungskästchen, Stripe und PayPal erfolgreich, ohne Zahlung. Keine echte Ungarn-9,90-EUR-Bestellung/Inbox-Freischaltung nachgewiesen. Griechenland-Kartenselbstkauf + Zugangsmail zuvor bestaetigt."
+    "ungarn_sale_page_20261110": "Ungarn-2027-Buchverkaufsseite öffentlich geladen, 68/68 aktive Ungarn-Lektionen in 7 getrennt berechtigten Modulen bei Systeme.io verifiziert. Öffentlicher Browser-Klicktest Leseprobe -> Ungarn-Verkaufsseite -> 9,90 EUR Systeme.io Checkout mit zwei Zustimmungskästchen, Stripe und PayPal erfolgreich, ohne Zahlung. Keine echte Ungarn-9,90-EUR-Bestellung/Inbox-Freischaltung nachgewiesen. Griechenland-Kartenselbstkauf + Zugangsmail zuvor bestaetigt.",
+    "facebook_catalog_review_20261110": "FB-Link inkl fbclid und Katalog unter normaler URL erfolgreich oeffentlich geprueft. Verkaufsseiten, Leseproben und Preise (2x 9,90) erreichbar, Suche und Genre-Filter funktionieren. Facebook-OG-Metadaten und prominenter Abschnitt vor Suchleiste im HTML ergaenzt; alte Footer-Warteformel entfernt. Griechenland Teaser von nicht mehr stimmiger Reader-Testversion auf bestellbare Online-Ausgabe aktualisiert. Zahlungs- und Kapitelzugangsstatus unveraendert, kein neuer Kauf erzeugt."
   },
   "price_categories": [
     {
