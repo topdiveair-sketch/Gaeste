@@ -199,7 +199,14 @@
         "checkout_button_present": false,
         "paused_reason": "Vertragsangaben und tatsächlicher Leserzugang noch nicht vollständig geprüft; bestehende rechtliche Informationsseite schreibt vor einem echten Angebot verbindliche Zugangsbedingungen und geprüfte Steuer-/Datenschutzangaben vor."
       },
-      "reader_title": "Rainsoft-Book – Meine Digitalbücher"
+      "reader_title": "Rainsoft-Book – Meine Digitalbücher",
+      "access_terms": {
+        "minimum_months_from_purchase": 24,
+        "commitment_approved": "2026-11-10",
+        "continuation": "ohne Zusatzgebühr solange die Buchbibliothek betrieben wird",
+        "early_shutdown": "gleichwertige Ersatzbereitstellung; gesetzliche Rechte bleiben unberührt",
+        "status": "in_kaufhinweisen_verankert_ersatzbereitstellung_organisatorisch_noch_offen"
+      }
     },
     {
       "id": "ungarn-2027",
@@ -236,6 +243,13 @@
         "product_linked": false,
         "checkout_button_present": false,
         "paused_reason": "Vertragsangaben und tatsächlicher Leserzugang noch nicht vollständig geprüft; bestehende rechtliche Informationsseite schreibt vor einem echten Angebot verbindliche Zugangsbedingungen und geprüfte Steuer-/Datenschutzangaben vor."
+      },
+      "access_terms": {
+        "minimum_months_from_purchase": 24,
+        "commitment_approved": "2026-11-10",
+        "continuation": "ohne Zusatzgebühr solange die Buchbibliothek betrieben wird",
+        "early_shutdown": "gleichwertige Ersatzbereitstellung; gesetzliche Rechte bleiben unberührt",
+        "status": "in_kaufhinweisen_verankert_ersatzbereitstellung_organisatorisch_noch_offen"
       }
     },
     {
@@ -1220,7 +1234,8 @@
     "delivery_note": "Systeme.io MCP weist explizit darauf hin, dass downloadable_file-Ressourcen über die Digital Store Area und nicht über Funnel-Offers voll unterstützt sind. 29-EUR-Planungspakete in Funnels daher nicht als sicher zugestellt werten ohne echten Nachweis. Die Griechenland-Prüffassung ist weiterhin als zweite Dateiressource angehängt; Änderung ohne unterstützte Dateizuordnung unterblieb.",
     "store_product_discovery": "10.11.2026: Nativer Systeme.io Store https://topdiveair.systeme.io/jfxprem mit beiden 29-EUR-Downloadprodukten und Checkout-Overlay öffentlich bestätigt. Es wurden keine direkten geprüften Kauf-URLs pro Produkt und keine End-to-End-Käufe bestätigt. Externe Amazon-Kauflinks bleiben entfernt.",
     "reader_launch": "10.11.2026: Alle 68 Ungarn-Lektionen aktiviert; mehrere Textseiten via Systeme.io Betreiberansicht lesbar. Ungarn-9,90-Checkout nach Feststellung offener Kaufhinweise (Zugangsdauer, Steuern, Vertragstexte) wieder von Produkt getrennt und Kaufknopf entfernt. Griechenland 9,90 weiterhin technisch gekoppelt, aber kein zentraler Kaufbutton veröffentlicht. Leserbibliothek als Rainsoft-Book – Meine Digitalbücher benannt.",
-    "reader_safety_status": "10.11.2026: Beide 9,90-EUR-Angebote im Systeme.io Funnel von digitalen Produkten entkoppelt und PaymentButton entfernt; die 68 Ungarn-Lektionen und 85 Griechenland-Lektionen bleiben in der Bücherbibliothek aktiv. Keine neuen Zahlungen angenommen. Wiederfreigabe nach Vertrag/Datenschutz/Steuerprüfung und End-to-End-Auslieferungstest."
+    "reader_safety_status": "10.11.2026: Beide 9,90-EUR-Angebote im Systeme.io Funnel von digitalen Produkten entkoppelt und PaymentButton entfernt; die 68 Ungarn-Lektionen und 85 Griechenland-Lektionen bleiben in der Bücherbibliothek aktiv. Keine neuen Zahlungen angenommen. Wiederfreigabe nach Vertrag/Datenschutz/Steuerprüfung und End-to-End-Auslieferungstest.",
+    "access_duration": "Nutzer hat 24 Monate garantierten Online-Lesezugang je Digitalbuch ab Kauf bestätigt; GitHub-Kaufhinweise und Systeme.io Bibliotheksbeschreibung aktualisiert. Käuferseitige Anmeldetests, Steuer-/Datenschutzprüfung und technische Ersatzbereitstellung bleiben offen."
   },
   "price_categories": [
     {
