@@ -286,7 +286,7 @@ function makeBook(b){
  card.append(makeEl('h3','',b.title),makeEl('p','meta',[b.subtitle,b.edition,b.author].filter(Boolean).join(' · ')));
  if(b.subcategory)card.append(makeEl('div','subgenre',b.subcategory));
  if(typeof b.teaser==='string'&&b.teaser.trim())card.append(makeEl('p','teaser',b.teaser));
- if(b.price_eur!==undefined && b.price_eur!==null && !['live_verified','pilot_sale_active'].includes(b.status)){
+ if(b.price_eur!==undefined && b.price_eur!==null && (b.id==='45-jahre' || !['live_verified','pilot_sale_active'].includes(b.status))){
   const p=makeEl('p','preview-price',Number(b.price_eur).toLocaleString('de-AT',{style:'currency',currency:'EUR'}));
   card.append(p);
  }
@@ -298,13 +298,16 @@ function makeBook(b){
  if(b.id==='bestand-auswandern-bulgarien'){
    const about=makeEl('a','preview','Buch ansehen');about.href='bulgarien-digitalbuch.html';card.append(about);
  }
+ if(b.id==='45-jahre'){
+   const about=makeEl('a','preview','Roman ansehen');about.href='45-jahre-die-rechnung-kommt-zum-schluss.html';card.append(about);
+ }
  if(b.id==='griechenland-2027-reader'||b.id==='ungarn-2027'){
    const salesPage=makeEl('a','preview','Buchvorstellung und Verkaufsseite');
    salesPage.href=b.id==='ungarn-2027'?'ungarn-2027-digitalbuch.html':'griechenland-2027-digitalbuch.html';
    card.append(salesPage);
  }
  if(isSafeBuyLink(b)){
-   const label = b.status==='pilot_sale_active' ? ((b.id==='ungarn-2027'?'Ungarn':b.id==='bestand-auswandern-bulgarien'?'Bulgarien':'Griechenland')+' für 9,90 € direkt kaufen') : 'Jetzt direkt kaufen';
+   const label = b.id==='45-jahre' ? 'Roman für 9,90 € direkt kaufen' : (b.status==='pilot_sale_active' ? ((b.id==='ungarn-2027'?'Ungarn':b.id==='bestand-auswandern-bulgarien'?'Bulgarien':'Griechenland')+' für 9,90 € direkt kaufen') : 'Jetzt direkt kaufen');
    const a=makeEl('a','buy',label);a.href=b.buy_url;a.target='_blank';a.rel='noopener noreferrer';card.append(a);
  }else{card.append(makeEl('span','state',statusLabels[b.status]||'Kaufangebot noch nicht bestätigt'));}
  return card;
@@ -331,7 +334,7 @@ fetch('./prem-digital-katalog.json',{cache:'no-store'})
       {id:'preis-2900',label:'Planungspakete',price:29,description:'29,00 € einmalig: separate digitale ZIP-Pakete mit Checklisten und Planungswerkzeugen.'}
     ];
     for(const t of tiers){
-      const inTier=matches.filter(b=>Number(b.price_eur)===t.price && b.catalog_item_type!=='gedrucktes_buch');
+      const inTier=matches.filter(b=>Number(b.price_eur)===t.price && b.catalog_item_type!=='gedrucktes_buch' && b.category!=='romane');
       if(!inTier.length)continue;
       const s=makeEl('section');s.id=t.id;
       s.append(makeEl('h2','',t.label+' · '+t.price.toLocaleString('de-AT',{style:'currency',currency:'EUR'})));
@@ -340,7 +343,7 @@ fetch('./prem-digital-katalog.json',{cache:'no-store'})
       for(const b of inTier)grid.append(makeBook(b));
       s.append(grid);host.append(s);
     }
-    const remaining=matches.filter(b=>b.price_eur==null || b.catalog_item_type==='gedrucktes_buch');
+    const remaining=matches.filter(b=>b.price_eur==null || b.catalog_item_type==='gedrucktes_buch' || b.category==='romane');
     if(remaining.length){
       const heading=makeEl('section');heading.id='weitere-titel';
       heading.append(makeEl('h2','','Weitere Bücher und Ausgaben'));
