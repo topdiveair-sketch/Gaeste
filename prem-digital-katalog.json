@@ -1009,7 +1009,7 @@
       "current_listing_verified": false,
       "cover_verified": true,
       "format_for_direct_reader": "279 A5-PDF-Seiten als persönliche Online-Textausgabe in 14 aktiven Abschnitten; Illustrationen nicht übernommen",
-      "info": "11.11.2026: paid self-test 9.90 EUR confirmed by supplied Stripe receipt 1470-9521 (Bali product); order confirmation page, authenticated Bali reader and first chapter shown in screenshots; invoice no. 3 supplied. Separate custom contract email 0 sent in Systeme.io statistics. Last reader section and external buyer journey not verified. 14 active text lessons, 250 text pages matched extracted PDF text; illustrations absent. Stripe receipt shows merchant Zuhause am Bach; invoice footer duplicates address and shows 0% VAT; review before scaling. 11.11.2026: Separate Vertragsinformation für den bezahlten Bali-Selbsttest per Gmail an die Kaufadresse gesendet; Versand vom Gmail-Provider bestätigt, Zustellung nicht unabhängig bestätigt. Kein automatischer Versand für Folgekäufe (Workflow- und Regel-Limit). Live-Stripe-Händlername und Rechnungsformular nicht verändert, da nicht editierbar via aktuelle Verbindungen.",
+      "info": "11.11.2026: paid self-test 9.90 EUR confirmed by supplied Stripe receipt 1470-9521 (Bali product); order confirmation page, authenticated Bali reader and first chapter shown in screenshots; invoice no. 3 supplied. Separate custom contract email 0 sent in Systeme.io statistics. Last reader section and external buyer journey not verified. 14 active text lessons, 250 text pages matched extracted PDF text; illustrations absent. Stripe receipt shows merchant Zuhause am Bach; invoice footer duplicates address and shows 0% VAT; review before scaling. 11.11.2026: Separate Vertragsinformation für den bezahlten Bali-Selbsttest per Gmail an die Kaufadresse gesendet; Versand vom Gmail-Provider bestätigt, Zustellung nicht unabhängig bestätigt. Kein automatischer Versand für Folgekäufe (Workflow- und Regel-Limit). Live-Stripe-Händlername und Rechnungsformular nicht verändert, da nicht editierbar via aktuelle Verbindungen. 11.11.2026: Verkaufsseite, allgemeine Kaufhinweise (vier Bücher) und Bali-Checkout-Hinweis an den dokumentierten Selbsttest angepasst, nach Speicherung per API revalidiert. Opera verbunden; Stripe-Website verbietet Auslesen durch AI-Connector. Live-Stripe-Zugang und Rechnungseditor nicht bearbeitet.",
       "legacy_asin": "B0GK6GCMQ5",
       "subcategory": "Auswanderer-Ratgeber",
       "historical_isbn": "9783565368532",
@@ -1081,7 +1081,18 @@
         "standard_access_email_received_verified": true,
         "invoice_email_received_verified": true,
         "stripe_receipt_email_received_verified": true,
-        "checkout_notifications_source": "Outlook account search on 2026-11-11"
+        "checkout_notifications_source": "Outlook account search on 2026-11-11",
+        "public_page_audit": {
+          "date": "2026-11-11",
+          "bali_sales_page_updated": true,
+          "legal_page_updated_four_books": true,
+          "checkout_notice_updated": true,
+          "files_verified_after_save": true,
+          "live_browser_render_unverified": true
+        },
+        "automation_limitation_verified": "Systeme.io blocks creating another rule or workflow on current plan; Greece rule and Hungary workflow left intact.",
+        "opera_access_verified": true,
+        "stripe_live_account_missing": true
       },
       "text_audit": {
         "checked_at": "2026-11-11",
