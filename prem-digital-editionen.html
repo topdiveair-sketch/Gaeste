@@ -287,6 +287,9 @@ function makeBook(b){
   const a=makeEl('a','preview','Kostenlose Leseprobe öffnen');a.href=b.sample_url;card.append(a);
  }
  if(typeof b.tools_url==='string'&&/^[-a-z0-9]+\.html$/.test(b.tools_url)){const a=makeEl('a','preview','Budgetrechner und Checkliste testen');a.href=b.tools_url;card.append(a);}
+ if(b.id==='bestand-auswandern-bulgarien'){
+   const about=makeEl('a','preview','Buch ansehen');about.href='bulgarien-digitalbuch.html';card.append(about);
+ }
  if(b.id==='griechenland-2027-reader'||b.id==='ungarn-2027'){
    const salesPage=makeEl('a','preview','Buchvorstellung und Verkaufsseite');
    salesPage.href=b.id==='ungarn-2027'?'ungarn-2027-digitalbuch.html':'griechenland-2027-digitalbuch.html';
