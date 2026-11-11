@@ -1066,8 +1066,9 @@
           "recipient": "johannprem@hotmail.com",
           "gmail_message_id": "1a1cbe57c703bd4d",
           "type": "one_time_follow_up_for_paid_self_test",
-          "delivery_verified": false,
-          "automated_for_future_buyers": false
+          "delivery_verified": true,
+          "automated_for_future_buyers": false,
+          "delivery_evidence": "Outlook search 2026-11-11: email with subject Vertragsbestätigung – Bali-Digitalbuch – Bestellung vom 11.11.2026 received 18:36:19Z; manual one-time send, not proof of future automation."
         },
         "live_stripe_merchant_fix": {
           "status": "blocked",
@@ -1076,7 +1077,11 @@
         "invoice_fix": {
           "status": "blocked",
           "reason": "Systeme.io connected tools do not expose invoice issuer address or invoice template editor; VAT rate not changed pending verification."
-        }
+        },
+        "standard_access_email_received_verified": true,
+        "invoice_email_received_verified": true,
+        "stripe_receipt_email_received_verified": true,
+        "checkout_notifications_source": "Outlook account search on 2026-11-11"
       },
       "text_audit": {
         "checked_at": "2026-11-11",
