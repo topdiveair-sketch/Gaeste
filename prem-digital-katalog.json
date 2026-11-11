@@ -1054,11 +1054,12 @@
         "first_reader_section_verified": true,
         "automatic_access_evidence": "User supplied screenshots: paid thank-you page, authenticated reader login screen, and opened Bali reader pages 001-020. No separate new access activation email confirmed; cannot independently establish exact enrollment timing.",
         "all_reader_sections_buyer_verified": false,
-        "last_reader_section_verified": false,
+        "last_reader_section_verified": true,
         "custom_email_sent_statistic": 0,
         "receipt_merchant_name": "Zuhause am Bach",
         "invoice_issues": "Issuer/address duplicated in invoice footer; tax rate shown 0 percent. Check invoicing and legal tax treatment.",
-        "test_scope": "Owner self purchase, not external paid customer."
+        "test_scope": "Bezahlter Selbsttest; erster und letzter Leserabschnitt persoenlich bestaetigt; Zwischenabschnitte nicht einzeln nachgewiesen.",
+        "last_reader_section_evidence": "Autor bestaetigt am 11.11.2026 persoenlich, dass der letzte Bali-Buchabschnitt geoeffnet wurde; nicht unabhaengig per Browser inspiziert."
       },
       "text_audit": {
         "checked_at": "2026-11-11",
