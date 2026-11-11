@@ -482,7 +482,6 @@
       "info": "29-EUR-Produkt, eine ZIP-Ressource und Stripe/PayPal vorhanden. Kostenfreier Gutscheintest 10.11.2026 abgebrochen: 0,00 EUR wurde angezeigt, Checkout verlangte trotzdem Zahlungsdaten. Download und Zustellung nicht getestet.",
       "teaser": "Zusätzliche Planungshilfen zum Auswandern nach Ungarn: Budgetrechner, Checklisten und Behördenfragen. Separates Paket, kein Online-Reader.",
       "cover_verified": false,
-      "cover_kind": "kein verifiziertes Einzelproduktcover",
       "current_listing_verified": false,
       "checkout_test": {
         "date": "2026-11-10",
@@ -510,7 +509,10 @@
         "legal_privacy_visible": false,
         "store_product_direct_url": null,
         "notes": "Beide Produktkarten im öffentlichen nativen Systeme.io Digital Store ohne Login geöffnet; keine Bestellung abgeschlossen. Auf der untersuchten Oberfläche Impressum-/Datenschutzlinks nicht sichtbar. Kauf und Dateiinhalt nicht verifiziert."
-      }
+      },
+      "cover_url": "images/ebooks/ungarn-2027.jpg",
+      "cover_alt": "Buchcover Ungarn 2027 von J.F.X. Prem – Bild der vorhandenen Buchausgabe, nicht des separaten Planungspakets",
+      "cover_source_note": "Vorhandenes Ungarn-2027-Buchcover aus dem Repository; kein eigenständiges Cover des Entscheidungs- und Budgetpakets."
     },
     {
       "id": "die-ader",
