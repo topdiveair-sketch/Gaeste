@@ -274,7 +274,7 @@ function makeBook(b){
  if(b.subcategory)card.append(makeEl('div','subgenre',b.subcategory));
  if(typeof b.teaser==='string'&&b.teaser.trim())card.append(makeEl('p','teaser',b.teaser));
  if(b.price_eur!==undefined && b.price_eur!==null && !['live_verified','pilot_sale_active'].includes(b.status)){
-  const p=makeEl('p','preview-price',Number(b.price_eur).toLocaleString('de-AT',{style:'currency',currency:'EUR'})+(b.id==='ungarn-2027-planung'?'':' · geplanter Preis'));
+  const p=makeEl('p','preview-price',Number(b.price_eur).toLocaleString('de-AT',{style:'currency',currency:'EUR'}));
   card.append(p);
  }
  if(typeof b.sample_url==='string'&&/^[-a-z0-9]+\.html$/.test(b.sample_url)){
