@@ -1009,7 +1009,7 @@
       "current_listing_verified": false,
       "cover_verified": true,
       "format_for_direct_reader": "279 A5-PDF-Seiten als persönliche Online-Textausgabe in 14 aktiven Abschnitten; Illustrationen nicht übernommen",
-      "info": "11.11.2026: paid self-test 9.90 EUR confirmed by supplied Stripe receipt 1470-9521 (Bali product); order confirmation page, authenticated Bali reader and first chapter shown in screenshots; invoice no. 3 supplied. Separate custom contract email 0 sent in Systeme.io statistics. Last reader section and external buyer journey not verified. 14 active text lessons, 250 text pages matched extracted PDF text; illustrations absent. Stripe receipt shows merchant Zuhause am Bach; invoice footer duplicates address and shows 0% VAT; review before scaling.",
+      "info": "11.11.2026: paid self-test 9.90 EUR confirmed by supplied Stripe receipt 1470-9521 (Bali product); order confirmation page, authenticated Bali reader and first chapter shown in screenshots; invoice no. 3 supplied. Separate custom contract email 0 sent in Systeme.io statistics. Last reader section and external buyer journey not verified. 14 active text lessons, 250 text pages matched extracted PDF text; illustrations absent. Stripe receipt shows merchant Zuhause am Bach; invoice footer duplicates address and shows 0% VAT; review before scaling. 11.11.2026: Separate Vertragsinformation für den bezahlten Bali-Selbsttest per Gmail an die Kaufadresse gesendet; Versand vom Gmail-Provider bestätigt, Zustellung nicht unabhängig bestätigt. Kein automatischer Versand für Folgekäufe (Workflow- und Regel-Limit). Live-Stripe-Händlername und Rechnungsformular nicht verändert, da nicht editierbar via aktuelle Verbindungen.",
       "legacy_asin": "B0GK6GCMQ5",
       "subcategory": "Auswanderer-Ratgeber",
       "historical_isbn": "9783565368532",
@@ -1059,7 +1059,24 @@
         "receipt_merchant_name": "Zuhause am Bach",
         "invoice_issues": "Issuer/address duplicated in invoice footer; tax rate shown 0 percent. Check invoicing and legal tax treatment.",
         "test_scope": "Bezahlter Selbsttest; erster und letzter Leserabschnitt persoenlich bestaetigt; Zwischenabschnitte nicht einzeln nachgewiesen.",
-        "last_reader_section_evidence": "Autor bestaetigt am 11.11.2026 persoenlich, dass der letzte Bali-Buchabschnitt geoeffnet wurde; nicht unabhaengig per Browser inspiziert."
+        "last_reader_section_evidence": "Autor bestaetigt am 11.11.2026 persoenlich, dass der letzte Bali-Buchabschnitt geoeffnet wurde; nicht unabhaengig per Browser inspiziert.",
+        "contract_confirmation_followup": {
+          "date": "2026-11-11",
+          "status": "sent_via_connected_gmail",
+          "recipient": "johannprem@hotmail.com",
+          "gmail_message_id": "1a1cbe57c703bd4d",
+          "type": "one_time_follow_up_for_paid_self_test",
+          "delivery_verified": false,
+          "automated_for_future_buyers": false
+        },
+        "live_stripe_merchant_fix": {
+          "status": "blocked",
+          "reason": "Connected Stripe plugin exposes only sandbox account, not the live merchant account. No live merchant settings were changed."
+        },
+        "invoice_fix": {
+          "status": "blocked",
+          "reason": "Systeme.io connected tools do not expose invoice issuer address or invoice template editor; VAT rate not changed pending verification."
+        }
       },
       "text_audit": {
         "checked_at": "2026-11-11",
