@@ -1043,6 +1043,20 @@
         "confirmation_email_delivered_verified": false,
         "additional_automation_blocked_by_plan_limit": true,
         "source": "Systeme.io API; GitHub; Autor-PDF"
+      },
+      "text_audit": {
+        "checked_at": "2026-11-11",
+        "source_pdf": "Auswandern Bali A5.pdf",
+        "pdf_pages": 279,
+        "pages_with_extracted_text": 250,
+        "pages_without_substantive_extracted_text": 29,
+        "reader_sections_checked": 14,
+        "text_matches": 250,
+        "text_mismatches": 0,
+        "comparison": "Seitenweise PDF-Textextraktion gegen gespeicherte Systeme.io-Lektionen; Text nach Entfernung von HTML sowie Normalisierung von Leerraum und Zeilenumbrüchen verglichen. Nicht gleichbedeutend mit typografischem, visuellem oder fachlichem Abgleich.",
+        "missing_images": "Reader enthält die Bildseiten und Illustrationen nicht; 29 Seiten ohne auslesbaren Fließtext nicht visuell inhaltlich übernommen",
+        "legacy_lecture": "Alte Bali-Platzhalterlektion bleibt inaktiv; 14 korrekte Reader-Lektionen aktiv.",
+        "limits": "Kein erfolgreicher Käuferlogin oder End-to-End-Auslieferungstest. Manuelle Prüfung jedes abgebildeten PDF-Elements ausstehend."
       }
     },
     {
