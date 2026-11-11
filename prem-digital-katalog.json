@@ -171,7 +171,7 @@
       "reader_book_id": "griechenland-2027-reader",
       "info": "Freigegeben fuer echte 9,90-EUR-Einzelbestellungen am 10.11.2026 auf ausdruecklichen Wunsch des Autors. Beide Zustimmungscheckboxen wurden in einem 0,00-EUR-Checkout-Test als Pflichtfelder bestaetigt, Zahlung und individuelle Buchauslieferung jedoch noch nicht vollstaendig Ende-zu-Ende geprueft. Bei Problemen Kontakt: topdiveair@gmail.com.",
       "cover_url": "images/ebooks/griechenland-2027-3d-nov26.webp",
-      "cover_alt": "3D-Buchmotiv der Griechenland 2027 Digital Edition von J.F.X. Prem; Online-Leseausgabe",
+      "cover_alt": "3D-Werbemotiv Griechenland 2027 von J.F.X. Prem – Bild zur Online-Digitalausgabe",
       "cover_verified_at": "2026-11-11",
       "teaser": "Papierloser Praxisratgeber für die Auswanderung nach Griechenland 2027: Aufenthalt, Kosten, Wohnen, Rente, Steuern und Alltag. Online-Buch mit Budgetrechner und Checkliste für einmalig 9,90 €.",
       "sample_url": "griechenland-2027-leseprobe.html",
@@ -273,8 +273,7 @@
         "first_actual_dispatch_tested": false,
         "first_paid_book_last_chapter_tested": false,
         "notes": "Die Automation ist aktiviert, der Versand der gesonderten Vertragsbestätigung an einen künftigen realen Käufer ist noch nicht bestätigt. Die normale Buch-Zugangsmail aus einem Griechenland-Selbstkauf wurde zuvor empfangen."
-      },
-      "cover_kind": "Werbemotiv / 3D-Buchdarstellung, kein Nachweis einer gedruckten Ausgabe"
+      }
     },
     {
       "id": "ungarn-2027",
