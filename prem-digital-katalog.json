@@ -561,8 +561,8 @@
       "category": "romane",
       "title": "45 Jahre – Die Rechnung kommt zum Schluss",
       "author": "Johann Prem",
-      "status": "eigene_digitalausgabe_ausstehend",
-      "buy_url": null,
+      "status": "pilot_sale_active",
+      "buy_url": "https://topdiveair.systeme.io/f98363fa",
       "subcategory": "Humor & Satire",
       "legacy_asin": "B0HP3RN61C",
       "legacy_asin_origin": "Historical catalog listing; current ISBN/ASIN/product association must be verified before public sale",
@@ -571,7 +571,13 @@
       "cover_source": "Aus bisherigem Autorenbuchverzeichnis zugehöriger ASIN-Bildlink; als eigene Datei gespeichert",
       "cover_verified": false,
       "cover_match": "ASIN und Bildpfad stimmen überein; Motiv noch nicht mit lokaler Originaldatei abgeglichen",
-      "cover_imported_at": "2026-11-10"
+      "cover_imported_at": "2026-11-10",
+      "price_eur": 9.9,
+      "sample_url": "45-jahre-leseprobe.html",
+      "subtitle": "Satirischer Kurzroman · 82 A5-Seiten",
+      "teaser": "Nach 45 Arbeitsjahren wollten Martin und Eva endlich leben. Doch Rentenbescheide, Behördenbriefe und ein Hausangebot in Ungarn stellen ihre Pläne auf den Kopf. Humorvolle Lektüre über Bürokratie und den Mut, das Leben nicht auf später zu verschieben.",
+      "checkout_verified_at": "2026-11-11",
+      "delivery_test_status": "Automatische Zugangszustellung und persönlicher Leserlogin noch nicht vollständig durch Testkauf bestätigt"
     },
     {
       "id": "ufos-nukleare-welt",
