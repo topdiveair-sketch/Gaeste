@@ -690,7 +690,7 @@
       "category": "sachbuecher",
       "title": "UFOs und die nukleare Welt",
       "author": "Johann Prem",
-      "status": "eigene_digitalausgabe_ausstehend",
+      "status": "reader_vorbereitet_nicht_veroeffentlicht",
       "buy_url": null,
       "subcategory": "Weltraum & UFOs",
       "isbn": "9783565849994",
@@ -713,7 +713,23 @@
         "rights_confirmation": "Autor bestätigt, dass die verwendeten Bilder ihm gehören; unabhängig nicht geprüft",
         "kdp_print_imprint_removed_from_prepared_docx": true,
         "prepared_docx_filename": "Rainsoft_Book_UFOs_nukleare_Welt_V7_6_ohne_KDP_Druckangaben.docx",
-        "prepared_document_status": "Separate DOCX-Fassung erstellt; KDP-Druckherstellung und Print-Verweise entfernt; nicht im GitHub-Repository hochgeladen"
+        "prepared_document_status": "Separate DOCX-Fassung erstellt; KDP-Druckherstellung und Print-Verweise entfernt; nicht im GitHub-Repository hochgeladen",
+        "course_id": 703718,
+        "module_id": 2893054,
+        "module_name": "UFOs und die nukleare Welt · Digitalausgabe V7.6",
+        "saved_lecture_count": 35,
+        "lecture_count_verified": 35,
+        "active_lecture_count": 0,
+        "original_chapters_saved": 24,
+        "prolog_and_foreword_saved": true,
+        "comparison_timeline_saved": true,
+        "source_notes_saved": "Q01–Q93",
+        "text_pages_saved_and_verified": true,
+        "images_in_docx_not_transferred": true,
+        "table_layout_not_verified": true,
+        "full_purchaser_readthrough_tested": false,
+        "payment_product_created": false,
+        "note": "V7.6 bereinigtes Manuskript in 35 inaktive Reader-Lektionen übertragen. Text-Speicherung einzeln per Systeme.io geprüft, Medien und Tabellenlayout noch offen; keine kostenpflichtige Freigabe."
       }
     },
     {
