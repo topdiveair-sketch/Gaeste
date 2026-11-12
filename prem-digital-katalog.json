@@ -729,7 +729,13 @@
         "table_layout_not_verified": true,
         "full_purchaser_readthrough_tested": false,
         "payment_product_created": false,
-        "note": "V7.6 bereinigtes Manuskript in 35 inaktive Reader-Lektionen übertragen. Text-Speicherung einzeln per Systeme.io geprüft, Medien und Tabellenlayout noch offen; keine kostenpflichtige Freigabe."
+        "note": "V7.6 bereinigtes Manuskript in 35 inaktive Reader-Lektionen übertragen. Text-Speicherung einzeln per Systeme.io geprüft, Medien und Tabellenlayout noch offen; keine kostenpflichtige Freigabe.",
+        "embedded_media_assets_in_source_docx": 8,
+        "inline_shapes_in_source_docx": 6,
+        "tables_in_source_docx": 2,
+        "source_kdp_reference_count_checked": 0,
+        "main_text_complete_as_saved_lectures": true,
+        "original_media_and_two_tables_require_visual_reconstruction": true
       }
     },
     {
