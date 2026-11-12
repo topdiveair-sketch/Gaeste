@@ -169,7 +169,7 @@ footer{max-width:1120px;margin:auto;padding:26px 18px 45px;border-top:1px solid 
 <article class="book"><div class="book-cover"><img src="images/ebooks/legacy-b0hp3rn61c.jpg" alt="Buchcover 45 Jahre – Die Rechnung kommt zum Schluss von Johann Prem" width="460" loading="lazy" decoding="async"></div><h3>45 Jahre – Die Rechnung kommt zum Schluss</h3><p class="meta">Johann Prem · satirischer Kurzroman · 82 A5-Seiten (Lektoratsfassung)</p><div class="subgenre">Humor &amp; Satire</div><p class="teaser">Martin und Eva wollten nach 45 Arbeitsjahren endlich leben. Dann kommen Rentenbescheide, Behördenpost und ein riskantes Hausangebot aus Ungarn dazwischen. Eine humorvolle Geschichte über Bürokratie, Zukunftspläne und die Kunst, nicht alles auf später zu verschieben.</p><a class="preview" href="45-jahre-die-rechnung-kommt-zum-schluss.html">Roman ansehen</a><a class="preview" href="45-jahre-leseprobe.html">Kostenlose Leseprobe</a><a class="preview" href="https://topdiveair.systeme.io/f98363fa">Roman für 9,90 € direkt kaufen</a><span class="state">9,90 € einmalig · Kartenzahlung live erreichbar · persönliche Zustellung noch nicht Ende-zu-Ende getestet</span></article>
 </div></section>
 <section id="krimi-thriller"><h2>Krimi &amp; Thriller</h2><p class="subgenres">Krimi · Psychothriller · Mystery · Spannungsroman</p><div class="book-grid">
-<article class="book"><div class="book-cover no-original" aria-label="Originalcover noch nicht bereitgestellt"><div class="no-original-cover"><strong>DIE STADT DARUNTER</strong><small>Originalcover wird ergänzt</small></div></div><h3>DIE STADT DARUNTER</h3><p class="meta">Johann Prem</p><div class="subgenre">Mystery</div><span class="state">Digitalausgabe in Vorbereitung</span></article>
+<article class="book"><div class="book-cover"><img src="images/ebooks/die-stadt-darunter-cover.webp" alt="Originalcover: DIE STADT DARUNTER – Mystery-Thriller von Johann Prem" width="460" loading="lazy" decoding="async"></div><h3>DIE STADT DARUNTER</h3><p class="meta">Johann Prem · Mystery-Thriller · 226 PDF-Seiten</p><div class="subgenre">Mystery</div><p class="teaser">Eine verborgene Stadt unter Wien, doppelte Identitäten und Erinnerungen, denen niemand mehr trauen kann.</p><a class="preview" href="die-stadt-darunter.html">Buch ansehen</a><a class="preview" href="die-stadt-darunter-leseprobe.html">Kostenlose Leseprobe</a><span class="state">Buch verfügbar</span></article>
 <article class="book"><div class="book-cover"><img src="images/ebooks/unter-uns.jpg" alt="Originalcover: UNTER UNS – Das Hohenegg-Protokoll" width="460" loading="lazy" decoding="async"></div><h3>UNTER UNS – Das Hohenegg-Protokoll</h3><p class="meta">Johann Prem</p><div class="subgenre">Mystery</div><span class="state">Digitalausgabe in Vorbereitung</span></article>
 </div></section>
 <section id="science-fiction-fantasy"><h2>Science-Fiction &amp; Fantasy</h2><p class="subgenres">Zukunft &amp; Dystopie · Weltraum · Fantasy · Science-Fiction</p><div class="book-grid">
@@ -243,7 +243,8 @@ const statusLabels={
 'testversion_nicht_kaufbar':'Reader-Testversion – noch nicht kaufbar',
 'pilot_sale_active':'Direktkauf freigegeben · erste bezahlte Auslieferung noch nicht vollstaendig geprüft',
 'direktverkauf_nicht_ende_zu_ende_getestet':'Bezahlung und Auslieferung noch nicht vollständig geprüft',
-'eigene_digitalausgabe_ausstehend':'Digitalausgabe in Vorbereitung'
+'eigene_digitalausgabe_ausstehend':'Digitalausgabe in Vorbereitung',
+'buch_verfuegbar':'Buch verfügbar'
 };
 function isSafeBuyLink(book){
   if(!['live_verified','pilot_sale_active'].includes(book.status) || typeof book.buy_url!=='string')return false;
@@ -294,6 +295,7 @@ function makeBook(b){
   const a=makeEl('a','preview','Kostenlose Leseprobe öffnen');a.href=b.sample_url;card.append(a);
  }
  if(typeof b.tools_url==='string'&&/^[-a-z0-9]+\.html$/.test(b.tools_url)){const a=makeEl('a','preview','Budgetrechner und Checkliste testen');a.href=b.tools_url;card.append(a);}
+ if(b.id==='die-stadt-darunter'){const about=makeEl('a','preview','Buch ansehen');about.href='die-stadt-darunter.html';card.append(about);}
  if(b.id==='bestand-leben-unter-der-sonne-balis'){const about=makeEl('a','preview','Buch ansehen');about.href='bali-digitalbuch.html';card.append(about);}
  if(b.id==='bestand-auswandern-bulgarien'){
    const about=makeEl('a','preview','Buch ansehen');about.href='bulgarien-digitalbuch.html';card.append(about);
