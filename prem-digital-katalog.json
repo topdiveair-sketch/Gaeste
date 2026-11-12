@@ -709,7 +709,11 @@
         "source_review": "Manuskriptstruktur aus Originaldatei geprüft; Quellen- und Bildrechte vor Online-Ausgabe gesondert zu klären.",
         "reader_published": false,
         "checkout_live": false,
-        "editorial_action": "Druck-/KDP-Impressum für eigenständige Online-Ausgabe anpassen, Bild-/Quellenrechte prüfen, erst danach vollständigen geschützten Reader veröffentlichen."
+        "editorial_action": "Online-Reader aus bereinigter V7.6-Fassung importieren und Buchzugang prüfen. Impressum des Selbstverlags und Bildnachweise bleiben bestehen.",
+        "rights_confirmation": "Autor bestätigt, dass die verwendeten Bilder ihm gehören; unabhängig nicht geprüft",
+        "kdp_print_imprint_removed_from_prepared_docx": true,
+        "prepared_docx_filename": "Rainsoft_Book_UFOs_nukleare_Welt_V7_6_ohne_KDP_Druckangaben.docx",
+        "prepared_document_status": "Separate DOCX-Fassung erstellt; KDP-Druckherstellung und Print-Verweise entfernt; nicht im GitHub-Repository hochgeladen"
       }
     },
     {
