@@ -10,7 +10,7 @@ from itsdangerous import URLSafeTimedSerializer, BadSignature, SignatureExpired
 bp = Blueprint("rainsoft_books", __name__)
 SLUG = "die-ader"
 PRICE = 990
-DAYS = 730
+DAYS = 732  # At least 24 calendar months, including leap years.
 READER_PAGE_COUNT = 258
 ORIGIN = os.getenv("BOOKS_ORIGIN", "").rstrip("/")
 PUBLIC = "https://topdiveair-sketch.github.io/Gaeste/"
@@ -107,11 +107,23 @@ def mail_access(email, link):
     msg["Subject"] = "DIE ADER – Ihr geschützter Rainsoft-Book-Zugang"
     msg["From"] = os.environ["BOOKS_MAIL_FROM"]
     msg["To"] = email
-    msg.set_content("Vielen Dank für Ihren Kauf von DIE ADER für 9,90 EUR.\n"
-        "Persönlicher Buchzugang: " + link + "\n"
-        "Bitte diesen Link nicht weitergeben. Der Reader ist für mindestens 24 Monate zugänglich.\n"
-        "Bei Fragen: topdiveair@gmail.com\n"
-        "Vertrags- und Rücktrittshinweise: " + PUBLIC + "digitalbuch-kaufhinweise.html")
+    msg.set_content("Rainsoft-Book – Vertrags- und Zugangsbestätigung\\n"
+        "Produkt: DIE ADER – Ein Zukunftsthriller, Johann Prem.\\n"
+        "Verkäufer: Johann Prem, Aggsbach Markt 82, 3641 Aggsbach Markt, Österreich.\\n"
+        "Einmalpreis: 9,90 EUR. Kein Abonnement und keine Versandkosten.\\n"
+        "Leistung: geschützte Online-Textausgabe, kein PDF-/EPUB-Download; "
+        "Browser und Internetzugang erforderlich.\\n"
+        "Zugang für mindestens 24 Monate ab Kauf, anschließend ohne Zusatzgebühren, "
+        "solange die Bibliothek betrieben wird. Gesetzliche Gewährleistungsrechte bleiben unberührt.\\n"
+        "Persönlicher Buchzugang: " + link + "\\n"
+        "Bitte den Link nicht weitergeben.\\n"
+        "Grundsätzlich besteht ein 14-tägiges Rücktrittsrecht; ein mögliches Erlöschen "
+        "bei vorzeitiger Bereitstellung digitaler Inhalte erfordert sämtliche gesetzlichen "
+        "Voraussetzungen einschließlich ausdrücklicher Zustimmung, Kenntnisnahme des Rechtsverlusts "
+        "und rechtzeitiger Vertragsbestätigung.\\n"
+        "Vollständige Kaufhinweise und Muster-Rücktrittsformular: "
+        + PUBLIC + "digitalbuch-kaufhinweise.html\\n"
+        "Kontakt und Rücktrittserklärung: topdiveair@gmail.com")
     with smtplib.SMTP_SSL(os.environ["BOOKS_SMTP_HOST"], int(os.getenv("BOOKS_SMTP_PORT","465")), timeout=12) as server:
         server.login(os.environ["BOOKS_SMTP_USER"], os.environ["BOOKS_SMTP_PASSWORD"])
         server.send_message(msg)
