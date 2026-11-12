@@ -366,7 +366,7 @@ fetch('./prem-digital-katalog.json',{cache:'no-store'})
       for(const b of inCat)grid.append(makeBook(b));
       s.append(grid);host.append(s);
     }
-    counter.textContent=matches.length+' erfasste Titel und Angebote · '+matches.filter(isSafeBuyLink).length+' direkt bestellbare Digitalbücher';
+    counter.textContent=matches.length+' erfasste Titel und Angebote · '+matches.filter(isSafeBuyLink).length+' Kaufbuttons eingerichtet (Auslieferung nicht überall vollständig getestet)';
     if(!matches.length)host.append(makeEl('p','note','Keine Titel gefunden. Andere Suchbegriffe verwenden.'));
   }
   search.addEventListener('input',render);
