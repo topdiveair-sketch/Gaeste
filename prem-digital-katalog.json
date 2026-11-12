@@ -759,7 +759,19 @@
           "high_contrast_control": true,
           "table_captions": 2
         },
-        "offline_reader_package_visual_qa": "not_fully_verified_chromium_timeout"
+        "offline_reader_package_visual_qa": "not_fully_verified_chromium_timeout",
+        "last_quality_audit": "2026-11-12",
+        "release_checklist_path": "docs/rainsoft-ufo-reader-freigabecheck.md",
+        "manuscript_paragraph_comparison": {
+          "source_paragraphs_min_80_chars": 590,
+          "exactly_present_in_offline_html": 588,
+          "different_or_not_exactly_found": 2,
+          "difference_class": "table_of_contents_entry_and_archive_source_heading",
+          "scope": "long paragraphs only; no complete content verification"
+        },
+        "course_lectures_last_checked": 35,
+        "course_active_lectures_last_checked": 0,
+        "publishing_decision": "do_not_activate_pending_media_table_and_access_testing"
       }
     },
     {
