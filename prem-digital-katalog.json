@@ -1219,6 +1219,15 @@
         "missing_images": "Reader enthält die Bildseiten und Illustrationen nicht; 29 Seiten ohne auslesbaren Fließtext nicht visuell inhaltlich übernommen",
         "legacy_lecture": "Alte Bali-Platzhalterlektion bleibt inaktiv; 14 korrekte Reader-Lektionen aktiv.",
         "limits": "Kein erfolgreicher Käuferlogin oder End-to-End-Auslieferungstest. Manuelle Prüfung jedes abgebildeten PDF-Elements ausstehend."
+      },
+      "contract_confirmation_automation": {
+        "checked_at": "2026-11-12",
+        "confirmation_email_template_exists": true,
+        "product_confirmation_email_linked": true,
+        "additional_new_sale_rule": "not_created_plan_limit",
+        "additional_workflow": "not_created_plan_limit",
+        "automated_dispatch_verified": false,
+        "note": "Systeme.io meldete 'Automation rules limit reached' und bei Workflow-Erstellung, dass der aktuelle Plan keine weiteren Workflows erlaubt. Bestehende Produkt-Bestätigungsvorlage unverändert. Separate E-Mail-Auslieferung an neue Käufer nicht bestätigt; weder Verkäufe noch Reader-Zugriff daraus ableiten."
       }
     },
     {
@@ -1494,6 +1503,15 @@
         "confirmation_email_sent_tested": false,
         "activation_of_bulgaria_modules_verified_with_customer": false,
         "notice": "11 aktive Textabschnitte aus den PDF-Seiten 1-103, die reinen Illustrationsseiten werden im Reader durch Hinweise ersetzt."
+      },
+      "contract_confirmation_automation": {
+        "checked_at": "2026-11-12",
+        "confirmation_email_template_exists": true,
+        "product_confirmation_email_linked": true,
+        "additional_new_sale_rule": "not_created_plan_limit",
+        "additional_workflow": "not_created_plan_limit",
+        "automated_dispatch_verified": false,
+        "note": "Systeme.io meldete 'Automation rules limit reached' und bei Workflow-Erstellung, dass der aktuelle Plan keine weiteren Workflows erlaubt. Bestehende Produkt-Bestätigungsvorlage unverändert. Separate E-Mail-Auslieferung an neue Käufer nicht bestätigt; weder Verkäufe noch Reader-Zugriff daraus ableiten."
       }
     },
     {
