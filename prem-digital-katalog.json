@@ -562,13 +562,15 @@
       "reader_lectures": 7,
       "reader_status": "vollstaendiger_text_im_geschuetzten_kurs_aktiv",
       "reader_note": "5 reine Bildseiten (PDF 4,18,53,91,105) nicht als Abbildungen im Online-Textreader; Deckblatt/Impressum/Inhalt und Quellen im übertragenen Text.",
-      "checkout_status": "blocked_plan_funnel_step_limit",
+      "checkout_status": "unavailable_plan_15_steps_reached",
       "paid_test_status": "not_tested",
       "cover_note": "Vorhandenes Original-Cover im Repository; neuer hochgeladener Kindle-Cover 1280x2048 Pixel, kein separater Binär-Upload durchgeführt.",
       "last_verified": "2026-11-12",
       "launch_note": "Buchvorstellung, Original-Cover und Prolog + Kapitel 1-3 als kostenfreie Leseprobe veröffentlicht. Vollständiger Textreader in sieben aktiven Systeme.io-Lektionen angelegt; Produkt 9,90 EUR an das exklusive Modul gebunden. Keine neue Kasse möglich wegen bestehendem Funnel-Schritt-Limit. Daher kein Kaufbutton und kein bestätigter Verkauf.",
       "public_checkout_enabled": false,
-      "reader_link_status": "public sample and book landing page link to protected reader status; protected content requires purchase; no checkout yet"
+      "reader_link_status": "public sample and book landing page link to protected reader status; protected content requires purchase; no checkout yet",
+      "confirmation_email_id": 13420894,
+      "confirmation_send_status": "product_linked_not_sent"
     },
     {
       "id": "die-stadt-darunter",
@@ -611,7 +613,11 @@
       "cover_quality_note": "Originalquelle aus Autoren-Cover, Frontcover auf 240px Breite als optimierte WebP-Datei mit 13824 Byte; alte 2842-Byte-Version ersetzt. Git-SHA mit lokalem Bild abgeglichen, visuelle Live-QA offen.",
       "public_checkout_enabled": false,
       "paid_test_status": "not_tested",
-      "reader_link_status": "public sample and book landing page link to reader information; protected content requires purchased enrollment; end-to-end access not tested"
+      "reader_link_status": "public sample and book landing page link to reader information; protected content requires purchased enrollment; end-to-end access not tested",
+      "confirmation_email_id": 13420893,
+      "checkout_consent_status": "two explicit checkboxes plus general legal checkbox; validation untested",
+      "checkout_status": "existing_checkout_not_end_to_end_tested",
+      "checkout_launch_status": "not_publicly_linked_pending_test"
     },
     {
       "id": "45-jahre",
@@ -634,7 +640,12 @@
       "subtitle": "Satirischer Kurzroman · 82 A5-Seiten",
       "teaser": "Nach 45 Arbeitsjahren wollten Martin und Eva endlich leben. Doch Rentenbescheide, Behördenbriefe und ein Hausangebot in Ungarn stellen ihre Pläne auf den Kopf. Humorvolle Lektüre über Bürokratie und den Mut, das Leben nicht auf später zu verschieben.",
       "checkout_verified_at": "2026-11-11",
-      "delivery_test_status": "Automatische Zugangszustellung und persönlicher Leserlogin noch nicht vollständig durch Testkauf bestätigt"
+      "delivery_test_status": "Automatische Zugangszustellung und persönlicher Leserlogin noch nicht vollständig durch Testkauf bestätigt",
+      "confirmation_email_id": 13420896,
+      "checkout_consent_status": "two explicit checkboxes added; validation untested",
+      "confirmation_send_status": "product_linked_not_sent",
+      "checkout_paid_reader_test": "not_end_to_end_verified",
+      "last_verified": "2026-11-12"
     },
     {
       "id": "ufos-nukleare-welt",
