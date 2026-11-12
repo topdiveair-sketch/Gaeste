@@ -44,7 +44,7 @@ footer{max-width:1030px;margin:auto;padding:25px 20px;border-top:1px solid var(-
 </div></section>
 <section class="card" id="ablauf"><h2>So funktioniert die Bestellung</h2>
 <p><strong>1.</strong> Du sendest unten eine unverbindliche Bestellanfrage mit Lieferadresse und gewünschter Stückzahl. <strong>2.</strong> Du erhältst den Gesamtpreis aus Buchpreis und tatsächlichen Versandkosten sowie die Zahlungsinformationen per E-Mail. <strong>3.</strong> Erst nach deiner ausdrücklichen Bestätigung wird die Bestellung verbindlich. Der Autor beschafft und versendet das Buch.</p>
-<div class="highlight"><strong>Kein unbekannter Versandpreis an der Kasse.</strong> Die Versandkosten richten sich nach Lieferland, Versandart und Sendungsgewicht. Vor einer verbindlichen Bestellung nennen wir den vollständigen Gesamtpreis. Es wird hier keine Zahlung ausgelöst.</div>
+<div class="highlight"><strong>Kein unbekannter Versandpreis an der Kasse.</strong> Die vorläufige Versandberechnung verwendet die aktuellen Österreichische-Post-Paketmarkentarife PM45 (maximal 10 kg; längste plus kürzeste Paketkante höchstens 45 cm), inklusive Abholung durch die Post für 3,48 € und 2,00 € für Verpackungsmaterial und Reserve. Sie gilt, solange die fertige Verpackung in PM45 passt. Vor verbindlicher Bestellung prüfen wir das tatsächliche Paket und bestätigen den Gesamtpreis. Es wird hier keine Zahlung ausgelöst.</div>
 </section>
 <section class="card" id="bestellanfrage">
 <h2>Taschenbuch direkt beim Autor anfragen</h2><p>Bitte die Angaben ausfüllen. Über die Schaltfläche öffnet sich dein E-Mail-Programm mit der vorbereiteten Anfrage. <strong>Du musst die E-Mail dort noch selbst absenden.</strong> Die Website speichert deine Adresse nicht.</p>
@@ -60,7 +60,9 @@ footer{max-width:1030px;margin:auto;padding:25px 20px;border-top:1px solid var(-
 <div class="formfield"><label for="city">Ort *</label><input id="city" name="city" autocomplete="address-level2" required maxlength="100"></div>
 <div class="formfield full"><label for="notes">Hinweise zur Lieferung <span>(optional)</span></label><textarea id="notes" name="notes" maxlength="500" placeholder="z. B. anderes EU-Land oder besondere Lieferhinweise"></textarea></div>
 </div>
-<div id="summary" aria-live="polite">1 × 29,00 € = 29,00 € · zzgl. Versandkosten (vorherige Mitteilung)</div>
+<div id="summary" aria-live="polite">Versandkosten werden berechnet …</div>
+<p id="shipping-detail" class="small" aria-live="polite">Berechnungsgrundlage: Paketmarke PM45 und Abholservice der Österreichischen Post; zusätzliche Verpackungskosten.</p>
+<p class="small"><strong>Gewichtsannahme:</strong> 112 Seiten ergeben ungefähr 56 Blätter; bei angenommenen 90 g/m² Papier rund 206 g Buchinnenteil. Mit Umschlag rund 260–310 g je Buch, zuzüglich geschätzt 200–300 g Verpackung pro Sendung. Die endgültigen Maße und das Gewicht werden vor dem Versand geprüft. Bei größeren Sendungen oder abweichender Paketklasse wird der Versandpreis vor Bestätigung angepasst. <a href="https://www.post.at/p/a/paketmarke" target="_blank" rel="noopener">Post-Paketmarkentarife</a> · <a href="https://www.post.at/p/a/abholservice" target="_blank" rel="noopener">Post-Abholservice</a>.</p>
 <div class="formfield"><label class="agree"><input type="checkbox" id="agree" required> <span>Ich bitte um ein unverbindliches Angebot einschließlich Versandkosten. Ich weiß, dass sich mein E-Mail-Programm öffnet und ich die Anfrage selbst versenden muss. Ich habe die <a href="datenschutz-digitalbuecher.html" target="_blank" rel="noopener">Datenschutzhinweise</a> zur Kenntnis genommen. *</span></label></div>
 <button type="submit">Bestellanfrage per E-Mail vorbereiten</button>
 <p id="form-status" role="status" class="small">Keine Kreditkarte, keine Vorauszahlung und keine automatische Bestellung.</p>
@@ -72,32 +74,65 @@ footer{max-width:1030px;margin:auto;padding:25px 20px;border-top:1px solid var(-
 <script>
 (function(){
 'use strict';
-const form=document.getElementById('order-form'),count=document.getElementById('quantity'),summary=document.getElementById('summary'),status=document.getElementById('form-status');
-const eur=n=>n.toLocaleString('de-AT',{style:'currency',currency:'EUR'});
-function update(){const q=Number(count.value);summary.textContent=q+' × '+eur(29)+' = '+eur(q*29)+' · zzgl. Versandkosten (Gesamtpreis vor verbindlicher Bestellung)';}
-count.addEventListener('change',update);update();
+const form=document.getElementById('order-form'),count=document.getElementById('quantity'),country=document.getElementById('country'),summary=document.getElementById('summary'),detail=document.getElementById('shipping-detail'),status=document.getElementById('form-status');
+const eurCents=n=>(n/100).toLocaleString('de-AT',{style:'currency',currency:'EUR'});
+// Offizielle Paketmarke PM45: maximal 10 kg; laengste + kuerzeste Kante <= 45 cm.
+// Preis pro Sendung, nicht pro Buch. Kein Live-Post-API-Angebot.
+const pm45={'Österreich':521,'Deutschland':1262,'Ungarn':1654,'Anderes EU-Land':1654};
+const pickup=348; // Abholung von bis zu 5 frankierten Paketen, einmal je Abholauftrag.
+const material=150; // Annahme: Versandkarton / Polsterung.
+const reserve=50; // Annahme: kleiner Puffer, keine Postgebuehr.
+const book=2900;
+function calculate(){
+ const q=Number(count.value),destination=country.value,postage=pm45[destination];
+ const bookSubtotal=q*book;
+ // 56 Blatt x 0,17 m x 0,24 m x 90 g/m2 = 205,6 g Innenteil,
+ // + Umschlag 60 g, + 250 g Verpackung pro Sendung.
+ const weightKg=Number(((q*266+250)/1000).toFixed(2));
+ if(!Number.isFinite(postage))return {q,destination,bookSubtotal,weightKg,known:false};
+ const shipping=postage+pickup+material+reserve;
+ return {q,destination,bookSubtotal,weightKg,postage,pickup,material,reserve,shipping,total:bookSubtotal+shipping,known:true};
+}
+function update(){
+ const p=calculate();
+ if(!p.known){
+  summary.textContent=p.q+' × '+eurCents(book)+' = '+eurCents(p.bookSubtotal)+' · Versand außerhalb der EU auf Anfrage';
+  detail.textContent='Keine automatisierte Versandkostenberechnung außerhalb der EU. Bitte Lieferland und Anschrift angeben; Gesamtpreis folgt vor Kauf.';
+  return;
+ }
+ summary.textContent=p.q+' × '+eurCents(book)+' = '+eurCents(p.bookSubtotal)+' Buchpreis + '+eurCents(p.shipping)+' Versand = '+eurCents(p.total)+' geschätzter Gesamtpreis';
+ detail.textContent='Versand: Post-Paketmarke PM45 '+eurCents(p.postage)+' + Postabholung '+eurCents(p.pickup)+' + Verpackung '+eurCents(p.material)+' + Reserve '+eurCents(p.reserve)+' = '+eurCents(p.shipping)+'. Geschätztes Versandgewicht: '+p.weightKg.toLocaleString('de-AT')+' kg. Gültig bei maximal 10 kg und längster + kürzester Paketkante bis 45 cm; endgültiger Gesamtpreis nach Prüfung und vor Kaufbestätigung.';
+}
+count.addEventListener('change',update);country.addEventListener('change',update);update();
 form.addEventListener('submit',function(event){
  event.preventDefault();if(!form.reportValidity())return;
- const v=id=>document.getElementById(id).value.trim().replace(/[\r\n]+/g,' ');
- const qty=Number(v('quantity'));
+ const v=id=>document.getElementById(id).value.trim().replace(/[\\r\\n]+/g,' ');
+ const p=calculate();
  const body=[
  'Unverbindliche Anfrage – gedrucktes Taschenbuch Ungarn für Rentner 2027',
  '',
  'Buch: Ungarn für Rentner – Auswandern mit Plan, überarbeitete Praxisausgabe 2027',
  'Autor: J.F.X. Prem · Softcover, 112 Seiten, 17 × 24 cm',
- 'Anzahl Exemplare: '+qty,
- 'Buchpreis: '+eur(qty*29)+' (29,00 € pro Exemplar)',
- 'Versandkosten: Bitte Gesamtpreis vor verbindlicher Bestellung mitteilen.',
+ 'Anzahl Exemplare: '+p.q,
+ 'Buchpreis: '+eurCents(p.bookSubtotal)+' (29,00 € je Exemplar)',
+ p.known ? 'Österreichische Post Paketmarke PM45: '+eurCents(p.postage) : 'Posttarif: Anfrage erforderlich',
+ p.known ? 'Abholservice Österreichische Post (eine Abholung): '+eurCents(p.pickup) : 'Abholservice: Anfrage erforderlich',
+ p.known ? 'Verpackung: '+eurCents(p.material)+'; Reserve: '+eurCents(p.reserve) : 'Verpackung: nach Prüfung',
+ p.known ? 'Versandkosten geschätzt: '+eurCents(p.shipping) : 'Versandkosten: auf Anfrage',
+ p.known ? 'Gesamtpreis vorläufig: '+eurCents(p.total) : 'Gesamtpreis: auf Anfrage',
+ 'Versandgewicht geschätzt: '+p.weightKg.toLocaleString('de-AT')+' kg',
+ 'Versandkondition: PM45 maximal 10 kg und längste + kürzeste Paketkante maximal 45 cm.',
  '',
  'Vorname: '+v('first'),'Nachname: '+v('last'),
  'E-Mail: '+v('email'),'Lieferland: '+v('country'),
  'Straße und Nr.: '+v('street'),'PLZ: '+v('zip'),'Ort: '+v('city'),
  'Lieferhinweise: '+(v('notes')||'keine'),
  '',
- 'Bitte bestätigen Sie mir den endgültigen Gesamtpreis und die voraussichtliche Lieferzeit. Dies ist noch keine verbindliche Bestellung.',
+ 'Bitte prüfen Sie Versandgewicht, Paketmaße und die konkrete Postgebühr. Ich bitte vor verbindlicher Bestellung um schriftliche Bestätigung des Endpreises und der Lieferzeit.',
+ 'Dies ist eine unverbindliche Anfrage und noch keine Bestellung.',
  'Vielen Dank!'
- ].join('\n');
- const subject='Bestellanfrage Taschenbuch Ungarn 2027 – '+qty+' Exemplar'+(qty===1?'':'e');
+ ].join('\\n');
+ const subject='Bestellanfrage Taschenbuch Ungarn 2027 – '+p.q+' Exemplar'+(p.q===1?'':'e');
  status.textContent='E-Mail-Programm wird geöffnet. Bitte dort auf „Senden“ klicken. Ohne Absenden geht keine Anfrage ein.';
  window.location.href='mailto:topdiveair@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
 });
