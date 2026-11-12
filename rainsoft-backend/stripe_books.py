@@ -37,10 +37,16 @@ def settings_ready():
     return all(os.getenv("BOOK_DIE_ADER_PAGES_%02d" % n) for n in range(1, 27))
 
 def test_ready():
+    names = ("STRIPE_BOOK_SECRET_KEY", "STRIPE_BOOK_WEBHOOK_SECRET",
+             "BOOKS_SESSION_SECRET", "BOOKS_SMTP_HOST", "BOOKS_SMTP_USER",
+             "BOOKS_SMTP_PASSWORD", "BOOKS_MAIL_FROM", "BOOKS_ORIGIN")
     return (os.getenv("BOOKS_TEST_ENABLED") == "true"
+        and all(os.getenv(k) for k in names)
         and os.getenv("STRIPE_BOOK_SECRET_KEY", "").startswith("sk_test_")
         and os.getenv("STRIPE_BOOK_WEBHOOK_SECRET", "").startswith("whsec_")
-        and ORIGIN.startswith("https://"))
+        and len(os.getenv("BOOKS_SESSION_SECRET", "")) >= 32
+        and ORIGIN.startswith("https://")
+        and all(os.getenv("BOOK_DIE_ADER_PAGES_%02d" % n) for n in range(1, 27)))
 
 def ready():
     return settings_ready() or test_ready()
