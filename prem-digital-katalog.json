@@ -549,7 +549,19 @@
       "confirmation_email_id": 13421342,
       "confirmation_send_status": "created_and_product_linked_not_tested",
       "paid_test_status": "not_tested",
-      "last_verified": "2026-11-12"
+      "last_verified": "2026-11-12",
+      "stripe_railway_status": "isolated_test_backend_deployed_not_ready",
+      "stripe_railway_test_url": "https://rainsoft-backend-test-test.up.railway.app/books/die-ader/health",
+      "stripe_railway_source_branch": "feature/rainsoft-checkout-20261009",
+      "stripe_railway_book_pages": 258,
+      "stripe_railway_paid_access_test": "offline_mock_passed_live_not_tested",
+      "stripe_railway_webhook": "stripe_test_endpoint_created_and_disabled",
+      "stripe_railway_blockers": [
+        "Stripe API key not configured in Rainsoft test service",
+        "Verified outbound SMTP mail service not configured",
+        "Live seller account/tax and legal review pending",
+        "End-to-end sandbox checkout/email/access test pending"
+      ]
     },
     {
       "id": "unter-uns",
