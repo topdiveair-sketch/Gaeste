@@ -107,22 +107,22 @@ def mail_access(email, link):
     msg["Subject"] = "DIE ADER – Ihr geschützter Rainsoft-Book-Zugang"
     msg["From"] = os.environ["BOOKS_MAIL_FROM"]
     msg["To"] = email
-    msg.set_content("Rainsoft-Book – Vertrags- und Zugangsbestätigung\\n"
-        "Produkt: DIE ADER – Ein Zukunftsthriller, Johann Prem.\\n"
-        "Verkäufer: Johann Prem, Aggsbach Markt 82, 3641 Aggsbach Markt, Österreich.\\n"
-        "Einmalpreis: 9,90 EUR. Kein Abonnement und keine Versandkosten.\\n"
+    msg.set_content("Rainsoft-Book – Vertrags- und Zugangsbestätigung\n"
+        "Produkt: DIE ADER – Ein Zukunftsthriller, Johann Prem.\n"
+        "Verkäufer: Johann Prem, Aggsbach Markt 82, 3641 Aggsbach Markt, Österreich.\n"
+        "Einmalpreis: 9,90 EUR. Kein Abonnement und keine Versandkosten.\n"
         "Leistung: geschützte Online-Textausgabe, kein PDF-/EPUB-Download; "
-        "Browser und Internetzugang erforderlich.\\n"
+        "Browser und Internetzugang erforderlich.\n"
         "Zugang für mindestens 24 Monate ab Kauf, anschließend ohne Zusatzgebühren, "
-        "solange die Bibliothek betrieben wird. Gesetzliche Gewährleistungsrechte bleiben unberührt.\\n"
-        "Persönlicher Buchzugang: " + link + "\\n"
-        "Bitte den Link nicht weitergeben.\\n"
+        "solange die Bibliothek betrieben wird. Gesetzliche Gewährleistungsrechte bleiben unberührt.\n"
+        "Persönlicher Buchzugang: " + link + "\n"
+        "Bitte den Link nicht weitergeben.\n"
         "Grundsätzlich besteht ein 14-tägiges Rücktrittsrecht; ein mögliches Erlöschen "
         "bei vorzeitiger Bereitstellung digitaler Inhalte erfordert sämtliche gesetzlichen "
         "Voraussetzungen einschließlich ausdrücklicher Zustimmung, Kenntnisnahme des Rechtsverlusts "
-        "und rechtzeitiger Vertragsbestätigung.\\n"
+        "und rechtzeitiger Vertragsbestätigung.\n"
         "Vollständige Kaufhinweise und Muster-Rücktrittsformular: "
-        + PUBLIC + "digitalbuch-kaufhinweise.html\\n"
+        + PUBLIC + "digitalbuch-kaufhinweise.html\n"
         "Kontakt und Rücktrittserklärung: topdiveair@gmail.com")
     with smtplib.SMTP_SSL(os.environ["BOOKS_SMTP_HOST"], int(os.getenv("BOOKS_SMTP_PORT","465")), timeout=12) as server:
         server.login(os.environ["BOOKS_SMTP_USER"], os.environ["BOOKS_SMTP_PASSWORD"])
