@@ -339,7 +339,7 @@ fetch('./prem-digital-katalog.json',{cache:'no-store'})
       {id:'preis-2900',label:'Planungspakete',price:29,description:'29,00 € einmalig: separate digitale ZIP-Pakete mit Checklisten und Planungswerkzeugen.'}
     ];
     for(const t of tiers){
-      const inTier=matches.filter(b=>Number(b.price_eur)===t.price && b.catalog_item_type!=='gedrucktes_buch' && b.category!=='romane');
+      const inTier=matches.filter(b=>b.category==='auswandern' && Number(b.price_eur)===t.price && b.catalog_item_type!=='gedrucktes_buch');
       if(!inTier.length)continue;
       const s=makeEl('section');s.id=t.id;
       s.append(makeEl('h2','',t.label+' · '+t.price.toLocaleString('de-AT',{style:'currency',currency:'EUR'})));
@@ -348,7 +348,7 @@ fetch('./prem-digital-katalog.json',{cache:'no-store'})
       for(const b of inTier)grid.append(makeBook(b));
       s.append(grid);host.append(s);
     }
-    const remaining=matches.filter(b=>b.price_eur==null || b.catalog_item_type==='gedrucktes_buch' || b.category==='romane');
+    const remaining=matches.filter(b=>!(b.category==='auswandern' && b.catalog_item_type!=='gedrucktes_buch' && [9.9,29].includes(Number(b.price_eur))));
     if(remaining.length){
       const heading=makeEl('section');heading.id='weitere-titel';
       heading.append(makeEl('h2','','Weitere Bücher und Ausgaben'));
