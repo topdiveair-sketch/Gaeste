@@ -33,3 +33,7 @@
 - **15 von 15** kostenlosen Funnel-Schritten sind belegt (9 Griechenland-Reader, 4 Ungarn-Paket, 2 Griechenland-Paket), alle drei Funnels aktiv. Kein zusätzlicher Schritt angelegt oder bestehender Schritt gelöscht.
 - Die kostenlosen/alternativen Shops wurden recherchiert, aber kein vollautomatischer Käuferzugang für „UNTER UNS“ eingerichtet. Eine fremde Kasse als Ersatz wäre keine korrekte Produktauslieferung.
 - Vertragsmails in Systeme.io erstellt, aber Statistik jeweils **0 versendet**: Verknüpfung ist noch kein Funktionsnachweis. Steuer- und Händlerdaten wurden nicht verändert.
+
+## Zusätzliche Korrekturen
+- Die 45-Jahre-Kasse verlinkt jetzt die erweiterten Kaufhinweise sowie Datenschutz und Impressum; Menü nach Änderung erneut ausgelesen.
+- Öffentliche Katalogzählung differenziert nun zwischen fünf eingerichteten Kaufbuttons und einem vollständig getesteten Kaufablauf. Das GitHub-Repository und der Katalogtest haben nach der Änderung erfolgreich gebaut.
