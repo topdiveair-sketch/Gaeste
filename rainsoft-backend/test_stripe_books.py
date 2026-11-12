@@ -62,5 +62,35 @@ class BookSecurityTests(unittest.TestCase):
         with patch.dict(os.environ,{"BOOKS_TEST_ENABLED":"true","BOOKS_LIVE_ENABLED":"false"},clear=True):
             self.assertFalse(b.test_ready())
 
+    def test_verified_payment_grants_reader_and_refund_revokes(self):
+        import urllib.parse
+        with tempfile.TemporaryDirectory() as td:
+            chunk=json.dumps([{"number":1,"text":"Geschütztes Buch: <script>nicht ausführen</script>"}])
+            env={"RAINSOFT_DB":td+"/books.db","BOOKS_SESSION_SECRET":"t"*48,"BOOK_DIE_ADER_PAGES_01":chunk}
+            sent=[]
+            session={"id":"cs_test_paid123","mode":"payment","payment_status":"paid","currency":"eur","amount_total":990,
+                "metadata":{"book_slug":"die-ader"},"status":"complete","payment_intent":"pi_test_abc",
+                "customer_details":{"email":"buyer@example.org"}}
+            with patch.dict(os.environ,env),patch.object(b,"ready",return_value=True),patch.object(b,"mail_access",side_effect=lambda email,link: sent.append((email,link))):
+                with b.connect() as db:
+                    db.execute("INSERT INTO book_orders(session_id,email,state,consent_version,created_at) VALUES (?,?,?,?,?)",
+                       (session["id"],"buyer@example.org","pending","2026-11-12-v1",int(time.time())))
+                self.assertTrue(b.fulfill(session))
+                self.assertEqual(sent[0][0],"buyer@example.org")
+                self.assertTrue(b.fulfill(session))
+                self.assertEqual(len(sent),1,"Duplicate events must not send a second link")
+                link=urllib.parse.urlsplit(sent[0][1])
+                activated=self.client.get(link.path+"?"+link.query)
+                self.assertEqual(activated.status_code,302)
+                reader=self.client.get("/books/die-ader/read?page=1")
+                self.assertEqual(reader.status_code,200)
+                self.assertIn(b"Gesch",reader.data)
+                self.assertNotIn(b"<script>",reader.data)
+                with b.connect() as db:
+                    db.execute("UPDATE book_orders SET state='revoked',revoked_at=? WHERE session_id=?",
+                               (int(time.time()),session["id"]))
+                revoked=self.client.get("/books/die-ader/read?page=1")
+                self.assertEqual(revoked.status_code,403)
+
 if __name__=="__main__":
     unittest.main()
