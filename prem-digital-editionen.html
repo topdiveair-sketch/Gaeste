@@ -268,14 +268,15 @@ const statusLabels={
 'katalog_erfasst_verkauf_nicht_geprueft':'Im Bücherverzeichnis erfasst · Direktlese-Ausgabe noch nicht verfügbar',
 'druckausgabe_bestellung_nicht_verifiziert':'Druckausgabe: Bestellung und Versand noch nicht geprüft',
 'testversion_nicht_kaufbar':'Reader-Testversion – noch nicht kaufbar',
-'pilot_sale_active':'Direktkauf freigegeben · erste bezahlte Auslieferung noch nicht vollstaendig geprüft',
+'direktkauf_aktiv_unvollstaendig_geprueft':'Direktkauf eingerichtet · vollständige Auslieferung noch nicht bestätigt',
 'direktverkauf_nicht_ende_zu_ende_getestet':'Bezahlung und Auslieferung noch nicht vollständig geprüft',
 'eigene_digitalausgabe_ausstehend':'Digitalausgabe in Vorbereitung',
-'buch_verfuegbar':'Buch verfügbar',
+'buch_verfuegbar':'Buch vorgestellt · Kaufweg noch nicht bestätigt',
+ 'reader_vorhanden_kauf_nicht_bestaetigt':'Reader eingerichtet · Kaufweg noch nicht vollständig geprüft',
 'print_order_request_active':'Bestellanfrage möglich · Versandkosten vor Bestätigung'
 };
 function isSafeBuyLink(book){
-  if(!['live_verified','pilot_sale_active'].includes(book.status) || typeof book.buy_url!=='string')return false;
+  if(!['live_verified','direktkauf_aktiv_unvollstaendig_geprueft'].includes(book.status) || typeof book.buy_url!=='string')return false;
   try{
     const u=new URL(book.buy_url);
     return u.protocol==='https:' && !/(^|\.)((amazon|amzn|epubli|thalia|hugendubel|buchhandel|bol)\.[a-z.]+)$/i.test(u.hostname);
@@ -315,7 +316,7 @@ function makeBook(b){
  card.append(makeEl('h3','',b.title),makeEl('p','meta',[b.subtitle,b.edition,b.author].filter(Boolean).join(' · ')));
  if(b.subcategory)card.append(makeEl('div','subgenre',b.subcategory));
  if(typeof b.teaser==='string'&&b.teaser.trim())card.append(makeEl('p','teaser',b.teaser));
- if(b.price_eur!==undefined && b.price_eur!==null && (b.id==='45-jahre' || !['live_verified','pilot_sale_active'].includes(b.status))){
+ if(b.price_eur!==undefined && b.price_eur!==null && (b.id==='45-jahre' || !['live_verified','direktkauf_aktiv_unvollstaendig_geprueft'].includes(b.status))){
   const p=makeEl('p','preview-price',Number(b.price_eur).toLocaleString('de-AT',{style:'currency',currency:'EUR'}));
   card.append(p);
  }
@@ -340,7 +341,7 @@ function makeBook(b){
    card.append(salesPage);
  }
  if(isSafeBuyLink(b)){
-   const label = b.id==='45-jahre' ? 'Roman für 9,90 € direkt kaufen' : (b.status==='pilot_sale_active' ? ((b.id==='ungarn-2027'?'Ungarn':b.id==='bestand-auswandern-bulgarien'?'Bulgarien':'Griechenland')+' für 9,90 € direkt kaufen') : 'Jetzt direkt kaufen');
+   const label = b.id==='45-jahre' ? 'Roman für 9,90 € direkt kaufen' : (b.id==='bestand-leben-unter-der-sonne-balis'?'Bali':b.id==='ungarn-2027'?'Ungarn':b.id==='bestand-auswandern-bulgarien'?'Bulgarien':'Griechenland')+' für 9,90 € direkt kaufen';
    const a=makeEl('a','buy',label);a.href=b.buy_url;a.target='_blank';a.rel='noopener noreferrer';card.append(a);
  }else{card.append(makeEl('span','state',statusLabels[b.status]||'Kaufangebot noch nicht bestätigt'));}
  return card;
