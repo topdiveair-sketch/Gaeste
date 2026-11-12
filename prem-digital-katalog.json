@@ -1228,6 +1228,18 @@
         "additional_workflow": "not_created_plan_limit",
         "automated_dispatch_verified": false,
         "note": "Systeme.io meldete 'Automation rules limit reached' und bei Workflow-Erstellung, dass der aktuelle Plan keine weiteren Workflows erlaubt. Bestehende Produkt-Bestätigungsvorlage unverändert. Separate E-Mail-Auslieferung an neue Käufer nicht bestätigt; weder Verkäufe noch Reader-Zugriff daraus ableiten."
+      },
+      "reader_lesson_activation_audit": {
+        "checked_at": "2026-11-12",
+        "course_active": true,
+        "module_id": 2889533,
+        "lectures_total": 15,
+        "lectures_active": 15,
+        "first_lesson_activated": "Bali · Textseiten 001–020",
+        "systeme_io_status_verified": true,
+        "lesson_body_content_verified": false,
+        "purchaser_access_verified": false,
+        "note": "Alle 15 Bali-Leseabschnitte in Systeme.io nach Statuskontrolle aktiv; keine Behauptung eines erfolgreichen Login- oder Inhalts-Lesetests."
       }
     },
     {
