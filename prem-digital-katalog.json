@@ -699,7 +699,18 @@
       "cover_alt": "Originalcover: UFOs und die nukleare Welt",
       "cover_verified": true,
       "cover_source": "Eigene Originaldatei aus der Bücherbibliothek, Vorderseite zugeschnitten und verkleinert",
-      "cover_verified_at": "2026-11-10"
+      "cover_verified_at": "2026-11-10",
+      "reader_preparation": {
+        "checked_at": "2026-11-12",
+        "source_manuscript": "UFOs_und_die_nukleare_Welt_V7_6_nachgeprueft_6x9.docx",
+        "source_confirmed_in_user_files": true,
+        "source_version": "V7.6",
+        "source_format": "DOCX",
+        "source_review": "Manuskriptstruktur aus Originaldatei geprüft; Quellen- und Bildrechte vor Online-Ausgabe gesondert zu klären.",
+        "reader_published": false,
+        "checkout_live": false,
+        "editorial_action": "Druck-/KDP-Impressum für eigenständige Online-Ausgabe anpassen, Bild-/Quellenrechte prüfen, erst danach vollständigen geschützten Reader veröffentlichen."
+      }
     },
     {
       "id": "windis",
