@@ -735,7 +735,16 @@
         "tables_in_source_docx": 2,
         "source_kdp_reference_count_checked": 0,
         "main_text_complete_as_saved_lectures": true,
-        "original_media_and_two_tables_require_visual_reconstruction": true
+        "original_media_and_two_tables_require_visual_reconstruction": true,
+        "offline_reader_package_prepared": true,
+        "offline_reader_package_name": "Rainsoft_UFO_V7_6_Reader_Paket.zip",
+        "offline_reader_package_scope": "Lokale HTML-Prueffassung mit Manuskripttext, zwei HTML-Tabellen und acht extrahierten Bildressourcen; sechs Bilder an Textstellen eingebunden, zwei Bildressourcen ohne Textanker separat enthalten.",
+        "offline_reader_package_published": false,
+        "online_reader_media_import_complete": false,
+        "systeme_file_manager_matching_ufo_images": 0,
+        "systeme_file_upload_available_via_connected_tool": false,
+        "online_reader_access_remains_inactive": true,
+        "updated_at": "2026-11-12"
       }
     },
     {
