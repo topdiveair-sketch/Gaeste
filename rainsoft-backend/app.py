@@ -207,4 +207,8 @@ mount_customer_dashboard(app,db,tenant_paid,internal_authorised)
 from operator_api import mount_operator_api
 mount_operator_api(app,db,internal_authorised,ready,allowed)
 
+# Isolated one-time book checkout; disabled unless separately configured.
+from stripe_books import bp as book_stripe_blueprint
+app.register_blueprint(book_stripe_blueprint)
+
 if __name__=="__main__":app.run(host="0.0.0.0",port=int(os.getenv("PORT","8080")))
