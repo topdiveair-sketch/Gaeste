@@ -221,6 +221,7 @@ def completed():
 
 @bp.get("/books/die-ader/activate")
 def activate():
+    if not ready(): return "Buchzugang noch nicht freigeschaltet",503
     sid=request.args.get("session","")
     token=request.args.get("token","")
     with connect() as db:
@@ -236,6 +237,7 @@ def activate():
 
 @bp.get("/books/die-ader/read")
 def read_book():
+    if not ready(): return "Buchzugang noch nicht freigeschaltet",503
     cookie=request.cookies.get("rainsoft_ader","")
     try: data=serializer().loads(cookie,max_age=DAYS*86400)
     except (BadSignature,SignatureExpired): return "Bitte Ihren persönlichen Zugangslink aus der E-Mail verwenden",401
