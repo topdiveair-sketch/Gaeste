@@ -106,7 +106,7 @@ function update(){
 count.addEventListener('change',update);country.addEventListener('change',update);update();
 form.addEventListener('submit',function(event){
  event.preventDefault();if(!form.reportValidity())return;
- const v=id=>document.getElementById(id).value.trim().replace(/[\\r\\n]+/g,' ');
+ const v=id=>document.getElementById(id).value.trim().replace(/[\r\n]+/g,' ');
  const p=calculate();
  const body=[
  'Unverbindliche Anfrage – gedrucktes Taschenbuch Ungarn für Rentner 2027',
@@ -131,7 +131,7 @@ form.addEventListener('submit',function(event){
  'Bitte prüfen Sie Versandgewicht, Paketmaße und die konkrete Postgebühr. Ich bitte vor verbindlicher Bestellung um schriftliche Bestätigung des Endpreises und der Lieferzeit.',
  'Dies ist eine unverbindliche Anfrage und noch keine Bestellung.',
  'Vielen Dank!'
- ].join('\\n');
+ ].join('\n');
  const subject='Bestellanfrage Taschenbuch Ungarn 2027 – '+p.q+' Exemplar'+(p.q===1?'':'e');
  status.textContent='E-Mail-Programm wird geöffnet. Bitte dort auf „Senden“ klicken. Ohne Absenden geht keine Anfrage ein.';
  window.location.href='mailto:topdiveair@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
