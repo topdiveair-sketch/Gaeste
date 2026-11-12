@@ -717,8 +717,8 @@
         "course_id": 703718,
         "module_id": 2893054,
         "module_name": "UFOs und die nukleare Welt · Digitalausgabe V7.6",
-        "saved_lecture_count": 35,
-        "lecture_count_verified": 35,
+        "saved_lecture_count": 36,
+        "lecture_count_verified": 36,
         "active_lecture_count": 0,
         "original_chapters_saved": 24,
         "prolog_and_foreword_saved": true,
@@ -769,16 +769,26 @@
           "difference_class": "table_of_contents_entry_and_archive_source_heading",
           "scope": "long paragraphs only; no complete content verification"
         },
-        "course_lectures_last_checked": 35,
+        "course_lectures_last_checked": 36,
         "course_active_lectures_last_checked": 0,
-        "publishing_decision": "do_not_activate_pending_media_table_and_access_testing",
+        "publishing_decision": "do_not_activate_pending_media_and_access_testing",
         "table_visual_qa": {
           "engine": "WeasyPrint",
           "desktop_first_table": "visually verified",
           "desktop_timeline": "visually verified",
           "narrow_view_first_table": "visually verified on print-like layout; interactive horizontal scrolling not verified",
           "fixed_widths": true
-        }
+        },
+        "table_readability": {
+          "extra_lecture_id": 11610330,
+          "page_id": 46661047,
+          "fallvergleiche": 12,
+          "zeitleiste": 33,
+          "form": "accessible paragraph list, because systeme strips HTML tables",
+          "content_readback_verified": true,
+          "active": false
+        },
+        "release_status": "locked_pending_8_image_upload_and_purchaser_access_test"
       }
     },
     {
