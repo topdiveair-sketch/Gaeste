@@ -690,7 +690,7 @@
       "category": "sachbuecher",
       "title": "UFOs und die nukleare Welt",
       "author": "Johann Prem",
-      "status": "reader_textausgabe_aktiv_kein_checkout",
+      "status": "reader_aktiv_kauf_im_creator_store_vorbereitet",
       "buy_url": null,
       "subcategory": "Weltraum & UFOs",
       "isbn": "9783565849994",
@@ -793,7 +793,27 @@
         "author_decision": "Bilder weglassen",
         "images_required_for_reader_release": false,
         "image_upload_blocker_resolved_by_omission": true,
-        "lesson_count": 36
+        "lesson_count": 36,
+        "price_eur": 9.9,
+        "price_type": "one_shot",
+        "price_plan_id": 3544895,
+        "funnel_product_id": 3482181,
+        "creator_store_product_id": 3482182,
+        "creator_store_product_created": true,
+        "creator_store_product_published": false,
+        "checkout_url_verified": false,
+        "automatic_access_resource": {
+          "course_id": 703718,
+          "enrollmentAccessType": "partial_access",
+          "modules": [
+            2893054
+          ],
+          "verified": true
+        },
+        "paid_order_test_performed": false,
+        "buyer_access_test_performed": false,
+        "blocked_by": "New funnel and step limits in current Systeme.io plan; Creator Store checkout publishing not available via connected API. No public purchase URL verified.",
+        "next_step": "Publish Creator Store product in Systeme.io web UI, obtain verified checkout URL, then perform non-paying checkout and access-path checks."
       }
     },
     {
