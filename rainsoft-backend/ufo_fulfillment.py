@@ -30,7 +30,7 @@ RE_EMAIL = re.compile(r"^[^\s@]+@[^\s@]+\.[^\s@]+$")
 def configured():
     return (
         os.getenv("UFO_FULFILLMENT_ENABLED") == "true"
-        and os.getenv("STRIPE_UFO_SECRET_KEY", "").startswith("sk_live_")
+        and os.getenv("STRIPE_UFO_SECRET_KEY", "").startswith(("sk_live_", "rk_live_"))
         and os.getenv("STRIPE_UFO_WEBHOOK_SECRET", "").startswith("whsec_")
         and bool(os.getenv("SYSTEME_UFO_API_KEY"))
     )
