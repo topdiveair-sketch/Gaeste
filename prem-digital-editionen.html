@@ -329,6 +329,8 @@ function makeBook(b){
  }
  if(typeof b.tools_url==='string'&&/^[-a-z0-9]+\.html$/.test(b.tools_url)){const a=makeEl('a','preview','Budgetrechner und Checkliste testen');a.href=b.tools_url;card.append(a);}
  if(b.id==='ufos-nukleare-welt'){
+   const about=makeEl('a','preview','UFO-Digitalbuch: Inhalt und Zugang');
+   about.href='ufos-und-die-nukleare-welt-digitalbuch.html';card.append(about);
    const read=makeEl('a','preview','Zum geschützten UFO-Reader (Login)');
    read.href='https://topdiveair.systeme.io/school/course/prem-digital-lesebibliothek';
    read.target='_blank';read.rel='noopener noreferrer';card.append(read);
