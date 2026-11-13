@@ -211,4 +211,8 @@ mount_operator_api(app,db,internal_authorised,ready,allowed)
 from stripe_books import bp as book_stripe_blueprint
 app.register_blueprint(book_stripe_blueprint)
 
+# Dedicated UFO Stripe -> Systeme.io webhook (disabled without explicit credentials).
+from ufo_fulfillment import ufo as ufo_fulfillment_blueprint
+app.register_blueprint(ufo_fulfillment_blueprint)
+
 if __name__=="__main__":app.run(host="0.0.0.0",port=int(os.getenv("PORT","8080")))
