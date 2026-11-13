@@ -813,8 +813,14 @@
         "paid_order_test_performed": false,
         "buyer_access_test_performed": false,
         "blocked_by": "New funnel and step limits in current Systeme.io plan; Creator Store checkout publishing not available via connected API. No public purchase URL verified.",
-        "next_step": "Publish Creator Store product in Systeme.io web UI, obtain verified checkout URL, then perform non-paying checkout and access-path checks."
-      }
+        "next_step": "Publish Creator Store product in Systeme.io web UI, obtain verified checkout URL, then perform non-paying checkout and access-path checks.",
+        "public_info_page_live_verified": true,
+        "catalog_link_live_verified": true,
+        "public_info_page_checked": "2026-11-13"
+      },
+      "price_eur": 9.9,
+      "public_info_url": "ufos-und-die-nukleare-welt-digitalbuch.html",
+      "reader_login_url": "https://topdiveair.systeme.io/school/course/prem-digital-lesebibliothek"
     },
     {
       "id": "windis",
