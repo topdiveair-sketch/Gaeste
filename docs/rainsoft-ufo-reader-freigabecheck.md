@@ -38,3 +38,13 @@ Die acht Bilder im Systeme.io-Dateimanager hochladen; anschließend vorhandene g
 - Bestehende acht Buchprodukte wurden auf Modulzugriff geprüft: Sie verwenden partiellen Kurszugriff auf ihre eigenen Module, nicht auf das UFO-Modul. Anderweitige Vollkurs-Zugänge wurden nicht unabhängig ausgeschlossen.
 - Kein eigenständiges UFO-Kaufprodukt/Checkout angelegt. Ein Preis ist noch nicht festgelegt. Kein Neukunden-Kauf, Rechnungs-, E-Mail- oder Passworttest durchgeführt. **Nicht als kaufbereit bewerben**.
 - Frühere Angaben in diesem Prüfprotokoll mit 0 aktiven Lektionen gelten nur für den damaligen Kontrollzeitpunkt.
+
+## Verkaufs-Konfiguration vom 13.11.2026 – 9,90 EUR
+- Preisplan `3544895`: 990 Eurocent, EUR, einmalig (`one_shot`), inklusive Steuerbehandlung.
+- Funnel-Digitalprodukt `3482181` erstellt, mit `partial_access` nur für das UFO-Modul `2893054`. Noch keinem Checkout zugeordnet.
+- Creator-Store-Digitalprodukt `3482182` als alternative Verkaufsroute erstellt; gleiches Buchmodul und gleicher Preisplan. Über Systeme.io erneut ausgelesen und die Konfiguration bestätigt.
+- Neuen Funnel anzulegen gescheitert: Planlimit `Funnels`.
+- Weiteren Bestellschritt im vorhandenen Funnel anzulegen gescheitert: Planlimit `Funnel-Schritte`.
+- Creator-Store: Es gibt derzeit keinen nachgewiesen veröffentlichten Produkteintrag, keine bestätigte Zahlungsseite und keine belegte öffentliche Kauf-URL. Die Systeme.io-Anleitung verlangt Veröffentlichen im Creator-Store-Editor. Kein Browserlogin für den Fernzugriff bestätigt.
+- Kein Kauf, keine Buchung, kein Einzug, keine Kundenregistrierung als Test ausgeführt. Käufer-E-Mail, Zahlungsgateway und persönliche Freischaltung **nicht** Ende-zu-Ende getestet.
+- Der GitHub-Katalog darf bis zu einem verifizierten Checkout-Link **keinen direkten Kaufbutton** für dieses Buch zeigen.
