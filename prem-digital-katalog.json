@@ -690,7 +690,7 @@
       "category": "sachbuecher",
       "title": "UFOs und die nukleare Welt",
       "author": "Johann Prem",
-      "status": "reader_vorbereitet_nicht_veroeffentlicht",
+      "status": "reader_textausgabe_aktiv_kein_checkout",
       "buy_url": null,
       "subcategory": "Weltraum & UFOs",
       "isbn": "9783565849994",
@@ -701,13 +701,13 @@
       "cover_source": "Eigene Originaldatei aus der Bücherbibliothek, Vorderseite zugeschnitten und verkleinert",
       "cover_verified_at": "2026-11-10",
       "reader_preparation": {
-        "checked_at": "2026-11-12",
+        "checked_at": "2026-11-13",
         "source_manuscript": "UFOs_und_die_nukleare_Welt_V7_6_nachgeprueft_6x9.docx",
         "source_confirmed_in_user_files": true,
         "source_version": "V7.6",
         "source_format": "DOCX",
         "source_review": "Manuskriptstruktur aus Originaldatei geprüft; Quellen- und Bildrechte vor Online-Ausgabe gesondert zu klären.",
-        "reader_published": false,
+        "reader_published": true,
         "checkout_live": false,
         "editorial_action": "Online-Reader aus bereinigter V7.6-Fassung importieren und Buchzugang prüfen. Impressum des Selbstverlags und Bildnachweise bleiben bestehen.",
         "rights_confirmation": "Autor bestätigt, dass die verwendeten Bilder ihm gehören; unabhängig nicht geprüft",
@@ -743,7 +743,7 @@
         "online_reader_media_import_complete": false,
         "systeme_file_manager_matching_ufo_images": 0,
         "systeme_file_upload_available_via_connected_tool": false,
-        "online_reader_access_remains_inactive": true,
+        "online_reader_access_remains_inactive": false,
         "updated_at": "2026-11-12",
         "offline_reader_package_revision": "V4",
         "offline_reader_package_structural_qa": {
@@ -770,8 +770,8 @@
           "scope": "long paragraphs only; no complete content verification"
         },
         "course_lectures_last_checked": 36,
-        "course_active_lectures_last_checked": 0,
-        "publishing_decision": "do_not_activate_pending_media_and_access_testing",
+        "course_active_lectures_last_checked": 36,
+        "publishing_decision": "Text-Reader im aktiven Kurs eingeschaltet; kein eigener Checkout oder Kundentest; Zugriff nur nach berechtigter Einschreibung, Durchsetzung nicht durch Kundentest bestätigt.",
         "table_visual_qa": {
           "engine": "WeasyPrint",
           "desktop_first_table": "visually verified",
@@ -788,7 +788,12 @@
           "content_readback_verified": true,
           "active": false
         },
-        "release_status": "locked_pending_8_image_upload_and_purchaser_access_test"
+        "release_status": "36_lectures_active_no_ufo_checkout",
+        "edition_format": "Reine Textausgabe ohne Bilder",
+        "author_decision": "Bilder weglassen",
+        "images_required_for_reader_release": false,
+        "image_upload_blocker_resolved_by_omission": true,
+        "lesson_count": 36
       }
     },
     {
