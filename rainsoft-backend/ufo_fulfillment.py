@@ -146,7 +146,7 @@ def enroll(email):
 
 @ufo.get("/integrations/ufo/health")
 def health():
-    return jsonify(service="ufo-stripe-systeme", configured=configured(), auto_fulfillment_live=configured())
+    return jsonify(service="ufo-stripe-systeme", configured=configured(), auto_fulfillment_live=False, end_to_end_tested=False, status="preproduction")
 
 
 @ufo.post("/integrations/ufo/stripe-webhook")
