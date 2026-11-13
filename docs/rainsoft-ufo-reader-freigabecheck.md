@@ -30,3 +30,11 @@ Die acht Bilder im Systeme.io-Dateimanager hochladen; anschließend vorhandene g
 - HTML-Tabellenelemente wurden von Systeme.io entfernt (Befund durch Rücklesen bestätigt). Daher 12 Fallvergleiche mit getrennten Feldern `Befund` und `Nukleare Verbindung`, 33 Zeitleisteneinträge mit Datum, Ort und Ereignis als lesbare Absätze gesichert.
 - Die 36 Lektionen sind weiterhin deaktiviert; Medienimport und Käuferfreischaltung fehlen.
 - Systeme.io-Dateimanager listete 27 Bilder, aber keine UFO-Abbildungen; Upload über verbundenen API-Zugriff nicht verfügbar. Laut offizieller Hilfe ist manueller Mehrfach-Upload unter `Assets → Dateien → Dateien hochladen` möglich.
+
+## Statusänderung 13.11.2026 – bewusste reine Textausgabe
+- Autorenentscheidung: Die Online-Ausgabe wird **ohne Abbildungen** angeboten. Der bisherige Medien-Upload ist damit **keine technische Freigabevoraussetzung mehr**.
+- Impressum/Vorbemerkung in der ersten UFO-Lektion auf die Textausgabe ohne eingebettete Bilder angepasst und zurückgelesen.
+- Alle **36 UFO-Lektionen** im bestehenden aktiven Rainsoft-Book-Kurs aktiviert und anschließend auf **36 aktiv / 0 inaktiv** geprüft.
+- Bestehende acht Buchprodukte wurden auf Modulzugriff geprüft: Sie verwenden partiellen Kurszugriff auf ihre eigenen Module, nicht auf das UFO-Modul. Anderweitige Vollkurs-Zugänge wurden nicht unabhängig ausgeschlossen.
+- Kein eigenständiges UFO-Kaufprodukt/Checkout angelegt. Ein Preis ist noch nicht festgelegt. Kein Neukunden-Kauf, Rechnungs-, E-Mail- oder Passworttest durchgeführt. **Nicht als kaufbereit bewerben**.
+- Frühere Angaben in diesem Prüfprotokoll mit 0 aktiven Lektionen gelten nur für den damaligen Kontrollzeitpunkt.
