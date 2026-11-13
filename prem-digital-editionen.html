@@ -328,6 +328,13 @@ function makeBook(b){
   const a=makeEl('a','preview','Kostenlose Leseprobe öffnen');a.href=b.sample_url;card.append(a);
  }
  if(typeof b.tools_url==='string'&&/^[-a-z0-9]+\.html$/.test(b.tools_url)){const a=makeEl('a','preview','Budgetrechner und Checkliste testen');a.href=b.tools_url;card.append(a);}
+ if(b.id==='ufos-nukleare-welt'){
+   const read=makeEl('a','preview','Zum geschützten UFO-Reader (Login)');
+   read.href='https://topdiveair.systeme.io/school/course/prem-digital-lesebibliothek';
+   read.target='_blank';read.rel='noopener noreferrer';card.append(read);
+   const checkout=makeEl('span','state','UFO-Reader: 9,90 € einmalig · Kaufbutton noch gesperrt, da keine geprüfte Bestelladresse vorliegt');
+   checkout.setAttribute('role','status');card.append(checkout);
+ }
  if(b.id==='die-ader'){const about=makeEl('a','preview','Buchvorstellung und Reader öffnen');about.href='die-ader-zukunftsthriller.html';card.append(about);}
  if(b.id==='unter-uns'){const about=makeEl('a','preview','Buchvorstellung öffnen');about.href='unter-uns-digitalbuch.html';card.append(about);const reader=makeEl('a','preview','Reader-Status ansehen');reader.href='unter-uns-digitalbuch.html#reader';card.append(reader);}
  if(b.id==='die-stadt-darunter'){const about=makeEl('a','preview','Buch ansehen');about.href='die-stadt-darunter.html';card.append(about);const reader=makeEl('a','preview','Reader und Kaufhinweise');reader.href='die-stadt-darunter.html#reader';card.append(reader);}
@@ -347,7 +354,7 @@ function makeBook(b){
  if(isSafeBuyLink(b)){
    const label = b.id==='45-jahre' ? 'Roman für 9,90 € direkt kaufen' : (b.id==='bestand-leben-unter-der-sonne-balis'?'Bali':b.id==='ungarn-2027'?'Ungarn':b.id==='bestand-auswandern-bulgarien'?'Bulgarien':'Griechenland')+' für 9,90 € direkt kaufen';
    const a=makeEl('a','buy',label);a.href=b.buy_url;a.target='_blank';a.rel='noopener noreferrer';card.append(a);
- }else{card.append(makeEl('span','state',statusLabels[b.status]||'Kaufangebot noch nicht bestätigt'));}
+ }else if(b.id!=='ufos-nukleare-welt'){card.append(makeEl('span','state',statusLabels[b.status]||'Kaufangebot noch nicht bestätigt'));}
  return card;
 }
 fetch('./prem-digital-katalog.json',{cache:'no-store'})
