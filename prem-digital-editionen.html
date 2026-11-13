@@ -334,8 +334,9 @@ function makeBook(b){
    const read=makeEl('a','preview','Zum geschützten UFO-Reader (Login)');
    read.href='https://topdiveair.systeme.io/school/course/prem-digital-lesebibliothek';
    read.target='_blank';read.rel='noopener noreferrer';card.append(read);
-   const checkout=makeEl('span','state','UFO-Reader: 9,90 € einmalig · Kaufbutton noch gesperrt, da keine geprüfte Bestelladresse vorliegt');
-   checkout.setAttribute('role','status');card.append(checkout);
+   const checkout=makeEl('a','buy','UFO-Reader für 9,90 € mit Stripe kaufen');
+   checkout.href='https://buy.stripe.com/fZueV69YQ5Ni4eJ5KEf7i00';checkout.target='_blank';checkout.rel='noopener noreferrer';card.append(checkout);
+   card.append(makeEl('span','state','Hinweis: Zahlung aktiv; persönliche Reader-Freischaltung erfolgt derzeit separat, nicht automatisch.'));
  }
  if(b.id==='die-ader'){const about=makeEl('a','preview','Buchvorstellung und Reader öffnen');about.href='die-ader-zukunftsthriller.html';card.append(about);}
  if(b.id==='unter-uns'){const about=makeEl('a','preview','Buchvorstellung öffnen');about.href='unter-uns-digitalbuch.html';card.append(about);const reader=makeEl('a','preview','Reader-Status ansehen');reader.href='unter-uns-digitalbuch.html#reader';card.append(reader);}
