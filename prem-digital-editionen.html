@@ -75,6 +75,56 @@ footer{max-width:1120px;margin:auto;padding:26px 18px 45px;border-top:1px solid 
 .featured-actions .primary{background:#07567c;color:#fff}.featured-actions .secondary{background:#fff;border:1px solid #8eb1c7;color:#114f74}
 .featured-actions a:hover{filter:brightness(.93)}
 @media(max-width:950px){.featured-grid{grid-template-columns:1fr}.featured-card{grid-template-columns:66px minmax(0,1fr)}.featured-card img{width:66px;height:95px}}
+
+/* Prem Digital Editionen: editorial storefront refresh 2026-11 */
+:root{--background:#f7f5f0;--ink:#182a3e;--muted:#526274;--border:#e1dfd8;--gold:#e8c78a}
+body{background:linear-gradient(180deg,#f8f5ee 0,#f4f7fa 640px,#f8fafb 100%)}
+header{position:relative;isolation:isolate;overflow:hidden;padding-top:68px;padding-bottom:68px;background:radial-gradient(circle at 86% 23%,#38627b 0,transparent 35%),linear-gradient(120deg,#091e33 0%,#153955 68%,#234c63 100%)}
+header:before{content:"";position:absolute;z-index:-1;right:-70px;top:-130px;width:380px;height:520px;border:1px solid #ffffff25;border-radius:50%;transform:rotate(33deg)}
+header:after{content:"";position:absolute;z-index:-1;right:95px;top:-155px;width:300px;height:520px;border:1px solid #e8c78a35;border-radius:50%;transform:rotate(33deg)}
+header h1{max-width:850px;font-size:clamp(34px,5.6vw,66px);letter-spacing:-.035em;line-height:1.09;text-wrap:balance}
+header p{font-size:clamp(16px,1.7vw,19px);max-width:66ch;line-height:1.65}
+header .eyebrow{letter-spacing:.22em;color:#f1d399}
+.claim{background:#ffffff0d;color:#ffe5ac;border-color:#e7c88680;backdrop-filter:blur(5px);font-size:13px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0 10px}
+.hero-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:47px;padding:12px 20px;border-radius:10px;font-weight:800;text-decoration:none;transition:transform .18s ease,background .18s ease}
+.hero-actions a:first-child{background:#efcd90;color:#172d41}
+.hero-actions a:last-child{border:1px solid #c5d7e8;color:#fff;background:#ffffff12}
+.hero-actions a:hover{transform:translateY(-2px)}
+main{padding-top:26px}
+nav#autoren-links{margin:0 0 28px;gap:10px}
+nav#autoren-links a{background:#fff;border:1px solid #e4ded3;box-shadow:0 2px 12px #21384a09}
+.featured{position:relative;border-radius:24px;padding:clamp(20px,3vw,36px);background:#fff;box-shadow:0 18px 50px #203c5212;border:1px solid #e3e2dd}
+.featured h2{max-width:780px;font-size:clamp(26px,3.4vw,39px);letter-spacing:-.025em}
+.featured>p:not(.featured-lede){color:#526274;max-width:78ch}
+.featured-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:15px;margin-top:23px}
+.featured-card{display:flex;flex-direction:column;align-items:stretch;gap:0;padding:0;border-radius:17px;overflow:hidden;background:#fcfbf8;border:1px solid #e9e4d9;box-shadow:0 5px 18px #183b5110;transition:transform .2s ease,box-shadow .2s ease}
+.featured-card:hover{transform:translateY(-4px);box-shadow:0 14px 32px #183b5122}
+.featured-card img{height:230px;width:100%;object-fit:contain;box-shadow:none;padding:23px 34px;background:radial-gradient(circle at 50% 35%,#fff 0,#e3eaf0 76%);border-radius:0}
+.featured-card>div{display:flex;flex-direction:column;flex:1;padding:17px}
+.featured-card strong{font-size:19px;line-height:1.32;min-height:52px}
+.featured-card .price-line{font-size:16px;color:#136347;margin-top:8px;margin-bottom:13px}
+.featured-actions{margin-top:auto;display:grid;grid-template-columns:1fr;gap:8px}
+.featured-actions a{min-height:43px;text-align:center}
+.featured-actions .primary{background:#0c4867}
+.featured-actions .secondary{background:transparent}
+#themen-und-ratgeber{background:#edf3f6;border:1px solid #dce6ea;border-radius:20px;padding:clamp(20px,3vw,32px);margin:25px 0 35px}
+#themen-und-ratgeber p{max-width:82ch;color:#40566a}
+#themen-und-ratgeber ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;list-style:none;padding:0;margin:20px 0}
+#themen-und-ratgeber li{background:#fff;border:1px solid #dce6ea;border-radius:13px;padding:16px 18px;line-height:1.6}
+#themen-und-ratgeber li a{font-weight:750;color:#125578;text-underline-offset:3px}
+#ungarn-taschenbuch{box-shadow:0 6px 25px #173b5110}
+.search-panel{box-shadow:0 12px 35px #203c5210;border-radius:20px;padding:clamp(18px,3vw,28px)}
+input,select{border-radius:10px}
+.book-grid{gap:18px}
+.book{border-radius:18px;box-shadow:0 7px 25px #153e600e;transition:transform .18s ease,box-shadow .18s ease}
+.book:hover{transform:translateY(-3px);box-shadow:0 15px 32px #153e6019}
+.book-cover{border-radius:18px 18px 0 0;background:radial-gradient(circle at 50% 34%,#fff 0,#e4edf4 82%)}
+a.buy{background:#0d526e}a.buy:hover{background:#083e55}
+@media(max-width:1020px){.featured-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.featured-card img{height:225px}}
+@media(max-width:620px){header{padding:44px 19px 47px}header:before,header:after{opacity:.35}header h1{font-size:clamp(32px,10vw,44px)}header p{font-size:16px}.hero-actions{flex-direction:column}.hero-actions a{width:100%}.featured-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.featured-card img{height:165px;padding:17px 15px}.featured-card>div{padding:13px}.featured-card strong{font-size:16px;min-height:62px}.featured-card .price-line{font-size:14px}.featured-actions a{font-size:12px;line-height:1.25;padding:9px 6px}.featured{padding:17px;border-radius:18px}#themen-und-ratgeber ul{grid-template-columns:1fr}.book-grid{grid-template-columns:repeat(auto-fit,minmax(225px,1fr))}}
+@media(max-width:360px){.featured-grid{grid-template-columns:1fr}.featured-card{display:grid;grid-template-columns:105px 1fr}.featured-card img{height:100%;min-height:170px;padding:12px}.featured-card strong{min-height:0}}
+@media(prefers-reduced-motion:reduce){.featured-card,.book,.hero-actions a{transition:none}.featured-card:hover,.book:hover,.hero-actions a:hover{transform:none}}
 </style>
 <script type="application/ld+json">
 {
@@ -124,20 +174,11 @@ footer{max-width:1120px;margin:auto;padding:26px 18px 45px;border-top:1px solid 
 <div class="eyebrow">Prem Digital Editionen · Rainsoft-Book</div>
 <h1>Auswanderer-Ratgeber 2027 und Romane direkt vom Autor online lesen</h1>
 <p>Griechenland, Ungarn, Romane und weitere eigene Bücher von Johann Prem, J.F.X. Prem und Pia Ordelia. Kein Amazon-Zwang, keine fremden Autoren und keine zusätzlichen Abokosten.</p>
+<div class="hero-actions"><a href="#jetzt-erhaeltlich">Bücher entdecken</a><a href="#weitere-genres">Romane &amp; weitere Titel</a></div>
 <div class="claim">100 % Amazon &amp; Co. frei · Direkt vom Autor</div><p style="margin-top:14px;font-size:14px;color:#d4eee5">Digital lesen. Papier, Versand und die Unsinnige Paketsteuer sparen.</p>
 </header>
 <main>
 <nav id="autoren-links" aria-label="Autorenprofile"><a href="autor-johann-prem.html">Johann Prem – Romane</a><a href="autor-jfx-prem.html">J.F.X. Prem – Auswandererratgeber</a><a href="autor-pia-ordelia.html">Pia Ordelia – Autorenprofil</a></nav>
-<section id="themen-und-ratgeber" aria-labelledby="themen-heading">
-<h2 id="themen-heading">Auswandern als Rentner: Ratgeber, Länder und Planung</h2>
-<p>Welche Fragen sind vor einem Umzug ins Ausland wichtig? Unsere Länder-Ratgeber helfen beim Einstieg in Themen wie Aufenthalt, Wohnen, Rente, Krankenversicherung und laufende Lebenshaltungskosten. Die Leseproben sind kostenlos; die vollständigen Online-Leseausgaben sind kostenpflichtig.</p>
-<ul>
-<li><a href="auswandern-ungarn-rentner-2027.html">Auswandern nach Ungarn als Rentner: Vorbereitung und Kosten</a> – mit <a href="ungarn-2027-digitalbuch.html">Ungarn-Digitalbuch 2027</a> und <a href="ungarn-2027-budgetrechner.html">Budgetrechner</a>.</li>
-<li><a href="auswandern-griechenland-rentner-2027.html">Auswandern nach Griechenland als Rentner: Planung und Alltag</a> – mit <a href="griechenland-2027-digitalbuch.html">Griechenland-Digitalbuch 2027</a> und <a href="griechenland-2027-leseprobe.html">Gratis-Leseprobe</a>.</li>
-<li><a href="bulgarien-digitalbuch.html">Bulgarien auswandern: Buchvorstellung</a> und <a href="bali-digitalbuch.html">Bali auswandern: Buchvorstellung</a>.</li>
-</ul>
-<p>Die Bücher stammen von <a href="autor-jfx-prem.html">J.F.X. Prem</a>. Weitere Werke und Leseproben gibt es von <a href="autor-johann-prem.html">Johann Prem</a> und <a href="autor-pia-ordelia.html">Pia Ordelia</a>.</p>
-</section>
 <section class="featured" id="jetzt-erhaeltlich" aria-labelledby="featured-heading">
   <h2 id="featured-heading">Unsere Auswandererbücher · Griechenland, Ungarn, Bulgarien &amp; Bali</h2>
   <p>Bei Prem Digital Editionen finden Leser Ratgeber zu Auswandern als Rentner, Wohnen, Rente, Krankenversicherung und Alltag im Ausland. Die einzelnen Buchseiten erklären die Themen und bieten kostenlose Leseproben vor dem Kauf.</p>
@@ -168,6 +209,16 @@ footer{max-width:1120px;margin:auto;padding:26px 18px 45px;border-top:1px solid 
       </div>
     </article>
   </div>
+</section>
+<section id="themen-und-ratgeber" aria-labelledby="themen-heading">
+<h2 id="themen-heading">Auswandern als Rentner: Ratgeber, Länder und Planung</h2>
+<p>Welche Fragen sind vor einem Umzug ins Ausland wichtig? Unsere Länder-Ratgeber helfen beim Einstieg in Themen wie Aufenthalt, Wohnen, Rente, Krankenversicherung und laufende Lebenshaltungskosten. Die Leseproben sind kostenlos; die vollständigen Online-Leseausgaben sind kostenpflichtig.</p>
+<ul>
+<li><a href="auswandern-ungarn-rentner-2027.html">Auswandern nach Ungarn als Rentner: Vorbereitung und Kosten</a> – mit <a href="ungarn-2027-digitalbuch.html">Ungarn-Digitalbuch 2027</a> und <a href="ungarn-2027-budgetrechner.html">Budgetrechner</a>.</li>
+<li><a href="auswandern-griechenland-rentner-2027.html">Auswandern nach Griechenland als Rentner: Planung und Alltag</a> – mit <a href="griechenland-2027-digitalbuch.html">Griechenland-Digitalbuch 2027</a> und <a href="griechenland-2027-leseprobe.html">Gratis-Leseprobe</a>.</li>
+<li><a href="bulgarien-digitalbuch.html">Bulgarien auswandern: Buchvorstellung</a> und <a href="bali-digitalbuch.html">Bali auswandern: Buchvorstellung</a>.</li>
+</ul>
+<p>Die Bücher stammen von <a href="autor-jfx-prem.html">J.F.X. Prem</a>. Weitere Werke und Leseproben gibt es von <a href="autor-johann-prem.html">Johann Prem</a> und <a href="autor-pia-ordelia.html">Pia Ordelia</a>.</p>
 </section>
 <section id="ungarn-taschenbuch" aria-label="Ungarn 2027 – gedruckte Direktbestellung" style="margin:22px 0;padding:24px;border:1px solid #c4d6e3;border-radius:14px;background:#e8f2f8;display:flex;align-items:center;gap:22px;flex-wrap:wrap">
 <img src="images/ebooks/ungarn-2027.jpg" width="96" height="135" alt="Ungarn für Rentner 2027 – gedrucktes Softcover von J.F.X. Prem" loading="lazy" decoding="async" style="object-fit:contain;box-shadow:0 9px 15px #193d592b">
