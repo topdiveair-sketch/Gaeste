@@ -1,0 +1,111 @@
+name: Prem Digital Editionen - daily SEO health
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '25 6 * * *'
+  push:
+    branches: [main]
+    paths:
+      - prem-digital-editionen.html
+      - '*-digitalbuch.html'
+      - sitemap.xml
+      - robots.txt
+      - .github/workflows/prem-digital-seo-health.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: prem-digital-seo-health
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate sitemap, book pages and public URLs
+        shell: python
+        run: |
+          import re
+          import sys
+          import time
+          import xml.etree.ElementTree as ET
+          from html.parser import HTMLParser
+          from pathlib import Path
+          from urllib.parse import urlparse
+          from urllib.request import Request, urlopen
+          from urllib.error import HTTPError, URLError
+
+          base = "https://topdiveair-sketch.github.io/Gaeste/"
+          root = ET.parse("sitemap.xml").getroot()
+          ns = {"s":"http://www.sitemaps.org/schemas/sitemap/0.9"}
+          urls = [x.text.strip() for x in root.findall(".//s:loc", ns)]
+          required = [
+              "prem-digital-editionen.html",
+              "griechenland-2027-digitalbuch.html",
+              "ungarn-2027-digitalbuch.html",
+              "bulgarien-digitalbuch.html",
+              "bali-digitalbuch.html",
+              "ufos-und-die-nukleare-welt-digitalbuch.html"
+          ]
+          errors = []
+          if len(urls) != len(set(urls)):
+              errors.append("Duplicate sitemap URL")
+          for url in urls:
+              if not url.startswith(base):
+                  errors.append("Unexpected sitemap host: " + url)
+                  continue
+              relative = url[len(base):]
+              if not Path(relative or "index.html").is_file():
+                  errors.append("Missing sitemap target in repository: " + relative)
+          robots = Path("robots.txt").read_text(encoding="utf-8")
+          if "Sitemap: " + base + "sitemap.xml" not in robots:
+              errors.append("robots.txt does not advertise sitemap")
+          for page in required:
+              if base + page not in urls:
+                  errors.append("Missing from sitemap: " + page)
+              html = Path(page).read_text(encoding="utf-8")
+              if not re.search(r"<title>[^<]+</title>", html, flags=re.I):
+                  errors.append("Missing HTML title: " + page)
+              if '<link rel="canonical" href="' + base + page + '"' not in html:
+                  errors.append("Missing expected canonical: " + page)
+              if 'noindex' in html[:4000].lower():
+                  errors.append("Unexpected noindex: " + page)
+
+          class BookLinks(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.outbound = []
+              def handle_starttag(self, tag, attrs):
+                  if tag != "a": return
+                  d = dict(attrs)
+                  if d.get("href","").startswith(("https://buy.stripe.com/","https://topdiveair.systeme.io/")):
+                      self.outbound.append(d["href"])
+
+          for page in ["prem-digital-editionen.html","ufos-und-die-nukleare-welt-digitalbuch.html"]:
+              parser = BookLinks()
+              parser.feed(Path(page).read_text(encoding="utf-8"))
+              if not parser.outbound:
+                  errors.append("No known checkout/reader links in " + page)
+
+          def fetch_status(url):
+              req = Request(url, headers={"User-Agent": "Prem-Digital-SEO-Health/1.0"})
+              for attempt in range(2):
+                  try:
+                      with urlopen(req, timeout=15) as response:
+                          return response.status
+                  except (HTTPError, URLError, TimeoutError) as exc:
+                      if attempt == 1: return str(exc)
+                      time.sleep(3)
+
+          for url in [base+"sitemap.xml",base+"robots.txt"]+[base+p for p in required]:
+              status = fetch_status(url)
+              print(url, status)
+              if status != 200: errors.append("Public HTTP check failed: "+url+" => "+str(status))
+
+          if errors:
+              for error in errors: print("ERROR:", error, file=sys.stderr)
+              sys.exit(1)
+          print("SEO health checks passed. This does NOT verify Google indexing or paid reader delivery.")
