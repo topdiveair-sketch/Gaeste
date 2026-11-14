@@ -125,6 +125,16 @@ a.buy{background:#0d526e}a.buy:hover{background:#083e55}
 @media(max-width:620px){header{padding:44px 19px 47px}header:before,header:after{opacity:.35}header h1{font-size:clamp(32px,10vw,44px)}header p{font-size:16px}.hero-actions{flex-direction:column}.hero-actions a{width:100%}.featured-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.featured-card img{height:165px;padding:17px 15px}.featured-card>div{padding:13px}.featured-card strong{font-size:16px;min-height:62px}.featured-card .price-line{font-size:14px}.featured-actions a{font-size:12px;line-height:1.25;padding:9px 6px}.featured{padding:17px;border-radius:18px}#themen-und-ratgeber ul{grid-template-columns:1fr}.book-grid{grid-template-columns:repeat(auto-fit,minmax(225px,1fr))}}
 @media(max-width:360px){.featured-grid{grid-template-columns:1fr}.featured-card{display:grid;grid-template-columns:105px 1fr}.featured-card img{height:100%;min-height:170px;padding:12px}.featured-card strong{min-height:0}}
 @media(prefers-reduced-motion:reduce){.featured-card,.book,.hero-actions a{transition:none}.featured-card:hover,.book:hover,.hero-actions a:hover{transform:none}}
+
+/* Accessible full-width book actions; fix dark text and clipping on UFO checkout */
+.book{min-width:0;overflow-wrap:anywhere}
+.book a.buy,.book a.preview{display:flex;align-items:center;justify-content:center;box-sizing:border-box;width:100%;max-width:100%;min-width:0;min-height:46px;margin:7px 0 0;padding:12px 14px;border-radius:10px;white-space:normal;overflow-wrap:anywhere;word-break:normal;line-height:1.4;text-align:center;text-decoration:none;font-size:14px;font-weight:800}
+.book a.buy,.book a.buy:link,.book a.buy:visited{background:#0b5475;color:#fff!important;border:2px solid #0b5475}
+.book a.buy:hover,.book a.buy:focus-visible{background:#073a56;color:#fff!important}
+.book a.preview,.book a.preview:link,.book a.preview:visited{background:#e9f2fa;color:#10496a!important;border:1px solid #a6c5d9}
+.book a.preview:hover,.book a.preview:focus-visible{background:#dcecf8;color:#103d5c!important}
+.book .state{max-width:100%;width:100%;overflow-wrap:anywhere;white-space:normal;line-height:1.45;margin-top:9px;padding:10px 12px}
+@media(max-width:620px){.book a.buy,.book a.preview{font-size:14px;padding:12px 10px}.book{padding:17px}.book-cover{margin:-17px -17px 5px}}
 </style>
 <script type="application/ld+json">
 {
@@ -391,12 +401,12 @@ function makeBook(b){
  }
  if(typeof b.tools_url==='string'&&/^[-a-z0-9]+\.html$/.test(b.tools_url)){const a=makeEl('a','preview','Budgetrechner und Checkliste testen');a.href=b.tools_url;card.append(a);}
  if(b.id==='ufos-nukleare-welt'){
-   const about=makeEl('a','preview','UFO-Digitalbuch: Inhalt und Zugang');
+   const about=makeEl('a','preview','Buchdetails ansehen');
    about.href='ufos-und-die-nukleare-welt-digitalbuch.html';card.append(about);
-   const read=makeEl('a','preview','Zum geschützten UFO-Reader (Login)');
+   const read=makeEl('a','preview','Bereits gekauft? Reader öffnen');
    read.href='https://topdiveair.systeme.io/school/course/prem-digital-lesebibliothek';
    read.target='_blank';read.rel='noopener noreferrer';card.append(read);
-   const checkout=makeEl('a','buy','UFO-Reader für 9,90 € mit Stripe kaufen');
+   const checkout=makeEl('a','buy','UFO-Digitalbuch kaufen · 9,90 €');
    checkout.href='https://buy.stripe.com/fZueV69YQ5Ni4eJ5KEf7i00';checkout.target='_blank';checkout.rel='noopener noreferrer';card.append(checkout);
    card.append(makeEl('span','state','Hinweis: Zahlung aktiv; persönliche Reader-Freischaltung erfolgt derzeit separat, nicht automatisch.'));
  }
