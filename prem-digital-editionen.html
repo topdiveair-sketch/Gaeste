@@ -186,6 +186,31 @@ section[id$="-taschenbuch"]{background:#f0f6f9!important;border:1px solid #c8dce
 }
 .featured-actions .print-secondary-button:hover,
 .featured-actions .print-secondary-button:focus-visible{background:#dcecf6;border-color:#7fb2cd}
+
+/* Laender-Ratgeber: kompakte, mobiloptimierte Buchkarten statt Link-Absatz */
+#themen-und-ratgeber{background:#f0f5f8;border:1px solid #d9e5ec;padding:clamp(18px,3vw,30px);border-radius:20px}
+#themen-und-ratgeber .topic-header{margin-bottom:18px}
+#themen-und-ratgeber .topic-eyebrow{display:block;color:#456a80;letter-spacing:.13em;font-size:11px;font-weight:800;margin-bottom:6px}
+#themen-und-ratgeber .topic-header h2{font-size:clamp(23px,3vw,30px);margin:0 0 9px}
+#themen-und-ratgeber .topic-header p{margin:0;color:#496074;max-width:72ch;font-size:15px;line-height:1.55}
+#themen-und-ratgeber .topic-book-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+#themen-und-ratgeber .topic-book-card{display:grid;grid-template-columns:92px minmax(0,1fr);align-items:start;gap:15px;min-width:0;background:#fff;border:1px solid #d8e5ed;border-radius:14px;padding:16px;box-shadow:0 3px 13px #183b510c}
+#themen-und-ratgeber .topic-book-card>img{width:92px;height:135px;object-fit:contain;border-radius:4px;background:#edf3f8}
+#themen-und-ratgeber .topic-book-content{display:flex;flex-direction:column;min-width:0;height:100%}
+#themen-und-ratgeber .topic-book-content h3{font:700 19px/1.3 Georgia,serif;color:#153c5b;margin:0 0 6px}
+#themen-und-ratgeber .topic-book-content>p{margin:0 0 8px;color:#455f70;font-size:13px;line-height:1.5}
+#themen-und-ratgeber .topic-book-price{font-size:13px;color:#14734d;font-weight:800;margin-bottom:12px}
+#themen-und-ratgeber .topic-book-actions{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:auto}
+#themen-und-ratgeber .topic-book-actions a{display:inline-flex;align-items:center;justify-content:center;text-align:center;min-height:42px;padding:9px 8px;border-radius:8px;line-height:1.3;text-decoration:none;font-size:12px;font-weight:750;overflow-wrap:anywhere}
+#themen-und-ratgeber .topic-book-actions .topic-primary{grid-column:1/-1;background:#0b5275;color:#fff;border:1px solid #0b5275}
+#themen-und-ratgeber .topic-book-actions .topic-secondary{grid-column:1/-1;background:#fff;color:#165b80;border:1px solid #abcadd}
+#themen-und-ratgeber .topic-book-actions .topic-print{grid-column:1/-1;background:#edf5fa;color:#315a72;border:1px solid #d1e2ec;font-weight:650}
+#themen-und-ratgeber .topic-book-actions .topic-primary:hover{background:#093c58}
+#themen-und-ratgeber .topic-book-actions .topic-secondary:hover,#themen-und-ratgeber .topic-book-actions .topic-print:hover{background:#dcecf6}
+#themen-und-ratgeber .topic-author-note{font-size:12px;color:#5b6f7e;margin:15px 0 0}
+#themen-und-ratgeber .topic-author-note a{color:#205c7d}
+@media(max-width:830px){#themen-und-ratgeber .topic-book-grid{grid-template-columns:1fr}}
+@media(max-width:440px){#themen-und-ratgeber .topic-book-card{grid-template-columns:74px minmax(0,1fr);padding:12px;gap:10px}#themen-und-ratgeber .topic-book-card>img{width:74px;height:108px}#themen-und-ratgeber .topic-book-content h3{font-size:17px}#themen-und-ratgeber .topic-book-actions a{min-height:44px}}
 </style>
 <script type="application/ld+json">
 {
@@ -272,14 +297,32 @@ section[id$="-taschenbuch"]{background:#f0f6f9!important;border:1px solid #c8dce
   </div>
 </section>
 <section id="themen-und-ratgeber" aria-labelledby="themen-heading">
+<div class="topic-header"><span class="topic-eyebrow">WISSEN FÜR DEN NÄCHSTEN SCHRITT</span>
 <h2 id="themen-heading">Auswandern als Rentner: Ratgeber, Länder und Planung</h2>
-<p>Welche Fragen sind vor einem Umzug ins Ausland wichtig? Unsere Länder-Ratgeber helfen beim Einstieg in Themen wie Aufenthalt, Wohnen, Rente, Krankenversicherung und laufende Lebenshaltungskosten. Die Leseproben sind kostenlos; die vollständigen Online-Leseausgaben sind kostenpflichtig.</p>
-<ul>
-<li><a href="auswandern-ungarn-rentner-2027.html">Auswandern nach Ungarn als Rentner: Vorbereitung und Kosten</a> – mit <a href="ungarn-2027-digitalbuch.html">Ungarn-Digitalbuch 2027</a> und <a href="ungarn-2027-budgetrechner.html">Budgetrechner</a>.</li>
-<li><a href="auswandern-griechenland-rentner-2027.html">Auswandern nach Griechenland als Rentner: Planung und Alltag</a> – mit <a href="griechenland-2027-digitalbuch.html">Griechenland-Digitalbuch 2027</a> und <a href="griechenland-2027-leseprobe.html">Gratis-Leseprobe</a>.</li>
-<li><a href="bulgarien-digitalbuch.html">Bulgarien auswandern: Buchvorstellung</a> und <a href="bali-digitalbuch.html">Bali auswandern: Buchvorstellung</a>.</li>
-</ul>
-<p>Die Bücher stammen von <a href="autor-jfx-prem.html">J.F.X. Prem</a>. Weitere Werke und Leseproben gibt es von <a href="autor-johann-prem.html">Johann Prem</a> und <a href="autor-pia-ordelia.html">Pia Ordelia</a>.</p>
+<p>Vier digitale Praxisratgeber für deine Planung. Erst kostenlos hineinlesen, dann bei Interesse die Online-Ausgabe für 9,90 € einmalig wählen.</p></div>
+<div class="topic-book-grid">
+<article class="topic-book-card">
+<img src="images/ebooks/ungarn-2027.jpg" alt="Buchcover Ungarn 2027 von J.F.X. Prem" loading="lazy" decoding="async" width="100" height="145">
+<div class="topic-book-content"><h3>Ungarn 2027</h3><p>Rente, Wohnen, Kosten und Krankenversicherung.</p><span class="topic-book-price">Digital · 9,90 € einmalig</span>
+<div class="topic-book-actions"><a class="topic-primary" href="ungarn-2027-digitalbuch.html">Digitalbuch ansehen</a><a class="topic-secondary" href="ungarn-2027-leseprobe.html">Gratis-Leseprobe</a><a class="topic-print" href="https://www.epubli.com/shop/ungarn-fuer-rentner-2027-9783565868742" target="_blank" rel="noopener noreferrer">Auch als Taschenbuch</a></div>
+</div></article>
+<article class="topic-book-card">
+<img src="images/ebooks/griechenland-2027-3d-nov26.webp" alt="Buchcover Griechenland 2027 von J.F.X. Prem" loading="lazy" decoding="async" width="100" height="145">
+<div class="topic-book-content"><h3>Griechenland 2027</h3><p>Aufenthalt, Alltag, Wohnen und Gesundheitsversorgung.</p><span class="topic-book-price">Digital · 9,90 € einmalig</span>
+<div class="topic-book-actions"><a class="topic-primary" href="griechenland-2027-digitalbuch.html">Digitalbuch ansehen</a><a class="topic-secondary" href="griechenland-2027-leseprobe.html">Gratis-Leseprobe</a><a class="topic-print" href="https://www.epubli.com/shop/auswandern-nach-griechenland-9783565859511" target="_blank" rel="noopener noreferrer">Auch als Taschenbuch</a></div>
+</div></article>
+<article class="topic-book-card">
+<img src="images/ebooks/bulgarien-3d-cover.svg" alt="Buchcover Bulgarien von J.F.X. Prem" loading="lazy" decoding="async" width="100" height="145">
+<div class="topic-book-content"><h3>Bulgarien</h3><p>Regionen, Lebenshaltungskosten und Entscheidungen im Alter.</p><span class="topic-book-price">Digital · 9,90 € einmalig</span>
+<div class="topic-book-actions"><a class="topic-primary" href="bulgarien-digitalbuch.html">Digitalbuch ansehen</a><a class="topic-secondary" href="bulgarien-leseprobe.html">Gratis-Leseprobe</a><a class="topic-print" href="https://www.epubli.com/shop/auswandern-bulgarien-eine-realistische-entscheidungshilfe-im-alter-9783565378111" target="_blank" rel="noopener noreferrer">Auch als Taschenbuch</a></div>
+</div></article>
+<article class="topic-book-card">
+<img src="images/ebooks/bali-3d-cover.svg" alt="Buchcover Bali von J.F.X. Prem" loading="lazy" decoding="async" width="100" height="145">
+<div class="topic-book-content"><h3>Bali</h3><p>Visa, Wohnen, Gesundheit und Alltag auf Bali.</p><span class="topic-book-price">Digital · 9,90 € einmalig</span>
+<div class="topic-book-actions"><a class="topic-primary" href="bali-digitalbuch.html">Digitalbuch ansehen</a><a class="topic-secondary" href="bali-leseprobe.html">Gratis-Leseprobe</a><a class="topic-print" href="https://www.epubli.com/shop/leben-unter-der-sonne-balis-9783565368532" target="_blank" rel="noopener noreferrer">Auch als Taschenbuch</a></div>
+</div></article>
+</div>
+<p class="topic-author-note">Ratgeber von <a href="autor-jfx-prem.html">J.F.X. Prem</a> · Weitere Bücher von <a href="autor-johann-prem.html">Johann Prem</a> und <a href="autor-pia-ordelia.html">Pia Ordelia</a>.</p>
 </section>
 <div class="search-panel">
  <div class="formline">
