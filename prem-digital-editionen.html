@@ -158,6 +158,23 @@ section[id$="-taschenbuch"]{background:#f0f6f9!important;border:1px solid #c8dce
  #windis-epubli ul{columns:1!important}
 }
 
+
+/* Digitalausgaben priorisieren, Print als untergeordnete Alternative */
+.featured-card .print-quiet-link{display:block;margin-top:11px;color:#587086;font-size:12px;font-weight:600;text-decoration:underline;text-underline-offset:3px}
+#gedruckte-alternativen{margin-top:52px;padding-top:24px;border-top:1px solid #cfdce5}
+.print-alternatives-intro{max-width:760px;margin-bottom:20px}
+.print-kicker{color:#52697c;letter-spacing:.1em;font-size:12px;font-weight:750}
+.print-alternatives-intro p{color:#51697b;margin:9px 0}
+.print-alternatives-intro>a{color:#0b5377;font-weight:700}
+.print-alternatives-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.print-alternatives-grid>section{margin:0!important;padding:15px!important;align-self:stretch;background:#fff!important;box-shadow:none!important;border:1px solid #dae3e9!important;border-radius:14px!important;gap:12px!important}
+.print-alternatives-grid>section>img{width:62px!important;height:89px!important;object-fit:contain}
+.print-alternatives-grid>section h2{font:700 18px/1.3 Georgia,serif;margin:0 0 7px}
+.print-alternatives-grid>section p{font-size:13px;line-height:1.5;margin:0 0 9px!important}
+.print-alternatives-grid>section a[href^="https://www.epubli.com/shop/"]{min-height:43px!important;padding:9px 13px!important;font-size:13px}
+.print-alternatives-grid #windis-epubli{grid-column:1/-1}
+.print-alternatives-grid #windis-epubli li a{font-size:14px}
+@media(max-width:720px){.print-alternatives-grid{grid-template-columns:1fr}.print-alternatives-grid>section{padding:14px!important}.print-alternatives-grid #windis-epubli{grid-column:auto}}
 </style>
 <script type="application/ld+json">
 {
@@ -207,38 +224,38 @@ section[id$="-taschenbuch"]{background:#f0f6f9!important;border:1px solid #c8dce
 <div class="eyebrow">Prem Digital Editionen · Rainsoft-Book</div>
 <h1>Auswanderer-Ratgeber 2027 und Romane direkt vom Autor online lesen</h1>
 <p>Griechenland, Ungarn, Romane und weitere eigene Bücher von Johann Prem, J.F.X. Prem und Pia Ordelia. Kein Amazon-Zwang, keine fremden Autoren und keine zusätzlichen Abokosten.</p>
-<div class="hero-actions"><a href="#jetzt-erhaeltlich">Bücher entdecken</a><a href="#weitere-genres">Romane &amp; weitere Titel</a></div>
+<div class="hero-actions"><a href="#jetzt-erhaeltlich">Digitale Bücher entdecken</a><a href="#weitere-genres">Romane &amp; weitere Titel</a></div>
 <div class="claim">100 % Amazon &amp; Co. frei · Direkt vom Autor</div><p style="margin-top:14px;font-size:14px;color:#d4eee5">Digital lesen. Papier, Versand und die Unsinnige Paketsteuer sparen.</p>
 </header>
 <main>
 <nav id="autoren-links" aria-label="Autorenprofile"><a href="autor-johann-prem.html">Johann Prem – Romane</a><a href="autor-jfx-prem.html">J.F.X. Prem – Auswandererratgeber</a><a href="autor-pia-ordelia.html">Pia Ordelia – Autorenprofil</a></nav>
 <section class="featured" id="jetzt-erhaeltlich" aria-labelledby="featured-heading">
-  <h2 id="featured-heading">Unsere Auswandererbücher · Griechenland, Ungarn, Bulgarien &amp; Bali</h2>
+  <h2 id="featured-heading">Digitale Auswandererbücher · Griechenland, Ungarn, Bulgarien &amp; Bali</h2>
   <p>Bei Prem Digital Editionen finden Leser Ratgeber zu Auswandern als Rentner, Wohnen, Rente, Krankenversicherung und Alltag im Ausland. Die einzelnen Buchseiten erklären die Themen und bieten kostenlose Leseproben vor dem Kauf.</p>
   <p class="featured-lede">Vier Auswanderer-Ratgeber als Online-Digitalbücher für je 9,90 € – mit kostenloser Leseprobe vor der Bestellung. Kartenzahlungen wurden im Live-System ausgeführt; vollständige persönliche Reader-Zugriffe sind noch nicht für alle Titel abschließend geprüft.</p>
   <div class="featured-grid">
     <article class="featured-card">
       <img src="images/ebooks/griechenland-2027-3d-nov26.webp" alt="3D-Buchmotiv Griechenland 2027 von J.F.X. Prem; Digitalausgabe zum Online-Lesen" width="76" height="110">
       <div><strong>Auswandern nach Griechenland 2027</strong><span class="price-line">9,90 € einmalig</span>
-        <div class="featured-actions"><a class="primary" href="griechenland-2027-digitalbuch.html">Buch ansehen</a><a class="secondary" href="griechenland-2027-leseprobe.html">Gratis-Leseprobe</a></div>
+        <div class="featured-actions"><a class="primary" href="griechenland-2027-digitalbuch.html">Digitalbuch ansehen</a><a class="secondary" href="griechenland-2027-leseprobe.html">Gratis-Leseprobe</a></div><a class="print-quiet-link" href="https://www.epubli.com/shop/leben-unter-der-sonne-balis-9783565368532">Alternativ gedruckt bei epubli</a><a class="print-quiet-link" href="https://www.epubli.com/shop/auswandern-bulgarien-eine-realistische-entscheidungshilfe-im-alter-9783565378111">Alternativ gedruckt bei epubli</a><a class="print-quiet-link" href="https://www.epubli.com/shop/ungarn-fuer-rentner-2027-9783565868742">Alternativ gedruckt bei epubli</a><a class="print-quiet-link" href="https://www.epubli.com/shop/auswandern-nach-griechenland-9783565859511">Alternativ gedruckt bei epubli</a>
       </div>
     </article>
     <article class="featured-card">
       <img src="images/ebooks/ungarn-2027.jpg" alt="Ungarn-2027-Digitalbuch von J.F.X. Prem" width="76" height="110">
       <div><strong>Auswandern nach Ungarn 2027</strong><span class="price-line">9,90 € einmalig</span>
-        <div class="featured-actions"><a class="primary" href="ungarn-2027-digitalbuch.html">Buch ansehen</a><a class="secondary" href="ungarn-2027-leseprobe.html">Gratis-Leseprobe</a></div>
+        <div class="featured-actions"><a class="primary" href="ungarn-2027-digitalbuch.html">Digitalbuch ansehen</a><a class="secondary" href="ungarn-2027-leseprobe.html">Gratis-Leseprobe</a></div>
       </div>
     </article>
     <article class="featured-card">
       <img src="images/ebooks/bulgarien-3d-cover.svg" alt="Covermotiv Auswandern Bulgarien von J.F.X. Prem" width="76" height="107">
       <div><strong>Auswandern nach Bulgarien</strong><span class="price-line">9,90 € einmalig</span>
-        <div class="featured-actions"><a class="primary" href="bulgarien-digitalbuch.html">Buch ansehen</a><a class="secondary" href="bulgarien-leseprobe.html">Gratis-Leseprobe</a></div>
+        <div class="featured-actions"><a class="primary" href="bulgarien-digitalbuch.html">Digitalbuch ansehen</a><a class="secondary" href="bulgarien-leseprobe.html">Gratis-Leseprobe</a></div>
       </div>
     </article>
     <article class="featured-card">
       <img src="images/ebooks/bali-3d-cover.svg" alt="3D-Buchmotiv Bali auswandern – aber richtig von J.F.X. Prem" width="76" height="110">
       <div><strong>Bali auswandern – aber richtig</strong><span class="price-line">9,90 € einmalig</span>
-        <div class="featured-actions"><a class="primary" href="bali-digitalbuch.html">Buch ansehen</a><a class="secondary" href="bali-leseprobe.html">Gratis-Leseprobe</a></div>
+        <div class="featured-actions"><a class="primary" href="bali-digitalbuch.html">Digitalbuch ansehen</a><a class="secondary" href="bali-leseprobe.html">Gratis-Leseprobe</a></div>
       </div>
     </article>
   </div>
@@ -252,52 +269,6 @@ section[id$="-taschenbuch"]{background:#f0f6f9!important;border:1px solid #c8dce
 <li><a href="bulgarien-digitalbuch.html">Bulgarien auswandern: Buchvorstellung</a> und <a href="bali-digitalbuch.html">Bali auswandern: Buchvorstellung</a>.</li>
 </ul>
 <p>Die Bücher stammen von <a href="autor-jfx-prem.html">J.F.X. Prem</a>. Weitere Werke und Leseproben gibt es von <a href="autor-johann-prem.html">Johann Prem</a> und <a href="autor-pia-ordelia.html">Pia Ordelia</a>.</p>
-</section>
-<section id="windis-epubli" aria-label="Weitere gedruckte Bücher im epubli-Shop" style="margin:24px 0;padding:20px;border:1px solid #c4d6e3;border-radius:12px"><h2>Weitere Taschenbücher bei epubli</h2><p>Die folgenden gedruckten Ausgaben können direkt im epubli-Shop bestellt werden. Preise und Versandkosten zeigt epubli vor der Bestellung an. Die digitale Lesebibliothek bleibt davon unabhängig.</p><ul style="columns:2;column-width:270px;gap:26px"><li style="break-inside:avoid;margin:0 0 10px"><a href="https://www.epubli.com/shop/vom-wind-spaniens-zum-zuhause-in-der-wachau-band-1-9783565263479">Vom Wind Spaniens zum Zuhause in der Wachau – Band 1 – bei epubli kaufen</a></li><li style="break-inside:avoid;margin:0 0 10px"><a href="https://www.epubli.com/shop/das-geheimnis-am-bach-band-2-9783565232116">Das Geheimnis am Bach – Band 2 – bei epubli kaufen</a></li><li style="break-inside:avoid;margin:0 0 10px"><a href="https://www.epubli.com/shop/der-marillenknoedel-fall-band-3-9783565241750">Der Marillenknödel-Fall – Band 3 – bei epubli kaufen</a></li><li style="break-inside:avoid;margin:0 0 10px"><a href="https://www.epubli.com/shop/abenteuer-mit-der-schnaufi-bahn-band-5-9783565244430">Abenteuer mit der Schnaufi-Bahn – Band 5 – bei epubli kaufen</a></li><li style="break-inside:avoid;margin:0 0 10px"><a href="https://www.epubli.com/shop/achtung-gleise-band-6-9783565245024">Achtung Gleise! – Band 6 – bei epubli kaufen</a></li><li style="break-inside:avoid;margin:0 0 10px"><a href="https://www.epubli.com/shop/das-geheimnis-der-stadt-krems-band-7-9783565315086">Das Geheimnis der Stadt Krems – Band 7 – bei epubli kaufen</a></li><li style="break-inside:avoid;margin:0 0 10px"><a href="https://www.epubli.com/shop/das-geheimnis-von-duernstein-band-8-9783565247875">Das Geheimnis von Dürnstein – Band 8 – bei epubli kaufen</a></li><li style="break-inside:avoid;margin:0 0 10px"><a href="https://www.epubli.com/shop/das-geheimnis-der-ruine-aggstein-band-9-9783565248179">Das Geheimnis der Ruine Aggstein – Band 9 – bei epubli kaufen</a></li><li style="break-inside:avoid;margin:0 0 10px"><a href="https://www.epubli.com/shop/geheimnisse-des-dunkelsteinerwaldes-band-10-9783565248667">Geheimnisse des Dunkelsteinerwaldes – Band 10 – bei epubli kaufen</a></li><li style="break-inside:avoid;margin:0 0 10px"><a href="https://www.epubli.com/shop/dem-spatz-vom-rathausplatz-in-wien-band-11-9783565334537">Dem Spatz vom Rathausplatz in Wien – Band 11 – bei epubli kaufen</a></li><li style="break-inside:avoid;margin:0 0 10px"><a href="https://www.epubli.com/shop/abenteuer-am-welterbesteig-band-17-9783565245147">Abenteuer am Welterbesteig – Band 17 – bei epubli kaufen</a></li><li style="break-inside:avoid;margin:0 0 10px"><a href="https://www.epubli.com/shop/warum-pia-4-pfoten-hat-nicht-12-obwohl-sie-sehr-genau-gezaehlt-hat-9783565243259">Warum Pia 4 Pfoten hat &amp; nicht 12 – bei epubli kaufen</a></li><li style="break-inside:avoid;margin:0 0 10px"><a href="https://www.epubli.com/shop/auslandshund-was-dir-niemand-vorher-sagt-9783565264742">Auslandshund: Was dir niemand vorher sagt – bei epubli kaufen</a></li></ul></section>
-<section id="45-jahre-taschenbuch" aria-label="45 Jahre – Die Rechnung kommt zum Schluss als gedrucktes Buch" style="margin:22px 0;padding:24px;border:1px solid #c4d6e3;border-radius:14px;background:#e8f2f8;display:flex;align-items:center;gap:22px;flex-wrap:wrap">
-<img src="images/ebooks/legacy-b0hp3rn61c.jpg" width="96" height="135" alt="45 Jahre – Die Rechnung kommt zum Schluss – Cover von Johann Prem" loading="lazy" decoding="async" style="object-fit:contain;box-shadow:0 9px 15px #193d592b">
-<div style="flex:1;min-width:225px">
-<h2 style="margin:0 0 7px">Neu: 45 Jahre – Die Rechnung kommt zum Schluss als Taschenbuch</h2>
-<p style="margin:0 0 9px">Johann Prem · <strong>ISBN 978-3-565-82507-3</strong> · Preis und Versandkosten bei epubli</p>
-<p style="margin:0 0 14px">Gedruckte Ausgabe über epubli bestellen. Kaufabwicklung und Versand erfolgen über epubli. Die digitale Ausgabe für 9,90 € bleibt separat erhältlich.</p>
-<a href="https://www.epubli.com/shop/45-jahre-die-rechnung-kommt-zum-schluss-9783565825073" class="preview" style="display:inline-block;background:#fff;padding:12px 18px;text-decoration:none;border-radius:8px;font-weight:750">Jetzt bei epubli kaufen</a>
-</div>
-</section>
-<section id="bali-taschenbuch" aria-label="Leben unter der Sonne Balis – gedrucktes Buch bei epubli kaufen" style="margin:22px 0;padding:24px;border:1px solid #c4d6e3;border-radius:14px;background:#e8f2f8;display:flex;align-items:center;gap:22px;flex-wrap:wrap">
-<img src="images/ebooks/bali-3d-cover.svg" width="96" height="135" alt="Leben unter der Sonne Balis – Buchmotiv von J.F.X. Prem" loading="lazy" decoding="async" style="object-fit:contain;box-shadow:0 9px 15px #193d592b">
-<div style="flex:1;min-width:225px">
-<h2 style="margin:0 0 7px">Neu: Leben unter der Sonne Balis als Taschenbuch</h2>
-<p style="margin:0 0 9px">J.F.X. Prem · <strong>ISBN 978-3-565-36853-2</strong> · Preis und Versandkosten bei epubli</p>
-<p style="margin:0 0 14px">Die gedruckte Ausgabe ist bei epubli bestellbar. Bestellung, Bezahlung und Versand erfolgen direkt über epubli. Die digitale Bali-Ausgabe für 9,90 € bleibt separat erhältlich.</p>
-<a href="https://www.epubli.com/shop/leben-unter-der-sonne-balis-9783565368532" class="preview" style="display:inline-block;background:#fff;padding:12px 18px;text-decoration:none;border-radius:8px;font-weight:750">Jetzt bei epubli kaufen</a>
-</div>
-</section>
-<section id="bulgarien-taschenbuch" aria-label="Bulgarien – gedrucktes Buch bei epubli kaufen" style="margin:22px 0;padding:24px;border:1px solid #c4d6e3;border-radius:14px;background:#e8f2f8;display:flex;align-items:center;gap:22px;flex-wrap:wrap">
-<img src="images/ebooks/bulgarien-3d-cover.svg" width="96" height="135" alt="Auswandern Bulgarien – Buchmotiv von J.F.X. Prem" loading="lazy" decoding="async" style="object-fit:contain;box-shadow:0 9px 15px #193d592b">
-<div style="flex:1;min-width:225px">
-<h2 style="margin:0 0 7px">Neu: Auswandern Bulgarien als Taschenbuch</h2>
-<p style="margin:0 0 9px">J.F.X. Prem · <strong>ISBN 978-3-565-37811-1</strong> · Preis und Versandkosten bei epubli</p>
-<p style="margin:0 0 14px">Die gedruckte Ausgabe ist bei epubli bestellbar. Bestellung, Bezahlung und Versand erfolgen direkt über epubli. Die digitale Ausgabe für 9,90 € bleibt separat erhältlich.</p>
-<a href="https://www.epubli.com/shop/auswandern-bulgarien-eine-realistische-entscheidungshilfe-im-alter-9783565378111" class="preview" style="display:inline-block;background:#fff;padding:12px 18px;text-decoration:none;border-radius:8px;font-weight:750">Jetzt bei epubli kaufen</a>
-</div>
-</section>
-<section id="griechenland-taschenbuch" aria-label="Griechenland – gedrucktes Buch bei epubli kaufen" style="margin:22px 0;padding:24px;border:1px solid #c4d6e3;border-radius:14px;background:#e8f2f8;display:flex;align-items:center;gap:22px;flex-wrap:wrap">
-<img src="images/ebooks/griechenland-2027-3d-nov26.webp" width="96" height="135" alt="Auswandern nach Griechenland – Buchmotiv von J.F.X. Prem" loading="lazy" decoding="async" style="object-fit:contain;box-shadow:0 9px 15px #193d592b">
-<div style="flex:1;min-width:225px">
-<h2 style="margin:0 0 7px">Neu: Auswandern nach Griechenland als Taschenbuch</h2>
-<p style="margin:0 0 9px">J.F.X. Prem · <strong>ISBN 978-3-565-85951-1</strong> · Preis und Versandkosten bei epubli</p>
-<p style="margin:0 0 14px">Die gedruckte Ausgabe ist über epubli bestellbar. Bestellung, Bezahlung und Versand erfolgen direkt über epubli. Die digitale Ausgabe für 9,90 € bleibt separat erhältlich.</p>
-<a href="https://www.epubli.com/shop/auswandern-nach-griechenland-9783565859511" class="preview" style="display:inline-block;background:#fff;padding:12px 18px;text-decoration:none;border-radius:8px;font-weight:750">Jetzt bei epubli kaufen</a>
-</div>
-</section>
-<section id="ungarn-taschenbuch" aria-label="Ungarn 2027 – gedrucktes Buch bei epubli kaufen" style="margin:22px 0;padding:24px;border:1px solid #c4d6e3;border-radius:14px;background:#e8f2f8;display:flex;align-items:center;gap:22px;flex-wrap:wrap">
-<img src="images/ebooks/ungarn-2027.jpg" width="96" height="135" alt="Ungarn für Rentner 2027 – gedrucktes Softcover von J.F.X. Prem" loading="lazy" decoding="async" style="object-fit:contain;box-shadow:0 9px 15px #193d592b">
-<div style="flex:1;min-width:225px">
-<h2 style="margin:0 0 7px">Neu: Ungarn für Rentner 2027 als Taschenbuch</h2>
-<p style="margin:0 0 9px">112 Seiten · Softcover 17 × 24 cm · <strong>29,90 € pro Exemplar zuzüglich Versandkosten</strong></p>
-<p style="margin:0 0 14px">Diese Druckausgabe ist bei epubli erhältlich (ISBN 978-3-565-86874-2). Bestellung, Bezahlung und Versand erfolgen über epubli; der aktuelle Gesamtpreis einschließlich Versand wird dort angezeigt. </p>
-<a href="https://www.epubli.com/shop/ungarn-fuer-rentner-2027-9783565868742" class="preview" style="display:inline-block;background:#fff;padding:12px 18px;text-decoration:none;border-radius:8px;font-weight:750">Jetzt bei epubli kaufen</a>
-</div>
 </section>
 <div class="search-panel">
  <div class="formline">
@@ -381,6 +352,55 @@ section[id$="-taschenbuch"]{background:#f0f6f9!important;border:1px solid #c8dce
 <article class="book"><div class="book-cover no-original" aria-label="Originalcover noch nicht bereitgestellt"><div class="no-original-cover"><strong>Gerettet. Überfordert. Verantwortlich.</strong><small>Originalcover wird ergänzt</small></div></div><h3>Gerettet. Überfordert. Verantwortlich.</h3><p class="meta">Johann Prem</p><div class="subgenre">Tiere &amp; Verantwortung</div><span class="state">Im Bücherverzeichnis erfasst · Direktlese-Ausgabe noch nicht verfügbar</span></article>
 </div></section>
 </div>
+<section id="gedruckte-alternativen" aria-label="Gedruckte Bücher als Alternative">
+<div class="print-alternatives-intro"><span class="print-kicker">FÜR LESER, DIE PAPIER BEVORZUGEN</span><h2>Lieber ein Buch in der Hand?</h2><p>Unsere digitalen Bücher stehen im Mittelpunkt. Wer lieber gedruckt liest, findet hier die entsprechenden Taschenbuch-Ausgaben bei epubli. Bestellung und Versand erfolgen über epubli; Preise und Versandkosten werden dort angezeigt.</p><a href="#jetzt-erhaeltlich">Zu den digitalen Büchern ↑</a></div>
+<div class="print-alternatives-grid"><section id="windis-epubli" aria-label="Weitere gedruckte Bücher im epubli-Shop" style="margin:24px 0;padding:20px;border:1px solid #c4d6e3;border-radius:12px"><h2>Weitere Taschenbücher bei epubli</h2><p>Die folgenden gedruckten Ausgaben können direkt im epubli-Shop bestellt werden. Preise und Versandkosten zeigt epubli vor der Bestellung an. Die digitale Lesebibliothek bleibt davon unabhängig.</p><ul style="columns:2;column-width:270px;gap:26px"><li style="break-inside:avoid;margin:0 0 10px"><a href="https://www.epubli.com/shop/vom-wind-spaniens-zum-zuhause-in-der-wachau-band-1-9783565263479">Vom Wind Spaniens zum Zuhause in der Wachau – Band 1 – bei epubli kaufen</a></li><li style="break-inside:avoid;margin:0 0 10px"><a href="https://www.epubli.com/shop/das-geheimnis-am-bach-band-2-9783565232116">Das Geheimnis am Bach – Band 2 – bei epubli kaufen</a></li><li style="break-inside:avoid;margin:0 0 10px"><a href="https://www.epubli.com/shop/der-marillenknoedel-fall-band-3-9783565241750">Der Marillenknödel-Fall – Band 3 – bei epubli kaufen</a></li><li style="break-inside:avoid;margin:0 0 10px"><a href="https://www.epubli.com/shop/abenteuer-mit-der-schnaufi-bahn-band-5-9783565244430">Abenteuer mit der Schnaufi-Bahn – Band 5 – bei epubli kaufen</a></li><li style="break-inside:avoid;margin:0 0 10px"><a href="https://www.epubli.com/shop/achtung-gleise-band-6-9783565245024">Achtung Gleise! – Band 6 – bei epubli kaufen</a></li><li style="break-inside:avoid;margin:0 0 10px"><a href="https://www.epubli.com/shop/das-geheimnis-der-stadt-krems-band-7-9783565315086">Das Geheimnis der Stadt Krems – Band 7 – bei epubli kaufen</a></li><li style="break-inside:avoid;margin:0 0 10px"><a href="https://www.epubli.com/shop/das-geheimnis-von-duernstein-band-8-9783565247875">Das Geheimnis von Dürnstein – Band 8 – bei epubli kaufen</a></li><li style="break-inside:avoid;margin:0 0 10px"><a href="https://www.epubli.com/shop/das-geheimnis-der-ruine-aggstein-band-9-9783565248179">Das Geheimnis der Ruine Aggstein – Band 9 – bei epubli kaufen</a></li><li style="break-inside:avoid;margin:0 0 10px"><a href="https://www.epubli.com/shop/geheimnisse-des-dunkelsteinerwaldes-band-10-9783565248667">Geheimnisse des Dunkelsteinerwaldes – Band 10 – bei epubli kaufen</a></li><li style="break-inside:avoid;margin:0 0 10px"><a href="https://www.epubli.com/shop/dem-spatz-vom-rathausplatz-in-wien-band-11-9783565334537">Dem Spatz vom Rathausplatz in Wien – Band 11 – bei epubli kaufen</a></li><li style="break-inside:avoid;margin:0 0 10px"><a href="https://www.epubli.com/shop/abenteuer-am-welterbesteig-band-17-9783565245147">Abenteuer am Welterbesteig – Band 17 – bei epubli kaufen</a></li><li style="break-inside:avoid;margin:0 0 10px"><a href="https://www.epubli.com/shop/warum-pia-4-pfoten-hat-nicht-12-obwohl-sie-sehr-genau-gezaehlt-hat-9783565243259">Warum Pia 4 Pfoten hat &amp; nicht 12 – bei epubli kaufen</a></li><li style="break-inside:avoid;margin:0 0 10px"><a href="https://www.epubli.com/shop/auslandshund-was-dir-niemand-vorher-sagt-9783565264742">Auslandshund: Was dir niemand vorher sagt – bei epubli kaufen</a></li></ul></section>
+<section id="45-jahre-taschenbuch" aria-label="45 Jahre – Die Rechnung kommt zum Schluss als gedrucktes Buch" style="margin:22px 0;padding:24px;border:1px solid #c4d6e3;border-radius:14px;background:#e8f2f8;display:flex;align-items:center;gap:22px;flex-wrap:wrap">
+<img src="images/ebooks/legacy-b0hp3rn61c.jpg" width="96" height="135" alt="45 Jahre – Die Rechnung kommt zum Schluss – Cover von Johann Prem" loading="lazy" decoding="async" style="object-fit:contain;box-shadow:0 9px 15px #193d592b">
+<div style="flex:1;min-width:225px">
+<h2 style="margin:0 0 7px">Neu: 45 Jahre – Die Rechnung kommt zum Schluss als Taschenbuch</h2>
+<p style="margin:0 0 9px">Johann Prem · <strong>ISBN 978-3-565-82507-3</strong> · Preis und Versandkosten bei epubli</p>
+<p style="margin:0 0 14px">Gedruckte Ausgabe über epubli bestellen. Kaufabwicklung und Versand erfolgen über epubli. Die digitale Ausgabe für 9,90 € bleibt separat erhältlich.</p>
+<a href="https://www.epubli.com/shop/45-jahre-die-rechnung-kommt-zum-schluss-9783565825073" class="preview" style="display:inline-block;background:#fff;padding:12px 18px;text-decoration:none;border-radius:8px;font-weight:750">Jetzt bei epubli kaufen</a>
+</div>
+</section>
+<section id="bali-taschenbuch" aria-label="Leben unter der Sonne Balis – gedrucktes Buch bei epubli kaufen" style="margin:22px 0;padding:24px;border:1px solid #c4d6e3;border-radius:14px;background:#e8f2f8;display:flex;align-items:center;gap:22px;flex-wrap:wrap">
+<img src="images/ebooks/bali-3d-cover.svg" width="96" height="135" alt="Leben unter der Sonne Balis – Buchmotiv von J.F.X. Prem" loading="lazy" decoding="async" style="object-fit:contain;box-shadow:0 9px 15px #193d592b">
+<div style="flex:1;min-width:225px">
+<h2 style="margin:0 0 7px">Neu: Leben unter der Sonne Balis als Taschenbuch</h2>
+<p style="margin:0 0 9px">J.F.X. Prem · <strong>ISBN 978-3-565-36853-2</strong> · Preis und Versandkosten bei epubli</p>
+<p style="margin:0 0 14px">Die gedruckte Ausgabe ist bei epubli bestellbar. Bestellung, Bezahlung und Versand erfolgen direkt über epubli. Die digitale Bali-Ausgabe für 9,90 € bleibt separat erhältlich.</p>
+<a href="https://www.epubli.com/shop/leben-unter-der-sonne-balis-9783565368532" class="preview" style="display:inline-block;background:#fff;padding:12px 18px;text-decoration:none;border-radius:8px;font-weight:750">Jetzt bei epubli kaufen</a>
+</div>
+</section>
+<section id="bulgarien-taschenbuch" aria-label="Bulgarien – gedrucktes Buch bei epubli kaufen" style="margin:22px 0;padding:24px;border:1px solid #c4d6e3;border-radius:14px;background:#e8f2f8;display:flex;align-items:center;gap:22px;flex-wrap:wrap">
+<img src="images/ebooks/bulgarien-3d-cover.svg" width="96" height="135" alt="Auswandern Bulgarien – Buchmotiv von J.F.X. Prem" loading="lazy" decoding="async" style="object-fit:contain;box-shadow:0 9px 15px #193d592b">
+<div style="flex:1;min-width:225px">
+<h2 style="margin:0 0 7px">Neu: Auswandern Bulgarien als Taschenbuch</h2>
+<p style="margin:0 0 9px">J.F.X. Prem · <strong>ISBN 978-3-565-37811-1</strong> · Preis und Versandkosten bei epubli</p>
+<p style="margin:0 0 14px">Die gedruckte Ausgabe ist bei epubli bestellbar. Bestellung, Bezahlung und Versand erfolgen direkt über epubli. Die digitale Ausgabe für 9,90 € bleibt separat erhältlich.</p>
+<a href="https://www.epubli.com/shop/auswandern-bulgarien-eine-realistische-entscheidungshilfe-im-alter-9783565378111" class="preview" style="display:inline-block;background:#fff;padding:12px 18px;text-decoration:none;border-radius:8px;font-weight:750">Jetzt bei epubli kaufen</a>
+</div>
+</section>
+<section id="griechenland-taschenbuch" aria-label="Griechenland – gedrucktes Buch bei epubli kaufen" style="margin:22px 0;padding:24px;border:1px solid #c4d6e3;border-radius:14px;background:#e8f2f8;display:flex;align-items:center;gap:22px;flex-wrap:wrap">
+<img src="images/ebooks/griechenland-2027-3d-nov26.webp" width="96" height="135" alt="Auswandern nach Griechenland – Buchmotiv von J.F.X. Prem" loading="lazy" decoding="async" style="object-fit:contain;box-shadow:0 9px 15px #193d592b">
+<div style="flex:1;min-width:225px">
+<h2 style="margin:0 0 7px">Neu: Auswandern nach Griechenland als Taschenbuch</h2>
+<p style="margin:0 0 9px">J.F.X. Prem · <strong>ISBN 978-3-565-85951-1</strong> · Preis und Versandkosten bei epubli</p>
+<p style="margin:0 0 14px">Die gedruckte Ausgabe ist über epubli bestellbar. Bestellung, Bezahlung und Versand erfolgen direkt über epubli. Die digitale Ausgabe für 9,90 € bleibt separat erhältlich.</p>
+<a href="https://www.epubli.com/shop/auswandern-nach-griechenland-9783565859511" class="preview" style="display:inline-block;background:#fff;padding:12px 18px;text-decoration:none;border-radius:8px;font-weight:750">Jetzt bei epubli kaufen</a>
+</div>
+</section>
+<section id="ungarn-taschenbuch" aria-label="Ungarn 2027 – gedrucktes Buch bei epubli kaufen" style="margin:22px 0;padding:24px;border:1px solid #c4d6e3;border-radius:14px;background:#e8f2f8;display:flex;align-items:center;gap:22px;flex-wrap:wrap">
+<img src="images/ebooks/ungarn-2027.jpg" width="96" height="135" alt="Ungarn für Rentner 2027 – gedrucktes Softcover von J.F.X. Prem" loading="lazy" decoding="async" style="object-fit:contain;box-shadow:0 9px 15px #193d592b">
+<div style="flex:1;min-width:225px">
+<h2 style="margin:0 0 7px">Neu: Ungarn für Rentner 2027 als Taschenbuch</h2>
+<p style="margin:0 0 9px">112 Seiten · Softcover 17 × 24 cm · <strong>29,90 € pro Exemplar zuzüglich Versandkosten</strong></p>
+<p style="margin:0 0 14px">Diese Druckausgabe ist bei epubli erhältlich (ISBN 978-3-565-86874-2). Bestellung, Bezahlung und Versand erfolgen über epubli; der aktuelle Gesamtpreis einschließlich Versand wird dort angezeigt. </p>
+<a href="https://www.epubli.com/shop/ungarn-fuer-rentner-2027-9783565868742" class="preview" style="display:inline-block;background:#fff;padding:12px 18px;text-decoration:none;border-radius:8px;font-weight:750">Jetzt bei epubli kaufen</a>
+</div>
+</section>
+</div></section>
 <section class="planned" id="ausblick"><h2>Weitere Genres im Aufbau</h2><p class="note">Die Kategorien sind technisch vorbereitet und werden mit echten Titeln befüllt. Wir zeigen keine erfundenen Bücher.</p><div class="planned-grid" id="planned-genres"></div></section>
 </main>
 <footer>
