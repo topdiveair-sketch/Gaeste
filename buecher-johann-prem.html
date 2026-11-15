@@ -40,6 +40,21 @@ h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.25rem,5vw,4.35r
 footer{margin-top:48px;border-top:1px solid var(--line);padding:30px 0 44px;color:var(--muted);font-size:.85rem}footer .container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}footer a{color:#23556e}
 @media(max-width:850px){.book-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-grid{grid-template-columns:minmax(0,1fr) 160px;gap:24px}.hero-book{max-width:156px}}
 @media(max-width:600px){.container{padding:0 17px}.top .container{padding-top:13px;padding-bottom:13px}.hero{padding:42px 0}.hero-grid{grid-template-columns:1fr;gap:24px}.hero-book{display:none}.book-grid{grid-template-columns:1fr}.cover{height:220px}.nav{gap:10px}.note{padding:20px}}
+
+
+/* Einheitliche primaere epubli-Kaufbuttons in Buchkarten */
+.book-body a[href^="https://www.epubli.com/shop/"],#windis-epubli a[href^="https://www.epubli.com/shop/"]{
+ display:inline-flex;justify-content:center;align-items:center;text-align:center;
+ border-radius:10px;padding:11px 15px;min-height:46px;
+ background:#0c4d69;color:#fff!important;font-weight:800;text-decoration:none;
+ line-height:1.3;box-shadow:0 3px 10px #123c5424;max-width:100%;overflow-wrap:anywhere;
+ margin-top:12px
+}
+.book-body a[href^="https://www.epubli.com/shop/"]:hover,#windis-epubli a[href^="https://www.epubli.com/shop/"]:hover{background:#07374e}
+#windis-epubli ul{list-style:none;padding:0}
+#windis-epubli li{break-inside:avoid;margin:0 0 10px}
+@media(max-width:600px){.book-body a[href^="https://www.epubli.com/shop/"],#windis-epubli a[href^="https://www.epubli.com/shop/"]{width:100%}#windis-epubli ul{columns:1!important}}
+
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Bücher von Johann Prem, J.F.X. Prem und Pia Ordelia","inLanguage":"de","url":"https://topdiveair-sketch.github.io/Gaeste/buecher-johann-prem.html","mainEntity":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Book","name":"Ungarn für Rentner – Der ehrliche Praxisratgeber für Auswanderer, Ruheständler und Langzeitaufenthalte","author":{"@type":"Person","name":"J.F.X. Prem"},"isbn":"9798167220447","bookEdition":"2027","datePublished":"2026-11-02","inLanguage":"de","url":"https://www.amazon.de/dp/B0HQ4M32NL"}},{"@type":"ListItem","position":2,"item":{"@type":"Book","name":"Auswandern nach Griechenland – Der große Praxisratgeber für Rentner","author":{"@type":"Person","name":"J.F.X. Prem"},"url":"https://www.amazon.de/dp/B0GHNB7V34"}},{"@type":"ListItem","position":3,"item":{"@type":"Book","name":"45 Jahre – Die Rechnung kommt zum Schluss","author":{"@type":"Person","name":"Johann Prem"},"url":"https://www.amazon.de/dp/B0HP3RN61C"}},{"@type":"ListItem","position":4,"item":{"@type":"Book","name":"DIE ADER – Ein Zukunftsthriller","author":{"@type":"Person","name":"Johann Prem"},"url":"https://www.amazon.de/dp/B0HPNTM55C"}},{"@type":"ListItem","position":5,"item":{"@type":"Book","name":"UNTER UNS – Das Hohenegg-Protokoll","author":{"@type":"Person","name":"Johann Prem"},"url":"https://www.amazon.de/dp/B0HPGWCH4D"}},{"@type":"ListItem","position":6,"item":{"@type":"Book","name":"DIE STADT DARUNTER","author":{"@type":"Person","name":"Johann Prem"},"isbn":"9783565837137","url":"https://www.epubli.com/shop/die-stadt-darunter-9783565837137"}},{"@type":"ListItem","position":7,"item":{"@type":"Book","name":"Die wilden Wachauer Windis – Vom Wind Spaniens zum Zuhause in der Wachau","author":[{"@type":"Person","name":"Pia Ordelia"},{"@type":"Person","name":"Johann Prem"}],"isbn":"9798261704560","url":"https://www.amazon.de/dp/B0G888WYWD"}},{"@type":"ListItem","position":8,"item":{"@type":"Book","name":"UFOs und die nukleare Welt","author":{"@type":"Person","name":"Johann Prem"},"isbn":"9783565849994","bookFormat":"https://schema.org/Paperback","bookEdition":"Überarbeitete Ausgabe 2027","datePublished":"2026-11-04","inLanguage":"de","numberOfPages":92,"url":"https://www.epubli.com/shop/ufos-und-die-nukleare-welt-9783565849994"}}]}}</script>
 </head>
