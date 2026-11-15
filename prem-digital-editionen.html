@@ -135,6 +135,29 @@ a.buy{background:#0d526e}a.buy:hover{background:#083e55}
 .book a.preview:hover,.book a.preview:focus-visible{background:#dcecf8;color:#103d5c!important}
 .book .state{max-width:100%;width:100%;overflow-wrap:anywhere;white-space:normal;line-height:1.45;margin-top:9px;padding:10px 12px}
 @media(max-width:620px){.book a.buy,.book a.preview{font-size:14px;padding:12px 10px}.book{padding:17px}.book-cover{margin:-17px -17px 5px}}
+
+
+/* Einheitliche Kaufschaltflaechen fuer gedruckte epubli-Ausgaben */
+.book a[href^="https://www.epubli.com/shop/"],
+section[id$="-taschenbuch"] a[href^="https://www.epubli.com/shop/"]{
+ display:inline-flex!important;align-items:center;justify-content:center;text-align:center;
+ background:#0c4d69!important;color:#fff!important;border:1px solid #0c4d69!important;
+ border-radius:11px!important;min-height:48px;padding:12px 16px!important;
+ font-weight:800;text-decoration:none;line-height:1.3;max-width:100%;overflow-wrap:anywhere;
+ box-shadow:0 4px 12px #123c5426;transition:background .15s ease,transform .15s ease;
+}
+.book a[href^="https://www.epubli.com/shop/"]:hover,
+section[id$="-taschenbuch"] a[href^="https://www.epubli.com/shop/"]:hover{background:#07374e!important;transform:translateY(-1px)}
+.book a[href^="https://www.epubli.com/shop/"]{margin-top:10px}
+section[id$="-taschenbuch"]{background:#f0f6f9!important;border:1px solid #c8dce8!important;border-radius:18px!important}
+#windis-epubli ul{list-style:none;padding:0}
+#windis-epubli li a{color:#0b526e;font-weight:750;line-height:1.5;text-underline-offset:3px}
+@media(max-width:620px){
+ .book a[href^="https://www.epubli.com/shop/"],section[id$="-taschenbuch"] a[href^="https://www.epubli.com/shop/"]{width:100%;min-height:48px}
+ section[id$="-taschenbuch"]{padding:18px!important}
+ #windis-epubli ul{columns:1!important}
+}
+
 </style>
 <script type="application/ld+json">
 {
