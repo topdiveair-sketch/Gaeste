@@ -1,85 +1,85 @@
 {
-  "editionDate": "2026-11-14",
-  "editionLabel": "Samstag, 14. November 2026",
-  "intro": "Grüß euch, ich bin Pia! Heute sind acht Heurige beziehungsweise Heurigen-Restaurants am nördlichen Donauufer bestätigt geöffnet; Höllmüller in Joching beginnt um 16:00 Uhr seinen neuen Aussteckzeitraum. In Emmersdorf stehen heute das donauLATINO & WELLNESS Wochenende, das Gansl-Essen in Pömling und das Adventkranzbinden im Pfarrstadel auf dem Programm. Die Wachaubahn fährt mit vier Zugpaaren zwischen Krems und Emmersdorf, zusätzlich verbindet Bus 715 das Nordufer im Stundentakt. Die Rollfähren Spitz–Arnsdorf und Weißenkirchen–St. Lorenz sowie die Personenfähre Dürnstein–Rossatz haben heute keinen planmäßigen Betrieb. Das Wetter wird ausschließlich live in der Gäste-App geladen.",
+  "editionDate": "2026-11-15",
+  "editionLabel": "Sonntag, 15. November 2026",
+  "intro": "Grüß euch, ich bin Pia! Heute sind neun Heurige beziehungsweise Heurigen-Restaurants am nördlichen Donauufer bestätigt geöffnet. Für Lengsteiner in Wösendorf und Leonhartsberger in Oberloiben ist heute der letzte Tag des aktuellen Aussteckzeitraums. Die Wachaubahn fährt am letzten regulären Saisontag mit vier Zugpaaren zwischen Krems und Emmersdorf; Bus 715 ergänzt die Norduferverbindung. In Spitz gelten am Nachmittag kurzzeitige Straßensperren. Die Fähren haben heute keinen planmäßigen Betrieb. Das Wetter wird ausschließlich live in der Gäste-App geladen.",
   "important": [
     {
-      "title": "Heute acht bestätigte Heurige – Höllmüller startet",
-      "text": "Bestätigt geöffnet sind der Alte Klosterkeller in Dürnstein, Amon-Ottmann in Weißenkirchen ab 12:00 Uhr, Werner Großinger und FLOTT in Spitz sowie Lengsteiner in Wösendorf ab 15:00 Uhr, Höllmüller in Joching und Leonhartsberger in Oberloiben ab 16:00 Uhr sowie die Schlosserei in Luberegg von 16:00 bis 21:00 Uhr. Beim Alten Klosterkeller nennt die Betriebsseite 11:30 Uhr, das offizielle Tourismusportal 12:00 Uhr.",
-      "source": "https://heurigenkalender.niederoesterreich.at/30938/weingut-hllmller",
-      "sourceLabel": "Betriebswebsites und Heurigenkalender Niederösterreich, geprüft 14. November 2026"
+      "title": "Heute neun bestätigte Heurige – zwei letzte Ausstecktage",
+      "text": "Bestätigt geöffnet sind Alter Klosterkeller in Dürnstein, Amon-Ottmann und Ferdl Denk in Weißenkirchen, Werner Großinger und FLOTT in Spitz, Lengsteiner in Wösendorf, Höllmüller in Joching, Leonhartsberger in Oberloiben sowie die Schlosserei in Luberegg. Für Lengsteiner und Leonhartsberger endet der aktuelle Aussteckzeitraum heute.",
+      "source": "https://heurigenkalender.niederoesterreich.at/30949/heuriger-ferdl-denk",
+      "sourceLabel": "Heurigenkalender Niederösterreich und Betriebsseiten, geprüft 15. November 2026"
     },
     {
       "title": "Heute donauLATINO & WELLNESS in Emmersdorf",
-      "text": "Im Hotel-Restaurant „Zum Schwarzen Bären“ sind heute Programmbeginnzeiten um 11:30 und 17:00 Uhr veröffentlicht. Das Tanz- und Wellnesswochenende läuft bis Sonntag; unterschiedliche Ticketvarianten werden angeboten.",
+      "text": "Im Hotel-Restaurant „Zum Schwarzen Bären“ sind heute Programmbeginnzeiten um 11:30 und 17:00 Uhr veröffentlicht. Heute ist der letzte Tag des Tanz- und Wellnesswochenendes; unterschiedliche Ticketvarianten werden angeboten.",
       "source": "https://www.emmersdorf.gv.at/system/web/veranstaltung.aspx?detailonr=226940013-1945&menuonr=222856612&sprache=1",
-      "sourceLabel": "Marktgemeinde Emmersdorf, geprüft 14. November 2026"
+      "sourceLabel": "Marktgemeinde Emmersdorf, geprüft 15. November 2026"
     },
     {
-      "title": "Heute Gansl-Essen und Adventkranzbinden",
-      "text": "Das Gansl-Essen bei Bauer und Wirt Langthaler in Pömling läuft heute von 11:00 bis 18:00 Uhr. Das Adventkranzbinden und Winterbasteln im Pfarrstadel Emmersdorf findet von 14:00 bis 17:00 Uhr statt; die Anmeldung endete am 10. November, daher nur für bereits Angemeldete einplanen.",
+      "title": "Heute letzter Tag des Gansl-Essens in Pömling",
+      "text": "Bei Bauer und Wirt Langthaler läuft das Gansl-Essen heute von 11:00 bis 18:00 Uhr. Reservierung beim Betrieb empfohlen.",
       "source": "https://www.emmersdorf.at/Gansl_Essen_8",
-      "sourceLabel": "Marktgemeinde Emmersdorf, geprüft 14. November 2026"
+      "sourceLabel": "Marktgemeinde Emmersdorf, geprüft 15. November 2026"
     },
     {
-      "title": "Wachaubahn fährt heute mit vier Zugpaaren",
-      "text": "Ab Krems fahren die Züge um 09:18, 11:18, 13:18 und 16:18 Uhr nach Emmersdorf. Rückfahrten ab Emmersdorf sind um 10:17, 12:17, 14:57 und 17:57 Uhr vorgesehen. Schwallenbach, Willendorf und Aggsbach Markt sind Bedarfshalte.",
+      "title": "Wachaubahn: heute letzter regulärer Saisontag",
+      "text": "Ab Krems fahren die Züge um 09:18, 11:18, 13:18 und 16:18 Uhr nach Emmersdorf. Rückfahrten ab Emmersdorf sind um 10:17, 12:17, 14:57 und 17:57 Uhr vorgesehen. Schwallenbach, Willendorf und Aggsbach Markt sind Bedarfshalte. Der reguläre Saisonverkehr endet heute; für spätere Termine gilt der gesonderte Adventfahrplan.",
       "source": "https://www.wachaubahn.at/fahrplan/",
-      "sourceLabel": "Wachaubahn/NÖVOG, geprüft 14. November 2026"
+      "sourceLabel": "Wachaubahn/NÖVOG, geprüft 15. November 2026"
+    },
+    {
+      "title": "Spitz: heutige Straßensperren von 14:30 bis etwa 15:30 Uhr",
+      "text": "Für den Festzug sind die L7140 zwischen km 0,234 und 1,018 sowie die Gemeindestraße von der Feuerwehr bis zum Sportplatz gesperrt. Die Route führt über den Kirchenplatz zum Schloss Spitz; Ordneranweisungen und Beschilderung beachten.",
+      "source": "https://www.spitz-wachau.at/Verordnung_STVO-11_2026",
+      "sourceLabel": "Amtliche Verordnung STVO-11/2026 der Marktgemeinde Spitz, geprüft 15. November 2026"
     },
     {
       "title": "Heute kein planmäßiger Fährbetrieb",
-      "text": "Spitz–Arnsdorf fährt im Winterfahrplan samstags, sonntags und feiertags nicht. Weißenkirchen–St. Lorenz beendete die Saison am 26. Oktober, die Personenfähre Dürnstein–Rossatz am 11. Oktober. Für die Querung heute Brücken beziehungsweise öffentliche Verkehrsmittel einplanen.",
+      "text": "Spitz–Arnsdorf fährt im Winterfahrplan sonntags nicht. Weißenkirchen–St. Lorenz und Dürnstein–Rossatz befinden sich nach ihren veröffentlichten Saisonzeiten bereits in Winterpause. Für die Querung Brücken beziehungsweise öffentliche Verkehrsmittel einplanen.",
       "source": "https://www.spitz-wachau.at/Rollfaehre_Spitz-Arnsdorf",
-      "sourceLabel": "Offizielle Fährübersicht 2026 der Wachaugemeinden, geprüft 14. November 2026"
+      "sourceLabel": "Offizielle Fährinformationen der Wachaugemeinden, geprüft 15. November 2026"
     },
     {
-      "title": "Spitz: Friedhofsgasse bis Montag vollständig gesperrt",
+      "title": "Spitz: Friedhofsgasse noch bis Montag vollständig gesperrt",
       "text": "Die Friedhofsgasse ist vom Parkplatz Friedhof bis zur Schlossgasse noch bis einschließlich 16. November komplett gesperrt. Die Zufahrt ist für Anrainer nur bis zur Baustelle gestattet.",
       "source": "https://www.spitz-wachau.at/Information_Strassensperre_Friedhofsgasse_6",
-      "sourceLabel": "Marktgemeinde Spitz, geprüft 14. November 2026"
+      "sourceLabel": "Marktgemeinde Spitz, geprüft 15. November 2026"
     },
     {
-      "title": "Sonntag: Straßensperren beim Festzug",
-      "text": "Am Sonntag, 15. November, sind von 14:30 bis etwa 15:30 Uhr die L7140 zwischen km 0,234 und 1,018 sowie die Gemeindestraße von der Feuerwehr bis zum Sportplatz in Spitz gesperrt. Der Festzug führt über den Kirchenplatz zum Schloss Spitz; den Ordneranweisungen folgen.",
-      "source": "https://www.spitz-wachau.at/Verordnung_STVO-11_2026",
-      "sourceLabel": "Amtliche Verordnung STVO-11/2026 der Marktgemeinde Spitz, geprüft 14. November 2026"
-    },
-    {
-      "title": "Spitzer Baustelle pausiert heute – Fortsetzung ab Montag",
-      "text": "Die halbseitige Sperre bei Hauptstraße 2 gilt am Wochenende nicht. Die nächste veröffentlichte Bauphase läuft von Montag, 16. November, bis Freitag, 20. November, jeweils 07:00 bis 17:00 Uhr; wechselweise Anhaltung und Wartezeiten bis zehn Minuten sind möglich.",
+      "title": "Spitz: Bauarbeiten Hauptstraße ab Montag",
+      "text": "Die nächste veröffentlichte Bauphase bei Hauptstraße 2 läuft vom 16. bis 20. November jeweils 07:00 bis 17:00 Uhr. Wechselweise Anhaltung und Wartezeiten bis zehn Minuten sind möglich.",
       "source": "https://www.spitz-wachau.at/Verordnung_STVO-10_2026_1",
-      "sourceLabel": "Amtliche Verordnung STVO-10/2026 der Marktgemeinde Spitz, geprüft 14. November 2026"
+      "sourceLabel": "Amtliche Verordnung STVO-10/2026 der Marktgemeinde Spitz, geprüft 15. November 2026"
     },
     {
       "title": "DDSG-Wachau-Linie heute nicht als reguläre Verbindung einplanen",
       "text": "Der veröffentlichte Wachau-Linienfahrplan endete am 1. November. Heute ist keine reguläre regionale DDSG-Linienverbindung zwischen Krems und Melk ausgewiesen; nur konkret buchbare Sonderangebote berücksichtigen.",
       "source": "https://ddsg-blue-danube.at/wp-content/uploads/2026/01/YAY_DDSG_Fahrplan_2026_Ganzjahres_Linie_WEB2.pdf",
-      "sourceLabel": "DDSG Blue Danube, Fahrplan 2026, geprüft 14. November 2026"
+      "sourceLabel": "DDSG Blue Danube, Fahrplan 2026, geprüft 15. November 2026"
     },
     {
       "title": "Welterbesteig Etappe 7: Glatzberg gesperrt",
       "text": "Der Glatzberg-Abschnitt bleibt offiziell bis voraussichtlich 20. November gesperrt. Die Umleitung führt ab Aggsbach über den Seeber-Rundweg; auch die Bachleiten-Forststraße ist keine Ausweichroute.",
       "source": "https://www.aggsbach.gv.at/system/web/news.aspx?detailonr=228054930-1900&menuonr=222921981",
-      "sourceLabel": "Marktgemeinde Aggsbach und Donau Niederösterreich, geprüft 14. November 2026"
+      "sourceLabel": "Marktgemeinde Aggsbach und Donau Niederösterreich, geprüft 15. November 2026"
     },
     {
       "title": "Welterbesteig Etappe 3: Quellen widersprechen sich",
-      "text": "Die Spitzer Gemeindeseite bezeichnet ihren früheren Sperreintrag als nicht mehr aktuell, Donau Niederösterreich führt die Totalsperre am Atzberg samt Umleitung über Wösendorf, St. Michael und den Treppelweg weiterhin. Bis zur eindeutigen Klärung der aktuellen Umleitungsbeschilderung folgen.",
+      "text": "Die Spitzer Gemeindeseite bezeichnet ihren früheren Sperreintrag als nicht mehr aktuell, Donau Niederösterreich führt die Totalsperre am Atzberg samt Umleitung über Wösendorf, St. Michael und den Treppelweg weiterhin. Bis zur eindeutigen Klärung der aktuellen Beschilderung folgen.",
       "source": "https://www.donau.com/touren/welterbesteig-wachau-umleitung-03-weissenkirchen-spitz",
-      "sourceLabel": "Donau Niederösterreich und Marktgemeinde Spitz, widersprüchlicher Stand, geprüft 14. November 2026"
+      "sourceLabel": "Donau Niederösterreich und Marktgemeinde Spitz, widersprüchlicher Stand, geprüft 15. November 2026"
     },
     {
       "title": "Donauradweg Weißenkirchen: Sperrstatus nicht abschließend bestätigt",
       "text": "Die allgemeine Seite mit aktuellen Streckenhinweisen nennt im Zielabschnitt keine Sperre. Die Winter-Etappenbeschreibung verweist jedoch auf eine ab 27. Oktober vorgesehene Sperre der Weißenkirchner Ortsmitte mit Umleitung über den Treppelweg. Beschilderung vor Ort beachten.",
       "source": "https://www.donau.com/touren/donauradweg-im-winter-etappe-5-nordufer-emmersdorf-krems",
-      "sourceLabel": "Donau Niederösterreich, geprüft 14. November 2026"
+      "sourceLabel": "Donau Niederösterreich, geprüft 15. November 2026"
     },
     {
       "title": "Aggsbach/B3: keine neue allgemeine Vollsperre bestätigt",
-      "text": "Auf der veröffentlichten Aggsbacher Amtstafel ist keine neue allgemeine Vollsperre der B3 im Zielabschnitt ausgewiesen. Dauernde Verkehrsmaßnahmen, die Spitzer Ortsbaustellen und die örtliche Beschilderung bleiben zu beachten.",
+      "text": "Auf der veröffentlichten Aggsbacher Amtstafel ist keine neue allgemeine Vollsperre der B3 im Zielabschnitt ausgewiesen. Dauernde Verkehrsmaßnahmen, die Spitzer Ortsmaßnahmen und die örtliche Beschilderung bleiben zu beachten.",
       "source": "https://www.aggsbach.gv.at/Buergerservice/Aktuelles_Termine/Amtstafel",
-      "sourceLabel": "Amtstafel Marktgemeinde Aggsbach, geprüft 14. November 2026"
+      "sourceLabel": "Amtstafel Marktgemeinde Aggsbach, geprüft 15. November 2026"
     }
   ],
   "outdoor": [
@@ -136,8 +136,8 @@
       ]
     },
     {
-      "title": "Wachaubahn fährt heute",
-      "text": "Heute verkehren vier Zugpaare zwischen Krems und Emmersdorf. Ab Krems: 09:18, 11:18, 13:18 und 16:18 Uhr. Ab Emmersdorf: 10:17, 12:17, 14:57 und 17:57 Uhr. Schwallenbach, Willendorf und Aggsbach Markt sind Bedarfshalte.",
+      "title": "Wachaubahn: letzter regulärer Saisontag",
+      "text": "Heute verkehren vier Zugpaare zwischen Krems und Emmersdorf. Ab Krems: 09:18, 11:18, 13:18 und 16:18 Uhr. Ab Emmersdorf: 10:17, 12:17, 14:57 und 17:57 Uhr. Schwallenbach, Willendorf und Aggsbach Markt sind Bedarfshalte. Danach gilt nur der gesonderte Adventfahrplan.",
       "links": [
         {
           "label": "Wachaubahn-Fahrplan",
@@ -161,7 +161,7 @@
     },
     {
       "title": "Fähren heute ohne planmäßigen Betrieb",
-      "text": "Spitz–Arnsdorf fährt im Winter samstags, sonntags und feiertags nicht. Weißenkirchen–St. Lorenz und Dürnstein–Rossatz befinden sich nach ihren veröffentlichten Saisonzeiten bereits in Winterpause.",
+      "text": "Spitz–Arnsdorf fährt im Winter sonntags nicht. Weißenkirchen–St. Lorenz und Dürnstein–Rossatz befinden sich nach ihren veröffentlichten Saisonzeiten in Winterpause.",
       "links": [
         {
           "label": "Fährzeiten Spitz",
@@ -194,22 +194,22 @@
       ]
     },
     {
-      "title": "Spitz: Bauarbeiten Hauptstraße ab Montag",
-      "text": "Heute keine halbseitige Baustellensperre bei Hauptstraße 2. Die veröffentlichte nächste Bauphase läuft vom 16. bis 20. November jeweils von 07:00 bis 17:00 Uhr mit wechselweiser Anhaltung und möglichen Wartezeiten bis zehn Minuten.",
-      "links": [
-        {
-          "label": "Amtliche Verordnung STVO-10/2026",
-          "url": "https://www.spitz-wachau.at/Verordnung_STVO-10_2026_1"
-        }
-      ]
-    },
-    {
-      "title": "Spitz: Sperren am Sonntag, 15. November",
-      "text": "Für den Festzug werden von 14:30 bis etwa 15:30 Uhr ein Abschnitt der L7140 und die Gemeindestraße von der Feuerwehr bis zum Sportplatz gesperrt. Der Festzug führt über den Kirchenplatz zum Schloss Spitz.",
+      "title": "Spitz: heutige Sperren beim Festzug",
+      "text": "Von 14:30 bis etwa 15:30 Uhr sind ein Abschnitt der L7140 und die Gemeindestraße von der Feuerwehr bis zum Sportplatz gesperrt. Der Festzug führt über den Kirchenplatz zum Schloss Spitz.",
       "links": [
         {
           "label": "Amtliche Verordnung STVO-11/2026",
           "url": "https://www.spitz-wachau.at/Verordnung_STVO-11_2026"
+        }
+      ]
+    },
+    {
+      "title": "Spitz: Bauarbeiten Hauptstraße ab Montag",
+      "text": "Die veröffentlichte nächste Bauphase bei Hauptstraße 2 läuft vom 16. bis 20. November jeweils 07:00 bis 17:00 Uhr mit wechselweiser Anhaltung und möglichen Wartezeiten bis zehn Minuten.",
+      "links": [
+        {
+          "label": "Amtliche Verordnung STVO-10/2026",
+          "url": "https://www.spitz-wachau.at/Verordnung_STVO-10_2026_1"
         }
       ]
     },
@@ -230,25 +230,18 @@
   ],
   "events": [
     {
-      "date": "14.11.2026, 11:30 und 17:00 Uhr",
+      "date": "15.11.2026, 11:30 und 17:00 Uhr",
       "place": "Emmersdorf, Hotel-Restaurant „Zum Schwarzen Bären“",
       "title": "donauLATINO & WELLNESS Wochenende",
-      "note": "Heute zwei veröffentlichte Programmbeginnzeiten. Salsa, Bachata, Latino, Balance und Wellness; unterschiedliche Ticketvarianten, Singles und Paare willkommen.",
+      "note": "Heute letzter Veranstaltungstag mit zwei veröffentlichten Programmbeginnzeiten. Salsa, Bachata, Latino, Balance und Wellness; unterschiedliche Ticketvarianten, Singles und Paare willkommen.",
       "url": "https://www.emmersdorf.gv.at/system/web/veranstaltung.aspx?detailonr=226940013-1945&menuonr=222856612&sprache=1"
     },
     {
-      "date": "14.–15.11.2026, jeweils 11:00–18:00 Uhr",
+      "date": "15.11.2026, 11:00–18:00 Uhr",
       "place": "Pömling bei Emmersdorf, Bauer und Wirt Langthaler",
       "title": "Gansl Essen",
-      "note": "Der Wochenendtermin ist im offiziellen Emmersdorfer Veranstaltungskalender als planmäßig bestätigt; Reservierung beim Betrieb empfohlen.",
+      "note": "Heute letzter Tag des bestätigten Wochenendtermins; Reservierung beim Betrieb empfohlen.",
       "url": "https://www.emmersdorf.at/Gansl_Essen_8"
-    },
-    {
-      "date": "14.11.2026, 14:00–17:00 Uhr",
-      "place": "Emmersdorf, Pfarrstadel",
-      "title": "Adventkranzbinden & Winterbasteln",
-      "note": "Findet wie geplant statt. Die veröffentlichte Anmeldung endete am 10. November; daher nur für bereits Angemeldete einplanen.",
-      "url": "https://www.emmersdorf.at/Adventkranzbinden_Winterbasteln"
     },
     {
       "date": "16.11.2026, 18:30–19:30 Uhr",
@@ -323,17 +316,24 @@
       "url": "https://heurigenkalender.niederoesterreich.at/30947/heuriger-familie-amon-ottmann"
     },
     {
+      "name": "Heuriger Ferdl Denk",
+      "place": "Weißenkirchen",
+      "period": "02.11.–13.12.2026",
+      "hours": "Heute ab 11:00 Uhr",
+      "url": "https://heurigenkalender.niederoesterreich.at/30949/heuriger-ferdl-denk"
+    },
+    {
       "name": "Weingut Werner Großinger",
       "place": "Spitz",
       "period": "04.–22.11.2026",
-      "hours": "Heute ab 15:00 Uhr",
+      "hours": "Heute ab 13:00 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/156619/heuriger-werner-groinger"
     },
     {
       "name": "Heuriger Weingärtnerei Lengsteiner",
       "place": "Wösendorf",
       "period": "06.–15.11.2026",
-      "hours": "Heute ab 15:00 Uhr",
+      "hours": "Heute ab 15:00 Uhr; letzter Tag des aktuellen Aussteckzeitraums",
       "url": "https://heurigenkalender.niederoesterreich.at/90004/heuriger-weingrtnerei-lengsteiner"
     },
     {
@@ -347,21 +347,21 @@
       "name": "Weingut Höllmüller",
       "place": "Joching",
       "period": "14.–22.11.2026",
-      "hours": "Heute ab 16:00 Uhr; erster Tag des aktuellen Aussteckzeitraums",
+      "hours": "Heute ab 16:00 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/30938/weingut-hllmller"
     },
     {
       "name": "Heuriger Leonhartsberger",
       "place": "Oberloiben, Dürnstein",
       "period": "12.–15.11.2026",
-      "hours": "Heute ab 16:00 Uhr",
+      "hours": "Heute ab 16:00 Uhr; letzter Tag des aktuellen Aussteckzeitraums",
       "url": "https://heurigenkalender.niederoesterreich.at/31391/heuriger-leonhartsberger"
     },
     {
       "name": "Die Schlosserei – Heuriger | Bar",
       "place": "Luberegg bei Emmersdorf",
       "period": "im November mit veröffentlichten Ruhetagen",
-      "hours": "Heute 16:00–21:00 Uhr",
+      "hours": "Heute 12:00–20:00 Uhr",
       "url": "https://www.luberegg.at/oeffnungszeiten/"
     }
   ],
@@ -370,7 +370,7 @@
       "date": "19.11.2026",
       "name": "Heuriger Leonhartsberger",
       "place": "Oberloiben, Dürnstein",
-      "hours": "Nach dem Ende des aktuellen Zeitraums am 15. November ist die bestätigte Wiederöffnung am Donnerstag, 19. November, ab 16:00 Uhr; täglich bis 22.11.2026.",
+      "hours": "Bestätigte Wiederöffnung am Donnerstag, 19. November, ab 16:00 Uhr; täglich bis 22.11.2026.",
       "url": "https://heurigenkalender.niederoesterreich.at/31391/heuriger-leonhartsberger"
     },
     {
@@ -388,21 +388,21 @@
       "url": "https://veranstaltungen.niederoesterreich.at/30965/heuriger-familie-weixelbaum"
     }
   ],
-  "piaTip": "Pias Tipp: Wer heute ohne Auto unterwegs sein möchte, kombiniert die Wachaubahn mit Bus 715. Kulinarisch beginnt Höllmüller in Joching um 16:00 Uhr den neuen Aussteckzeitraum; davor passen das Gansl-Essen in Pömling oder eine der beiden donauLATINO-Programmzeiten in Emmersdorf. Für eine Donauquerung heute nicht mit den Fähren planen.",
+  "piaTip": "Pias Tipp: Heute eignet sich die Wachaubahn für eine letzte reguläre Panoramafahrt der Saison; Bus 715 ergänzt die Norduferverbindung. Kulinarisch öffnen Ferdl Denk und die Schlosserei schon vor Mittag. Wer am Nachmittag durch Spitz fährt, sollte die Sperren von 14:30 bis etwa 15:30 Uhr umplanen; für eine Donauquerung heute nicht mit den Fähren rechnen.",
   "goodToKnow": [
     "Das Wetter wird in der Gäste-App live geladen und deshalb nicht statisch in Tratsch & Klatsch gespeichert.",
-    "Heute sind acht Heurige beziehungsweise Heurigen-Restaurants bestätigt geöffnet; Höllmüller in Joching startet heute um 16:00 Uhr.",
+    "Heute sind neun Heurige beziehungsweise Heurigen-Restaurants bestätigt geöffnet; für Lengsteiner und Leonhartsberger ist es der letzte Tag des aktuellen Aussteckzeitraums.",
+    "Ferdl Denk in Weißenkirchen ist sonntags ab 11:00 Uhr geöffnet; Werner Großinger in Spitz sonntags ab 13:00 Uhr.",
     "Beim Alten Klosterkeller weichen die veröffentlichten Beginnzeiten voneinander ab: Die Betriebsseite nennt 11:30 Uhr, das offizielle Tourismusportal 12:00 Uhr.",
     "Drei bestätigte Öffnungen beziehungsweise Wiederöffnungen bis 20. November sind vorgemerkt: Leonhartsberger und Enothek Eigl am 19. November sowie Familie Weixelbaum am 20. November.",
-    "donauLATINO & WELLNESS hat heute veröffentlichte Programmbeginne um 11:30 und 17:00 Uhr im Hotel „Zum Schwarzen Bären“ in Emmersdorf.",
-    "Das Gansl-Essen in Pömling läuft heute und morgen jeweils von 11:00 bis 18:00 Uhr.",
-    "Das Adventkranzbinden im Pfarrstadel findet heute von 14:00 bis 17:00 Uhr statt; die Anmeldung ist bereits abgelaufen.",
-    "Die Wachaubahn fährt heute mit vier Zugpaaren zwischen Krems und Emmersdorf; Schwallenbach, Willendorf und Aggsbach Markt sind Bedarfshalte.",
+    "donauLATINO & WELLNESS hat heute veröffentlichte Programmbeginne um 11:30 und 17:00 Uhr in Emmersdorf.",
+    "Das Gansl-Essen in Pömling läuft heute von 11:00 bis 18:00 Uhr.",
+    "Die Wachaubahn fährt heute am letzten regulären Saisontag mit vier Zugpaaren zwischen Krems und Emmersdorf; Schwallenbach, Willendorf und Aggsbach Markt sind Bedarfshalte.",
     "Bus 715 verkehrt am Nordufer laut VOR im Stundentakt; konkrete Abfahrten im Routenplaner prüfen.",
-    "Spitz–Arnsdorf fährt heute wegen der Winter-Wochenendpause nicht. Weißenkirchen–St. Lorenz und Dürnstein–Rossatz befinden sich bereits in Winterpause.",
+    "Spitz–Arnsdorf fährt heute wegen der Winter-Sonntagspause nicht. Weißenkirchen–St. Lorenz und Dürnstein–Rossatz befinden sich bereits in Winterpause.",
     "Die Friedhofsgasse in Spitz ist bis einschließlich 16. November vollständig gesperrt.",
-    "Am Sonntag, 15. November, sind in Spitz für den Festzug von 14:30 bis etwa 15:30 Uhr Abschnitte der L7140 und einer Gemeindestraße gesperrt.",
-    "Die halbseitige Baustellensperre bei Hauptstraße 2 pausiert heute und wird vom 16. bis 20. November jeweils von 07:00 bis 17:00 Uhr fortgesetzt.",
+    "Heute sind in Spitz für den Festzug von 14:30 bis etwa 15:30 Uhr Abschnitte der L7140 und einer Gemeindestraße gesperrt.",
+    "Die halbseitige Baustellensperre bei Hauptstraße 2 wird vom 16. bis 20. November jeweils von 07:00 bis 17:00 Uhr fortgesetzt.",
     "Der reguläre DDSG-Wachau-Linienfahrplan endete am 1. November; heute nur konkret buchbare Sonderangebote berücksichtigen.",
     "Etappe 7 des Welterbesteigs ist am Glatzberg bis voraussichtlich 20. November gesperrt; die offizielle Umleitung führt ab Aggsbach über den Seeber-Rundweg.",
     "Bei Etappe 3 widersprechen sich der als nicht mehr aktuell markierte Spitzer Eintrag und die weiterhin veröffentlichte Donau-Umleitung; der aktuellen Beschilderung folgen.",
