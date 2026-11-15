@@ -36,9 +36,12 @@ class TestUFOFulfillment(unittest.TestCase):
         api.side_effect = [valid, line_items]
         self.assertEqual(validated_buyer("cs_live_123ABC"), "buyer@example.invalid")
         for changed in [{"amount_total": 999}, {"payment_link": "plink_OTHER"}, {"payment_status": "unpaid"}, {"livemode": False}]:
-            api.reset_mock()
-            api.return_value = dict(valid, **changed)
-            self.assertIsNone(validated_buyer("cs_live_123ABC"))
+            with self.subTest(**changed):
+                # Clear the exhausted response iterator before using return_value.
+                api.reset_mock(side_effect=True)
+                api.return_value = dict(valid, **changed)
+                self.assertIsNone(validated_buyer("cs_live_123ABC"))
+                api.assert_called_once_with("checkout/sessions/cs_live_123ABC")
 
     def test_disabled_returns_503_no_enrollment(self):
         app = Flask(__name__)
