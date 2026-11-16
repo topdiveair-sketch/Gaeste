@@ -357,7 +357,6 @@ header .hero-actions>a:hover{filter:brightness(.95)!important;transform:translat
 </div>
 <div class="price-intro"><h2>Digitalbücher nach Preis</h2><p class="price-note">Direktkauf wird nur dort angeboten, wo der jeweilige Verkaufsweg freigeschaltet ist. Kostenlose Leseproben bleiben vor dem Kauf verfügbar.</p></div>
 <div class="price-nav" aria-label="Preisgruppen">
-<a href="#preis-990"><span>Digital Editions</span><strong>9,90 €</strong><span>Online-Ratgeber, persönlicher Lesebereich</span></a>
 </div>
 <h2 id="weitere-genres">Weitere Bücher nach Genre</h2>
 <nav id="genre-nav" aria-label="Verfügbare Buchgenres"></nav>
@@ -606,21 +605,6 @@ fetch('./prem-digital-katalog.json',{cache:'no-store'})
     const matches=books.filter(b=>(!chosen||b.category===chosen)&&
       (!term||[b.title,b.author,b.subtitle,b.edition,b.subcategory,b.legacy_asin,b.isbn,b.legacy_isbn,b.series].filter(Boolean).join(' ').toLocaleLowerCase('de').includes(term)));
     host.replaceChildren();
-    const tiers=[
-      {id:'preis-990',label:'Digital Editions',price:9.9,description:'9,90 € einmalig: Online-Ratgeber mit persönlichem Lesebereich, kein herunterladbares EPUB oder PDF.'},
-      {id:'preis-2900',label:'Planungspakete',price:29,description:'29,00 € einmalig: separate digitale ZIP-Pakete mit Checklisten und Planungswerkzeugen.',hidden:true}
-    ];
-    for(const t of tiers){
-      if(t.hidden)continue;
-      const inTier=matches.filter(b=>b.category==='auswandern' && Number(b.price_eur)===t.price && b.catalog_item_type!=='gedrucktes_buch');
-      if(!inTier.length)continue;
-      const s=makeEl('section');s.id=t.id;
-      s.append(makeEl('h2','',t.label+' · '+t.price.toLocaleString('de-AT',{style:'currency',currency:'EUR'})));
-      s.append(makeEl('p','subgenres',t.description));
-      const grid=makeEl('div','book-grid');
-      for(const b of inTier)grid.append(makeBook(b));
-      s.append(grid);host.append(s);
-    }
     const remaining=matches.filter(b=>!(b.category==='auswandern' && b.catalog_item_type!=='gedrucktes_buch' && [9.9,29].includes(Number(b.price_eur))));
     if(remaining.length){
       const heading=makeEl('section');heading.id='weitere-titel';
