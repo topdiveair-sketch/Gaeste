@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "last_reviewed": "2026-11-11",
+  "last_reviewed": "2026-11-16",
   "purpose": "Zentraler Rainsoft-Book-Katalog ausschließlich für selbst verfasste Bücher von Johann Prem, J.F.X. Prem und Pia Ordelia. Erst Griechenland 2027 und Ungarn 2027 mit nachweislich funktionierender Zahlung und Auslieferung testen; danach weitere eigene Titel schrittweise ergänzen. Keine externen Autoren, keine Kauflinks ohne belastbaren Test.",
   "channels": "Eigener Direktvertrieb ohne Amazon- und Buchhandels-Kauflinks",
   "categories": [
@@ -1609,7 +1609,7 @@
       "isbn": "9783565378111",
       "series": "Auswander Praxisratgeber",
       "series_band": 4,
-      "status": "direktkauf_aktiv_unvollstaendig_geprueft",
+      "status": "reader_vorhanden_kauf_nicht_bestaetigt",
       "buy_url": "https://topdiveair.systeme.io/44746c77",
       "cover_verified": true,
       "author_assignment_confirmed": true,
@@ -1617,7 +1617,7 @@
       "format_for_direct_reader": "Geschuetzte Online-Textausgabe ohne die eingebetteten Illustrationsseiten der bereitgestellten PDF-Druckvorlage",
       "metadata_source": "Freigegebene ProjectOS-Buchtitelliste, 16.09.2026; aktuelle Verfügbarkeit nicht überprüft",
       "isbn_status": "Prüfziffer korrekt, keine Händlerverifikation",
-      "info": "Bulgarien-Reader am 11.11.2026 mit 11 aktiven Leseabschnitten im geschuetzten Bibliotheksmodul eingerichtet, Lieferressource am 9,90-EUR-Funnel-Produkt, Vertragsmail als Produktbestaetigung hinterlegt. Oeffentlicher Checkout via DOM geprueft; vollstaendiger bezahlter Testkauf und individueller Login noch NICHT nachgewiesen. Keine eingebetteten PDF-Illustrationsseiten im Online-Reader.",
+      "info": "Bulgarien-Reader am 11.11.2026 mit 11 aktiven Leseabschnitten im geschuetzten Bibliotheksmodul eingerichtet, Lieferressource am 9,90-EUR-Funnel-Produkt, Vertragsmail als Produktbestaetigung hinterlegt. Oeffentlicher Checkout via DOM geprueft; vollstaendiger bezahlter Testkauf und individueller Login noch NICHT nachgewiesen. Keine eingebetteten PDF-Illustrationsseiten im Online-Reader. Öffentlicher Direktkauf am 16.11.2026 aus dem Katalog ausgeblendet, bis ein bezahlter Ende-zu-Ende-Kauf mit Zugang bestätigt ist.",
       "cover_url": "images/ebooks/bulgarien-3d-cover.svg",
       "cover_alt": "Vom Autor bereitgestelltes Covermotiv Auswandern Bulgarien",
       "cover_verified_at": "2026-11-11",
