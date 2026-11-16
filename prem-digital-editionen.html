@@ -220,6 +220,47 @@ section[id$="-taschenbuch"]{background:#f0f6f9!important;border:1px solid #c8dce
 #themen-und-ratgeber .planning-links span{color:#526b7b;font-size:13px;line-height:1.4}
 #themen-und-ratgeber .planning-links a:hover,#themen-und-ratgeber .planning-links a:focus-visible{border-color:#6c9bb8;background:#f6fbfe}
 @media(max-width:760px){#themen-und-ratgeber .planning-links{grid-template-columns:1fr}}
+
+/* Hero CTA readability fix 2026-11-16 */
+header .hero-actions>a{
+ display:inline-flex!important;
+ align-items:center!important;
+ justify-content:center!important;
+ min-height:50px!important;
+ padding:12px 20px!important;
+ border-radius:10px!important;
+ font-weight:800!important;
+ text-decoration:none!important;
+ line-height:1.25!important;
+ text-align:center!important;
+}
+header .hero-actions>a.hero-primary,
+header .hero-actions>a.hero-primary:link,
+header .hero-actions>a.hero-primary:visited{
+ background:#efcd90!important;
+ color:#172d41!important;
+ border:2px solid #efcd90!important;
+}
+header .hero-actions>a.hero-buy,
+header .hero-actions>a.hero-buy:link,
+header .hero-actions>a.hero-buy:visited{
+ background:#ffffff!important;
+ color:#0b355b!important;
+ border:2px solid #ffffff!important;
+}
+header .hero-actions>a.hero-secondary,
+header .hero-actions>a.hero-secondary:link,
+header .hero-actions>a.hero-secondary:visited{
+ background:#173f59!important;
+ color:#ffffff!important;
+ border:2px solid #b9d1df!important;
+}
+header .hero-actions>a:hover{filter:brightness(.95)!important;transform:translateY(-1px)}
+@media(max-width:760px){
+ header .hero-actions{display:grid!important;grid-template-columns:1fr!important}
+ header .hero-actions>a{width:100%!important}
+}
+
 </style>
 <script type="application/ld+json">
 {
@@ -269,7 +310,7 @@ section[id$="-taschenbuch"]{background:#f0f6f9!important;border:1px solid #c8dce
 <div class="eyebrow">Prem Digital Editionen · Rainsoft-Book</div>
 <h1>Auswanderer-Ratgeber 2027 und Romane direkt vom Autor online lesen</h1>
 <p>Griechenland, Ungarn, Romane und weitere eigene Bücher von Johann Prem, J.F.X. Prem und Pia Ordelia. Kein Amazon-Zwang, keine fremden Autoren und keine zusätzlichen Abokosten.</p>
-<div class="hero-actions"><a href="ungarn-2027-leseprobe.html">Ungarn 2027: kostenlose Leseprobe</a><a href="https://topdiveair.systeme.io/a1773bd7" rel="noopener noreferrer">Ungarn-Ratgeber für 9,90 € kaufen</a><a href="#jetzt-erhaeltlich">Weitere Auswandererbücher</a></div>
+<div class="hero-actions"><a class="hero-primary" href="ungarn-2027-leseprobe.html">Ungarn 2027: kostenlose Leseprobe</a><a class="hero-buy" href="https://topdiveair.systeme.io/a1773bd7" target="_blank" rel="noopener noreferrer">Ungarn-Ratgeber für 9,90 € kaufen</a><a class="hero-secondary" href="#jetzt-erhaeltlich">Weitere Auswandererbücher</a></div>
 <div class="claim">Direkt vom Autor · unabhängig von Amazon &amp; Co.</div><p style="margin-top:14px;font-size:14px;color:#d4eee5">Digital lesen. Ohne Versand und ohne zusätzliches Abo.</p>
 </header>
 <main>
