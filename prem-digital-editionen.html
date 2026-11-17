@@ -355,12 +355,6 @@ header .hero-actions>a:hover{filter:brightness(.95)!important;transform:translat
  </div>
  <p class="note">Dieser Katalog führt auch Bücher aus dem bisherigen Autorenverzeichnis auf. Bei Titeln ohne Originalcover ist die Übernahme aus dem lokalen Bücherordner noch offen. Stripe-Live-Zahlungen für Griechenland, Ungarn und Bali sind dokumentiert; sämtliche bisherigen Zahlungen waren eigene Tests, Griechenland und Ungarn wurden vollständig erstattet. Die vollständige Lesefunktion und automatische Auslieferung sind nicht für alle Titel Ende-zu-Ende nachgewiesen.</p>
 </div>
-<div class="price-intro"><h2>Digitalbücher nach Preis</h2><p class="price-note">Direktkauf wird nur dort angeboten, wo der jeweilige Verkaufsweg freigeschaltet ist. Kostenlose Leseproben bleiben vor dem Kauf verfügbar.</p></div>
-<div class="price-nav" aria-label="Preisgruppen">
-</div>
-<h2 id="weitere-genres">Weitere Bücher nach Genre</h2>
-<nav id="genre-nav" aria-label="Verfügbare Buchgenres"></nav>
-<p id="result-count" class="note" aria-live="polite">Buchkatalog wird geladen …</p>
 <div id="catalog">
 <section id="auswandern"><h2>Auswandern &amp; Reisen: Griechenland, Ungarn, Bulgarien und Bali</h2><p>Du möchtest ins Ausland ziehen oder deinen Ruhestand außerhalb Deutschlands oder Österreichs verbringen? Die digitalen Ratgeber von J.F.X. Prem behandeln unter anderem Lebenshaltungskosten, Wohnen, gesundheitliche Versorgung und wichtige Vorbereitungen. Jedes Online-Buch kostet 9,90 € einmalig; vor dem Kauf kannst du die kostenlose Leseprobe lesen. Die Online-Ausgaben werden in einem persönlichen Lesebereich bereitgestellt, nicht als frei herunterladbare EPUB-Dateien.</p><p class="subgenres">Auswanderer-Ratgeber · Länder &amp; Regionen · Ruhestand im Ausland · Reisen &amp; Alltag</p><div class="book-grid">
 <article class="book"><div class="book-cover"><img src="images/ebooks/griechenland-2027-3d-nov26.webp" alt="3D-Buchmotiv Auswandern nach Griechenland 2027 – J.F.X. Prem" width="460" loading="lazy" decoding="async"></div><h3>Auswandern nach Griechenland</h3><p class="meta">Der ehrliche Praxisratgeber für Auswanderer · Interaktive Digital Edition 2027 · J.F.X. Prem</p><div class="subgenre">Auswanderer-Ratgeber</div><p class="teaser">Praxisratgeber für den geplanten Umzug nach Griechenland: Kosten, Wohnen, Aufenthaltsfragen und Alltag. Die geschützte Online-Ausgabe bietet ergänzend Budgetrechner und Checkliste.</p><p class="preview-price">9,90 € einmalig · Direktbestellung freigegeben</p><a class="preview" href="griechenland-2027-leseprobe.html">Kostenlose Leseprobe öffnen</a><a class="preview" href="griechenland-2027-werkzeuge.html">Budgetrechner und Checkliste testen</a><a class="preview" href="griechenland-2027-digitalbuch.html">Buchvorstellung und Verkaufsseite</a><a class="buy" href="https://topdiveair.systeme.io/156e93b0" rel="noopener noreferrer" target="_blank">Griechenland für 9,90 € direkt kaufen</a></article>
@@ -488,11 +482,9 @@ header .hero-actions>a:hover{filter:brightness(.95)!important;transform:translat
 (function(){
 'use strict';
 const host=document.getElementById('catalog');
-const nav=document.getElementById('genre-nav');
 const select=document.getElementById('genre');
 const search=document.getElementById('search');
 const planned=document.getElementById('planned-genres');
-const counter=document.getElementById('result-count');
 const statusLabels={
 'katalog_erfasst_verkauf_nicht_geprueft':'Im Bücherverzeichnis erfasst · Direktlese-Ausgabe noch nicht verfügbar',
 'druckausgabe_bestellung_nicht_verifiziert':'Druckausgabe: Bestellung und Versand noch nicht geprüft',
@@ -596,7 +588,6 @@ fetch('./prem-digital-katalog.json',{cache:'no-store'})
   const active=cats.filter(c=>books.some(b=>b.category===c.id));
   for(const c of active){
     const option=document.createElement('option');option.value=c.id;option.textContent=c.label;select.append(option);
-    const a=makeEl('a','',c.label);a.href='#'+c.id;nav.append(a);
   }
   for(const c of cats.filter(c=>!active.includes(c))){planned.append(makeEl('span','pill',c.label));}
   function render(){
@@ -622,13 +613,12 @@ fetch('./prem-digital-katalog.json',{cache:'no-store'})
       for(const b of inCat)grid.append(makeBook(b));
       s.append(grid);host.append(s);
     }
-    counter.textContent=matches.length+' Titel im Katalog · Direktkauf nur bei aktuell freigeschalteten Angeboten';
     if(!matches.length)host.append(makeEl('p','note','Keine Titel gefunden. Andere Suchbegriffe verwenden.'));
   }
   search.addEventListener('input',render);
   select.addEventListener('change',render);
   render();
- }).catch(err=>{counter.textContent='Katalog derzeit nicht erreichbar';host.replaceChildren(makeEl('p','note','Bitte versuchen Sie es später erneut.'));console.error(err);});
+ }).catch(err=>{host.replaceChildren(makeEl('p','note','Bitte versuchen Sie es später erneut.'));console.error(err);});
 })();
 </script>
 </body></html>
