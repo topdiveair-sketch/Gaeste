@@ -261,6 +261,8 @@ header .hero-actions>a:hover{filter:brightness(.95)!important;transform:translat
  header .hero-actions>a{width:100%!important}
 }
 
+/* Print purchase CTA: ensure visible lettering across normal and visited states */
+#catalog .book a.epubli-print-buy,#catalog .book a.epubli-print-buy:link,#catalog .book a.epubli-print-buy:visited{display:flex!important;background:#0b5475!important;color:#ffffff!important;-webkit-text-fill-color:#ffffff!important;font-size:15px!important;font-weight:800!important;text-align:center!important;line-height:1.4!important;opacity:1!important;visibility:visible!important}
 </style>
 <script type="application/ld+json">
 {
@@ -572,7 +574,7 @@ function makeBook(b){
  if(b.id==='45-jahre'){
    const about=makeEl('a','preview','Roman ansehen');about.href='45-jahre-die-rechnung-kommt-zum-schluss.html';card.append(about);
  }
- if(b.id==='ungarn-2027-gebundene-ausgabe'){const order=makeEl('a','preview','Bei epubli kaufen · 29,90 € + Versand');order.href='https://www.epubli.com/shop/ungarn-fuer-rentner-2027-9783565868742';card.append(order);}
+ if(b.id==='ungarn-2027-gebundene-ausgabe'){const order=makeEl('a','buy epubli-print-buy','Softcover bei epubli kaufen · 29,90 €');order.href='https://www.epubli.com/shop/ungarn-fuer-rentner-2027-9783565868742';order.target='_blank';order.rel='noopener noreferrer';card.append(order);card.append(makeEl('span','state','Gedruckte Ausgabe · Versandkosten werden bei epubli angezeigt'));}
  if(b.id==='griechenland-2027-reader'||b.id==='ungarn-2027'){
    const salesPage=makeEl('a','preview','Buchvorstellung und Verkaufsseite');
    salesPage.href=b.id==='ungarn-2027'?'ungarn-2027-digitalbuch.html':'griechenland-2027-digitalbuch.html';
@@ -581,7 +583,7 @@ function makeBook(b){
  if(isSafeBuyLink(b)){
    const label = b.id==='45-jahre' ? 'Roman für 9,90 € direkt kaufen' : (b.id==='bestand-leben-unter-der-sonne-balis'?'Bali':b.id==='ungarn-2027'?'Ungarn':b.id==='bestand-auswandern-bulgarien'?'Bulgarien':'Griechenland')+' für 9,90 € direkt kaufen';
    const a=makeEl('a','buy',label);a.href=b.buy_url;a.target='_blank';a.rel='noopener noreferrer';card.append(a);
- }else if(b.id!=='ufos-nukleare-welt'){card.append(makeEl('span','state',statusLabels[b.status]||'Kaufangebot noch nicht bestätigt'));}
+ }else if(b.id!=='ufos-nukleare-welt' && b.id!=='ungarn-2027-gebundene-ausgabe'){card.append(makeEl('span','state',statusLabels[b.status]||'Kaufangebot noch nicht bestätigt'));}
  return card;
 }
 fetch('./prem-digital-katalog.json',{cache:'no-store'})
