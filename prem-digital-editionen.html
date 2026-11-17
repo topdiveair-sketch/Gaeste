@@ -489,7 +489,6 @@ const search=document.getElementById('search');
 const planned=document.getElementById('planned-genres');
 const statusLabels={
 'katalog_erfasst_verkauf_nicht_geprueft':'Im Bücherverzeichnis erfasst · Direktlese-Ausgabe noch nicht verfügbar',
-'druckausgabe_bestellung_nicht_verifiziert':'Druckausgabe: Bestellung und Versand noch nicht geprüft',
 'testversion_nicht_kaufbar':'Reader-Testversion – noch nicht kaufbar',
 'direktkauf_aktiv_unvollstaendig_geprueft':'Direktkauf eingerichtet · vollständige Auslieferung noch nicht bestätigt',
 'direktverkauf_nicht_ende_zu_ende_getestet':'Bezahlung und Auslieferung noch nicht vollständig geprüft',
@@ -583,7 +582,7 @@ function makeBook(b){
  if(isSafeBuyLink(b)){
    const label = b.id==='45-jahre' ? 'Roman für 9,90 € direkt kaufen' : (b.id==='bestand-leben-unter-der-sonne-balis'?'Bali':b.id==='ungarn-2027'?'Ungarn':b.id==='bestand-auswandern-bulgarien'?'Bulgarien':'Griechenland')+' für 9,90 € direkt kaufen';
    const a=makeEl('a','buy',label);a.href=b.buy_url;a.target='_blank';a.rel='noopener noreferrer';card.append(a);
- }else if(b.id!=='ufos-nukleare-welt' && b.id!=='ungarn-2027-gebundene-ausgabe'){card.append(makeEl('span','state',statusLabels[b.status]||'Kaufangebot noch nicht bestätigt'));}
+ }else if(b.id!=='ufos-nukleare-welt' && b.id!=='ungarn-2027-gebundene-ausgabe' && b.status!=='druckausgabe_bestellung_nicht_verifiziert'){card.append(makeEl('span','state',statusLabels[b.status]||'Kaufangebot noch nicht bestätigt'));}
  return card;
 }
 fetch('./prem-digital-katalog.json',{cache:'no-store'})
