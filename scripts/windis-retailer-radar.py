@@ -58,6 +58,49 @@ def request_text(url, timeout=12):
 def normalized(text):
     return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", re.sub(r"<(script|style)\b[^>]*>.*?</\1>", " ", text, flags=re.I | re.S)))).lower()
 
+def product_structured_status(book, raw):
+    """Only accept schema.org availability attached to this exact ISBN/title."""
+    patterns = re.findall(
+        r'<script\b[^>]*type=["\x27]application/ld\+json["\x27][^>]*>(.*?)</script>',
+        raw, flags=re.I | re.S)
+    wanted_isbn = re.sub(r"\D", "", str(book.get("isbn") or ""))
+    title_words = [w for w in re.findall(r"\w+", book["title"].lower()) if len(w) > 4]
+    nodes = []
+    def traverse(obj):
+        if isinstance(obj, list):
+            for v in obj:
+                traverse(v)
+        elif isinstance(obj, dict):
+            typ = obj.get("@type", "")
+            types = [typ] if isinstance(typ, str) else typ if isinstance(typ, list) else []
+            if any(v in ("Product", "Book", "IndividualProduct") for v in types):
+                nodes.append(obj)
+            for value in obj.values():
+                if isinstance(value, (dict, list)):
+                    traverse(value)
+    for chunk in patterns:
+        try:
+            traverse(json.loads(html.unescape(chunk)))
+        except (ValueError, TypeError):
+            continue
+    for node in nodes:
+        identifiers = " ".join(str(node.get(k, "")) for k in ("isbn", "sku", "gtin13", "gtin", "productID"))
+        matched_isbn = wanted_isbn and wanted_isbn in re.sub(r"\D", "", identifiers)
+        label = str(node.get("name") or "").lower()
+        matched_title = sum(w in label for w in title_words[:7]) >= min(2, len(title_words))
+        if not (matched_isbn or matched_title):
+            continue
+        offers = node.get("offers", [])
+        for offer in (offers if isinstance(offers, list) else [offers]):
+            if not isinstance(offer, dict):
+                continue
+            availability = str(offer.get("availability") or "").lower().rsplit("/", 1)[-1]
+            if availability in ("outofstock", "discontinued", "soldout"):
+                return "rot", "Strukturierte Produktdaten: nicht bestellbar"
+            if availability in ("instock", "preorder", "onlineonly"):
+                return "gruen", "Strukturierte Produktdaten: bestellbar"
+    return None, None
+
 def inspect(book, retailer):
     url = retailer.get("url", "")
     base = {"checked_at": today(), "url": url, "dealer": retailer["dealer"],
@@ -75,6 +118,12 @@ def inspect(book, retailer):
         return base
     if "html" not in ct and "text" not in ct:
         base["reason"] = "Unerwarteter Seitentyp"
+        return base
+    structured, structured_evidence = product_structured_status(book, raw)
+    if structured:
+        base["status"] = structured
+        base["reason"] = structured_evidence
+        base["evidence"] = "schema.org Produktangebot"
         return base
     text = normalized(raw)
     isbn = str(book.get("isbn") or "")
