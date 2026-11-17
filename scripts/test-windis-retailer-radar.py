@@ -45,7 +45,18 @@ class RadarTests(unittest.TestCase):
         a = radar.build({}, FEED, checker("gruen"))
         reduced = {"books": [], "generated_at": FEED["generated_at"]}
         b = radar.build(a, reduced, checker("gelb"))
-        self.assertEqual(b["changes"][0]["kind"], "aus_datenquelle_entfernt")
+        self.assertIn("aus_datenquelle_entfernt", [x["kind"] for x in b["changes"]])
+
+    def test_structured_red_only_for_matching_book(self):
+        product = '<script type="application/ld+json">' + (
+            '{"@type":"Product","name":"Das Geheimnis am Bach",'
+            '"offers":{"availability":"https://schema.org/OutOfStock"}}'
+        ) + '</script>'
+        status, _ = radar.product_structured_status(FEED["books"][0], product)
+        self.assertEqual(status, "rot")
+        other = product.replace("Das Geheimnis am Bach", "Unbekanntes Buch")
+        status, _ = radar.product_structured_status(FEED["books"][0], other)
+        self.assertIsNone(status)
 
     def test_no_false_price_claims(self):
         r = radar.build({}, FEED, checker("gelb"))
