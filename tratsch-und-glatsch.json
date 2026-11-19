@@ -1,73 +1,73 @@
 {
-  "editionDate": "2026-11-18",
-  "editionLabel": "Mittwoch, 18. November 2026",
-  "intro": "Grüß euch, ich bin Pia! Heute sind fünf Heurige am nördlichen Donauufer bestätigt geöffnet. Im Venussaal Aggsbach Markt findet heute Line Dance statt; der öffentliche Kalender nennt 18:00 Uhr, die tatsächliche Einheit beginnt laut Veranstalter um 18:00 oder 19:00 Uhr und wurde am Vortag per WhatsApp bekanntgegeben. In Spitz läuft die halbseitige Sperre bei Hauptstraße 2 weiter. Die Rollfähre hat werktäglichen Winterfahrplan, der Betrieb ist wegen niedriger Wasserführung aber nicht gewährleistet. Die Wachaubahn fährt heute nicht regulär und startet am Freitag in den Adventverkehr. Das Wetter wird ausschließlich live in der Gäste-App geladen.",
+  "editionDate": "2026-11-19",
+  "editionLabel": "Donnerstag, 19. November 2026",
+  "intro": "Grüß euch, ich bin Pia! Heute sind sieben Heurige am nördlichen Donauufer bestätigt geöffnet; Leonhartsberger in Oberloiben und Enothek Eigl in Wösendorf starten heute neu. In Emmersdorf stehen Athletik-Training für Kinder, Yoga und Skigymnastik auf dem Programm. In Spitz läuft die halbseitige Sperre bei Hauptstraße 2 weiter. Die Rollfähre hat werktäglichen Winterfahrplan, der Betrieb ist wegen niedriger Wasserführung aber nicht gewährleistet. Die Wachaubahn fährt heute nicht regulär und startet morgen in den Adventverkehr. Das Wetter wird ausschließlich live in der Gäste-App geladen.",
   "important": [
     {
-      "title": "Heute fünf bestätigte Heurige",
-      "text": "Geöffnet sind Alter Klosterkeller in Dürnstein ab 11:30 Uhr, Amon-Ottmann in Weißenkirchen ab 12:00 Uhr, Werner Großinger und FLOTT in Spitz jeweils ab 15:00 Uhr sowie die Schlosserei in Luberegg ab 16:00 Uhr. Höllmüller in Joching hat mittwochs Ruhetag; Ferdl Denk öffnet in der laufenden Novemberphase nur freitags sowie samstags und sonntags.",
-      "source": "https://www.weissenkirchen-wachau.at/fileadmin/root_weissenkirchen/urlaub_in_weissenkirchen/Heurigenkalender_2026.pdf",
-      "sourceLabel": "Heurigenkalender und Betriebsseiten, geprüft 18. November 2026"
+      "title": "Heute sieben bestätigte Heurige",
+      "text": "Geöffnet sind Alter Klosterkeller in Dürnstein ab 11:30 Uhr, Amon-Ottmann in Weißenkirchen ab 12:00 Uhr, Werner Großinger und FLOTT in Spitz sowie Enothek Eigl in Wösendorf jeweils ab 15:00 Uhr, Höllmüller in Joching und Leonhartsberger in Oberloiben jeweils ab 16:00 Uhr. Die Schlosserei in Luberegg führt den 19. November ausdrücklich als Ruhetag.",
+      "source": "https://heurigenkalender.niederoesterreich.at/31391/heuriger-leonhartsberger",
+      "sourceLabel": "Heurigenkalender Niederösterreich und Betriebsseiten, geprüft 19. November 2026"
     },
     {
-      "title": "Heute: Line Dance in Aggsbach Markt",
-      "text": "Der Termin im Venussaal findet wie geplant statt. Der öffentliche Kalender nennt 18:00 Uhr; laut Veranstalter beginnt die konkrete Einheit um 18:00 oder 19:00 Uhr und wird jeweils am Vortag per WhatsApp bekanntgegeben.",
-      "source": "https://www.aggsbach.gv.at/Line_dance_fuer_Anfaenger_und_Fortgeschrittene_1",
-      "sourceLabel": "Marktgemeinde Aggsbach, geprüft 18. November 2026"
+      "title": "Heute drei bestätigte Termine in Emmersdorf",
+      "text": "Athletik-Training für Kinder von 7 bis 10 Jahren beginnt um 16:30 Uhr, Yoga „Breathe & Flow“ um 18:30 Uhr und Skigymnastik um 19:00 Uhr. Alle drei Termine finden laut den offiziellen Veranstaltungsseiten wie geplant statt.",
+      "source": "https://www.emmersdorf.gv.at/system/web/veranstaltung.aspx?cmd=alle&menuonr=222856525",
+      "sourceLabel": "Marktgemeinde Emmersdorf, geprüft 19. November 2026"
+    },
+    {
+      "title": "Morgen: Wachaubahn startet in den Adventverkehr",
+      "text": "Vom 20. November bis 13. Dezember verkehren die Adventzüge freitags, samstags, sonntags sowie an Feier- und Fenstertagen. Aggsbach Markt und Willendorf sind Bedarfshalte; rechtzeitig den Haltewunschknopf drücken.",
+      "source": "https://www.wachaubahn.at/angebote-5/wachauer-advent",
+      "sourceLabel": "NÖVOG/Wachaubahn, geprüft 19. November 2026"
     },
     {
       "title": "Spitz: Bauarbeiten bei Hauptstraße 2",
-      "text": "Bis 20. November gilt jeweils 07:00 bis 17:00 Uhr eine halbseitige Sperre mit wechselweiser Anhaltung. Wartezeiten bis zehn Minuten sind möglich.",
+      "text": "Bis einschließlich morgen gilt jeweils 07:00 bis 17:00 Uhr eine halbseitige Sperre mit wechselweiser Anhaltung. Wartezeiten bis zehn Minuten sind möglich.",
       "source": "https://www.spitz-wachau.at/Verordnung_STVO-10_2026_1",
-      "sourceLabel": "Amtliche Verordnung STVO-10/2026 der Marktgemeinde Spitz, geprüft 18. November 2026"
+      "sourceLabel": "Amtliche Verordnung STVO-10/2026 der Marktgemeinde Spitz, geprüft 19. November 2026"
     },
     {
       "title": "Rollfähre Spitz: Fahrplan, Betrieb aber nicht gewährleistet",
       "text": "Der Winterfahrplan sieht heute 06:15–09:45 Uhr und 13:30–18:00 Uhr vor; letzte Fahrten jeweils 15 Minuten vor Betriebsschluss. Wegen niedriger Wasserführung ist der Betrieb laut Gemeindemitteilung nicht gewährleistet und kann sich stündlich ändern.",
       "source": "https://www.spitz-wachau.at/Information_Rollfaehrbetrieb_11",
-      "sourceLabel": "Marktgemeinde Spitz, geprüft 18. November 2026"
-    },
-    {
-      "title": "Wachaubahn: heute kein Regelverkehr, Adventzüge ab Freitag",
-      "text": "Heute verkehren keine regulären Züge. Die Adventzüge fahren vom 20. November bis 13. Dezember freitags, samstags, sonntags sowie an Feier- und Fenstertagen. Während der Betriebspause sind montags bis freitags tagsüber Bau- und Instandhaltungsarbeiten angekündigt.",
-      "source": "https://www.wachaubahn.at/angebote-5/wachauer-advent",
-      "sourceLabel": "NÖVOG/Wachaubahn, geprüft 18. November 2026"
+      "sourceLabel": "Marktgemeinde Spitz, geprüft 19. November 2026"
     },
     {
       "title": "23. November: Rote Torgasse in Spitz gesperrt",
       "text": "Am Montag, 23. November, gilt von 07:00 bis 13:00 Uhr ein Fahrverbot im Bereich Rote Torgasse 15 bis 19. Eine örtliche Umleitung wird ausgeschildert; im gesperrten Bereich besteht keine Umkehrmöglichkeit.",
       "source": "https://www.spitz-wachau.at/SYSTEM/web/amtstafel.aspx?detailonr=228082099&menuonr=223779198",
-      "sourceLabel": "Amtliche Verordnung der Marktgemeinde Spitz, geprüft 18. November 2026"
+      "sourceLabel": "Amtliche Verordnung der Marktgemeinde Spitz, geprüft 19. November 2026"
     },
     {
       "title": "DDSG-Wachau-Linie heute nicht als Regelverbindung einplanen",
       "text": "Die tägliche Wachau-Liniensaison endete am 1. November, die spätere Wochenendphase am 15. November. Heute ist keine reguläre regionale DDSG-Linienverbindung zwischen Krems und Melk ausgewiesen.",
       "source": "https://ddsg-blue-danube.at/wp-content/uploads/2026/01/YAY_DDSG_Fahrplan_2026_Ganzjahres_Linie_WEB2.pdf",
-      "sourceLabel": "DDSG Blue Danube, Fahrplan 2026, geprüft 18. November 2026"
+      "sourceLabel": "DDSG Blue Danube, Fahrplan 2026, geprüft 19. November 2026"
     },
     {
       "title": "Welterbesteig Etappe 7: Glatzberg gesperrt",
-      "text": "Der Glatzberg-Abschnitt bleibt offiziell bis voraussichtlich 20. November voll gesperrt. Die Bachleiten-Forststraße ist ebenfalls betroffen und keine Ausweichroute; die veröffentlichte Umleitung führt ab Aggsbach über den Seeber-Rundweg.",
+      "text": "Der Glatzberg-Abschnitt bleibt offiziell bis voraussichtlich morgen, 20. November, voll gesperrt. Die Bachleiten-Forststraße ist ebenfalls betroffen und keine Ausweichroute; die veröffentlichte Umleitung führt ab Aggsbach über den Seeber-Rundweg.",
       "source": "https://www.aggsbach.gv.at/system/web/news.aspx?detailonr=228054930-1900&menuonr=222921981",
-      "sourceLabel": "Marktgemeinde Aggsbach und Naturpark Jauerling-Wachau, geprüft 18. November 2026"
+      "sourceLabel": "Marktgemeinde Aggsbach und Naturpark Jauerling-Wachau, geprüft 19. November 2026"
     },
     {
       "title": "Welterbesteig Etappe 3: Quellen widersprechen sich",
       "text": "Die Spitzer Gemeindeseite kennzeichnet ihren Sperrhinweis als nicht mehr aktuell; Donau Niederösterreich veröffentlicht die Totalsperre zwischen St. Michael und Spitz samt Umleitung weiterhin. Bis zur eindeutigen Klärung der aktuellen Beschilderung und den Hinweisen vor Ort folgen.",
       "source": "https://www.donau.com/touren/welterbesteig-wachau-umleitung-03-weissenkirchen-spitz",
-      "sourceLabel": "Donau Niederösterreich und Marktgemeinde Spitz, widersprüchlicher Stand, geprüft 18. November 2026"
+      "sourceLabel": "Donau Niederösterreich und Marktgemeinde Spitz, widersprüchlicher Stand, geprüft 19. November 2026"
     },
     {
       "title": "Donauradweg Weißenkirchen: Status der angekündigten Sperre offen",
       "text": "Die allgemeine Hinweis-Seite nennt im Zielabschnitt keine aktuelle Sperre. Die Etappenbeschreibung verweist jedoch auf eine ab 27. Oktober vorgesehene Totalsperre der Weißenkirchner Ortsmitte; deren tatsächlicher Vollzug ist online nicht abschließend bestätigt. Beschilderung vor Ort beachten.",
       "source": "https://www.donau.com/touren/donauradweg-etappe-5-nordufer-emmersdorf-krems",
-      "sourceLabel": "Donau Niederösterreich, geprüft 18. November 2026"
+      "sourceLabel": "Donau Niederösterreich, geprüft 19. November 2026"
     },
     {
       "title": "Aggsbach/B3: keine neue allgemeine Vollsperre bestätigt",
       "text": "Auf der veröffentlichten Aggsbacher Amtstafel ist keine neue allgemeine Vollsperre der B3 im Zielabschnitt ausgewiesen. Dauernde Verkehrsmaßnahmen, die Spitzer Ortsmaßnahmen und die örtliche Beschilderung bleiben zu beachten.",
       "source": "https://www.aggsbach.gv.at/Buergerservice/Aktuelles_Termine/Amtstafel",
-      "sourceLabel": "Amtstafel Marktgemeinde Aggsbach, geprüft 18. November 2026"
+      "sourceLabel": "Amtstafel Marktgemeinde Aggsbach, geprüft 19. November 2026"
     }
   ],
   "outdoor": [
@@ -87,7 +87,7 @@
     },
     {
       "title": "Welterbesteig Etappe 7: Glatzberg gesperrt",
-      "text": "Der Glatzberg-Abschnitt ist bis voraussichtlich 20. November voll gesperrt. Die Bachleiten-Forststraße ist ebenfalls betroffen und keine Ausweichroute; der veröffentlichte Umweg führt ab Aggsbach über den Seeber-Rundweg.",
+      "text": "Der Glatzberg-Abschnitt ist bis voraussichtlich morgen, 20. November, voll gesperrt. Die Bachleiten-Forststraße ist ebenfalls betroffen und keine Ausweichroute; der veröffentlichte Umweg führt ab Aggsbach über den Seeber-Rundweg.",
       "links": [
         {
           "label": "Aggsbacher Sperrhinweis",
@@ -124,16 +124,16 @@
       ]
     },
     {
-      "title": "Wachaubahn: Adventverkehr ab 20. November",
-      "text": "Heute verkehren keine regulären Züge. Die Adventzüge fahren vom 20. November bis 13. Dezember freitags, samstags, sonntags sowie an Feier- und Fenstertagen. Werktags finden tagsüber Instandhaltungs- und Modernisierungsarbeiten statt.",
+      "title": "Wachaubahn: Adventverkehr ab morgen",
+      "text": "Heute verkehren keine regulären Züge. Ab morgen fahren die Adventzüge bis 13. Dezember freitags, samstags, sonntags sowie an Feier- und Fenstertagen. Aggsbach Markt und Willendorf sind Bedarfshalte.",
       "links": [
         {
           "label": "Adventfahrplan Wachaubahn",
           "url": "https://www.wachaubahn.at/angebote-5/wachauer-advent"
         },
         {
-          "label": "Bauarbeiten in der Betriebspause",
-          "url": "https://www.aggsbach.gv.at/system/web/news.aspx?detailonr=228060788-1900&menuonr=222921981"
+          "label": "Fahrplan 2026",
+          "url": "https://www.wachaubahn.at/action/download?id=%7Bc528c15f-1094-2eb9-0c1c-0db61adb0cab%7D"
         }
       ]
     },
@@ -181,7 +181,7 @@
     },
     {
       "title": "Spitz: Bauarbeiten Hauptstraße 2",
-      "text": "Bis 20. November gilt jeweils 07:00 bis 17:00 Uhr eine halbseitige Sperre mit wechselweiser Anhaltung und möglichen Wartezeiten bis zehn Minuten.",
+      "text": "Bis einschließlich morgen, 20. November, gilt jeweils 07:00 bis 17:00 Uhr eine halbseitige Sperre mit wechselweiser Anhaltung und möglichen Wartezeiten bis zehn Minuten.",
       "links": [
         {
           "label": "Amtliche Verordnung STVO-10/2026",
@@ -216,31 +216,24 @@
   ],
   "events": [
     {
-      "date": "18.11.2026, 18:00 Uhr laut Kalender",
-      "place": "Aggsbach Markt, Venussaal",
-      "title": "Line Dance für Anfänger und Fortgeschrittene",
-      "note": "Findet heute wie geplant statt. Laut Veranstalter beginnt die konkrete Einheit um 18:00 oder 19:00 Uhr; die Zeit wurde am Vortag per WhatsApp bekanntgegeben.",
-      "url": "https://www.aggsbach.gv.at/Line_dance_fuer_Anfaenger_und_Fortgeschrittene_1"
-    },
-    {
       "date": "19.11.2026, 16:30–17:30 Uhr",
       "place": "Emmersdorf, großer Turnsaal der Neuen Mittelschule",
       "title": "Athletik-Training für Kinder von 7 bis 10 Jahren",
-      "note": "Erster Termin der veröffentlichten Kursreihe; Teilnahmebedingungen beim Veranstalter prüfen.",
+      "note": "Der heutige erste Termin der Kursreihe findet laut offizieller Veranstaltungsseite wie geplant statt.",
       "url": "https://www.emmersdorf.at/Athletik_Training_fuer_Kinder_7-10_Jahre"
     },
     {
       "date": "19.11.2026, 18:30–20:00 Uhr",
       "place": "Emmersdorf, Turnsaal der Neuen Mittelschule",
       "title": "Yoga „Breathe & Flow“ – Donnerstag-Kurs",
-      "note": "Findet wie geplant statt; laut offizieller Seite besteht eine Warteliste.",
+      "note": "Der heutige Termin findet wie geplant statt; Teilnahmebedingungen beim Veranstalter prüfen.",
       "url": "https://www.emmersdorf.at/Yoga_Breathe_Flow_I"
     },
     {
       "date": "19.11.2026, 19:00–20:00 Uhr",
       "place": "Emmersdorf, kleiner Turnsaal der Neuen Mittelschule",
       "title": "Skigymnastik: Fit in die Skisaison",
-      "note": "Der nächste Termin der Kursreihe ist offiziell bestätigt.",
+      "note": "Der heutige Termin der Kursreihe findet laut offizieller Veranstaltungsseite wie geplant statt.",
       "url": "https://www.emmersdorf.at/Skigymnastik_Fit_in_die_Skisaison"
     },
     {
@@ -284,6 +277,13 @@
       "title": "Adventmarkt der Pfarre Emmersdorf",
       "note": "Beide Tage sind im offiziellen Emmersdorfer Veranstaltungskalender als planmäßig bestätigt.",
       "url": "https://www.emmersdorf.at/Adventmarkt_2"
+    },
+    {
+      "date": "22.11.2026, 11:00–13:00 Uhr",
+      "place": "Emmersdorf, Turnsaal der NMS",
+      "title": "Fiddle Connection – Musik verbindet",
+      "note": "Über 50 Kinder, Jugendliche und Erwachsene aus regionalen Musikschulverbänden spielen in drei Streichorchestern; der Termin ist offiziell als planmäßig bestätigt.",
+      "url": "https://www.emmersdorf.gv.at/system/web/veranstaltung.aspx?detailonr=226943968-1945&gnr_search=1945&menuonr=222856525&typ=0"
     },
     {
       "date": "22.11.2026, 11:00–14:00 Uhr",
@@ -337,51 +337,65 @@
       "url": "https://heurigenkalender.niederoesterreich.at/156935"
     },
     {
-      "name": "Die Schlosserei – Heuriger | Bar",
-      "place": "Luberegg bei Emmersdorf",
-      "period": "Öffnungszeiten Oktober/November 2026",
-      "hours": "Heute 16:00–21:00 Uhr; Küchenbestellschluss 21:00 Uhr",
-      "url": "https://www.luberegg.at/oeffnungszeiten/"
+      "name": "Heuriger Enothek Eigl",
+      "place": "Wösendorf",
+      "period": "19.–29.11.2026",
+      "hours": "Heute ab 15:00 Uhr",
+      "url": "https://heurigenkalender.niederoesterreich.at/30943/heuriger-enothek-eigl"
+    },
+    {
+      "name": "Weingut Höllmüller",
+      "place": "Joching",
+      "period": "14.–22.11.2026",
+      "hours": "Heute ab 16:00 Uhr",
+      "url": "https://heurigenkalender.niederoesterreich.at/30938/weingut-hllmller"
+    },
+    {
+      "name": "Heuriger Leonhartsberger",
+      "place": "Oberloiben, Dürnstein",
+      "period": "19.–22.11.2026",
+      "hours": "Heute ab 16:00 Uhr",
+      "url": "https://heurigenkalender.niederoesterreich.at/31391/heuriger-leonhartsberger"
     }
   ],
   "openingSoon": [
     {
-      "date": "19.11.2026",
-      "name": "Heuriger Leonhartsberger",
-      "place": "Oberloiben, Dürnstein",
-      "hours": "Bestätigte Wiederöffnung am Donnerstag, 19. November, ab 16:00 Uhr; täglich bis 22.11.2026.",
-      "url": "https://heurigenkalender.niederoesterreich.at/31391/heuriger-leonhartsberger"
-    },
-    {
-      "date": "19.11.2026",
-      "name": "Heuriger Enothek Eigl",
-      "place": "Wösendorf",
-      "hours": "Bestätigter Aussteckbeginn am Donnerstag, 19. November, ab 15:00 Uhr; täglich bis 29.11.2026.",
-      "url": "https://heurigenkalender.niederoesterreich.at/30943/heuriger-enothek-eigl"
-    },
-    {
       "date": "20.11.2026",
       "name": "Heuriger Familie Weixelbaum",
       "place": "Weißenkirchen",
-      "hours": "Bestätigter Aussteckbeginn am Freitag, 20. November, ab 15:00 Uhr; täglich bis 29.11.2026.",
+      "hours": "Bestätigter Aussteckbeginn morgen, Freitag, 20. November, ab 15:00 Uhr; täglich bis 29.11.2026.",
       "url": "https://heurigenkalender.niederoesterreich.at/30965/heuriger-familie-weixelbaum"
+    },
+    {
+      "date": "26.11.2026",
+      "name": "Weingartlerei Denk Petra",
+      "place": "Wösendorf",
+      "hours": "Bestätigter Aussteckbeginn am Donnerstag, 26. November, ab 15:00 Uhr; täglich bis 08.12.2026.",
+      "url": "https://weissenkirchen.va.vdbnoe.gugler.at/"
+    },
+    {
+      "date": "26.11.2026",
+      "name": "Weingut Mayer",
+      "place": "Spitz",
+      "hours": "Bestätigter Aussteckbeginn am Donnerstag, 26. November, ab 16:00 Uhr; bis 06.12.2026, sonntags ab 14:30 Uhr.",
+      "url": "https://heurigenkalender.niederoesterreich.at/156622/weingut-mayer"
     }
   ],
-  "piaTip": "Pias Tipp: Heute Abend lässt sich der Line-Dance-Termin im Venussaal mit einem Heurigenbesuch verbinden. Die öffentliche Seite nennt 18:00 Uhr, die konkrete Einheit beginnt laut Veranstalter jedoch um 18:00 oder 19:00 Uhr und wurde per WhatsApp bekanntgegeben. Für Fahrten durch Spitz die halbseitige Sperre bei Hauptstraße 2 einplanen; für die Rollfähre wegen Niedrigwasser einen Plan B bereithalten.",
+  "piaTip": "Pias Tipp: Heute öffnen mit Leonhartsberger und Enothek Eigl zwei Heurige neu; ab 15:00 Uhr gibt es zwischen Wösendorf, Spitz, Weißenkirchen und Dürnstein besonders viel Auswahl. Für Familien beginnt in Emmersdorf um 16:30 Uhr das Athletik-Training. Für die Rollfähre Spitz wegen des nicht gewährleisteten Niedrigwasserbetriebs einen Plan B einrechnen.",
   "goodToKnow": [
     "Das Wetter wird in der Gäste-App live geladen und deshalb nicht statisch in Tratsch & Klatsch gespeichert.",
-    "Heute sind fünf Heurige bestätigt geöffnet: Alter Klosterkeller, Amon-Ottmann, Werner Großinger, FLOTT und die Schlosserei in Luberegg.",
-    "Höllmüller in Joching hat mittwochs Ruhetag; Ferdl Denk ist in der laufenden Novemberphase mittwochs ebenfalls geschlossen.",
-    "Die Schlosserei in Luberegg ist heute von 16:00 bis 21:00 Uhr geöffnet.",
-    "Drei bestätigte Heurigenöffnungen der nächsten Tage sind vorgemerkt: Leonhartsberger und Enothek Eigl am 19. November sowie Familie Weixelbaum am 20. November.",
-    "Heute findet Line Dance im Venussaal Aggsbach Markt statt; die konkrete Beginnzeit 18:00 oder 19:00 Uhr wurde laut Veranstalter am Vortag per WhatsApp bekanntgegeben.",
-    "Die Wachaubahn fährt heute nicht regulär. Die Adventzüge starten am 20. November und verkehren bis 13. Dezember freitags, samstags, sonntags sowie an Feier- und Fenstertagen.",
+    "Heute sind sieben Heurige bestätigt geöffnet; Leonhartsberger in Oberloiben und Enothek Eigl in Wösendorf starten heute neu.",
+    "Die Schlosserei in Luberegg führt den 19. November ausdrücklich als Ruhetag.",
+    "Heute finden in Emmersdorf Athletik-Training für Kinder um 16:30 Uhr, Yoga um 18:30 Uhr und Skigymnastik um 19:00 Uhr statt.",
+    "Für Sonntag wurde der bestätigte Termin „Fiddle Connection – Musik verbindet“ von 11:00 bis 13:00 Uhr im Turnsaal der NMS Emmersdorf ergänzt.",
+    "Drei bestätigte Heurigenöffnungen der kommenden sieben Tage sind vorgemerkt: Weixelbaum am 20. November sowie Denk Petra und Weingut Mayer am 26. November.",
+    "Die Wachaubahn fährt heute nicht regulär. Die Adventzüge starten morgen und verkehren bis 13. Dezember freitags, samstags, sonntags sowie an Feier- und Fenstertagen.",
     "Bus 715 verkehrt am Nordufer laut VOR im Stundentakt; konkrete Abfahrten im Routenplaner prüfen.",
     "Die Rollfähre Spitz hat heute werktäglichen Winterfahrplan, der Betrieb ist wegen niedriger Wasserführung aber nicht gewährleistet. Weißenkirchen–St. Lorenz und Dürnstein–Rossatz befinden sich in Winterpause.",
-    "Bei Hauptstraße 2 in Spitz gilt bis 20. November jeweils 07:00 bis 17:00 Uhr eine halbseitige Sperre mit wechselweiser Anhaltung.",
+    "Bei Hauptstraße 2 in Spitz gilt bis einschließlich morgen jeweils 07:00 bis 17:00 Uhr eine halbseitige Sperre mit wechselweiser Anhaltung.",
     "Am 23. November ist die Rote Torgasse in Spitz von 07:00 bis 13:00 Uhr gesperrt; eine örtliche Umleitung wird ausgeschildert.",
     "Die reguläre DDSG-Wachau-Liniensaison ist beendet; heute nur konkret buchbare Sonderangebote berücksichtigen.",
-    "Etappe 7 des Welterbesteigs ist am Glatzberg bis voraussichtlich 20. November gesperrt; die Bachleiten-Forststraße ist keine Ausweichroute.",
+    "Etappe 7 des Welterbesteigs ist am Glatzberg bis voraussichtlich morgen gesperrt; die Bachleiten-Forststraße ist keine Ausweichroute.",
     "Bei Etappe 3 widersprechen sich der als nicht mehr aktuell markierte Spitzer Eintrag und die weiterhin veröffentlichte Donau-Umleitung; der aktuellen Beschilderung folgen.",
     "Beim Donauradweg ist der Vollzug der ab 27. Oktober angekündigten Sperre der Weißenkirchner Ortsmitte online nicht abschließend bestätigt; Beschilderung vor Ort beachten.",
     "Die Mountainbike-Strecken der MTB-Arena Jauerling-Wachau rund um Spitz befinden sich von November bis Ende März in Wintersperre.",
