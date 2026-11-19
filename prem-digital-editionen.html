@@ -264,13 +264,15 @@ header .hero-actions>a:hover{filter:brightness(.95)!important;transform:translat
 /* Print purchase CTA: ensure visible lettering across normal and visited states */
 #catalog .book a.epubli-print-buy,#catalog .book a.epubli-print-buy:link,#catalog .book a.epubli-print-buy:visited{display:flex!important;background:#0b5475!important;color:#ffffff!important;-webkit-text-fill-color:#ffffff!important;font-size:15px!important;font-weight:800!important;text-align:center!important;line-height:1.4!important;opacity:1!important;visibility:visible!important}
 
-/* Windis chase beside the Kinderbuecher heading */
-#kinderbuecher .windis-heading{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:110px}
+/* Windis chase: own reserved layer, never hidden by book covers */
+#kinderbuecher{position:relative;overflow:visible;isolation:isolate}
+#kinderbuecher .windis-heading{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1fr) minmax(240px,340px);align-items:center;gap:20px;min-height:155px;overflow:visible}
 #kinderbuecher .windis-heading-text{min-width:0}
-#kinderbuecher .windis-heading h2{margin-top:0;margin-bottom:.2rem}
-#kinderbuecher .windis-heading .subgenres{margin-top:0}
-#kinderbuecher .windis-chase{display:block;flex:0 1 auto;width:min(34%,290px);height:auto;object-fit:contain;background:transparent;pointer-events:none}
-@media(max-width:600px){#kinderbuecher .windis-heading{min-height:85px;gap:.3rem}#kinderbuecher .windis-chase{width:39%;max-width:175px}}
+#kinderbuecher .windis-heading h2{margin:0 0 8px}
+#kinderbuecher .windis-heading .subgenres{margin:0}
+#kinderbuecher .windis-chase{position:relative;z-index:3;display:block;width:100%;max-width:340px;height:145px;object-fit:contain;background:transparent;pointer-events:none;opacity:1;visibility:visible;align-self:center;justify-self:end}
+#kinderbuecher .book-grid{position:relative;z-index:1;margin-top:14px}
+@media(max-width:600px){#kinderbuecher .windis-heading{grid-template-columns:minmax(0,1fr) minmax(125px,44%);min-height:110px;gap:8px}#kinderbuecher .windis-chase{height:105px;max-width:195px}}
 </style>
 <script type="application/ld+json">
 {
