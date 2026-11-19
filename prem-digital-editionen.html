@@ -608,9 +608,25 @@ fetch('./prem-digital-katalog.json',{cache:'no-store'})
     for(const c of cats){
       const inCat=remaining.filter(b=>b.category===c.id).sort((a,b)=>a.title.localeCompare(b.title,'de',{sensitivity:'base',numeric:true}));
       if(!inCat.length)continue;
-      const s=makeEl('section');s.id=c.id;s.append(makeEl('h2','',c.label));
+      const s=makeEl('section');s.id=c.id;
       const sub=Array.isArray(c.subcategories)?c.subcategories.join(' · '):'';
-      if(sub)s.append(makeEl('p','subgenres',sub));
+      if(c.id==='kinderbuecher'){
+        const heading=makeEl('div','windis-heading');
+        const headingText=makeEl('div','windis-heading-text');
+        headingText.append(makeEl('h2','',c.label));
+        if(sub)headingText.append(makeEl('p','subgenres',sub));
+        const chase=document.createElement('img');
+        chase.className='windis-chase';
+        chase.src='images/windis-jagd-animation.gif?v=3';
+        chase.alt='Zwei gestromte Galgos und ein kleiner grau gestromter Whippet mit rotem Halstuch verfolgen spielerisch einen Hasen';
+        chase.width=340;chase.height=145;
+        chase.decoding='async';
+        heading.append(headingText,chase);
+        s.append(heading);
+      }else{
+        s.append(makeEl('h2','',c.label));
+        if(sub)s.append(makeEl('p','subgenres',sub));
+      }
       const grid=makeEl('div','book-grid');
       for(const b of inCat)grid.append(makeBook(b));
       s.append(grid);host.append(s);
