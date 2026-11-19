@@ -263,6 +263,14 @@ header .hero-actions>a:hover{filter:brightness(.95)!important;transform:translat
 
 /* Print purchase CTA: ensure visible lettering across normal and visited states */
 #catalog .book a.epubli-print-buy,#catalog .book a.epubli-print-buy:link,#catalog .book a.epubli-print-buy:visited{display:flex!important;background:#0b5475!important;color:#ffffff!important;-webkit-text-fill-color:#ffffff!important;font-size:15px!important;font-weight:800!important;text-align:center!important;line-height:1.4!important;opacity:1!important;visibility:visible!important}
+
+/* Windis chase beside the Kinderbuecher heading */
+#kinderbuecher .windis-heading{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:110px}
+#kinderbuecher .windis-heading-text{min-width:0}
+#kinderbuecher .windis-heading h2{margin-top:0;margin-bottom:.2rem}
+#kinderbuecher .windis-heading .subgenres{margin-top:0}
+#kinderbuecher .windis-chase{display:block;flex:0 1 auto;width:min(34%,290px);height:auto;object-fit:contain;background:transparent;pointer-events:none}
+@media(max-width:600px){#kinderbuecher .windis-heading{min-height:85px;gap:.3rem}#kinderbuecher .windis-chase{width:39%;max-width:175px}}
 </style>
 <script type="application/ld+json">
 {
@@ -400,7 +408,7 @@ header .hero-actions>a:hover{filter:brightness(.95)!important;transform:translat
 <article class="book"><div class="book-cover no-original" aria-label="Originalcover noch nicht bereitgestellt"><div class="no-original-cover"><strong>Leben unter Druck</strong><small>Originalcover wird ergänzt</small></div></div><h3>Leben unter Druck</h3><p class="meta">Johann Prem</p></article>
 <article class="book"><div class="book-cover"><img src="images/ebooks/legacy-b0gjsrk4s7.jpg" alt="Originalcover laut bisherigem Autoren-Buchkatalog: Pflegegeld – Der Kampf gegen Gutachter und Systeme" width="460" loading="lazy" decoding="async"></div><h3>Pflegegeld – Der Kampf gegen Gutachter und Systeme</h3><p class="meta">Johann Prem / J.F.X. Prem</p></article>
 </div></section>
-<section id="kinderbuecher"><h2>Kinderbücher</h2><p class="subgenres">Bilderbücher · Vorlesen · Erstleser · Tiergeschichten</p><div class="book-grid">
+<section id="kinderbuecher"><div class="windis-heading"><div class="windis-heading-text"><h2>Kinderbücher</h2><p class="subgenres">Bilderbücher · Vorlesen · Erstleser · Tiergeschichten</p></div><img class="windis-chase" src="images/windis-jagd-animation.gif" alt="Zwei gestromte Galgos und ein kleiner grau gestromter Whippet mit rotem Halstuch laufen einem Hasen nach" width="220" height="110" loading="lazy" decoding="async"></div><div class="book-grid">
 <article class="book"><div class="book-cover"><img src="images/ebooks/legacy-b0gm6nj2pk.jpg" alt="Originalcover laut bisherigem Autoren-Buchkatalog: Abenteuer am Welterbesteig – Die Wilden Wachauer Windis" width="460" loading="lazy" decoding="async"></div><h3>Abenteuer am Welterbesteig – Die Wilden Wachauer Windis</h3><p class="meta">Pia Ordelia / Johann Prem</p><div class="subgenre">Kinderabenteuer / Tiergeschichten</div></article>
 <article class="book"><div class="book-cover"><img src="images/ebooks/legacy-b0g888wywd.jpg" alt="Beispielcover Band 1 der Wilden Wachauer Windis; keine eigenständige Reihen-Ausgabe" width="460" loading="lazy" decoding="async"></div><p class="art-note">Reihenbild – es zeigt das Originalcover von Band 1</p><h3>Die wilden Wachauer Windis</h3><p class="meta">Pia Ordelia / Johann Prem</p><div class="subgenre">Tiergeschichten</div></article>
 <article class="book"><div class="book-cover"><img src="images/ebooks/legacy-b0g2c4fbtc.jpg" alt="Originalcover laut bisherigem Autoren-Buchkatalog: Die wilden Wachauer Windis – Abenteuer mit der Schnaufi-Bahn" width="460" loading="lazy" decoding="async"></div><h3>Die wilden Wachauer Windis – Abenteuer mit der Schnaufi-Bahn</h3><p class="meta">Pia Ordelia / Johann Prem</p><div class="subgenre">Kinderabenteuer / Tiergeschichten</div></article>
