@@ -5,12 +5,12 @@
 <section class="card"><h2>Artikel auswählen</h2><select id="product"></select><div class="buttons"><button id="addBtn">＋ Artikel hinzufügen</button><button id="deleteBtn" class="alt">Artikel löschen</button></div><p id="feedback"></p></section>
 <section class="card hidden" id="addPanel"><h2>Neuen Artikel speichern</h2><label class="label" for="name">Artikelname</label><input id="name" placeholder="z. B. Edelweiss Weizenbier" autocomplete="off"><label class="label" for="unit">Packungsgröße</label><input id="unit" placeholder="z. B. 6 × 0,5 l" autocomplete="off"><div class="buttons"><button id="saveBtn">Speichern</button><button id="cancelBtn" class="alt">Abbrechen</button></div></section>
 <section class="card"><h2>Aktuelle Onlinepreise</h2><div id="update" class="minor">Preisquelle wird geladen …</div><div id="prices"></div><p class="minor">Nur veröffentlichte Onlinepreise der Handelsketten, keine bestätigten Filialbestände oder Aktionslaufzeiten. Bei fehlenden Daten wird kein Preis erfunden.</p></section>
-<section class="card"><h2>Wann kaufen?</h2><p id="advice">Noch keine Kaufempfehlung möglich.</p></section>
+<section class="card"><h2>Nächstes Angebot</h2><div id="nextOffer" class="note">Angebotsdaten werden geladen …</div><p class="minor">Ein zukünftiges Angebot wird nur mit bestätigtem Preis, Händler und gültigem Startdatum angezeigt. Preisverlaufsdaten sind keine Angebotsankündigungen.</p></section><section class="card"><h2>Wann kaufen?</h2><p id="advice">Noch keine Kaufempfehlung möglich.</p></section>
 <section class="card"><h2>Preise selbst nachsehen</h2><p><a href="https://www.spar.at/produktwelt/edelweiss-hefe-hell-weizenbier-hefetrueb-6-x-0-5l-p7946769" target="_blank" rel="noopener">SPAR Onlinepreis</a></p><p><a href="https://shop.billa.at/produkte/edelweiss-hefetrueb-6x05l-00405598" target="_blank" rel="noopener">BILLA Onlinepreis</a></p><p class="minor">Neu hinzugefügte Artikel werden auf diesem Handy gespeichert. Die automatische Datenquelle muss den Artikel auch kennen, sonst erscheint korrekt „Kein Preis verfügbar“.</p></section></main>
 <script>
 (function(){
 "use strict";
-var KEY="melk-preisradar-products-v3", defaultProducts=[{id:"edelweiss",name:"Edelweiss Hefetrüb (Weizenbier)",unit:"6 × 0,5 l"}], products=[],selectedId="edelweiss",feed={items:[],updated_at:null};
+var KEY="melk-preisradar-products-v3", upcoming={items:[],updated_at:null}, defaultProducts=[{id:"edelweiss",name:"Edelweiss Hefetrüb (Weizenbier)",unit:"6 × 0,5 l"}], products=[],selectedId="edelweiss",feed={items:[],updated_at:null};
 var el=function(id){return document.getElementById(id)};
 var escapeHTML=function(v){return String(v).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})};
 var money=function(v){return Number(v).toLocaleString("de-AT",{style:"currency",currency:"EUR"})};
@@ -23,12 +23,14 @@ function draw(){
  var date=feed.updated_at?new Date(feed.updated_at):null,fresh=date&&!isNaN(date.getTime())&&Date.now()-date.getTime()<36*3600000;
  el("update").textContent=date?'Letzte Datenabfrage: '+date.toLocaleString("de-AT"):'Noch keine automatische Preisdatenlieferung';
  var matches=(feed.items||[]).filter(function(x){return x.product_id===product.id&&x.status==="online_price"&&typeof x.price==="number"&&fresh}).sort(function(a,b){return a.price-b.price});
+ var nowDate=new Date().toISOString().slice(0,10);var future=(upcoming.items||[]).filter(function(x){return x.product_id===product.id&&x.start_date>=nowDate&&x.end_date>=x.start_date&&typeof x.price==="number"&&x.store&&x.source_url&&x.status==="announced" }).sort(function(a,b){return a.start_date.localeCompare(b.start_date)||a.price-b.price});var next=future[0];
+ el("nextOffer").innerHTML=next?'<strong>'+escapeHTML(next.store)+' · '+money(next.price)+'</strong><p>Ab '+escapeHTML(next.start_date)+' bis '+escapeHTML(next.end_date)+'</p><a href="'+escapeHTML(next.source_url)+'" target="_blank" rel="noopener">Angebot prüfen</a>':'Noch kein zukünftiges Angebot mit geprüftem Preis und Datum bekannt.';
  if(matches.length){
   el("prices").innerHTML=matches.map(function(x,i){return '<div class="record"><div class="row"><strong>'+escapeHTML(x.name||product.name)+'</strong><span class="price">'+money(x.price)+'</span></div><div class="status">'+escapeHTML(x.shop||"Unbekannter Markt")+' · Online-Kettenpreis'+(i===0?' · günstigster erfasster Preis':'')+'</div></div>'}).join("");
-  el("advice").textContent="Günstigster erfasster Onlinepreis: "+money(matches[0].price)+" bei "+matches[0].shop+". Ein günstigerer zukünftiger Aktionstag ist nicht belegt.";
+  el("advice").textContent=next&&next.price<matches[0].price?"Warten kann sich lohnen: "+money(next.price)+" ab "+next.start_date+" bei "+next.store+" (online angekündigt).":"Günstigster erfasster Onlinepreis: "+money(matches[0].price)+" bei "+matches[0].shop+". Ohne günstigeres angekündigtes Angebot ist kein besserer Kauftag belegt.";
  }else{
   el("prices").innerHTML='<p class="note">Für „'+escapeHTML(product.name)+'“ ist derzeit kein verlässlich aktueller Onlinepreis vorhanden.</p>';
-  el("advice").textContent="Ohne aktuellen, überprüften Preis ist kein sinnvoller Kauftag bestimmbar.";
+  el("advice").textContent=next?"Nächstes angekündigtes Angebot ab "+next.start_date+" bei "+next.store+" für "+money(next.price)+". Vor der Fahrt prüfen.":"Ohne aktuellen Preis oder angekündigte Aktion ist kein sinnvoller Kauftag bestimmbar.";
  }
 }
 el("addBtn").addEventListener("click",function(){el("addPanel").classList.remove("hidden");el("feedback").textContent="";el("name").focus()});
@@ -46,6 +48,7 @@ el("deleteBtn").addEventListener("click",function(){if(products.length<2){el("fe
 el("product").addEventListener("change",function(){selectedId=this.value;save();draw()});
 read();draw();
 fetch("./online-preise.json?ts="+Date.now(),{cache:"no-store"}).then(function(r){if(!r.ok)throw Error("HTTP "+r.status);return r.json()}).then(function(j){feed=j;draw()}).catch(function(){el("update").textContent="Onlinepreisdaten derzeit nicht erreichbar.";draw()});
+fetch("./kommende-angebote.json?ts="+Date.now(),{cache:"no-store"}).then(function(r){if(!r.ok)throw Error("HTTP "+r.status);return r.json()}).then(function(j){upcoming=j;draw()}).catch(function(){draw()});
 if("serviceWorker" in navigator){navigator.serviceWorker.register("./sw.js").catch(function(){})}
 })();
 </script></body></html>
