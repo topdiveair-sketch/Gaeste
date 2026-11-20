@@ -3,19 +3,9 @@
     {
       "id": "edelweiss",
       "name": "Edelweiss Hefetrüb",
-      "unit": "6 × 0,5 Liter",
-      "sources": [
-        {
-          "shop": "SPAR",
-          "url": "https://www.spar.at/produktwelt/edelweiss-hefe-hell-weizenbier-hefetrueb-6-x-0-5l-p7946769",
-          "marker": "Weizenbier Hefetrüb Original 6x0,5l"
-        },
-        {
-          "shop": "BILLA",
-          "url": "https://shop.billa.at/produkte/edelweiss-hefetrueb-6x05l-00405598",
-          "marker": "Edelweiss Hefetrüb 6x0,5l"
-        }
-      ]
+      "unit": "6 × 0,5 l",
+      "query": "edelweiss",
+      "pack_regex": "(6\\s*[x×]\\s*0[,.]?5|6er|6\\s*flasch|3\\s*l)"
     }
   ]
 }
