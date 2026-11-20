@@ -37,10 +37,8 @@ try:
             if store not in ("SPAR","BILLA","HOFER","PENNY","LIDL","MPREIS","DM"):continue
             history=item.get("priceHistory",[])
             latest=history[0].get("date") if isinstance(history,list) and history and isinstance(history[0],dict) else None
-            if not latest:continue
-            try:age=(now.date()-dt.date.fromisoformat(str(latest)[:10])).days
-            except ValueError:continue
-            if not 0<=age<=2:continue
+            # Price history dates mark price changes, not last product verification.
+            # The source dataset is downloaded afresh at each run; preserve history date only as metadata.
             result["items"].append({"product_id":product["id"],"shop":store,"name":name,"price":price,"unit":unit,"quantity":quantity,"checked_at":now.isoformat(timespec="seconds"),"source_date":latest,"status":"online_price","source_url":URL})
     result["items"].sort(key=lambda x:(x["product_id"],x["price"]))
     result["status"]="ok"
