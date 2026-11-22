@@ -1,73 +1,73 @@
 {
-  "editionDate": "2026-11-21",
-  "editionLabel": "Samstag, 21. November 2026",
-  "intro": "Grüß euch, ich bin Pia! Heute sind zehn Heurige am nördlichen Donauufer bestätigt geöffnet. In Aggsbach Markt laufen die Kinder- und Erwachsenenbewerbe des Mario-Kart-Turniers; Adventmärkte gibt es in Dürnstein, Weißenkirchen und Emmersdorf. Dazu kommen Gansl Essen in Pömling und Adventkranzbinden in Maria Laach. Die Wachaubahn fährt im Adventverkehr, während die Rollfähre Spitz samstags im Winter keinen Betrieb hat. Die angekündigten Sperrzeiträume am Glatzberg und bei Hauptstraße 2 in Spitz endeten gestern; eine ausdrückliche Freigabemeldung ist online noch nicht veröffentlicht. Das Wetter wird ausschließlich live in der Gäste-App geladen.",
+  "editionDate": "2026-11-22",
+  "editionLabel": "Sonntag, 22. November 2026",
+  "intro": "Grüß euch, ich bin Pia! Heute sind neun Heurige am nördlichen Donauufer bestätigt geöffnet; bei vier davon ist heute der letzte veröffentlichte Ausstecktag. Sieben bestätigte Sonntagsangebote reichen vom WachauerADVENT in Dürnstein und den Adventmärkten in Weißenkirchen und Emmersdorf über Gansl Essen, Fiddle Connection und Weihnachtsbrunch bis zum Konzert der Wachauer Kracherl. Die Wachaubahn fährt heute im Adventverkehr zwischen Krems und Spitz; für Emmersdorf, Aggsbach Markt und Willendorf ist die Buslinie 715 die durchgehende Verbindung. Die Fähren verkehren sonntags im Winter nicht. Morgen ist die Rote Torgasse in Spitz von 07:00 bis 13:00 Uhr gesperrt. Das Wetter wird ausschließlich live in der Gäste-App geladen.",
   "important": [
     {
-      "title": "Heute zehn bestätigte Heurige",
-      "text": "Geöffnet sind Ferdl Denk in Weißenkirchen und Alter Klosterkeller in Dürnstein ab 11:00 beziehungsweise 11:30 Uhr, Weixelbaum, Enothek Eigl, Werner Großinger und FLOTT ab 15:00 Uhr sowie Schlosserei Luberegg, Höllmüller in Joching, Schmelz in Joching und Leonhartsberger in Oberloiben ab 16:00 Uhr.",
+      "title": "Heute neun bestätigte Heurige",
+      "text": "Geöffnet sind Ferdl Denk in Weißenkirchen ab 11:00 Uhr, Alter Klosterkeller in Dürnstein ab 11:30 Uhr, Werner Großinger in Spitz ab 13:00 Uhr, Weixelbaum, Enothek Eigl und FLOTT ab 15:00 Uhr sowie Höllmüller in Joching, Schmelz in Joching und Leonhartsberger in Oberloiben ab 16:00 Uhr. Bei Großinger, FLOTT, Höllmüller und Leonhartsberger ist heute der letzte veröffentlichte Ausstecktag.",
       "source": "https://heurigenkalender.niederoesterreich.at/Home/Grid",
-      "sourceLabel": "Heurigenkalender Niederösterreich und Betriebsseiten, geprüft 21. November 2026"
+      "sourceLabel": "Heurigenkalender Niederösterreich und Betriebsseiten, geprüft 22. November 2026"
     },
     {
-      "title": "Heute sechs bestätigte Veranstaltungsangebote",
-      "text": "In Aggsbach Markt laufen die Mario-Kart-Turniere von 10:00 bis 17:00 Uhr für Kinder und von 17:00 bis 23:55 Uhr für Erwachsene. In Dürnstein ist der WachauerADVENT von 11:00 bis 21:00 Uhr geöffnet; Gansl Essen in Pömling von 11:00 bis 18:00 Uhr. Um 14:00 Uhr beginnen Adventkranzbinden in Maria Laach sowie die Adventmärkte in Weißenkirchen und Emmersdorf.",
-      "source": "https://www.aggsbach.gv.at/2_Aggsbacher_Mario-Kart-Turnier",
-      "sourceLabel": "Gemeinden Aggsbach, Emmersdorf und Weißenkirchen sowie WachauerADVENT, geprüft 21. November 2026"
+      "title": "Heute sieben bestätigte Veranstaltungsangebote",
+      "text": "Adventmarkt Weißenkirchen 10:00–18:00 Uhr, Pfarr-Adventmarkt Emmersdorf 10:15–16:00 Uhr, WachauerADVENT Dürnstein 11:00–21:00 Uhr, Gansl Essen Pömling 11:00–18:00 Uhr, Fiddle Connection 11:00–13:00 Uhr, Weihnachtsbrunch Schloss Luberegg 11:00–14:00 Uhr und Konzert der Wachauer Kracherl in Mühldorf um 16:00 Uhr.",
+      "source": "https://wachauer-advent.eu/besucher/",
+      "sourceLabel": "Offizielle Veranstaltungsseiten Dürnstein, Weißenkirchen und Emmersdorf, geprüft 22. November 2026"
     },
     {
-      "title": "Wachaubahn fährt heute im Adventverkehr",
-      "text": "Die Adventzüge verkehren heute zwischen Krems, Spitz und Emmersdorf; samstags gibt es zusätzliche Züge im Abschnitt Krems–Spitz. Aggsbach Markt, Willendorf, Wösendorf-Joching und Unterloiben sind Bedarfshalte.",
+      "title": "Wachaubahn heute zwischen Krems und Spitz",
+      "text": "Die regulären Adventzüge verkehren heute auf dem Abschnitt Krems–Spitz. Die im Fahrplan zusätzlich ausgewiesenen Zwischenzüge sind nur samstags und fahren heute nicht. Für Emmersdorf, Aggsbach Markt und Willendorf die Buslinie 715 beziehungsweise die aktuelle VOR-Auskunft nutzen.",
       "source": "https://www.wachaubahn.at/fahrplan-advent",
-      "sourceLabel": "NÖVOG/Wachaubahn, geprüft 21. November 2026"
+      "sourceLabel": "NÖVOG/Wachaubahn, geprüft 22. November 2026"
     },
     {
       "title": "Fähren heute nicht als Verbindung einplanen",
-      "text": "Spitz–Arnsdorf hat von November bis Februar samstags, sonn- und feiertags keinen Betrieb. Weißenkirchen–St. Lorenz und Dürnstein–Rossatz befinden sich ebenfalls in Winterpause.",
-      "source": "https://www.spitz-wachau.at/Rollfaehre_Spitz-Arnsdorf_14",
-      "sourceLabel": "Marktgemeinde Spitz und veröffentlichte Fährzeiten 2026, geprüft 21. November 2026"
+      "text": "Spitz–Arnsdorf hat von November bis Februar an Sonn- und Feiertagen keinen Betrieb. Weißenkirchen–St. Lorenz ist bis 18. März 2027 eingestellt; Dürnstein–Rossatz befindet sich ebenfalls in Winterpause.",
+      "source": "https://www.spitz-wachau.at/system/web/getDocument.ashx?cts=1775168936&fileid=3655568",
+      "sourceLabel": "Offizielle Fährzeiten Spitz und Weißenkirchen, geprüft 22. November 2026"
     },
     {
-      "title": "Spitz: Rote Torgasse am 23. November gesperrt",
+      "title": "Morgen: Rote Torgasse in Spitz gesperrt",
       "text": "Am Montag, 23. November, gilt von 07:00 bis 13:00 Uhr ein Fahrverbot im Bereich Rote Torgasse 15 bis 19. Eine örtliche Umleitung wird ausgeschildert; im gesperrten Bereich besteht keine Umkehrmöglichkeit.",
       "source": "https://www.spitz-wachau.at/Verordnung_STVO-11_2026",
-      "sourceLabel": "Amtliche Verordnung STVO-11/2026 der Marktgemeinde Spitz, geprüft 21. November 2026"
+      "sourceLabel": "Amtliche Verordnung STVO-11/2026 der Marktgemeinde Spitz, geprüft 22. November 2026"
     },
     {
-      "title": "Glatzberg: veröffentlichter Sperrzeitraum beendet",
-      "text": "Die offizielle Meldung befristete die Vollsperre bis gestern, 20. November. Eine Verlängerung ist nicht veröffentlicht, eine ausdrückliche Freigabemeldung aber ebenfalls noch nicht vorhanden. Vor einer Begehung aktuelle Beschilderung vor Ort beachten.",
-      "source": "https://www.aggsbach.gv.at/system/web/news.aspx?detailonr=228054930-1900&menuonr=222921981",
-      "sourceLabel": "Marktgemeinde Aggsbach, geprüft 21. November 2026"
+      "title": "Glatzberg: Sperrstatus weiterhin nicht eindeutig",
+      "text": "Die Aggsbacher Meldung befristete das forstliche Sperrgebiet bis voraussichtlich 20. November; die aktuelle Donau-Routenseite warnt weiterhin ausdrücklich vor dem Betreten. Bis zu einer eindeutigen Freigabe den Bereich meiden und der Beschilderung folgen.",
+      "source": "https://www.donau.com/touren/umleitung",
+      "sourceLabel": "Donau Niederösterreich und Marktgemeinde Aggsbach, widersprüchlicher Stand, geprüft 22. November 2026"
     },
     {
-      "title": "Spitz Hauptstraße 2: befristete Maßnahme beendet",
+      "title": "Spitz Hauptstraße 2: keine Verlängerung veröffentlicht",
       "text": "Die Verordnung zur halbseitigen Sperre nannte den 20. November als letzten Arbeitstag. Eine Verlängerung ist online nicht veröffentlicht; bis zur eindeutigen Freigabe die örtliche Beschilderung beachten.",
       "source": "https://www.spitz-wachau.at/Verordnung_STVO-10_2026",
-      "sourceLabel": "Amtliche Verordnung STVO-10/2026 der Marktgemeinde Spitz, geprüft 21. November 2026"
+      "sourceLabel": "Amtliche Verordnung STVO-10/2026 der Marktgemeinde Spitz, geprüft 22. November 2026"
     },
     {
       "title": "DDSG-Wachau-Linie heute nicht als Regelverbindung einplanen",
       "text": "Die tägliche Wachau-Liniensaison endete am 1. November, die spätere Wochenendphase am 15. November. Heute ist keine reguläre regionale DDSG-Linienverbindung zwischen Krems und Melk ausgewiesen.",
       "source": "https://ddsg-blue-danube.at/wp-content/uploads/2026/01/YAY_DDSG_Fahrplan_2026_Ganzjahres_Linie_WEB2.pdf",
-      "sourceLabel": "DDSG Blue Danube, Fahrplan 2026, geprüft 21. November 2026"
+      "sourceLabel": "DDSG Blue Danube, Fahrplan 2026, geprüft 22. November 2026"
     },
     {
-      "title": "Welterbesteig Etappe 3: Quellen widersprechen sich",
-      "text": "Donau Niederösterreich führt die Totalsperre zwischen St. Michael und Spitz samt Umleitung weiterhin als aktuell; der Spitzer Gemeindeeintrag ist als nicht mehr aktuell markiert. Bis zur eindeutigen Klärung der aktuellen Beschilderung und den Hinweisen vor Ort folgen.",
+      "title": "Welterbesteig Etappe 3 bleibt gesperrt",
+      "text": "Donau Niederösterreich führt die Totalsperre zwischen St. Michael und Spitz weiterhin als aktuell. Die beschilderte Umleitung verläuft über Wösendorf und St. Michael weiter entlang der Donau nach Spitz; Forst- und Baustellenbereiche nicht betreten.",
       "source": "https://www.donau.com/touren/welterbesteig-wachau-umleitung-03-weissenkirchen-spitz",
-      "sourceLabel": "Donau Niederösterreich und Marktgemeinde Spitz, widersprüchlicher Stand, geprüft 21. November 2026"
+      "sourceLabel": "Donau Niederösterreich, geprüft 22. November 2026"
     },
     {
       "title": "Donauradweg Weißenkirchen: Status der angekündigten Sperre offen",
       "text": "Die Etappenbeschreibung verweist auf eine ab 27. Oktober vorgesehene Totalsperre der Weißenkirchner Ortsmitte; deren tatsächlicher Vollzug ist online nicht abschließend bestätigt. Beschilderung vor Ort beachten.",
       "source": "https://www.donau.com/touren/donauradweg-etappe-5-nordufer-emmersdorf-krems",
-      "sourceLabel": "Donau Niederösterreich, geprüft 21. November 2026"
+      "sourceLabel": "Donau Niederösterreich, geprüft 22. November 2026"
     },
     {
       "title": "Aggsbach/B3: keine neue allgemeine Vollsperre bestätigt",
-      "text": "Auf der veröffentlichten Aggsbacher Amtstafel ist keine neue allgemeine Vollsperre der B3 im Zielabschnitt ausgewiesen. Dauernde Verkehrsmaßnahmen und die Spitzer Ortsmaßnahmen bleiben zu beachten.",
+      "text": "Auf den veröffentlichten Amtstafeln ist keine neue allgemeine Vollsperre der B3 im Zielabschnitt ausgewiesen. Dauernde Verkehrsmaßnahmen und örtliche Beschilderung bleiben zu beachten.",
       "source": "https://www.aggsbach.gv.at/Buergerservice/Aktuelles_Termine/Amtstafel",
-      "sourceLabel": "Amtstafeln Aggsbach und Spitz, geprüft 21. November 2026"
+      "sourceLabel": "Amtstafeln Aggsbach und Spitz, geprüft 22. November 2026"
     }
   ],
   "outdoor": [
@@ -86,27 +86,23 @@
       ]
     },
     {
-      "title": "Welterbesteig Etappe 7: Sperrzeitraum beendet, Freigabe nicht ausdrücklich bestätigt",
-      "text": "Die offizielle Glatzberg-Meldung galt bis gestern. Eine Verlängerung ist nicht veröffentlicht, eine ausdrückliche Freigabemeldung fehlt aber ebenfalls. Vor einer Begehung die aktuelle Beschilderung beachten; die Bachleiten-Forststraße nicht eigenmächtig als Ausweichroute nutzen.",
+      "title": "Welterbesteig Etappe 7: Glatzberg weiter meiden",
+      "text": "Die Aggsbacher Meldung nannte den 20. November als voraussichtliches Ende, die aktuelle Donau-Routenseite warnt aber weiterhin vor dem Betreten. Bis zu einer eindeutigen Freigabe der Beschilderung folgen und auch die Bachleiten-Forststraße nicht als Ausweichroute nutzen.",
       "links": [
+        {
+          "label": "Aktuelle Donau-Routenseite",
+          "url": "https://www.donau.com/touren/umleitung"
+        },
         {
           "label": "Aggsbacher Sperrhinweis",
           "url": "https://www.aggsbach.gv.at/system/web/news.aspx?detailonr=228054930-1900&menuonr=222921981"
-        },
-        {
-          "label": "Streckenhinweise",
-          "url": "https://www.donau.com/aktuelle-hinweise"
         }
       ]
     },
     {
-      "title": "Welterbesteig Etappe 3: widersprüchlicher Status",
-      "text": "Donau Niederösterreich veröffentlicht die Atzberg-Sperre zwischen St. Michael und Spitz samt beschilderter Umleitung weiterhin; die Gemeinde Spitz kennzeichnet ihren Eintrag als nicht mehr aktuell. Bis zur Klärung der Beschilderung und den Hinweisen vor Ort folgen.",
+      "title": "Welterbesteig Etappe 3: Totalsperre mit Umleitung",
+      "text": "Der Abschnitt St. Michael–Spitz und die Abzweigung zur Buschandlwand bleiben gesperrt. Der beschilderten Umleitung über Wösendorf, St. Michael und entlang der Donau nach Spitz folgen.",
       "links": [
-        {
-          "label": "Hinweis der Gemeinde Spitz",
-          "url": "https://www.spitz-wachau.at/system/web/news.aspx?detailonr=228056392-1915&gnr_search=-1&menuonr=223779125"
-        },
         {
           "label": "Umleitung Donau Niederösterreich",
           "url": "https://www.donau.com/touren/welterbesteig-wachau-umleitung-03-weissenkirchen-spitz"
@@ -124,8 +120,8 @@
       ]
     },
     {
-      "title": "Wachaubahn: Adventverkehr",
-      "text": "Die Adventzüge verkehren heute; samstags fahren zusätzliche Verbindungen zwischen Krems und Spitz. Aggsbach Markt, Willendorf, Wösendorf-Joching und Unterloiben sind Bedarfshalte.",
+      "title": "Wachaubahn: Adventverkehr Krems–Spitz",
+      "text": "Die regulären Adventzüge verkehren heute zwischen Krems und Spitz. Die zusätzlichen Zwischenzüge sind laut Fahrplan nur samstags und fahren heute nicht. Wösendorf-Joching und Unterloiben sind Bedarfshalte.",
       "links": [
         {
           "label": "Adventfahrplan Wachaubahn",
@@ -139,7 +135,7 @@
     },
     {
       "title": "Bus 715",
-      "text": "Die Linie 715 verbindet Melk und Krems am nördlichen Donauufer laut VOR im Stundentakt. Konkrete Abfahrten und Anschlüsse im VOR-Routenplaner prüfen.",
+      "text": "Die Linie 715 verbindet Melk und Krems am nördlichen Donauufer laut VOR im Stundentakt. Für Emmersdorf, Aggsbach Markt und Willendorf ist sie heute die durchgehende Verbindung; konkrete Abfahrten im VOR-Routenplaner prüfen.",
       "links": [
         {
           "label": "Mobil in der Wachau",
@@ -153,7 +149,7 @@
     },
     {
       "title": "Fähren",
-      "text": "Spitz–Arnsdorf hat im Winter samstags, sonn- und feiertags keinen Betrieb. Weißenkirchen–St. Lorenz und Dürnstein–Rossatz sind ebenfalls in Winterpause.",
+      "text": "Spitz–Arnsdorf hat im Winter an Sonn- und Feiertagen keinen Betrieb. Weißenkirchen–St. Lorenz ist bis 18. März 2027 eingestellt; Dürnstein–Rossatz befindet sich ebenfalls in Winterpause.",
       "links": [
         {
           "label": "Rollfähre Spitz",
@@ -181,7 +177,7 @@
     },
     {
       "title": "Spitz Hauptstraße 2: keine Verlängerung veröffentlicht",
-      "text": "Die angekündigte halbseitige Sperre endete gestern. Eine Verlängerung ist online nicht veröffentlicht; bis zur eindeutigen Freigabe die örtliche Beschilderung beachten.",
+      "text": "Die angekündigte halbseitige Sperre endete laut Verordnung am 20. November. Eine Verlängerung ist online nicht veröffentlicht; bis zur eindeutigen Freigabe die örtliche Beschilderung beachten.",
       "links": [
         {
           "label": "Amtliche Verordnung STVO-10/2026",
@@ -190,8 +186,8 @@
       ]
     },
     {
-      "title": "Spitz: Rote Torgasse am 23. November gesperrt",
-      "text": "Von 07:00 bis 13:00 Uhr gilt im Bereich Hausnummer 15 bis 19 ein Fahrverbot. Eine örtliche Umleitung wird ausgeschildert; im gesperrten Abschnitt besteht keine Umkehrmöglichkeit.",
+      "title": "Spitz: Rote Torgasse morgen gesperrt",
+      "text": "Am Montag, 23. November, gilt von 07:00 bis 13:00 Uhr im Bereich Hausnummer 15 bis 19 ein Fahrverbot. Eine örtliche Umleitung wird ausgeschildert; im gesperrten Abschnitt besteht keine Umkehrmöglichkeit.",
       "links": [
         {
           "label": "Amtliche Verordnung STVO-11/2026",
@@ -223,38 +219,24 @@
       "url": "https://wachauer-advent.eu/besucher/"
     },
     {
-      "date": "21.11.2026, Kinder 10:00–17:00 Uhr; Erwachsene 17:00–23:55 Uhr",
-      "place": "Aggsbach Markt, Venussaal",
-      "title": "Aggsbacher Mario-Kart-Turniere",
-      "note": "Kinder- und Erwachsenenturnier sind jeweils als planmäßig bestätigt; Teilnahme- und Anmeldebedingungen auf den Veranstaltungsseiten prüfen.",
-      "url": "https://www.aggsbach.gv.at/2_Aggsbacher_Mario-Kart-Turnier"
-    },
-    {
       "date": "21.–22.11.2026, jeweils 11:00–18:00 Uhr",
       "place": "Pömling bei Emmersdorf, Bauer und Wirt Langthaler",
       "title": "Gansl Essen",
-      "note": "Heute und morgen jeweils 11:00–18:00 Uhr; laut offiziellem Veranstaltungskalender planmäßig bestätigt, Reservierung empfohlen.",
+      "note": "Heute von 11:00 bis 18:00 Uhr; laut offiziellem Veranstaltungskalender planmäßig bestätigt, Reservierung empfohlen.",
       "url": "https://www.emmersdorf.at/Gansl_Essen_8"
-    },
-    {
-      "date": "21.11.2026, 14:00–17:00 Uhr",
-      "place": "Maria Laach am Jauerling, Veranstaltungszentrum Kerbler Haus",
-      "title": "Adventkranzbinden",
-      "note": "Bestätigter Termin im unmittelbar angrenzenden Jauerlinggebiet; kostenpflichtig und mit Anmeldung beim Veranstalter.",
-      "url": "https://www.emmersdorf.at/Adventkranzbinden_1"
     },
     {
       "date": "21.11.2026, 14:00–20:00 Uhr; 22.11.2026, 10:00–18:00 Uhr",
       "place": "Weißenkirchen, Teisenhoferhof",
       "title": "Adventmarkt Weißenkirchen",
-      "note": "Handwerkskunst und Kulinarik im Teisenhoferhof; beide Tage sind offiziell bestätigt, der Eintritt ist frei.",
+      "note": "Heute von 10:00 bis 18:00 Uhr: Handwerkskunst und Kulinarik im Teisenhoferhof; offiziell bestätigt, Eintritt frei.",
       "url": "https://advent.niederoesterreich.at/public/48087/adventmarkt-weienkirchen"
     },
     {
       "date": "21.11.2026, 14:00–18:30 Uhr; 22.11.2026, 10:15–16:00 Uhr",
       "place": "Emmersdorf, Pfarrhof",
       "title": "Adventmarkt der Pfarre Emmersdorf",
-      "note": "Beide Tage sind im offiziellen Emmersdorfer Veranstaltungskalender als planmäßig bestätigt.",
+      "note": "Heute von 10:15 bis 16:00 Uhr im Pfarrhof; auf der offiziellen Gemeindeseite als planmäßig bestätigt.",
       "url": "https://www.emmersdorf.at/Adventmarkt_2"
     },
     {
@@ -330,45 +312,38 @@
       "url": "https://www.alter-klosterkeller.at/"
     },
     {
+      "name": "Weingut Werner Großinger",
+      "place": "Spitz",
+      "period": "04.–22.11.2026",
+      "hours": "Heute, letzter Ausstecktag, ab 13:00 Uhr",
+      "url": "https://heurigenkalender.niederoesterreich.at/156619/weingut-werner-groinger"
+    },
+    {
       "name": "Heuriger Familie Weixelbaum",
       "place": "Weißenkirchen",
-      "period": "20.–29.11.2026",
-      "hours": "Heute ab 15:00 Uhr",
+      "period": "heute in den offiziellen Kalendern als geöffnet geführt",
+      "hours": "Heute ab 15:00 Uhr; veröffentlichte Enddaten widersprechen sich",
       "url": "https://heurigenkalender.niederoesterreich.at/30965/heuriger-familie-weixelbaum"
     },
     {
       "name": "Heuriger Enothek Eigl",
       "place": "Wösendorf",
-      "period": "heute in den offiziellen Kalendern als geöffnet geführt",
-      "hours": "Heute ab 15:00 Uhr; veröffentlichte Enddaten widersprechen sich",
-      "url": "https://heurigenkalender.niederoesterreich.at/30943"
-    },
-    {
-      "name": "Weingut Werner Großinger",
-      "place": "Spitz",
-      "period": "04.–22.11.2026",
+      "period": "19.–29.11.2026 laut Betriebsdetail; Gemeindeliste nennt ein abweichendes Enddatum",
       "hours": "Heute ab 15:00 Uhr",
-      "url": "https://heurigenkalender.niederoesterreich.at/156619/heuriger-werner-groinger"
+      "url": "https://heurigenkalender.niederoesterreich.at/30943/heuriger-enothek-eigl"
     },
     {
       "name": "Weingut Florian und Sabine Höllmüller „FLOTT“",
       "place": "Spitz",
       "period": "13.–22.11.2026",
-      "hours": "Heute 15:00–23:00 Uhr",
+      "hours": "Heute, letzter Ausstecktag, 15:00–23:00 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/156935"
-    },
-    {
-      "name": "Die Schlosserei – Heuriger | Bar",
-      "place": "Luberegg bei Emmersdorf",
-      "period": "13.10.–20.12.2026 mit einzelnen Ruhetagen",
-      "hours": "Heute 16:00–21:00 Uhr Küchenbestellschluss",
-      "url": "https://www.luberegg.at/oeffnungszeiten/"
     },
     {
       "name": "Weingut Höllmüller",
       "place": "Joching",
       "period": "14.–22.11.2026",
-      "hours": "Heute ab 16:00 Uhr",
+      "hours": "Heute, letzter Ausstecktag, ab 16:00 Uhr",
       "url": "https://heurigenkalender.niederoesterreich.at/30938/weingut-hllmller"
     },
     {
@@ -382,8 +357,8 @@
       "name": "Heuriger Leonhartsberger",
       "place": "Oberloiben, Dürnstein",
       "period": "19.–22.11.2026",
-      "hours": "Heute ab 16:00 Uhr",
-      "url": "https://veranstaltungen.niederoesterreich.at/31391/heuriger-leonhartsberger"
+      "hours": "Heute, letzter Ausstecktag, ab 16:00 Uhr",
+      "url": "https://heurigenkalender.niederoesterreich.at/31391/heuriger-leonhartsberger"
     }
   ],
   "openingSoon": [
@@ -423,18 +398,18 @@
       "url": "https://heurigenkalender.niederoesterreich.at/31386/weingut-bhmer"
     }
   ],
-  "piaTip": "Pias Tipp: Heute verbindet die Wachaubahn gleich zwei Adventziele am Nordufer: den WachauerADVENT in Dürnstein von 11:00 bis 21:00 Uhr und den Adventmarkt im Teisenhoferhof Weißenkirchen von 14:00 bis 20:00 Uhr. Dürnstein-Oberloiben und Weißenkirchen sind reguläre Halte; für Wösendorf-Joching rechtzeitig den Haltewunschknopf drücken.",
+  "piaTip": "Pias Tipp: Mit der Wachaubahn lassen sich heute der WachauerADVENT in Dürnstein von 11:00 bis 21:00 Uhr und der Adventmarkt im Teisenhoferhof Weißenkirchen von 10:00 bis 18:00 Uhr verbinden. Die Bahn fährt sonntags im Advent zwischen Krems und Spitz; für Emmersdorf, Aggsbach Markt und Willendorf ist heute die Buslinie 715 die passende Nordufer-Verbindung.",
   "goodToKnow": [
-    "Heute sind zehn Heurige bestätigt geöffnet; Amon-Ottmann ist nach dem gestrigen letzten Ausstecktag entfernt.",
-    "In Aggsbach Markt finden heute das Kinderturnier von 10:00 bis 17:00 Uhr und das Erwachsenenturnier von 17:00 bis 23:55 Uhr statt.",
-    "Die Adventmärkte in Dürnstein, Weißenkirchen und Emmersdorf sind heute geöffnet.",
-    "Die Wachaubahn fährt heute im Adventverkehr; samstags gibt es zusätzliche Züge zwischen Krems und Spitz.",
-    "Spitz–Arnsdorf hat im Winter samstags keinen Fährbetrieb; Weißenkirchen–St. Lorenz und Dürnstein–Rossatz sind ebenfalls in Winterpause.",
-    "Die Linie 715 verbindet Melk und Krems am nördlichen Donauufer laut VOR im Stundentakt.",
-    "Die veröffentlichten Sperrzeiträume am Glatzberg und bei Hauptstraße 2 endeten gestern. Verlängerungen sind nicht veröffentlicht, ausdrückliche Freigabemeldungen fehlen aber noch; Beschilderung beachten.",
+    "Heute sind neun Heurige bestätigt geöffnet; Die Schlosserei in Luberegg ist wegen des ausdrücklich veröffentlichten Ruhetags am 22. November nicht enthalten.",
+    "Bei Werner Großinger, FLOTT, Höllmüller in Joching und Leonhartsberger ist heute der letzte veröffentlichte Ausstecktag.",
+    "Heute gibt es sieben bestätigte Veranstaltungsangebote; die beiden ausschließlich samstäglichen Termine wurden entfernt.",
+    "Die Wachaubahn fährt heute im Adventverkehr zwischen Krems und Spitz. Die zusätzlichen Zwischenzüge verkehren nur samstags.",
+    "Für Emmersdorf, Aggsbach Markt und Willendorf ist die Buslinie 715 heute die durchgehende Nordufer-Verbindung.",
+    "Spitz–Arnsdorf hat im Winter sonntags keinen Fährbetrieb; Weißenkirchen–St. Lorenz und Dürnstein–Rossatz befinden sich ebenfalls in Winterpause.",
     "Am Montag, 23. November, ist die Rote Torgasse in Spitz von 07:00 bis 13:00 Uhr gesperrt; eine örtliche Umleitung wird ausgeschildert.",
+    "Am Glatzberg ist der veröffentlichte Endtermin verstrichen, die aktuelle Donau-Routenseite warnt aber weiter vor dem Betreten. Bis zur eindeutigen Freigabe den Bereich meiden.",
     "Die reguläre DDSG-Wachau-Liniensaison ist beendet; heute nur konkret buchbare Sonderangebote berücksichtigen.",
-    "Bei Etappe 3 widersprechen sich der als nicht mehr aktuell markierte Spitzer Eintrag und die weiterhin veröffentlichte Donau-Umleitung; der aktuellen Beschilderung folgen.",
+    "Welterbesteig Etappe 3 bleibt zwischen St. Michael und Spitz gesperrt; der beschilderten Umleitung über Wösendorf und entlang der Donau folgen.",
     "Beim Donauradweg ist der Vollzug der ab 27. Oktober angekündigten Sperre der Weißenkirchner Ortsmitte online nicht abschließend bestätigt; Beschilderung vor Ort beachten.",
     "Die Mountainbike-Strecken der MTB-Arena Jauerling-Wachau rund um Spitz befinden sich von November bis Ende März in Wintersperre.",
     "Keine neue allgemeine B3-Vollsperre im Zielabschnitt bestätigt; örtliche Beschilderung und dauernde Verkehrsmaßnahmen beachten."
