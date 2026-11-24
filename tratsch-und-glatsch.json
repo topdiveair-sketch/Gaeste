@@ -1,73 +1,79 @@
 {
-  "editionDate": "2026-11-23",
-  "editionLabel": "Montag, 23. November 2026",
-  "intro": "Grüß euch, ich bin Pia! Heute sind vier Heurige am nördlichen Donauufer bestätigt geöffnet. Am Abend gibt es Yoga in Aggsbach Markt, Emmersdorf und Dürnstein. In Spitz ist die Rote Torgasse heute von 07:00 bis 13:00 Uhr gesperrt; die örtliche Umleitung ist ausgeschildert. Die Wachaubahn fährt montags im Advent nicht, während die Rollfähre Spitz–Arnsdorf heute zu den werktäglichen Winterzeiten verkehrt. Für die durchgehende Fahrt am Nordufer bleibt die Buslinie 715 die wichtigste Verbindung. Das Wetter wird ausschließlich live in der Gäste-App geladen.",
+  "editionDate": "2026-11-24",
+  "editionLabel": "Dienstag, 24. November 2026",
+  "intro": "Grüß euch, ich bin Pia! Heute sind fünf Heurige am nördlichen Donauufer bestätigt geöffnet; die Schlosserei in Luberegg ist nach dem gestrigen Ruhetag wieder dabei. In Emmersdorf lädt die Naturparkmittelschule von 08:00 bis 11:45 Uhr zum Tag der offenen Tür. Die Wachaubahn fährt dienstags im Advent nicht, während die Rollfähre Spitz–Arnsdorf zu den werktäglichen Winterzeiten verkehrt. Wichtig für morgen: Die Sperre der Roten Torgasse wurde amtlich auf Mittwoch, 25. November, von 07:00 bis 13:00 Uhr verschoben. Außerdem bleibt der Güterweg Weingarten in Spitz bis 26. November voll gesperrt. Das Wetter wird ausschließlich live in der Gäste-App geladen.",
   "important": [
     {
-      "title": "Heute vier bestätigte Heurige",
-      "text": "Geöffnet sind der Alte Klosterkeller in Dürnstein täglich ab 11:30 Uhr, Weixelbaum in Weißenkirchen und Enothek Eigl in Wösendorf ab 15:00 Uhr sowie Schmelz in Joching ab 16:00 Uhr. Die vier gestrigen Letzttage und der Wochenendbetrieb Ferdl Denk wurden entfernt; die Schlosserei in Luberegg hat heute ausdrücklich Ruhetag.",
+      "title": "Heute fünf bestätigte Heurige",
+      "text": "Geöffnet sind der Alte Klosterkeller in Dürnstein täglich ab 11:30 Uhr, Weixelbaum in Weißenkirchen und Enothek Eigl in Wösendorf ab 15:00 Uhr sowie Schmelz in Joching und die Schlosserei in Luberegg ab 16:00 Uhr. Die Schlosserei hat heute keinen der veröffentlichten Ruhetage.",
       "source": "https://heurigenkalender.niederoesterreich.at/Home/Grid",
-      "sourceLabel": "Heurigenkalender Niederösterreich und Betriebsseiten, geprüft 23. November 2026"
+      "sourceLabel": "Heurigenkalender Niederösterreich und Betriebsseiten, geprüft 24. November 2026"
     },
     {
-      "title": "Heute drei bestätigte Yoga-Termine",
-      "text": "Yoga mit Julia findet in Aggsbach Markt von 18:30 bis 19:30 Uhr statt. Der Montag-Kurs „Breathe & Flow“ in Emmersdorf läuft von 18:30 bis 20:00 Uhr und führt laut offizieller Seite eine Warteliste. Rückenfit mit Yoga beginnt in Dürnstein um 19:00 Uhr.",
-      "source": "https://www.aggsbach.gv.at/Yoga_fuer_Junggebliebene_mit_Julia_1",
-      "sourceLabel": "Gemeinden Aggsbach, Emmersdorf und Dürnstein, geprüft 23. November 2026"
+      "title": "Heute: Tag der offenen Tür in Emmersdorf",
+      "text": "Die Naturparkmittelschule Emmersdorf öffnet heute von 08:00 bis 11:45 Uhr. Der Termin ist auf der offiziellen Gemeindeseite als planmäßig bestätigt.",
+      "source": "https://www.emmersdorf.gv.at/Tag_der_offenen_Tuer_in_der_Naturparkmittelschule_Emmersdorf",
+      "sourceLabel": "Marktgemeinde Emmersdorf, geprüft 24. November 2026"
     },
     {
-      "title": "Heute: Rote Torgasse in Spitz gesperrt",
-      "text": "Von 07:00 bis 13:00 Uhr gilt im Bereich Rote Torgasse 15 bis 19 ein Fahrverbot. Eine örtliche Umleitung wird ausgeschildert; im gesperrten Bereich besteht keine Umkehrmöglichkeit.",
+      "title": "Rote Torgasse: Sperre auf morgen verschoben",
+      "text": "Die neue Verordnung STVO-12/2026 ersetzt die alte und legt die Sperre im Bereich Hausnummer 15 bis 19 nun auf Mittwoch, 25. November, von 07:00 bis 13:00 Uhr. Es gilt Fahrverbot, eine örtliche Umleitung wird ausgeschildert und im gesperrten Abschnitt besteht keine Umkehrmöglichkeit.",
+      "source": "https://www.spitz-wachau.at/system/web/GetDocument.ashx?cts=1794987568&fileid=3811981",
+      "sourceLabel": "Amtliche Verordnung STVO-12/2026 der Marktgemeinde Spitz, geprüft 24. November 2026"
+    },
+    {
+      "title": "Spitz: Güterweg Weingarten bis 26. November gesperrt",
+      "text": "Wegen Breitbandarbeiten besteht am Güterweg Weingarten, von der Landesstraße beim Sportplatz bis zum Bereich Weingartenweg 1, noch bis Donnerstag eine Totalsperre. Eine kleinräumige Umleitung ist ausgeschildert.",
       "source": "https://www.spitz-wachau.at/Verordnung_STVO-11_2026",
-      "sourceLabel": "Amtliche Verordnung STVO-11/2026 der Marktgemeinde Spitz, geprüft 23. November 2026"
+      "sourceLabel": "Amtliche Verordnung STVO-11/2026 der Marktgemeinde Spitz, geprüft 24. November 2026"
     },
     {
       "title": "Wachaubahn fährt heute nicht",
-      "text": "Der Adventfahrplan gilt von 20. November bis 13. Dezember nur freitags, samstags, sonntags sowie an Feier- und Fenstertagen. Montag, der 23. November, ist kein ausgewiesener Verkehrstag.",
+      "text": "Der Adventfahrplan gilt von 20. November bis 13. Dezember nur freitags, samstags, sonntags sowie an Feier- und Fenstertagen. Dienstag, der 24. November, ist kein ausgewiesener Verkehrstag.",
       "source": "https://www.wachaubahn.at/fahrplan-advent",
-      "sourceLabel": "NÖVOG/Wachaubahn, geprüft 23. November 2026"
+      "sourceLabel": "NÖVOG/Wachaubahn, geprüft 24. November 2026"
     },
     {
       "title": "Rollfähre Spitz–Arnsdorf fährt heute werktags",
       "text": "Im Winterfahrplan verkehrt die Rollfähre montags bis freitags von 06:15 bis 09:45 Uhr sowie von 13:30 bis 18:00 Uhr; die letzte Fahrt erfolgt jeweils 15 Minuten vor Betriebsschluss. Weißenkirchen–St. Lorenz und Dürnstein–Rossatz bleiben in Winterpause.",
       "source": "https://www.spitz-wachau.at/system/web/getDocument.ashx?cts=1775168936&fileid=3655568",
-      "sourceLabel": "Offizielle Fährzeiten 2026, geprüft 23. November 2026"
+      "sourceLabel": "Offizielle Fährzeiten 2026, geprüft 24. November 2026"
+    },
+    {
+      "title": "Glatzberg bleibt gesperrt – Umleitung über Seeber Rundweg",
+      "text": "Die aktuelle Donau-Routenseite führt die Wegsperre am Glatzberg weiterhin als aktiv. Die Umleitung der Etappe 7 verläuft ab Aggsbach Markt über den Seeber Rundweg; forstliches Sperrgebiet und Bachleiten-Forststraße nicht betreten.",
+      "source": "https://www.donau.com/touren/umleitung",
+      "sourceLabel": "Donau Niederösterreich, geprüft 24. November 2026"
     },
     {
       "title": "Bus 715 als durchgehende Nordufer-Verbindung",
       "text": "Die Linie 715 verbindet Melk und Krems über Emmersdorf, Aggsbach Markt, Spitz, Weißenkirchen und Dürnstein laut VOR im Stundentakt. Konkrete Abfahrten und Anschlüsse im VOR-Routenplaner prüfen.",
       "source": "https://www.vor.at/wachau",
-      "sourceLabel": "Verkehrsverbund Ost-Region, geprüft 23. November 2026"
-    },
-    {
-      "title": "Glatzberg: Sperrstatus weiterhin nicht eindeutig",
-      "text": "Die Aggsbacher Meldung befristete das forstliche Sperrgebiet bis voraussichtlich 20. November; die aktuelle Donau-Routenseite warnt weiterhin ausdrücklich vor dem Betreten. Bis zu einer eindeutigen Freigabe den Bereich meiden und der Beschilderung folgen.",
-      "source": "https://www.donau.com/touren/umleitung",
-      "sourceLabel": "Donau Niederösterreich und Marktgemeinde Aggsbach, widersprüchlicher Stand, geprüft 23. November 2026"
+      "sourceLabel": "Verkehrsverbund Ost-Region, geprüft 24. November 2026"
     },
     {
       "title": "DDSG-Wachau-Linie heute nicht als Regelverbindung einplanen",
       "text": "Die tägliche Wachau-Liniensaison endete am 1. November, die spätere Wochenendphase am 15. November. Heute ist keine reguläre regionale DDSG-Linienverbindung zwischen Krems und Melk ausgewiesen.",
       "source": "https://ddsg-blue-danube.at/wp-content/uploads/2026/01/YAY_DDSG_Fahrplan_2026_Ganzjahres_Linie_WEB2.pdf",
-      "sourceLabel": "DDSG Blue Danube, Fahrplan 2026, geprüft 23. November 2026"
+      "sourceLabel": "DDSG Blue Danube, Fahrplan 2026, geprüft 24. November 2026"
     },
     {
       "title": "Welterbesteig Etappe 3 bleibt gesperrt",
       "text": "Donau Niederösterreich führt die Totalsperre zwischen St. Michael und Spitz weiterhin als aktuell. Der beschilderten Umleitung über Wösendorf und St. Michael weiter entlang der Donau nach Spitz folgen; Forst- und Baustellenbereiche nicht betreten.",
       "source": "https://www.donau.com/touren/welterbesteig-wachau-umleitung-03-weissenkirchen-spitz",
-      "sourceLabel": "Donau Niederösterreich, geprüft 23. November 2026"
+      "sourceLabel": "Donau Niederösterreich, geprüft 24. November 2026"
     },
     {
       "title": "Donauradweg Weißenkirchen: Status der angekündigten Sperre offen",
       "text": "Die Etappenbeschreibung verweist auf eine ab 27. Oktober vorgesehene Totalsperre der Weißenkirchner Ortsmitte; deren tatsächlicher Vollzug ist online nicht abschließend bestätigt. Beschilderung vor Ort beachten.",
       "source": "https://www.donau.com/touren/donauradweg-etappe-5-nordufer-emmersdorf-krems",
-      "sourceLabel": "Donau Niederösterreich, geprüft 23. November 2026"
+      "sourceLabel": "Donau Niederösterreich, geprüft 24. November 2026"
     },
     {
       "title": "B3: keine neue allgemeine Vollsperre bestätigt",
       "text": "Auf den veröffentlichten Amtstafeln ist keine neue allgemeine Vollsperre der B3 im Zielabschnitt ausgewiesen. Dauernde Verkehrsmaßnahmen und örtliche Beschilderung bleiben zu beachten.",
       "source": "https://www.aggsbach.gv.at/Buergerservice/Aktuelles_Termine/Amtstafel",
-      "sourceLabel": "Amtstafeln Aggsbach und Spitz, geprüft 23. November 2026"
+      "sourceLabel": "Amtstafeln Aggsbach und Spitz, geprüft 24. November 2026"
     }
   ],
   "outdoor": [
@@ -86,15 +92,15 @@
       ]
     },
     {
-      "title": "Welterbesteig Etappe 7: Glatzberg weiter meiden",
-      "text": "Die Aggsbacher Meldung nannte den 20. November als voraussichtliches Ende, die aktuelle Donau-Routenseite warnt aber weiterhin vor dem Betreten. Bis zu einer eindeutigen Freigabe der Beschilderung folgen und die Bachleiten-Forststraße nicht als Ausweichroute nutzen.",
+      "title": "Welterbesteig Etappe 7: Glatzberg gesperrt",
+      "text": "Die aktuelle Donau-Routenseite führt die Sperre weiterhin als aktiv. Die beschilderte Umleitung verläuft ab Aggsbach Markt über den Seeber Rundweg; forstliches Sperrgebiet und die Bachleiten-Forststraße nicht betreten.",
       "links": [
         {
-          "label": "Aktuelle Donau-Routenseite",
+          "label": "Aktuelle Umleitung Etappe 7",
           "url": "https://www.donau.com/touren/umleitung"
         },
         {
-          "label": "Aggsbacher Sperrhinweis",
+          "label": "Aggsbacher Ursprungshinweis",
           "url": "https://www.aggsbach.gv.at/system/web/news.aspx?detailonr=228054930-1900&menuonr=222921981"
         }
       ]
@@ -121,7 +127,7 @@
     },
     {
       "title": "Wachaubahn: heute kein Verkehr",
-      "text": "Der Adventfahrplan gilt freitags, samstags, sonntags sowie an Feier- und Fenstertagen. Heute, Montag, verkehren keine Wachaubahn-Züge.",
+      "text": "Der Adventfahrplan gilt freitags, samstags, sonntags sowie an Feier- und Fenstertagen. Heute, Dienstag, verkehren keine Wachaubahn-Züge.",
       "links": [
         {
           "label": "Adventfahrplan Wachaubahn",
@@ -172,22 +178,22 @@
       ]
     },
     {
-      "title": "Spitz: Rote Torgasse heute gesperrt",
-      "text": "Von 07:00 bis 13:00 Uhr gilt im Bereich Hausnummer 15 bis 19 ein Fahrverbot. Eine örtliche Umleitung wird ausgeschildert; im gesperrten Abschnitt besteht keine Umkehrmöglichkeit.",
+      "title": "Spitz: Rote Torgasse morgen gesperrt",
+      "text": "Die neue Verordnung verschiebt die Sperre auf Mittwoch, 25. November, 07:00–13:00 Uhr. Im Bereich Hausnummer 15 bis 19 gilt Fahrverbot; die Umleitung wird ausgeschildert und es besteht keine Umkehrmöglichkeit.",
       "links": [
         {
-          "label": "Amtliche Verordnung STVO-11/2026",
-          "url": "https://www.spitz-wachau.at/Verordnung_STVO-11_2026"
+          "label": "Amtliche Verordnung STVO-12/2026",
+          "url": "https://www.spitz-wachau.at/system/web/GetDocument.ashx?cts=1794987568&fileid=3811981"
         }
       ]
     },
     {
-      "title": "Spitz Hauptstraße 2: keine Verlängerung veröffentlicht",
-      "text": "Die angekündigte halbseitige Sperre endete laut Verordnung am 20. November. Eine Verlängerung ist online nicht veröffentlicht; bis zur eindeutigen Freigabe die örtliche Beschilderung beachten.",
+      "title": "Spitz: Güterweg Weingarten bis 26. November voll gesperrt",
+      "text": "Die Vollsperre betrifft den Güterweg von der Landesstraße beim Sportplatz bis zum Bereich Weingartenweg 1. Eine kleinräumige Umleitung ist ausgeschildert.",
       "links": [
         {
-          "label": "Amtliche Verordnung STVO-10/2026",
-          "url": "https://www.spitz-wachau.at/Verordnung_STVO-10_2026"
+          "label": "Amtliche Verordnung STVO-11/2026",
+          "url": "https://www.spitz-wachau.at/Verordnung_STVO-11_2026"
         }
       ]
     },
@@ -208,31 +214,10 @@
   ],
   "events": [
     {
-      "date": "23.11.2026, 18:30–19:30 Uhr",
-      "place": "Aggsbach Markt, Venussaal",
-      "title": "Yoga mit Julia",
-      "note": "Der heutige Montagstermin ist auf der offiziellen Gemeindeseite als planmäßig bestätigt.",
-      "url": "https://www.aggsbach.gv.at/Yoga_fuer_Junggebliebene_mit_Julia_1"
-    },
-    {
-      "date": "23.11.2026, 18:30–20:00 Uhr",
-      "place": "Emmersdorf, Turnsaal der Neuen Mittelschule",
-      "title": "Yoga „Breathe & Flow“ – Montag-Kurs",
-      "note": "Der heutige Termin ist bestätigt; laut offizieller Seite besteht eine Warteliste.",
-      "url": "https://www.emmersdorf.gv.at/Yoga_Breathe_Flow_Montag-Kurs_6"
-    },
-    {
-      "date": "23.11.2026, 19:00 Uhr",
-      "place": "Dürnstein, Turnsaal der Volksschule",
-      "title": "Rückenfit mit Yoga",
-      "note": "Der wöchentliche Montagstermin ist auf der offiziellen Seite der Gesunden Gemeinde Dürnstein ausgewiesen.",
-      "url": "https://www.duernstein.at/buergerservice/gesunde-gemeinde"
-    },
-    {
       "date": "24.11.2026, 08:00–11:45 Uhr",
       "place": "Emmersdorf, Naturparkmittelschule",
       "title": "Tag der offenen Tür in der Naturparkmittelschule",
-      "note": "Der Termin ist auf der offiziellen Gemeindeseite als planmäßig bestätigt.",
+      "note": "Heute von 08:00 bis 11:45 Uhr; auf der offiziellen Gemeindeseite als planmäßig bestätigt.",
       "url": "https://www.emmersdorf.gv.at/Tag_der_offenen_Tuer_in_der_Naturparkmittelschule_Emmersdorf"
     },
     {
@@ -248,6 +233,27 @@
       "title": "KOBV – Behindertenverband – Stammtisch",
       "note": "Der Termin ist offiziell als planmäßig bestätigt; auch Nichtmitglieder sind willkommen.",
       "url": "https://www.emmersdorf.gv.at/KOBV_-_der_Behindertenverband_-_Stammtisch"
+    },
+    {
+      "date": "26.11.2026, 16:30–17:30 Uhr",
+      "place": "Emmersdorf, Neue Mittelschule",
+      "title": "Athletik-Training für Kinder von 7 bis 10 Jahren",
+      "note": "Der Donnerstagstermin ist auf der offiziellen Gemeindeseite als planmäßig bestätigt.",
+      "url": "https://www.emmersdorf.gv.at/Athletik_Training_fuer_Kinder_7-10_Jahre"
+    },
+    {
+      "date": "26.11.2026, 18:30–20:00 Uhr",
+      "place": "Emmersdorf, Turnsaal der Neuen Mittelschule",
+      "title": "Yoga „Breathe & Flow“ – Donnerstag-Kurs",
+      "note": "Der Termin ist bestätigt; laut offizieller Seite besteht eine Warteliste.",
+      "url": "https://www.emmersdorf.gv.at/Yoga_Breathe_Flow_Donnerstag-Kurs_4"
+    },
+    {
+      "date": "26.11.2026, 19:00–20:00 Uhr",
+      "place": "Emmersdorf, kleiner Turnsaal der Neuen Mittelschule",
+      "title": "Skigymnastik – Fit in die Skisaison",
+      "note": "Der Donnerstagstermin ist auf der offiziellen Gemeindeseite als planmäßig bestätigt.",
+      "url": "https://www.emmersdorf.gv.at/Skigymnastik_Fit_in_die_Skisaison_6"
     },
     {
       "date": "27.–29.11.2026, täglich 11:00–21:00 Uhr",
@@ -341,6 +347,13 @@
       "period": "20.–29.11.2026",
       "hours": "Heute ab 16:00 Uhr",
       "url": "https://schmelzweine.at/"
+    },
+    {
+      "name": "Die Schlosserei – Heuriger | Bar",
+      "place": "Luberegg bei Emmersdorf",
+      "period": "13.10.–20.12.2026 mit einzelnen Ruhetagen",
+      "hours": "Heute ab 16:00 Uhr; Küchenbestellschluss 21:00 Uhr",
+      "url": "https://www.luberegg.at/oeffnungszeiten/"
     }
   ],
   "openingSoon": [
@@ -380,16 +393,16 @@
       "url": "https://heurigenkalender.niederoesterreich.at/31386/weingut-bhmer"
     }
   ],
-  "piaTip": "Pias Tipp: Heute fährt die Wachaubahn nicht. Für Ausflüge am gesamten Nordufer ist die stündliche Buslinie 715 die verlässlichste Verbindung. Wer nach Spitz möchte, beachtet bis 13:00 Uhr die Sperre der Roten Torgasse; die Rollfähre Spitz–Arnsdorf fährt werktags am Morgen und wieder ab 13:30 Uhr.",
+  "piaTip": "Pias Tipp: Heute fährt die Wachaubahn nicht. Für Ausflüge am gesamten Nordufer ist die stündliche Buslinie 715 die verlässlichste Verbindung; Spitz–Arnsdorf fährt werktags am Morgen und wieder ab 13:30 Uhr. Wer morgen nach Spitz möchte, plant wegen der von 07:00 bis 13:00 Uhr verschobenen Sperre der Roten Torgasse etwas Reserve ein.",
   "goodToKnow": [
-    "Heute sind vier Heurige bestätigt geöffnet; vier gestrige Letzttage und der reine Wochenendbetrieb Ferdl Denk wurden entfernt.",
-    "Die Schlosserei in Luberegg ist am 23. November ausdrücklich geschlossen und deshalb nicht unter den heutigen Heurigen enthalten.",
-    "Heute Abend sind Yoga-Termine in Aggsbach Markt, Emmersdorf und Dürnstein bestätigt.",
-    "Die Rote Torgasse in Spitz ist heute von 07:00 bis 13:00 Uhr gesperrt; eine örtliche Umleitung wird ausgeschildert.",
+    "Heute sind fünf Heurige bestätigt geöffnet; die Schlosserei in Luberegg ist nach dem gestrigen Ruhetag wieder dabei.",
+    "Die Naturparkmittelschule Emmersdorf lädt heute von 08:00 bis 11:45 Uhr zum Tag der offenen Tür.",
+    "Die Sperre der Roten Torgasse wurde mit neuer Verordnung auf Mittwoch, 25. November, 07:00 bis 13:00 Uhr verschoben; die alte Verordnung tritt außer Kraft.",
+    "Der Güterweg Weingarten in Spitz bleibt wegen Breitbandarbeiten bis 26. November voll gesperrt; eine kleinräumige Umleitung ist ausgeschildert.",
     "Die Wachaubahn fährt heute nicht; der Adventfahrplan gilt freitags bis sonntags sowie an Feier- und Fenstertagen.",
     "Spitz–Arnsdorf fährt heute werktags von 06:15 bis 09:45 Uhr und 13:30 bis 18:00 Uhr; Weißenkirchen und Dürnstein bleiben in Winterpause.",
     "Die Linie 715 verbindet Melk und Krems am nördlichen Donauufer laut VOR im Stundentakt.",
-    "Am Glatzberg ist der veröffentlichte Endtermin verstrichen, die aktuelle Donau-Routenseite warnt aber weiter vor dem Betreten. Bis zur eindeutigen Freigabe den Bereich meiden.",
+    "Die aktuelle Donau-Routenseite führt die Glatzberg-Sperre weiterhin als aktiv; der Umleitung über den Seeber Rundweg folgen.",
     "Die reguläre DDSG-Wachau-Liniensaison ist beendet; heute nur konkret buchbare Sonderangebote berücksichtigen.",
     "Welterbesteig Etappe 3 bleibt zwischen St. Michael und Spitz gesperrt; der beschilderten Umleitung über Wösendorf und entlang der Donau folgen.",
     "Beim Donauradweg ist der Vollzug der ab 27. Oktober angekündigten Sperre der Weißenkirchner Ortsmitte online nicht abschließend bestätigt; Beschilderung vor Ort beachten.",
