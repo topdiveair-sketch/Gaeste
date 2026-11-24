@@ -570,6 +570,7 @@ function makeBook(b){
  }
  if(b.id==='45-jahre'){
    const about=makeEl('a','preview','Roman ansehen');about.href='45-jahre-die-rechnung-kommt-zum-schluss.html';card.append(about);
+   const print=makeEl('a','buy epubli-print-buy','Gedrucktes Buch bei epubli kaufen');print.href='https://www.epubli.com/shop/45-jahre-die-rechnung-kommt-zum-schluss-9783565825073';print.target='_blank';print.rel='noopener noreferrer';card.append(print);
  }
  if(b.id==='ungarn-2027-gebundene-ausgabe'){const order=makeEl('a','buy epubli-print-buy','Softcover bei epubli kaufen · 29,90 €');order.href='https://www.epubli.com/shop/ungarn-fuer-rentner-2027-9783565868742';order.target='_blank';order.rel='noopener noreferrer';card.append(order);}
  if(b.id==='griechenland-2027-reader'||b.id==='ungarn-2027'){
