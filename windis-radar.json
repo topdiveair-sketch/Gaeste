@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-24T17:58:44Z",
+  "generated_at": "2026-11-25T17:27:21Z",
   "source_generated_at": "2026-09-17T07:53:54",
   "source": "https://raw.githubusercontent.com/topdiveair-sketch/windi-chronik/main/data/windis-books.json",
   "books": [
@@ -112,7 +112,7 @@
   ],
   "offers": [
     {
-      "checked_at": "2026-11-24T17:58:44Z",
+      "checked_at": "2026-11-25T17:27:21Z",
       "url": "https://www.epubli.com/shop/vom-wind-spaniens-zum-zuhause-in-der-wachau-9783565263479",
       "dealer": "epubli",
       "status": "gelb",
@@ -124,7 +124,7 @@
       "isbn": "9783565263479"
     },
     {
-      "checked_at": "2026-11-24T17:58:46Z",
+      "checked_at": "2026-11-25T17:27:22Z",
       "url": "https://www.epubli.com/shop/das-geheimnis-am-bach-band-2-9783565232116",
       "dealer": "epubli",
       "status": "gruen",
@@ -138,7 +138,7 @@
       "isbn": "9783565232116"
     },
     {
-      "checked_at": "2026-11-24T17:58:48Z",
+      "checked_at": "2026-11-25T17:27:24Z",
       "url": "https://www.epubli.com/shop/der-marillenknoedel-fall-band-3-9783565241750",
       "dealer": "epubli",
       "status": "gruen",
@@ -152,7 +152,7 @@
       "isbn": "9783565241750"
     },
     {
-      "checked_at": "2026-11-24T17:58:50Z",
+      "checked_at": "2026-11-25T17:27:26Z",
       "url": "https://www.epubli.com",
       "dealer": "epubli",
       "status": "gelb",
@@ -166,7 +166,7 @@
       "isbn": "9783565243259"
     },
     {
-      "checked_at": "2026-11-24T17:58:50Z",
+      "checked_at": "2026-11-25T17:27:26Z",
       "url": "https://www.epubli.com/shop/abenteuer-mit-der-schnaufi-bahn-band-5-9783565244430",
       "dealer": "epubli",
       "status": "gruen",
@@ -180,7 +180,7 @@
       "isbn": "9783565244430"
     },
     {
-      "checked_at": "2026-11-24T17:58:52Z",
+      "checked_at": "2026-11-25T17:27:28Z",
       "url": "https://www.epubli.com/shop/achtung-gleise-band-6-9783565245024",
       "dealer": "epubli",
       "status": "gruen",
@@ -194,7 +194,7 @@
       "isbn": "9783565245024"
     },
     {
-      "checked_at": "2026-11-24T17:58:54Z",
+      "checked_at": "2026-11-25T17:27:30Z",
       "url": "https://www.epubli.com/shop/das-geheimnis-der-stadt-krems-band-7-9783565315086",
       "dealer": "epubli",
       "status": "gruen",
@@ -208,7 +208,7 @@
       "isbn": "9783565315086"
     },
     {
-      "checked_at": "2026-11-24T17:58:55Z",
+      "checked_at": "2026-11-25T17:27:31Z",
       "url": "https://www.epubli.com/shop/das-geheimnis-von-duernstein-band-8-9783565247875",
       "dealer": "epubli",
       "status": "gruen",
@@ -222,7 +222,7 @@
       "isbn": "9783565247875"
     },
     {
-      "checked_at": "2026-11-24T17:58:57Z",
+      "checked_at": "2026-11-25T17:27:33Z",
       "url": "https://www.epubli.com/shop/das-geheimnis-der-ruine-aggstein-band-9-9783565248179",
       "dealer": "epubli",
       "status": "gruen",
@@ -236,7 +236,7 @@
       "isbn": "9783565248179"
     },
     {
-      "checked_at": "2026-11-24T17:58:58Z",
+      "checked_at": "2026-11-25T17:27:35Z",
       "url": "https://www.epubli.com/shop/geheimnisse-des-dunkelsteinerwaldes-band-10-9783565248667",
       "dealer": "epubli",
       "status": "gruen",
@@ -250,7 +250,7 @@
       "isbn": "9783565248667"
     },
     {
-      "checked_at": "2026-11-24T17:59:00Z",
+      "checked_at": "2026-11-25T17:27:37Z",
       "url": "https://www.epubli.com/shop/dem-spatz-vom-rathausplatz-in-wien-band-11-9783565334537",
       "dealer": "epubli",
       "status": "gruen",
@@ -264,7 +264,7 @@
       "isbn": "9783565334537"
     },
     {
-      "checked_at": "2026-11-24T17:59:03Z",
+      "checked_at": "2026-11-25T17:27:38Z",
       "url": "https://www.galaxus.de/de/s12/product/die-wilden-wachauer-windis-stadzfuehrer-pressburg-bratislava-band-12-deutsch-johann-prem-2026-kinder-69158976",
       "dealer": "Galaxus.de",
       "status": "gelb",
@@ -276,7 +276,7 @@
       "isbn": "9783565334568"
     },
     {
-      "checked_at": "2026-11-24T17:59:15Z",
+      "checked_at": "2026-11-25T17:27:50Z",
       "url": "https://www.thalia.de/shop/home/artikeldetails/A1079294248",
       "dealer": "Thalia.de",
       "status": "gelb",
@@ -288,7 +288,7 @@
       "isbn": "9783565413058"
     },
     {
-      "checked_at": "2026-11-24T17:59:15Z",
+      "checked_at": "2026-11-25T17:27:50Z",
       "url": "https://www.epubli.com/shop/abenteuer-am-welterbesteig-band-17-9783565245147",
       "dealer": "epubli",
       "status": "gruen",
@@ -302,20 +302,44 @@
       "isbn": "9783565245147"
     },
     {
-      "checked_at": "2026-11-24T17:59:17Z",
+      "checked_at": "2026-11-25T17:27:52Z",
       "url": "https://www.amazon.de/dp/B0G2RYG75Y",
       "dealer": "Amazon.de",
-      "status": "gelb",
-      "reason": "Händler technisch nicht prüfbar",
-      "evidence": "HTTPError",
+      "status": "gruen",
+      "reason": "Produkttext und Kaufmöglichkeit gefunden",
+      "evidence": "Buchtitel/ISBN sowie Kaufsignal",
+      "final_url": "https://www.amazon.de/dp/B0G2RYG75Y",
+      "http_status": 200,
       "book_id": "9798274948708",
       "title": "Die wilden Windis auf dem Dürnsteiner Weihnachtsmarkt",
       "band": 15,
       "isbn": "9798274948708"
     }
   ],
-  "changes": [],
-  "history": [],
+  "changes": [
+    {
+      "at": "2026-11-25T17:27:21Z",
+      "kind": "wieder_bestätigt",
+      "book_id": "9798274948708",
+      "title": "Die wilden Windis auf dem Dürnsteiner Weihnachtsmarkt",
+      "dealer": "Amazon.de",
+      "before": "gelb",
+      "after": "gruen",
+      "url": "https://www.amazon.de/dp/B0G2RYG75Y"
+    }
+  ],
+  "history": [
+    {
+      "at": "2026-11-25T17:27:21Z",
+      "kind": "wieder_bestätigt",
+      "book_id": "9798274948708",
+      "title": "Die wilden Windis auf dem Dürnsteiner Weihnachtsmarkt",
+      "dealer": "Amazon.de",
+      "before": "gelb",
+      "after": "gruen",
+      "url": "https://www.amazon.de/dp/B0G2RYG75Y"
+    }
+  ],
   "discovery": {
     "Amazon.de": "https://www.amazon.de/s?k=",
     "Thalia.de": "https://www.thalia.de/suche?sq=",
