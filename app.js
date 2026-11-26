@@ -464,7 +464,7 @@ function setupFoodNotice(){
 Wir möchten für unseren Aufenthalt bei euch eine Jausenplatte vorbestellen.
 
 🥨 Eure Jausenplatte für 2 Personen
-💶 Gesamtpreis: 29,90 €
+💶 29,90 € pro Übernachtung für 2 Personen
 🕒 Ankunft: _____ Uhr
 👥 Personen: _____
 🧀 Wünsche/Unverträglichkeiten: _____
