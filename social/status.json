@@ -5,16 +5,16 @@
   "platforms": {
     "Facebook": {
       "metrics": {
-        "Follower": null,
+        "Follower (27.11.)": 33,
         "Impressionen": null,
-        "Beiträge": null,
-        "Interaktionen": null
+        "Beiträge (gemeldet)": 6,
+        "Interaktionen (gemeldet)": 13
       },
-      "note": "Quellwerte; Nullwerte und Vollständigkeit nicht unabhängig bestätigt."
+      "note": "Verbundene Facebook-Seite: Auswandererhilfe Ungarn. Summen aus vorhandenen Tageswerten, möglicherweise unvollständig."
     },
     "TikTok": {
       "metrics": {
-        "Follower": null,
+        "Follower (26.11.)": 3,
         "Videoaufrufe": null,
         "Interaktionen": null
       },
@@ -22,7 +22,7 @@
     },
     "YouTube": {
       "metrics": {
-        "Abonnenten": null,
+        "Abonnenten (27.11.)": 3,
         "Videoaufrufe": null
       },
       "note": "Quellwerte; Nullwerte und Vollständigkeit nicht unabhängig bestätigt."
@@ -34,7 +34,7 @@
         "Anrufe": 0,
         "Routen": 0
       },
-      "note": "Quellwerte; Nullwerte und Vollständigkeit nicht unabhängig bestätigt."
+      "note": "Nur Nullwerte am 28.11.; Wochenwerte nicht bestätigt."
     },
     "LinkedIn": {
       "metrics": {
@@ -44,7 +44,7 @@
         "Beiträge": 0,
         "Linkklicks": 0
       },
-      "note": "Quellwerte; Nullwerte und Vollständigkeit nicht unabhängig bestätigt."
+      "note": "Nur Nullwerte am 28.11.; Wochenwerte nicht bestätigt."
     }
   }
 }
