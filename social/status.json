@@ -1,0 +1,50 @@
+{
+  "asOf": "2026-11-28",
+  "period": "22.–28.11.2026",
+  "source": "Metricool, Marke Auswandererhilfe Ungarn",
+  "platforms": {
+    "Facebook": {
+      "metrics": {
+        "Follower": null,
+        "Impressionen": null,
+        "Beiträge": null,
+        "Interaktionen": null
+      },
+      "note": "Quellwerte; Nullwerte und Vollständigkeit nicht unabhängig bestätigt."
+    },
+    "TikTok": {
+      "metrics": {
+        "Follower": null,
+        "Videoaufrufe": null,
+        "Interaktionen": null
+      },
+      "note": "Quellwerte; Nullwerte und Vollständigkeit nicht unabhängig bestätigt."
+    },
+    "YouTube": {
+      "metrics": {
+        "Abonnenten": null,
+        "Videoaufrufe": null
+      },
+      "note": "Quellwerte; Nullwerte und Vollständigkeit nicht unabhängig bestätigt."
+    },
+    "Google": {
+      "metrics": {
+        "Profilaufrufe": 0,
+        "Websiteklicks": 0,
+        "Anrufe": 0,
+        "Routen": 0
+      },
+      "note": "Quellwerte; Nullwerte und Vollständigkeit nicht unabhängig bestätigt."
+    },
+    "LinkedIn": {
+      "metrics": {
+        "Follower": 0,
+        "Neue Follower": 0,
+        "Impressionen": 0,
+        "Beiträge": 0,
+        "Linkklicks": 0
+      },
+      "note": "Quellwerte; Nullwerte und Vollständigkeit nicht unabhängig bestätigt."
+    }
+  }
+}
