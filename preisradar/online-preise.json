@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-27T15:09:55+00:00",
+  "updated_at": "2026-11-28T14:15:59+00:00",
   "source": "https://heisse-preise.io/data/latest-canonical.json",
   "scope": "Austria chain online prices; no branch or stock verification",
   "items": [
@@ -10,7 +10,7 @@
       "price": 5.94,
       "unit": "ml",
       "quantity": "3000",
-      "checked_at": "2026-11-27T15:09:55+00:00",
+      "checked_at": "2026-11-28T14:15:59+00:00",
       "source_date": "2026-09-02",
       "status": "online_price",
       "source_url": "https://heisse-preise.io/data/latest-canonical.json"
@@ -22,7 +22,7 @@
       "price": 5.94,
       "unit": "ml",
       "quantity": "3000",
-      "checked_at": "2026-11-27T15:09:55+00:00",
+      "checked_at": "2026-11-28T14:15:59+00:00",
       "source_date": "2026-09-02",
       "status": "online_price",
       "source_url": "https://heisse-preise.io/data/latest-canonical.json"
@@ -34,7 +34,7 @@
       "price": 5.94,
       "unit": "ml",
       "quantity": "3000",
-      "checked_at": "2026-11-27T15:09:55+00:00",
+      "checked_at": "2026-11-28T14:15:59+00:00",
       "source_date": "2026-09-02",
       "status": "online_price",
       "source_url": "https://heisse-preise.io/data/latest-canonical.json"
@@ -46,7 +46,7 @@
       "price": 5.94,
       "unit": "ml",
       "quantity": "3000",
-      "checked_at": "2026-11-27T15:09:55+00:00",
+      "checked_at": "2026-11-28T14:15:59+00:00",
       "source_date": "2026-09-02",
       "status": "online_price",
       "source_url": "https://heisse-preise.io/data/latest-canonical.json"
@@ -58,7 +58,7 @@
       "price": 6.99,
       "unit": "ml",
       "quantity": "3000",
-      "checked_at": "2026-11-27T15:09:55+00:00",
+      "checked_at": "2026-11-28T14:15:59+00:00",
       "source_date": "2024-06-23",
       "status": "online_price",
       "source_url": "https://heisse-preise.io/data/latest-canonical.json"
@@ -70,7 +70,7 @@
       "price": 8.19,
       "unit": "ml",
       "quantity": "3000",
-      "checked_at": "2026-11-27T15:09:55+00:00",
+      "checked_at": "2026-11-28T14:15:59+00:00",
       "source_date": "2024-02-26",
       "status": "online_price",
       "source_url": "https://heisse-preise.io/data/latest-canonical.json"
@@ -82,7 +82,7 @@
       "price": 8.7,
       "unit": "ml",
       "quantity": "3000",
-      "checked_at": "2026-11-27T15:09:55+00:00",
+      "checked_at": "2026-11-28T14:15:59+00:00",
       "source_date": "2026-11-05",
       "status": "online_price",
       "source_url": "https://heisse-preise.io/data/latest-canonical.json"
@@ -94,7 +94,7 @@
       "price": 8.7,
       "unit": "ml",
       "quantity": "3000",
-      "checked_at": "2026-11-27T15:09:55+00:00",
+      "checked_at": "2026-11-28T14:15:59+00:00",
       "source_date": "2026-11-05",
       "status": "online_price",
       "source_url": "https://heisse-preise.io/data/latest-canonical.json"
