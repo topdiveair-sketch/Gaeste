@@ -1,12 +1,16 @@
 {
   "asOf": "2026-11-28",
   "draftChapters": 30,
-  "revisedSections": 1,
+  "revisedSections": 32,
   "totalSections": 32,
-  "illustrations": 0,
-  "wordCount": 41198,
+  "illustrations": 32,
+  "wordCount": 41306,
+  "printPages": 216,
   "checks": [
-    "32 Manuskriptabschnitte erfasst"
+    "Faktenprüfung und redaktionelle Gegenprüfung",
+    "216 DIN-A5-Seiten und eingebettete Schriften",
+    "Hardcover-Maße im epubli-Rechner bestätigt",
+    "EPUB und HTML-Reader auf Vollständigkeit geprüft"
   ],
-  "note": "Prolog, 30 Kapitel und Epilog liegen als zusammenhängende Textfassung vor. Gesamtlektorat, Illustrationsprüfung und Satz laufen. Gezählt wurde ausschließlich der Romantext."
+  "note": "Private Buchfassung erstellt. Die epubli-Vorschau, Rainsoft-Käuferzugang und Veröffentlichungsfreigabe stehen aus."
 }
